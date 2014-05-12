@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MenuGameImage">
+        <item name="android:clickable">true</item>
+        <item name="android:layout_margin">@dimen/m_menu_image</item>
+    </style>
+
+    <style name="MenuGameButton">
+        <item name="android:layout_margin">@dimen/m_menu_button</item>
+    </style>
+
+</resources>
