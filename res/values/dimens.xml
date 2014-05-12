@@ -10,10 +10,35 @@ d - divider height
 
 <resources>
 
-    <!-- ~~~~~~~~~~~~~~~~~~~ GAME MENU ~~~~~~~~~~~~~~~~~~~~~ !-->
+    <!-- ~~~~~~~~~~~~~~~~~~~ GENERAL ~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <dimen name="ts_small">15dp</dimen>
+    <dimen name="ts_normal">20dp</dimen>
+    <dimen name="ts_big">25dp</dimen>
+    <dimen name="p_normal">20dp</dimen>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~ MENU ~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
     <dimen name="m_menu_image">20dp</dimen>
     <dimen name="m_menu_button">30dp</dimen>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~ SETTINGS ~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <dimen name="p_settings_choose_box">@dimen/p_normal</dimen>
+    <dimen name="mt_settings_choose_box">20dp</dimen>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~ SCREEN HEADERS ~~~~~~~~~~~~~~~~ !-->
+
+    <dimen name="ml_header_name">20dp</dimen>
+    <dimen name="mt_header_name">10dp</dimen>
+    <dimen name="plr_header_button">@dimen/p_normal</dimen>
+    <dimen name="m_header_button">5dp</dimen>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 

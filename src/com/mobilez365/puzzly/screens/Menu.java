@@ -1,6 +1,7 @@
 package com.mobilez365.puzzly.screens;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -68,7 +69,7 @@ public class Menu extends Activity implements View.OnClickListener {
     }
 
     private final void settings() {
-
+        startActivity(new Intent(this, Settings.class));
     }
 
     private final void achievement() {
