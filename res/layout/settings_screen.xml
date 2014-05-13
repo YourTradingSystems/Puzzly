@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/llScreenHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvHeaderName_SS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/HeaderName"
+            android:text="@string/menu_settings" />
+
+        <Button
+            android:id="@+id/btnBack_SS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/HeaderBTN"
+            android:layout_alignBaseline="@id/tvHeaderName_SS"
+            android:layout_alignParentRight="true"
+            android:text="@string/menu_back"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/llScreenHeader">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/cbDisplayInnerBorders_SS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/SettingsChooseBox"
+                android:text="@string/settings_display_inner_borders"/>
+
+            <CheckBox
+                android:id="@+id/cbPlaySoundImageAppear_SS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/SettingsChooseBox"
+                android:layout_below="@id/cbDisplayInnerBorders_SS"
+                android:text="@string/settings_play_sound_when_image_appear"/>
+
+            <CheckBox
+                android:id="@+id/cbDisplayWords_SS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/SettingsChooseBox"
+                android:layout_below="@id/cbPlaySoundImageAppear_SS"
+                android:text="@string/settings_display_words"/>
+
+            <CheckBox
+                android:id="@+id/cbVoiceDisplayWords_SS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/SettingsChooseBox"
+                android:layout_below="@id/cbDisplayWords_SS"
+                android:text="@string/settings_voice_for_display_words"/>
+
+            <CheckBox
+                android:id="@+id/cbVibrateDragPuzzles_SS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/SettingsChooseBox"
+                android:layout_below="@id/cbVoiceDisplayWords_SS"
+                android:text="@string/settings_vibrate_when_drag_puzzles"/>
+
+            <CheckBox
+                android:id="@+id/cbVibratePieceInPlace_SS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/SettingsChooseBox"
+                android:layout_below="@id/cbVibrateDragPuzzles_SS"
+                android:text="@string/settings_vibrate_when_a_piece_in_place"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cbVibratePieceInPlace_SS"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvLanguage_SS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/SettingsLanguage"
+                    android:text="@string/settings_localize_language"
+                    android:layout_weight="30"/>
+
+                <Spinner
+                    android:id="@+id/spinnerChooseCountry_SS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="70"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
