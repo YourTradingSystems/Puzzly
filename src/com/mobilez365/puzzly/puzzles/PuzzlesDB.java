@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Point;
+import android.util.DisplayMetrics;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +26,8 @@ public class PuzzlesDB {
     public static void addBasePuzzlesToDB(Context context){
         initDBHelper(context);
 
+        SQLiteDatabase findAllBD = dbHelper.getWritableDatabase();
+
         ContentValues cv = new ContentValues();
         cv.put(PuzzlesDBHelper.GAME_ID, "0");
         cv.put(PuzzlesDBHelper.GAME_WORD, "camel");
@@ -33,24 +36,18 @@ public class PuzzlesDB {
         cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "123 421");
         cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "12323 421");
 
-        SQLiteDatabase findAllBD = dbHelper.getWritableDatabase();
-        findAllBD.insert(PuzzlesDBHelper.FIND_ALL_TABLE_NAME, null, cv);
-        findAllBD.close();
-    }
+        findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
 
-    public static void addPuzzlesToDB(Context context){
-        initDBHelper(context);
-
-        ContentValues cv = new ContentValues();
-        cv.put(PuzzlesDBHelper.GAME_ID, "0");
-        cv.put(PuzzlesDBHelper.GAME_WORD, "camel");
-        cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "123 421");
-        cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "12323 421");
+        cv = new ContentValues();
+        cv.put(PuzzlesDBHelper.GAME_ID, "1");
+        cv.put(PuzzlesDBHelper.GAME_WORD, "tiger");
+        cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "0 421");
+        cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "0 421");
         cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "123 421");
         cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "12323 421");
 
-        SQLiteDatabase findAllBD = dbHelper.getWritableDatabase();
-        findAllBD.insert(PuzzlesDBHelper.FIND_ALL_TABLE_NAME, null, cv);
+        findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
+
         findAllBD.close();
     }
 
@@ -66,7 +63,7 @@ public class PuzzlesDB {
         initDBHelper(context);
 
         SQLiteDatabase findAllBD = dbHelper.getWritableDatabase();
-        Cursor cursor = findAllBD.query(PuzzlesDBHelper.FIND_ALL_TABLE_NAME,
+        Cursor cursor = findAllBD.query(PuzzlesDBHelper.TABLE_NAME_FILL_GAME,
                 PuzzlesDBHelper.FIND_ALL_COLUMN,
                 PuzzlesDBHelper.GAME_ID + " =?",
                 new String[] {String.valueOf(gameNumber)},
@@ -78,20 +75,22 @@ public class PuzzlesDB {
         if (cursor.moveToFirst()) {
             gameWord = cursor.getString(cursor.getColumnIndex(PuzzlesDBHelper.GAME_WORD));
             gameSound = gameWord + ".mp3";
-            gameImage = gameSound + ".jpg";
-            gameBorderedImage = gameSound + "_bordered.jpg";
-            gameResultImage = gameSound + "_result.jpg";
+            gameImage = gameSound + ".png";
+            gameBorderedImage = gameSound + "_bordered.png";
+            gameResultImage = gameSound + "_result.png";
+
             List<Point> finalPosList = parsePositionList(cursor.getString(cursor.getColumnIndex(
                     PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X)),
                     cursor.getString(cursor.getColumnIndex(
-                    PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y)));
+                    PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y)), context);
+
             List<Point> startPosList = parsePositionList(cursor.getString(cursor.getColumnIndex(
                     PuzzlesDBHelper.GAME_PARTS_START_POSITION_X)),
                     cursor.getString(cursor.getColumnIndex(
-                    PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y)));
+                    PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y)), context);
 
             for(int i = 0; i < finalPosList.size(); i++) {
-                gameParts.add(new PuzzlesPart(i, gameWord + i +".jpg", startPosList.get(i), finalPosList.get(i)));
+                gameParts.add(new PuzzlesPart(i, gameWord + i +".png", startPosList.get(i), finalPosList.get(i)));
             }
         }
         else
@@ -105,7 +104,7 @@ public class PuzzlesDB {
         return new PuzzleFillGame(gameNumber, gameWord, gameSound, gameParts, gameImage, gameBorderedImage, gameResultImage);
     }
 
-    private static List<Point> parsePositionList(String posX, String posY){
+    private static List<Point> parsePositionList(String posX, String posY, Context context){
         List<Point> retList = new ArrayList<Point>();
 
         String delims = "[ ]+";
@@ -113,8 +112,16 @@ public class PuzzlesDB {
         String[] posXArray = posX.split(delims);
         String[] posYArray = posY.split(delims);
 
+        DisplayMetrics metrics = context.getResources().getDisplayMetrics();
+
         for (int i = 0; i < posXArray.length; i++) {
-            retList.add(new Point(Integer.valueOf(posXArray[i]), Integer.valueOf(posYArray[i])));
+
+            int dpPosX = Integer.valueOf(posXArray[i]);
+            int dpPosY = Integer.valueOf(posYArray[i]);
+            dpPosX = (int) (dpPosX * (metrics.densityDpi / 160f));
+            dpPosY = (int) (dpPosY * (metrics.densityDpi / 160f));
+
+            retList.add(new Point(dpPosX, dpPosY));
         }
 
         return retList;
