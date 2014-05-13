@@ -54,7 +54,7 @@ public class PuzzlesDB {
         findAllBD.close();
     }
 
-    public static PuzzleFindAllGame getPuzzle(int gameNumber, Context context) {
+    public static PuzzleFillGame getPuzzle(int gameNumber, Context context) {
 
         String gameWord = "";
         String gameSound;
@@ -102,7 +102,7 @@ public class PuzzlesDB {
         }
         findAllBD.close();
 
-        return new PuzzleFindAllGame(gameNumber, gameWord, gameSound, gameParts, gameImage, gameBorderedImage, gameResultImage);
+        return new PuzzleFillGame(gameNumber, gameWord, gameSound, gameParts, gameImage, gameBorderedImage, gameResultImage);
     }
 
     private static List<Point> parsePositionList(String posX, String posY){

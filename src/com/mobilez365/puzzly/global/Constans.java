@@ -5,6 +5,9 @@ package com.mobilez365.puzzly.global;
  */
 public class Constans {
 
+
+    public static final int SHAKE_THRESHOLD = 600;
+
     /**
      * Settings name
      */
@@ -16,5 +19,14 @@ public class Constans {
     public static final String VIBRATE_WHEN_DRAG_PUZZLES = "vibrate_when_drag_puzzles";
     public static final String VIBRATE_WHEN_A_PIECE_IN_PLACE = "vibrate_when_a_piece_in_place";
     public static final String LOCALIZE_LANGUAGE = "localize_language";
+
+
+    /**
+     * Bonus Level
+     */
+
+    public static final int CANDY_ON_TOP = 1;
+    public static final int CANDY_FALLEN = 2;
+    public static final int CANDY_PICKED = 3;
 
 }

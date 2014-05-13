@@ -65,7 +65,7 @@ public class Menu extends Activity implements View.OnClickListener {
     }
 
     private final void gameSimpleReveal() {
-
+        startActivity(new Intent(this, BonusLevelShakeActivity.class));
     }
 
     private final void settings() {

@@ -34,8 +34,9 @@
         </activity>
 
 
-        <activity android:name=".BonusLevelShakeActivity"
-                  android:screenOrientation="landscape"/>
+        <activity android:name=".screens.BonusLevelShakeActivity"
+                  android:screenOrientation="landscape"
+                  android:configChanges="orientation|keyboardHidden|screenSize"/>
 
     </application>
 </manifest>
