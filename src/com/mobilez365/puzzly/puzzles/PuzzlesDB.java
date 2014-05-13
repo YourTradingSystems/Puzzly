@@ -27,7 +27,7 @@ public class PuzzlesDB {
 
         ContentValues cv = new ContentValues();
         cv.put(PuzzlesDBHelper.GAME_ID, "0");
-        cv.put(PuzzlesDBHelper.GAME_WORD, "Camel");
+        cv.put(PuzzlesDBHelper.GAME_WORD, "camel");
         cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "0 421");
         cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "0 421");
         cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "123 421");
@@ -43,7 +43,7 @@ public class PuzzlesDB {
 
         ContentValues cv = new ContentValues();
         cv.put(PuzzlesDBHelper.GAME_ID, "0");
-        cv.put(PuzzlesDBHelper.GAME_WORD, "Camel");
+        cv.put(PuzzlesDBHelper.GAME_WORD, "camel");
         cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "123 421");
         cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "12323 421");
         cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "123 421");
@@ -90,7 +90,7 @@ public class PuzzlesDB {
                     cursor.getString(cursor.getColumnIndex(
                     PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y)));
 
-            for(int i = 0; i<finalPosList.size();i++) {
+            for(int i = 0; i < finalPosList.size(); i++) {
                 gameParts.add(new PuzzlesPart(i, gameWord + i +".jpg", startPosList.get(i), finalPosList.get(i)));
             }
         }
