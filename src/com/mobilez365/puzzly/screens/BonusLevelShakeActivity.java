@@ -5,7 +5,6 @@ import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.app.Activity;
 import android.content.Context;
-import android.content.pm.ActivityInfo;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.os.Vibrator;
@@ -26,7 +25,7 @@ import java.util.Random;
  */
 public class BonusLevelShakeActivity extends Activity implements ShakeSensor.OnShakeListener, View.OnClickListener, AnimationEndListener.AnimEndListener {
 
-    private final int mCandiesCount = 10;
+    private final int mCandiesCount = 9;
     private int mCandiesDroppedCount = 0;
     private int mCandiesPickedCount = 0;
     private ShakeSensor mShaker;
@@ -43,20 +42,19 @@ public class BonusLevelShakeActivity extends Activity implements ShakeSensor.OnS
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bonus_level_shake);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
         mShaker = new ShakeSensor(this);
         mShaker.setOnShakeListener(this);
 
-        tvCandiesCount = (TextView) findViewById(R.id.tvCandiesCountAS);
-        tvAllCandiesPicked = (TextView) findViewById(R.id.tvAllPickedAS);
+        tvCandiesCount = (TextView) findViewById(R.id.tvCandiesCountABS);
+        tvAllCandiesPicked = (TextView) findViewById(R.id.tvAllPickedABS);
         mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
         initCandies();
     }
 
     private void initCandies() {
-        RelativeLayout candiesLayout = (RelativeLayout) findViewById(R.id.rlCandiesAS);
+        RelativeLayout candiesLayout = (RelativeLayout) findViewById(R.id.rlCandiesABS);
         tvCandiesCount.setText("" + mCandiesPickedCount);
 
         Display display = getWindowManager().getDefaultDisplay();
@@ -71,9 +69,12 @@ public class BonusLevelShakeActivity extends Activity implements ShakeSensor.OnS
         candiesList = new ArrayList<ImageView>();
         candiesRotateAnimators = new ArrayList<ObjectAnimator>();
         candiesStatus = new int[mCandiesCount];
+        Random r = new Random();
         for (int i = 0; i < mCandiesCount; i++) {
             ImageView candy = new ImageView(this);
-            candy.setImageResource(R.drawable.ic_launcher);
+
+            int candyNumber = r.nextInt(4) + 1;
+            candy.setImageResource(getResources().getIdentifier("img_candy" + candyNumber, "drawable", getPackageName()));
             candy.setX(i * step);
             candy.setTag(i);
             candy.setOnClickListener(this);
@@ -81,9 +82,9 @@ public class BonusLevelShakeActivity extends Activity implements ShakeSensor.OnS
             candiesLayout.addView(candy);
             candiesStatus[i] = Constans.CANDY_ON_TOP;
 
-            ObjectAnimator rotateAnimator = ObjectAnimator.ofFloat(candy, "rotation", -10f, 10f);
-            rotateAnimator.setDuration(300 + i * 20);
-            rotateAnimator.setRepeatMode(ValueAnimator.REVERSE);
+            ObjectAnimator rotateAnimator = ObjectAnimator.ofFloat(candy, "rotation", -10f, 0f, 10f, 0f, -10f);
+            rotateAnimator.setDuration(800 + i * 20);
+            rotateAnimator.setRepeatMode(ValueAnimator.RESTART);
             rotateAnimator.setRepeatCount(ValueAnimator.INFINITE);
             rotateAnimator.start();
             candiesRotateAnimators.add(rotateAnimator);
@@ -139,9 +140,9 @@ public class BonusLevelShakeActivity extends Activity implements ShakeSensor.OnS
     }
 
     private void checkAllPicked(){
-        if(mCandiesPickedCount == 10) {
+        if(mCandiesPickedCount == mCandiesCount) {
             tvAllCandiesPicked.setVisibility(View.VISIBLE);
-            ImageButton nextGame = (ImageButton) findViewById(R.id.btnNextAS);
+            ImageButton nextGame = (ImageButton) findViewById(R.id.btnNextABS);
             nextGame.setVisibility(View.VISIBLE);
             nextGame.setOnClickListener(this);
         }
@@ -173,7 +174,7 @@ public class BonusLevelShakeActivity extends Activity implements ShakeSensor.OnS
 
     @Override
     public void onClick(View v) {
-        if(v.getId() == R.id.btnNextAS)
+        if(v.getId() == R.id.btnNextABS)
             nextGame();
         else
             pickCandy(v);

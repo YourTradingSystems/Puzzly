@@ -3,48 +3,46 @@
               android:orientation="vertical"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
-        >
+              android:background="@color/background_game">
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ivBoxABS"
+            android:src="@drawable/img_basket"
+            android:layout_centerInParent="true"/>
 
     <RelativeLayout
-            android:id="@+id/rlCandiesAS"
+            android:id="@+id/rlCandiesABS"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             >
     </RelativeLayout>
 
-    <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ivBoxAS"
-            android:layout_alignParentRight="false"
-            android:layout_alignParentBottom="false"
-            android:src="@drawable/ic_launcher"
-            android:layout_centerInParent="true"/>
-
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/tvCandiesCountAS"
-            android:layout_toRightOf="@+id/ivBoxAS"
-            android:layout_marginLeft="20dp"
-            android:layout_centerVertical="true"/>
+            android:id="@+id/tvCandiesCountABS"
+            android:layout_alignTop="@+id/ivBoxABS"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"/>
 
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/bonus_shake_all_picked"
-            android:id="@+id/tvAllPickedAS"
+            android:id="@+id/tvAllPickedABS"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
-            android:layout_below="@+id/ivBoxAS"
+            android:layout_below="@+id/ivBoxABS"
             android:visibility="gone"/>
 
     <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btnNextAS"
+            android:id="@+id/btnNextABS"
             android:layout_alignParentRight="true"
             android:layout_margin="10dp"
             android:src="@drawable/ic_launcher"
