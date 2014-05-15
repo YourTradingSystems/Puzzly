@@ -45,5 +45,11 @@
                   android:screenOrientation="landscape"
                   android:configChanges="orientation|keyboardHidden|screenSize"/>
 
+        <activity android:name=".screens.BonusLevelFlowerActivity"
+                  android:screenOrientation="landscape"
+                  android:configChanges="orientation|keyboardHidden|screenSize"/>
+
+
+
     </application>
 </manifest>

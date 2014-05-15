@@ -2,6 +2,7 @@ package com.mobilez365.puzzly.screens;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Point;
@@ -37,6 +38,7 @@ public class BonusLevelTreeActivity extends Activity implements ShakeSensor.OnSh
     private ShakeSensor mShaker;
     private Vibrator mVibrator;
     private List<ImageView> candiesList;
+    private List<ObjectAnimator> candiesRotateAnimators;
     private int[] candiesStatus;
     private RelativeLayout candiesLayout;
     private TextView tvAllCandiesPicked;
@@ -51,11 +53,6 @@ public class BonusLevelTreeActivity extends Activity implements ShakeSensor.OnSh
         tvAllCandiesPicked = (TextView) findViewById(R.id.tvAllPickedABL);
 
         initData();
-    }
-
-    private int DpToPx(int dp){
-        DisplayMetrics metrics = this.getResources().getDisplayMetrics();
-        return (int) (dp * (metrics.densityDpi / 160f));
     }
 
     private void initData() {
@@ -78,6 +75,8 @@ public class BonusLevelTreeActivity extends Activity implements ShakeSensor.OnSh
 
         int candyPosStep = screenHeight / 60;
 
+
+        candiesRotateAnimators = new ArrayList<ObjectAnimator>();
         createCandy(startCandiesWidth + candyPosStep * 2, startCandiesHeight + candyPosStep * 12, 0);
         createCandy(startCandiesWidth + candyPosStep * 7, startCandiesHeight + candyPosStep * 4, 1);
         createCandy(startCandiesWidth + candyPosStep * 10, startCandiesHeight + candyPosStep * 20, 2);
@@ -101,6 +100,13 @@ public class BonusLevelTreeActivity extends Activity implements ShakeSensor.OnSh
         candiesLayout.addView(candy);
         candiesStatus[num] = Constans.CANDY_ON_TOP;
 
+        ObjectAnimator rotateAnimator = ObjectAnimator.ofFloat(candy, "rotation", -10f, 0f, 10f, 0f, -10f);
+        rotateAnimator.setDuration(800 + num * 20);
+        rotateAnimator.setRepeatMode(ValueAnimator.RESTART);
+        rotateAnimator.setRepeatCount(ValueAnimator.INFINITE);
+        rotateAnimator.start();
+        candiesRotateAnimators.add(rotateAnimator);
+
         candy.getLayoutParams().height = screenHeight / 8;
         candy.getLayoutParams().width = screenHeight / 8;
     }
@@ -112,6 +118,8 @@ public class BonusLevelTreeActivity extends Activity implements ShakeSensor.OnSh
         ImageView candy = candiesList.get(candyNumber);
         if (candiesStatus[candyNumber] == Constans.CANDY_ON_TOP) {
             candiesStatus[candyNumber] = Constans.CANDY_FALLEN;
+
+            candiesRotateAnimators.get(candyNumber).cancel();
 
             ObjectAnimator moveXAnimator = ObjectAnimator.ofFloat(candy, "translationX", candy.getX(), previousFallenCandyPosY);
             ObjectAnimator moveYAnimator = ObjectAnimator.ofFloat(candy, "translationY", candy.getY(), screenHeight - candy.getHeight() * 1.5f );
