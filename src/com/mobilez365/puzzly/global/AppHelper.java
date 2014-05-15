@@ -50,4 +50,15 @@ public class AppHelper {
 
         return Languages.us;
     }
+
+    public static final void setGameAchievement(Activity _activity, int _count) {
+        SharedPreferences.Editor edit = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE).edit();
+        edit.putInt(Constans.GAME_ACHIEVEMENT, _count);
+        edit.commit();
+    }
+
+    public static final int getGameAchievement(Activity _activity) {
+        SharedPreferences prefs = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE);
+        return prefs.getInt(Constans.GAME_ACHIEVEMENT, 0);
+    }
 }

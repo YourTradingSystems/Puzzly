@@ -49,7 +49,6 @@ public class Settings extends Activity implements View.OnClickListener, AdapterV
         SharedPreferences.Editor editor = getSharedPreferences(Constans.PREFERENCES_NAME, MODE_PRIVATE).edit();
         switch (_v.getId()) {
             case R.id.btnBack_SS:
-                startActivity(new Intent(this, Menu.class));
                 finish();
                 break;
 
@@ -98,15 +97,6 @@ public class Settings extends Activity implements View.OnClickListener, AdapterV
         /**
          * Nothing
          */
-    }
-
-    @Override
-    public boolean onKeyDown(int _keyCode, KeyEvent _event) {
-        if (_keyCode == KeyEvent.KEYCODE_BACK ) {
-            startActivity(new Intent(this, Menu.class));
-        }
-
-        return super.onKeyDown(_keyCode, _event);
     }
 
     private final void findViews() {
