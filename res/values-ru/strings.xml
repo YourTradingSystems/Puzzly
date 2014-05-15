@@ -4,8 +4,8 @@
 
     <!-- ~~~~~~~~~~~~~~~~~~~ MENU ~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
-    <string name="menu_settings">Settings</string>
-    <string name="menu_achievement">Achievement</string>
+    <string name="menu_settings">Настройки</string>
+    <string name="menu_achievement">Достижение</string>
     <string name="menu_back">Назад</string>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
@@ -20,6 +20,10 @@
     <string name="settings_vibrate_when_a_piece_in_place">Vibrate when a piece in place</string>
     <string name="settings_localize_language">Language</string>
 
+    <string-array name="settings_languages">
+        <item>Английский</item>
+        <item>Русский</item>
+    </string-array>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
     <!-- ~~~~~~~~~~~~~~~~~~~ BONUS LEVEL SHAKE ~~~~~~~~~~~~~~~~~~~~~~ !-->

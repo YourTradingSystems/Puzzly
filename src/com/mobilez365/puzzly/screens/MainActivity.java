@@ -9,6 +9,8 @@ import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.mobilez365.puzzly.GameView;
+
 public class MainActivity extends Activity implements SensorEventListener{
     
 

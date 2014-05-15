@@ -1,4 +1,4 @@
-package com.mobilez365.puzzly.screens;
+package com.mobilez365.puzzly;
 
 
 import android.content.Context;
@@ -8,7 +8,11 @@ import android.graphics.Color;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+
+import com.mobilez365.puzzly.GameLogic;
+import com.mobilez365.puzzly.InputObject;
 import com.mobilez365.puzzly.R;
+import com.mobilez365.puzzly.SpriteObject;
 
 import java.util.concurrent.ArrayBlockingQueue;
 

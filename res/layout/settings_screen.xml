@@ -103,7 +103,8 @@
                     android:id="@+id/spinnerChooseCountry_SS"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="70"/>
+                    android:layout_weight="70"
+                    android:entries="@array/settings_languages"/>
 
             </LinearLayout>
 

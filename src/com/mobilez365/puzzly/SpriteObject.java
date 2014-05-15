@@ -1,4 +1,4 @@
-package com.mobilez365.puzzly.screens;
+package com.mobilez365.puzzly;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;

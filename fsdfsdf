@@ -1,0 +1,33 @@
+[33mcommit 33ed573beba10c21ddc6f699d19703a798411853[m
+Merge: 545fd0a f2f985c
+Author: kraftdream <kraftdream@gmail.com>
+Date:   Mon May 12 17:50:55 2014 +0300
+
+    Merge remote-tracking branch 'origin/master'
+    
+    Conflicts:
+    	AndroidManifest.xml
+
+[33mcommit 545fd0aa7cddf024834f8dde0d9c8e89a70231bc[m
+Author: kraftdream <kraftdream@gmail.com>
+Date:   Mon May 12 17:48:37 2014 +0300
+
+    Implement settings screen (only GUI)
+
+[33mcommit f2f985cf8a7537434a631e088966ccbcd7e45b69[m
+Author: Olexiy Shangin <oleksiy.shanhin@mobilesoft365.com>
+Date:   Mon May 12 16:38:45 2014 +0300
+
+    create moving icon
+
+[33mcommit 5a9871dde33c176374996c4e30a0981365173579[m
+Author: kraftdream <kraftdream@gmail.com>
+Date:   Mon May 12 14:09:36 2014 +0300
+
+    Implement screen menu
+
+[33mcommit 4e3585acc4cccc281f8a6f3da0051f8be3aae724[m
+Author: andrewtivodar <andrewtivodar@yahoo.com>
+Date:   Mon May 12 11:07:04 2014 +0300
+
+    Project Created

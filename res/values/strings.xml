@@ -20,6 +20,10 @@
     <string name="settings_vibrate_when_a_piece_in_place">Vibrate when a piece in place</string>
     <string name="settings_localize_language">Language</string>
 
+    <string-array name="settings_languages">
+        <item>English</item>
+        <item>Russian</item>
+    </string-array>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
     <!-- ~~~~~~~~~~~~~~~~~~~ BONUS LEVEL SHAKE ~~~~~~~~~~~~~~~~~~~~~~ !-->

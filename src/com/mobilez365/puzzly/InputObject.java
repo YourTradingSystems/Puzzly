@@ -1,4 +1,4 @@
-package com.mobilez365.puzzly.screens;
+package com.mobilez365.puzzly;
 
 import android.view.KeyEvent;
 import android.view.MotionEvent;

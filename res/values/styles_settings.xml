@@ -2,7 +2,8 @@
 <resources>
     
     <style name="SettingsChooseBox">
-        <item name="android:padding">@dimen/p_settings_choose_box</item>
+        <item name="android:paddingTop">@dimen/ptb_settings_choose_box</item>
+        <item name="android:paddingBottom">@dimen/ptb_settings_choose_box</item>
         <item name="android:layout_marginTop">@dimen/mt_settings_choose_box</item>
         <item name="android:textSize">@dimen/ts_small</item>
     </style>
