@@ -64,6 +64,8 @@ public class BonusLevelFlowerActivity extends Activity implements ShakeSensor.On
         candiesRotateAnimators = new ArrayList<ObjectAnimator>();
         candiesStatus = new int[mCandiesCount];
 
+        AppHelper.increasePassedGames(this);
+
         initFlowers();
         initSun();
     }

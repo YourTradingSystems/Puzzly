@@ -52,6 +52,8 @@ public class BonusLevelShakeActivity extends Activity implements ShakeSensor.OnS
         tvAllCandiesPicked = (TextView) findViewById(R.id.tvAllPickedABS);
         mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
+        AppHelper.increasePassedGames(this);
+
         initCandies();
     }
 

@@ -100,4 +100,9 @@ public class AppHelper {
         return prefs.getBoolean(Constans.PUZZLES_INITIALIZED, false);
     }
 
+    public static final boolean getShowImageBorder(Activity _activity) {
+        SharedPreferences prefs = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE);
+        return prefs.getBoolean(Constans.DISPLAY_INNER_BORDERS, false);
+    }
+
 }

@@ -9,25 +9,18 @@ import java.util.List;
  */
 public class PuzzleFillGame {
 
-    private int puzzleId;
     private String word;
     private List<PuzzlesPart> parts;
     private String image;
-    private String borderedImage;
     private String resultImage;
 
-    public PuzzleFillGame(int puzzleId, String word, List<PuzzlesPart> parts, String image, String borderedImage, String resultImage) {
-        this.puzzleId = puzzleId;
+    public PuzzleFillGame(String word, List<PuzzlesPart> parts, String image, String resultImage) {
         this.word = word;
         this.parts = parts;
         this.image = image;
-        this.borderedImage = borderedImage;
         this.resultImage = resultImage;
     }
 
-    public int getPuzzleId() {
-        return puzzleId;
-    }
 
     public String getWord() {
         return word;
@@ -39,10 +32,6 @@ public class PuzzleFillGame {
 
     public String getImage() {
         return image;
-    }
-
-    public String getBorderedImage() {
-        return borderedImage;
     }
 
     public String getResultImage() {

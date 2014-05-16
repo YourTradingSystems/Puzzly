@@ -36,8 +36,8 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_WORD, "pig");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "420 489 650");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "187 140 157");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "20 100 150");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "30 100 20");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "150 30 35");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "140 300 20");
 
             findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
 
@@ -46,8 +46,8 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_WORD, "chicken");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "400 536 621");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "116 192 85");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "20 100 150");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "30 100 20");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "170 15 40");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "170 20 260");
 
             findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
 
@@ -56,8 +56,8 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_WORD, "dove");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "450 522 544");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "218 164 95");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "20 100 150");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "30 100 20");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "20 170 20");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "50 230 300");
 
             findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
 
@@ -90,11 +90,10 @@ public class PuzzlesDB {
         return gameCount;
     }
 
-    public static PuzzleFillGame getPuzzle(int gameNumber, Context context) {
+    public static PuzzleFillGame getPuzzle(int gameNumber, Activity context) {
 
         String gameWord = "";
         String gameImage;
-        String gameBorderedImage;
         String gameResultImage;
         List<PuzzlesPart> gameParts = new ArrayList<PuzzlesPart>();
 
@@ -112,8 +111,12 @@ public class PuzzlesDB {
 
         if (cursor.moveToFirst()) {
             gameWord = cursor.getString(cursor.getColumnIndex(PuzzlesDBHelper.GAME_WORD));
-            gameImage = gameWord + "_gray";
-            gameBorderedImage = gameWord + "_bordered";
+
+            if(AppHelper.getShowImageBorder(context))
+                gameImage = gameWord + "_bordered";
+            else
+                gameImage = gameWord + "_gray";
+
             gameResultImage = gameWord + "_result";
 
             List<Point> finalPosList = parsePositionList(cursor.getString(cursor.getColumnIndex(
@@ -138,7 +141,7 @@ public class PuzzlesDB {
         }
         findAllBD.close();
 
-        return new PuzzleFillGame(gameNumber, gameWord, gameParts, gameImage, gameBorderedImage, gameResultImage);
+        return new PuzzleFillGame(gameWord, gameParts, gameImage, gameResultImage);
     }
 
     private static List<Point> parsePositionList(String posX, String posY, Context context){
