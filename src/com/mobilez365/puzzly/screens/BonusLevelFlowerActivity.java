@@ -5,6 +5,7 @@ import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.os.Vibrator;
@@ -17,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import com.mobilez365.puzzly.R;
+import com.mobilez365.puzzly.global.AppHelper;
 import com.mobilez365.puzzly.global.Constans;
 import com.mobilez365.puzzly.util.AnimationEndListener;
 import com.mobilez365.puzzly.util.ShakeSensor;
@@ -151,6 +153,7 @@ public class BonusLevelFlowerActivity extends Activity implements ShakeSensor.On
     private void pickCandy(View v) {
         if (candiesStatus[(Integer) v.getTag()] == Constans.CANDY_FALLEN) {
             candiesStatus[(Integer) v.getTag()] = Constans.CANDY_PICKED;
+            AppHelper.setGameAchievement(this, AppHelper.getGameAchievement(this) + 1);
             v.bringToFront();
 
 
@@ -178,6 +181,7 @@ public class BonusLevelFlowerActivity extends Activity implements ShakeSensor.On
     }
 
     private void nextGame() {
+        startActivity(new Intent(this, GameFillActivity.class));
         finish();
     }
 

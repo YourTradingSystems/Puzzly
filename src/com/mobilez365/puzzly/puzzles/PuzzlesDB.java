@@ -1,11 +1,13 @@
 package com.mobilez365.puzzly.puzzles;
 
+import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Point;
 import android.util.DisplayMetrics;
+import com.mobilez365.puzzly.global.AppHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,41 +26,45 @@ public class PuzzlesDB {
     }
 
     public static void addBasePuzzlesToDB(Context context){
-        initDBHelper(context);
+        if(AppHelper.getPuzzlesInit((Activity) context)) {
+            initDBHelper(context);
 
-        SQLiteDatabase findAllBD = dbHelper.getWritableDatabase();
+            SQLiteDatabase findAllBD = dbHelper.getWritableDatabase();
 
-        ContentValues cv = new ContentValues();
-        cv.put(PuzzlesDBHelper.GAME_ID, "0");
-        cv.put(PuzzlesDBHelper.GAME_WORD, "pig");
-        cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "420 489 650");
-        cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "187 140 157");
-        cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "20 100 150");
-        cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "30 100 20");
+            ContentValues cv = new ContentValues();
+            cv.put(PuzzlesDBHelper.GAME_ID, "0");
+            cv.put(PuzzlesDBHelper.GAME_WORD, "pig");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "420 489 650");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "187 140 157");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "20 100 150");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "30 100 20");
 
-        findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
+            findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
 
-        cv = new ContentValues();
-        cv.put(PuzzlesDBHelper.GAME_ID, "1");
-        cv.put(PuzzlesDBHelper.GAME_WORD, "chicken");
-        cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "400 536 621");
-        cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "116 192 85");
-        cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "20 100 150");
-        cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "30 100 20");
+            cv = new ContentValues();
+            cv.put(PuzzlesDBHelper.GAME_ID, "1");
+            cv.put(PuzzlesDBHelper.GAME_WORD, "chicken");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "400 536 621");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "116 192 85");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "20 100 150");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "30 100 20");
 
-        findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
+            findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
 
-        cv = new ContentValues();
-        cv.put(PuzzlesDBHelper.GAME_ID, "2");
-        cv.put(PuzzlesDBHelper.GAME_WORD, "dove");
-        cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "450 522 544");
-        cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "218 164 95");
-        cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "20 100 150");
-        cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "30 100 20");
+            cv = new ContentValues();
+            cv.put(PuzzlesDBHelper.GAME_ID, "2");
+            cv.put(PuzzlesDBHelper.GAME_WORD, "dove");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "450 522 544");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "218 164 95");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "20 100 150");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "30 100 20");
 
-        findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
+            findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
 
-        findAllBD.close();
+            findAllBD.close();
+
+            AppHelper.setPuzzlesInit((Activity) context, true);
+        }
     }
 
     public static int getPuzzleGameCount(Context context){

@@ -21,6 +21,9 @@ public class Constans {
     public static final String VIBRATE_WHEN_A_PIECE_IN_PLACE = "vibrate_when_a_piece_in_place"; //bool
     public static final String LOCALIZE_LANGUAGE = "localize_language";                         //int
     public static final String GAME_ACHIEVEMENT = "game_achievement";                           //int
+    public static final String CURRENT_GAME = "current_game";                                   //int
+    public static final String PASSED_GAME = "passed_game";                                     //int
+    public static final String PUZZLES_INITIALIZED = "puzzles_initialized";                     //bool
 
 
     /**

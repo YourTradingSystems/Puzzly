@@ -11,9 +11,12 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.customViews.GameView;
+import com.mobilez365.puzzly.global.AppHelper;
 import com.mobilez365.puzzly.global.Constans;
 import com.mobilez365.puzzly.puzzles.PuzzleFillGame;
 import com.mobilez365.puzzly.puzzles.PuzzlesDB;
+
+import java.util.Random;
 
 public class GameFillActivity extends Activity implements GameView.GameCallBacks, View.OnClickListener {
 
@@ -29,7 +32,7 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_fill);
 
-        mGameNumber = getIntent().getIntExtra(Constans.GAME_NUMBER_EXTRA, 0);
+        mGameNumber = AppHelper.getCurrentGame(this);
 
         mPuzzleFillGame = PuzzlesDB.getPuzzle(mGameNumber, this);
         ((FrameLayout) findViewById(R.id.rlForGame)).addView(new GameView(this, mPuzzleFillGame, this));
@@ -44,14 +47,39 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
     }
 
     private void switchGame(int gameNum) {
-        Intent gameIntent = new Intent(this, GameFillActivity.class);
-        gameIntent.putExtra(Constans.GAME_NUMBER_EXTRA, gameNum);
-        startActivity(gameIntent);
+        AppHelper.setCurrentGame(this, gameNum);
+
+        int passedGame =  AppHelper.getPassedGames(this);
+        if(passedGame != 3)
+            startActivity(new Intent(this, GameFillActivity.class));
+        else {
+            Random r = new Random();
+            int bonusLevelIndex = r.nextInt(3);
+
+            Activity bonusLevelActivity = null;
+            switch (bonusLevelIndex) {
+                case 0:
+                    bonusLevelActivity = new BonusLevelTreeActivity();
+                    break;
+                case 1:
+                    bonusLevelActivity = new BonusLevelShakeActivity();
+                    break;
+                case 2:
+                    bonusLevelActivity = new BonusLevelFlowerActivity();
+                    break;
+            }
+
+            startActivity(new Intent(this, bonusLevelActivity.getClass()));
+        }
+
         finish();
     }
 
     @Override
     public void onGameFinish() {
+        AppHelper.increasePassedGames(this);
+        AppHelper.setGameAchievement(this, AppHelper.getGameAchievement(this) + 1);
+
         if (mGameNumber > 0)
             previousGame.setVisibility(View.VISIBLE);
 

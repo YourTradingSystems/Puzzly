@@ -18,6 +18,8 @@ import com.mobilez365.puzzly.global.AppHelper;
 import com.mobilez365.puzzly.global.Constans;
 import com.mobilez365.puzzly.puzzles.PuzzlesDB;
 
+import java.util.Random;
+
 public class MenuActivity extends Activity implements View.OnClickListener {
 
     private ImageView ivGameSimpleFill_MS;
@@ -39,7 +41,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
         findViews();
         setListeners();
         startAnimation();
-        setGameAchievement(100);
+        PuzzlesDB.addBasePuzzlesToDB(this);
     }
 
     @Override
@@ -64,6 +66,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     @Override
     protected void onResume() {
         super.onResume();
+        setGameAchievement(AppHelper.getGameAchievement(this));
     }
 
     private final void findViews() {
@@ -115,11 +118,29 @@ public class MenuActivity extends Activity implements View.OnClickListener {
 
     private final void gameSimpleFill() {
 
-        PuzzlesDB.addBasePuzzlesToDB(this);
+        int passedGame =  AppHelper.getPassedGames(this);
+        if(passedGame != 3)
+            startActivity(new Intent(this, GameFillActivity.class));
+        else {
+            Random r = new Random();
+            int bonusLevelIndex = r.nextInt(3);
 
-        Intent gameIntent = new Intent(this, GameFillActivity.class);
-        gameIntent.putExtra(Constans.GAME_NUMBER_EXTRA, 0);
-        startActivity(gameIntent);
+            Activity bonusLevelActivity = null;
+            switch (bonusLevelIndex) {
+                case 0:
+                    bonusLevelActivity = new BonusLevelTreeActivity();
+                    break;
+                case 1:
+                    bonusLevelActivity = new BonusLevelShakeActivity();
+                    break;
+                case 2:
+                    bonusLevelActivity = new BonusLevelFlowerActivity();
+                    break;
+            }
+
+            startActivity(new Intent(this, bonusLevelActivity.getClass()));
+        }
+
     }
 
     private final void gameSimpleReveal() {
