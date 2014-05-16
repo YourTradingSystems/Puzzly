@@ -144,7 +144,6 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     }
 
     private final void gameSimpleReveal() {
-        startActivity(new Intent(this, BonusLevelTreeActivity.class));
     }
 
     private final void settings() {

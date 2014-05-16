@@ -26,7 +26,7 @@ public class PuzzlesDB {
     }
 
     public static void addBasePuzzlesToDB(Context context){
-        if(AppHelper.getPuzzlesInit((Activity) context)) {
+        if(!AppHelper.getPuzzlesInit((Activity) context)) {
             initDBHelper(context);
 
             SQLiteDatabase findAllBD = dbHelper.getWritableDatabase();
