@@ -11,16 +11,14 @@ public class PuzzleFillGame {
 
     private int puzzleId;
     private String word;
-    private String sound;
     private List<PuzzlesPart> parts;
     private String image;
     private String borderedImage;
     private String resultImage;
 
-    public PuzzleFillGame(int puzzleId, String word, String sound, List<PuzzlesPart> parts, String image, String borderedImage, String resultImage) {
+    public PuzzleFillGame(int puzzleId, String word, List<PuzzlesPart> parts, String image, String borderedImage, String resultImage) {
         this.puzzleId = puzzleId;
         this.word = word;
-        this.sound = sound;
         this.parts = parts;
         this.image = image;
         this.borderedImage = borderedImage;
@@ -33,10 +31,6 @@ public class PuzzleFillGame {
 
     public String getWord() {
         return word;
-    }
-
-    public String getSound() {
-        return sound;
     }
 
     public List<PuzzlesPart> getParts() {

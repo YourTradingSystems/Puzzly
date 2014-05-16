@@ -7,6 +7,7 @@ public class Constans {
 
 
     public static final int SHAKE_THRESHOLD = 600;
+    public static final String GAME_NUMBER_EXTRA = "game_number";
 
     /**
      * Settings name
