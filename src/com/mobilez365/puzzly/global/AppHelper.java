@@ -100,9 +100,80 @@ public class AppHelper {
         return prefs.getBoolean(Constans.PUZZLES_INITIALIZED, false);
     }
 
+    public static final void setShowImageBorder(Activity _activity, boolean _state) {
+        SharedPreferences.Editor editor = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE).edit();
+        editor.putBoolean(Constans.DISPLAY_INNER_BORDERS, _state);
+        editor.commit();
+    }
+
     public static final boolean getShowImageBorder(Activity _activity) {
         SharedPreferences prefs = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE);
         return prefs.getBoolean(Constans.DISPLAY_INNER_BORDERS, false);
     }
 
+    public static final void setPlaySoundImageAppear(Activity _activity, boolean _state) {
+        SharedPreferences.Editor editor = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE).edit();
+        editor.putBoolean(Constans.PLAY_SOUND_WHEN_IMAGE_APPEAR, _state);
+        editor.commit();
+    }
+
+    public static final boolean getPlaySoundImageAppear(Activity _activity) {
+        SharedPreferences prefs = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE);
+        return prefs.getBoolean(Constans.PLAY_SOUND_WHEN_IMAGE_APPEAR, false);
+    }
+
+    public static final void setDisplayWords(Activity _activity, boolean _state) {
+        SharedPreferences.Editor editor = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE).edit();
+        editor.putBoolean(Constans.DISPLAY_WORDS, _state);
+        editor.commit();
+    }
+
+    public static final boolean getDisplayWords(Activity _activity) {
+        SharedPreferences prefs = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE);
+        return prefs.getBoolean(Constans.DISPLAY_WORDS, false);
+    }
+
+    public static final void setVoiceForDisplayWords(Activity _activity, boolean _state) {
+        SharedPreferences.Editor editor = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE).edit();
+        editor.putBoolean(Constans.VOICE_FOR_DISPLAY_WORDS, _state);
+        editor.commit();
+    }
+
+    public static final boolean getVoiceForDisplayWords(Activity _activity) {
+        SharedPreferences prefs = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE);
+        return prefs.getBoolean(Constans.VOICE_FOR_DISPLAY_WORDS, false);
+    }
+
+    public static final void setVibrateDragPuzzles(Activity _activity, boolean _state) {
+        SharedPreferences.Editor editor = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE).edit();
+        editor.putBoolean(Constans.VIBRATE_WHEN_DRAG_PUZZLES, _state);
+        editor.commit();
+    }
+
+    public static final boolean getVibrateDragPuzzles(Activity _activity) {
+        SharedPreferences prefs = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE);
+        return prefs.getBoolean(Constans.VIBRATE_WHEN_DRAG_PUZZLES, false);
+    }
+
+    public static final void setVibratePieceInPlace(Activity _activity, boolean _state) {
+        SharedPreferences.Editor editor = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE).edit();
+        editor.putBoolean(Constans.VIBRATE_WHEN_A_PIECE_IN_PLACE, _state);
+        editor.commit();
+    }
+
+    public static final boolean getVibratePieceInPlace(Activity _activity) {
+        SharedPreferences prefs = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE);
+        return prefs.getBoolean(Constans.VIBRATE_WHEN_A_PIECE_IN_PLACE, false);
+    }
+
+    public static final void setLocalizeLanguage(Activity _activity, int _language) {
+        SharedPreferences.Editor editor = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE).edit();
+        editor.putInt(Constans.LOCALIZE_LANGUAGE, _language);
+        editor.commit();
+    }
+
+    public static final int getLocalizeLanguage(Activity _activity) {
+        SharedPreferences prefs = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE);
+        return prefs.getInt(Constans.LOCALIZE_LANGUAGE, 0);
+    }
 }

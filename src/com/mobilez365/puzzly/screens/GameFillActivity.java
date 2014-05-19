@@ -86,18 +86,22 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
         if (PuzzlesDB.getPuzzleGameCount(this) > mGameNumber + 1)
             nextGame.setVisibility(View.VISIBLE);
 
-        gameText.setVisibility(View.VISIBLE);
-        gameText.setText(mPuzzleFillGame.getWord());
+        if (AppHelper.getDisplayWords(this)) {
+            gameText.setVisibility(View.VISIBLE);
+            gameText.setText(mPuzzleFillGame.getWord());
+        }
     }
 
     @Override
     public void onPartMove() {
-        mVibrator.vibrate(100);
+        if (AppHelper.getVibrateDragPuzzles(this))
+            mVibrator.vibrate(100);
     }
 
     @Override
     public void onPartsLock() {
-        mVibrator.vibrate(100);
+        if (AppHelper.getVibratePieceInPlace(this))
+            mVibrator.vibrate(100);
     }
 
     @Override

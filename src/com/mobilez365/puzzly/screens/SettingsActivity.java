@@ -46,46 +46,41 @@ public class SettingsActivity extends Activity implements View.OnClickListener, 
 
     @Override
     public void onClick(View _v) {
-        SharedPreferences.Editor editor = getSharedPreferences(Constans.PREFERENCES_NAME, MODE_PRIVATE).edit();
         switch (_v.getId()) {
             case R.id.btnBack_SS:
                 finish();
                 break;
 
             case R.id.cbDisplayInnerBorders_SS:
-                editor.putBoolean(Constans.DISPLAY_INNER_BORDERS, cbDisplayInnerBorders_SS.isChecked());
+                AppHelper.setShowImageBorder(this, cbDisplayInnerBorders_SS.isChecked());
                 break;
 
             case R.id.cbPlaySoundImageAppear_SS:
-                editor.putBoolean(Constans.PLAY_SOUND_WHEN_IMAGE_APPEAR, cbPlaySoundImageAppear_SS.isChecked());
+                AppHelper.setPlaySoundImageAppear(this, cbPlaySoundImageAppear_SS.isChecked());
                 break;
 
             case R.id.cbDisplayWords_SS:
-                editor.putBoolean(Constans.DISPLAY_WORDS, cbDisplayWords_SS.isChecked());
+                AppHelper.setDisplayWords(this, cbDisplayWords_SS.isChecked());
                 break;
 
             case R.id.cbVoiceDisplayWords_SS:
-                editor.putBoolean(Constans.VOICE_FOR_DISPLAY_WORDS, cbVoiceDisplayWords_SS.isChecked());
+                AppHelper.setVoiceForDisplayWords(this, cbVoiceDisplayWords_SS.isChecked());
                 break;
 
             case R.id.cbVibrateDragPuzzles_SS:
-                editor.putBoolean(Constans.VIBRATE_WHEN_DRAG_PUZZLES, cbVibrateDragPuzzles_SS.isChecked());
+                AppHelper.setVibrateDragPuzzles(this, cbVibrateDragPuzzles_SS.isChecked());
                 break;
 
             case R.id.cbVibratePieceInPlace_SS:
-                editor.putBoolean(Constans.VIBRATE_WHEN_A_PIECE_IN_PLACE, cbVibratePieceInPlace_SS.isChecked());
+                AppHelper.setVibratePieceInPlace(this, cbVibratePieceInPlace_SS.isChecked());
                 break;
         }
-        editor.commit();
     }
 
     @Override
     public void onItemSelected(AdapterView<?> _parent, View _view, int _position, long _id) {
         if (!displayInit) {
-            SharedPreferences.Editor editor = getSharedPreferences(Constans.PREFERENCES_NAME, MODE_PRIVATE).edit();
-            editor.putInt(Constans.LOCALIZE_LANGUAGE, _position);
-            editor.commit();
-
+            AppHelper.setLocalizeLanguage(this, _position);
             AppHelper.changeLanguageRefresh(this, AppHelper.getLocaleLanguage(this).name());
         }
         else
@@ -122,12 +117,12 @@ public class SettingsActivity extends Activity implements View.OnClickListener, 
     }
 
     private final void setValues() {
-        SharedPreferences prefs = getSharedPreferences(Constans.PREFERENCES_NAME, MODE_PRIVATE);
-        cbDisplayInnerBorders_SS.setChecked(prefs.getBoolean(Constans.DISPLAY_INNER_BORDERS, false));
-        cbPlaySoundImageAppear_SS.setChecked(prefs.getBoolean(Constans.PLAY_SOUND_WHEN_IMAGE_APPEAR, false));
-        cbDisplayWords_SS.setChecked(prefs.getBoolean(Constans.DISPLAY_WORDS, false));
-        cbVibrateDragPuzzles_SS.setChecked(prefs.getBoolean(Constans.VIBRATE_WHEN_DRAG_PUZZLES, false));
-        cbVibratePieceInPlace_SS.setChecked(prefs.getBoolean(Constans.VIBRATE_WHEN_A_PIECE_IN_PLACE, false));
-        spinnerChooseCountry_SS.setSelection(prefs.getInt(Constans.LOCALIZE_LANGUAGE, 0));
+        cbDisplayInnerBorders_SS.setChecked(AppHelper.getShowImageBorder(this));
+        cbPlaySoundImageAppear_SS.setChecked(AppHelper.getPlaySoundImageAppear(this));
+        cbDisplayWords_SS.setChecked(AppHelper.getDisplayWords(this));
+        cbVoiceDisplayWords_SS.setChecked(AppHelper.getVoiceForDisplayWords(this));
+        cbVibrateDragPuzzles_SS.setChecked(AppHelper.getVibrateDragPuzzles(this));
+        cbVibratePieceInPlace_SS.setChecked(AppHelper.getVibratePieceInPlace(this));
+        spinnerChooseCountry_SS.setSelection(AppHelper.getLocalizeLanguage(this));
     }
 }
