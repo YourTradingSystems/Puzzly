@@ -4,6 +4,7 @@ import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.os.Vibrator;
@@ -28,6 +29,9 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
     private TextView gameText;
     private PuzzleFillGame mPuzzleFillGame;
     private ImageView basket;
+
+    private boolean isFirsOpenFragment = false;
+    private MediaPlayer mPlayer;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -104,13 +108,42 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
 
     @Override
     public void onGameFinish() {
+        String excellent_words[] = new String[]{"excellent", "well_done"};
+        Random random = new Random();
+        String excellent_word = excellent_words[random.nextInt(excellent_words.length)];
+
         AppHelper.increasePassedGames(this);
         AppHelper.setGameAchievement(this, AppHelper.getGameAchievement(this) + 1);
 
         if (AppHelper.getDisplayWords(this)) {
             gameText.setVisibility(View.VISIBLE);
-            gameText.setText(mPuzzleFillGame.getWord());
+            if (AppHelper.getLocaleLanguage(this).equals(AppHelper.Languages.us))
+                gameText.setText(mPuzzleFillGame.getWordEng());
+            else if (AppHelper.getLocaleLanguage(this).equals(AppHelper.Languages.ru))
+                gameText.setText(mPuzzleFillGame.getWordRus());
         }
+
+        if (AppHelper.getPlaySoundImageAppear(this) && !isFirsOpenFragment) {
+            mPlayer = AppHelper.playSound(this, excellent_word);
+            final Activity activity = this;
+            mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                @Override
+                public void onCompletion(MediaPlayer mp) {
+                    if (AppHelper.getVoiceForDisplayWords(activity))
+                        AppHelper.playSound(activity, mPuzzleFillGame.getWordEng());
+                }
+            });
+            isFirsOpenFragment = true;
+        }
+
+        if (AppHelper.getVoiceForDisplayWords(this)) {
+            if (mPlayer == null)
+                mPlayer = AppHelper.playSound(this, mPuzzleFillGame.getWordEng());
+            else if (!mPlayer.isPlaying()) {
+                mPlayer = AppHelper.playSound(this, mPuzzleFillGame.getWordEng());
+            }
+        }
+
 
         showBasketAnimation();
     }

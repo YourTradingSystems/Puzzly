@@ -11,13 +11,13 @@
 
     <!-- ~~~~~~~~~~~~~~~~~~~ SETTINGS ~~~~~~~~~~~~~~~~~~~~~~ !-->
 
-    <string name="settings_display_inner_borders">Display inner borders</string>
-    <string name="settings_play_sound_when_image_appear">Play sound when image appear</string>
-    <string name="settings_display_words">Display words</string>
-    <string name="settings_voice_for_display_words">Voice for display words</string>
-    <string name="settings_vibrate_when_drag_puzzles">Vibrate when drag puzzles</string>
-    <string name="settings_vibrate_when_a_piece_in_place">Vibrate when a piece in place</string>
-    <string name="settings_localize_language">Language</string>
+    <string name="settings_display_inner_borders">Показывать внутренние границы</string>
+    <string name="settings_play_sound_when_image_appear">Воспроизведение звука при появлении изображения</string>
+    <string name="settings_display_words">Показать слова</string>
+    <string name="settings_voice_for_display_words">Воспроизведение отображаемых слов</string>
+    <string name="settings_vibrate_when_drag_puzzles">Вибрация при выборе части пазла</string>
+    <string name="settings_vibrate_when_a_piece_in_place">Вибрация, когда часть пазла на месте</string>
+    <string name="settings_localize_language">Язык</string>
 
     <string-array name="settings_languages">
         <item>Английский</item>

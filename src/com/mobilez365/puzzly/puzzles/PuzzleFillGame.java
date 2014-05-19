@@ -9,14 +9,16 @@ import java.util.List;
  */
 public class PuzzleFillGame {
 
-    private String word;
+    private String wordEng;
+    private String wordRus;
     private List<PuzzlesPart> parts;
     private String image;
     private String resultImage;
     private Point figurePos;
 
-    public PuzzleFillGame(String word, List<PuzzlesPart> parts, String image, String resultImage, Point figurePos) {
-        this.word = word;
+    public PuzzleFillGame(String wordEng, String wordRus, List<PuzzlesPart> parts, String image, String resultImage, Point figurePos)  {
+        this.wordEng = wordEng;
+        this.wordRus = wordRus;
         this.parts = parts;
         this.image = image;
         this.resultImage = resultImage;
@@ -24,8 +26,12 @@ public class PuzzleFillGame {
     }
 
 
-    public String getWord() {
-        return word;
+    public String getWordEng() {
+        return wordEng;
+    }
+
+    public String getWordRus() {
+        return wordRus;
     }
 
     public List<PuzzlesPart> getParts() {

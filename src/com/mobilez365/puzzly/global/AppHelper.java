@@ -5,10 +5,12 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.app.Activity;
+import android.media.MediaPlayer;
 import android.graphics.Typeface;
 
 import java.lang.reflect.Field;
 import java.util.Locale;
+import java.util.Random;
 
 /**
  * Created by Denis on 14.05.14.
@@ -68,6 +70,13 @@ public class AppHelper {
         return Languages.us;
     }
 
+    public static final MediaPlayer playSound(Activity _activity, String _fileName) {
+        int id = _activity.getResources().getIdentifier(_fileName.toLowerCase(), "raw", _activity.getPackageName());
+        MediaPlayer mediaPayer = MediaPlayer.create(_activity, id);
+        mediaPayer.start();
+        return mediaPayer;
+    }
+    
     public static final void setGameAchievement(Activity _activity, int _count) {
         SharedPreferences.Editor edit = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE).edit();
         edit.putInt(Constans.GAME_ACHIEVEMENT, _count);

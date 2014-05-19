@@ -33,7 +33,8 @@ public class PuzzlesDB {
 
             ContentValues cv = new ContentValues();
             cv.put(PuzzlesDBHelper.GAME_ID, "0");
-            cv.put(PuzzlesDBHelper.GAME_WORD, "pig");
+            cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Pig");
+            cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Cвинья");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "1 70 230");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "48 1 18");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "150 30 35");
@@ -45,7 +46,8 @@ public class PuzzlesDB {
 
             cv = new ContentValues();
             cv.put(PuzzlesDBHelper.GAME_ID, "1");
-            cv.put(PuzzlesDBHelper.GAME_WORD, "chicken");
+            cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Chicken");
+            cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Курица");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "400 536 621");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "116 192 85");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "170 15 40");
@@ -57,7 +59,8 @@ public class PuzzlesDB {
 
             cv = new ContentValues();
             cv.put(PuzzlesDBHelper.GAME_ID, "2");
-            cv.put(PuzzlesDBHelper.GAME_WORD, "dove");
+            cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Dove");
+            cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Голубь");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "450 522 544");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "218 164 95");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "20 170 20");
@@ -98,7 +101,8 @@ public class PuzzlesDB {
 
     public static PuzzleFillGame getPuzzle(int gameNumber, Activity context) {
 
-        String gameWord = "";
+        String gameWordEng = "";
+        String gameWordRus = "";
         String gameImage;
         String gameResultImage;
         List<PuzzlesPart> gameParts = new ArrayList<PuzzlesPart>();
@@ -117,14 +121,15 @@ public class PuzzlesDB {
         );
 
         if (cursor.moveToFirst()) {
-            gameWord = cursor.getString(cursor.getColumnIndex(PuzzlesDBHelper.GAME_WORD));
+            gameWordEng = cursor.getString(cursor.getColumnIndex(PuzzlesDBHelper.GAME_WORD_ENG));
+            gameWordRus = cursor.getString(cursor.getColumnIndex(PuzzlesDBHelper.GAME_WORD_RUS));
 
             if(AppHelper.getShowImageBorder(context))
-                gameImage = gameWord + "_bordered";
+                gameImage = gameWordEng.toLowerCase() + "_bordered";
             else
-                gameImage = gameWord + "_gray";
+                gameImage = gameWordEng.toLowerCase() + "_gray";
 
-            gameResultImage = gameWord + "_result";
+            gameResultImage = gameWordEng.toLowerCase() + "_result";
 
             List<Point> finalPosList = parsePositionList(cursor.getString(cursor.getColumnIndex(
                     PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X)),
@@ -137,7 +142,7 @@ public class PuzzlesDB {
                     PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y)), context);
 
             for(int i = 0; i < finalPosList.size(); i++) {
-                gameParts.add(new PuzzlesPart(i, gameWord + i, startPosList.get(i), finalPosList.get(i)));
+                gameParts.add(new PuzzlesPart(i, gameWordEng.toLowerCase() + i, startPosList.get(i), finalPosList.get(i)));
             }
 
 
@@ -152,7 +157,7 @@ public class PuzzlesDB {
         }
         findAllBD.close();
 
-        return new PuzzleFillGame(gameWord, gameParts, gameImage, gameResultImage, figurePoint);
+        return new PuzzleFillGame(gameWordEng, gameWordRus, gameParts, gameImage, gameResultImage, figurePoint);
     }
 
     private static List<Point> parsePositionList(String posX, String posY, Context context){
