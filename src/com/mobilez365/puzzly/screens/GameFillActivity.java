@@ -1,24 +1,25 @@
 package com.mobilez365.puzzly.screens;
 
+import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Point;
 import android.os.Bundle;
 import android.os.Vibrator;
+import android.view.Display;
 import android.view.View;
-import android.widget.FrameLayout;
-import android.widget.ImageButton;
-import android.widget.TextView;
+import android.widget.*;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.customViews.GameView;
 import com.mobilez365.puzzly.global.AppHelper;
-import com.mobilez365.puzzly.global.Constans;
 import com.mobilez365.puzzly.puzzles.PuzzleFillGame;
 import com.mobilez365.puzzly.puzzles.PuzzlesDB;
+import com.mobilez365.puzzly.util.AnimationEndListener;
 
 import java.util.Random;
 
-public class GameFillActivity extends Activity implements GameView.GameCallBacks, View.OnClickListener {
+public class GameFillActivity extends Activity implements GameView.GameCallBacks, View.OnClickListener, AnimationEndListener.AnimEndListener {
 
     private int mGameNumber;
     private Vibrator mVibrator;
@@ -26,6 +27,7 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
     private ImageButton previousGame;
     private TextView gameText;
     private PuzzleFillGame mPuzzleFillGame;
+    private ImageView basket;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -41,6 +43,13 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
         nextGame = (ImageButton) findViewById(R.id.btnNextAGF);
         previousGame = (ImageButton) findViewById(R.id.btnPreviousAFG);
         gameText = (TextView) findViewById(R.id.tvWordAFG);
+        basket = (ImageView) findViewById(R.id.ivBasketAGF);
+
+        int candiesCount = AppHelper.getGameAchievement(this);
+        if(candiesCount > 20)
+            basket.setImageResource(R.drawable.img_basket_full);
+        else
+            basket.setImageResource(R.drawable.img_basket_empty);
 
         nextGame.setOnClickListener(this);
         previousGame.setOnClickListener(this);
@@ -49,8 +58,8 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
     private void switchGame(int gameNum) {
         AppHelper.setCurrentGame(this, gameNum);
 
-        int passedGame =  AppHelper.getPassedGames(this);
-        if(passedGame != 3)
+        int passedGame = AppHelper.getPassedGames(this);
+        if (passedGame != 3)
             startActivity(new Intent(this, GameFillActivity.class));
         else {
             Random r = new Random();
@@ -75,21 +84,35 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
         finish();
     }
 
+    private void showBasketAnimation() {
+        RelativeLayout basketLayout = (RelativeLayout) findViewById(R.id.rlBasketsAFG);
+        basketLayout.setVisibility(View.VISIBLE);
+
+        ImageView candy = (ImageView) findViewById(R.id.ivCandyAFG);
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        RelativeLayout.LayoutParams basketLayoutParam = (RelativeLayout.LayoutParams) basketLayout.getLayoutParams();
+        basketLayoutParam.width = size.x / 2;
+        basketLayout.setLayoutParams(basketLayoutParam);
+
+        ObjectAnimator moveXAnimator = ObjectAnimator.ofFloat(candy, "translationY", basket.getY() - basket.getHeight()/2, basket.getY() + basket.getHeight()/2);
+        moveXAnimator.setDuration(6000);
+        moveXAnimator.addListener(new AnimationEndListener(candy, this));
+        moveXAnimator.start();
+    }
+
     @Override
     public void onGameFinish() {
         AppHelper.increasePassedGames(this);
         AppHelper.setGameAchievement(this, AppHelper.getGameAchievement(this) + 1);
 
-        if (mGameNumber > 0)
-            previousGame.setVisibility(View.VISIBLE);
-
-        if (PuzzlesDB.getPuzzleGameCount(this) > mGameNumber + 1)
-            nextGame.setVisibility(View.VISIBLE);
-
         if (AppHelper.getDisplayWords(this)) {
             gameText.setVisibility(View.VISIBLE);
             gameText.setText(mPuzzleFillGame.getWord());
         }
+
+        showBasketAnimation();
     }
 
     @Override
@@ -114,5 +137,15 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
                 switchGame(mGameNumber - 1);
                 break;
         }
+    }
+
+    @Override
+    public void OnAnimEnd(View v) {
+        v.setVisibility(View.INVISIBLE);
+        if (mGameNumber > 0)
+            previousGame.setVisibility(View.VISIBLE);
+
+        if (PuzzlesDB.getPuzzleGameCount(this) > mGameNumber + 1)
+            nextGame.setVisibility(View.VISIBLE);
     }
 }

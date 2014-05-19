@@ -36,6 +36,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     public void onCreate(Bundle _savedInstanceState) {
         super.onCreate(_savedInstanceState);
         AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this).name());
+        AppHelper.setDefaultFont(this);
 
         setContentView(R.layout.menu_screen);
         findViews();

@@ -5,7 +5,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.app.Activity;
+import android.graphics.Typeface;
 
+import java.lang.reflect.Field;
 import java.util.Locale;
 
 /**
@@ -16,6 +18,21 @@ public class AppHelper {
     public static enum Languages {
         us,
         ru
+    }
+
+    public static void setDefaultFont(Context context) {
+        final Typeface regular = Typeface.createFromAsset(context.getAssets(),
+                "default_font.ttf");
+        try {
+            final Field StaticField = Typeface.class
+                    .getDeclaredField("MONOSPACE");
+            StaticField.setAccessible(true);
+            StaticField.set(null, regular);
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
     }
 
     public static final void changeLanguage(Activity _activity, String _language) {

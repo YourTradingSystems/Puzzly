@@ -9,7 +9,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/ivBoxABS"
-            android:src="@drawable/img_basket"
+            android:src="@drawable/img_bonus_basket"
             android:layout_centerInParent="true"/>
 
     <RelativeLayout

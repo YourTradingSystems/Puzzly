@@ -41,4 +41,27 @@
             android:layout_margin="30dp"
             android:visibility="gone"/>
 
+    <RelativeLayout
+            android:id="@+id/rlBasketsAFG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            >
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ivCandyAFG"
+                android:src="@drawable/candy_icon"
+                android:layout_centerHorizontal="true"
+                android:layout_alignTop="@+id/ivBasketAGF"/>
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ivBasketAGF"
+                android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
 </RelativeLayout>
