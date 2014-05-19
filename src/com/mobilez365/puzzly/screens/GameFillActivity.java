@@ -96,7 +96,7 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
         basketLayoutParam.width = size.x / 2;
         basketLayout.setLayoutParams(basketLayoutParam);
 
-        ObjectAnimator moveXAnimator = ObjectAnimator.ofFloat(candy, "translationY", basket.getY() - basket.getHeight()/2, basket.getY() + basket.getHeight()/2);
+        ObjectAnimator moveXAnimator = ObjectAnimator.ofFloat(candy, "translationY", basket.getY() - basket.getHeight()/2, basket.getHeight()/2);
         moveXAnimator.setDuration(600);
         moveXAnimator.addListener(new AnimationEndListener(candy, this));
         moveXAnimator.start();
