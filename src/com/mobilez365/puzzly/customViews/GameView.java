@@ -7,6 +7,7 @@ import android.util.DisplayMetrics;
 import android.view.*;
 import com.larvalabs.svgandroid.SVG;
 import com.larvalabs.svgandroid.SVGParser;
+import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.puzzles.GameSprite;
 import com.mobilez365.puzzly.puzzles.PuzzleFillGame;
 import com.mobilez365.puzzly.puzzles.PuzzlesPart;
@@ -27,9 +28,11 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
     private final DisplayMetrics metrics = new DisplayMetrics();
     private int displayWidth;
     private int displayHeight;
-    private int svgBackgroundWidth = 0;
-    private int svgBackgroundHeight = 0;
-    private Bitmap background;
+    private int figurePosX;
+    private int figurePosY;
+    private int svgBackgroundWidth = 800;
+    private int svgBackgroundHeight = 480;
+    private Bitmap shape;
     private GameSprite sprite;
     private GameCallBacks listener;
     private boolean showOnlyPicture = false;
@@ -51,12 +54,13 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         this.listener = listener;
 
         gameLoopThread = new GameLoopThread(this);
-        //setZOrderOnTop(true);
         SurfaceHolder holder = getHolder();
         setFocusable(true);
         holder.addCallback(this);
         holder.setFormat(PixelFormat.TRANSPARENT);
-        background = creteBackground(puzzleFillGame.getImage());
+
+        getDensity();
+        createFigure(puzzleFillGame.getImage());
         createSprites(puzzleFillGame.getParts());
     }
 
@@ -64,29 +68,8 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         return getResources().getIdentifier(name, "raw", context.getPackageName());
     }
 
-    private Bitmap creteBackground(String backgroundName) {
-        final WindowManager w = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
-        final Display d = w.getDefaultDisplay();
-        d.getMetrics(metrics);
-        displayWidth = metrics.widthPixels;
-        displayHeight = metrics.heightPixels;
-        SVG svg = SVGParser.getSVGFromResource(getResources(), getResIdFromString(backgroundName));
-        Bitmap bmp = Bitmap.createBitmap(displayWidth, displayHeight, Bitmap.Config.ARGB_8888);
-        Canvas cnv = new Canvas(bmp);
-        cnv.setDensity((int) (metrics.xdpi));
-        Picture picture = svg.getPicture();
-        svgBackgroundWidth = picture.getWidth();
-        svgBackgroundHeight = picture.getHeight();
-        cnv.drawPicture(picture, new Rect(0, 0, displayWidth, displayHeight));
-        return bmp;
-    }
-
-    private void createSprites(List<PuzzlesPart> parts) {
-        for (PuzzlesPart part : parts) {
-            sprites.add(new GameSprite(this, createSpriteBitmap(getResIdFromString(part.partImage)),
-                    getScaledX(part.finalPartLocation.x), getScaledY(part.finalPartLocation.y),
-                    getScaledX(part.currentPartLocation.x), getScaledY(part.currentPartLocation.y)));
-        }
+    private int getScaledXByShape(int origX, int svgWidth) {
+        return Math.round(((origX + svgWidth / 2) * displayWidth / svgBackgroundWidth - svgWidth * displayHeight / svgBackgroundHeight / 2));
     }
 
     private int getScaledX(int orig) {
@@ -95,6 +78,38 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
 
     private int getScaledY(int orig) {
         return Math.round(orig * displayHeight / svgBackgroundHeight);
+    }
+
+    private void getDensity() {
+        final WindowManager w = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        final Display d = w.getDefaultDisplay();
+        d.getMetrics(metrics);
+        displayWidth = metrics.widthPixels;
+        displayHeight = metrics.heightPixels;
+    }
+
+    private void createFigure(String shapeName) {
+        SVG svg = SVGParser.getSVGFromResource(getResources(),  getResIdFromString(shapeName));
+        Picture picture = svg.getPicture();
+        int svgWidth = picture.getWidth();
+        int svgHeight = picture.getHeight();
+        int spriteWidth = getScaledY(svgWidth);
+        int spriteHeight = getScaledY(svgHeight);
+        Bitmap bmp = Bitmap.createBitmap(spriteWidth, spriteHeight, Bitmap.Config.ARGB_8888);
+        Canvas cnv = new Canvas(bmp);
+        cnv.setDensity((int) (metrics.xdpi));
+        cnv.drawPicture(picture, new Rect(0, 0, spriteWidth, spriteHeight));
+        figurePosX = getScaledXByShape(puzzleFillGame.getFigurePos().x, svgWidth);
+        figurePosY = getScaledY(puzzleFillGame.getFigurePos().y);
+        shape = bmp;
+    }
+
+    private void createSprites(List<PuzzlesPart> parts) {
+        for (PuzzlesPart part : parts) {
+            sprites.add(new GameSprite(this, createSpriteBitmap(getResIdFromString(part.partImage)),
+                    getScaledX(figurePosX + part.finalPartLocation.x), getScaledY(figurePosY + part.finalPartLocation.y),
+                    getScaledX(part.currentPartLocation.x), getScaledY(part.currentPartLocation.y)));
+        }
     }
 
     private Bitmap createSpriteBitmap(int svgResourceId) {
@@ -112,7 +127,8 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
     public void onDraw(Canvas canvas) {
         if (canvas == null) return;
         canvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
-        canvas.drawBitmap(background, 0, 0, null);
+        canvas.drawColor(getResources().getColor(R.color.background_game));
+        canvas.drawBitmap(shape, figurePosX, figurePosY, null);
 
         if (!showOnlyPicture)
             synchronized (this) {
@@ -137,13 +153,13 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                 Collections.reverse(list);
                 for (GameSprite spr : list) {
                     if (spr.isCollision(xPos, yPos)) {
-                        listener.onPartMove();
                         sprite = spr;
                         //move touched sprite to end of sprites sorted set
                         synchronized (this) {
                             if (sprites.contains(sprite)) sprites.remove(sprite);
                             sprites.add(sprite);
                         }
+                        listener.onPartMove();
                         break;
                     }
                 }
@@ -174,7 +190,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                 sprite = null;
                 if (end) {
                     listener.onGameFinish();
-                    background = creteBackground(puzzleFillGame.getResultImage());
+                    createFigure(puzzleFillGame.getResultImage());
 
                     showOnlyPicture = true;
                     Canvas c = getHolder().lockCanvas();

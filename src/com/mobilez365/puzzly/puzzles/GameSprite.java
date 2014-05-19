@@ -6,7 +6,7 @@ import android.graphics.Color;
 import com.mobilez365.puzzly.customViews.GameView;
 
 public class GameSprite {
-    private static final int DISTANCE = 10;
+    private static final int DISTANCE = 15;
     //current coordinates
     private int x = 0;
     private int y = 0;

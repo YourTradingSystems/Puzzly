@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="svg-android-1.1">
+  <library name="svg-android">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/libs/svg-android-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/svg-android.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

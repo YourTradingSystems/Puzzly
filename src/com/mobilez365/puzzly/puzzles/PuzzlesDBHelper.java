@@ -20,9 +20,11 @@ public class PuzzlesDBHelper extends SQLiteOpenHelper {
     public static final String GAME_PARTS_FINAL_POSITION_Y = "game_parts_final_pos_y";
     public static final String GAME_PARTS_START_POSITION_X = "game_parts_start_pos_x";
     public static final String GAME_PARTS_START_POSITION_Y = "game_parts_start_pos_y";
+    public static final String GAME_FIGURE_POSITION_X = "game_figure_pos_x";
+    public static final String GAME_FIGURE_POSITION_Y = "game_figure_pos_y";
 
     public static final String[] FIND_ALL_COLUMN = {GAME_ID, GAME_WORD, GAME_PARTS_FINAL_POSITION_X, GAME_PARTS_FINAL_POSITION_Y,
-            GAME_PARTS_START_POSITION_X, GAME_PARTS_START_POSITION_Y};
+            GAME_PARTS_START_POSITION_X, GAME_PARTS_START_POSITION_Y, GAME_FIGURE_POSITION_X, GAME_FIGURE_POSITION_Y};
 
     private static final String SQL_CREATE_FILL_GAME_ENTRIES = "CREATE TABLE "
             + TABLE_NAME_FILL_GAME + " ("
@@ -31,7 +33,9 @@ public class PuzzlesDBHelper extends SQLiteOpenHelper {
             + GAME_PARTS_FINAL_POSITION_X + " TEXT,"
             + GAME_PARTS_FINAL_POSITION_Y + " TEXT,"
             + GAME_PARTS_START_POSITION_X + " TEXT,"
-            + GAME_PARTS_START_POSITION_Y + " TEXT"
+            + GAME_PARTS_START_POSITION_Y + " TEXT,"
+            + GAME_FIGURE_POSITION_X + " TEXT,"
+            + GAME_FIGURE_POSITION_Y + " TEXT"
             +");";
 
     private static final String SQL_DELETE_FIND_ALL_ENTRIES = "DROP TABLE IF EXISTS "

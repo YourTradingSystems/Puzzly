@@ -13,12 +13,14 @@ public class PuzzleFillGame {
     private List<PuzzlesPart> parts;
     private String image;
     private String resultImage;
+    private Point figurePos;
 
-    public PuzzleFillGame(String word, List<PuzzlesPart> parts, String image, String resultImage) {
+    public PuzzleFillGame(String word, List<PuzzlesPart> parts, String image, String resultImage, Point figurePos) {
         this.word = word;
         this.parts = parts;
         this.image = image;
         this.resultImage = resultImage;
+        this.figurePos = figurePos;
     }
 
 
@@ -36,5 +38,9 @@ public class PuzzleFillGame {
 
     public String getResultImage() {
         return resultImage;
+    }
+
+    public Point getFigurePos() {
+        return figurePos;
     }
 }

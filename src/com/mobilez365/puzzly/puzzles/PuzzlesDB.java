@@ -34,10 +34,12 @@ public class PuzzlesDB {
             ContentValues cv = new ContentValues();
             cv.put(PuzzlesDBHelper.GAME_ID, "0");
             cv.put(PuzzlesDBHelper.GAME_WORD, "pig");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "420 489 650");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "187 140 157");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "1 70 230");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "48 1 18");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "150 30 35");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "140 300 20");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "420");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "140");
 
             findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
 
@@ -48,6 +50,8 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "116 192 85");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "170 15 40");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "170 20 260");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "140");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "320");
 
             findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
 
@@ -58,6 +62,8 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "218 164 95");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "20 170 20");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "50 230 300");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "320");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "140");
 
             findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
 
@@ -96,6 +102,7 @@ public class PuzzlesDB {
         String gameImage;
         String gameResultImage;
         List<PuzzlesPart> gameParts = new ArrayList<PuzzlesPart>();
+        Point figurePoint = new Point();
 
         initDBHelper(context);
 
@@ -132,6 +139,10 @@ public class PuzzlesDB {
             for(int i = 0; i < finalPosList.size(); i++) {
                 gameParts.add(new PuzzlesPart(i, gameWord + i, startPosList.get(i), finalPosList.get(i)));
             }
+
+
+            figurePoint.x = cursor.getInt(cursor.getColumnIndex(PuzzlesDBHelper.GAME_FIGURE_POSITION_X));
+            figurePoint.y = cursor.getInt(cursor.getColumnIndex(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y));
         }
         else
             return null;
@@ -141,7 +152,7 @@ public class PuzzlesDB {
         }
         findAllBD.close();
 
-        return new PuzzleFillGame(gameWord, gameParts, gameImage, gameResultImage);
+        return new PuzzleFillGame(gameWord, gameParts, gameImage, gameResultImage, figurePoint);
     }
 
     private static List<Point> parsePositionList(String posX, String posY, Context context){
