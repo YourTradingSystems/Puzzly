@@ -1,6 +1,7 @@
 package com.mobilez365.puzzly.customViews;
 
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.*;
 import android.util.DisplayMetrics;
@@ -36,7 +37,10 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
     private GameSprite sprite;
     private GameCallBacks listener;
     private boolean showOnlyPicture = false;
-
+    private static final int FILL_GAME = 0;
+    private static final int REVEAL_GAME = 1;
+    private int gameType;
+    
     public interface GameCallBacks {
         public void onGameFinish();
 
@@ -60,6 +64,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         holder.setFormat(PixelFormat.TRANSPARENT);
 
         getDensity();
+        gameType = puzzleFillGame.getGameType();
         createFigure(puzzleFillGame.getImage());
         createSprites(puzzleFillGame.getParts());
     }
@@ -124,7 +129,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         return bmp;
     }
 
-    public void onDraw(Canvas canvas) {
+    @SuppressLint("WrongCall") public void onDraw(Canvas canvas) {
         if (canvas == null) return;
         canvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
         canvas.drawColor(getResources().getColor(R.color.background_game));
@@ -165,25 +170,33 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                 }
                 break;
             case MotionEvent.ACTION_MOVE:
-                if (sprite != null && !sprite.isPieceLocked()) {
+            	if (sprite == null) break;
+                if (!sprite.isPieceLocked()) {
                     sprite.update(xPos, yPos);
                     if (sprite.checkPieceLocked()) {
                         sprite.setPieceLocked(true);
                         listener.onPartsLock();
                     }
                     break;
-                } else if (sprite != null && sprite.isPieceLocked()) {
-                    //check end of game
+                } else  {//check end of game
                     boolean tempEnd = true;
-                    synchronized (this) {
-                        for (GameSprite spr : sprites) {
-                            if (!spr.isPieceLocked()) {
-                                tempEnd = false;
-                                break;
+                    switch (gameType) {
+                        case FILL_GAME:
+                            synchronized (this) {
+                                for (GameSprite spr : sprites) {
+                                    if (!spr.isPieceLocked()) {
+                                        tempEnd = false;
+                                        break;
+                                    }
+                                }
                             }
-                        }
+                            break;
+                        case REVEAL_GAME:
+                            tempEnd = true;
+                            break;
                     }
                     end = tempEnd;
+
                 }
                 break;
             case MotionEvent.ACTION_UP:
@@ -195,7 +208,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                     showOnlyPicture = true;
                     Canvas c = getHolder().lockCanvas();
                     synchronized (getHolder()) {
-                        onDraw(c);
+                        draw(c);
                     }
                     getHolder().unlockCanvasAndPost(c);
                 }
