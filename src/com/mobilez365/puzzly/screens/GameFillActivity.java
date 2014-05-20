@@ -34,12 +34,16 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
 
     private boolean isFirsOpenFragment = false;
     private MediaPlayer mPlayer;
+    private BackgroundSound mBackgroundSound;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_fill);
 
+        mBackgroundSound = AppHelper.getBackgroundSound();
+
+        mGameNumber = AppHelper.getCurrentGame(this);
         gameType = getIntent().getIntExtra("type", 0);
         mGameNumber = AppHelper.getCurrentGame(this, gameType);
 
@@ -54,6 +58,18 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
 
         nextGame.setOnClickListener(this);
         previousGame.setOnClickListener(this);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mBackgroundSound.pause(false);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mBackgroundSound.pause(true);
     }
 
     private void switchGame(int gameNum) {
@@ -125,7 +141,7 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
 
         if (AppHelper.getPlaySoundImageAppear(this) && !isFirsOpenFragment) {
             mPlayer = AppHelper.playSound(this, excellent_word);
-            AppHelper.playSound(this, Constans.GAME_COMPLETE_MUSIC).setVolume(1, 1);
+
             final Activity activity = this;
             mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                 @Override

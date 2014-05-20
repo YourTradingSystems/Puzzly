@@ -11,6 +11,7 @@
 
     <!-- ~~~~~~~~~~~~~~~~~~~ SETTINGS ~~~~~~~~~~~~~~~~~~~~~~ !-->
 
+    <string name="settings_play_background_music">Play background music</string>
     <string name="settings_display_inner_borders">Display inner borders</string>
     <string name="settings_play_sound_when_image_appear">Play sound when image appear</string>
     <string name="settings_display_words">Display words</string>

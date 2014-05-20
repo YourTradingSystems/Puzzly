@@ -15,8 +15,8 @@ import android.widget.TextView;
 
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
-import com.mobilez365.puzzly.global.Constans;
 import com.mobilez365.puzzly.puzzles.PuzzlesDB;
+import com.mobilez365.puzzly.util.BackgroundSound;
 
 import java.util.Random;
 
@@ -32,13 +32,15 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     private RelativeLayout rlLeftBalloon_MS;
     private RelativeLayout rlRightBalloon_MS;
 
+    private BackgroundSound mBackgroundSound;
+
     @Override
     public void onCreate(Bundle _savedInstanceState) {
         super.onCreate(_savedInstanceState);
         AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this).name());
         AppHelper.setDefaultFont(this);
-
-        AppHelper.playSound(this, Constans.GAME_BACKGROUND_MUSIC).setLooping(true);
+        AppHelper.startBackgroundSound(this);
+        mBackgroundSound = AppHelper.getBackgroundSound();
 
         setContentView(R.layout.menu_screen);
         findViews();
@@ -70,6 +72,14 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     protected void onResume() {
         super.onResume();
         setGameAchievement(AppHelper.getGameAchievement(this));
+        mBackgroundSound = AppHelper.getBackgroundSound();
+        mBackgroundSound.pause(false);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mBackgroundSound.pause(true);
     }
 
     private final void findViews() {

@@ -7,6 +7,8 @@ import android.content.res.Configuration;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
 
+import com.mobilez365.puzzly.util.BackgroundSound;
+
 import java.lang.reflect.Field;
 import java.util.Locale;
 
@@ -14,6 +16,8 @@ import java.util.Locale;
  * Created by Denis on 14.05.14.
  */
 public class AppHelper {
+
+    private static BackgroundSound mBackgroundSound;
 
     public static enum Languages {
         us,
@@ -68,11 +72,27 @@ public class AppHelper {
         return Languages.us;
     }
 
+    public static final MediaPlayer initSound(Activity _activity, String _fileName) {
+        int id = _activity.getResources().getIdentifier(_fileName.toLowerCase(), "raw", _activity.getPackageName());
+        MediaPlayer mediaPayer = MediaPlayer.create(_activity, id);
+        return mediaPayer;
+    }
+
     public static final MediaPlayer playSound(Activity _activity, String _fileName) {
         int id = _activity.getResources().getIdentifier(_fileName.toLowerCase(), "raw", _activity.getPackageName());
         MediaPlayer mediaPayer = MediaPlayer.create(_activity, id);
         mediaPayer.start();
         return mediaPayer;
+    }
+
+    public static final void startBackgroundSound(Activity _activity) {
+        mBackgroundSound = new BackgroundSound(_activity);
+        if (!mBackgroundSound.isInit())
+            mBackgroundSound.execute(null);
+    }
+
+    public static final BackgroundSound getBackgroundSound() {
+        return mBackgroundSound;
     }
     
     public static final void setGameAchievement(Activity _activity, int _count) {
@@ -130,6 +150,17 @@ public class AppHelper {
         return prefs.getBoolean(Constans.PUZZLES_INITIALIZED, false);
     }
 
+    public static final void setPlayBackgroundMusic(Activity _activity, boolean _state) {
+        SharedPreferences.Editor editor = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE).edit();
+        editor.putBoolean(Constans.PLAY_BACKGROUND_MUSIC, _state);
+        editor.commit();
+    }
+
+    public static final boolean getPlayBackgroundMusic(Activity _activity) {
+        SharedPreferences prefs = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE);
+        return prefs.getBoolean(Constans.PLAY_BACKGROUND_MUSIC, true);
+    }
+
     public static final void setShowImageBorder(Activity _activity, boolean _state) {
         SharedPreferences.Editor editor = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE).edit();
         editor.putBoolean(Constans.DISPLAY_INNER_BORDERS, _state);
@@ -138,7 +169,7 @@ public class AppHelper {
 
     public static final boolean getShowImageBorder(Activity _activity) {
         SharedPreferences prefs = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE);
-        return prefs.getBoolean(Constans.DISPLAY_INNER_BORDERS, false);
+        return prefs.getBoolean(Constans.DISPLAY_INNER_BORDERS, true);
     }
 
     public static final void setPlaySoundImageAppear(Activity _activity, boolean _state) {
@@ -149,7 +180,7 @@ public class AppHelper {
 
     public static final boolean getPlaySoundImageAppear(Activity _activity) {
         SharedPreferences prefs = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE);
-        return prefs.getBoolean(Constans.PLAY_SOUND_WHEN_IMAGE_APPEAR, false);
+        return prefs.getBoolean(Constans.PLAY_SOUND_WHEN_IMAGE_APPEAR, true);
     }
 
     public static final void setDisplayWords(Activity _activity, boolean _state) {
@@ -160,7 +191,7 @@ public class AppHelper {
 
     public static final boolean getDisplayWords(Activity _activity) {
         SharedPreferences prefs = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE);
-        return prefs.getBoolean(Constans.DISPLAY_WORDS, false);
+        return prefs.getBoolean(Constans.DISPLAY_WORDS, true);
     }
 
     public static final void setVoiceForDisplayWords(Activity _activity, boolean _state) {
@@ -171,7 +202,7 @@ public class AppHelper {
 
     public static final boolean getVoiceForDisplayWords(Activity _activity) {
         SharedPreferences prefs = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE);
-        return prefs.getBoolean(Constans.VOICE_FOR_DISPLAY_WORDS, false);
+        return prefs.getBoolean(Constans.VOICE_FOR_DISPLAY_WORDS, true);
     }
 
     public static final void setVibrateDragPuzzles(Activity _activity, boolean _state) {
@@ -182,7 +213,7 @@ public class AppHelper {
 
     public static final boolean getVibrateDragPuzzles(Activity _activity) {
         SharedPreferences prefs = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE);
-        return prefs.getBoolean(Constans.VIBRATE_WHEN_DRAG_PUZZLES, false);
+        return prefs.getBoolean(Constans.VIBRATE_WHEN_DRAG_PUZZLES, true);
     }
 
     public static final void setVibratePieceInPlace(Activity _activity, boolean _state) {
@@ -193,7 +224,7 @@ public class AppHelper {
 
     public static final boolean getVibratePieceInPlace(Activity _activity) {
         SharedPreferences prefs = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE);
-        return prefs.getBoolean(Constans.VIBRATE_WHEN_A_PIECE_IN_PLACE, false);
+        return prefs.getBoolean(Constans.VIBRATE_WHEN_A_PIECE_IN_PLACE, true);
     }
 
     public static final void setLocalizeLanguage(Activity _activity, int _language) {

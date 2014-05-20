@@ -1,11 +1,7 @@
 package com.mobilez365.puzzly.screens;
 
 import android.app.Activity;
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.provider.Contacts;
-import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -14,9 +10,9 @@ import android.widget.Spinner;
 
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
-import com.mobilez365.puzzly.global.Constans;
+import com.mobilez365.puzzly.util.BackgroundSound;
 
-import java.util.HashMap;
+import java.nio.MappedByteBuffer;
 
 /**
  * Created by Denis on 12.05.14.
@@ -24,20 +20,23 @@ import java.util.HashMap;
 public class SettingsActivity extends Activity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
 
     private Button btnBack_SS;
-    private CheckBox cbDisplayInnerBorders_SS;
-    private CheckBox cbPlaySoundImageAppear_SS;
-    private CheckBox cbDisplayWords_SS;
-    private CheckBox cbVoiceDisplayWords_SS;
-    private CheckBox cbVibrateDragPuzzles_SS;
-    private CheckBox cbVibratePieceInPlace_SS;
+    private CheckBox ccbPlayBackgroundMusic_SS;
+    private CheckBox ccbDisplayInnerBorders_SS;
+    private CheckBox ccbPlaySoundImageAppear_SS;
+    private CheckBox ccbDisplayWords_SS;
+    private CheckBox ccbVoiceDisplayWords_SS;
+    private CheckBox ccbVibrateDragPuzzles_SS;
+    private CheckBox ccbVibratePieceInPlace_SS;
     private Spinner spinnerChooseCountry_SS;
 
     private boolean displayInit = true;
+    private BackgroundSound mBackgroundSound;
 
     @Override
     public void onCreate(Bundle _savedInstanceState) {
         super.onCreate(_savedInstanceState);
         setContentView(R.layout.settings_screen);
+        mBackgroundSound = AppHelper.getBackgroundSound();
 
         findViews();
         setListener();
@@ -51,28 +50,40 @@ public class SettingsActivity extends Activity implements View.OnClickListener, 
                 finish();
                 break;
 
-            case R.id.cbDisplayInnerBorders_SS:
-                AppHelper.setShowImageBorder(this, cbDisplayInnerBorders_SS.isChecked());
+            case R.id.ccbPlayBackgroundMusic_SS:
+                AppHelper.setPlayBackgroundMusic(this, ccbPlayBackgroundMusic_SS.isChecked());
+
+                if (ccbPlayBackgroundMusic_SS.isChecked()) {
+                    AppHelper.startBackgroundSound(this);
+                    mBackgroundSound = AppHelper.getBackgroundSound();
+                }
+                else
+                    mBackgroundSound.getBackgroundPlayer().stop();
+
                 break;
 
-            case R.id.cbPlaySoundImageAppear_SS:
-                AppHelper.setPlaySoundImageAppear(this, cbPlaySoundImageAppear_SS.isChecked());
+            case R.id.ccbDisplayInnerBorders_SS:
+                AppHelper.setShowImageBorder(this, ccbDisplayInnerBorders_SS.isChecked());
                 break;
 
-            case R.id.cbDisplayWords_SS:
-                AppHelper.setDisplayWords(this, cbDisplayWords_SS.isChecked());
+            case R.id.ccbPlaySoundImageAppear_SS:
+                AppHelper.setPlaySoundImageAppear(this, ccbPlaySoundImageAppear_SS.isChecked());
                 break;
 
-            case R.id.cbVoiceDisplayWords_SS:
-                AppHelper.setVoiceForDisplayWords(this, cbVoiceDisplayWords_SS.isChecked());
+            case R.id.ccbDisplayWords_SS:
+                AppHelper.setDisplayWords(this, ccbDisplayWords_SS.isChecked());
                 break;
 
-            case R.id.cbVibrateDragPuzzles_SS:
-                AppHelper.setVibrateDragPuzzles(this, cbVibrateDragPuzzles_SS.isChecked());
+            case R.id.ccbVoiceDisplayWords_SS:
+                AppHelper.setVoiceForDisplayWords(this, ccbVoiceDisplayWords_SS.isChecked());
                 break;
 
-            case R.id.cbVibratePieceInPlace_SS:
-                AppHelper.setVibratePieceInPlace(this, cbVibratePieceInPlace_SS.isChecked());
+            case R.id.ccbVibrateDragPuzzles_SS:
+                AppHelper.setVibrateDragPuzzles(this, ccbVibrateDragPuzzles_SS.isChecked());
+                break;
+
+            case R.id.ccbVibratePieceInPlace_SS:
+                AppHelper.setVibratePieceInPlace(this, ccbVibratePieceInPlace_SS.isChecked());
                 break;
         }
     }
@@ -94,35 +105,50 @@ public class SettingsActivity extends Activity implements View.OnClickListener, 
          */
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mBackgroundSound.pause(false);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mBackgroundSound.pause(true);
+    }
+
     private final void findViews() {
         btnBack_SS = (Button)findViewById(R.id.btnBack_SS);
-        cbDisplayInnerBorders_SS = (CheckBox)findViewById(R.id.cbDisplayInnerBorders_SS);
-        cbPlaySoundImageAppear_SS  = (CheckBox)findViewById(R.id.cbPlaySoundImageAppear_SS);
-        cbDisplayWords_SS  = (CheckBox)findViewById(R.id.cbDisplayWords_SS);
-        cbVoiceDisplayWords_SS  = (CheckBox)findViewById(R.id.cbVoiceDisplayWords_SS);
-        cbVibrateDragPuzzles_SS  = (CheckBox)findViewById(R.id.cbVibrateDragPuzzles_SS);
-        cbVibratePieceInPlace_SS  = (CheckBox)findViewById(R.id.cbVibratePieceInPlace_SS);
+        ccbPlayBackgroundMusic_SS = (CheckBox)findViewById(R.id.ccbPlayBackgroundMusic_SS);
+        ccbDisplayInnerBorders_SS = (CheckBox)findViewById(R.id.ccbDisplayInnerBorders_SS);
+        ccbPlaySoundImageAppear_SS = (CheckBox)findViewById(R.id.ccbPlaySoundImageAppear_SS);
+        ccbDisplayWords_SS = (CheckBox)findViewById(R.id.ccbDisplayWords_SS);
+        ccbVoiceDisplayWords_SS = (CheckBox)findViewById(R.id.ccbVoiceDisplayWords_SS);
+        ccbVibrateDragPuzzles_SS = (CheckBox)findViewById(R.id.ccbVibrateDragPuzzles_SS);
+        ccbVibratePieceInPlace_SS = (CheckBox)findViewById(R.id.ccbVibratePieceInPlace_SS);
         spinnerChooseCountry_SS = (Spinner)findViewById(R.id.spinnerChooseCountry_SS);
     }
 
     private final void setListener() {
         btnBack_SS.setOnClickListener(this);
-        cbDisplayInnerBorders_SS.setOnClickListener(this);
-        cbPlaySoundImageAppear_SS.setOnClickListener(this);
-        cbDisplayWords_SS.setOnClickListener(this);
-        cbVoiceDisplayWords_SS.setOnClickListener(this);
-        cbVibrateDragPuzzles_SS.setOnClickListener(this);
-        cbVibratePieceInPlace_SS.setOnClickListener(this);
+        ccbPlayBackgroundMusic_SS.setOnClickListener(this);
+        ccbDisplayInnerBorders_SS.setOnClickListener(this);
+        ccbPlaySoundImageAppear_SS.setOnClickListener(this);
+        ccbDisplayWords_SS.setOnClickListener(this);
+        ccbVoiceDisplayWords_SS.setOnClickListener(this);
+        ccbVibrateDragPuzzles_SS.setOnClickListener(this);
+        ccbVibratePieceInPlace_SS.setOnClickListener(this);
         spinnerChooseCountry_SS.setOnItemSelectedListener(this);
     }
 
     private final void setValues() {
-        cbDisplayInnerBorders_SS.setChecked(AppHelper.getShowImageBorder(this));
-        cbPlaySoundImageAppear_SS.setChecked(AppHelper.getPlaySoundImageAppear(this));
-        cbDisplayWords_SS.setChecked(AppHelper.getDisplayWords(this));
-        cbVoiceDisplayWords_SS.setChecked(AppHelper.getVoiceForDisplayWords(this));
-        cbVibrateDragPuzzles_SS.setChecked(AppHelper.getVibrateDragPuzzles(this));
-        cbVibratePieceInPlace_SS.setChecked(AppHelper.getVibratePieceInPlace(this));
+        ccbPlayBackgroundMusic_SS.setChecked(AppHelper.getPlayBackgroundMusic(this));
+        ccbDisplayInnerBorders_SS.setChecked(AppHelper.getShowImageBorder(this));
+        ccbPlaySoundImageAppear_SS.setChecked(AppHelper.getPlaySoundImageAppear(this));
+        ccbDisplayWords_SS.setChecked(AppHelper.getDisplayWords(this));
+        ccbVoiceDisplayWords_SS.setChecked(AppHelper.getVoiceForDisplayWords(this));
+        ccbVibrateDragPuzzles_SS.setChecked(AppHelper.getVibrateDragPuzzles(this));
+        ccbVibratePieceInPlace_SS.setChecked(AppHelper.getVibratePieceInPlace(this));
         spinnerChooseCountry_SS.setSelection(AppHelper.getLocalizeLanguage(this));
     }
 }
