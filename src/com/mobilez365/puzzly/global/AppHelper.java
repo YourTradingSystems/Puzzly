@@ -18,6 +18,7 @@ import java.util.Locale;
 public class AppHelper {
 
     private static BackgroundSound mBackgroundSound;
+    private static MediaPlayer mPlayer;
 
     public static enum Languages {
         us,
@@ -74,20 +75,20 @@ public class AppHelper {
 
     public static final MediaPlayer initSound(Activity _activity, String _fileName) {
         int id = _activity.getResources().getIdentifier(_fileName.toLowerCase(), "raw", _activity.getPackageName());
-        MediaPlayer mediaPayer = MediaPlayer.create(_activity, id);
-        return mediaPayer;
+        mPlayer = MediaPlayer.create(_activity, id);
+        return mPlayer;
     }
 
     public static final MediaPlayer playSound(Activity _activity, String _fileName) {
-        int id = _activity.getResources().getIdentifier(_fileName.toLowerCase(), "raw", _activity.getPackageName());
-        MediaPlayer mediaPayer = MediaPlayer.create(_activity, id);
-        mediaPayer.start();
-        return mediaPayer;
+        int id = _activity.getResources().getIdentifier(_fileName, "raw", _activity.getPackageName());
+        mPlayer = MediaPlayer.create(_activity, id);
+        mPlayer.start();
+        return mPlayer;
     }
 
     public static final void startBackgroundSound(Activity _activity) {
         mBackgroundSound = new BackgroundSound(_activity);
-        if (!mBackgroundSound.isInit())
+        if (!mBackgroundSound.isInit() && AppHelper.getPlayBackgroundMusic(_activity))
             mBackgroundSound.execute(null);
     }
 

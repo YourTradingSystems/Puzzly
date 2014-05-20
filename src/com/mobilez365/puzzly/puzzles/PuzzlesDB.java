@@ -35,6 +35,7 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
             cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Pig");
             cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Cвинья");
+            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "pig");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "1 70 230");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "48 1 18");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "150 30 35");
@@ -48,6 +49,7 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
             cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Chicken");
             cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Курица");
+            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "chicken");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "6 142 227");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "46 122 15");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "190 15 40");
@@ -61,6 +63,7 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
             cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Dove");
             cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Голубь");
+            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "dove");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "22 94 116");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "132 78 9");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "20 170 20");
@@ -74,6 +77,7 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
             cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Ice cream");
             cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Морожино");
+            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "icecream");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "18 18");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "5 167");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "20 170");
@@ -87,6 +91,7 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
             cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Octopus");
             cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Осьминог");
+            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "octopus");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "2 89 199");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "133 18 138");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "10 15 160");
@@ -100,6 +105,7 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
             cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Pencil");
             cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Олевец");
+            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "pencil");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "7 63");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "114 8");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "50 70");
@@ -113,6 +119,7 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
             cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Rabbit");
             cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Кролик");
+            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "rabbit");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "4 46 197");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "167 94 4");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "200 0 20");
@@ -126,6 +133,7 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
             cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Toad");
             cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Жаба");
+            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "toad");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "2 152");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "176 17");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "20 30");
@@ -245,6 +253,7 @@ public class PuzzlesDB {
     public static PuzzleFillGame getPuzzle(int gameNumber, int type, Activity context) {
         String gameWordEng = "";
         String gameWordRus = "";
+        String gameItemName = "";
         String gameImage = "";
         String gameResultImage = "";
         List<PuzzlesPart> gameParts = new ArrayList<PuzzlesPart>();
@@ -269,14 +278,17 @@ public class PuzzlesDB {
             {
         	gameWordEng = cursor.getString(cursor.getColumnIndex(PuzzlesDBHelper.GAME_WORD_ENG));
             gameWordRus = cursor.getString(cursor.getColumnIndex(PuzzlesDBHelper.GAME_WORD_RUS));
+            gameItemName = cursor.getString(cursor.getColumnIndex(PuzzlesDBHelper.GAME_ITEM_NAME));
 
             gameWordEng = gameWordEng.replace(" ", "");
             if(AppHelper.getShowImageBorder(context) && type == 0)
                 gameImage = gameWordEng.toLowerCase() + "_bordered";
+            if(AppHelper.getShowImageBorder(context))
+                gameImage = gameItemName + "_bordered";
             else
-                gameImage = gameWordEng.toLowerCase() + "_gray";
+                gameImage = gameItemName + "_gray";
 
-            gameResultImage = gameWordEng.toLowerCase() + "_result";
+            gameResultImage = gameItemName + "_result";
 
             List<Point> finalPosList = parsePositionList(cursor.getString(cursor.getColumnIndex(
                     PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X)),
@@ -289,7 +301,7 @@ public class PuzzlesDB {
                     PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y)), context);
 
             for(int i = 0; i < finalPosList.size(); i++) {
-                gameParts.add(new PuzzlesPart(i, gameWordEng.toLowerCase() + i, startPosList.get(i), finalPosList.get(i)));
+                gameParts.add(new PuzzlesPart(i, gameItemName + i, startPosList.get(i), finalPosList.get(i)));
             }
 
 
@@ -305,7 +317,7 @@ public class PuzzlesDB {
         }
         findAllBD.close();
 
-        return new PuzzleFillGame(type, gameWordEng, gameWordRus, gameParts, gameImage, gameResultImage, figurePoint);
+        return new PuzzleFillGame(type, gameWordEng, gameWordRus, gameItemName, gameParts, gameImage, gameResultImage, figurePoint);
     }
 
     private static List<Point> parsePositionList(String posX, String posY, Context context){

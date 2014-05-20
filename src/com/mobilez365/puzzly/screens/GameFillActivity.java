@@ -63,13 +63,15 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
     @Override
     protected void onResume() {
         super.onResume();
-        mBackgroundSound.pause(false);
+        if (AppHelper.getPlayBackgroundMusic(this))
+            mBackgroundSound.pause(false);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        mBackgroundSound.pause(true);
+        if (AppHelper.getPlayBackgroundMusic(this))
+            mBackgroundSound.pause(true);
     }
 
     private void switchGame(int gameNum) {
@@ -147,7 +149,7 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
                 @Override
                 public void onCompletion(MediaPlayer mp) {
                     if (AppHelper.getVoiceForDisplayWords(activity)) {
-                        AppHelper.playSound(activity, mPuzzleFillGame.getWordEng());
+                        AppHelper.playSound(activity, mPuzzleFillGame.getItemName());
                     }
                 }
             });
@@ -156,9 +158,9 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
 
         if (AppHelper.getVoiceForDisplayWords(this)) {
             if (mPlayer == null)
-                mPlayer = AppHelper.playSound(this, mPuzzleFillGame.getWordEng());
+                mPlayer = AppHelper.playSound(this, mPuzzleFillGame.getItemName());
             else if (!mPlayer.isPlaying()) {
-                mPlayer = AppHelper.playSound(this, mPuzzleFillGame.getWordEng());
+                mPlayer = AppHelper.playSound(this, mPuzzleFillGame.getItemName());
             }
         }
 

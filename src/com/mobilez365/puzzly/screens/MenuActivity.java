@@ -72,14 +72,17 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     protected void onResume() {
         super.onResume();
         setGameAchievement(AppHelper.getGameAchievement(this));
-        mBackgroundSound = AppHelper.getBackgroundSound();
-        mBackgroundSound.pause(false);
+        if (AppHelper.getPlayBackgroundMusic(this)) {
+            mBackgroundSound = AppHelper.getBackgroundSound();
+            mBackgroundSound.pause(false);
+        }
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        mBackgroundSound.pause(true);
+        if (AppHelper.getPlayBackgroundMusic(this))
+            mBackgroundSound.pause(true);
     }
 
     private final void findViews() {

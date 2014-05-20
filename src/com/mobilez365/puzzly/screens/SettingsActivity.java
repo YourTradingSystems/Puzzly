@@ -57,8 +57,12 @@ public class SettingsActivity extends Activity implements View.OnClickListener, 
                     AppHelper.startBackgroundSound(this);
                     mBackgroundSound = AppHelper.getBackgroundSound();
                 }
-                else
-                    mBackgroundSound.getBackgroundPlayer().stop();
+                else {
+                    if (mBackgroundSound.getBackgroundPlayer() != null) {
+                        mBackgroundSound.getBackgroundPlayer().stop();
+                        mBackgroundSound.getBackgroundPlayer().release();
+                    }
+                }
 
                 break;
 
@@ -108,13 +112,15 @@ public class SettingsActivity extends Activity implements View.OnClickListener, 
     @Override
     protected void onResume() {
         super.onResume();
-        mBackgroundSound.pause(false);
+        if (AppHelper.getPlayBackgroundMusic(this))
+            mBackgroundSound.pause(false);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        mBackgroundSound.pause(true);
+        if (AppHelper.getPlayBackgroundMusic(this))
+            mBackgroundSound.pause(true);
     }
 
     private final void findViews() {
