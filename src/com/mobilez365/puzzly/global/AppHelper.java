@@ -1,16 +1,14 @@
 package com.mobilez365.puzzly.global;
 
+import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
-import android.app.Activity;
-import android.media.MediaPlayer;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 
 import java.lang.reflect.Field;
 import java.util.Locale;
-import java.util.Random;
 
 /**
  * Created by Denis on 14.05.14.
@@ -88,15 +86,21 @@ public class AppHelper {
         return prefs.getInt(Constans.GAME_ACHIEVEMENT, 0);
     }
 
-    public static final void setCurrentGame(Activity _activity, int _gameNumber) {
+    public static final void setCurrentGame(Activity _activity, int _gameNumber, int type) {
         SharedPreferences.Editor edit = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE).edit();
-        edit.putInt(Constans.CURRENT_GAME, _gameNumber);
+        if(type == 0)
+            edit.putInt(Constans.CURRENT_GAME_FILL, _gameNumber);
+        else
+            edit.putInt(Constans.CURRENT_GAME_REVEAL, _gameNumber);
         edit.commit();
     }
 
-    public static final int getCurrentGame(Activity _activity) {
+    public static final int getCurrentGame(Activity _activity, int type) {
         SharedPreferences prefs = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE);
-        return prefs.getInt(Constans.CURRENT_GAME, 0);
+        if(type == 0)
+            return prefs.getInt(Constans.CURRENT_GAME_FILL, 0);
+        else
+            return prefs.getInt(Constans.CURRENT_GAME_REVEAL, 0);
     }
 
     public static final void increasePassedGames(Activity _activity) {

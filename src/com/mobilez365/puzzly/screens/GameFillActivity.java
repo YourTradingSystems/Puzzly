@@ -23,6 +23,7 @@ import java.util.Random;
 
 public class GameFillActivity extends Activity implements GameView.GameCallBacks, View.OnClickListener, AnimationEndListener.AnimEndListener {
 
+    private int gameType;
     private int mGameNumber;
     private Vibrator mVibrator;
     private ImageButton nextGame;
@@ -39,9 +40,10 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_fill);
 
-        mGameNumber = AppHelper.getCurrentGame(this);
+        gameType = getIntent().getIntExtra("type", 0);
+        mGameNumber = AppHelper.getCurrentGame(this, gameType);
 
-        mPuzzleFillGame = PuzzlesDB.getPuzzle(mGameNumber, 0, this);
+        mPuzzleFillGame = PuzzlesDB.getPuzzle(mGameNumber, gameType, this);
         ((FrameLayout) findViewById(R.id.rlForGame)).addView(new GameView(this, mPuzzleFillGame, this));
 
         mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
@@ -55,11 +57,14 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
     }
 
     private void switchGame(int gameNum) {
-        AppHelper.setCurrentGame(this, gameNum);
+        AppHelper.setCurrentGame(this, gameNum, gameType);
 
         int passedGame = AppHelper.getPassedGames(this);
-        if (passedGame != 3)
-            startActivity(new Intent(this, GameFillActivity.class));
+        if(passedGame != 3)  {
+            Intent gameIntent = new Intent(this, GameFillActivity.class);
+            gameIntent.putExtra("type", gameType);
+            startActivity(gameIntent);
+        }
         else {
             Random r = new Random();
             int bonusLevelIndex = r.nextInt(3);

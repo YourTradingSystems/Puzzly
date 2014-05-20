@@ -122,8 +122,11 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     private final void gameSimpleFill() {
 
         int passedGame =  AppHelper.getPassedGames(this);
-        if(passedGame != 3)
-            startActivity(new Intent(this, GameFillActivity.class));
+        if(passedGame != 3)  {
+            Intent gameIntent = new Intent(this, GameFillActivity.class);
+            gameIntent.putExtra("type", 0);
+            startActivity(gameIntent);
+        }
         else {
             Random r = new Random();
             int bonusLevelIndex = r.nextInt(3);
@@ -147,6 +150,32 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     }
 
     private final void gameSimpleReveal() {
+        int passedGame =  AppHelper.getPassedGames(this);
+        if(passedGame != 3)  {
+            Intent gameIntent = new Intent(this, GameFillActivity.class);
+            gameIntent.putExtra("type", 1);
+            startActivity(gameIntent);
+        }
+
+        else {
+            Random r = new Random();
+            int bonusLevelIndex = r.nextInt(3);
+
+            Activity bonusLevelActivity = null;
+            switch (bonusLevelIndex) {
+                case 0:
+                    bonusLevelActivity = new BonusLevelTreeActivity();
+                    break;
+                case 1:
+                    bonusLevelActivity = new BonusLevelShakeActivity();
+                    break;
+                case 2:
+                    bonusLevelActivity = new BonusLevelFlowerActivity();
+                    break;
+            }
+
+            startActivity(new Intent(this, bonusLevelActivity.getClass()));
+        }
     }
 
     private final void settings() {
