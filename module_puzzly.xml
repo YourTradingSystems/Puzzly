@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_puzzly" default="compile.module.puzzly">
+  <dirname property="module.puzzly.basedir" file="${ant.file.module_puzzly}"/>
+  
+  <property name="module.jdk.home.puzzly" value="${jdk.home.android_api_16_platform}"/>
+  <property name="module.jdk.bin.puzzly" value="${jdk.bin.android_api_16_platform}"/>
+  <property name="module.jdk.classpath.puzzly" value="jdk.classpath.android_api_16_platform"/>
+  
+  <property name="compiler.args.puzzly" value="${compiler.args}"/>
+  
+  <property name="puzzly.output.dir" value="${module.puzzly.basedir}/out/production/Puzzly"/>
+  <property name="puzzly.testoutput.dir" value="${module.puzzly.basedir}/out/test/Puzzly"/>
+  
+  <path id="puzzly.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="puzzly.module.production.classpath">
+    <path refid="${module.jdk.classpath.puzzly}"/>
+    <path refid="library.svg-android.classpath"/>
+  </path>
+  
+  <path id="puzzly.runtime.production.module.classpath">
+    <pathelement location="${puzzly.output.dir}"/>
+    <path refid="library.svg-android.classpath"/>
+  </path>
+  
+  <path id="puzzly.module.classpath">
+    <path refid="${module.jdk.classpath.puzzly}"/>
+    <pathelement location="${puzzly.output.dir}"/>
+    <path refid="library.svg-android.classpath"/>
+  </path>
+  
+  <path id="puzzly.runtime.module.classpath">
+    <pathelement location="${puzzly.testoutput.dir}"/>
+    <pathelement location="${puzzly.output.dir}"/>
+    <path refid="library.svg-android.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.puzzly">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.puzzly">
+    <patternset refid="excluded.from.module.puzzly"/>
+  </patternset>
+  
+  <path id="puzzly.module.sourcepath">
+    <dirset dir="${module.puzzly.basedir}">
+      <include name="src"/>
+      <include name="gen"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.puzzly" depends="compile.module.puzzly.production,compile.module.puzzly.tests" description="Compile module Puzzly"/>
+  
+  <target name="compile.module.puzzly.production" depends="register.custom.compilers" description="Compile module Puzzly; production classes">
+    <mkdir dir="${puzzly.output.dir}"/>
+    <javac2 destdir="${puzzly.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.puzzly}/javac">
+      <compilerarg line="${compiler.args.puzzly}"/>
+      <bootclasspath refid="puzzly.module.bootclasspath"/>
+      <classpath refid="puzzly.module.production.classpath"/>
+      <src refid="puzzly.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.puzzly"/>
+    </javac2>
+    
+    <copy todir="${puzzly.output.dir}">
+      <fileset dir="${module.puzzly.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.puzzly.basedir}/gen">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.puzzly.tests" depends="register.custom.compilers,compile.module.puzzly.production" description="compile module Puzzly; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.puzzly" description="cleanup module">
+    <delete dir="${puzzly.output.dir}"/>
+    <delete dir="${puzzly.testoutput.dir}"/>
+  </target>
+</project>

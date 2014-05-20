@@ -38,6 +38,8 @@ public class MenuActivity extends Activity implements View.OnClickListener {
         AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this).name());
         AppHelper.setDefaultFont(this);
 
+        AppHelper.playSound(this, Constans.GAME_BACKGROUND_MUSIC).setLooping(true);
+
         setContentView(R.layout.menu_screen);
         findViews();
         setListeners();

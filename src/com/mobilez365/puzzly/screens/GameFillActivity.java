@@ -14,6 +14,7 @@ import android.widget.*;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.customViews.GameView;
 import com.mobilez365.puzzly.global.AppHelper;
+import com.mobilez365.puzzly.global.Constans;
 import com.mobilez365.puzzly.puzzles.PuzzleFillGame;
 import com.mobilez365.puzzly.puzzles.PuzzlesDB;
 import com.mobilez365.puzzly.util.AnimationEndListener;
@@ -125,12 +126,14 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
 
         if (AppHelper.getPlaySoundImageAppear(this) && !isFirsOpenFragment) {
             mPlayer = AppHelper.playSound(this, excellent_word);
+            AppHelper.playSound(this, Constans.GAME_COMPLETE_MUSIC).setVolume(1, 1);
             final Activity activity = this;
             mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                 @Override
                 public void onCompletion(MediaPlayer mp) {
-                    if (AppHelper.getVoiceForDisplayWords(activity))
+                    if (AppHelper.getVoiceForDisplayWords(activity)) {
                         AppHelper.playSound(activity, mPuzzleFillGame.getWordEng());
+                    }
                 }
             });
             isFirsOpenFragment = true;
