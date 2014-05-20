@@ -41,7 +41,7 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
 
         mGameNumber = AppHelper.getCurrentGame(this);
 
-        mPuzzleFillGame = PuzzlesDB.getPuzzle(mGameNumber, this);
+        mPuzzleFillGame = PuzzlesDB.getPuzzle(mGameNumber, 0, this);
         ((FrameLayout) findViewById(R.id.rlForGame)).addView(new GameView(this, mPuzzleFillGame, this));
 
         mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
@@ -181,7 +181,7 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
         if (mGameNumber > 0)
             previousGame.setVisibility(View.VISIBLE);
 
-        if (PuzzlesDB.getPuzzleGameCount(this) > mGameNumber + 1)
+        if (PuzzlesDB.getPuzzleGameCount(this, 0) > mGameNumber + 1)
             nextGame.setVisibility(View.VISIBLE);
     }
 }

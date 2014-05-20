@@ -129,7 +129,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         return bmp;
     }
 
-    @SuppressLint("WrongCall") public void onDraw(Canvas canvas) {
+    public void onDraw(Canvas canvas) {
         if (canvas == null) return;
         canvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
         canvas.drawColor(getResources().getColor(R.color.background_game));
@@ -208,7 +208,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                     showOnlyPicture = true;
                     Canvas c = getHolder().lockCanvas();
                     synchronized (getHolder()) {
-                        draw(c);
+                        onDraw(c);
                     }
                     getHolder().unlockCanvasAndPost(c);
                 }

@@ -56,47 +56,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a79d8431-a31c-4800-9f13-431b5a1f9d4a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/icecream0.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/icecream1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/icecream_bordered.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/icecream_gray.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/icecream_result.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/octopus0.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/octopus1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/octopus2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/octopus_bordered.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/octopus_gray.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/octopus_result.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/pencil0.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/pencil1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/pencil_bordered.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/pencil_gray.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/pencil_result.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/rabbit0.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/rabbit1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/rabbit2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/rabbit_bordered.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/rabbit_gray.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/rabbit_result.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/toad0.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/toad1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/toad_bordered.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/toad_gray.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/toad_result.svg" />
-      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\raw-ru\ice_cream.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/icecream.mp3" />
-      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\raw\ice_cream.mp3" afterPath="$PROJECT_DIR$/res/raw/icecream.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/chicken.mp3" afterPath="$PROJECT_DIR$/res/raw/chicken.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/mobilez365/puzzly/BuildConfig.java" afterPath="$PROJECT_DIR$/gen/com/mobilez365/puzzly/BuildConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/customViews/GameView.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/customViews/GameView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDB.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDB.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Puzzly.iml" afterPath="$PROJECT_DIR$/Puzzly.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/chicken_bordered.svg" afterPath="$PROJECT_DIR$/res/raw/chicken_bordered.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/chicken_gray.svg" afterPath="$PROJECT_DIR$/res/raw/chicken_gray.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/chicken_result.svg" afterPath="$PROJECT_DIR$/res/raw/chicken_result.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/dove_bordered.svg" afterPath="$PROJECT_DIR$/res/raw/dove_bordered.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/dove_gray.svg" afterPath="$PROJECT_DIR$/res/raw/dove_gray.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/dove_result.svg" afterPath="$PROJECT_DIR$/res/raw/dove_result.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.properties" afterPath="$PROJECT_DIR$/project.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Puzzly.iws" />
@@ -120,11 +84,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PuzzlesDB.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDB.java">
+      <file leaf-file-name="GameView.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/customViews/GameView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25448027" vertical-offset="572" max-vertical-offset="4182">
-              <caret line="52" column="67" selection-start-line="52" selection-start-column="67" selection-end-line="52" selection-end-column="67" />
+            <state vertical-scroll-proportion="0.5100917" vertical-offset="2952" max-vertical-offset="3961">
+              <caret line="210" column="30" selection-start-line="210" selection-start-column="30" selection-end-line="210" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameFillActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="748" max-vertical-offset="3281">
+              <caret line="44" column="41" selection-start-line="44" selection-start-column="41" selection-end-line="44" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -183,10 +157,10 @@
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/global/AppHelper.java" />
         <option value="$PROJECT_DIR$/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/res/layout/menu_screen.xml" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/customViews/GameView.java" />
         <option value="$PROJECT_DIR$/res/layout/activity_game_fill.xml" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDB.java" />
+        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/customViews/GameView.java" />
       </list>
     </option>
   </component>
@@ -222,6 +196,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -340,7 +315,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -372,6 +346,22 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="FullScreen" value="false" />
     <property name="LayoutCode.rearrangeEntriesJava" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="129" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="158" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="159" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="833" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="155" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="153" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="155" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="829" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -618,14 +608,17 @@
       <created>1400499443214</created>
       <updated>1400499443214</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="1game puzzles">
+      <created>1400574567771</created>
+      <updated>1400574567771</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="92" y="92" width="1182" height="544" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32423207" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -644,8 +637,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="92" y="92" width="1182" height="544" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -681,7 +675,8 @@
     <MESSAGE value="Game 1 fix" />
     <MESSAGE value="Game 1 fixes" />
     <MESSAGE value="Basket Fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Basket Fixes" />
+    <MESSAGE value="1game puzzles" />
+    <option name="LAST_COMMIT_MESSAGE" value="1game puzzles" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -693,6 +688,30 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/customViews/GameView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1796" max-vertical-offset="3961">
+          <caret line="131" column="17" selection-start-line="131" selection-start-column="16" selection-end-line="131" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="748" max-vertical-offset="3281">
+          <caret line="44" column="41" selection-start-line="44" selection-start-column="41" selection-end-line="44" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="4250">
+          <caret line="55" column="28" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/customViews/GameView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2334" max-vertical-offset="4012">
@@ -953,7 +972,6 @@
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="724" max-vertical-offset="2261">
           <caret line="59" column="74" selection-start-line="59" selection-start-column="74" selection-end-line="59" selection-end-column="74" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -974,37 +992,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6862385" vertical-offset="1190" max-vertical-offset="2958">
-          <caret line="111" column="58" selection-start-line="111" selection-start-column="58" selection-end-line="111" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_game_fill.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="523" max-vertical-offset="1309">
-          <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/raw/rabbit0.svg">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="558">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/customViews/GameView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2532" max-vertical-offset="3757">
-          <caret line="174" column="56" selection-start-line="174" selection-start-column="56" selection-end-line="174" selection-end-column="56" />
           <folding />
         </state>
       </provider>
@@ -1022,8 +1013,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25448027" vertical-offset="572" max-vertical-offset="4182">
-          <caret line="52" column="67" selection-start-line="52" selection-start-column="67" selection-end-line="52" selection-end-column="67" />
+        <state vertical-scroll-proportion="0.17383513" vertical-offset="2929" max-vertical-offset="4335">
+          <caret line="188" column="55" selection-start-line="188" selection-start-column="55" selection-end-line="188" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_game_fill.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="523" max-vertical-offset="1309">
+          <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1853" max-vertical-offset="2907">
+          <caret line="44" column="41" selection-start-line="44" selection-start-column="41" selection-end-line="44" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/customViews/GameView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5100917" vertical-offset="2952" max-vertical-offset="3961">
+          <caret line="210" column="30" selection-start-line="210" selection-start-column="30" selection-end-line="210" selection-end-column="30" />
           <folding />
         </state>
       </provider>

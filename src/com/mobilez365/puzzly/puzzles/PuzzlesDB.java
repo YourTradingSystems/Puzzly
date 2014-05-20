@@ -75,6 +75,7 @@ public class PuzzlesDB {
 
             cv = new ContentValues();
             cv.put(PuzzlesDBHelper.GAME_ID, "3");
+            cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
             cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Ice cream");
             cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Морожино");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "18 18");
@@ -88,6 +89,7 @@ public class PuzzlesDB {
 
             cv = new ContentValues();
             cv.put(PuzzlesDBHelper.GAME_ID, "4");
+            cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
             cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Octopus");
             cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Осьминог");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "2 89 199");
@@ -101,6 +103,7 @@ public class PuzzlesDB {
 
             cv = new ContentValues();
             cv.put(PuzzlesDBHelper.GAME_ID, "5");
+            cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
             cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Pencil");
             cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Олевец");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "7 63");
@@ -114,6 +117,7 @@ public class PuzzlesDB {
 
             cv = new ContentValues();
             cv.put(PuzzlesDBHelper.GAME_ID, "6");
+            cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
             cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Rabbit");
             cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Кролик");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "4 46 197");
@@ -127,6 +131,7 @@ public class PuzzlesDB {
 
             cv = new ContentValues();
             cv.put(PuzzlesDBHelper.GAME_ID, "7");
+            cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
             cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Toad");
             cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Жаба");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "2 152");
@@ -144,14 +149,14 @@ public class PuzzlesDB {
         }
     }
 
-    public static int getPuzzleGameCount(Context context){
+    public static int getPuzzleGameCount(Context context, int gameType){
         initDBHelper(context);
 
         SQLiteDatabase findAllBD = dbHelper.getWritableDatabase();
         Cursor cursor = findAllBD.query(PuzzlesDBHelper.TABLE_NAME_FILL_GAME,
                 PuzzlesDBHelper.FIND_ALL_COLUMN,
-                null,
-                null,
+                PuzzlesDBHelper.GAME_TYPE + " =?",
+                new String[] {String.valueOf(gameType)},
                 null,
                 null,
                 null
@@ -167,7 +172,7 @@ public class PuzzlesDB {
         return gameCount;
     }
 
-    public static PuzzleFillGame getPuzzle(int gameNumber, Activity context) {
+    public static PuzzleFillGame getPuzzle(int gameNumber, int type, Activity context) {
         int gameType;
         String gameWordEng = "";
         String gameWordRus = "";
@@ -181,8 +186,8 @@ public class PuzzlesDB {
         SQLiteDatabase findAllBD = dbHelper.getWritableDatabase();
         Cursor cursor = findAllBD.query(PuzzlesDBHelper.TABLE_NAME_FILL_GAME,
                 PuzzlesDBHelper.FIND_ALL_COLUMN,
-                PuzzlesDBHelper.GAME_ID + " =?",
-                new String[] {String.valueOf(gameNumber)},
+                PuzzlesDBHelper.GAME_ID + " =?" + " and " + PuzzlesDBHelper.GAME_TYPE + " =?",
+                new String[] {String.valueOf(gameNumber), String.valueOf(type)},
                 null,
                 null,
                 null
