@@ -18,6 +18,7 @@ import com.mobilez365.puzzly.global.Constans;
 import com.mobilez365.puzzly.puzzles.PuzzleFillGame;
 import com.mobilez365.puzzly.puzzles.PuzzlesDB;
 import com.mobilez365.puzzly.util.AnimationEndListener;
+import com.mobilez365.puzzly.util.BackgroundSound;
 
 import java.util.Random;
 
@@ -43,7 +44,6 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
 
         mBackgroundSound = AppHelper.getBackgroundSound();
 
-        mGameNumber = AppHelper.getCurrentGame(this);
         gameType = getIntent().getIntExtra("type", 0);
         mGameNumber = AppHelper.getCurrentGame(this, gameType);
 
