@@ -50,12 +50,6 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
         gameText = (TextView) findViewById(R.id.tvWordAFG);
         basket = (ImageView) findViewById(R.id.ivBasketAGF);
 
-        int candiesCount = AppHelper.getGameAchievement(this);
-        if(candiesCount > 20)
-            basket.setImageResource(R.drawable.img_basket_full);
-        else
-            basket.setImageResource(R.drawable.img_basket_empty);
-
         nextGame.setOnClickListener(this);
         previousGame.setOnClickListener(this);
     }
