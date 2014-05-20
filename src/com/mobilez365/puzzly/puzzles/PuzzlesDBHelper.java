@@ -15,6 +15,7 @@ public class PuzzlesDBHelper extends SQLiteOpenHelper {
     public static final String TABLE_NAME_FILL_GAME = "find_all_table";
 
     public static final String GAME_ID = "game_id";
+    public static final String GAME_TYPE = "game_type";
     public static final String GAME_WORD_ENG = "game_word_eng";
     public static final String GAME_WORD_RUS = "game_word_rus";
     public static final String GAME_PARTS_FINAL_POSITION_X = "game_parts_final_pos_x";
@@ -24,12 +25,13 @@ public class PuzzlesDBHelper extends SQLiteOpenHelper {
     public static final String GAME_FIGURE_POSITION_X = "game_figure_pos_x";
     public static final String GAME_FIGURE_POSITION_Y = "game_figure_pos_y";
 
-    public static final String[] FIND_ALL_COLUMN = {GAME_ID, GAME_WORD_ENG, GAME_WORD_RUS, GAME_PARTS_FINAL_POSITION_X, GAME_PARTS_FINAL_POSITION_Y,
+    public static final String[] FIND_ALL_COLUMN = {GAME_ID, GAME_TYPE, GAME_WORD_ENG, GAME_WORD_RUS, GAME_PARTS_FINAL_POSITION_X, GAME_PARTS_FINAL_POSITION_Y,
             GAME_PARTS_START_POSITION_X, GAME_PARTS_START_POSITION_Y, GAME_FIGURE_POSITION_X, GAME_FIGURE_POSITION_Y};
 
     private static final String SQL_CREATE_FILL_GAME_ENTRIES = "CREATE TABLE "
             + TABLE_NAME_FILL_GAME + " ("
             + GAME_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+            + GAME_TYPE + " INTEGER, "
             + GAME_WORD_ENG + " TEXT, "
             + GAME_WORD_RUS + " TEXT, "
             + GAME_PARTS_FINAL_POSITION_X + " TEXT, "
