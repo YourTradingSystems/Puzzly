@@ -1,7 +1,6 @@
 package com.mobilez365.puzzly.customViews;
 
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.*;
 import android.util.DisplayMetrics;
@@ -40,7 +39,8 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
     private static final int FILL_GAME = 0;
     private static final int REVEAL_GAME = 1;
     private int gameType;
-    
+    private List<PuzzlesPart> parts;
+
     public interface GameCallBacks {
         public void onGameFinish();
 
@@ -56,7 +56,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         this.context = context;
         this.puzzleFillGame = puzzleFillGame;
         this.listener = listener;
-
+        this.parts =  puzzleFillGame.getParts();
         gameLoopThread = new GameLoopThread(this);
         SurfaceHolder holder = getHolder();
         setFocusable(true);
@@ -66,7 +66,6 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         getDensity();
         gameType = puzzleFillGame.getGameType();
         createFigure(puzzleFillGame.getImage());
-        createSprites(puzzleFillGame.getParts());
     }
 
     private int getResIdFromString(String name) {
@@ -107,20 +106,20 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         figurePosX = getScaledXByShape(puzzleFillGame.getFigurePos().x, svgWidth);
         figurePosY = getScaledY(puzzleFillGame.getFigurePos().y);
         shape = bmp;
-    }
-
-    private void createSprites(List<PuzzlesPart> parts) {
-        for (PuzzlesPart part : parts) {
-            sprites.add(new GameSprite(this, createSpriteBitmap(getResIdFromString(part.partImage)),
-                    figurePosX + getScaledX(part.finalPartLocation.x), figurePosY + getScaledY(part.finalPartLocation.y),
-                    getScaledX(part.currentPartLocation.x), getScaledY(part.currentPartLocation.y)));
+            for (PuzzlesPart part : parts) {
+                sprites.add(new GameSprite(this, createSpriteBitmap(getResIdFromString(part.partImage)),
+                        figurePosX + part.finalPartLocation.x * spriteWidth / svgWidth,
+                        getScaledY(figurePosY + part.finalPartLocation.y),
+                        getScaledX(part.currentPartLocation.x), getScaledY(part.currentPartLocation.y)));
+            }
         }
-    }
+
+
 
     private Bitmap createSpriteBitmap(int svgResourceId) {
         SVG svg = SVGParser.getSVGFromResource(getResources(), svgResourceId);
         Picture picture = svg.getPicture();
-        int spriteWidth = getScaledX(picture.getWidth());
+        int spriteWidth = getScaledY(picture.getWidth());
         int spriteHeight = getScaledY(picture.getHeight());
         Bitmap bmp = Bitmap.createBitmap(spriteWidth, spriteHeight, Bitmap.Config.ARGB_8888);
         Canvas cnv = new Canvas(bmp);
