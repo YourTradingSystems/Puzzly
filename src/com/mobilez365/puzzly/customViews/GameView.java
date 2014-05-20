@@ -109,7 +109,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
             for (PuzzlesPart part : parts) {
                 sprites.add(new GameSprite(this, createSpriteBitmap(getResIdFromString(part.partImage)),
                         figurePosX + part.finalPartLocation.x * spriteWidth / svgWidth,
-                        getScaledY(figurePosY + part.finalPartLocation.y),
+                        getScaledY(puzzleFillGame.getFigurePos().y + part.finalPartLocation.y),
                         getScaledX(part.currentPartLocation.x), getScaledY(part.currentPartLocation.y)));
             }
         }
