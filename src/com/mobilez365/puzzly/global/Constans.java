@@ -23,7 +23,9 @@ public class Constans {
     public static final String LOCALIZE_LANGUAGE = "localize_language";                         //int
     public static final String GAME_ACHIEVEMENT = "game_achievement";                           //int
     public static final String CURRENT_GAME_FILL = "current_game_fill";                         //int
-    public static final String CURRENT_GAME_REVEAL = "current_game_reveal";                       //int
+    public static final String CURRENT_GAME_REVEAL = "current_game_reveal";                      //int
+    public static final String MAX_GAME_FILL = "max_game_fill";                                 //int
+    public static final String MAX_GAME_REVEAL = "max_game_reveal";                             //int
     public static final String PASSED_GAME = "passed_game";                                     //int
     public static final String PUZZLES_INITIALIZED = "puzzles_initialized";                     //bool
 

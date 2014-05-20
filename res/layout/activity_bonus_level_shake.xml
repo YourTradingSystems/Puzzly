@@ -45,7 +45,7 @@
             android:id="@+id/btnNextABS"
             android:layout_alignParentRight="true"
             android:layout_margin="10dp"
-            android:src="@drawable/ic_launcher"
+            android:src="@drawable/selector_arrow_next"
             android:background="@null"
             android:padding="5dp"
             android:visibility="gone"/>

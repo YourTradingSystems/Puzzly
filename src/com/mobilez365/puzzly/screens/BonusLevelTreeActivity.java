@@ -32,6 +32,7 @@ import java.util.Random;
  */
 public class BonusLevelTreeActivity extends Activity implements ShakeSensor.OnShakeListener, View.OnClickListener, AnimationEndListener.AnimEndListener{
 
+    private int gameType;
     private int screenHeight;
     private int previousFallenCandyPosY;
     private int fallenCandyStep;
@@ -52,6 +53,8 @@ public class BonusLevelTreeActivity extends Activity implements ShakeSensor.OnSh
         setContentView(R.layout.activity_bonus_level_tree);
 
         mBackgroundSound = AppHelper.getBackgroundSound();
+
+        gameType = getIntent().getIntExtra("type", 0);
 
         mShaker = new ShakeSensor(this);
         mShaker.setOnShakeListener(this);
@@ -181,7 +184,9 @@ public class BonusLevelTreeActivity extends Activity implements ShakeSensor.OnSh
     }
 
     private void nextGame() {
-        startActivity(new Intent(this, GameFillActivity.class));
+        Intent gameIntent = new Intent(this, GameFillActivity.class);
+        gameIntent.putExtra("type", gameType);
+        startActivity(gameIntent);
         finish();
     }
 

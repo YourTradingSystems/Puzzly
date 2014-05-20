@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
+import com.mobilez365.puzzly.puzzles.PuzzlesDB;
 
 import com.mobilez365.puzzly.util.BackgroundSound;
 
@@ -113,6 +114,24 @@ public class AppHelper {
             edit.putInt(Constans.CURRENT_GAME_FILL, _gameNumber);
         else
             edit.putInt(Constans.CURRENT_GAME_REVEAL, _gameNumber);
+        edit.commit();
+    }
+
+    public static final int getMaxGame(Activity _activity, int type) {
+        SharedPreferences prefs = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE);
+        if(type == 0)
+            return prefs.getInt(Constans.MAX_GAME_FILL, 0);
+        else
+            return prefs.getInt(Constans.MAX_GAME_REVEAL, 0);
+    }
+
+    public static final void setMaxGame(Activity _activity, int _gameNumber, int type) {
+        SharedPreferences.Editor edit = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE).edit();
+
+        if(type == 0 && getMaxGame(_activity, type) <= _gameNumber && PuzzlesDB.getPuzzleGameCount(_activity, type) > _gameNumber)
+            edit.putInt(Constans.MAX_GAME_FILL, _gameNumber);
+        else if(type == 1 && getMaxGame(_activity, type) <= _gameNumber && PuzzlesDB.getPuzzleGameCount(_activity, type) > _gameNumber)
+            edit.putInt(Constans.MAX_GAME_REVEAL, _gameNumber);
         edit.commit();
     }
 

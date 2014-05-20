@@ -33,6 +33,7 @@ import java.util.Random;
  */
 public class BonusLevelFlowerActivity extends Activity implements ShakeSensor.OnShakeListener, View.OnClickListener, AnimationEndListener.AnimEndListener {
 
+    private int gameType;
     private final int mCandiesCount = 5;
     private int mFlowersShownCount = 0;
     private int mCandiesPickedCount = 0;
@@ -55,6 +56,8 @@ public class BonusLevelFlowerActivity extends Activity implements ShakeSensor.On
         setContentView(R.layout.activity_bonus_level_flower);
 
         mBackgroundSound = AppHelper.getBackgroundSound();
+
+        gameType = getIntent().getIntExtra("type", 0);
 
         mShaker = new ShakeSensor(this);
         mShaker.setOnShakeListener(this);
@@ -186,7 +189,9 @@ public class BonusLevelFlowerActivity extends Activity implements ShakeSensor.On
     }
 
     private void nextGame() {
-        startActivity(new Intent(this, GameFillActivity.class));
+        Intent gameIntent = new Intent(this, GameFillActivity.class);
+        gameIntent.putExtra("type", gameType);
+        startActivity(gameIntent);
         finish();
     }
 

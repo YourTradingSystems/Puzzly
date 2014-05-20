@@ -24,7 +24,7 @@ import java.util.Random;
 
 public class GameFillActivity extends Activity implements GameView.GameCallBacks, View.OnClickListener, AnimationEndListener.AnimEndListener {
 
-    private int gameType;
+    private int mGameType;
     private int mGameNumber;
     private Vibrator mVibrator;
     private ImageButton nextGame;
@@ -44,10 +44,10 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
 
         mBackgroundSound = AppHelper.getBackgroundSound();
 
-        gameType = getIntent().getIntExtra("type", 0);
-        mGameNumber = AppHelper.getCurrentGame(this, gameType);
+        mGameType = getIntent().getIntExtra("type", 0);
+        mGameNumber = AppHelper.getCurrentGame(this, mGameType);
 
-        mPuzzleFillGame = PuzzlesDB.getPuzzle(mGameNumber, gameType, this);
+        mPuzzleFillGame = PuzzlesDB.getPuzzle(mGameNumber, mGameType, this);
         ((FrameLayout) findViewById(R.id.rlForGame)).addView(new GameView(this, mPuzzleFillGame, this));
 
         mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
@@ -58,6 +58,8 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
 
         nextGame.setOnClickListener(this);
         previousGame.setOnClickListener(this);
+
+        showArrows();
     }
 
     @Override
@@ -75,12 +77,12 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
     }
 
     private void switchGame(int gameNum) {
-        AppHelper.setCurrentGame(this, gameNum, gameType);
+        AppHelper.setCurrentGame(this, gameNum, mGameType);
 
         int passedGame = AppHelper.getPassedGames(this);
         if(passedGame != 3)  {
             Intent gameIntent = new Intent(this, GameFillActivity.class);
-            gameIntent.putExtra("type", gameType);
+            gameIntent.putExtra("type", mGameType);
             startActivity(gameIntent);
         }
         else {
@@ -99,8 +101,9 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
                     bonusLevelActivity = new BonusLevelFlowerActivity();
                     break;
             }
-
-            startActivity(new Intent(this, bonusLevelActivity.getClass()));
+            Intent gameIntent = new Intent(this, bonusLevelActivity.getClass());
+            gameIntent.putExtra("type", mGameType);
+            startActivity(gameIntent);
         }
 
         finish();
@@ -124,6 +127,19 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
         moveXAnimator.start();
     }
 
+    private void showArrows(){
+        if (mGameNumber > 0)
+            previousGame.setVisibility(View.VISIBLE);
+
+        if (AppHelper.getMaxGame(this, mGameType) > mGameNumber)
+            nextGame.setVisibility(View.VISIBLE);
+    }
+
+    private void hideArrows(){
+            previousGame.setVisibility(View.GONE);
+            nextGame.setVisibility(View.GONE);
+    }
+
     @Override
     public void onGameFinish() {
         String excellent_words[] = new String[]{"excellent", "well_done"};
@@ -131,6 +147,7 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
         String excellent_word = excellent_words[random.nextInt(excellent_words.length)];
 
         AppHelper.increasePassedGames(this);
+        AppHelper.setMaxGame(this, mGameNumber + 1, mGameType);
         AppHelper.setGameAchievement(this, AppHelper.getGameAchievement(this) + 1);
 
         if (AppHelper.getDisplayWords(this)) {
@@ -172,6 +189,8 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
     public void onPartMove() {
         if (AppHelper.getVibrateDragPuzzles(this))
             mVibrator.vibrate(100);
+        hideArrows();
+
     }
 
     @Override
@@ -194,11 +213,7 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
 
     @Override
     public void OnAnimEnd(View v) {
+        showArrows();
         v.setVisibility(View.INVISIBLE);
-        if (mGameNumber > 0)
-            previousGame.setVisibility(View.VISIBLE);
-
-        if (PuzzlesDB.getPuzzleGameCount(this, 0) > mGameNumber + 1)
-            nextGame.setVisibility(View.VISIBLE);
     }
 }

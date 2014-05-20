@@ -28,6 +28,7 @@ import java.util.Random;
  */
 public class BonusLevelShakeActivity extends Activity implements ShakeSensor.OnShakeListener, View.OnClickListener, AnimationEndListener.AnimEndListener {
 
+    private int gameType;
     private final int mCandiesCount = 9;
     private int mCandiesDroppedCount = 0;
     private int mCandiesPickedCount = 0;
@@ -48,6 +49,8 @@ public class BonusLevelShakeActivity extends Activity implements ShakeSensor.OnS
         setContentView(R.layout.activity_bonus_level_shake);
 
         mBackgroundSound = AppHelper.getBackgroundSound();
+
+        gameType = getIntent().getIntExtra("type", 0);
 
         mShaker = new ShakeSensor(this);
         mShaker.setOnShakeListener(this);
@@ -159,7 +162,9 @@ public class BonusLevelShakeActivity extends Activity implements ShakeSensor.OnS
     }
 
     private void nextGame() {
-        startActivity(new Intent(this, GameFillActivity.class));
+        Intent gameIntent = new Intent(this, GameFillActivity.class);
+        gameIntent.putExtra("type", gameType);
+        startActivity(gameIntent);
         finish();
     }
 
