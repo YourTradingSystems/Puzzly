@@ -12,15 +12,17 @@ public class PuzzleFillGame {
 	private int gameType;
 	private String wordEng;
     private String wordRus;
+    private String itemName;
     private List<PuzzlesPart> parts;
     private String image;
     private String resultImage;
     private Point figurePos;
 
-    public PuzzleFillGame(int gameType, String wordEng, String wordRus, List<PuzzlesPart> parts, String image, String resultImage, Point figurePos)  {
+    public PuzzleFillGame(int gameType, String wordEng, String wordRus, String itemName, List<PuzzlesPart> parts, String image, String resultImage, Point figurePos)  {
         this.gameType = gameType;
     	this.wordEng = wordEng;
         this.wordRus = wordRus;
+        this.itemName = itemName;
         this.parts = parts;
         this.image = image;
         this.resultImage = resultImage;
@@ -34,6 +36,10 @@ public class PuzzleFillGame {
 
     public String getWordRus() {
         return wordRus;
+    }
+
+    public String getItemName() {
+        return itemName;
     }
 
     public List<PuzzlesPart> getParts() {

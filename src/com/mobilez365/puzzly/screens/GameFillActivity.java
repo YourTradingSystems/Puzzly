@@ -18,6 +18,7 @@ import com.mobilez365.puzzly.global.Constans;
 import com.mobilez365.puzzly.puzzles.PuzzleFillGame;
 import com.mobilez365.puzzly.puzzles.PuzzlesDB;
 import com.mobilez365.puzzly.util.AnimationEndListener;
+import com.mobilez365.puzzly.util.BackgroundSound;
 
 import java.util.Random;
 
@@ -34,11 +35,14 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
 
     private boolean isFirsOpenFragment = false;
     private MediaPlayer mPlayer;
+    private BackgroundSound mBackgroundSound;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_fill);
+
+        mBackgroundSound = AppHelper.getBackgroundSound();
 
         gameType = getIntent().getIntExtra("type", 0);
         mGameNumber = AppHelper.getCurrentGame(this, gameType);
@@ -54,6 +58,20 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
 
         nextGame.setOnClickListener(this);
         previousGame.setOnClickListener(this);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (AppHelper.getPlayBackgroundMusic(this))
+            mBackgroundSound.pause(false);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (AppHelper.getPlayBackgroundMusic(this))
+            mBackgroundSound.pause(true);
     }
 
     private void switchGame(int gameNum) {
@@ -125,13 +143,13 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
 
         if (AppHelper.getPlaySoundImageAppear(this) && !isFirsOpenFragment) {
             mPlayer = AppHelper.playSound(this, excellent_word);
-            AppHelper.playSound(this, Constans.GAME_COMPLETE_MUSIC).setVolume(1, 1);
+
             final Activity activity = this;
             mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                 @Override
                 public void onCompletion(MediaPlayer mp) {
                     if (AppHelper.getVoiceForDisplayWords(activity)) {
-                        AppHelper.playSound(activity, mPuzzleFillGame.getWordEng());
+                        AppHelper.playSound(activity, mPuzzleFillGame.getItemName());
                     }
                 }
             });
@@ -140,9 +158,9 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
 
         if (AppHelper.getVoiceForDisplayWords(this)) {
             if (mPlayer == null)
-                mPlayer = AppHelper.playSound(this, mPuzzleFillGame.getWordEng());
+                mPlayer = AppHelper.playSound(this, mPuzzleFillGame.getItemName());
             else if (!mPlayer.isPlaying()) {
-                mPlayer = AppHelper.playSound(this, mPuzzleFillGame.getWordEng());
+                mPlayer = AppHelper.playSound(this, mPuzzleFillGame.getItemName());
             }
         }
 

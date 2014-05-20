@@ -13,6 +13,7 @@ public class Constans {
      * Settings name
      */
     public static final String PREFERENCES_NAME = "my_prefs";                                   //Shared preferences:
+    public static final String PLAY_BACKGROUND_MUSIC = "play_background_music";                 //bool
     public static final String DISPLAY_INNER_BORDERS = "display_inner_borders";                 //bool
     public static final String PLAY_SOUND_WHEN_IMAGE_APPEAR = "play_sound_when_image_appear";   //bool
     public static final String DISPLAY_WORDS = "display_words";                                 //bool
@@ -26,8 +27,7 @@ public class Constans {
     public static final String PASSED_GAME = "passed_game";                                     //int
     public static final String PUZZLES_INITIALIZED = "puzzles_initialized";                     //bool
 
-    public static final String GAME_BACKGROUND_MUSIC = "background_music";
-    public static final String GAME_COMPLETE_MUSIC = "complete_sound";
+    public static final String GAME_BACKGROUND_SOUND = "background_music";
     /**
      * Bonus Level
      */

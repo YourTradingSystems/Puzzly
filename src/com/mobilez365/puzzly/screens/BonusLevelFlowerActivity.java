@@ -21,6 +21,7 @@ import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
 import com.mobilez365.puzzly.global.Constans;
 import com.mobilez365.puzzly.util.AnimationEndListener;
+import com.mobilez365.puzzly.util.BackgroundSound;
 import com.mobilez365.puzzly.util.ShakeSensor;
 
 import java.util.ArrayList;
@@ -47,11 +48,13 @@ public class BonusLevelFlowerActivity extends Activity implements ShakeSensor.On
 
     private TextView tvAllCandiesPicked;
     private RelativeLayout candiesLayout;
+    private BackgroundSound mBackgroundSound;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_bonus_level_flower);
+
+        mBackgroundSound = AppHelper.getBackgroundSound();
 
         mShaker = new ShakeSensor(this);
         mShaker.setOnShakeListener(this);
@@ -191,12 +194,16 @@ public class BonusLevelFlowerActivity extends Activity implements ShakeSensor.On
     public void onResume() {
         mShaker.resume();
         super.onResume();
+        if (AppHelper.getPlayBackgroundMusic(this))
+            mBackgroundSound.pause(false);
     }
 
     @Override
     public void onPause() {
         mShaker.pause();
         super.onPause();
+        if (AppHelper.getPlayBackgroundMusic(this))
+            mBackgroundSound.pause(true);
     }
 
     @Override
