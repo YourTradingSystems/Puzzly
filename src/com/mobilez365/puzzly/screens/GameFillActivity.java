@@ -76,15 +76,14 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
             mBackgroundSound.pause(true);
     }
 
-    private void switchGame(int gameNum) {
-        AppHelper.setCurrentGame(this, gameNum, mGameType);
-
+    private void switchGame() {
         int passedGame = AppHelper.getPassedGames(this);
         if(passedGame != 3)  {
             Intent gameIntent = new Intent(this, GameFillActivity.class);
             gameIntent.putExtra("type", mGameType);
             startActivity(gameIntent);
         }
+
         else {
             Random r = new Random();
             int bonusLevelIndex = r.nextInt(3);
@@ -128,10 +127,10 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
     }
 
     private void showArrows(){
-        if (mGameNumber > 0)
+        if (AppHelper.getPreviousGame(this, mGameType) != -1)
             previousGame.setVisibility(View.VISIBLE);
 
-        if (AppHelper.getMaxGame(this, mGameType) > mGameNumber)
+        if (AppHelper.getNextGame(this, mGameType) != -1)
             nextGame.setVisibility(View.VISIBLE);
     }
 
@@ -181,7 +180,6 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
             }
         }
 
-
         showBasketAnimation();
     }
 
@@ -203,10 +201,12 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btnNextAGF:
-                switchGame(mGameNumber + 1);
+                AppHelper.setCurrentGame(this, AppHelper.getNextGame(this, mGameType), mGameType);
+                switchGame();
                 break;
             case R.id.btnPreviousAFG:
-                switchGame(mGameNumber - 1);
+                AppHelper.setCurrentGame(this, AppHelper.getPreviousGame(this, mGameType), mGameType);
+                switchGame();
                 break;
         }
     }

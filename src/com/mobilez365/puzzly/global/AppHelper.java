@@ -108,6 +108,30 @@ public class AppHelper {
         return prefs.getInt(Constans.GAME_ACHIEVEMENT, 0);
     }
 
+    public static final int getNextGame(Activity _activity, int type) {
+        int currentGame = getCurrentGame(_activity, type);
+        int gameCount = PuzzlesDB.getPuzzleGameCount(_activity, type);
+        int nextGame;
+        if(getMaxGame(_activity, type) == gameCount && currentGame == gameCount - 1)
+            nextGame = 0;
+        else if(getMaxGame(_activity, type) > currentGame)
+            nextGame = currentGame + 1;
+        else
+            nextGame = -1;
+        return nextGame;
+    }
+
+    public static final int getPreviousGame(Activity _activity, int type) {
+        int currentGame = getCurrentGame(_activity, type);
+        int gameCount = PuzzlesDB.getPuzzleGameCount(_activity, type);
+        int previousGame;
+        if(getMaxGame(_activity, type) == gameCount && currentGame == 0)
+            previousGame = gameCount - 1;
+        else
+            previousGame = currentGame - 1;
+        return previousGame;
+    }
+
     public static final void setCurrentGame(Activity _activity, int _gameNumber, int type) {
         SharedPreferences.Editor edit = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE).edit();
         if(type == 0)
@@ -128,9 +152,9 @@ public class AppHelper {
     public static final void setMaxGame(Activity _activity, int _gameNumber, int type) {
         SharedPreferences.Editor edit = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE).edit();
 
-        if(type == 0 && getMaxGame(_activity, type) <= _gameNumber && PuzzlesDB.getPuzzleGameCount(_activity, type) > _gameNumber)
+        if(type == 0 && getMaxGame(_activity, type) <= _gameNumber)
             edit.putInt(Constans.MAX_GAME_FILL, _gameNumber);
-        else if(type == 1 && getMaxGame(_activity, type) <= _gameNumber && PuzzlesDB.getPuzzleGameCount(_activity, type) > _gameNumber)
+        else if(type == 1 && getMaxGame(_activity, type) <= _gameNumber)
             edit.putInt(Constans.MAX_GAME_REVEAL, _gameNumber);
         edit.commit();
     }
