@@ -7,12 +7,11 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Spinner;
-
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
 import com.mobilez365.puzzly.util.BackgroundSound;
-
-import java.nio.MappedByteBuffer;
 
 /**
  * Created by Denis on 12.05.14.
@@ -40,6 +39,7 @@ public class SettingsActivity extends Activity implements View.OnClickListener, 
 
         findViews();
         setListener();
+        showBanner();
         setValues();
     }
 
@@ -156,5 +156,12 @@ public class SettingsActivity extends Activity implements View.OnClickListener, 
         ccbVibrateDragPuzzles_SS.setChecked(AppHelper.getVibrateDragPuzzles(this));
         ccbVibratePieceInPlace_SS.setChecked(AppHelper.getVibratePieceInPlace(this));
         spinnerChooseCountry_SS.setSelection(AppHelper.getLocalizeLanguage(this));
+    }
+
+    private void showBanner() {
+        AdView adView = (AdView)this.findViewById(R.id.adView);
+        adView.setAdUnitId(getResources().getString(R.string.adUnitId));
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
     }
 }

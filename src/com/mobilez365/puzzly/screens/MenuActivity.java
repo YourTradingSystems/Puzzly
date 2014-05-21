@@ -33,9 +33,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     @Override
     public void onCreate(Bundle _savedInstanceState) {
         super.onCreate(_savedInstanceState);
-     //   AdView adView = (AdView)this.findViewById(R.id.adView);
-     //   AdRequest adRequest = new AdRequest.Builder().build();
-     //   adView.loadAd(adRequest);
+        showBanner();
         AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this).name());
         AppHelper.setDefaultFont(this);
         AppHelper.startBackgroundSound(this);
@@ -168,4 +166,10 @@ public class MenuActivity extends Activity implements View.OnClickListener {
         startActivity(new Intent(this, SettingsActivity.class));
     }
 
+    private void showBanner() {
+        AdView adView = (AdView)this.findViewById(R.id.adView);
+        adView.setAdUnitId(getResources().getString(R.string.adUnitId));
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
+    }
 }

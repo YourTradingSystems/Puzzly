@@ -3,7 +3,6 @@ package com.mobilez365.puzzly.screens;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
@@ -31,7 +30,7 @@ import java.util.Random;
 /**
  * Created by andrewtivodar on 15.05.2014.
  */
-public class BonusLevelFlowerActivity extends Activity implements ShakeSensor.OnShakeListener, View.OnClickListener, AnimationEndListener.AnimEndListener {
+public class BonusLevelFlowerActivity extends InterstitialActivity implements ShakeSensor.OnShakeListener, View.OnClickListener, AnimationEndListener.AnimEndListener {
 
     private int gameType;
     private final int mCandiesCount = 5;

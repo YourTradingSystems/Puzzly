@@ -3,13 +3,11 @@ package com.mobilez365.puzzly.screens;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.os.Vibrator;
-import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.View;
 import android.widget.ImageButton;
@@ -30,7 +28,7 @@ import java.util.Random;
 /**
  * Created by andrewtivodar on 14.05.2014.
  */
-public class BonusLevelTreeActivity extends Activity implements ShakeSensor.OnShakeListener, View.OnClickListener, AnimationEndListener.AnimEndListener{
+public class BonusLevelTreeActivity extends InterstitialActivity implements ShakeSensor.OnShakeListener, View.OnClickListener, AnimationEndListener.AnimEndListener{
 
     private int gameType;
     private int screenHeight;

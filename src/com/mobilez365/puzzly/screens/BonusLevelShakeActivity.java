@@ -3,7 +3,6 @@ package com.mobilez365.puzzly.screens;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
@@ -11,7 +10,10 @@ import android.os.Bundle;
 import android.os.Vibrator;
 import android.view.Display;
 import android.view.View;
-import android.widget.*;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
 import com.mobilez365.puzzly.global.Constans;
@@ -26,7 +28,7 @@ import java.util.Random;
 /**
  * Created by andrewtivodar on 12.05.2014.
  */
-public class BonusLevelShakeActivity extends Activity implements ShakeSensor.OnShakeListener, View.OnClickListener, AnimationEndListener.AnimEndListener {
+public class BonusLevelShakeActivity extends InterstitialActivity implements ShakeSensor.OnShakeListener, View.OnClickListener, AnimationEndListener.AnimEndListener {
 
     private int gameType;
     private final int mCandiesCount = 9;
