@@ -34,12 +34,13 @@
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/tvWordAFG"
             android:text="Large Text"
+            android:textColor="@color/text_color"
             android:layout_alignParentBottom="true"
-            android:layout_margin="30dp"
-            android:visibility="gone"/>
+            android:layout_margin="20dp"
+            android:visibility="gone"
+            android:textSize="40sp"/>
 
     <RelativeLayout
             android:id="@+id/rlBasketsAFG"
