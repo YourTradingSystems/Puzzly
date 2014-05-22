@@ -140,10 +140,6 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                     spt.onDraw(canvas);
                 }
             }
-        else {
-            listener.onGameFinish();
-            end = true;
-        }
     }
 
     public boolean onTouchEvent(MotionEvent event) {
@@ -181,38 +177,38 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                     }
                     break;
                 } else {//check end of game
-                    boolean showOnlyPicture = true;
+                    boolean tempEnd = true;
                     switch (gameType) {
                         case FILL_GAME:
                             synchronized (this) {
                                 for (GameSprite spr : sprites) {
                                     if (!spr.isPieceLocked()) {
-                                        showOnlyPicture = false;
+                                        tempEnd = false;
                                         break;
                                     }
                                 }
                             }
                             break;
                         case REVEAL_GAME:
-                            showOnlyPicture = true;
+                            tempEnd = true;
                             break;
                     }
-                    if (showOnlyPicture) {
-                        synchronized (this) {
-                            for (GameSprite spr : sprites) {
-                                spr = null;
-                            }
-                            sprites.clear();
-                        }
-                        createFigure(puzzleFillGame.getResultImage());
-                    }
+
+                    end = tempEnd;
                 }
                 break;
             case MotionEvent.ACTION_UP:
                 sprite = null;
-/*                if (end) {
+                if (end) {
                     listener.onGameFinish();
                     createFigure(puzzleFillGame.getResultImage());
+
+                    synchronized (this) {
+                        for (GameSprite spr : sprites) {
+                            spr = null;
+                        }
+                        sprites.clear();
+                    }
 
                     showOnlyPicture = true;
                     Canvas c = getHolder().lockCanvas();
@@ -220,7 +216,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                         onDraw(c);
                     }
                     getHolder().unlockCanvasAndPost(c);
-                }*/
+                }
                 break;
         }
         return true;

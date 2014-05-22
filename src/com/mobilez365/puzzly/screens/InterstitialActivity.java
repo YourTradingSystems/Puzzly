@@ -10,7 +10,7 @@ import com.mobilez365.puzzly.R;
  */
 public class InterstitialActivity extends Activity {
 
-    protected final String AD_UNIT_ID = getResources().getString(R.string.interstitialAdUnitId);
+    protected final String AD_UNIT_ID = "ca-app-pub-8370463222730338/1339125208";
     protected InterstitialAd interstitialAd;
 
     @Override

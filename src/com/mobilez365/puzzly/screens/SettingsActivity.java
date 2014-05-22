@@ -161,8 +161,6 @@ public class SettingsActivity extends Activity implements View.OnClickListener, 
 
     private void showBanner() {
         AdView adView = (AdView)this.findViewById(R.id.adView);
-        adView.setAdUnitId(getResources().getString(R.string.adUnitId));
-        adView.setAdSize(AdSize.BANNER);
         AdRequest adRequest = new AdRequest.Builder().build();
         adView.loadAd(adRequest);
     }

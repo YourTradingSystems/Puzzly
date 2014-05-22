@@ -33,10 +33,7 @@ public class GameLoopThread extends Thread {
                 if (c != null) {
                     view.getHolder().unlockCanvasAndPost(c);
                 }
-                if (view.isEnd()) {
-                    view.release();
-                    setRunning(false);
-                }
+                if (view.isEnd()) setRunning(false);
             }
             sleepTime = ticksPS - (System.currentTimeMillis() - startTime);
             try {

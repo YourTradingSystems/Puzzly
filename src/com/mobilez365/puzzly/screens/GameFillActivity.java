@@ -24,6 +24,7 @@ import java.util.Random;
 
 public class GameFillActivity extends Activity implements GameView.GameCallBacks, View.OnClickListener, AnimationEndListener.AnimEndListener {
 
+    private boolean gameIsFinished = false;
     private int mGameType;
     private int mGameNumber;
     private Vibrator mVibrator;
@@ -113,17 +114,10 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
         basketLayout.setVisibility(View.VISIBLE);
 
         ImageView candy = (ImageView) findViewById(R.id.ivCandyAFG);
-        Display display = getWindowManager().getDefaultDisplay();
-        Point size = new Point();
-        display.getSize(size);
-        RelativeLayout.LayoutParams basketLayoutParam = (RelativeLayout.LayoutParams) basketLayout.getLayoutParams();
-        basketLayoutParam.width = size.x / 2;
-        basketLayout.setLayoutParams(basketLayoutParam);
-
-        ObjectAnimator moveXAnimator = ObjectAnimator.ofFloat(candy, "translationY", basket.getY() - basket.getHeight()/2, basket.getHeight()/2);
-        moveXAnimator.setDuration(600);
-        moveXAnimator.addListener(new AnimationEndListener(candy, this));
-        moveXAnimator.start();
+        ObjectAnimator moveYAnimator = ObjectAnimator.ofFloat(candy, "translationY", 0, candy.getHeight());
+        moveYAnimator.setDuration(600);
+        moveYAnimator.addListener(new AnimationEndListener(candy, this));
+        moveYAnimator.start();
     }
 
     private void showArrows(){
@@ -141,13 +135,18 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
 
     @Override
     public void onGameFinish() {
+
         String excellent_words[] = new String[]{"excellent", "well_done"};
         Random random = new Random();
         String excellent_word = excellent_words[random.nextInt(excellent_words.length)];
 
-        AppHelper.increasePassedGames(this);
-        AppHelper.setMaxGame(this, mGameNumber + 1, mGameType);
-        AppHelper.setGameAchievement(this, AppHelper.getGameAchievement(this) + 1);
+        if(!gameIsFinished) {
+            AppHelper.increasePassedGames(this);
+            AppHelper.setMaxGame(this, mGameNumber + 1, mGameType);
+            AppHelper.setGameAchievement(this, AppHelper.getGameAchievement(this) + 1);
+            showBasketAnimation();
+            gameIsFinished = true;
+        }
 
         if (AppHelper.getDisplayWords(this)) {
             gameText.setVisibility(View.VISIBLE);
@@ -180,7 +179,6 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
             }
         }
 
-        showBasketAnimation();
     }
 
     @Override

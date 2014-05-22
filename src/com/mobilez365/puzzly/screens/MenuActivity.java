@@ -40,6 +40,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
         mBackgroundSound = AppHelper.getBackgroundSound();
 
         setContentView(R.layout.menu_screen);
+        showBanner();
         findViews();
         showBanner();
         setListeners();
@@ -168,9 +169,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     }
 
     private void showBanner() {
-        AdView adView = (AdView)this.findViewById(R.id.adView);
-        adView.setAdUnitId(getResources().getString(R.string.adUnitId));
-        adView.setAdSize(AdSize.BANNER);
+        AdView adView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         adView.loadAd(adRequest);
     }

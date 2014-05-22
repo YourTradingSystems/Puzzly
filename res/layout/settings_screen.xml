@@ -33,7 +33,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/llScreenHeader">
+        android:layout_below="@id/llScreenHeader"
+        android:layout_above="@id/adView">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -117,13 +118,16 @@
                     android:entries="@array/settings_languages"/>
 
             </LinearLayout>
-            <com.google.android.gms.ads.AdView android:id="@+id/adView"
-                                               android:layout_width="wrap_content"
-                                               android:layout_height="wrap_content"
-                                               android:layout_centerHorizontal="true"
-                                               ads:adSize="BANNER"
-                                               android:layout_below="@+id/ccbVibratePieceInPlace_SS"/>
+
         </RelativeLayout>
     </ScrollView>
+
+    <com.google.android.gms.ads.AdView android:id="@+id/adView"
+                                       android:layout_alignParentBottom="true"
+                                       android:layout_width="wrap_content"
+                                       android:layout_height="wrap_content"
+                                       android:layout_centerHorizontal="true"
+                                       ads:adUnitId="@string/adUnitId"
+                                       ads:adSize="BANNER"/>
 
 </RelativeLayout>
