@@ -5,11 +5,13 @@ import android.app.ActivityManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Interpolator;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.view.animation.TranslateAnimation;
 import android.widget.*;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -19,11 +21,13 @@ import com.mobilez365.puzzly.global.Constans;
 import com.mobilez365.puzzly.puzzles.PuzzlesDB;
 import com.mobilez365.puzzly.util.BackgroundSound;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 public class MenuActivity extends Activity implements View.OnClickListener {
 
+    private RelativeLayout rlMenuMainLayout_MS;
     private ImageView ivGameSimpleFill_MS;
     private ImageView ivGameSimpleReveal_MS;
     private ImageButton btnGameSettings_MS;
@@ -106,6 +110,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     }
 
     private final void findViews() {
+        rlMenuMainLayout_MS = (RelativeLayout)findViewById(R.id.rlMenuMainLayout_MS);
         ivGameSimpleFill_MS = (ImageView)findViewById(R.id.ivGameSimpleFill_MS);
         ivGameSimpleReveal_MS = (ImageView)findViewById(R.id.ivGameSimpleReveal_MS);
         btnGameSettings_MS = (ImageButton)findViewById(R.id.btnGameSettings_MS);
@@ -125,6 +130,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
 
     private final void startAnimation() {
         Animation logoScaleAnimation = AnimationUtils.loadAnimation(this, R.anim.menu_logo);
+
         logoScaleAnimation.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
@@ -136,6 +142,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
                 ivMenuLogo_MS.setVisibility(View.INVISIBLE);
                 llSubMenu_MS.setVisibility(View.VISIBLE);
                 llMainMenu_MS.setVisibility(View.VISIBLE);
+                startCloudAnimation();
             }
 
             @Override
@@ -146,6 +153,29 @@ public class MenuActivity extends Activity implements View.OnClickListener {
         ivMenuLogo_MS.startAnimation(logoScaleAnimation);
         rlLeftBalloon_MS.startAnimation(AnimationUtils.loadAnimation(this, R.anim.menu_balloon_rotate_left));
         rlRightBalloon_MS.startAnimation(AnimationUtils.loadAnimation(this, R.anim.menu_balloon_rotate_right));
+
+    }
+
+    private final void startCloudAnimation() {
+        int cloundCount = 4;
+        int cloud[] = new int[] {R.drawable.clouds1_icon, R.drawable.clouds2_icon, R.drawable.clouds3_icon, R.drawable.clouds4_icon};
+        Random rand = new Random();
+        float y = 50;
+
+        for (int i = 0; i < cloundCount; i++) {
+            y += rand.nextInt(50);
+            Animation animation = new TranslateAnimation(-100, getResources().getDisplayMetrics().widthPixels, y, y);
+            animation.setDuration(rand.nextInt(20000) + 30000);
+            animation.setInterpolator(this, android.R.anim.linear_interpolator);
+            animation.setRepeatCount(Animation.INFINITE);
+            animation.setRepeatMode(Animation.RESTART);
+
+            ImageView animCloud = new ImageView(this);
+            animCloud.setImageResource(cloud[i]);
+            animCloud.startAnimation(animation);
+            rlMenuMainLayout_MS.addView(animCloud, 0);
+            y += 50;
+        }
     }
 
     private final void setGameAchievement(int _count) {
