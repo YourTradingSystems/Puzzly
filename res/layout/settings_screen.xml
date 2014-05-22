@@ -120,7 +120,8 @@
             <com.google.android.gms.ads.AdView android:id="@+id/adView"
                                                android:layout_width="wrap_content"
                                                android:layout_height="wrap_content"
-                                               ads:adSize="BANNER" android:layout_centerHorizontal="true"
+                                               android:layout_centerHorizontal="true"
+                                               ads:adSize="BANNER"
                                                android:layout_below="@+id/ccbVibratePieceInPlace_SS"/>
         </RelativeLayout>
     </ScrollView>

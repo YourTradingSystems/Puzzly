@@ -56,7 +56,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         this.context = context;
         this.puzzleFillGame = puzzleFillGame;
         this.listener = listener;
-        this.parts =  puzzleFillGame.getParts();
+        this.parts = puzzleFillGame.getParts();
         gameLoopThread = new GameLoopThread(this);
         SurfaceHolder holder = getHolder();
         setFocusable(true);
@@ -93,7 +93,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
     }
 
     private void createFigure(String shapeName) {
-        SVG svg = SVGParser.getSVGFromResource(getResources(),  getResIdFromString(shapeName));
+        SVG svg = SVGParser.getSVGFromResource(getResources(), getResIdFromString(shapeName));
         Picture picture = svg.getPicture();
         int svgWidth = picture.getWidth();
         int svgHeight = picture.getHeight();
@@ -106,14 +106,14 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         figurePosX = getScaledXByShape(puzzleFillGame.getFigurePos().x, svgWidth);
         figurePosY = getScaledY(puzzleFillGame.getFigurePos().y);
         shape = bmp;
-            for (PuzzlesPart part : parts) {
-                sprites.add(new GameSprite(this, createSpriteBitmap(getResIdFromString(part.partImage)),
-                        figurePosX + part.finalPartLocation.x * spriteWidth / svgWidth,
-                        getScaledY(puzzleFillGame.getFigurePos().y + part.finalPartLocation.y),
-                        getScaledX(part.currentPartLocation.x), getScaledY(part.currentPartLocation.y)));
-            }
+        if (showOnlyPicture) return;
+        for (PuzzlesPart part : parts) {
+            sprites.add(new GameSprite(this, createSpriteBitmap(getResIdFromString(part.partImage)),
+                    figurePosX + part.finalPartLocation.x * spriteWidth / svgWidth,
+                    getScaledY(puzzleFillGame.getFigurePos().y + part.finalPartLocation.y),
+                    getScaledX(part.currentPartLocation.x), getScaledY(part.currentPartLocation.y)));
         }
-
+    }
 
 
     private Bitmap createSpriteBitmap(int svgResourceId) {
@@ -140,7 +140,10 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                     spt.onDraw(canvas);
                 }
             }
-
+        else {
+            listener.onGameFinish();
+            end = true;
+        }
     }
 
     public boolean onTouchEvent(MotionEvent event) {
@@ -169,7 +172,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                 }
                 break;
             case MotionEvent.ACTION_MOVE:
-            	if (sprite == null) break;
+                if (sprite == null) break;
                 if (!sprite.isPieceLocked()) {
                     sprite.update(xPos, yPos);
                     if (sprite.checkPieceLocked()) {
@@ -177,30 +180,37 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                         listener.onPartsLock();
                     }
                     break;
-                } else  {//check end of game
-                    boolean tempEnd = true;
+                } else {//check end of game
+                    boolean showOnlyPicture = true;
                     switch (gameType) {
                         case FILL_GAME:
                             synchronized (this) {
                                 for (GameSprite spr : sprites) {
                                     if (!spr.isPieceLocked()) {
-                                        tempEnd = false;
+                                        showOnlyPicture = false;
                                         break;
                                     }
                                 }
                             }
                             break;
                         case REVEAL_GAME:
-                            tempEnd = true;
+                            showOnlyPicture = true;
                             break;
                     }
-                    end = tempEnd;
-
+                    if (showOnlyPicture) {
+                        synchronized (this) {
+                            for (GameSprite spr : sprites) {
+                                spr = null;
+                            }
+                            sprites.clear();
+                        }
+                        createFigure(puzzleFillGame.getResultImage());
+                    }
                 }
                 break;
             case MotionEvent.ACTION_UP:
                 sprite = null;
-                if (end) {
+/*                if (end) {
                     listener.onGameFinish();
                     createFigure(puzzleFillGame.getResultImage());
 
@@ -210,7 +220,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                         onDraw(c);
                     }
                     getHolder().unlockCanvasAndPost(c);
-                }
+                }*/
                 break;
         }
         return true;
@@ -244,6 +254,10 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
 
     @Override
     public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
+    }
+
+    public void release() {
+        getHolder().getSurface().release();
     }
 }
  

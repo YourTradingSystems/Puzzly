@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Spinner;
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
@@ -161,6 +162,7 @@ public class SettingsActivity extends Activity implements View.OnClickListener, 
     private void showBanner() {
         AdView adView = (AdView)this.findViewById(R.id.adView);
         adView.setAdUnitId(getResources().getString(R.string.adUnitId));
+        adView.setAdSize(AdSize.BANNER);
         AdRequest adRequest = new AdRequest.Builder().build();
         adView.loadAd(adRequest);
     }

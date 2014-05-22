@@ -1,7 +1,6 @@
 package com.mobilez365.puzzly.screens;
 
 import android.app.Activity;
-import android.os.Bundle;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 import com.mobilez365.puzzly.R;
@@ -15,8 +14,8 @@ public class InterstitialActivity extends Activity {
     protected InterstitialAd interstitialAd;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void onResume() {
+        super.onResume();
         setupAD();
     }
 
@@ -29,10 +28,7 @@ public class InterstitialActivity extends Activity {
     protected void setupAD(){
         interstitialAd = new InterstitialAd(this);
         interstitialAd.setAdUnitId(AD_UNIT_ID);
-        AdRequest adRequest = new AdRequest.Builder()
-                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-                .addTestDevice("INSERT_YOUR_HASHED_DEVICE_ID_HERE")
-                .build();
+        AdRequest adRequest = new AdRequest.Builder().build();
         interstitialAd.loadAd(adRequest);
     }
 

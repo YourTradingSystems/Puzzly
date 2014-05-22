@@ -8,6 +8,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.*;
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
@@ -33,7 +34,6 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     @Override
     public void onCreate(Bundle _savedInstanceState) {
         super.onCreate(_savedInstanceState);
-        showBanner();
         AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this).name());
         AppHelper.setDefaultFont(this);
         AppHelper.startBackgroundSound(this);
@@ -41,6 +41,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
 
         setContentView(R.layout.menu_screen);
         findViews();
+        showBanner();
         setListeners();
         startAnimation();
         PuzzlesDB.addBasePuzzlesToDB(this);
@@ -169,6 +170,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     private void showBanner() {
         AdView adView = (AdView)this.findViewById(R.id.adView);
         adView.setAdUnitId(getResources().getString(R.string.adUnitId));
+        adView.setAdSize(AdSize.BANNER);
         AdRequest adRequest = new AdRequest.Builder().build();
         adView.loadAd(adRequest);
     }
