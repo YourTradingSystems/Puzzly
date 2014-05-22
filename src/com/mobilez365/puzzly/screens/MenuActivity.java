@@ -39,6 +39,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     private RelativeLayout rlRightBalloon_MS;
 
     private BackgroundSound mBackgroundSound;
+    private List<ImageView> mClouds = new ArrayList<ImageView>();
 
     @Override
     public void onCreate(Bundle _savedInstanceState) {
@@ -130,6 +131,8 @@ public class MenuActivity extends Activity implements View.OnClickListener {
 
     private final void startAnimation() {
         Animation logoScaleAnimation = AnimationUtils.loadAnimation(this, R.anim.menu_logo);
+        startCloudAnimation(0);
+        startCloudAnimation(15000);
 
         logoScaleAnimation.setAnimationListener(new Animation.AnimationListener() {
             @Override
@@ -142,7 +145,9 @@ public class MenuActivity extends Activity implements View.OnClickListener {
                 ivMenuLogo_MS.setVisibility(View.INVISIBLE);
                 llSubMenu_MS.setVisibility(View.VISIBLE);
                 llMainMenu_MS.setVisibility(View.VISIBLE);
-                startCloudAnimation();
+
+                for (ImageView img : mClouds)
+                    img.setVisibility(View.VISIBLE);
             }
 
             @Override
@@ -156,7 +161,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
 
     }
 
-    private final void startCloudAnimation() {
+    private final void startCloudAnimation(long _startOffset) {
         int cloundCount = 4;
         int cloud[] = new int[] {R.drawable.clouds1_icon, R.drawable.clouds2_icon, R.drawable.clouds3_icon, R.drawable.clouds4_icon};
         Random rand = new Random();
@@ -169,12 +174,15 @@ public class MenuActivity extends Activity implements View.OnClickListener {
             animation.setInterpolator(this, android.R.anim.linear_interpolator);
             animation.setRepeatCount(Animation.INFINITE);
             animation.setRepeatMode(Animation.RESTART);
+            animation.setStartOffset(_startOffset);
 
             ImageView animCloud = new ImageView(this);
-            animCloud.setImageResource(cloud[i]);
+            animCloud.setImageResource(cloud[rand.nextInt(cloud.length)]);
             animCloud.startAnimation(animation);
+            animCloud.setVisibility(View.GONE);
             rlMenuMainLayout_MS.addView(animCloud, 0);
             y += 50;
+            mClouds.add(animCloud);
         }
     }
 

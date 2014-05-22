@@ -14,6 +14,7 @@ import android.widget.*;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.customViews.GameView;
 import com.mobilez365.puzzly.global.AppHelper;
+import com.mobilez365.puzzly.global.Constans;
 import com.mobilez365.puzzly.puzzles.PuzzleFillGame;
 import com.mobilez365.puzzly.puzzles.PuzzlesDB;
 import com.mobilez365.puzzly.util.AnimationEndListener;
