@@ -39,8 +39,8 @@ public class SettingsActivity extends Activity implements View.OnClickListener, 
         mBackgroundSound = AppHelper.getBackgroundSound();
 
         findViews();
-        setListener();
         showBanner();
+        setListener();
         setValues();
     }
 
