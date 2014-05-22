@@ -5,16 +5,13 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
-import android.graphics.Point;
 import android.os.Bundle;
 import android.os.Vibrator;
-import android.view.Display;
 import android.view.View;
 import android.widget.*;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.customViews.GameView;
 import com.mobilez365.puzzly.global.AppHelper;
-import com.mobilez365.puzzly.global.Constans;
 import com.mobilez365.puzzly.puzzles.PuzzleFillGame;
 import com.mobilez365.puzzly.puzzles.PuzzlesDB;
 import com.mobilez365.puzzly.util.AnimationEndListener;
@@ -197,6 +194,7 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
 
     @Override
     public void onClick(View v) {
+            v.setClickable(false);
         switch (v.getId()) {
             case R.id.btnNextAGF:
                 AppHelper.setCurrentGame(this, AppHelper.getNextGame(this, mGameType), mGameType);

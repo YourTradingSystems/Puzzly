@@ -196,6 +196,7 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements Sha
 
     @Override
     public void onClick(View v) {
+        v.setClickable(false);
         if(v.getId() == R.id.btnNextABS)
             nextGame();
         else

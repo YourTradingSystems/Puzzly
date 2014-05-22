@@ -198,6 +198,7 @@ public class BonusLevelTreeActivity extends InterstitialActivity implements Shak
 
     @Override
     public void onClick(View v) {
+        v.setClickable(false);
         if(v.getId() == R.id.btnNextABL)
             nextGame();
         else

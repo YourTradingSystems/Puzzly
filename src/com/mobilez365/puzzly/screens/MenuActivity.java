@@ -8,7 +8,6 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.*;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
@@ -50,6 +49,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
 
     @Override
     public void onClick(View _v) {
+        _v.setClickable(false);
         switch (_v.getId()) {
 
             case R.id.ivGameSimpleFill_MS:
