@@ -208,8 +208,8 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "141 10000 10000 10000");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "310 58 35 290");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "28 50 240 290");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "225");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "380");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "550");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "50");
 
             findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
 

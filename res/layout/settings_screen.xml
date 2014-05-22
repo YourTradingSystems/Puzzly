@@ -19,14 +19,13 @@
             style="@style/HeaderName"
             android:text="@string/menu_settings" />
 
-        <Button
+        <ImageButton
             android:id="@+id/btnBack_SS"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/HeaderBTN"
-            android:layout_alignBaseline="@id/tvHeaderName_SS"
-            android:layout_alignParentRight="true"
-            android:text="@string/menu_back"/>
+            android:layout_alignTop="@id/tvHeaderName_SS"
+            android:layout_alignParentRight="true"/>
 
     </RelativeLayout>
 

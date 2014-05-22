@@ -1,6 +1,8 @@
 package com.mobilez365.puzzly.global;
 
 import android.app.Activity;
+import android.app.ActivityManager;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
@@ -11,6 +13,7 @@ import com.mobilez365.puzzly.puzzles.PuzzlesDB;
 import com.mobilez365.puzzly.util.BackgroundSound;
 
 import java.lang.reflect.Field;
+import java.util.List;
 import java.util.Locale;
 
 /**
@@ -74,6 +77,18 @@ public class AppHelper {
         return Languages.us;
     }
 
+    public static boolean isAppInBackground(final Context context) {
+        ActivityManager am = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+        List<ActivityManager.RunningTaskInfo> tasks = am.getRunningTasks(1);
+        if (!tasks.isEmpty()) {
+            ComponentName topActivity = tasks.get(0).topActivity;
+            if (!topActivity.getPackageName().equals(context.getPackageName())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static final MediaPlayer initSound(Activity _activity, String _fileName) {
         int id = _activity.getResources().getIdentifier(_fileName.toLowerCase(), "raw", _activity.getPackageName());
         mPlayer = MediaPlayer.create(_activity, id);
@@ -87,10 +102,22 @@ public class AppHelper {
         return mPlayer;
     }
 
-    public static final void startBackgroundSound(Activity _activity) {
-        mBackgroundSound = new BackgroundSound(_activity);
+    public static final void startBackgroundSound(Activity _activity, String _name) {
+        if (mBackgroundSound != null && mBackgroundSound.isPlay())
+            if (mBackgroundSound.getPlayer() != null) {
+                mBackgroundSound.getPlayer().stop();
+                mBackgroundSound.getPlayer().release();
+            }
+
+        mBackgroundSound = new BackgroundSound(_activity, _name);
         if (!mBackgroundSound.isInit() && AppHelper.getPlayBackgroundMusic(_activity))
             mBackgroundSound.execute(null);
+    }
+
+    public static final void stopBackgroundSound() {
+        if (mBackgroundSound != null && mBackgroundSound.isPlay())
+            if (mBackgroundSound.getPlayer() != null)
+                mBackgroundSound.getPlayer().stop();
     }
 
     public static final BackgroundSound getBackgroundSound() {

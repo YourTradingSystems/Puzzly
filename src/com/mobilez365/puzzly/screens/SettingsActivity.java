@@ -4,13 +4,14 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
+import com.mobilez365.puzzly.global.Constans;
 import com.mobilez365.puzzly.util.BackgroundSound;
 
 /**
@@ -18,7 +19,7 @@ import com.mobilez365.puzzly.util.BackgroundSound;
  */
 public class SettingsActivity extends Activity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
 
-    private Button btnBack_SS;
+    private ImageButton btnBack_SS;
     private CheckBox ccbPlayBackgroundMusic_SS;
     private CheckBox ccbDisplayInnerBorders_SS;
     private CheckBox ccbPlaySoundImageAppear_SS;
@@ -55,14 +56,11 @@ public class SettingsActivity extends Activity implements View.OnClickListener, 
                 AppHelper.setPlayBackgroundMusic(this, ccbPlayBackgroundMusic_SS.isChecked());
 
                 if (ccbPlayBackgroundMusic_SS.isChecked()) {
-                    AppHelper.startBackgroundSound(this);
+                    AppHelper.startBackgroundSound(this, Constans.MENU_BACKGROUND_SOUND);
                     mBackgroundSound = AppHelper.getBackgroundSound();
                 }
                 else {
-                    if (mBackgroundSound.getBackgroundPlayer() != null) {
-                        mBackgroundSound.getBackgroundPlayer().stop();
-                        mBackgroundSound.getBackgroundPlayer().release();
-                    }
+                    AppHelper.stopBackgroundSound();
                 }
 
                 break;
@@ -121,12 +119,15 @@ public class SettingsActivity extends Activity implements View.OnClickListener, 
     @Override
     protected void onPause() {
         super.onPause();
-        if (AppHelper.getPlayBackgroundMusic(this))
-            mBackgroundSound.pause(true);
+
+        if (AppHelper.isAppInBackground(this)) {
+            if (AppHelper.getPlayBackgroundMusic(this))
+                mBackgroundSound.pause(true);
+        }
     }
 
     private final void findViews() {
-        btnBack_SS = (Button)findViewById(R.id.btnBack_SS);
+        btnBack_SS = (ImageButton)findViewById(R.id.btnBack_SS);
         ccbPlayBackgroundMusic_SS = (CheckBox)findViewById(R.id.ccbPlayBackgroundMusic_SS);
         ccbDisplayInnerBorders_SS = (CheckBox)findViewById(R.id.ccbDisplayInnerBorders_SS);
         ccbPlaySoundImageAppear_SS = (CheckBox)findViewById(R.id.ccbPlaySoundImageAppear_SS);

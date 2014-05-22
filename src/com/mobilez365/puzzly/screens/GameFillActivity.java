@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Vibrator;
+import android.view.Display;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.*;
 import com.mobilez365.puzzly.R;
@@ -72,8 +74,19 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
     @Override
     protected void onPause() {
         super.onPause();
-        if (AppHelper.getPlayBackgroundMusic(this))
-            mBackgroundSound.pause(true);
+
+        if (AppHelper.isAppInBackground(this)) {
+            if (AppHelper.getPlayBackgroundMusic(this))
+                mBackgroundSound.pause(true);
+        }
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK ) {
+            AppHelper.startBackgroundSound(this, Constans.MENU_BACKGROUND_SOUND);
+        }
+        return super.onKeyDown(keyCode, event);
     }
 
     private void switchGame() {

@@ -1,8 +1,12 @@
 package com.mobilez365.puzzly.screens;
 
 import android.app.Activity;
+import android.app.ActivityManager;
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -11,9 +15,11 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
+import com.mobilez365.puzzly.global.Constans;
 import com.mobilez365.puzzly.puzzles.PuzzlesDB;
 import com.mobilez365.puzzly.util.BackgroundSound;
 
+import java.util.List;
 import java.util.Random;
 
 public class MenuActivity extends Activity implements View.OnClickListener {
@@ -35,7 +41,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
         super.onCreate(_savedInstanceState);
         AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this).name());
         AppHelper.setDefaultFont(this);
-        AppHelper.startBackgroundSound(this);
+        AppHelper.startBackgroundSound(this, Constans.MENU_BACKGROUND_SOUND);
         mBackgroundSound = AppHelper.getBackgroundSound();
 
         setContentView(R.layout.menu_screen);
@@ -84,8 +90,19 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     @Override
     protected void onPause() {
         super.onPause();
-        if (AppHelper.getPlayBackgroundMusic(this))
+
+        if (AppHelper.isAppInBackground(this)) {
+            if (AppHelper.getPlayBackgroundMusic(this))
+                mBackgroundSound.pause(true);
+        }
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK ) {
             mBackgroundSound.pause(true);
+        }
+        return super.onKeyDown(keyCode, event);
     }
 
     private final void findViews() {
@@ -136,6 +153,8 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     }
 
     private final void startGame(int type) {
+
+        AppHelper.startBackgroundSound(this, Constans.GAME_BACKGROUND_SOUND);
 
         int passedGame =  AppHelper.getPassedGames(this);
         if(passedGame != 3)  {

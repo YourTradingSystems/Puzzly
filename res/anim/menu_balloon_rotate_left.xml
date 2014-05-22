@@ -5,7 +5,7 @@
 
     <rotate
         android:interpolator="@android:anim/cycle_interpolator"
-        android:duration="4000"
+        android:duration="4500"
         android:pivotX="50%"
         android:pivotY="50%"
         android:repeatCount="infinite"

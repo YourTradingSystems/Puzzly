@@ -28,13 +28,13 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:gravity="center"
-        android:padding="10dp"
         android:visibility="invisible">
 
         <RelativeLayout
             android:id="@+id/rlGameSettings_MS"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:padding="10dp"
             android:layout_weight="50">
 
             <ImageButton
@@ -42,6 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
+                android:layout_alignParentTop="true"
                 android:background="@null"
                 android:src="@drawable/settings_icon"/>
 
@@ -51,12 +52,14 @@
             android:id="@+id/rlGameAchievement_MS"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:padding="10dp"
             android:layout_weight="50">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
+                android:layout_alignParentTop="true"
                 android:src="@drawable/candy_icon"/>
 
             <TextView
@@ -83,51 +86,69 @@
         android:visibility="invisible">
 
         <RelativeLayout
-            android:id="@+id/rlLeftBalloon_MS"
+            android:id="@+id/rlLeftMenu_MS"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="50">
 
-            <ImageView
-                android:id="@+id/ivGameSimpleFill_MS"
+            <RelativeLayout
+                android:id="@+id/rlLeftBalloon_MS"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                style="@style/MenuGameImage"
-                android:src="@drawable/left_balloon_btn"/>
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/ivGameSimpleFill_MS"
-                android:layout_centerHorizontal="true"
-                android:src="@drawable/basket_img"
-                android:layout_marginTop="-30dp"/>
+                <ImageView
+                    android:id="@+id/ivGameSimpleFill_MS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    style="@style/MenuGameImage"
+                    android:src="@drawable/left_balloon_btn"/>
 
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ivGameSimpleFill_MS"
+                    android:src="@drawable/basket_img"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="-25dp"/>
+
+            </RelativeLayout>
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/rlRightBalloon_MS"
+            android:id="@+id/rlRightMenu_MS"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:padding="20dp"
             android:layout_weight="50">
 
-            <ImageView
-                android:id="@+id/ivGameSimpleReveal_MS"
+            <RelativeLayout
+                android:id="@+id/rlRightBalloon_MS"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                style="@style/MenuGameImage"
-                android:src="@drawable/right_balloon_btn"/>
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/ivGameSimpleReveal_MS"
-                android:layout_centerHorizontal="true"
-                android:src="@drawable/basket_img"
-                android:layout_marginTop="-30dp"/>
+                <ImageView
+                    android:id="@+id/ivGameSimpleReveal_MS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    style="@style/MenuGameImage"
+                    android:src="@drawable/right_balloon_btn"/>
 
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ivGameSimpleReveal_MS"
+                    android:src="@drawable/basket_img"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="-25dp"/>
+            </RelativeLayout>
         </RelativeLayout>
 
     </LinearLayout>

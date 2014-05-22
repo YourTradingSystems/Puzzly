@@ -29,7 +29,8 @@ public class Constans {
     public static final String PASSED_GAME = "passed_game";                                     //int
     public static final String PUZZLES_INITIALIZED = "puzzles_initialized";                     //bool
 
-    public static final String GAME_BACKGROUND_SOUND = "background_music";
+    public static final String GAME_BACKGROUND_SOUND = "game_background_music";
+    public static final String MENU_BACKGROUND_SOUND = "menu_background_music";
     /**
      * Bonus Level
      */

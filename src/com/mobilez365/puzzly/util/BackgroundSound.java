@@ -14,16 +14,18 @@ public class BackgroundSound extends AsyncTask<Void, Void, Void> {
 
     private MediaPlayer mPlayer;
     private Activity mActivity;
+    private String mName;
     private boolean isPlay;
     private boolean isCreate;
 
-    public BackgroundSound(Activity _activity) {
+    public BackgroundSound(Activity _activity, String _name) {
         mActivity = _activity;
+        mName = _name;
     }
 
     @Override
     protected Void doInBackground(Void... params) {
-        mPlayer = AppHelper.initSound(mActivity, Constans.GAME_BACKGROUND_SOUND);
+        mPlayer = AppHelper.initSound(mActivity, mName);
         mPlayer.setLooping(true);
         mPlayer.setVolume(25, 25);
         mPlayer.start();
@@ -46,7 +48,7 @@ public class BackgroundSound extends AsyncTask<Void, Void, Void> {
         }
     }
 
-    public final MediaPlayer getBackgroundPlayer() {
+    public final MediaPlayer getPlayer() {
         return mPlayer;
     }
 

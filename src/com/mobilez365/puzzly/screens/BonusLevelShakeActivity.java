@@ -9,6 +9,7 @@ import android.graphics.Point;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.view.Display;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -181,11 +182,13 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements Sha
     }
 
     @Override
-    public void onPause() {
-        mShaker.pause();
+    protected void onPause() {
         super.onPause();
-        if (AppHelper.getPlayBackgroundMusic(this))
-            mBackgroundSound.pause(true);
+
+        if (AppHelper.isAppInBackground(this)) {
+            if (AppHelper.getPlayBackgroundMusic(this))
+                mBackgroundSound.pause(true);
+        }
     }
 
     @Override
@@ -203,6 +206,14 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements Sha
             nextGame();
         else
             pickCandy(v);
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK ) {
+            AppHelper.startBackgroundSound(this, Constans.MENU_BACKGROUND_SOUND);
+        }
+        return super.onKeyDown(keyCode, event);
     }
 
     @Override
