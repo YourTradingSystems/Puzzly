@@ -104,7 +104,7 @@ public class BonusLevelFlowerActivity extends InterstitialActivity implements Sh
             ImageView flower = new ImageView(this);
 
             flower.setImageResource(R.drawable.img_flower);
-            flower.setLayoutParams(new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, mScreenHeight / 3));
+            flower.setLayoutParams(new RelativeLayout.LayoutParams((int)(mScreenHeight / 4.2f), mScreenHeight / 3));
             flower.setX(i * step);
             flower.setY(mScreenHeight);
             flower.setId(i);
@@ -120,9 +120,9 @@ public class BonusLevelFlowerActivity extends InterstitialActivity implements Sh
 
         int candyNumber = r.nextInt(4) + 1;
         candy.setImageResource(getResources().getIdentifier("img_candy" + candyNumber, "drawable", getPackageName()));
-        candy.setLayoutParams(new RelativeLayout.LayoutParams(mScreenWidth / 8, mScreenHeight / 8));
-        candy.setX(flower.getX() + flower.getWidth() / 5);
-        candy.setY(flower.getY() + flower.getHeight() / 8);
+        candy.setLayoutParams(new RelativeLayout.LayoutParams(flower.getWidth() / 2, flower.getWidth() / 2));
+        candy.setX(flower.getX() + (int) (flower.getWidth() / 3.5f));
+        candy.setY(flower.getY() + (int) (flower.getHeight() / 6f));
         candy.setTag(candyNum);
         candy.setOnClickListener(this);
         candiesList[candyNum] = candy;
