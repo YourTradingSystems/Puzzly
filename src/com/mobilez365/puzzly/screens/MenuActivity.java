@@ -75,6 +75,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
             mBackgroundSound = AppHelper.getBackgroundSound();
             mBackgroundSound.pause(false);
         }
+        if(btnGameSettings_MS != null) btnGameSettings_MS.setClickable(true);
     }
 
     @Override

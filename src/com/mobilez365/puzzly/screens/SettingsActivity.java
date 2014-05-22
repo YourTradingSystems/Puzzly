@@ -115,6 +115,7 @@ public class SettingsActivity extends Activity implements View.OnClickListener, 
         super.onResume();
         if (AppHelper.getPlayBackgroundMusic(this))
             mBackgroundSound.pause(false);
+        if(btnBack_SS != null) btnBack_SS.setClickable(true);
     }
 
     @Override

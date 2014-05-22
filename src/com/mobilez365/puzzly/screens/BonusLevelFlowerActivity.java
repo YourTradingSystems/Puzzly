@@ -49,6 +49,7 @@ public class BonusLevelFlowerActivity extends InterstitialActivity implements Sh
     private TextView tvAllCandiesPicked;
     private RelativeLayout candiesLayout;
     private BackgroundSound mBackgroundSound;
+    private ImageButton nextGame;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -181,7 +182,7 @@ public class BonusLevelFlowerActivity extends InterstitialActivity implements Sh
     private void checkAllPicked() {
         if (mCandiesPickedCount == mCandiesCount) {
             tvAllCandiesPicked.setVisibility(View.VISIBLE);
-            ImageButton nextGame = (ImageButton) findViewById(R.id.btnNextABF);
+             nextGame = (ImageButton) findViewById(R.id.btnNextABF);
             nextGame.setVisibility(View.VISIBLE);
             nextGame.setOnClickListener(this);
         }
@@ -200,6 +201,7 @@ public class BonusLevelFlowerActivity extends InterstitialActivity implements Sh
         super.onResume();
         if (AppHelper.getPlayBackgroundMusic(this))
             mBackgroundSound.pause(false);
+        if(nextGame != null) nextGame.setClickable(true);
     }
 
     @Override

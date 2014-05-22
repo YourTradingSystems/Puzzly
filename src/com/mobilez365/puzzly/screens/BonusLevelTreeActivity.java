@@ -45,6 +45,7 @@ public class BonusLevelTreeActivity extends InterstitialActivity implements Shak
     private RelativeLayout candiesLayout;
     private TextView tvAllCandiesPicked;
     private BackgroundSound mBackgroundSound;
+    private ImageButton nextGame;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -175,7 +176,7 @@ public class BonusLevelTreeActivity extends InterstitialActivity implements Shak
     private void checkAllPicked(){
         if(mCandiesPickedCount == mCandiesCount) {
             tvAllCandiesPicked.setVisibility(View.VISIBLE);
-            ImageButton nextGame = (ImageButton) findViewById(R.id.btnNextABL);
+            nextGame = (ImageButton) findViewById(R.id.btnNextABL);
             nextGame.setVisibility(View.VISIBLE);
             nextGame.setOnClickListener(this);
         }
@@ -218,6 +219,7 @@ public class BonusLevelTreeActivity extends InterstitialActivity implements Shak
         super.onResume();
         if (AppHelper.getPlayBackgroundMusic(this))
             mBackgroundSound.pause(false);
+        if(nextGame != null) nextGame.setClickable(true);
     }
 
     @Override

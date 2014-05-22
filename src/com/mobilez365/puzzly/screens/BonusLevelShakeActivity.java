@@ -45,6 +45,7 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements Sha
     private TextView tvCandiesCount;
     private TextView tvAllCandiesPicked;
     private BackgroundSound mBackgroundSound;
+    private ImageButton nextGame;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -157,7 +158,7 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements Sha
     private void checkAllPicked(){
         if(mCandiesPickedCount == mCandiesCount) {
             tvAllCandiesPicked.setVisibility(View.VISIBLE);
-            ImageButton nextGame = (ImageButton) findViewById(R.id.btnNextABS);
+            nextGame = (ImageButton) findViewById(R.id.btnNextABS);
             nextGame.setVisibility(View.VISIBLE);
             nextGame.setOnClickListener(this);
         }
@@ -176,6 +177,7 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements Sha
         super.onResume();
         if (AppHelper.getPlayBackgroundMusic(this))
             mBackgroundSound.pause(false);
+        if(nextGame != null) nextGame.setClickable(true);
     }
 
     @Override

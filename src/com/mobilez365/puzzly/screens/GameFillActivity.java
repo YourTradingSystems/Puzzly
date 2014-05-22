@@ -65,6 +65,8 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
         super.onResume();
         if (AppHelper.getPlayBackgroundMusic(this))
             mBackgroundSound.pause(false);
+        if(nextGame != null) nextGame.setClickable(true);
+        if(previousGame != null) previousGame.setClickable(true);
     }
 
     @Override
