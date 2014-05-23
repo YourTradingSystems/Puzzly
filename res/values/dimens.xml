@@ -29,7 +29,7 @@ d - divider height
     <!-- ~~~~~~~~~~~~~~~~~~~ SETTINGS ~~~~~~~~~~~~~~~~~~~~~~ !-->
 
     <dimen name="ptb_settings_choose_box">@dimen/p_normal</dimen>
-    <dimen name="mt_settings_choose_box">20dp</dimen>
+    <dimen name="mt_settings_choose_box">10dp</dimen>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
