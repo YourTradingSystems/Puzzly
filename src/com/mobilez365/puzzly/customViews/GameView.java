@@ -200,7 +200,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                 break;
             case MotionEvent.ACTION_UP:
                 sprite = null;
-                if (end) {
+                if (gameOver) {
                     listener.onGameFinish();
                     createFigure(puzzleFillGame.getResultImage());
 
