@@ -12,8 +12,6 @@
 
     <style name="HeaderName">
         <item name="android:padding">@dimen/p_normal</item>
-        <item name="android:layout_marginLeft">@dimen/ml_header_name</item>
-        <item name="android:layout_marginTop">@dimen/mt_header_name</item>
         <item name="android:textSize">@dimen/ts_normal</item>
     </style>
 

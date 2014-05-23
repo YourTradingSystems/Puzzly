@@ -6,6 +6,7 @@ import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.view.Display;
@@ -15,6 +16,8 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.VideoView;
+
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
 import com.mobilez365.puzzly.global.Constans;
@@ -48,6 +51,10 @@ public class BonusLevelTreeActivity extends InterstitialActivity implements Shak
     private BackgroundSound mBackgroundSound;
     private ImageButton nextGame;
 
+    private VideoView mTutorial;
+
+    private RelativeLayout rlContainer_ABLT;
+
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bonus_level_tree);
@@ -60,10 +67,14 @@ public class BonusLevelTreeActivity extends InterstitialActivity implements Shak
         mShaker.setOnShakeListener(this);
         mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         tvAllCandiesPicked = (TextView) findViewById(R.id.tvAllPickedABL);
+        rlContainer_ABLT = (RelativeLayout) findViewById(R.id.rlContainer_ABLT);
 
         AppHelper.increasePassedGames(this);
 
         initData();
+
+        if (!AppHelper.getBonusTree(this))
+            mTutorial = AppHelper.showVideoTutorial(this, rlContainer_ABLT);
     }
 
     private void initData() {
@@ -192,6 +203,12 @@ public class BonusLevelTreeActivity extends InterstitialActivity implements Shak
 
     @Override
     public void onShake() {
+        if (mTutorial != null) {
+            mTutorial.stopPlayback();
+            mTutorial.setVisibility(View.GONE);
+            AppHelper.setBonusTree(this, true);
+        }
+
         if (mCandiesDroppedCount != mCandiesCount) {
             mVibrator.vibrate(100);
             dropCandy();

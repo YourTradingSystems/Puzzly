@@ -2,6 +2,7 @@ package com.mobilez365.puzzly.screens;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.CheckBox;
@@ -39,14 +40,14 @@ public class SettingsActivity extends Activity implements View.OnClickListener, 
         mBackgroundSound = AppHelper.getBackgroundSound();
 
         findViews();
-        showBanner();
+        //showBanner();
         setListener();
         setValues();
     }
 
     @Override
     public void onClick(View _v) {
-        _v.setClickable(false);
+        //_v.setClickable(false);
         switch (_v.getId()) {
             case R.id.btnBack_SS:
                 finish();

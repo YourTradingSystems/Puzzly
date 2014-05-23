@@ -6,6 +6,8 @@ import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.view.Display;
@@ -17,6 +19,8 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.VideoView;
+
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
 import com.mobilez365.puzzly.global.Constans;
@@ -47,10 +51,13 @@ public class BonusLevelFlowerActivity extends InterstitialActivity implements Sh
     private int mScreenHeight;
     private int mScreenWidth;
 
+    private RelativeLayout rlContainer_ABLF;
     private TextView tvAllCandiesPicked;
     private RelativeLayout candiesLayout;
     private BackgroundSound mBackgroundSound;
     private ImageButton nextGame;
+
+    private VideoView mTutorial;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,6 +73,7 @@ public class BonusLevelFlowerActivity extends InterstitialActivity implements Sh
         tvAllCandiesPicked = (TextView) findViewById(R.id.tvAllPickedABF);
         mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         candiesLayout = (RelativeLayout) findViewById(R.id.rlCandiesABF);
+        rlContainer_ABLF = (RelativeLayout) findViewById(R.id.rlContainer_ABLF);
 
         candiesList =  new ImageView[mCandiesCount];
         candiesRotateAnimators = new ArrayList<ObjectAnimator>();
@@ -75,6 +83,9 @@ public class BonusLevelFlowerActivity extends InterstitialActivity implements Sh
 
         initFlowers();
         initSun();
+
+        if (!AppHelper.getBonusFlower(this))
+            mTutorial = AppHelper.showVideoTutorial(this, rlContainer_ABLF);
     }
 
     private void initSun(){
@@ -225,6 +236,12 @@ public class BonusLevelFlowerActivity extends InterstitialActivity implements Sh
 
     @Override
     public void onShake() {
+        if (mTutorial != null) {
+            mTutorial.stopPlayback();
+            mTutorial.setVisibility(View.GONE);
+            AppHelper.setBonusFlower(this, true);
+        }
+
         if (mFlowersShownCount != mCandiesCount) {
             mVibrator.vibrate(100);
             showFlower();

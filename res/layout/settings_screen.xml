@@ -10,30 +10,34 @@
     <RelativeLayout
         android:id="@+id/llScreenHeader"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:id="@+id/tvHeaderName_SS"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/HeaderName"
-            android:text="@string/menu_settings" />
+        android:layout_height="wrap_content"
+        android:background="@color/settings_header_bg">
 
         <ImageButton
             android:id="@+id/btnBack_SS"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/HeaderBTN"
-            android:layout_alignTop="@id/tvHeaderName_SS"
-            android:layout_alignParentRight="true"/>
+            android:padding="15dp"
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:id="@+id/tvHeaderName_SS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/HeaderName"
+            android:layout_toRightOf="@id/btnBack_SS"
+            android:layout_alignTop="@id/btnBack_SS"
+            android:layout_alignBottom="@id/btnBack_SS"
+            android:text="@string/menu_settings"
+            android:gravity="center"/>
 
     </RelativeLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/llScreenHeader"
-        android:layout_above="@id/adView">
+        android:layout_below="@id/llScreenHeader">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -99,7 +103,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/ccbVibratePieceInPlace_SS"
-                android:gravity="center">
+                android:gravity="center"
+                android:background="@color/settings_header_bg">
 
                 <TextView
                     android:id="@+id/tvLanguage_SS"
@@ -120,13 +125,5 @@
 
         </RelativeLayout>
     </ScrollView>
-
-    <com.google.android.gms.ads.AdView android:id="@+id/adView"
-                                       android:layout_alignParentBottom="true"
-                                       android:layout_width="wrap_content"
-                                       android:layout_height="wrap_content"
-                                       android:layout_centerHorizontal="true"
-                                       ads:adUnitId="@string/adUnitId"
-                                       ads:adSize="BANNER"/>
 
 </RelativeLayout>

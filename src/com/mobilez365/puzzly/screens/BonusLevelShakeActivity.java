@@ -6,6 +6,7 @@ import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.view.Display;
@@ -15,6 +16,8 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.VideoView;
+
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
 import com.mobilez365.puzzly.global.Constans;
@@ -43,10 +46,13 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements Sha
     private int mScreenHeight;
     private int mScreenWidth;
 
+    private RelativeLayout rlContainer_ABLS;
     private TextView tvCandiesCount;
     private TextView tvAllCandiesPicked;
     private BackgroundSound mBackgroundSound;
     private ImageButton nextGame;
+
+    private VideoView mTutorial;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,10 +68,14 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements Sha
         tvCandiesCount = (TextView) findViewById(R.id.tvCandiesCountABS);
         tvAllCandiesPicked = (TextView) findViewById(R.id.tvAllPickedABS);
         mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        rlContainer_ABLS = (RelativeLayout) findViewById(R.id.rlContainer_ABLS);
 
         AppHelper.increasePassedGames(this);
 
         initCandies();
+
+        if (!AppHelper.getBonusShake(this))
+            mTutorial = AppHelper.showVideoTutorial(this, rlContainer_ABLS);
     }
 
     private void initCandies() {
@@ -193,6 +203,12 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements Sha
 
     @Override
     public void onShake() {
+        if (mTutorial != null) {
+            mTutorial.stopPlayback();
+            mTutorial.setVisibility(View.GONE);
+            AppHelper.setBonusShake(this, true);
+        }
+
         if (mCandiesDroppedCount != mCandiesCount) {
             mVibrator.vibrate(100);
             dropCandy();

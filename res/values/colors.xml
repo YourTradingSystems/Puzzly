@@ -2,4 +2,6 @@
 <resources>
     <color name="background_game">#D2E9F9</color>
     <color name="text_color">#2C5770</color>
+    <color name="settings_header_bg">#1594A3</color>
+    <color name="tc_settings">#2B5770</color>
 </resources>

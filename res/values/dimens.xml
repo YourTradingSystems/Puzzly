@@ -35,9 +35,7 @@ d - divider height
 
     <!-- ~~~~~~~~~~~~~~~~~~~ SCREEN HEADERS ~~~~~~~~~~~~~~~~ !-->
 
-    <dimen name="ml_header_name">20dp</dimen>
-    <dimen name="mt_header_name">10dp</dimen>
-    <dimen name="plr_header_button">@dimen/p_normal</dimen>
+    <dimen name="plr_header_button">15dp</dimen>
     <dimen name="m_header_button">5dp</dimen>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->

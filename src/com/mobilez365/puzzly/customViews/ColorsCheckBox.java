@@ -40,17 +40,15 @@ public class ColorsCheckBox extends CheckBox {
         setButtonDrawable(getRandomCheckBoxDrawable(_checked));
     }
 
-
-
     private final Drawable getRandomCheckBoxDrawable(Boolean _checked) {
         Random rand = new Random();
-        String drawableName[] = new String[] {"checkbox_blue_icon", "checkbox_green_icon", "checkbox_red_icon", "checkbox_yellow_icon"};
+        String drawableName[] = new String[] {"check1_icon", "check2_icon", "check3_icon", "check4_icon", "check5_icon"};
         int id = 0;
 
         if (_checked)
             id = getResources().getIdentifier(drawableName[rand.nextInt(drawableName.length)], "drawable", mContext.getPackageName());
         else
-            id = R.drawable.checkbox_none_icon;
+            id = R.drawable.check_null_icon;
 
         return getResources().getDrawable(id);
     }

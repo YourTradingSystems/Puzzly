@@ -28,6 +28,10 @@ public class Constans {
     public static final String MAX_GAME_REVEAL = "max_game_reveal";                             //int
     public static final String PASSED_GAME = "passed_game";                                     //int
     public static final String PUZZLES_INITIALIZED = "puzzles_initialized";                     //bool
+    public static final String BONUS_FLOWER = "bonus_flower";                                   //bool
+    public static final String BONUS_SHAKE = "bonus_shake";                                     //bool
+    public static final String BONUS_TREE = "bonus_tree";                                       //bool
+    public static final String MENU_HAND_TUTORIAL = "menu_hand_tutorial";                       //bool
 
     public static final String GAME_BACKGROUND_SOUND = "game_background_music";
     public static final String MENU_BACKGROUND_SOUND = "menu_background_music";
@@ -38,5 +42,4 @@ public class Constans {
     public static final int CANDY_ON_TOP = 1;
     public static final int CANDY_FALLEN = 2;
     public static final int CANDY_PICKED = 3;
-
 }

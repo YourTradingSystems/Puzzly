@@ -33,6 +33,8 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     private LinearLayout llMainMenu_MS;
     private RelativeLayout rlLeftBalloon_MS;
     private RelativeLayout rlRightBalloon_MS;
+    private ImageView ivLeftHandTutorial_MS;
+    private ImageView ivRightHandTutorial_MS;
 
     private BackgroundSound mBackgroundSound;
     private List<ImageView> mClouds = new ArrayList<ImageView>();
@@ -48,7 +50,6 @@ public class MenuActivity extends Activity implements View.OnClickListener {
         setContentView(R.layout.menu_screen);
         showBanner();
         findViews();
-        showBanner();
         setListeners();
         startAnimation();
         PuzzlesDB.addBasePuzzlesToDB(this);
@@ -79,6 +80,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     @Override
     protected void onResume() {
         super.onResume();
+        AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this).name());
         setGameAchievement(AppHelper.getGameAchievement(this));
         if (AppHelper.getPlayBackgroundMusic(this)) {
             mBackgroundSound = AppHelper.getBackgroundSound();
@@ -119,6 +121,8 @@ public class MenuActivity extends Activity implements View.OnClickListener {
         llMainMenu_MS = (LinearLayout)findViewById(R.id.llMainMenu_MS);
         rlLeftBalloon_MS = (RelativeLayout)findViewById(R.id.rlLeftBalloon_MS);
         rlRightBalloon_MS = (RelativeLayout)findViewById(R.id.rlRightBalloon_MS);
+        ivLeftHandTutorial_MS = (ImageView)findViewById(R.id.ivLeftHandTutorial_MS);
+        ivRightHandTutorial_MS = (ImageView)findViewById(R.id.ivRightHandTutorial_MS);
     }
 
     private final void setListeners() {
@@ -131,6 +135,15 @@ public class MenuActivity extends Activity implements View.OnClickListener {
         Animation logoScaleAnimation = AnimationUtils.loadAnimation(this, R.anim.menu_logo);
         startCloudAnimation(0);
         startCloudAnimation(15000);
+
+        if (!AppHelper.getHandTutorial(this)) {
+            ivLeftHandTutorial_MS.startAnimation(AnimationUtils.loadAnimation(this, R.anim.menu_hand_left));
+            ivRightHandTutorial_MS.startAnimation(AnimationUtils.loadAnimation(this, R.anim.menu_hand_right));
+            AppHelper.setHandTutorial(this, true);
+        } else {
+            ivLeftHandTutorial_MS.setVisibility(View.GONE);
+            ivRightHandTutorial_MS.setVisibility(View.GONE);
+        }
 
         logoScaleAnimation.setAnimationListener(new Animation.AnimationListener() {
             @Override
@@ -160,14 +173,14 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     }
 
     private final void startCloudAnimation(long _startOffset) {
-        int cloundCount = 4;
+        int cloudCount = 4;
         int cloud[] = new int[] {R.drawable.clouds1_icon, R.drawable.clouds2_icon, R.drawable.clouds3_icon, R.drawable.clouds4_icon};
         Random rand = new Random();
         float y = 50;
 
-        for (int i = 0; i < cloundCount; i++) {
+        for (int i = 0; i < cloudCount; i++) {
             y += rand.nextInt(50);
-            Animation animation = new TranslateAnimation(-100, getResources().getDisplayMetrics().widthPixels, y, y);
+            Animation animation = new TranslateAnimation(-250, getResources().getDisplayMetrics().widthPixels, y, y);
             animation.setDuration(rand.nextInt(20000) + 30000);
             animation.setInterpolator(this, android.R.anim.linear_interpolator);
             animation.setRepeatCount(Animation.INFINITE);
