@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Vibrator;
+import android.view.Display;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.*;
@@ -67,8 +68,7 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
         super.onResume();
         if (AppHelper.getPlayBackgroundMusic(this))
             mBackgroundSound.pause(false);
-        if(nextGame != null) nextGame.setClickable(true);
-        if(previousGame != null) previousGame.setClickable(true);
+
     }
 
     @Override
@@ -209,17 +209,19 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
 
     @Override
     public void onClick(View v) {
-        nextGame.setClickable(false);
-        previousGame.setClickable(false);
-        switch (v.getId()) {
-            case R.id.btnNextAGF:
-                AppHelper.setCurrentGame(this, AppHelper.getNextGame(this, mGameType), mGameType);
-                switchGame();
-                break;
-            case R.id.btnPreviousAFG:
-                AppHelper.setCurrentGame(this, AppHelper.getPreviousGame(this, mGameType), mGameType);
-                switchGame();
-                break;
+        if(v.isClickable()) {
+            previousGame.setClickable(false);
+            nextGame.setClickable(false);
+            switch (v.getId()) {
+                case R.id.btnNextAGF:
+                    AppHelper.setCurrentGame(this, AppHelper.getNextGame(this, mGameType), mGameType);
+                    switchGame();
+                    break;
+                case R.id.btnPreviousAFG:
+                    AppHelper.setCurrentGame(this, AppHelper.getPreviousGame(this, mGameType), mGameType);
+                    switchGame();
+                    break;
+            }
         }
     }
 

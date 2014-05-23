@@ -1,5 +1,6 @@
 package com.mobilez365.puzzly.util;
 
+import android.app.Activity;
 import android.graphics.Canvas;
 import com.mobilez365.puzzly.customViews.GameView;
 
@@ -7,9 +8,11 @@ public class GameLoopThread extends Thread {
     static final long FPS = 50;
     private GameView view;
     private volatile boolean running = false;
+    private GameView.GameCallBacks listener;
 
-    public GameLoopThread(GameView view) {
+    public GameLoopThread(GameView view, GameView.GameCallBacks listener) {
         this.view = view;
+        this.listener = listener;
     }
 
     public void setRunning(boolean run) {
@@ -33,7 +36,15 @@ public class GameLoopThread extends Thread {
                 if (c != null) {
                     view.getHolder().unlockCanvasAndPost(c);
                 }
-                if (view.isEnd()) setRunning(false);
+                if (view.isEnd()) {
+                    setRunning(false);
+                    ((Activity)listener).runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            listener.onGameFinish();
+                        }
+                    });
+                }
             }
             sleepTime = ticksPS - (System.currentTimeMillis() - startTime);
             try {
@@ -44,5 +55,6 @@ public class GameLoopThread extends Thread {
             } catch (Exception e) {
             }
         } ;
+
     }
 }  

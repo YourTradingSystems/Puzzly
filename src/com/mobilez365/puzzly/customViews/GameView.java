@@ -1,6 +1,7 @@
 package com.mobilez365.puzzly.customViews;
 
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.*;
 import android.util.DisplayMetrics;
@@ -57,7 +58,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         this.puzzleFillGame = puzzleFillGame;
         this.listener = listener;
         this.parts = puzzleFillGame.getParts();
-        gameLoopThread = new GameLoopThread(this);
+        gameLoopThread = new GameLoopThread(this, listener);
         SurfaceHolder holder = getHolder();
         setFocusable(true);
         holder.addCallback(this);
@@ -141,11 +142,11 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
             }
         } else {
             createFigure(puzzleFillGame.getResultImage());
+            canvas.drawBitmap(shape, figurePosX, figurePosY, null);
             for (GameSprite spr : sprites) {
                 spr = null;
             }
             sprites.clear();
-            listener.onGameFinish();
             end = gameOver;
         }
 
@@ -186,24 +187,25 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                         sprite.setPieceLocked(true);
                         listener.onPartsLock();
                     }
-                    break;
-                } else {//check end of game
-                    synchronized (this) {
-                        gameOver = true;
-                        switch (gameType) {
-                            case FILL_GAME:
-                                for (GameSprite spr : sprites) {
-                                    if (!spr.isPieceLocked()) {
-                                        gameOver = false;
-                                        break;
+                    if (sprite.isPieceLocked()) {//check end of game
+                        synchronized (this) {
+                            gameOver = true;
+                            switch (gameType) {
+                                case FILL_GAME:
+                                    for (GameSprite spr : sprites) {
+                                        if (!spr.isPieceLocked()) {
+                                            gameOver = false;
+                                            break;
+                                        }
                                     }
-                                }
-                                break;
-                            case REVEAL_GAME:
-                                gameOver = true;
-                                break;
+                                    break;
+                                case REVEAL_GAME:
+                                    gameOver = true;
+                                    break;
+                            }
                         }
                     }
+                    break;
                 }
                 break;
             case MotionEvent.ACTION_UP:
@@ -233,7 +235,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
         if (gameLoopThread.getState() == Thread.State.TERMINATED) {
-            gameLoopThread = new GameLoopThread(GameView.this);
+            gameLoopThread = new GameLoopThread(GameView.this, listener);
         }
         gameLoopThread.setRunning(true);
         gameLoopThread.start();
