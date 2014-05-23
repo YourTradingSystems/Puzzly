@@ -36,7 +36,6 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
     private Bitmap shape;
     private GameSprite sprite;
     private GameCallBacks listener;
-    private boolean showOnlyPicture = false;
     private static final int FILL_GAME = 0;
     private static final int REVEAL_GAME = 1;
     private int gameType;
@@ -107,7 +106,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         figurePosX = getScaledXByShape(puzzleFillGame.getFigurePos().x, svgWidth);
         figurePosY = getScaledY(puzzleFillGame.getFigurePos().y);
         shape = bmp;
-        if (showOnlyPicture) return;
+        if (gameOver) return;
         for (PuzzlesPart part : parts) {
             sprites.add(new GameSprite(this, createSpriteBitmap(getResIdFromString(part.partImage)),
                     figurePosX + part.finalPartLocation.x * spriteWidth / svgWidth,
@@ -133,19 +132,28 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         if (canvas == null) return;
         canvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
         canvas.drawColor(getResources().getColor(R.color.background_game));
-        canvas.drawBitmap(shape, figurePosX, figurePosY, null);
-
-        if (!showOnlyPicture)
+        if (!gameOver) {
+            canvas.drawBitmap(shape, figurePosX, figurePosY, null);
             synchronized (this) {
                 for (GameSprite spt : sprites) {
                     spt.onDraw(canvas);
                 }
             }
+        } else {
+            createFigure(puzzleFillGame.getResultImage());
+            for (GameSprite spr : sprites) {
+                spr = null;
+            }
+            sprites.clear();
+            listener.onGameFinish();
+            end = gameOver;
+        }
 
-        end = gameOver;
+
     }
 
     public boolean onTouchEvent(MotionEvent event) {
+        if (gameOver) return true;
         int xPos = (int) event.getX();
         int yPos = (int) event.getY();
 
@@ -181,43 +189,25 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                     break;
                 } else {//check end of game
                     synchronized (this) {
-                    gameOver = true;
-                    switch (gameType) {
-                        case FILL_GAME:
+                        gameOver = true;
+                        switch (gameType) {
+                            case FILL_GAME:
                                 for (GameSprite spr : sprites) {
                                     if (!spr.isPieceLocked()) {
                                         gameOver = false;
                                         break;
                                     }
                                 }
-                            break;
-                        case REVEAL_GAME:
-                            gameOver = true;
-                            break;
-                    }
+                                break;
+                            case REVEAL_GAME:
+                                gameOver = true;
+                                break;
+                        }
                     }
                 }
                 break;
             case MotionEvent.ACTION_UP:
                 sprite = null;
-                if (gameOver) {
-                    listener.onGameFinish();
-                    createFigure(puzzleFillGame.getResultImage());
-
-                    synchronized (this) {
-                        for (GameSprite spr : sprites) {
-                            spr = null;
-                        }
-                        sprites.clear();
-                    }
-
-                    showOnlyPicture = true;
-                    Canvas c = getHolder().lockCanvas();
-                    synchronized (getHolder()) {
-                        onDraw(c);
-                    }
-                    getHolder().unlockCanvasAndPost(c);
-                }
                 break;
         }
         return true;
