@@ -157,7 +157,7 @@ public class PuzzlesDB {
 
             findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
 
-            cv = new ContentValues();
+            /*cv = new ContentValues();
             cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
             cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Penguin");
             cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Пингвинчик");
@@ -169,7 +169,7 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "500");
             cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "65");
 
-            findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
+            findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);*/
 
             cv = new ContentValues();
             cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
