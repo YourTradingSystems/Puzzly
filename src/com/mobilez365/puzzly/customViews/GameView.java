@@ -23,6 +23,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
     private GameLoopThread gameLoopThread;
     private PuzzleFillGame puzzleFillGame;
     private volatile boolean end = false;
+    private volatile boolean tempEnd = false;
     private LinkedHashSet<GameSprite> sprites = new LinkedHashSet<GameSprite>();
     private Context context;
     private final DisplayMetrics metrics = new DisplayMetrics();
@@ -140,6 +141,8 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                     spt.onDraw(canvas);
                 }
             }
+
+        end = tempEnd;
     }
 
     public boolean onTouchEvent(MotionEvent event) {
@@ -177,7 +180,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                     }
                     break;
                 } else {//check end of game
-                    boolean tempEnd = true;
+                     tempEnd = true;
                     switch (gameType) {
                         case FILL_GAME:
                             synchronized (this) {
@@ -194,7 +197,6 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                             break;
                     }
 
-                    end = tempEnd;
                 }
                 break;
             case MotionEvent.ACTION_UP:
