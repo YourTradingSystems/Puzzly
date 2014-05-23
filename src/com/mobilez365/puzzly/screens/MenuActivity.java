@@ -1,11 +1,7 @@
 package com.mobilez365.puzzly.screens;
 
 import android.app.Activity;
-import android.app.ActivityManager;
-import android.content.ComponentName;
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Interpolator;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -60,7 +56,9 @@ public class MenuActivity extends Activity implements View.OnClickListener {
 
     @Override
     public void onClick(View _v) {
-        _v.setClickable(false);
+       btnGameSettings_MS.setClickable(false);
+       ivGameSimpleReveal_MS.setClickable(false);
+       ivGameSimpleFill_MS.setClickable(false);
         switch (_v.getId()) {
 
             case R.id.ivGameSimpleFill_MS:

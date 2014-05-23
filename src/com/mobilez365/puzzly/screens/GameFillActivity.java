@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Vibrator;
-import android.view.Display;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.*;
@@ -210,7 +209,8 @@ public class GameFillActivity extends Activity implements GameView.GameCallBacks
 
     @Override
     public void onClick(View v) {
-            v.setClickable(false);
+        nextGame.setClickable(false);
+        previousGame.setClickable(false);
         switch (v.getId()) {
             case R.id.btnNextAGF:
                 AppHelper.setCurrentGame(this, AppHelper.getNextGame(this, mGameType), mGameType);
