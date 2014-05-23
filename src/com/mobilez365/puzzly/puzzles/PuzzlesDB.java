@@ -217,7 +217,7 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
             cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Teddy-bear");
             cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Медвежонок");
-            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "teddy-bear");
+            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "bear");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "14 17 15");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "9 115 232");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "55 169 75");
