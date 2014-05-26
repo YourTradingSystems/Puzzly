@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class MenuActivity extends RestartActivty implements View.OnClickListener {
+public class MenuActivity extends Activity implements View.OnClickListener {
 
     private RelativeLayout rlMenuMainLayout_MS;
     private ImageView ivGameSimpleFill_MS;
@@ -41,6 +41,7 @@ public class MenuActivity extends RestartActivty implements View.OnClickListener
 
     @Override
     public void onCreate(Bundle _savedInstanceState) {
+        AppHelper.appStatus = 1;
         super.onCreate(_savedInstanceState);
         AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this).name());
         AppHelper.setDefaultFont(this);

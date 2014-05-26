@@ -31,6 +31,7 @@ public class AppHelper {
 
     private static BackgroundSound mBackgroundSound;
     private static MediaPlayer mPlayer;
+    public static Integer appStatus;
 
     public static enum Languages {
         us,
