@@ -1,8 +1,6 @@
 package com.mobilez365.puzzly.screens;
 
-import android.app.Activity;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.CheckBox;
@@ -18,7 +16,7 @@ import com.mobilez365.puzzly.util.BackgroundSound;
 /**
  * Created by Denis on 12.05.14.
  */
-public class SettingsActivity extends Activity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
+public class SettingsActivity extends RestartActivty implements View.OnClickListener, AdapterView.OnItemSelectedListener {
 
     private ImageButton btnBack_SS;
     private CheckBox ccbPlayBackgroundMusic_SS;

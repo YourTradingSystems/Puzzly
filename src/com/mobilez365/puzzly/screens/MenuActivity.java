@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class MenuActivity extends Activity implements View.OnClickListener {
+public class MenuActivity extends RestartActivty implements View.OnClickListener {
 
     private RelativeLayout rlMenuMainLayout_MS;
     private ImageView ivGameSimpleFill_MS;

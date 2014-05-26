@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Vibrator;
-import android.view.Display;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.*;
@@ -22,7 +21,7 @@ import com.mobilez365.puzzly.util.BackgroundSound;
 
 import java.util.Random;
 
-public class GameFillActivity extends Activity implements GameView.GameCallBacks, View.OnClickListener, AnimationEndListener.AnimEndListener {
+public class GameFillActivity extends RestartActivty implements GameView.GameCallBacks, View.OnClickListener, AnimationEndListener.AnimEndListener {
 
     private boolean gameIsFinished = false;
     private int mGameType;
