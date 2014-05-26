@@ -20,12 +20,9 @@ public class SettingsActivity extends RestartActivty implements View.OnClickList
 
     private ImageButton btnBack_SS;
     private CheckBox ccbPlayBackgroundMusic_SS;
+    private CheckBox ccbPlaySound_SS;
+    private CheckBox ccbVibrate_SS;
     private CheckBox ccbDisplayInnerBorders_SS;
-    private CheckBox ccbPlaySoundImageAppear_SS;
-    private CheckBox ccbDisplayWords_SS;
-    private CheckBox ccbVoiceDisplayWords_SS;
-    private CheckBox ccbVibrateDragPuzzles_SS;
-    private CheckBox ccbVibratePieceInPlace_SS;
     private Spinner spinnerChooseCountry_SS;
 
     private boolean displayInit = true;
@@ -55,7 +52,7 @@ public class SettingsActivity extends RestartActivty implements View.OnClickList
                 AppHelper.setPlayBackgroundMusic(this, ccbPlayBackgroundMusic_SS.isChecked());
 
                 if (ccbPlayBackgroundMusic_SS.isChecked()) {
-                    AppHelper.startBackgroundSound(this, Constans.MENU_BACKGROUND_SOUND);
+                    AppHelper.startBackgroundSound(this, Constans.MENU_BACKGROUND_MUSIC);
                     mBackgroundSound = AppHelper.getBackgroundSound();
                 }
                 else {
@@ -64,28 +61,16 @@ public class SettingsActivity extends RestartActivty implements View.OnClickList
 
                 break;
 
+            case R.id.ccbPlaySound_SS:
+                AppHelper.setPlaySound(this, ccbPlaySound_SS.isChecked());
+                break;
+
+            case R.id.ccbVibrate_SS:
+                AppHelper.setVibrate(this, ccbVibrate_SS.isChecked());
+                break;
+
             case R.id.ccbDisplayInnerBorders_SS:
                 AppHelper.setShowImageBorder(this, ccbDisplayInnerBorders_SS.isChecked());
-                break;
-
-            case R.id.ccbPlaySoundImageAppear_SS:
-                AppHelper.setPlaySoundImageAppear(this, ccbPlaySoundImageAppear_SS.isChecked());
-                break;
-
-            case R.id.ccbDisplayWords_SS:
-                AppHelper.setDisplayWords(this, ccbDisplayWords_SS.isChecked());
-                break;
-
-            case R.id.ccbVoiceDisplayWords_SS:
-                AppHelper.setVoiceForDisplayWords(this, ccbVoiceDisplayWords_SS.isChecked());
-                break;
-
-            case R.id.ccbVibrateDragPuzzles_SS:
-                AppHelper.setVibrateDragPuzzles(this, ccbVibrateDragPuzzles_SS.isChecked());
-                break;
-
-            case R.id.ccbVibratePieceInPlace_SS:
-                AppHelper.setVibratePieceInPlace(this, ccbVibratePieceInPlace_SS.isChecked());
                 break;
         }
     }
@@ -110,17 +95,19 @@ public class SettingsActivity extends RestartActivty implements View.OnClickList
     @Override
     protected void onResume() {
         super.onResume();
-        if (AppHelper.getPlayBackgroundMusic(this))
-            mBackgroundSound.pause(false);
-        if(btnBack_SS != null) btnBack_SS.setClickable(true);
+
+        if (!AppHelper.isAppInBackground(this)) {
+            if (mBackgroundSound != null && !mBackgroundSound.isPlay())
+                mBackgroundSound.pause(false);
+        }
     }
 
     @Override
     protected void onPause() {
         super.onPause();
 
-        if (AppHelper.isAppInBackground(this)) {
-            if (AppHelper.getPlayBackgroundMusic(this))
+        if (AppHelper.isAppInBackground(this) || AppHelper.isScreenOff(this)) {
+            if (mBackgroundSound != null && mBackgroundSound.isPlay())
                 mBackgroundSound.pause(true);
         }
     }
@@ -128,35 +115,26 @@ public class SettingsActivity extends RestartActivty implements View.OnClickList
     private final void findViews() {
         btnBack_SS = (ImageButton)findViewById(R.id.btnBack_SS);
         ccbPlayBackgroundMusic_SS = (CheckBox)findViewById(R.id.ccbPlayBackgroundMusic_SS);
+        ccbPlaySound_SS = (CheckBox)findViewById(R.id.ccbPlaySound_SS);
+        ccbVibrate_SS = (CheckBox)findViewById(R.id.ccbVibrate_SS);
         ccbDisplayInnerBorders_SS = (CheckBox)findViewById(R.id.ccbDisplayInnerBorders_SS);
-        ccbPlaySoundImageAppear_SS = (CheckBox)findViewById(R.id.ccbPlaySoundImageAppear_SS);
-        ccbDisplayWords_SS = (CheckBox)findViewById(R.id.ccbDisplayWords_SS);
-        ccbVoiceDisplayWords_SS = (CheckBox)findViewById(R.id.ccbVoiceDisplayWords_SS);
-        ccbVibrateDragPuzzles_SS = (CheckBox)findViewById(R.id.ccbVibrateDragPuzzles_SS);
-        ccbVibratePieceInPlace_SS = (CheckBox)findViewById(R.id.ccbVibratePieceInPlace_SS);
         spinnerChooseCountry_SS = (Spinner)findViewById(R.id.spinnerChooseCountry_SS);
     }
 
     private final void setListener() {
         btnBack_SS.setOnClickListener(this);
         ccbPlayBackgroundMusic_SS.setOnClickListener(this);
+        ccbPlaySound_SS.setOnClickListener(this);
+        ccbVibrate_SS.setOnClickListener(this);
         ccbDisplayInnerBorders_SS.setOnClickListener(this);
-        ccbPlaySoundImageAppear_SS.setOnClickListener(this);
-        ccbDisplayWords_SS.setOnClickListener(this);
-        ccbVoiceDisplayWords_SS.setOnClickListener(this);
-        ccbVibrateDragPuzzles_SS.setOnClickListener(this);
-        ccbVibratePieceInPlace_SS.setOnClickListener(this);
         spinnerChooseCountry_SS.setOnItemSelectedListener(this);
     }
 
     private final void setValues() {
         ccbPlayBackgroundMusic_SS.setChecked(AppHelper.getPlayBackgroundMusic(this));
+        ccbPlaySound_SS.setChecked(AppHelper.getPlaySound(this));
+        ccbVibrate_SS.setChecked(AppHelper.getVibrate(this));
         ccbDisplayInnerBorders_SS.setChecked(AppHelper.getShowImageBorder(this));
-        ccbPlaySoundImageAppear_SS.setChecked(AppHelper.getPlaySoundImageAppear(this));
-        ccbDisplayWords_SS.setChecked(AppHelper.getDisplayWords(this));
-        ccbVoiceDisplayWords_SS.setChecked(AppHelper.getVoiceForDisplayWords(this));
-        ccbVibrateDragPuzzles_SS.setChecked(AppHelper.getVibrateDragPuzzles(this));
-        ccbVibratePieceInPlace_SS.setChecked(AppHelper.getVibratePieceInPlace(this));
         spinnerChooseCountry_SS.setSelection(AppHelper.getLocalizeLanguage(this));
     }
 

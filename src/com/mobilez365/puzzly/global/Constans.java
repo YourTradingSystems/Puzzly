@@ -14,12 +14,9 @@ public class Constans {
      */
     public static final String PREFERENCES_NAME = "my_prefs";                                   //Shared preferences:
     public static final String PLAY_BACKGROUND_MUSIC = "play_background_music";                 //bool
+    public static final String PLAY_SOUND = "play_sound";                                       //bool
     public static final String DISPLAY_INNER_BORDERS = "display_inner_borders";                 //bool
-    public static final String PLAY_SOUND_WHEN_IMAGE_APPEAR = "play_sound_when_image_appear";   //bool
-    public static final String DISPLAY_WORDS = "display_words";                                 //bool
-    public static final String VOICE_FOR_DISPLAY_WORDS = "voice_for_display_words";             //bool
-    public static final String VIBRATE_WHEN_DRAG_PUZZLES = "vibrate_when_drag_puzzles";         //bool
-    public static final String VIBRATE_WHEN_A_PIECE_IN_PLACE = "vibrate_when_a_piece_in_place"; //bool
+    public static final String VIBRATE = "vibrate";                                             //bool
     public static final String LOCALIZE_LANGUAGE = "localize_language";                         //int
     public static final String GAME_ACHIEVEMENT = "game_achievement";                           //int
     public static final String CURRENT_GAME_FILL = "current_game_fill";                         //int
@@ -33,8 +30,8 @@ public class Constans {
     public static final String BONUS_TREE = "bonus_tree";                                       //bool
     public static final String MENU_HAND_TUTORIAL = "menu_hand_tutorial";                       //bool
 
-    public static final String GAME_BACKGROUND_SOUND = "game_background_music";
-    public static final String MENU_BACKGROUND_SOUND = "menu_background_music";
+    public static final String GAME_BACKGROUND_MUSIC = "game_background_music";
+    public static final String MENU_BACKGROUND_MUSIC = "menu_background_music";
     /**
      * Bonus Level
      */

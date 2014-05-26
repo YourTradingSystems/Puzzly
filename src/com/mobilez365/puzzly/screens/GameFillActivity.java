@@ -67,17 +67,19 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
     @Override
     protected void onResume() {
         super.onResume();
-        if (AppHelper.getPlayBackgroundMusic(this))
-            mBackgroundSound.pause(false);
 
+        if (!AppHelper.isAppInBackground(this)) {
+            if (mBackgroundSound != null && !mBackgroundSound.isPlay())
+                mBackgroundSound.pause(false);
+        }
     }
 
     @Override
     protected void onPause() {
         super.onPause();
 
-        if (AppHelper.isAppInBackground(this)) {
-            if (AppHelper.getPlayBackgroundMusic(this))
+        if (AppHelper.isAppInBackground(this) || AppHelper.isScreenOff(this)) {
+            if (mBackgroundSound != null && mBackgroundSound.isPlay())
                 mBackgroundSound.pause(true);
         }
     }
@@ -85,7 +87,7 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK ) {
-            AppHelper.startBackgroundSound(this, Constans.MENU_BACKGROUND_SOUND);
+            AppHelper.startBackgroundSound(this, Constans.MENU_BACKGROUND_MUSIC);
         }
         return super.onKeyDown(keyCode, event);
     }
@@ -153,6 +155,8 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
         Random random = new Random();
         String excellent_word = excellent_words[random.nextInt(excellent_words.length)];
 
+        gameText.setVisibility(View.VISIBLE);
+
         if(!gameIsFinished) {
             AppHelper.increasePassedGames(this);
             AppHelper.setMaxGame(this, mGameNumber + 1, mGameType);
@@ -161,42 +165,30 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
             gameIsFinished = true;
         }
 
-        if (AppHelper.getDisplayWords(this)) {
-            gameText.setVisibility(View.VISIBLE);
-            if (AppHelper.getLocaleLanguage(this).equals(AppHelper.Languages.us))
-                gameText.setText(mPuzzleFillGame.getWordEng());
-            else if (AppHelper.getLocaleLanguage(this).equals(AppHelper.Languages.ru))
-                gameText.setText(mPuzzleFillGame.getWordRus());
-        }
+        if (AppHelper.getLocaleLanguage(this).equals(AppHelper.Languages.eng))
+            gameText.setText(mPuzzleFillGame.getWordEng());
+        else if (AppHelper.getLocaleLanguage(this).equals(AppHelper.Languages.rus))
+            gameText.setText(mPuzzleFillGame.getWordRus());
 
-        if (AppHelper.getPlaySoundImageAppear(this) && !isFirsOpenFragment) {
+        if (AppHelper.getPlaySound(this) && !isFirsOpenFragment) {
             mPlayer = AppHelper.playSound(this, excellent_word);
 
             final Activity activity = this;
             mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                 @Override
                 public void onCompletion(MediaPlayer mp) {
-                    if (AppHelper.getVoiceForDisplayWords(activity)) {
+                    if (AppHelper.getPlaySound(activity)) {
                         AppHelper.playSound(activity, mPuzzleFillGame.getItemName());
                     }
                 }
             });
             isFirsOpenFragment = true;
         }
-
-        if (AppHelper.getVoiceForDisplayWords(this)) {
-            if (mPlayer == null)
-                mPlayer = AppHelper.playSound(this, mPuzzleFillGame.getItemName());
-            else if (!mPlayer.isPlaying()) {
-                mPlayer = AppHelper.playSound(this, mPuzzleFillGame.getItemName());
-            }
-        }
-
     }
 
     @Override
     public void onPartMove() {
-        if (AppHelper.getVibrateDragPuzzles(this))
+        if (AppHelper.getVibrate(this))
             mVibrator.vibrate(100);
         hideArrows();
 
@@ -204,7 +196,7 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
 
     @Override
     public void onPartsLock() {
-        if (AppHelper.getVibratePieceInPlace(this))
+        if (AppHelper.getVibrate(this))
             mVibrator.vibrate(100);
     }
 

@@ -6,7 +6,6 @@ import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.view.Display;
@@ -186,8 +185,12 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements Sha
     public void onResume() {
         mShaker.resume();
         super.onResume();
-        if (AppHelper.getPlayBackgroundMusic(this))
-            mBackgroundSound.pause(false);
+
+        if (!AppHelper.isAppInBackground(this)) {
+            if (mBackgroundSound != null && !mBackgroundSound.isPlay())
+                mBackgroundSound.pause(false);
+        }
+
         if(nextGame != null) nextGame.setClickable(true);
     }
 
@@ -195,8 +198,8 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements Sha
     protected void onPause() {
         super.onPause();
 
-        if (AppHelper.isAppInBackground(this)) {
-            if (AppHelper.getPlayBackgroundMusic(this))
+        if (AppHelper.isAppInBackground(this) || AppHelper.isScreenOff(this)) {
+            if (mBackgroundSound != null && mBackgroundSound.isPlay())
                 mBackgroundSound.pause(true);
         }
     }
@@ -227,7 +230,7 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements Sha
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK ) {
-            AppHelper.startBackgroundSound(this, Constans.MENU_BACKGROUND_SOUND);
+            AppHelper.startBackgroundSound(this, Constans.MENU_BACKGROUND_MUSIC);
         }
         return super.onKeyDown(keyCode, event);
     }

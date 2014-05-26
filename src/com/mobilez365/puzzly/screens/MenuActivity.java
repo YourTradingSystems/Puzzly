@@ -45,7 +45,10 @@ public class MenuActivity extends Activity implements View.OnClickListener {
         super.onCreate(_savedInstanceState);
         AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this).name());
         AppHelper.setDefaultFont(this);
-        AppHelper.startBackgroundSound(this, Constans.MENU_BACKGROUND_SOUND);
+
+        if (AppHelper.getBackgroundSound() == null) {
+            AppHelper.startBackgroundSound(this, Constans.MENU_BACKGROUND_MUSIC);
+        }
         mBackgroundSound = AppHelper.getBackgroundSound();
 
         setContentView(R.layout.menu_screen);
@@ -85,9 +88,12 @@ public class MenuActivity extends Activity implements View.OnClickListener {
         super.onResume();
         AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this).name());
         setGameAchievement(AppHelper.getGameAchievement(this));
-        if (AppHelper.getPlayBackgroundMusic(this)) {
-            mBackgroundSound = AppHelper.getBackgroundSound();
-            mBackgroundSound.pause(false);
+
+        mBackgroundSound = AppHelper.getBackgroundSound();
+
+        if (!AppHelper.isAppInBackground(this)) {
+            if (mBackgroundSound != null && !mBackgroundSound.isPlay())
+                mBackgroundSound.pause(false);
         }
 
         if (btnGameSettings_MS != null) btnGameSettings_MS.setClickable(true);
@@ -99,8 +105,8 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     protected void onPause() {
         super.onPause();
 
-        if (AppHelper.isAppInBackground(this)) {
-            if (AppHelper.getPlayBackgroundMusic(this))
+        if (AppHelper.isAppInBackground(this) || AppHelper.isScreenOff(this)) {
+            if (mBackgroundSound != null && mBackgroundSound.isPlay())
                 mBackgroundSound.pause(true);
         }
     }
@@ -206,7 +212,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
 
     private final void startGame(int type) {
 
-        AppHelper.startBackgroundSound(this, Constans.GAME_BACKGROUND_SOUND);
+        AppHelper.startBackgroundSound(this, Constans.GAME_BACKGROUND_MUSIC);
 
         int passedGame = AppHelper.getPassedGames(this);
         if (passedGame != 3) {
@@ -239,6 +245,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
 
 
     private final void settings() {
+        AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this).name());
         startActivity(new Intent(this, SettingsActivity.class));
     }
 

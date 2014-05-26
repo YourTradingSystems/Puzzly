@@ -6,14 +6,11 @@ import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
-import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.view.Display;
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.animation.LinearInterpolator;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -211,8 +208,12 @@ public class BonusLevelFlowerActivity extends InterstitialActivity implements Sh
     public void onResume() {
         mShaker.resume();
         super.onResume();
-        if (AppHelper.getPlayBackgroundMusic(this))
-            mBackgroundSound.pause(false);
+
+        if (!AppHelper.isAppInBackground(this)) {
+            if (mBackgroundSound != null && !mBackgroundSound.isPlay())
+                mBackgroundSound.pause(false);
+        }
+
         if(nextGame != null) nextGame.setClickable(true);
     }
 
@@ -220,8 +221,8 @@ public class BonusLevelFlowerActivity extends InterstitialActivity implements Sh
     protected void onPause() {
         super.onPause();
 
-        if (AppHelper.isAppInBackground(this)) {
-            if (AppHelper.getPlayBackgroundMusic(this))
+        if (AppHelper.isAppInBackground(this) || AppHelper.isScreenOff(this)) {
+            if (mBackgroundSound != null && mBackgroundSound.isPlay())
                 mBackgroundSound.pause(true);
         }
     }
@@ -229,7 +230,7 @@ public class BonusLevelFlowerActivity extends InterstitialActivity implements Sh
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK ) {
-            AppHelper.startBackgroundSound(this, Constans.MENU_BACKGROUND_SOUND);
+            AppHelper.startBackgroundSound(this, Constans.MENU_BACKGROUND_MUSIC);
         }
         return super.onKeyDown(keyCode, event);
     }

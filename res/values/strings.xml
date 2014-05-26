@@ -12,12 +12,9 @@
     <!-- ~~~~~~~~~~~~~~~~~~~ SETTINGS ~~~~~~~~~~~~~~~~~~~~~~ !-->
 
     <string name="settings_play_background_music">Play background music</string>
+    <string name="settings_play_sound">Sound in game</string>
+    <string name="settings_vibrate">Game vibration</string>
     <string name="settings_display_inner_borders">Display inner borders</string>
-    <string name="settings_play_sound_when_image_appear">Play sound when image appear</string>
-    <string name="settings_display_words">Display words</string>
-    <string name="settings_voice_for_display_words">Voice for display words</string>
-    <string name="settings_vibrate_when_drag_puzzles">Vibrate when drag puzzles</string>
-    <string name="settings_vibrate_when_a_piece_in_place">Vibrate when a piece in place</string>
     <string name="settings_localize_language">Language</string>
 
     <string-array name="settings_languages">

@@ -11,8 +11,7 @@
     </style>
 
     <style name="HeaderName">
-        <item name="android:padding">@dimen/p_normal</item>
-        <item name="android:textSize">@dimen/ts_normal</item>
+        <item name="android:textSize">@dimen/ts_big</item>
     </style>
 
     <style name="HeaderBTN">

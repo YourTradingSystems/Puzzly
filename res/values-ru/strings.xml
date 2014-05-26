@@ -11,13 +11,10 @@
 
     <!-- ~~~~~~~~~~~~~~~~~~~ SETTINGS ~~~~~~~~~~~~~~~~~~~~~~ !-->
 
-    <string name="settings_play_background_music">Воспроизведение фонового звука</string>
+    <string name="settings_play_background_music">Воспроизведение фоновой музыки</string>
+    <string name="settings_play_sound">Воспроизведение игровых звуков</string>
+    <string name="settings_vibrate">Вибрация в игре</string>
     <string name="settings_display_inner_borders">Показывать внутренние границы</string>
-    <string name="settings_play_sound_when_image_appear">Воспроизведение звука при появлении изображения</string>
-    <string name="settings_display_words">Показать слова</string>
-    <string name="settings_voice_for_display_words">Воспроизведение отображаемых слов</string>
-    <string name="settings_vibrate_when_drag_puzzles">Вибрация при выборе части пазла</string>
-    <string name="settings_vibrate_when_a_piece_in_place">Вибрация, когда часть пазла на месте</string>
     <string name="settings_localize_language">Язык</string>
 
     <string-array name="settings_languages">

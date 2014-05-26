@@ -1,16 +1,16 @@
 package com.mobilez365.puzzly.global;
 
-import android.app.ActionBar;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.net.Uri;
-import android.view.View;
+import android.os.PowerManager;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.VideoView;
@@ -34,8 +34,8 @@ public class AppHelper {
     public static Integer appStatus;
 
     public static enum Languages {
-        us,
-        ru
+        eng,
+        rus
     }
 
     public static void setDefaultFont(Context context) {
@@ -54,19 +54,23 @@ public class AppHelper {
     }
 
     public static final void changeLanguage(Activity _activity, String _language) {
-        Locale locale = new Locale(_language);
-        Locale.setDefault(locale);
-        Configuration config = new Configuration();
-        config.locale = locale;
-        _activity.getResources().updateConfiguration(config, _activity.getResources().getDisplayMetrics());
+        try {
+            Locale locale = new Locale(_language);
+            Locale.setDefault(locale);
+            Configuration config = _activity.getResources().getConfiguration();
+            config.locale = locale;
+            _activity.getResources().updateConfiguration(config, null);
+        } catch (Exception e) {
+            Locale locale = new Locale(Languages.eng.name());
+            Locale.setDefault(locale);
+            Configuration config = _activity.getResources().getConfiguration();
+            config.locale = locale;
+            _activity.getResources().updateConfiguration(config, null);
+        }
     }
 
     public static final void changeLanguageRefresh(Activity _activity, String _language) {
-        Locale locale = new Locale(_language);
-        Locale.setDefault(locale);
-        Configuration config = new Configuration();
-        config.locale = locale;
-        _activity.getResources().updateConfiguration(config, _activity.getResources().getDisplayMetrics());
+        changeLanguage(_activity, _language);
         _activity.startActivity(_activity.getIntent());
         _activity.finish();
     }
@@ -77,25 +81,30 @@ public class AppHelper {
 
         switch (lang) {
             case 0:
-                return Languages.us;
+                return Languages.eng;
 
             case 1:
-                return Languages.ru;
+                return Languages.rus;
         }
 
-        return Languages.us;
+        return Languages.eng;
     }
 
-    public static boolean isAppInBackground(final Context context) {
-        ActivityManager am = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+    public static boolean isAppInBackground(final Context _context) {
+        ActivityManager am = (ActivityManager) _context.getSystemService(Context.ACTIVITY_SERVICE);
         List<ActivityManager.RunningTaskInfo> tasks = am.getRunningTasks(1);
         if (!tasks.isEmpty()) {
             ComponentName topActivity = tasks.get(0).topActivity;
-            if (!topActivity.getPackageName().equals(context.getPackageName())) {
+            if (!topActivity.getPackageName().equals(_context.getPackageName())) {
                 return true;
             }
         }
         return false;
+    }
+
+    public static boolean isScreenOff(final Activity _activity) {
+        PowerManager powerManager = (PowerManager) _activity.getSystemService(_activity.POWER_SERVICE);
+        return !powerManager.isScreenOn();
     }
 
     public static final VideoView showVideoTutorial(Activity _activity, ViewGroup _parentView) {
@@ -272,59 +281,26 @@ public class AppHelper {
         return prefs.getBoolean(Constans.DISPLAY_INNER_BORDERS, true);
     }
 
-    public static final void setPlaySoundImageAppear(Activity _activity, boolean _state) {
+    public static final void setPlaySound(Activity _activity, boolean _state) {
         SharedPreferences.Editor editor = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE).edit();
-        editor.putBoolean(Constans.PLAY_SOUND_WHEN_IMAGE_APPEAR, _state);
+        editor.putBoolean(Constans.PLAY_SOUND, _state);
         editor.commit();
     }
 
-    public static final boolean getPlaySoundImageAppear(Activity _activity) {
+    public static final boolean getPlaySound(Activity _activity) {
         SharedPreferences prefs = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE);
-        return prefs.getBoolean(Constans.PLAY_SOUND_WHEN_IMAGE_APPEAR, true);
+        return prefs.getBoolean(Constans.PLAY_SOUND, true);
     }
 
-    public static final void setDisplayWords(Activity _activity, boolean _state) {
+    public static final void setVibrate(Activity _activity, boolean _state) {
         SharedPreferences.Editor editor = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE).edit();
-        editor.putBoolean(Constans.DISPLAY_WORDS, _state);
+        editor.putBoolean(Constans.VIBRATE, _state);
         editor.commit();
     }
 
-    public static final boolean getDisplayWords(Activity _activity) {
+    public static final boolean getVibrate(Activity _activity) {
         SharedPreferences prefs = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE);
-        return prefs.getBoolean(Constans.DISPLAY_WORDS, true);
-    }
-
-    public static final void setVoiceForDisplayWords(Activity _activity, boolean _state) {
-        SharedPreferences.Editor editor = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE).edit();
-        editor.putBoolean(Constans.VOICE_FOR_DISPLAY_WORDS, _state);
-        editor.commit();
-    }
-
-    public static final boolean getVoiceForDisplayWords(Activity _activity) {
-        SharedPreferences prefs = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE);
-        return prefs.getBoolean(Constans.VOICE_FOR_DISPLAY_WORDS, true);
-    }
-
-    public static final void setVibrateDragPuzzles(Activity _activity, boolean _state) {
-        SharedPreferences.Editor editor = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE).edit();
-        editor.putBoolean(Constans.VIBRATE_WHEN_DRAG_PUZZLES, _state);
-        editor.commit();
-    }
-
-    public static final boolean getVibrateDragPuzzles(Activity _activity) {
-        SharedPreferences prefs = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE);
-        return prefs.getBoolean(Constans.VIBRATE_WHEN_DRAG_PUZZLES, true);
-    }
-
-    public static final void setVibratePieceInPlace(Activity _activity, boolean _state) {
-        SharedPreferences.Editor editor = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE).edit();
-        editor.putBoolean(Constans.VIBRATE_WHEN_A_PIECE_IN_PLACE, _state);
-        editor.commit();
-    }
-
-    public static final boolean getVibratePieceInPlace(Activity _activity) {
-        SharedPreferences prefs = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE);
-        return prefs.getBoolean(Constans.VIBRATE_WHEN_A_PIECE_IN_PLACE, true);
+        return prefs.getBoolean(Constans.VIBRATE, true);
     }
 
     public static final void setLocalizeLanguage(Activity _activity, int _language) {

@@ -18,7 +18,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/HeaderBTN"
-            android:padding="15dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
             android:layout_alignParentLeft="true"/>
 
         <TextView
@@ -61,58 +64,34 @@
                 android:text="@string/settings_play_background_music"/>
 
             <com.mobilez365.puzzly.customViews.ColorsCheckBox
-                android:id="@+id/ccbDisplayInnerBorders_SS"
+                android:id="@+id/ccbPlaySound_SS"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 style="@style/SettingsChooseBox"
                 android:layout_below="@id/ccbPlayBackgroundMusic_SS"
+                android:text="@string/settings_play_sound"/>
+
+            <com.mobilez365.puzzly.customViews.ColorsCheckBox
+                android:id="@+id/ccbVibrate_SS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/SettingsChooseBox"
+                android:layout_below="@id/ccbPlaySound_SS"
+                android:text="@string/settings_vibrate"/>
+
+            <com.mobilez365.puzzly.customViews.ColorsCheckBox
+                android:id="@+id/ccbDisplayInnerBorders_SS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/SettingsChooseBox"
+                android:layout_below="@id/ccbVibrate_SS"
                 android:text="@string/settings_display_inner_borders"/>
-
-            <com.mobilez365.puzzly.customViews.ColorsCheckBox
-                android:id="@+id/ccbPlaySoundImageAppear_SS"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/SettingsChooseBox"
-                android:layout_below="@id/ccbDisplayInnerBorders_SS"
-                android:text="@string/settings_play_sound_when_image_appear"/>
-
-            <com.mobilez365.puzzly.customViews.ColorsCheckBox
-                android:id="@+id/ccbDisplayWords_SS"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/SettingsChooseBox"
-                android:layout_below="@id/ccbPlaySoundImageAppear_SS"
-                android:text="@string/settings_display_words"/>
-
-            <com.mobilez365.puzzly.customViews.ColorsCheckBox
-                android:id="@+id/ccbVoiceDisplayWords_SS"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/SettingsChooseBox"
-                android:layout_below="@id/ccbDisplayWords_SS"
-                android:text="@string/settings_voice_for_display_words"/>
-
-            <com.mobilez365.puzzly.customViews.ColorsCheckBox
-                android:id="@+id/ccbVibrateDragPuzzles_SS"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/SettingsChooseBox"
-                android:layout_below="@id/ccbVoiceDisplayWords_SS"
-                android:text="@string/settings_vibrate_when_drag_puzzles"/>
-
-            <com.mobilez365.puzzly.customViews.ColorsCheckBox
-                android:id="@+id/ccbVibratePieceInPlace_SS"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/SettingsChooseBox"
-                android:layout_below="@id/ccbVibrateDragPuzzles_SS"
-                android:text="@string/settings_vibrate_when_a_piece_in_place"/>
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/ccbVibratePieceInPlace_SS"
+                android:layout_below="@id/ccbDisplayInnerBorders_SS"
                 android:gravity="center"
                 android:background="@color/settings_header_bg">
 
