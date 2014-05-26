@@ -58,23 +58,25 @@ public class MenuActivity extends Activity implements View.OnClickListener {
 
     @Override
     public void onClick(View _v) {
-       btnGameSettings_MS.setClickable(false);
-       ivGameSimpleReveal_MS.setClickable(false);
-       ivGameSimpleFill_MS.setClickable(false);
-        switch (_v.getId()) {
+        if (_v.isClickable()) {
+            btnGameSettings_MS.setClickable(false);
+            ivGameSimpleReveal_MS.setClickable(false);
+            ivGameSimpleFill_MS.setClickable(false);
+            switch (_v.getId()) {
 
-            case R.id.ivGameSimpleFill_MS:
-                startGame(0);
-                break;
+                case R.id.ivGameSimpleFill_MS:
+                    startGame(0);
+                    break;
 
-            case R.id.ivGameSimpleReveal_MS:
-                startGame(1);
-                break;
+                case R.id.ivGameSimpleReveal_MS:
+                    startGame(1);
+                    break;
 
-            case R.id.btnGameSettings_MS:
-                settings();
-                break;
+                case R.id.btnGameSettings_MS:
+                    settings();
+                    break;
 
+            }
         }
     }
 
@@ -88,9 +90,9 @@ public class MenuActivity extends Activity implements View.OnClickListener {
             mBackgroundSound.pause(false);
         }
 
-        if(btnGameSettings_MS != null) btnGameSettings_MS.setClickable(true);
-        if(ivGameSimpleReveal_MS != null) ivGameSimpleReveal_MS.setClickable(true);
-        if(ivGameSimpleFill_MS != null) ivGameSimpleFill_MS.setClickable(true);
+        if (btnGameSettings_MS != null) btnGameSettings_MS.setClickable(true);
+        if (ivGameSimpleReveal_MS != null) ivGameSimpleReveal_MS.setClickable(true);
+        if (ivGameSimpleFill_MS != null) ivGameSimpleFill_MS.setClickable(true);
     }
 
     @Override
@@ -105,25 +107,25 @@ public class MenuActivity extends Activity implements View.OnClickListener {
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK ) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
             mBackgroundSound.pause(true);
         }
         return super.onKeyDown(keyCode, event);
     }
 
     private final void findViews() {
-        rlMenuMainLayout_MS = (RelativeLayout)findViewById(R.id.rlMenuMainLayout_MS);
-        ivGameSimpleFill_MS = (ImageView)findViewById(R.id.ivGameSimpleFill_MS);
-        ivGameSimpleReveal_MS = (ImageView)findViewById(R.id.ivGameSimpleReveal_MS);
-        btnGameSettings_MS = (ImageButton)findViewById(R.id.btnGameSettings_MS);
-        tvGameAchievement_MS = (TextView)findViewById(R.id.tvGameAchievement_MS);
-        ivMenuLogo_MS = (ImageView)findViewById(R.id.ivMenuLogo_MS);
-        llSubMenu_MS = (LinearLayout)findViewById(R.id.llSubMenu_MS);
-        llMainMenu_MS = (LinearLayout)findViewById(R.id.llMainMenu_MS);
-        rlLeftBalloon_MS = (RelativeLayout)findViewById(R.id.rlLeftBalloon_MS);
-        rlRightBalloon_MS = (RelativeLayout)findViewById(R.id.rlRightBalloon_MS);
-        ivLeftHandTutorial_MS = (ImageView)findViewById(R.id.ivLeftHandTutorial_MS);
-        ivRightHandTutorial_MS = (ImageView)findViewById(R.id.ivRightHandTutorial_MS);
+        rlMenuMainLayout_MS = (RelativeLayout) findViewById(R.id.rlMenuMainLayout_MS);
+        ivGameSimpleFill_MS = (ImageView) findViewById(R.id.ivGameSimpleFill_MS);
+        ivGameSimpleReveal_MS = (ImageView) findViewById(R.id.ivGameSimpleReveal_MS);
+        btnGameSettings_MS = (ImageButton) findViewById(R.id.btnGameSettings_MS);
+        tvGameAchievement_MS = (TextView) findViewById(R.id.tvGameAchievement_MS);
+        ivMenuLogo_MS = (ImageView) findViewById(R.id.ivMenuLogo_MS);
+        llSubMenu_MS = (LinearLayout) findViewById(R.id.llSubMenu_MS);
+        llMainMenu_MS = (LinearLayout) findViewById(R.id.llMainMenu_MS);
+        rlLeftBalloon_MS = (RelativeLayout) findViewById(R.id.rlLeftBalloon_MS);
+        rlRightBalloon_MS = (RelativeLayout) findViewById(R.id.rlRightBalloon_MS);
+        ivLeftHandTutorial_MS = (ImageView) findViewById(R.id.ivLeftHandTutorial_MS);
+        ivRightHandTutorial_MS = (ImageView) findViewById(R.id.ivRightHandTutorial_MS);
     }
 
     private final void setListeners() {
@@ -175,7 +177,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
 
     private final void startCloudAnimation(long _startOffset) {
         int cloudCount = 4;
-        int cloud[] = new int[] {R.drawable.clouds1_icon, R.drawable.clouds2_icon, R.drawable.clouds3_icon, R.drawable.clouds4_icon};
+        int cloud[] = new int[]{R.drawable.clouds1_icon, R.drawable.clouds2_icon, R.drawable.clouds3_icon, R.drawable.clouds4_icon};
         Random rand = new Random();
         float y = 50;
 
@@ -199,20 +201,19 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     }
 
     private final void setGameAchievement(int _count) {
-        tvGameAchievement_MS.setText(""+_count);
+        tvGameAchievement_MS.setText("" + _count);
     }
 
     private final void startGame(int type) {
 
         AppHelper.startBackgroundSound(this, Constans.GAME_BACKGROUND_SOUND);
 
-        int passedGame =  AppHelper.getPassedGames(this);
-        if(passedGame != 3)  {
+        int passedGame = AppHelper.getPassedGames(this);
+        if (passedGame != 3) {
             Intent gameIntent = new Intent(this, GameFillActivity.class);
             gameIntent.putExtra("type", type);
             startActivity(gameIntent);
-        }
-        else {
+        } else {
             Random r = new Random();
             int bonusLevelIndex = r.nextInt(3);
 
