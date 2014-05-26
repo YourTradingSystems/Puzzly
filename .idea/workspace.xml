@@ -42,20 +42,9 @@
     <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a79d8431-a31c-4800-9f13-431b5a1f9d4a" name="Default" comment="fix bug with snake item&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/global/AppHelper.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/global/AppHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelFlowerActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelFlowerActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelShakeActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelShakeActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelTreeActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelTreeActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/global/Constans.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/global/Constans.java" />
+    <list default="true" id="a79d8431-a31c-4800-9f13-431b5a1f9d4a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/settings_screen.xml" afterPath="$PROJECT_DIR$/res/layout/settings_screen.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-ru/strings.xml" afterPath="$PROJECT_DIR$/res/values-ru/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/styles.xml" afterPath="$PROJECT_DIR$/res/values/styles.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/styles_settings.xml" afterPath="$PROJECT_DIR$/res/values/styles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path=".idea/workspace.xml" />
@@ -113,21 +102,6 @@
       </breakpoint>
     </breakpoint_any>
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java" line="44" class="com.mobilez365.puzzly.screens.GameFillActivity" package="com.mobilez365.puzzly.screens">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
       <breakpoint url="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java" line="104" class="com.mobilez365.puzzly.screens.MenuActivity" package="com.mobilez365.puzzly.screens">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
@@ -202,10 +176,8 @@
       <file leaf-file-name="MenuActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="0" selection-start="2889" selection-end="2889" vertical-scroll-proportion="0.0" vertical-offset="979" max-vertical-offset="4114">
-              <folding>
-                <element signature="e#1430#1441#0" expanded="true" />
-              </folding>
+            <state line="89" column="0" selection-start="2899" selection-end="2899" vertical-scroll-proportion="0.0" vertical-offset="1513" max-vertical-offset="4471">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -213,7 +185,7 @@
       <file leaf-file-name="SettingsActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="109" column="61" selection-start="3352" selection-end="3352" vertical-scroll-proportion="0.0" vertical-offset="1516" max-vertical-offset="2397">
+            <state line="109" column="61" selection-start="3409" selection-end="3409" vertical-scroll-proportion="0.0" vertical-offset="1853" max-vertical-offset="2584">
               <folding />
             </state>
           </provider>
@@ -222,7 +194,7 @@
       <file leaf-file-name="GameFillActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="0" selection-start="2392" selection-end="2392" vertical-scroll-proportion="0.07712766" vertical-offset="804" max-vertical-offset="3536">
+            <state line="16" column="45" selection-start="542" selection-end="542" vertical-scroll-proportion="-0.503876" vertical-offset="467" max-vertical-offset="3876">
               <folding />
             </state>
           </provider>
@@ -231,7 +203,7 @@
       <file leaf-file-name="AppHelper.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/global/AppHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="25" selection-start="3432" selection-end="3432" vertical-scroll-proportion="0.0" vertical-offset="1263" max-vertical-offset="5712">
+            <state line="103" column="0" selection-start="3443" selection-end="3443" vertical-scroll-proportion="0.0" vertical-offset="1751" max-vertical-offset="6222">
               <folding />
             </state>
           </provider>
@@ -240,15 +212,8 @@
       <file leaf-file-name="BackgroundSound.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/util/BackgroundSound.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="45" selection-start="946" selection-end="946" vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="1071">
-              <folding>
-                <element signature="e#1238#1239#0" expanded="true" />
-                <element signature="e#1268#1269#0" expanded="true" />
-                <element signature="e#1305#1306#0" expanded="true" />
-                <element signature="e#1334#1335#0" expanded="true" />
-                <element signature="e#1371#1372#0" expanded="true" />
-                <element signature="e#1402#1403#0" expanded="true" />
-              </folding>
+            <state line="37" column="45" selection-start="946" selection-end="946" vertical-scroll-proportion="0.0" vertical-offset="629" max-vertical-offset="1156">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -256,7 +221,7 @@
       <file leaf-file-name="BonusLevelTreeActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelTreeActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="246" column="24" selection-start="8708" selection-end="8708" vertical-scroll-proportion="0.0" vertical-offset="3618" max-vertical-offset="4114">
+            <state line="246" column="24" selection-start="8708" selection-end="8708" vertical-scroll-proportion="0.0" vertical-offset="4182" max-vertical-offset="4556">
               <folding />
             </state>
           </provider>
@@ -265,7 +230,7 @@
       <file leaf-file-name="BonusLevelShakeActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelShakeActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="203" column="9" selection-start="7301" selection-end="7301" vertical-scroll-proportion="0.0" vertical-offset="2872" max-vertical-offset="3808">
+            <state line="203" column="9" selection-start="7301" selection-end="7301" vertical-scroll-proportion="0.0" vertical-offset="3451" max-vertical-offset="4250">
               <folding />
             </state>
           </provider>
@@ -274,7 +239,7 @@
       <file leaf-file-name="BonusLevelFlowerActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelFlowerActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="226" column="9" selection-start="8241" selection-end="8241" vertical-scroll-proportion="0.0" vertical-offset="3073" max-vertical-offset="4114">
+            <state line="226" column="9" selection-start="8241" selection-end="8241" vertical-scroll-proportion="0.0" vertical-offset="3842" max-vertical-offset="4624">
               <folding />
             </state>
           </provider>
@@ -325,13 +290,13 @@
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/global/Constans.java" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelTreeActivity.java" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelShakeActivity.java" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelFlowerActivity.java" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/global/AppHelper.java" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/util/BackgroundSound.java" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java" />
       </list>
     </option>
   </component>
@@ -367,6 +332,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -597,8 +564,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -684,19 +649,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -722,6 +674,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -884,7 +849,11 @@
       <created>1400855358322</created>
       <updated>1400855358322</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="change the settings&#10;fix bug with localization&#10;fix bug with background music">
+      <created>1401116472261</created>
+      <updated>1401116472261</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -912,12 +881,10 @@
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.6731302" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33811802" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32057416" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.6731302" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31969696" sideWeight="0.7097222" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32591414" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41307816" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23863636" sideWeight="0.42391303" order="3" side_tool="true" content_ui="tabs" />
@@ -931,7 +898,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23863636" sideWeight="0.57608694" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15151516" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33492824" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -939,6 +906,8 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31969696" sideWeight="0.7097222" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32591414" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -946,11 +915,11 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33863276" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="true" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32686982" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32686982" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23333333" sideWeight="0.6805556" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
@@ -968,8 +937,8 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32216907" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.354067" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.6731302" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -1001,7 +970,8 @@
     <MESSAGE value="change sound/text of all items in DB&#10;" />
     <MESSAGE value="add new sound to new item in DB" />
     <MESSAGE value="fix bug with snake item" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bug with snake item" />
+    <MESSAGE value="change the settings&#10;fix bug with localization&#10;fix bug with background music" />
+    <option name="LAST_COMMIT_MESSAGE" value="change the settings&#10;fix bug with localization&#10;fix bug with background music" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1273,13 +1243,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="58" column="12" selection-start="2053" selection-end="2053" vertical-scroll-proportion="0.39318886" vertical-offset="859" max-vertical-offset="2091">
           <folding>
-            <element signature="e#1305#1328#0" expanded="true" />
-            <element signature="e#1574#1592#0" expanded="true" />
-            <element signature="e#2346#2386#0" expanded="true" />
-            <element signature="e#2754#2783#0" expanded="true" />
-            <element signature="e#3139#3165#0" expanded="true" />
-            <element signature="e#3531#3571#0" expanded="true" />
-            <element signature="e#4206#4242#0" expanded="true" />
+            <element signature="e#1305#1328#0" expanded="false" />
+            <element signature="e#1574#1592#0" expanded="false" />
+            <element signature="e#2346#2386#0" expanded="false" />
+            <element signature="e#2754#2783#0" expanded="false" />
+            <element signature="e#3139#3165#0" expanded="false" />
+            <element signature="e#3531#3571#0" expanded="false" />
+            <element signature="e#4206#4242#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1289,9 +1259,6 @@
         <state line="23" column="49" selection-start="1036" selection-end="1036" vertical-scroll-proportion="0.0" vertical-offset="194" max-vertical-offset="1088">
           <folding>
             <element signature="e#626#644#0" expanded="true" />
-            <element signature="e#833#872#0" expanded="true" />
-            <element signature="e#968#986#0" expanded="true" />
-            <element signature="e#1362#1380#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1326,16 +1293,12 @@
     </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-19/android/app/Instrumentation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1193" column="0" selection-start="45546" selection-end="45546" vertical-scroll-proportion="0.33333334" vertical-offset="19130" max-vertical-offset="29495">
-          <folding />
-        </state>
+        <state line="1193" column="0" selection-start="45546" selection-end="45546" vertical-scroll-proportion="0.33333334" vertical-offset="19130" max-vertical-offset="29495" />
       </provider>
     </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-19/android/app/ActivityThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2703" column="0" selection-start="114714" selection-end="114714" vertical-scroll-proportion="0.33333334" vertical-offset="43627" max-vertical-offset="83164">
-          <folding />
-        </state>
+        <state line="2703" column="0" selection-start="114714" selection-end="114714" vertical-scroll-proportion="0.33333334" vertical-offset="43627" max-vertical-offset="83164" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelTreeActivity.java">
@@ -1361,14 +1324,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="61" selection-start="3352" selection-end="3352" vertical-scroll-proportion="0.0" vertical-offset="1516" max-vertical-offset="2397">
+        <state line="109" column="61" selection-start="3409" selection-end="3409" vertical-scroll-proportion="0.0" vertical-offset="1853" max-vertical-offset="2584">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/global/AppHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="25" selection-start="3432" selection-end="3432" vertical-scroll-proportion="0.0" vertical-offset="1263" max-vertical-offset="5712">
+        <state line="103" column="0" selection-start="3443" selection-end="3443" vertical-scroll-proportion="0.0" vertical-offset="1751" max-vertical-offset="6222">
           <folding />
         </state>
       </provider>
@@ -1376,29 +1339,20 @@
     <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/util/BackgroundSound.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="45" selection-start="946" selection-end="946" vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="1071">
-          <folding>
-            <element signature="e#1238#1239#0" expanded="true" />
-            <element signature="e#1268#1269#0" expanded="true" />
-            <element signature="e#1305#1306#0" expanded="true" />
-            <element signature="e#1334#1335#0" expanded="true" />
-            <element signature="e#1371#1372#0" expanded="true" />
-            <element signature="e#1402#1403#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="0" selection-start="2889" selection-end="2889" vertical-scroll-proportion="0.0" vertical-offset="979" max-vertical-offset="4114">
-          <folding>
-            <element signature="e#1430#1441#0" expanded="true" />
-          </folding>
+        <state line="89" column="0" selection-start="2899" selection-end="2899" vertical-scroll-proportion="0.0" vertical-offset="1513" max-vertical-offset="4471">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="0" selection-start="2392" selection-end="2392" vertical-scroll-proportion="0.07712766" vertical-offset="804" max-vertical-offset="3536">
+        <state line="16" column="45" selection-start="542" selection-end="542" vertical-scroll-proportion="-0.503876" vertical-offset="467" max-vertical-offset="3876">
           <folding />
         </state>
       </provider>
