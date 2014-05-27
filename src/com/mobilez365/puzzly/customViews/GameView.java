@@ -46,6 +46,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
     private Paint mCharacterPaint = null;
     private Animation mFadeIn;
     private Transformation mTransformation;
+
     public interface GameCallBacks {
         public void onGameFinish();
 
@@ -136,8 +137,8 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
     public void onDraw(Canvas canvas) {
         if (canvas == null) return;
         if (!gameOver) {
-        canvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
-        canvas.drawColor(getResources().getColor(R.color.background_game));
+            canvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
+            canvas.drawColor(getResources().getColor(R.color.background_game));
             canvas.drawBitmap(shape, figurePosX, figurePosY, null);
             synchronized (this) {
                 for (GameSprite spt : sprites) {
@@ -145,11 +146,11 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                 }
             }
         } else {
-            canvas.drawBitmap(shape, figurePosX, figurePosY, mCharacterPaint);
             if (mFadeIn.hasStarted() && !mFadeIn.hasEnded()) {
                 mFadeIn.getTransformation(System.currentTimeMillis(), mTransformation);
-                mCharacterPaint.setAlpha((int)(255 * mTransformation.getAlpha()));
-            } else {
+                mCharacterPaint.setAlpha((int) (255 * mTransformation.getAlpha()));
+                canvas.drawBitmap(shape, figurePosX, figurePosY, mCharacterPaint);
+            } else if (mFadeIn.hasEnded()) {
                 for (GameSprite spr : sprites) {
                     spr = null;
                 }
@@ -212,7 +213,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                                     gameOver = true;
                                     break;
                             }
-                            if(gameOver) {
+                            if (gameOver) {
                                 createFigure(puzzleFillGame.getResultImage());
                                 fade();
                             }
@@ -261,7 +262,8 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
     public void release() {
         getHolder().getSurface().release();
     }
-    private void fade(){
+
+    private void fade() {
         mCharacterPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mFadeIn = new AlphaAnimation(0f, 1f);
         mTransformation = new Transformation();
