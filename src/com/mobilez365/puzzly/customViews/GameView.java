@@ -140,7 +140,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         canvas.drawColor(getResources().getColor(R.color.background_game));
         if (!gameOver) canvas.drawBitmap(shape, figurePosX, figurePosY, null);
 
-        if(mFadeIn == null || !mFadeIn.hasEnded())
+        if(gameType == REVEAL_GAME || mFadeIn == null || !mFadeIn.hasEnded())
         synchronized (this) {
             for (GameSprite spt : sprites) {
                 spt.onDraw(canvas);
@@ -151,17 +151,15 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
             if (mFadeIn != null && mFadeIn.hasStarted() && !mFadeIn.hasEnded()) {
                 mFadeIn.getTransformation(System.currentTimeMillis(), mTransformation);
                 mCharacterPaint.setAlpha((int) (255 * mTransformation.getAlpha()));
-            } else if (mFadeIn != null && mFadeIn.hasEnded()) {
+            } else if (gameType == FILL_GAME && mFadeIn != null && mFadeIn.hasEnded()) {
                 for (GameSprite spr : sprites) {
                     spr = null;
                 }
                 sprites.clear();
-                end = gameOver;
             }
             canvas.drawBitmap(shape, figurePosX, figurePosY, mCharacterPaint);
+            end = gameOver;
         }
-
-
     }
 
     public boolean onTouchEvent(MotionEvent event) {
