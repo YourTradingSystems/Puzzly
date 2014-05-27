@@ -1,11 +1,13 @@
 package com.mobilez365.puzzly.customViews;
 
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.*;
 import android.util.DisplayMetrics;
 import android.view.*;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.Transformation;
 import com.larvalabs.svgandroid.SVG;
 import com.larvalabs.svgandroid.SVGParser;
 import com.mobilez365.puzzly.R;
@@ -41,7 +43,9 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
     private static final int REVEAL_GAME = 1;
     private int gameType;
     private List<PuzzlesPart> parts;
-
+    private Paint mCharacterPaint = null;
+    private Animation mFadeIn;
+    private Transformation mTransformation;
     public interface GameCallBacks {
         public void onGameFinish();
 
@@ -131,9 +135,9 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
 
     public void onDraw(Canvas canvas) {
         if (canvas == null) return;
+        if (!gameOver) {
         canvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
         canvas.drawColor(getResources().getColor(R.color.background_game));
-        if (!gameOver) {
             canvas.drawBitmap(shape, figurePosX, figurePosY, null);
             synchronized (this) {
                 for (GameSprite spt : sprites) {
@@ -141,8 +145,12 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                 }
             }
         } else {
+            fade();
             createFigure(puzzleFillGame.getResultImage());
-            canvas.drawBitmap(shape, figurePosX, figurePosY, null);
+            canvas.drawBitmap(shape, figurePosX, figurePosY, mCharacterPaint);
+            if (mFadeIn.hasStarted() && !mFadeIn.hasEnded()) {
+                mFadeIn.getTransformation(System.currentTimeMillis(), mTransformation);
+            }
             for (GameSprite spr : sprites) {
                 spr = null;
             }
@@ -247,6 +255,14 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
 
     public void release() {
         getHolder().getSurface().release();
+    }
+    private void fade(){
+        mCharacterPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        mFadeIn = new AlphaAnimation(0f, 1f);
+        mTransformation = new Transformation();
+        mFadeIn.setDuration(2000);
+        mFadeIn.start();
+        mFadeIn.getTransformation(System.currentTimeMillis(), mTransformation);
     }
 }
  
