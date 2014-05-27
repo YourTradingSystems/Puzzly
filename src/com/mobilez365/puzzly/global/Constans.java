@@ -28,7 +28,8 @@ public class Constans {
     public static final String BONUS_FLOWER = "bonus_flower";                                   //bool
     public static final String BONUS_SHAKE = "bonus_shake";                                     //bool
     public static final String BONUS_TREE = "bonus_tree";                                       //bool
-    public static final String MENU_HAND_TUTORIAL = "menu_hand_tutorial";                       //bool
+    public static final String MENU_LEFT_HAND_TUTORIAL = "menu_left_hand_tutorial";             //bool
+    public static final String MENU_RIGHT_HAND_TUTORIAL = "menu_right_hand_tutorial";           //bool
 
     public static final String GAME_BACKGROUND_MUSIC = "game_background_music";
     public static final String MENU_BACKGROUND_MUSIC = "menu_background_music";

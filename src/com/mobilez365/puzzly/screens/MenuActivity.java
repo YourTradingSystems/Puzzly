@@ -69,10 +69,12 @@ public class MenuActivity extends Activity implements View.OnClickListener {
 
                 case R.id.ivGameSimpleFill_MS:
                     startGame(0);
+                    AppHelper.setLeftHandTutorial(this, true);
                     break;
 
                 case R.id.ivGameSimpleReveal_MS:
                     startGame(1);
+                    AppHelper.setRightHandTutorial(this, true);
                     break;
 
                 case R.id.btnGameSettings_MS:
@@ -145,14 +147,15 @@ public class MenuActivity extends Activity implements View.OnClickListener {
         startCloudAnimation(0);
         startCloudAnimation(15000);
 
-        if (!AppHelper.getHandTutorial(this)) {
+        if (!AppHelper.getLeftHandTutorial(this))
             ivLeftHandTutorial_MS.startAnimation(AnimationUtils.loadAnimation(this, R.anim.menu_hand_left));
-            ivRightHandTutorial_MS.startAnimation(AnimationUtils.loadAnimation(this, R.anim.menu_hand_right));
-            AppHelper.setHandTutorial(this, true);
-        } else {
+        else
             ivLeftHandTutorial_MS.setVisibility(View.GONE);
+
+        if (!AppHelper.getRightHandTutorial(this))
+            ivRightHandTutorial_MS.startAnimation(AnimationUtils.loadAnimation(this, R.anim.menu_hand_right));
+        else
             ivRightHandTutorial_MS.setVisibility(View.GONE);
-        }
 
         logoScaleAnimation.setAnimationListener(new Animation.AnimationListener() {
             @Override

@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.ComponentName;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.Typeface;
@@ -110,20 +109,22 @@ public class AppHelper {
 
     public static final VideoView showVideoTutorial(Activity _activity, ViewGroup _parentView) {
         String uriPath = "android.resource://" + _activity.getPackageName() + "/raw/" + R.raw.tutorial_1;
-        VideoView tutorial_video = new VideoView(_activity);
+        final VideoView tutorial_video = new VideoView(_activity);
 
         RelativeLayout.LayoutParams relativeParams = new RelativeLayout.LayoutParams(400, 300);
         relativeParams.addRule(RelativeLayout.CENTER_IN_PARENT);
         _parentView.addView(tutorial_video, relativeParams);
 
         Uri uri = Uri.parse(uriPath);
-        tutorial_video.setVideoURI(uri);
-        tutorial_video.setOnPreparedListener (new MediaPlayer.OnPreparedListener() {
+
+        tutorial_video.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
             public void onPrepared(MediaPlayer mp) {
                 mp.setLooping(true);
             }
         });
+
+        tutorial_video.setVideoURI(uri);
         tutorial_video.start();
         return tutorial_video;
     }
@@ -343,14 +344,25 @@ public class AppHelper {
         return prefs.getBoolean(Constans.BONUS_TREE, false);
     }
 
-    public static final void setHandTutorial(Activity _activity, boolean _state) {
+    public static final void setLeftHandTutorial(Activity _activity, boolean _state) {
         SharedPreferences.Editor editor = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE).edit();
-        editor.putBoolean(Constans.MENU_HAND_TUTORIAL, _state);
+        editor.putBoolean(Constans.MENU_LEFT_HAND_TUTORIAL, _state);
         editor.commit();
     }
 
-    public static final boolean getHandTutorial(Activity _activity) {
+    public static final boolean getLeftHandTutorial(Activity _activity) {
         SharedPreferences prefs = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE);
-        return prefs.getBoolean(Constans.MENU_HAND_TUTORIAL, false);
+        return prefs.getBoolean(Constans.MENU_LEFT_HAND_TUTORIAL, false);
+    }
+
+    public static final void setRightHandTutorial(Activity _activity, boolean _state) {
+        SharedPreferences.Editor editor = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE).edit();
+        editor.putBoolean(Constans.MENU_RIGHT_HAND_TUTORIAL, _state);
+        editor.commit();
+    }
+
+    public static final boolean getRightHandTutorial(Activity _activity) {
+        SharedPreferences prefs = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE);
+        return prefs.getBoolean(Constans.MENU_RIGHT_HAND_TUTORIAL, false);
     }
 }
