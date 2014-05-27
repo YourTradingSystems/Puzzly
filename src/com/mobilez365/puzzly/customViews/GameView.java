@@ -145,7 +145,6 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                 }
             }
         } else {
-            fade();
             createFigure(puzzleFillGame.getResultImage());
             canvas.drawBitmap(shape, figurePosX, figurePosY, mCharacterPaint);
             if (mFadeIn.hasStarted() && !mFadeIn.hasEnded()) {
@@ -214,6 +213,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                                     break;
                             }
                         }
+                        if(gameOver) fade();
                     }
                     break;
                 }
