@@ -150,12 +150,14 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
             canvas.drawBitmap(shape, figurePosX, figurePosY, mCharacterPaint);
             if (mFadeIn.hasStarted() && !mFadeIn.hasEnded()) {
                 mFadeIn.getTransformation(System.currentTimeMillis(), mTransformation);
+            } else {
+                for (GameSprite spr : sprites) {
+                    spr = null;
+                }
+                sprites.clear();
+                end = gameOver;
             }
-            for (GameSprite spr : sprites) {
-                spr = null;
-            }
-            sprites.clear();
-            end = gameOver;
+
         }
 
 
