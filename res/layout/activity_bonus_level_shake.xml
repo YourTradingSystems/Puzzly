@@ -25,16 +25,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/tvCandiesCountABS"
-            android:layout_alignTop="@+id/ivBoxABS"
-            android:layout_centerHorizontal="true"
-            android:textColor="@color/text_color"
-            android:layout_marginTop="30dp"/>
-
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/bonus_shake_all_picked"
             android:id="@+id/tvAllPickedABS"
             android:layout_centerHorizontal="true"

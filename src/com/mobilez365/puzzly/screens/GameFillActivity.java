@@ -32,7 +32,6 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
     private ImageButton previousGame;
     private TextView gameText;
     private PuzzleFillGame mPuzzleFillGame;
-    private ImageView basket;
 
     private boolean isFirsOpenFragment = false;
     private MediaPlayer mPlayer;
@@ -55,7 +54,6 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
         nextGame = (ImageButton) findViewById(R.id.btnNextAGF);
         previousGame = (ImageButton) findViewById(R.id.btnPreviousAFG);
         gameText = (TextView) findViewById(R.id.tvWordAFG);
-        basket = (ImageView) findViewById(R.id.ivBasketAGF);
 
         nextGame.setOnClickListener(this);
         previousGame.setOnClickListener(this);

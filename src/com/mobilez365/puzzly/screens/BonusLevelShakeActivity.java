@@ -46,7 +46,6 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements Sha
     private int mScreenWidth;
 
     private RelativeLayout rlContainer_ABLS;
-    private TextView tvCandiesCount;
     private TextView tvAllCandiesPicked;
     private BackgroundSound mBackgroundSound;
     private ImageButton nextGame;
@@ -64,7 +63,6 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements Sha
         mShaker = new ShakeSensor(this);
         mShaker.setOnShakeListener(this);
 
-        tvCandiesCount = (TextView) findViewById(R.id.tvCandiesCountABS);
         tvAllCandiesPicked = (TextView) findViewById(R.id.tvAllPickedABS);
         mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         rlContainer_ABLS = (RelativeLayout) findViewById(R.id.rlContainer_ABLS);
@@ -79,7 +77,6 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements Sha
 
     private void initCandies() {
         RelativeLayout candiesLayout = (RelativeLayout) findViewById(R.id.rlCandiesABS);
-        tvCandiesCount.setText("" + mCandiesPickedCount);
 
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
@@ -144,7 +141,7 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements Sha
             int finishCenterY = mScreenHeight / 2 - (v.getHeight() / 2);
 
             ObjectAnimator moveXAnimator = ObjectAnimator.ofFloat(v, "translationX", v.getX(), finishCenterX);
-            ObjectAnimator moveYAnimator = ObjectAnimator.ofFloat(v, "translationY", mScreenHeight - v.getHeight(), finishCenterY);
+            ObjectAnimator moveYAnimator = ObjectAnimator.ofFloat(v, "translationY", v.getY(), finishCenterY);
 
             ObjectAnimator scaleXAnimator = ObjectAnimator.ofFloat(v, "scaleX", 1f, 1.2f);
             scaleXAnimator.setDuration(100);
@@ -198,6 +195,7 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements Sha
     protected void onPause() {
         super.onPause();
 
+        mShaker.pause();
         if (AppHelper.isAppInBackground(this) || AppHelper.isScreenOff(this)) {
             if (mBackgroundSound != null && mBackgroundSound.isPlay())
                 mBackgroundSound.pause(true);
@@ -239,7 +237,6 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements Sha
     public void OnAnimEnd(View v) {
         v.setVisibility(View.GONE);
         mCandiesPickedCount ++;
-        tvCandiesCount.setText("" + mCandiesPickedCount);
         checkAllPicked();
     }
 }

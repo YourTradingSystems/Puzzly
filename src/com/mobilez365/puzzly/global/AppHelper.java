@@ -32,6 +32,7 @@ public class AppHelper {
     private static BackgroundSound mBackgroundSound;
     private static MediaPlayer mPlayer;
     public static Integer appStatus;
+    private static int passedGame = 0;
 
     public static enum Languages {
         eng,
@@ -233,19 +234,14 @@ public class AppHelper {
     }
 
     public static final void increasePassedGames(Activity _activity) {
-        SharedPreferences.Editor edit = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE).edit();
-        int passedGame = getPassedGames(_activity);
         if(passedGame == 3)
             passedGame = 0;
         else
             passedGame++;
-        edit.putInt(Constans.PASSED_GAME, passedGame);
-        edit.commit();
     }
 
     public static final int getPassedGames(Activity _activity) {
-        SharedPreferences prefs = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE);
-        return prefs.getInt(Constans.PASSED_GAME, 0);
+        return passedGame;
     }
 
     public static final void setPuzzlesInit(Activity _activity, boolean _initialized) {

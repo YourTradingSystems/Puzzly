@@ -136,28 +136,29 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
 
     public void onDraw(Canvas canvas) {
         if (canvas == null) return;
-        if (!gameOver) {
-            canvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
-            canvas.drawColor(getResources().getColor(R.color.background_game));
-            canvas.drawBitmap(shape, figurePosX, figurePosY, null);
-            synchronized (this) {
-                for (GameSprite spt : sprites) {
-                    spt.onDraw(canvas);
-                }
+        canvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
+        canvas.drawColor(getResources().getColor(R.color.background_game));
+        if (!gameOver) canvas.drawBitmap(shape, figurePosX, figurePosY, null);
+
+        if(mFadeIn == null || !mFadeIn.hasEnded())
+        synchronized (this) {
+            for (GameSprite spt : sprites) {
+                spt.onDraw(canvas);
             }
-        } else {
-            if (mFadeIn.hasStarted() && !mFadeIn.hasEnded()) {
+        }
+
+        if (gameOver) {
+            if (mFadeIn != null && mFadeIn.hasStarted() && !mFadeIn.hasEnded()) {
                 mFadeIn.getTransformation(System.currentTimeMillis(), mTransformation);
                 mCharacterPaint.setAlpha((int) (255 * mTransformation.getAlpha()));
-                canvas.drawBitmap(shape, figurePosX, figurePosY, mCharacterPaint);
-            } else if (mFadeIn.hasEnded()) {
+            } else if (mFadeIn != null && mFadeIn.hasEnded()) {
                 for (GameSprite spr : sprites) {
                     spr = null;
                 }
                 sprites.clear();
                 end = gameOver;
             }
-
+            canvas.drawBitmap(shape, figurePosX, figurePosY, mCharacterPaint);
         }
 
 
@@ -267,7 +268,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         mCharacterPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mFadeIn = new AlphaAnimation(0f, 1f);
         mTransformation = new Transformation();
-        mFadeIn.setDuration(2000);
+        mFadeIn.setDuration(1000);
         mFadeIn.start();
         mFadeIn.getTransformation(System.currentTimeMillis(), mTransformation);
     }

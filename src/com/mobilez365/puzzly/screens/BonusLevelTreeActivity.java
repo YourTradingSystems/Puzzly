@@ -247,6 +247,7 @@ public class BonusLevelTreeActivity extends InterstitialActivity implements Shak
     protected void onPause() {
         super.onPause();
 
+        mShaker.pause();
         if (AppHelper.isAppInBackground(this) || AppHelper.isScreenOff(this)) {
             if (mBackgroundSound != null && mBackgroundSound.isPlay())
                 mBackgroundSound.pause(true);
