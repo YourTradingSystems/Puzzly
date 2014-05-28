@@ -3,7 +3,6 @@ package com.mobilez365.puzzly.screens;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -16,6 +15,7 @@ import com.mobilez365.puzzly.global.AppHelper;
 import com.mobilez365.puzzly.global.Constans;
 import com.mobilez365.puzzly.puzzles.PuzzlesDB;
 import com.mobilez365.puzzly.util.BackgroundSound;
+import com.startad.lib.SADView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -261,8 +261,19 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     }
 
     private void showBanner() {
-        AdView adView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
+        switch (AppHelper.adware % 2){
+            case 0:
+                AdView adView = (AdView) findViewById(R.id.adView);
+                AdRequest adRequest = new AdRequest.Builder().build();
+                adView.loadAd(adRequest);
+                break;
+            case 1:
+                SADView sadView = new SADView(this, getResources().getString(R.string.startADId));
+                LinearLayout layout = (LinearLayout)findViewById(R.id.llBanner);
+                layout.addView(sadView);
+                sadView.loadAd(SADView.LANGUAGE_EN);
+                break;
+        }
+        AppHelper.adware +=1;
     }
 }

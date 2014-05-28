@@ -2,13 +2,14 @@ package com.mobilez365.puzzly.screens;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
+import com.mobilez365.puzzly.R;
 
 /**
  * An {@link android.app.Activity} that requests and can display an InterstitialAd.
  */
 public class InterstitialActivity extends RestartActivty {
 
-    protected final String AD_UNIT_ID = "ca-app-pub-8370463222730338/1339125208";
+    protected final String AD_UNIT_ID = getResources().getString(R.string.interstitialAdUnitId);
     protected InterstitialAd interstitialAd;
 
     @Override
