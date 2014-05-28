@@ -105,7 +105,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         int svgHeight = picture.getHeight();
         int spriteWidth = getScaledY(svgWidth);
         int spriteHeight = getScaledY(svgHeight);
-        Bitmap bmp = Bitmap.createBitmap(spriteWidth, spriteHeight, Bitmap.Config.ARGB_8888);
+        Bitmap bmp = Bitmap.createBitmap(spriteWidth, spriteHeight, Bitmap.Config.ARGB_4444);
         Canvas cnv = new Canvas(bmp);
         cnv.setDensity((int) (metrics.xdpi));
         cnv.drawPicture(picture, new Rect(0, 0, spriteWidth, spriteHeight));
@@ -132,7 +132,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         Picture picture = svg.getPicture();
         int spriteWidth = getScaledY(picture.getWidth());
         int spriteHeight = getScaledY(picture.getHeight());
-        Bitmap bmp = Bitmap.createBitmap(spriteWidth, spriteHeight, Bitmap.Config.ARGB_8888);
+        Bitmap bmp = Bitmap.createBitmap(spriteWidth, spriteHeight, Bitmap.Config.ARGB_4444);
         Canvas cnv = new Canvas(bmp);
         cnv.setDensity((int) (metrics.xdpi));
         cnv.drawPicture(picture, new Rect(0, 0, spriteWidth, spriteHeight));
@@ -206,28 +206,27 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                     if (sprite.checkPieceLocked()) {
                         sprite.setPieceLocked(true);
                         listener.onPartsLock();
-                    }
-                    if (sprite.isPieceLocked()) {//check end of game
-                        synchronized (this) {
-                            gameOver = true;
-                            switch (gameType) {
-                                case FILL_GAME:
-                                    for (GameSprite spr : sprites) {
-                                        if (!spr.isPieceLocked()) {
-                                            gameOver = false;
-                                            break;
+                        //check end of game
+                            synchronized (this) {
+                                gameOver = true;
+                                switch (gameType) {
+                                    case FILL_GAME:
+                                        for (GameSprite spr : sprites) {
+                                            if (!spr.isPieceLocked()) {
+                                                gameOver = false;
+                                                break;
+                                            }
                                         }
-                                    }
-                                    break;
-                                case REVEAL_GAME:
-                                    gameOver = true;
-                                    break;
+                                        break;
+                                    case REVEAL_GAME:
+                                        gameOver = true;
+                                        break;
+                                }
+                                if (gameOver) {
+                                    createFigure(puzzleFillGame.getResultImage());
+                                    fade();
+                                }
                             }
-                            if (gameOver) {
-                                createFigure(puzzleFillGame.getResultImage());
-                                fade();
-                            }
-                        }
                     }
                     break;
                 }
