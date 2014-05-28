@@ -32,7 +32,8 @@
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="20dp"
             android:textColor="@color/text_color"
-            android:visibility="gone"/>
+            android:visibility="gone"
+            android:typeface="normal"/>
 
     <ImageButton
             android:layout_width="wrap_content"

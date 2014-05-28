@@ -275,7 +275,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
 
     private void fade() {
         mCharacterPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-        mFadeIn = new AlphaAnimation((gameType == FILL_GAME) ? 0f : 0.5f, 1f);
+        mFadeIn = new AlphaAnimation((gameType == FILL_GAME) ? 0f : 0.35f, 1f);
         mTransformation = new Transformation();
         mFadeIn.setDuration(2000);
         mFadeIn.start();

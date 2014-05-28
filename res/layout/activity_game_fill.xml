@@ -40,7 +40,8 @@
             android:layout_alignParentBottom="true"
             android:layout_margin="20dp"
             android:visibility="gone"
-            android:textSize="40sp"/>
+            android:textSize="40sp"
+            android:typeface="normal"/>
 
     <LinearLayout
             android:orientation="horizontal"

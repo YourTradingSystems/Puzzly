@@ -253,8 +253,10 @@ public class BonusLevelFlowerActivity extends InterstitialActivity implements Sh
     @Override
     public void onClick(View v) {
         v.setClickable(false);
-        if (v.getId() == R.id.btnNextABF)
+        if (v.getId() == R.id.btnNextABF){
+            v.setClickable(false);
             nextGame();
+        }
         else
             pickCandy(v);
     }
