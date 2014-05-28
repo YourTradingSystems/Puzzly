@@ -57,6 +57,8 @@ public class BonusLevelFlowerActivity extends InterstitialActivity implements Sh
     private VideoView mTutorial;
 
     public void onCreate(Bundle savedInstanceState) {
+        AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this).name());
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bonus_level_flower);
 
@@ -214,6 +216,9 @@ public class BonusLevelFlowerActivity extends InterstitialActivity implements Sh
                 mBackgroundSound.pause(false);
         }
 
+        if (mTutorial != null)
+            mTutorial.start();
+
         if(nextGame != null) nextGame.setClickable(true);
     }
 
@@ -225,6 +230,9 @@ public class BonusLevelFlowerActivity extends InterstitialActivity implements Sh
         if (AppHelper.isAppInBackground(this) || AppHelper.isScreenOff(this)) {
             if (mBackgroundSound != null && mBackgroundSound.isPlay())
                 mBackgroundSound.pause(true);
+
+            if (mTutorial != null)
+                mTutorial.stopPlayback();
         }
     }
 
@@ -240,8 +248,9 @@ public class BonusLevelFlowerActivity extends InterstitialActivity implements Sh
     public void onShake() {
         if (mTutorial != null) {
             mTutorial.stopPlayback();
-            mTutorial.setVisibility(View.GONE);
+            rlContainer_ABLF.removeView(mTutorial);
             AppHelper.setBonusFlower(this, true);
+            mTutorial = null;
         }
 
         if (mFlowersShownCount != mCandiesCount) {

@@ -42,8 +42,9 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     @Override
     public void onCreate(Bundle _savedInstanceState) {
         AppHelper.appStatus = 1;
-        super.onCreate(_savedInstanceState);
         AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this).name());
+
+        super.onCreate(_savedInstanceState);
         AppHelper.setDefaultFont(this);
 
         if (AppHelper.getBackgroundSound() == null) {
@@ -88,7 +89,6 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     @Override
     protected void onResume() {
         super.onResume();
-        AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this).name());
         setGameAchievement(AppHelper.getGameAchievement(this));
 
         mBackgroundSound = AppHelper.getBackgroundSound();
@@ -97,6 +97,17 @@ public class MenuActivity extends Activity implements View.OnClickListener {
             if (mBackgroundSound != null && !mBackgroundSound.isPlay())
                 mBackgroundSound.pause(false);
         }
+
+        if (AppHelper.getLeftHandTutorial(this)) {
+            ivLeftHandTutorial_MS.clearAnimation();
+            ivLeftHandTutorial_MS.setVisibility(View.GONE);
+        }
+
+        if (AppHelper.getRightHandTutorial(this)) {
+            ivRightHandTutorial_MS.clearAnimation();
+            ivRightHandTutorial_MS.setVisibility(View.GONE);
+        }
+
 
         if (btnGameSettings_MS != null) btnGameSettings_MS.setClickable(true);
         if (ivGameSimpleReveal_MS != null) ivGameSimpleReveal_MS.setClickable(true);
@@ -114,11 +125,9 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     }
 
     @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            mBackgroundSound.pause(true);
-        }
-        return super.onKeyDown(keyCode, event);
+    public void onBackPressed() {
+        super.onBackPressed();
+        mBackgroundSound.pause(true);
     }
 
     private final void findViews() {
@@ -248,7 +257,6 @@ public class MenuActivity extends Activity implements View.OnClickListener {
 
 
     private final void settings() {
-        AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this).name());
         startActivity(new Intent(this, SettingsActivity.class));
     }
 

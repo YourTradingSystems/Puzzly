@@ -30,6 +30,8 @@ public class SettingsActivity extends RestartActivty implements View.OnClickList
 
     @Override
     public void onCreate(Bundle _savedInstanceState) {
+        AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this).name());
+
         super.onCreate(_savedInstanceState);
         setContentView(R.layout.settings_screen);
         mBackgroundSound = AppHelper.getBackgroundSound();

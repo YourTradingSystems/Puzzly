@@ -65,6 +65,8 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
     protected void onResume() {
         super.onResume();
 
+        AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this).name());
+
         if (!AppHelper.isAppInBackground(this)) {
             if (mBackgroundSound != null && !mBackgroundSound.isPlay())
                 mBackgroundSound.pause(false);
@@ -82,11 +84,9 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
     }
 
     @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK ) {
-            AppHelper.startBackgroundSound(this, Constans.MENU_BACKGROUND_MUSIC);
-        }
-        return super.onKeyDown(keyCode, event);
+    public void onBackPressed() {
+        super.onBackPressed();
+        AppHelper.startBackgroundSound(this, Constans.MENU_BACKGROUND_MUSIC);
     }
 
     private void switchGame() {

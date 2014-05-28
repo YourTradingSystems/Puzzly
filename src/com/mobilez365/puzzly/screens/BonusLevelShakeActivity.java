@@ -53,6 +53,8 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements Sha
     private VideoView mTutorial;
 
     public void onCreate(Bundle savedInstanceState) {
+        AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this).name());
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bonus_level_shake);
 
@@ -188,6 +190,9 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements Sha
                 mBackgroundSound.pause(false);
         }
 
+        if (mTutorial != null)
+            mTutorial.start();
+
         if(nextGame != null) nextGame.setClickable(true);
     }
 
@@ -199,6 +204,9 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements Sha
         if (AppHelper.isAppInBackground(this) || AppHelper.isScreenOff(this)) {
             if (mBackgroundSound != null && mBackgroundSound.isPlay())
                 mBackgroundSound.pause(true);
+
+            if (mTutorial != null)
+                mTutorial.stopPlayback();
         }
     }
 
@@ -206,8 +214,9 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements Sha
     public void onShake() {
         if (mTutorial != null) {
             mTutorial.stopPlayback();
-            mTutorial.setVisibility(View.GONE);
+            rlContainer_ABLS.removeView(mTutorial);
             AppHelper.setBonusShake(this, true);
+            mTutorial = null;
         }
 
         if (mCandiesDroppedCount != mCandiesCount) {

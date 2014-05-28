@@ -117,10 +117,21 @@ public class AppHelper {
 
         Uri uri = Uri.parse(uriPath);
 
-        tutorial_video.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+        /*tutorial_video.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
             public void onPrepared(MediaPlayer mp) {
                 mp.setLooping(true);
+            }
+        });*/
+
+        tutorial_video.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+
+                tutorial_video.resume();
+                tutorial_video.start();
+
             }
         });
 
