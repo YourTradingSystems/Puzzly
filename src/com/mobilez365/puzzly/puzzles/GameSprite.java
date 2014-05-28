@@ -11,8 +11,8 @@ public class GameSprite {
     private int x = 0;
     private int y = 0;
     //piece locked coordinates
-    private int lockedX = 0;
-    private int lockedY = 0;
+    public int lockedX = 0;
+    public int lockedY = 0;
     //distance for precision moving
     private int dX = 0;
     private int dY = 0;
@@ -21,7 +21,7 @@ public class GameSprite {
     private int height = 0;
 
     private GameView gameView;
-    private Bitmap bmp;
+    public Bitmap bmp;
 
     private boolean pieceLocked = false;
 

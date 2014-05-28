@@ -113,6 +113,11 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         figurePosY = getScaledY(puzzleFillGame.getFigurePos().y);
         shape = bmp;
         if (gameOver) return;
+        if (gameType == REVEAL_GAME) {
+            GameSprite spr = (new GameSprite(this, createSpriteBitmap(getResIdFromString(shapeName)), figurePosX, figurePosY, figurePosX, figurePosY));
+            spr.setPieceLocked(true);
+            sprites.add(spr);
+        }
         for (PuzzlesPart part : parts) {
             sprites.add(new GameSprite(this, createSpriteBitmap(getResIdFromString(part.partImage)),
                     figurePosX + part.finalPartLocation.x * spriteWidth / svgWidth,
@@ -138,27 +143,33 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         if (canvas == null) return;
         canvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
         canvas.drawColor(getResources().getColor(R.color.background_game));
-        if (!gameOver) canvas.drawBitmap(shape, figurePosX, figurePosY, null);
+        if (!gameOver && gameType == FILL_GAME) canvas.drawBitmap(shape, figurePosX, figurePosY, null);
 
-        if(gameType == REVEAL_GAME || mFadeIn == null || !mFadeIn.hasEnded())
-        synchronized (this) {
-            for (GameSprite spt : sprites) {
-                spt.onDraw(canvas);
+        if ((mFadeIn == null || !mFadeIn.hasEnded()) && (gameType == FILL_GAME || !gameOver)) {
+            synchronized (this) {
+                for (GameSprite spt : sprites) {
+                    spt.onDraw(canvas);
+                }
             }
         }
-
         if (gameOver) {
-            if (mFadeIn != null && mFadeIn.hasStarted() && !mFadeIn.hasEnded()) {
-                mFadeIn.getTransformation(System.currentTimeMillis(), mTransformation);
-                mCharacterPaint.setAlpha((int) (255 * mTransformation.getAlpha()));
-            } else if (gameType == FILL_GAME && mFadeIn != null && mFadeIn.hasEnded()) {
-                for (GameSprite spr : sprites) {
-                    spr = null;
-                }
-                sprites.clear();
-            }
-            canvas.drawBitmap(shape, figurePosX, figurePosY, mCharacterPaint);
-            end = gameOver;
+           if(gameType == REVEAL_GAME){
+               synchronized (this) {
+               for (GameSprite spr : sprites) {
+                   if (spr.isPieceLocked()) canvas.drawBitmap(spr.bmp, spr.lockedX, spr.lockedY, mCharacterPaint);
+               }
+           }   }
+                    if (mFadeIn != null && mFadeIn.hasStarted() && !mFadeIn.hasEnded()) {
+                        mFadeIn.getTransformation(System.currentTimeMillis(), mTransformation);
+                        mCharacterPaint.setAlpha((int) (255 * mTransformation.getAlpha()));
+                    } else if (mFadeIn != null && mFadeIn.hasEnded()) {
+                        for (GameSprite spr : sprites) {
+                            spr = null;
+                        }
+                        sprites.clear();
+                        end = gameOver;
+                    }
+                    canvas.drawBitmap(shape, figurePosX, figurePosY, mCharacterPaint);
         }
     }
 
@@ -264,9 +275,9 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
 
     private void fade() {
         mCharacterPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-        mFadeIn = new AlphaAnimation(0f, 1f);
+        mFadeIn = new AlphaAnimation((gameType == FILL_GAME) ? 0f : 0.5f, 1f);
         mTransformation = new Transformation();
-        mFadeIn.setDuration(1000);
+        mFadeIn.setDuration(2000);
         mFadeIn.start();
         mFadeIn.getTransformation(System.currentTimeMillis(), mTransformation);
     }
