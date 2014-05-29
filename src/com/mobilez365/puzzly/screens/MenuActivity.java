@@ -68,12 +68,16 @@ public class MenuActivity extends Activity implements View.OnClickListener {
             switch (_v.getId()) {
 
                 case R.id.ivGameSimpleFill_MS:
-                    startGame(0);
+                    Intent gameFillIntent = new Intent(this, ChoosePuzzleActivity.class);
+                    gameFillIntent.putExtra("type", 0);
+                    startActivity(gameFillIntent);
                     AppHelper.setLeftHandTutorial(this, true);
                     break;
 
                 case R.id.ivGameSimpleReveal_MS:
-                    startGame(1);
+                    Intent gameIntent = new Intent(this, ChoosePuzzleActivity.class);
+                    gameIntent.putExtra("type", 1);
+                    startActivity(gameIntent);
                     AppHelper.setRightHandTutorial(this, true);
                     break;
 
@@ -212,40 +216,6 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     private final void setGameAchievement(int _count) {
         tvGameAchievement_MS.setText("" + _count);
     }
-
-    private final void startGame(int type) {
-
-        AppHelper.startBackgroundSound(this, Constans.GAME_BACKGROUND_MUSIC);
-
-        int passedGame = AppHelper.getPassedGames(this);
-        if (passedGame != 3) {
-            Intent gameIntent = new Intent(this, GameFillActivity.class);
-            gameIntent.putExtra("type", type);
-            startActivity(gameIntent);
-        } else {
-            Random r = new Random();
-            int bonusLevelIndex = r.nextInt(3);
-
-            Activity bonusLevelActivity = null;
-            switch (bonusLevelIndex) {
-                case 0:
-                    bonusLevelActivity = new BonusLevelTreeActivity();
-                    break;
-                case 1:
-                    bonusLevelActivity = new BonusLevelShakeActivity();
-                    break;
-                case 2:
-                    bonusLevelActivity = new BonusLevelFlowerActivity();
-                    break;
-            }
-
-            Intent gameIntent = new Intent(this, bonusLevelActivity.getClass());
-            gameIntent.putExtra("type", type);
-            startActivity(gameIntent);
-        }
-
-    }
-
 
     private final void settings() {
         AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this).name());

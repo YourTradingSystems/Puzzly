@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Vibrator;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.*;
@@ -29,11 +28,8 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
     private int mGameNumber;
     private Vibrator mVibrator;
     private ImageButton nextGame;
-    private ImageButton previousGame;
     private TextView gameText;
     private PuzzleFillGame mPuzzleFillGame;
-
-    private boolean isFirsOpenFragment = false;
     private MediaPlayer mPlayer;
     private BackgroundSound mBackgroundSound;
 
@@ -45,20 +41,17 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
         mBackgroundSound = AppHelper.getBackgroundSound();
 
         mGameType = getIntent().getIntExtra("type", 0);
-        mGameNumber = AppHelper.getCurrentGame(this, mGameType);
+        mGameNumber = getIntent().getIntExtra("gameNumber", 0);
+        AppHelper.setCurrentGame(this, mGameNumber, mGameType);
 
         mPuzzleFillGame = PuzzlesDB.getPuzzle(mGameNumber, mGameType, this);
         ((FrameLayout) findViewById(R.id.rlForGame)).addView(new GameView(this, mPuzzleFillGame, this));
 
         mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         nextGame = (ImageButton) findViewById(R.id.btnNextAGF);
-        previousGame = (ImageButton) findViewById(R.id.btnPreviousAFG);
         gameText = (TextView) findViewById(R.id.tvWordAFG);
 
         nextGame.setOnClickListener(this);
-        previousGame.setOnClickListener(this);
-
-        showArrows();
     }
 
     @Override
@@ -83,7 +76,7 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK ) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
             AppHelper.startBackgroundSound(this, Constans.MENU_BACKGROUND_MUSIC);
         }
         return super.onKeyDown(keyCode, event);
@@ -91,13 +84,12 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
 
     private void switchGame() {
         int passedGame = AppHelper.getPassedGames(this);
-        if(passedGame != 3)  {
+        if (passedGame != 3) {
             Intent gameIntent = new Intent(this, GameFillActivity.class);
             gameIntent.putExtra("type", mGameType);
+            gameIntent.putExtra("gameNumber", AppHelper.getNextGame(this, mGameType));
             startActivity(gameIntent);
-        }
-
-        else {
+        } else {
             Random r = new Random();
             int bonusLevelIndex = r.nextInt(3);
 
@@ -115,6 +107,7 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
             }
             Intent gameIntent = new Intent(this, bonusLevelActivity.getClass());
             gameIntent.putExtra("type", mGameType);
+            gameIntent.putExtra("gameNumber", AppHelper.getNextGame(this, mGameType));
             startActivity(gameIntent);
         }
 
@@ -132,19 +125,6 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
         moveYAnimator.start();
     }
 
-    private void showArrows(){
-        if (AppHelper.getPreviousGame(this, mGameType) != -1)
-            previousGame.setVisibility(View.VISIBLE);
-
-        if (AppHelper.getNextGame(this, mGameType) != -1)
-            nextGame.setVisibility(View.VISIBLE);
-    }
-
-    private void hideArrows(){
-            previousGame.setVisibility(View.GONE);
-            nextGame.setVisibility(View.GONE);
-    }
-
     @Override
     public void onGameFinish() {
 
@@ -154,32 +134,31 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
 
         gameText.setVisibility(View.VISIBLE);
 
-        if(!gameIsFinished) {
+        if (!gameIsFinished) {
             AppHelper.increasePassedGames(this);
             AppHelper.setMaxGame(this, mGameNumber + 1, mGameType);
             AppHelper.setGameAchievement(this, AppHelper.getGameAchievement(this) + 1);
             showBasketAnimation();
             gameIsFinished = true;
-        }
 
-        if (AppHelper.getLocaleLanguage(this).equals(AppHelper.Languages.eng))
-            gameText.setText(mPuzzleFillGame.getWordEng());
-        else if (AppHelper.getLocaleLanguage(this).equals(AppHelper.Languages.rus))
-            gameText.setText(mPuzzleFillGame.getWordRus());
+            if (AppHelper.getLocaleLanguage(this).equals(AppHelper.Languages.eng))
+                gameText.setText(mPuzzleFillGame.getWordEng());
+            else if (AppHelper.getLocaleLanguage(this).equals(AppHelper.Languages.rus))
+                gameText.setText(mPuzzleFillGame.getWordRus());
 
-        if (AppHelper.getPlaySound(this) && !isFirsOpenFragment) {
-            mPlayer = AppHelper.playSound(this, excellent_word);
+            if (AppHelper.getPlaySound(this)) {
+                mPlayer = AppHelper.playSound(this, excellent_word);
 
-            final Activity activity = this;
-            mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                @Override
-                public void onCompletion(MediaPlayer mp) {
-                    if (AppHelper.getPlaySound(activity)) {
-                        AppHelper.playSound(activity, mPuzzleFillGame.getItemName());
+                final Activity activity = this;
+                mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+                        if (AppHelper.getPlaySound(activity)) {
+                            AppHelper.playSound(activity, mPuzzleFillGame.getItemName());
+                        }
                     }
-                }
-            });
-            isFirsOpenFragment = true;
+                });
+            }
         }
     }
 
@@ -187,8 +166,6 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
     public void onPartMove() {
         if (AppHelper.getVibrate(this))
             mVibrator.vibrate(100);
-        hideArrows();
-
     }
 
     @Override
@@ -199,16 +176,10 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
 
     @Override
     public void onClick(View v) {
-        if(v.isClickable()) {
-            previousGame.setClickable(false);
+        if (v.isClickable()) {
             nextGame.setClickable(false);
             switch (v.getId()) {
                 case R.id.btnNextAGF:
-                    AppHelper.setCurrentGame(this, AppHelper.getNextGame(this, mGameType), mGameType);
-                    switchGame();
-                    break;
-                case R.id.btnPreviousAFG:
-                    AppHelper.setCurrentGame(this, AppHelper.getPreviousGame(this, mGameType), mGameType);
                     switchGame();
                     break;
             }
@@ -217,7 +188,10 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
 
     @Override
     public void OnAnimEnd(View v) {
-        showArrows();
-        v.setVisibility(View.INVISIBLE);
+        if (AppHelper.getNextGame(this, mGameType) != -1)
+            nextGame.setVisibility(View.VISIBLE);
+
+        v.setVisibility(View.GONE);
+        findViewById(R.id.ivBasketAGF).setVisibility(View.GONE);
     }
 }

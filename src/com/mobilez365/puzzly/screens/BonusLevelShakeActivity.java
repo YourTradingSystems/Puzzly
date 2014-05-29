@@ -37,6 +37,7 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements Sha
     private final int mCandiesCount = 9;
     private int mCandiesDroppedCount = 0;
     private int mCandiesPickedCount = 0;
+    private int mGameNumber;
     private ShakeSensor mShaker;
     private Vibrator mVibrator;
     private List<ImageView> candiesList;
@@ -59,6 +60,7 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements Sha
         mBackgroundSound = AppHelper.getBackgroundSound();
 
         gameType = getIntent().getIntExtra("type", 0);
+        mGameNumber = getIntent().getIntExtra("gameNumber", 0);
 
         mShaker = new ShakeSensor(this);
         mShaker.setOnShakeListener(this);
@@ -174,6 +176,7 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements Sha
     private void nextGame() {
         Intent gameIntent = new Intent(this, GameFillActivity.class);
         gameIntent.putExtra("type", gameType);
+        gameIntent.putExtra("gameNumber", mGameNumber);
         startActivity(gameIntent);
         finish();
     }

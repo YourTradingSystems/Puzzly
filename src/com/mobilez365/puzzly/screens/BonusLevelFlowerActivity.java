@@ -38,6 +38,7 @@ public class BonusLevelFlowerActivity extends InterstitialActivity implements Sh
     private final int mCandiesCount = 5;
     private int mFlowersShownCount = 0;
     private int mCandiesPickedCount = 0;
+    private int mGameNumber;
     private ShakeSensor mShaker;
     private Vibrator mVibrator;
     private List<ImageView> flowersList;
@@ -63,6 +64,7 @@ public class BonusLevelFlowerActivity extends InterstitialActivity implements Sh
         mBackgroundSound = AppHelper.getBackgroundSound();
 
         gameType = getIntent().getIntExtra("type", 0);
+        mGameNumber = getIntent().getIntExtra("gameNumber", 0);
 
         mShaker = new ShakeSensor(this);
         mShaker.setOnShakeListener(this);
@@ -200,6 +202,7 @@ public class BonusLevelFlowerActivity extends InterstitialActivity implements Sh
     private void nextGame() {
         Intent gameIntent = new Intent(this, GameFillActivity.class);
         gameIntent.putExtra("type", gameType);
+        gameIntent.putExtra("gameNumber", mGameNumber);
         startActivity(gameIntent);
         finish();
     }

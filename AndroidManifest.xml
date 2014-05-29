@@ -4,21 +4,23 @@
           android:versionCode="1"
           android:versionName="1.0">
 
-    <uses-sdk android:minSdkVersion="14"
+    <uses-sdk
+            android:minSdkVersion="14"
             android:targetSdkVersion="17"/>
 
-    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.GET_TASKS"/>
 
     <application
-        android:label="@string/app_name"
-        android:icon="@drawable/ic_launcher"
-        android:theme="@style/MainAppTheme">
+            android:label="@string/app_name"
+            android:icon="@drawable/ic_launcher"
+            android:theme="@style/MainAppTheme">
 
-        <meta-data android:name="com.google.android.gms.version"
-                   android:value="@integer/google_play_services_version"/>
+        <meta-data
+                android:name="com.google.android.gms.version"
+                android:value="@integer/google_play_services_version"/>
 
         <activity
                 android:name=".screens.MenuActivity"
@@ -31,29 +33,38 @@
         </activity>
 
         <activity
-            android:name=".screens.SettingsActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="landscape">
-        </activity>
+                android:name=".screens.SettingsActivity"
+                android:label="@string/app_name"
+                android:screenOrientation="landscape"/>
 
+        <activity
+                android:name=".screens.BonusLevelShakeActivity"
+                android:screenOrientation="landscape"
+                android:configChanges="orientation|keyboardHidden|screenSize"/>
 
-        <activity android:name=".screens.BonusLevelShakeActivity"
-                  android:screenOrientation="landscape"
-                  android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity
+                android:name=".screens.BonusLevelTreeActivity"
+                android:screenOrientation="landscape"
+                android:configChanges="orientation|keyboardHidden|screenSize"/>
 
-        <activity android:name=".screens.BonusLevelTreeActivity"
-                  android:screenOrientation="landscape"
-                  android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity
+                android:name=".screens.BonusLevelFlowerActivity"
+                android:screenOrientation="landscape"
+                android:configChanges="orientation|keyboardHidden|screenSize"/>
 
-        <activity android:name=".screens.BonusLevelFlowerActivity"
-                  android:screenOrientation="landscape"
-                  android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity
+                android:name=".screens.GameFillActivity"
+                android:screenOrientation="landscape"
+                android:configChanges="orientation|keyboardHidden|screenSize"/>
 
-        <activity android:name=".screens.GameFillActivity"
-                  android:screenOrientation="landscape"
-                  android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity
+                android:name="com.google.android.gms.ads.AdActivity"
+                android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
 
-        <activity android:name="com.google.android.gms.ads.AdActivity"
-                  android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+        <activity
+                android:name=".screens.ChoosePuzzleActivity"
+                android:screenOrientation="landscape"
+                android:configChanges="orientation|keyboardHidden|screenSize"/>
+
     </application>
 </manifest>

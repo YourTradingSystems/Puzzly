@@ -179,9 +179,7 @@ public class AppHelper {
         int currentGame = getCurrentGame(_activity, type);
         int gameCount = PuzzlesDB.getPuzzleGameCount(_activity, type);
         int nextGame;
-        if(getMaxGame(_activity, type) == gameCount && currentGame == gameCount - 1)
-            nextGame = 0;
-        else if(getMaxGame(_activity, type) > currentGame)
+        if(gameCount > currentGame + 1)
             nextGame = currentGame + 1;
         else
             nextGame = -1;
