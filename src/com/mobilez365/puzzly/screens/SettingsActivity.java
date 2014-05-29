@@ -2,16 +2,14 @@ package com.mobilez365.puzzly.screens;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.CheckBox;
-import android.widget.ImageButton;
-import android.widget.Spinner;
+import android.widget.*;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
 import com.mobilez365.puzzly.global.Constans;
 import com.mobilez365.puzzly.util.BackgroundSound;
+import com.startad.lib.SADView;
 
 /**
  * Created by Denis on 12.05.14.
@@ -30,6 +28,8 @@ public class SettingsActivity extends RestartActivty implements View.OnClickList
 
     @Override
     public void onCreate(Bundle _savedInstanceState) {
+        AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this).name());
+
         super.onCreate(_savedInstanceState);
         setContentView(R.layout.settings_screen);
         mBackgroundSound = AppHelper.getBackgroundSound();
@@ -139,8 +139,19 @@ public class SettingsActivity extends RestartActivty implements View.OnClickList
     }
 
     private void showBanner() {
-        AdView adView = (AdView)this.findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
+        switch (AppHelper.adware % 2){
+            case 0:
+                AdView adView = (AdView) findViewById(R.id.adView);
+                AdRequest adRequest = new AdRequest.Builder().build();
+                adView.loadAd(adRequest);
+                break;
+            case 1:
+                SADView sadView = new SADView(this, getResources().getString(R.string.startADId));
+                LinearLayout layout = (LinearLayout)findViewById(R.id.llBanner);
+                layout.addView(sadView);
+                sadView.loadAd(SADView.LANGUAGE_EN);
+                break;
+        }
+        AppHelper.adware +=1;
     }
 }

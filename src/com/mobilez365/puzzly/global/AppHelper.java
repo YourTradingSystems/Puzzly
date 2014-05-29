@@ -31,6 +31,7 @@ public class AppHelper {
     private static BackgroundSound mBackgroundSound;
     private static MediaPlayer mPlayer;
     public static Integer appStatus;
+    public static Integer adware = 2;
     private static int passedGame = 0;
 
     public static enum Languages {
@@ -124,6 +125,17 @@ public class AppHelper {
             }
         });
 
+        tutorial_video.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+
+                tutorial_video.resume();
+                tutorial_video.start();
+
+            }
+        });
+
         tutorial_video.setVideoURI(uri);
         tutorial_video.start();
         return tutorial_video;
@@ -150,8 +162,8 @@ public class AppHelper {
             }
 
         mBackgroundSound = new BackgroundSound(_activity, _name);
-        if (!mBackgroundSound.isInit() && AppHelper.getPlayBackgroundMusic(_activity))
-            mBackgroundSound.execute(null);
+/*        if (!mBackgroundSound.isInit() && AppHelper.getPlayBackgroundMusic(_activity))
+            mBackgroundSound.execute(null);*/
     }
 
     public static final void stopBackgroundSound() {

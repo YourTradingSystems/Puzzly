@@ -56,6 +56,8 @@ public class BonusLevelTreeActivity extends InterstitialActivity implements Shak
     private RelativeLayout rlContainer_ABLT;
 
     public void onCreate(Bundle savedInstanceState) {
+        AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this).name());
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bonus_level_tree);
 
@@ -207,8 +209,9 @@ public class BonusLevelTreeActivity extends InterstitialActivity implements Shak
     public void onShake() {
         if (mTutorial != null) {
             mTutorial.stopPlayback();
-            mTutorial.setVisibility(View.GONE);
+            rlContainer_ABLT.removeView(mTutorial);
             AppHelper.setBonusTree(this, true);
+            mTutorial = null;
         }
 
         if (mCandiesDroppedCount != mCandiesCount) {
@@ -245,6 +248,9 @@ public class BonusLevelTreeActivity extends InterstitialActivity implements Shak
                 mBackgroundSound.pause(false);
         }
 
+        if (mTutorial != null)
+            mTutorial.start();
+
         if(nextGame != null) nextGame.setClickable(true);
     }
 
@@ -256,6 +262,9 @@ public class BonusLevelTreeActivity extends InterstitialActivity implements Shak
         if (AppHelper.isAppInBackground(this) || AppHelper.isScreenOff(this)) {
             if (mBackgroundSound != null && mBackgroundSound.isPlay())
                 mBackgroundSound.pause(true);
+
+            if (mTutorial != null)
+                mTutorial.stopPlayback();
         }
     }
 
