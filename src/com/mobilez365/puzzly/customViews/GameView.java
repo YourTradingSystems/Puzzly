@@ -67,7 +67,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         SurfaceHolder holder = getHolder();
         setFocusable(true);
         holder.addCallback(this);
-        holder.setFormat(PixelFormat.TRANSPARENT);
+        holder.setFormat(PixelFormat.OPAQUE);
 
         getDensity();
         gameType = puzzleFillGame.getGameType();
@@ -105,7 +105,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         int svgHeight = picture.getHeight();
         int spriteWidth = getScaledY(svgWidth);
         int spriteHeight = getScaledY(svgHeight);
-        Bitmap bmp = Bitmap.createBitmap(spriteWidth, spriteHeight, Bitmap.Config.ARGB_4444);
+        Bitmap bmp = Bitmap.createBitmap(spriteWidth, spriteHeight, Bitmap.Config.ARGB_8888);
         Canvas cnv = new Canvas(bmp);
         cnv.setDensity((int) (metrics.xdpi));
         cnv.drawPicture(picture, new Rect(0, 0, spriteWidth, spriteHeight));
@@ -132,7 +132,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         Picture picture = svg.getPicture();
         int spriteWidth = getScaledY(picture.getWidth());
         int spriteHeight = getScaledY(picture.getHeight());
-        Bitmap bmp = Bitmap.createBitmap(spriteWidth, spriteHeight, Bitmap.Config.ARGB_4444);
+        Bitmap bmp = Bitmap.createBitmap(spriteWidth, spriteHeight, Bitmap.Config.ARGB_8888);
         Canvas cnv = new Canvas(bmp);
         cnv.setDensity((int) (metrics.xdpi));
         cnv.drawPicture(picture, new Rect(0, 0, spriteWidth, spriteHeight));
@@ -276,7 +276,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         mCharacterPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mFadeIn = new AlphaAnimation((gameType == FILL_GAME) ? 0f : 0.35f, 1f);
         mTransformation = new Transformation();
-        mFadeIn.setDuration(2000);
+        mFadeIn.setDuration(1000);
         mFadeIn.start();
         mFadeIn.getTransformation(System.currentTimeMillis(), mTransformation);
     }

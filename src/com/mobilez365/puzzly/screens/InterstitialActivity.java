@@ -9,12 +9,13 @@ import com.mobilez365.puzzly.R;
  */
 public class InterstitialActivity extends RestartActivty {
 
-    protected final String AD_UNIT_ID = getResources().getString(R.string.interstitialAdUnitId);
+    protected static String AD_UNIT_ID;
     protected InterstitialAd interstitialAd;
 
     @Override
     public void onResume() {
         super.onResume();
+        AD_UNIT_ID = getResources().getString(R.string.interstitialAdUnitId);
         setupAD();
     }
 

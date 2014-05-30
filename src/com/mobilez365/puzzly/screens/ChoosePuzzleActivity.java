@@ -3,6 +3,7 @@ package com.mobilez365.puzzly.screens;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import com.mobilez365.puzzly.R;
@@ -12,9 +13,12 @@ import com.mobilez365.puzzly.util.ChooseGamePagerAdapter;
 /**
  * Created by andrewtivodar on 28.05.2014.
  */
-public class ChoosePuzzleActivity extends Activity implements View.OnClickListener, ViewPager.OnPageChangeListener{
+public class ChoosePuzzleActivity extends Activity implements View.OnClickListener, ViewPager.OnPageChangeListener {
 
     private ViewPager levelsViewPager;
+    private int maxLevelCount;
+    private int currentLevel;
+    private boolean arrowsShown;
     private int mGameType;
     private ImageButton btnPrevious;
     private ImageButton btnNext;
@@ -27,26 +31,44 @@ public class ChoosePuzzleActivity extends Activity implements View.OnClickListen
         levelsViewPager = (ViewPager) findViewById(R.id.vpMailACP);
         mGameType = getIntent().getIntExtra("type", 0);
         levelsViewPager.setOnPageChangeListener(this);
+        levelsViewPager.setOffscreenPageLimit(3);
+
+        maxLevelCount = AppHelper.getMaxGame(this, mGameType);
+        currentLevel = AppHelper.getCurrentGame(this, mGameType);
 
         btnPrevious = (ImageButton) findViewById(R.id.btnPreviousACP);
         btnNext = (ImageButton) findViewById(R.id.btnNextACP);
         btnNext.setOnClickListener(this);
         btnPrevious.setOnClickListener(this);
+
+        updateLevelsInfo();
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
+
+    private void updateLevelsInfo(){
+        arrowsShown = false;
         btnNext.setVisibility(View.INVISIBLE);
         btnPrevious.setVisibility(View.INVISIBLE);
         levelsAdapter = new ChooseGamePagerAdapter(this, mGameType);
         levelsViewPager.setAdapter(levelsAdapter);
-        if(AppHelper.getNextGame(this, mGameType) != -1)
+        if (AppHelper.getNextGame(this, mGameType) != -1)
             levelsViewPager.setCurrentItem(AppHelper.getCurrentGame(this, mGameType) / 4);
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if(maxLevelCount != AppHelper.getMaxGame(this, mGameType) ||
+                currentLevel != AppHelper.getCurrentGame(this, mGameType)) {
+            updateLevelsInfo();
+            maxLevelCount = AppHelper.getMaxGame(this, mGameType);
+            currentLevel = AppHelper.getCurrentGame(this, mGameType);
+        }
+        levelsAdapter.clickEnable = true;
     }
 
     @Override
     public void onClick(View v) {
+        if(levelsAdapter.clickEnable)
         switch (v.getId()) {
             case R.id.btnPreviousACP:
                 levelsViewPager.setCurrentItem(levelsViewPager.getCurrentItem() - 1);
@@ -59,25 +81,32 @@ public class ChoosePuzzleActivity extends Activity implements View.OnClickListen
 
     @Override
     public void onPageScrolled(int i, float v, int i2) {
-        if(v != 0) {
+        if (v != 0) {
             btnNext.setVisibility(View.INVISIBLE);
             btnPrevious.setVisibility(View.INVISIBLE);
+            levelsAdapter.clickEnable = false;
         }
-        else {
-            if(levelsViewPager.canScrollHorizontally(1))
+        if(!arrowsShown) {
+            if (levelsViewPager.canScrollHorizontally(1))
                 btnNext.setVisibility(View.VISIBLE);
-            if(levelsViewPager.canScrollHorizontally(-1))
+            if (levelsViewPager.canScrollHorizontally(-1))
                 btnPrevious.setVisibility(View.VISIBLE);
+            arrowsShown = true;
         }
     }
 
     @Override
     public void onPageSelected(int i) {
-
     }
 
     @Override
     public void onPageScrollStateChanged(int i) {
-
+        if (i == 0) {
+            if (levelsViewPager.canScrollHorizontally(1))
+                btnNext.setVisibility(View.VISIBLE);
+            if (levelsViewPager.canScrollHorizontally(-1))
+                btnPrevious.setVisibility(View.VISIBLE);
+            levelsAdapter.clickEnable = true;
+        }
     }
 }

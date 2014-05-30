@@ -45,7 +45,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
         AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this).name());
 
         super.onCreate(_savedInstanceState);
-        AppHelper.setDefaultFont(this);
+       // AppHelper.setDefaultFont(this);
 
         if (AppHelper.getBackgroundSound() == null) {
             AppHelper.startBackgroundSound(this, Constans.MENU_BACKGROUND_MUSIC);

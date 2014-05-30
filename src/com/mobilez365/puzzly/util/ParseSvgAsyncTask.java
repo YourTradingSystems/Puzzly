@@ -6,6 +6,7 @@ import android.graphics.Canvas;
 import android.graphics.Picture;
 import android.graphics.Rect;
 import android.os.AsyncTask;
+import android.util.Log;
 import com.larvalabs.svgandroid.SVG;
 import com.larvalabs.svgandroid.SVGParser;
 
@@ -39,14 +40,12 @@ public class ParseSvgAsyncTask extends AsyncTask<String, Void, Bitmap> {
 
     @Override
     protected Bitmap doInBackground(String... params) {
-
         SVG svg = SVGParser.getSVGFromResource(context.getResources(), getResIdFromString(params[0]));
         Picture picture = svg.getPicture();
         int width = (int) ((maxHeight / (float) picture.getHeight()) * picture.getWidth());
         Bitmap bmp = Bitmap.createBitmap(width, maxHeight, Bitmap.Config.ARGB_8888);
         Canvas cnv = new Canvas(bmp);
         cnv.drawPicture(picture, new Rect(0, 0, width, maxHeight));
-
         return bmp;
     }
 
