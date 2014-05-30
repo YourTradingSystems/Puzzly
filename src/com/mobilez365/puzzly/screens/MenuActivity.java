@@ -226,6 +226,40 @@ public class MenuActivity extends Activity implements View.OnClickListener {
         tvGameAchievement_MS.setText("" + _count);
     }
 
+    private final void startGame(int type) {
+
+        AppHelper.startBackgroundSound(this, Constans.GAME_BACKGROUND_MUSIC);
+
+        int passedGame = AppHelper.getPassedGames(this);
+        if (passedGame != 3) {
+            Intent gameIntent = new Intent(this, GameFillActivity.class);
+            gameIntent.putExtra("type", type);
+            startActivity(gameIntent);
+        } else {
+            Random r = new Random();
+            int bonusLevelIndex = r.nextInt(3);
+
+            Activity bonusLevelActivity = null;
+            switch (bonusLevelIndex) {
+                case 0:
+                    bonusLevelActivity = new BonusLevelTreeActivity();
+                    break;
+                case 1:
+                    bonusLevelActivity = new BonusLevelShakeActivity();
+                    break;
+                case 2:
+                    bonusLevelActivity = new BonusLevelFlowerActivity();
+                    break;
+            }
+
+            Intent gameIntent = new Intent(this, bonusLevelActivity.getClass());
+            gameIntent.putExtra("type", type);
+            startActivity(gameIntent);
+        }
+
+    }
+
+
     private final void settings() {
         startActivity(new Intent(this, SettingsActivity.class));
     }

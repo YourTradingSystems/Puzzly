@@ -38,6 +38,9 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
     private GameView gameView;
     private Point displaySize;
 
+    private MediaPlayer mExcellentWord;
+    private MediaPlayer mItemWord;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,8 +76,9 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
         AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this).name());
 
         if (!AppHelper.isAppInBackground(this)) {
-            if (mBackgroundSound != null && !mBackgroundSound.isPlay())
+            if (mBackgroundSound != null && !mBackgroundSound.isPlay()) {
                 mBackgroundSound.pause(false);
+            }
         }
     }
 
@@ -83,8 +87,9 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
         super.onPause();
 
         if (AppHelper.isAppInBackground(this) || AppHelper.isScreenOff(this)) {
-            if (mBackgroundSound != null && mBackgroundSound.isPlay())
+            if (mBackgroundSound != null && mBackgroundSound.isPlay()) {
                 mBackgroundSound.pause(true);
+            }
         }
     }
 
@@ -176,6 +181,8 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
 
             if (AppHelper.getPlaySound(this)) {
                 mPlayer = AppHelper.playSound(this, excellent_word);
+        if (AppHelper.getPlaySound(this) && !isFirsOpenFragment) {
+            mExcellentWord = AppHelper.playSound(this, excellent_word);
 
                 final Activity activity = this;
                 mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
@@ -187,6 +194,21 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
                     }
                 });
             }
+            final Activity activity = this;
+            mExcellentWord.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                @Override
+                public void onCompletion(MediaPlayer mp) {
+                    if (AppHelper.getPlaySound(activity))
+                        mItemWord = AppHelper.playSound(activity, mPuzzleFillGame.getItemName());
+                    mItemWord.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        @Override
+                        public void onCompletion(MediaPlayer mp) {
+                            showArrows();
+                        }
+                    });
+                }
+            });
+            isFirsOpenFragment = true;
         }
     }
 
