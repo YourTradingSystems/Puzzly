@@ -4,9 +4,11 @@ import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Point;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Vibrator;
+import android.view.Display;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.*;
@@ -28,6 +30,7 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
     private int mGameNumber;
     private Vibrator mVibrator;
     private ImageButton nextGame;
+    private ImageButton previousGame;
     private TextView gameText;
     private PuzzleFillGame mPuzzleFillGame;
     private MediaPlayer mPlayer;
@@ -49,9 +52,11 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
 
         mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         nextGame = (ImageButton) findViewById(R.id.btnNextAGF);
+        previousGame = (ImageButton) findViewById(R.id.btnPreviousAGF);
         gameText = (TextView) findViewById(R.id.tvWordAFG);
 
         nextGame.setOnClickListener(this);
+        previousGame.setOnClickListener(this);
     }
 
     @Override
@@ -82,12 +87,14 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
         AppHelper.startBackgroundSound(this, Constans.MENU_BACKGROUND_MUSIC);
     }
 
-    private void switchGame() {
-        int passedGame = AppHelper.getPassedGames(this);
+    private void switchGame(boolean nextGame) {
+        int passedGame = AppHelper.getPassedGames();
         if (passedGame != 3) {
             Intent gameIntent = new Intent(this, GameFillActivity.class);
-            gameIntent.putExtra("type", mGameType);
-            gameIntent.putExtra("gameNumber", AppHelper.getNextGame(this, mGameType));
+            gameIntent.putExtra("type", mGameType); if(nextGame)
+                gameIntent.putExtra("gameNumber", AppHelper.getNextGame(this, mGameType));
+            else
+                gameIntent.putExtra("gameNumber", AppHelper.getPreviousGame(this, mGameType));
             startActivity(gameIntent);
         } else {
             Random r = new Random();
@@ -107,7 +114,10 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
             }
             Intent gameIntent = new Intent(this, bonusLevelActivity.getClass());
             gameIntent.putExtra("type", mGameType);
-            gameIntent.putExtra("gameNumber", AppHelper.getNextGame(this, mGameType));
+            if(nextGame)
+                gameIntent.putExtra("gameNumber", AppHelper.getNextGame(this, mGameType));
+            else
+                gameIntent.putExtra("gameNumber", AppHelper.getPreviousGame(this, mGameType));
             startActivity(gameIntent);
         }
 
@@ -118,11 +128,23 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
         RelativeLayout basketLayout = (RelativeLayout) findViewById(R.id.rlBasketsAFG);
         basketLayout.setVisibility(View.VISIBLE);
 
+        ImageView basket = (ImageView) findViewById(R.id.ivBasketAGF);
         ImageView candy = (ImageView) findViewById(R.id.ivCandyAFG);
-        ObjectAnimator moveYAnimator = ObjectAnimator.ofFloat(candy, "translationY", 0, candy.getHeight());
-        moveYAnimator.setDuration(600);
+
+        ObjectAnimator moveYAnimator = ObjectAnimator.ofFloat(candy, "translationY", candy.getY(), basket.getY() + basket.getHeight() / 2);
+        moveYAnimator.setDuration(1000);
         moveYAnimator.addListener(new AnimationEndListener(candy, this));
         moveYAnimator.start();
+    }
+
+    private void showArrowAnimation(){
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+
+        ObjectAnimator moveXAnimator = ObjectAnimator.ofFloat(gameText, "translationX", gameText.getX(), size.x / 2 - gameText.getWidth() / 2 );
+        moveXAnimator.setDuration(1000);
+        moveXAnimator.start();
     }
 
     @Override
@@ -135,7 +157,7 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
         gameText.setVisibility(View.VISIBLE);
 
         if (!gameIsFinished) {
-            AppHelper.increasePassedGames(this);
+            AppHelper.increasePassedGames();
             AppHelper.setMaxGame(this, mGameNumber + 1, mGameType);
             AppHelper.setGameAchievement(this, AppHelper.getGameAchievement(this) + 1);
             showBasketAnimation();
@@ -180,7 +202,10 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
             nextGame.setClickable(false);
             switch (v.getId()) {
                 case R.id.btnNextAGF:
-                    switchGame();
+                    switchGame(true);
+                    break;
+                case R.id.btnPreviousAGF:
+                    switchGame(false);
                     break;
             }
         }
@@ -188,8 +213,12 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
 
     @Override
     public void OnAnimEnd(View v) {
+        showArrowAnimation();
         if (AppHelper.getNextGame(this, mGameType) != -1)
             nextGame.setVisibility(View.VISIBLE);
+
+        if (mGameNumber != 0)
+            previousGame.setVisibility(View.VISIBLE);
 
         v.setVisibility(View.GONE);
         findViewById(R.id.ivBasketAGF).setVisibility(View.GONE);

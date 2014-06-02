@@ -47,7 +47,6 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements Sha
     private int mScreenWidth;
 
     private RelativeLayout rlContainer_ABLS;
-    private TextView tvAllCandiesPicked;
     private BackgroundSound mBackgroundSound;
     private ImageButton nextGame;
 
@@ -67,11 +66,10 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements Sha
         mShaker = new ShakeSensor(this);
         mShaker.setOnShakeListener(this);
 
-        tvAllCandiesPicked = (TextView) findViewById(R.id.tvAllPickedABS);
         mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         rlContainer_ABLS = (RelativeLayout) findViewById(R.id.rlContainer_ABLS);
 
-        AppHelper.increasePassedGames(this);
+        AppHelper.increasePassedGames();
 
         initCandies();
 
@@ -168,7 +166,6 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements Sha
 
     private void checkAllPicked(){
         if(mCandiesPickedCount == mCandiesCount) {
-            tvAllCandiesPicked.setVisibility(View.VISIBLE);
             nextGame = (ImageButton) findViewById(R.id.btnNextABS);
             nextGame.setVisibility(View.VISIBLE);
             nextGame.setOnClickListener(this);

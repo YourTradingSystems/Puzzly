@@ -200,12 +200,11 @@ public class AppHelper {
 
     public static final int getPreviousGame(Activity _activity, int type) {
         int currentGame = getCurrentGame(_activity, type);
-        int gameCount = PuzzlesDB.getPuzzleGameCount(_activity, type);
         int previousGame;
-        if(getMaxGame(_activity, type) == gameCount && currentGame == 0)
-            previousGame = gameCount - 1;
-        else
+        if(currentGame > 0)
             previousGame = currentGame - 1;
+        else
+            previousGame = -1;
         return previousGame;
     }
 
@@ -244,14 +243,18 @@ public class AppHelper {
             return prefs.getInt(Constans.CURRENT_GAME_REVEAL, 0);
     }
 
-    public static final void increasePassedGames(Activity _activity) {
+    public static final void increasePassedGames() {
         if(passedGame == 3)
             passedGame = 0;
         else
             passedGame++;
     }
 
-    public static final int getPassedGames(Activity _activity) {
+    public static final void resetPassedGames() {
+        passedGame = 0;
+    }
+
+    public static final int getPassedGames() {
         return passedGame;
     }
 

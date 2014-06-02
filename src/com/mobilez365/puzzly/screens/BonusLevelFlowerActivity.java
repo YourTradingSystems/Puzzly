@@ -50,7 +50,6 @@ public class BonusLevelFlowerActivity extends InterstitialActivity implements Sh
     private int mScreenWidth;
 
     private RelativeLayout rlContainer_ABLF;
-    private TextView tvAllCandiesPicked;
     private RelativeLayout candiesLayout;
     private BackgroundSound mBackgroundSound;
     private ImageButton nextGame;
@@ -71,7 +70,6 @@ public class BonusLevelFlowerActivity extends InterstitialActivity implements Sh
         mShaker = new ShakeSensor(this);
         mShaker.setOnShakeListener(this);
 
-        tvAllCandiesPicked = (TextView) findViewById(R.id.tvAllPickedABF);
         mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         candiesLayout = (RelativeLayout) findViewById(R.id.rlCandiesABF);
         rlContainer_ABLF = (RelativeLayout) findViewById(R.id.rlContainer_ABLF);
@@ -80,7 +78,7 @@ public class BonusLevelFlowerActivity extends InterstitialActivity implements Sh
         candiesRotateAnimators = new ArrayList<ObjectAnimator>();
         candiesStatus = new int[mCandiesCount];
 
-        AppHelper.increasePassedGames(this);
+        AppHelper.increasePassedGames();
 
         initFlowers();
         initSun();
@@ -194,7 +192,6 @@ public class BonusLevelFlowerActivity extends InterstitialActivity implements Sh
 
     private void checkAllPicked() {
         if (mCandiesPickedCount == mCandiesCount) {
-            tvAllCandiesPicked.setVisibility(View.VISIBLE);
              nextGame = (ImageButton) findViewById(R.id.btnNextABF);
             nextGame.setVisibility(View.VISIBLE);
             nextGame.setOnClickListener(this);

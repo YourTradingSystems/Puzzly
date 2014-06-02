@@ -30,7 +30,8 @@
                     android:layout_weight="54"
                     android:textSize="26sp"
                     android:gravity="center"
-                    android:layout_gravity="center_vertical"/>
+                    android:layout_gravity="center_vertical"
+                    android:textStyle="bold"/>
 
             <View
                     android:layout_width="match_parent"
@@ -43,7 +44,8 @@
                     android:layout_weight="54"
                     android:textSize="26sp"
                     android:gravity="center"
-                    android:layout_gravity="center_vertical"/>
+                    android:layout_gravity="center_vertical"
+                    android:textStyle="bold"/>
         </LinearLayout>
 
         <LinearLayout
@@ -181,7 +183,8 @@
                     android:layout_weight="54"
                     android:textSize="26sp"
                     android:gravity="center"
-                    android:layout_gravity="center_vertical"/>
+                    android:layout_gravity="center_vertical"
+                    android:textStyle="bold"/>
 
             <View
                     android:layout_width="match_parent"
@@ -194,7 +197,8 @@
                     android:layout_weight="54"
                     android:textSize="26sp"
                     android:gravity="center"
-                    android:layout_gravity="center_vertical"/>
+                    android:layout_gravity="center_vertical"
+                    android:textStyle="bold"/>
         </LinearLayout>
     </LinearLayout>
 

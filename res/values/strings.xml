@@ -4,7 +4,7 @@
 
     <!-- ~~~~~~~~~~~~~~~~~~~ MENU ~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
-    <string name="menu_settings">Settings</string>
+    <string name="menu_settings">SETTINGS</string>
     <string name="menu_back">Back</string>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
@@ -15,18 +15,12 @@
     <string name="settings_play_sound">Sound in game</string>
     <string name="settings_vibrate">Game vibration</string>
     <string name="settings_display_inner_borders">Display inner borders</string>
-    <string name="settings_localize_language">Language</string>
+    <string name="settings_localize_language">LANGUAGE</string>
 
     <string-array name="settings_languages">
         <item>English</item>
         <item>Russian</item>
     </string-array>
-    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
-
-    <!-- ~~~~~~~~~~~~~~~~~~~ BONUS LEVEL SHAKE ~~~~~~~~~~~~~~~~~~~~~~ !-->
-
-    <string name="bonus_shake_all_picked">All candies picked!</string>
-
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
     <!-- ~~~~~~~~~~~~~~~~~~~ GOOGLE MOBILE ADS ~~~~~~~~~~~~~~~~~~~~~~ !-->

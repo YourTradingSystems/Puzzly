@@ -47,7 +47,6 @@ public class BonusLevelTreeActivity extends InterstitialActivity implements Shak
     private List<ObjectAnimator> candiesRotateAnimators;
     private int[] candiesStatus;
     private RelativeLayout candiesLayout;
-    private TextView tvAllCandiesPicked;
     private BackgroundSound mBackgroundSound;
     private ImageButton nextGame;
 
@@ -69,10 +68,9 @@ public class BonusLevelTreeActivity extends InterstitialActivity implements Shak
         mShaker = new ShakeSensor(this);
         mShaker.setOnShakeListener(this);
         mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-        tvAllCandiesPicked = (TextView) findViewById(R.id.tvAllPickedABL);
         rlContainer_ABLT = (RelativeLayout) findViewById(R.id.rlContainer_ABLT);
 
-        AppHelper.increasePassedGames(this);
+        AppHelper.increasePassedGames();
 
         initData();
 
@@ -190,7 +188,6 @@ public class BonusLevelTreeActivity extends InterstitialActivity implements Shak
 
     private void checkAllPicked(){
         if(mCandiesPickedCount == mCandiesCount) {
-            tvAllCandiesPicked.setVisibility(View.VISIBLE);
             nextGame = (ImageButton) findViewById(R.id.btnNextABL);
             nextGame.setVisibility(View.VISIBLE);
             nextGame.setOnClickListener(this);

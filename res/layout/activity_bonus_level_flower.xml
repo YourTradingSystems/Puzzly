@@ -28,19 +28,6 @@
             >
     </RelativeLayout>
 
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/bonus_shake_all_picked"
-            android:id="@+id/tvAllPickedABF"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="10dp"
-            android:textColor="@color/text_color"
-            android:visibility="gone"
-            android:typeface="normal"/>
-
     <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

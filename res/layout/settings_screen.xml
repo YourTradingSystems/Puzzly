@@ -32,7 +32,8 @@
             android:layout_alignTop="@id/btnBack_SS"
             android:layout_alignBottom="@id/btnBack_SS"
             android:text="@string/menu_settings"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:textStyle="bold"/>
 
     </RelativeLayout>
     <LinearLayout
@@ -104,7 +105,8 @@
                     android:layout_height="wrap_content"
                     style="@style/SettingsLanguage"
                     android:text="@string/settings_localize_language"
-                    android:layout_weight="30"/>
+                    android:layout_weight="30"
+                    android:textStyle="bold"/>
 
                 <Spinner
                     android:id="@+id/spinnerChooseCountry_SS"

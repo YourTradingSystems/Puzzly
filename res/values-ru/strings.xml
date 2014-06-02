@@ -4,7 +4,7 @@
 
     <!-- ~~~~~~~~~~~~~~~~~~~ MENU ~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
-    <string name="menu_settings">Настройки</string>
+    <string name="menu_settings">НАСТОЙКИ</string>
     <string name="menu_back">Назад</string>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
@@ -15,18 +15,12 @@
     <string name="settings_play_sound">Воспроизведение игровых звуков</string>
     <string name="settings_vibrate">Вибрация в игре</string>
     <string name="settings_display_inner_borders">Показывать внутренние границы</string>
-    <string name="settings_localize_language">Язык</string>
+    <string name="settings_localize_language">ЯЗЫК</string>
 
     <string-array name="settings_languages">
         <item>Английский</item>
         <item>Русский</item>
     </string-array>
-    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
-
-    <!-- ~~~~~~~~~~~~~~~~~~~ BONUS LEVEL SHAKE ~~~~~~~~~~~~~~~~~~~~~~ !-->
-
-    <string name="bonus_shake_all_picked">Все конфеты собраны!</string>
-
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
 </resources>
