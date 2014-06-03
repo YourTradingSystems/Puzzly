@@ -98,7 +98,7 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
             startActivity(gameIntent);
         } else {
             Random r = new Random();
-            int bonusLevelIndex = r.nextInt(3);
+            int bonusLevelIndex = r.nextInt(4);
 
             Activity bonusLevelActivity = null;
             switch (bonusLevelIndex) {
@@ -110,6 +110,9 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
                     break;
                 case 2:
                     bonusLevelActivity = new BonusLevelFlowerActivity();
+                    break;
+                case 3:
+                    bonusLevelActivity = new BonusLevelHedgehogActivity();
                     break;
             }
             Intent gameIntent = new Intent(this, bonusLevelActivity.getClass());

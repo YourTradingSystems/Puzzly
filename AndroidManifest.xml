@@ -53,6 +53,11 @@
                 android:configChanges="orientation|keyboardHidden|screenSize"/>
 
         <activity
+                android:name=".screens.BonusLevelHedgehogActivity"
+                android:screenOrientation="landscape"
+                android:configChanges="orientation|keyboardHidden|screenSize"/>
+
+        <activity
                 android:name=".screens.GameFillActivity"
                 android:screenOrientation="landscape"
                 android:configChanges="orientation|keyboardHidden|screenSize"/>
