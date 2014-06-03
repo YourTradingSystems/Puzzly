@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
+import com.mobilez365.puzzly.global.Constans;
 import com.mobilez365.puzzly.util.ChooseGamePagerAdapter;
 
 /**

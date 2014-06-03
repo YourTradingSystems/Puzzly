@@ -161,7 +161,7 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
     @Override
     public void onGameFinish() {
 
-        String excellent_words[] = new String[]{"excellent", "well_done"};
+        String excellent_words[] = new String[]{"perfect", "wonderfull", "well_done", "good_job"};
         Random random = new Random();
         String excellent_word = excellent_words[random.nextInt(excellent_words.length)];
 
@@ -180,12 +180,10 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
                 gameText.setText(mPuzzleFillGame.getWordRus());
 
             if (AppHelper.getPlaySound(this)) {
-                mPlayer = AppHelper.playSound(this, excellent_word);
-        if (AppHelper.getPlaySound(this) && !isFirsOpenFragment) {
-            mExcellentWord = AppHelper.playSound(this, excellent_word);
+                mExcellentWord = AppHelper.playSound(this, excellent_word);
 
                 final Activity activity = this;
-                mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                mExcellentWord.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                     @Override
                     public void onCompletion(MediaPlayer mp) {
                         if (AppHelper.getPlaySound(activity)) {
@@ -194,21 +192,6 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
                     }
                 });
             }
-            final Activity activity = this;
-            mExcellentWord.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                @Override
-                public void onCompletion(MediaPlayer mp) {
-                    if (AppHelper.getPlaySound(activity))
-                        mItemWord = AppHelper.playSound(activity, mPuzzleFillGame.getItemName());
-                    mItemWord.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                        @Override
-                        public void onCompletion(MediaPlayer mp) {
-                            showArrows();
-                        }
-                    });
-                }
-            });
-            isFirsOpenFragment = true;
         }
     }
 

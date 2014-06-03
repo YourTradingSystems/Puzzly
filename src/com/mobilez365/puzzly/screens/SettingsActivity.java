@@ -147,7 +147,7 @@ public class SettingsActivity extends RestartActivty implements View.OnClickList
                 break;
             case 1:
                 SADView sadView = new SADView(this, getResources().getString(R.string.startADId));
-                LinearLayout layout = (LinearLayout)findViewById(R.id.llBanner);
+                LinearLayout layout = (LinearLayout)findViewById(R.id.llBanner_SS);
                 layout.addView(sadView);
                 sadView.loadAd(SADView.LANGUAGE_EN);
                 break;

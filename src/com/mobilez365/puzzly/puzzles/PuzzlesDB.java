@@ -35,7 +35,7 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
             cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Ice cream");
             cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Мороженое");
-            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "icecream");
+            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "ice_cream");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "18 18");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "5 167");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "20 170");
@@ -63,7 +63,7 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
             cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Frogling");
             cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Лягушонок");
-            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "toad");
+            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "frogling");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "2 152");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "176 17");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "20 30");
@@ -77,7 +77,7 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
             cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Pigeon");
             cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Голубь");
-            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "dove");
+            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "pigeon");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "22 94 116");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "132 78 9");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "20 170 20");
@@ -91,7 +91,7 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
             cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Piggy");
             cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Поросенок");
-            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "pig");
+            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "piggy");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "2 71 231");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "49 2 19");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "150 30 35");
@@ -133,7 +133,7 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
             cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Hen");
             cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Курочка");
-            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "chicken");
+            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "hen");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "6 142 227");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "46 122 15");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "190 15 40");
@@ -147,7 +147,7 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
             cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Teddy-bear");
             cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Медвежонок");
-            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "bear");
+            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "teddy_bear");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "14 17 15");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "9 115 232");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "55 169 75");
@@ -349,7 +349,7 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_TYPE, "1");
             cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Fingerling");
             cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Рыбка");
-            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "fish");
+            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "fingerling");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "178 10000 10000 10000");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "29 10000 10000 10000");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "220 60 220 30");
@@ -601,7 +601,7 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_TYPE, "1");
             cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Pot with honey");
             cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Горшочек с медом");
-            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "pot");
+            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "pot_with_honey");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "52 10000 10000 10000");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "8 10000 10000 10000");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "60 77 260 275");

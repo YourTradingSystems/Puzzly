@@ -226,11 +226,11 @@ public class MenuActivity extends Activity implements View.OnClickListener {
         tvGameAchievement_MS.setText("" + _count);
     }
 
-    private final void startGame(int type) {
+    /*private final void startGame(int type) {
 
         AppHelper.startBackgroundSound(this, Constans.GAME_BACKGROUND_MUSIC);
 
-        int passedGame = AppHelper.getPassedGames(this);
+        int passedGame = AppHelper.getPassedGames();
         if (passedGame != 3) {
             Intent gameIntent = new Intent(this, GameFillActivity.class);
             gameIntent.putExtra("type", type);
@@ -257,7 +257,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
             startActivity(gameIntent);
         }
 
-    }
+    }*/
 
 
     private final void settings() {
@@ -273,7 +273,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
                 break;
             case 1:
                 SADView sadView = new SADView(this, getResources().getString(R.string.startADId));
-                LinearLayout layout = (LinearLayout)findViewById(R.id.llBanner);
+                LinearLayout layout = (LinearLayout)findViewById(R.id.llBanner_SS);
                 layout.addView(sadView);
                 sadView.loadAd(SADView.LANGUAGE_EN);
                 break;

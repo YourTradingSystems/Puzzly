@@ -36,7 +36,8 @@ public class AppHelper {
 
     public static enum Languages {
         eng,
-        rus
+        rus,
+        hi
     }
 
     public static void setDefaultFont(Context context) {
@@ -86,6 +87,9 @@ public class AppHelper {
 
             case 1:
                 return Languages.rus;
+
+            case 2:
+                return Languages.hi;
         }
 
         return Languages.eng;
@@ -162,8 +166,8 @@ public class AppHelper {
             }
 
         mBackgroundSound = new BackgroundSound(_activity, _name);
-/*        if (!mBackgroundSound.isInit() && AppHelper.getPlayBackgroundMusic(_activity))
-            mBackgroundSound.execute(null);*/
+        if (!mBackgroundSound.isInit() && AppHelper.getPlayBackgroundMusic(_activity))
+            mBackgroundSound.execute(null);
     }
 
     public static final void stopBackgroundSound() {

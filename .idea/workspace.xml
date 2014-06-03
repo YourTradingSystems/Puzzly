@@ -43,12 +43,262 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a79d8431-a31c-4800-9f13-431b5a1f9d4a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/apple.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/backpack.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/backpack.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/backpack.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/banan.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/baseball_cap.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/baseball_cap.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/baseball_cap.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/bee.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/beet.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/beet.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/beet.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/bread.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/bread.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/bread.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/cancer.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/cancer.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/cancer.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/car.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/car.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/car.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/carrot.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/cock.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/cock.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/cock.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/computer_chair.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/computer_chair.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/computer_chair.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/corn.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/corn.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/corn.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/crab.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/crab.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/crab.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/dolphin.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/eggplant.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/eggplant.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/eggplant.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/elephant.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/fingerling.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/fingerling.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/flamingo.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/frogling.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/frogling.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/giraffe.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/goat.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/good_job.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/good_job.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/good_job.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/hamburger.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/hamburger.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/hamburger.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/hen.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/hen.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/hippo.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/ice_cream.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/ice_cream.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/jug_with_milk.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/jug_with_milk.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/jug_with_milk.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/kettle.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/kettle.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/kettle.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/key.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/key.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/key.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/lamb.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/lightbulb.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/lightbulb.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/lightbulb.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/lion.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/monkey.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/mushrooms.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/mushrooms.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/mushrooms.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/octopus.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/owl.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/peas.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/peas.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/peas.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/pencil.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/penguin.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/pepper.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/pepper.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/pepper.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/perfect.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/perfect.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/perfect.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/pigeon.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/pigeon.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/piggy.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/piggy.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/pot_with_honey.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/pot_with_honey.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/pot_with_honey.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/potato.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/potato.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/potato.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/pumpkin.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/pumpkin.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/rabbit.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/scrambled_eggs.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/scrambled_eggs.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/scrambled_eggs.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/shuttlecocks.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/shuttlecocks.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/shuttlecocks.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/snail.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/snake.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/soother.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/soother.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/soother.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/squirrel.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/stapler.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/stapler.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/stapler.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/stork.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/stork.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/stork.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/strawberries.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/strawberries.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/strawberries.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/teddy_bear.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/teddy_bear.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/toucan.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/train.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/train.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/train.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/turtle.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/umbrella.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/umbrella.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/umbrella.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/wagon.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/well_done.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/wizard_hat.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/wizard_hat.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/wizard_hat.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/wonderfull.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/wonderfull.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/wonderfull.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/yacht.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/yacht.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/yacht.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/zebra.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/fingerling0.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/fingerling1.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/fingerling2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/fingerling3.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/fingerling_gray.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/fingerling_result.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/frogling0.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/frogling1.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/frogling_bordered.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/frogling_gray.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/frogling_result.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/hen0.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/hen1.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/hen2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/hen_bordered.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/hen_gray.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/hen_result.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/ice_cream0.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/ice_cream1.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/ice_cream_bordered.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/ice_cream_gray.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/ice_cream_result.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/pigeon0.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/pigeon1.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/pigeon2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/pigeon_bordered.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/pigeon_gray.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/pigeon_result.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/piggy0.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/piggy1.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/piggy2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/piggy_bordered.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/piggy_gray.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/piggy_result.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/pot_with_honey0.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/pot_with_honey1.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/pot_with_honey2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/pot_with_honey3.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/pot_with_honey_gray.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/pot_with_honey_result.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values-hi/strings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/teddy_bear0.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/teddy_bear1.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/teddy_bear2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/teddy_bear_bordered.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/teddy_bear_gray.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/teddy_bear_result.svg" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw-ru\bear.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw-ru\chicken.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw-ru\dove.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw-ru\fish.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw-ru\icecream.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw-ru\pig.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw-ru\toad.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\bear0.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\bear1.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\bear2.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\bear_bordered.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\bear_gray.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\bear_result.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\chicken0.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\chicken1.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\chicken2.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\chicken_bordered.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\chicken_gray.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\chicken_result.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\cochlea.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\dove0.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\dove1.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\dove2.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\dove_bordered.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\dove_gray.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\dove_result.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\fish0.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\fish1.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\fish2.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\fish3.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\fish_gray.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\fish_result.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\icecream.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\icecream0.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\icecream1.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\icecream_bordered.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\icecream_gray.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\icecream_result.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\pig0.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\pig1.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\pig2.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\pig_bordered.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\pig_gray.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\pig_result.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\pot0.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\pot1.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\pot2.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\pot3.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\pot_gray.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\pot_result.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\toad0.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\toad1.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\toad_bordered.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\toad_gray.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\workspace\Puzzly\res\raw\toad_result.svg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/global/AppHelper.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/global/AppHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/ChoosePuzzleActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/ChoosePuzzleActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDB.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDB.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/menu_screen.xml" afterPath="$PROJECT_DIR$/res/layout/menu_screen.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/settings_screen.xml" afterPath="$PROJECT_DIR$/res/layout/settings_screen.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/styles_settings.xml" afterPath="$PROJECT_DIR$/res/values/styles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-ru/strings.xml" afterPath="$PROJECT_DIR$/res/values-ru/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path=".idea/workspace.xml" />
@@ -126,21 +376,6 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java" line="43" class="com.mobilez365.puzzly.screens.GameFillActivity" package="com.mobilez365.puzzly.screens">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
     </line_breakpoints>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
@@ -152,49 +387,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MenuActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MenuActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="0" selection-start="1445" selection-end="1445" vertical-scroll-proportion="0.26862302" vertical-offset="238" max-vertical-offset="4335">
-              <folding />
+            <state line="37" column="0" selection-start="1334" selection-end="1540" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="4590">
+              <folding>
+                <element signature="e#10372#10416#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings_screen.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/settings_screen.xml">
+      <file leaf-file-name="ChoosePuzzleActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/ChoosePuzzleActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="29" selection-start="1111" selection-end="1111" vertical-scroll-proportion="-0.0" vertical-offset="510" max-vertical-offset="2108">
+            <state line="28" column="43" selection-start="954" selection-end="954" vertical-scroll-proportion="0.0" vertical-offset="231" max-vertical-offset="1870">
               <folding />
             </state>
           </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
         </entry>
       </file>
-      <file leaf-file-name="styles.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
+      <file leaf-file-name="PuzzlesDB.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="12" selection-start="483" selection-end="483" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+            <state line="639" column="17" selection-start="38886" selection-end="38886" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="12835">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameFillActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="45" selection-start="2962" selection-end="2962" vertical-scroll-proportion="0.0" vertical-offset="1445" max-vertical-offset="3604">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppHelper.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="AppHelper.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/global/AppHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="48" selection-start="1282" selection-end="1291" vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="5967">
+            <state line="85" column="27" selection-start="2874" selection-end="2874" vertical-scroll-proportion="0.9404255" vertical-offset="867" max-vertical-offset="6069">
               <folding />
             </state>
           </provider>
@@ -235,9 +460,6 @@
         <option value="$PROJECT_DIR$/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/customViews/ColorsCheckBox.java" />
         <option value="$PROJECT_DIR$/res/values/dimens.xml" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDB.java" />
-        <option value="$PROJECT_DIR$/res/values-ru/strings.xml" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/util/BackgroundSound.java" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/customViews/GameView.java" />
@@ -246,12 +468,17 @@
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelTreeActivity.java" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelShakeActivity.java" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelFlowerActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/global/AppHelper.java" />
         <option value="$PROJECT_DIR$/res/values/styles_settings.xml" />
-        <option value="$PROJECT_DIR$/res/layout/settings_screen.xml" />
         <option value="$PROJECT_DIR$/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/res/layout/settings_screen.xml" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/ChoosePuzzleActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDB.java" />
+        <option value="$PROJECT_DIR$/res/values-ru/strings.xml" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/res/values-hi/strings.xml" />
+        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/global/AppHelper.java" />
       </list>
     </option>
   </component>
@@ -287,7 +514,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -445,6 +671,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="values-hi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Puzzly" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Puzzly" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="values" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -473,30 +717,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Puzzly" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Puzzly" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="libs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -536,11 +763,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Denis\workspace\Puzzly\res" />
       <recent name="C:\Users\Denis\workspace\Puzzly\res\anim" />
       <recent name="C:\Users\Denis\workspace\Puzzly\res\drawable-hdpi" />
       <recent name="C:\Users\Denis\workspace\Puzzly\res\raw" />
       <recent name="D:\git\Puzzly\res\raw" />
-      <recent name="C:\Users\Denis\workspace\Puzzly\res\raw-ru" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.mobilez365.puzzly" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Denis\workspace\Puzzly\res\raw" />
@@ -548,9 +778,6 @@
       <recent name="C:\Users\Denis\workspace\Puzzly\res\drawable-hdpi" />
       <recent name="C:\Users\Denis\workspace\Puzzly\src\com\mobilez365\puzzly" />
       <recent name="C:\Users\Denis\workspace\Puzzly\res\layout" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.mobilez365.puzzly" />
     </key>
   </component>
   <component name="RunManager" selected="Android Application.Puzzly">
@@ -582,6 +809,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -607,19 +847,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -798,7 +1025,11 @@
       <created>1401265451258</created>
       <updated>1401265451258</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="change game text font to default">
+      <created>1401445214489</created>
+      <updated>1401445214489</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -826,7 +1057,7 @@
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.6731302" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2337043" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.58505565" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.6731302" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31969696" sideWeight="0.7097222" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -836,7 +1067,8 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23863636" sideWeight="0.42391303" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290938" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3481717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32114467" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2607313" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32686982" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.6731302" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -852,7 +1084,6 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32591414" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32114467" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -860,11 +1091,11 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33863276" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32686982" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23333333" sideWeight="0.6805556" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
@@ -882,8 +1113,8 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32216907" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.354067" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.6731302" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -919,7 +1150,8 @@
     <MESSAGE value="change the settings&#10;fix bug with localization&#10;fix bug with background music&#10;" />
     <MESSAGE value="fix tutorial bug&#10;fix hand tutorial bug&#10;add sound to new items" />
     <MESSAGE value="fix tutorial bug&#10;fix hand tutorial bug&#10;fix language bug&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix tutorial bug&#10;fix hand tutorial bug&#10;fix language bug&#10;" />
+    <MESSAGE value="change game text font to default" />
+    <option name="LAST_COMMIT_MESSAGE" value="change game text font to default" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -929,21 +1161,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/raw/pig2.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="24" selection-start="741" selection-end="741" vertical-scroll-proportion="0.30769232" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/raw/carrot_result.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzleFillGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="29" selection-start="922" selection-end="922" vertical-scroll-proportion="0.33259425" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/GameSprite.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="11" selection-start="668" selection-end="668" vertical-scroll-proportion="0.33189654" vertical-offset="0" max-vertical-offset="0" />
@@ -1040,20 +1257,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1156" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="47" selection-start="642" selection-end="642" vertical-scroll-proportion="0.6157518" vertical-offset="14" max-vertical-offset="714">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values-ru/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="31" selection-start="805" selection-end="805" vertical-scroll-proportion="0.7708831" vertical-offset="0" max-vertical-offset="646">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/values/dimens.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="17" selection-start="366" selection-end="366" vertical-scroll-proportion="0.10739857" vertical-offset="244" max-vertical-offset="816">
@@ -1066,7 +1269,6 @@
         <state line="9" column="22" selection-start="372" selection-end="372" vertical-scroll-proportion="0.4015748" vertical-offset="0" max-vertical-offset="1887">
           <folding>
             <element signature="tag#LinearLayout#0;tag#RelativeLayout#0" expanded="false" />
-            <element signature="tag#RelativeLayout#0;tag#RelativeLayout#0;tag#LinearLayout#1;tag#RelativeLayout#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1077,9 +1279,7 @@
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="49" selection-start="1036" selection-end="1036" vertical-scroll-proportion="0.0" vertical-offset="194" max-vertical-offset="1088">
-          <folding>
-            <element signature="e#626#644#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1135,28 +1335,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="456" column="27" selection-start="26919" selection-end="26919" vertical-scroll-proportion="0.0" vertical-offset="7422" max-vertical-offset="9877">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/customViews/GameView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="151" column="0" selection-start="5862" selection-end="5862" vertical-scroll-proportion="-0.827027" vertical-offset="2567" max-vertical-offset="4403">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/util/GameLoopThread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="0" selection-start="895" selection-end="895" vertical-scroll-proportion="-0.1775457" vertical-offset="544" max-vertical-offset="986" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/util/BackgroundSound.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="0" selection-start="947" selection-end="947" vertical-scroll-proportion="-0.06527415" vertical-offset="586" max-vertical-offset="969" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/activity_bonus_level_flower.xml">
@@ -1167,11 +1348,6 @@
       </provider>
       <provider editor-type-id="android-designer">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-19/android/app/Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3593" column="16" selection-start="153566" selection-end="153566" vertical-scroll-proportion="0.33159268" vertical-offset="59220" max-vertical-offset="90814" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/InterstitialActivity.java">
@@ -1202,20 +1378,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelFlowerActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="8" selection-start="2054" selection-end="2054" vertical-scroll-proportion="0.38108107" vertical-offset="420" max-vertical-offset="4284">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="22" selection-start="2763" selection-end="2763" vertical-scroll-proportion="0.37597913" vertical-offset="1080" max-vertical-offset="2431">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/values/styles_settings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="58" selection-start="570" selection-end="570" vertical-scroll-proportion="0.42713568" vertical-offset="0" max-vertical-offset="425">
@@ -1223,40 +1385,128 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelFlowerActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="8" selection-start="2001" selection-end="2001" vertical-scroll-proportion="0.152809" vertical-offset="493" max-vertical-offset="4369">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-19/android/app/Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3593" column="16" selection-start="153566" selection-end="153566" vertical-scroll-proportion="0.33333334" vertical-offset="59195" max-vertical-offset="90814" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="12" selection-start="483" selection-end="483" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+        <state line="10" column="12" selection-start="483" selection-end="483" vertical-scroll-proportion="0.25438598" vertical-offset="54" max-vertical-offset="510">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/settings_screen.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="29" selection-start="1111" selection-end="1111" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="2108">
-          <folding />
+        <state line="39" column="27" selection-start="1420" selection-end="1420" vertical-scroll-proportion="0.5907591" vertical-offset="484" max-vertical-offset="2227">
+          <folding>
+            <element signature="e#1252#1275#0" expanded="true" />
+            <element signature="e#1879#1897#0" expanded="true" />
+            <element signature="e#2511#2547#0" expanded="true" />
+            <element signature="e#3523#3563#0" expanded="true" />
+            <element signature="e#3931#3960#0" expanded="true" />
+            <element signature="e#4316#4342#0" expanded="true" />
+            <element signature="e#4708#4748#0" expanded="true" />
+          </folding>
         </state>
       </provider>
       <provider editor-type-id="android-designer">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/global/AppHelper.java">
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="48" selection-start="1282" selection-end="1291" vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="5967">
+        <state line="147" column="19" selection-start="5120" selection-end="5120" vertical-scroll-proportion="0.0" vertical-offset="2288" max-vertical-offset="2618">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/util/BackgroundSound.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="45" selection-start="2962" selection-end="2962" vertical-scroll-proportion="0.0" vertical-offset="666" max-vertical-offset="3706">
+        <state line="20" column="11" selection-start="494" selection-end="494" vertical-scroll-proportion="-0.13414635" vertical-offset="299" max-vertical-offset="969">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="0" selection-start="1445" selection-end="1445" vertical-scroll-proportion="0.26862302" vertical-offset="238" max-vertical-offset="4335">
+        <state line="37" column="0" selection-start="1334" selection-end="1540" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="4590">
+          <folding>
+            <element signature="e#10372#10416#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/ChoosePuzzleActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="43" selection-start="954" selection-end="954" vertical-scroll-proportion="0.0" vertical-offset="231" max-vertical-offset="1870">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="163" column="96" selection-start="6091" selection-end="6091" vertical-scroll-proportion="0.0" vertical-offset="2456" max-vertical-offset="3808">
+          <folding>
+            <element signature="e#7100#7453#0" expanded="true" />
+            <element signature="e#7434#7435#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-ru/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="39" selection-start="812" selection-end="812" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="19" selection-start="858" selection-end="863" vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-hi/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="36" selection-start="624" selection-end="624" vertical-scroll-proportion="0.61959" vertical-offset="0" max-vertical-offset="561">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/util/ParseSvgAsyncTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="18" selection-start="1030" selection-end="1030" vertical-scroll-proportion="0.28929386" vertical-offset="400" max-vertical-offset="1003">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/customViews/GameView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="102" column="79" selection-start="3536" selection-end="3536" vertical-scroll-proportion="0.039906103" vertical-offset="1394" max-vertical-offset="5083">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="639" column="17" selection-start="38886" selection-end="38886" vertical-scroll-proportion="0.0" vertical-offset="10608" max-vertical-offset="12835">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/global/AppHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="27" selection-start="2874" selection-end="2874" vertical-scroll-proportion="0.9404255" vertical-offset="867" max-vertical-offset="6069">
           <folding />
         </state>
       </provider>

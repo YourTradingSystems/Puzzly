@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Puzzly</string>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~ MENU ~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <string name="menu_settings">सैटिंग्स</string>
+    <string name="menu_back">वापस</string>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~ SETTINGS ~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <string name="settings_play_background_music">पृष्ठभूमि संगीत खेलो</string>
+    <string name="settings_play_sound">खेल में ध्वनि</string>
+    <string name="settings_vibrate">खेल कंपन</string>
+    <string name="settings_display_inner_borders">आंतरिक सीमाओं प्रदर्शित</string>
+    <string name="settings_localize_language">भाषा</string>
+
+    <string-array name="settings_languages">
+        <item>अंग्रेज़ी</item>
+        <item>रूसी</item>
+        <item>हिंदी</item>
+    </string-array>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+</resources>
