@@ -37,11 +37,11 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity implements 
     private List<ImageView> bigCandiesList;
     private int mScreenHeight;
 
-    private RelativeLayout rlContainer_ABLH;
+  //  private RelativeLayout rlContainer_ABLH;
     private BackgroundSound mBackgroundSound;
     private ImageButton nextGame;
 
-    private VideoView mTutorial;
+   // private VideoView mTutorial;
 
     public void onCreate(Bundle savedInstanceState) {
         AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this).name());
@@ -54,7 +54,7 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity implements 
         mGameType = getIntent().getIntExtra("type", 0);
         mGameNumber = getIntent().getIntExtra("gameNumber", 0);
 
-        rlContainer_ABLH = (RelativeLayout) findViewById(R.id.rlContainer_ABLH);
+       // rlContainer_ABLH = (RelativeLayout) findViewById(R.id.rlContainer_ABLH);
 
         smallCandiesList = new ArrayList<ImageView>();
         bigCandiesList = new ArrayList<ImageView>();
@@ -64,8 +64,8 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity implements 
         bigHedgehog = (ImageView) findViewById(R.id.ivHedgehogBigABH);
         bigHedgehog.getViewTreeObserver().addOnGlobalLayoutListener(this);
 
-        if (!AppHelper.getBonusFlower(this))
-            mTutorial = AppHelper.showVideoTutorial(this, rlContainer_ABLH);
+       // if (!AppHelper.getBonusFlower(this))
+        //    mTutorial = AppHelper.showVideoTutorial(this, rlContainer_ABLH);
     }
 
     private void initCandies() {
@@ -194,8 +194,8 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity implements 
                 mBackgroundSound.pause(false);
         }
 
-        if (mTutorial != null)
-            mTutorial.start();
+     //   if (mTutorial != null)
+     //       mTutorial.start();
 
         if (nextGame != null) nextGame.setClickable(true);
     }
@@ -208,8 +208,8 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity implements 
             if (mBackgroundSound != null && mBackgroundSound.isPlay())
                 mBackgroundSound.pause(true);
 
-            if (mTutorial != null)
-                mTutorial.stopPlayback();
+          //  if (mTutorial != null)
+          //      mTutorial.stopPlayback();
         }
     }
 

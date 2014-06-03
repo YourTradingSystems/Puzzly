@@ -1,10 +1,10 @@
 package com.mobilez365.puzzly.customViews;
 
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.*;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.*;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
@@ -48,10 +48,9 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
     private Animation mFadeIn;
     private Transformation mTransformation;
     private long count;
-    private int finalShapeWidth;
-    private int finalShapeHeight;
     private Bitmap movedShape;
-    private boolean moveToCenter = true;
+    private boolean moveToCenter = false;
+    private int newCenteredFigureHeight;
 
     public interface GameCallBacks {
         public void onGameFinish();
@@ -69,7 +68,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         this.puzzleFillGame = puzzleFillGame;
         this.listener = listener;
         this.parts = puzzleFillGame.getParts();
-        gameLoopThread = new GameLoopThread(this, listener);
+        gameLoopThread = new GameLoopThread(this);
         SurfaceHolder holder = getHolder();
         setFocusable(true);
         holder.addCallback(this);
@@ -159,39 +158,41 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
             }
         }
         if (gameOver) {
-           if(gameType == REVEAL_GAME){
-               synchronized (this) {
-               for (GameSprite spr : sprites) {
-                   if (spr.isPieceLocked()) canvas.drawBitmap(spr.bmp, spr.lockedX, spr.lockedY, mCharacterPaint);
-               }
-           }   }
-                    if (mFadeIn != null && mFadeIn.hasStarted() && !mFadeIn.hasEnded()) {
-                        mFadeIn.getTransformation(System.currentTimeMillis(), mTransformation);
-                        mCharacterPaint.setAlpha((int) (255 * mTransformation.getAlpha()));
-                        canvas.drawBitmap(shape, figurePosX, figurePosY, mCharacterPaint);
-                    } else if (mFadeIn != null && mFadeIn.hasEnded()) {
-                        for (GameSprite spr : sprites) {
-                            spr = null;
-                        }
-                        sprites.clear();
-                        //final move shape to center 
-                        if(moveToCenter){
-                        if (count == GameLoopThread.FPS) end = gameOver;
-                        double k = (1 - (double) count / GameLoopThread.FPS);
-                        double kF = 0.5;
-
-                        int finalFugureWidth = (int)Math.round(shape.getWidth() * (kF + k * (1-kF)));
-                        int finalFugureHeight = (int)Math.round(shape.getHeight() * (kF + k * (1-kF)));
-                        double centerX = svgBackgroundWidth / 2 - finalFugureWidth / 2;
-                        double centerY = svgBackgroundHeight / 2 - finalFugureHeight / 2;
-                        int finalFigurePosX = (int) Math.round(centerX + (figurePosX - centerX ) * k);
-                        Log.d("final", ""+(figurePosY - centerY ) * (k));
-                        int finalFigurePosY = (int) Math.round(centerY + (figurePosY - centerY ) * k);
-                        movedShape = Bitmap.createScaledBitmap(shape, finalFugureWidth, finalFugureHeight, true);
-                        canvas.drawBitmap(movedShape, finalFigurePosX, finalFigurePosY, mCharacterPaint);
-                        count++;
-                        }
+            if (gameType == REVEAL_GAME) {
+                synchronized (this) {
+                    for (GameSprite spr : sprites) {
+                        if (spr.isPieceLocked()) canvas.drawBitmap(spr.bmp, spr.lockedX, spr.lockedY, mCharacterPaint);
                     }
+                }
+            }
+            if (mFadeIn != null && mFadeIn.hasStarted() && !mFadeIn.hasEnded()) {
+                mFadeIn.getTransformation(System.currentTimeMillis(), mTransformation);
+                mCharacterPaint.setAlpha((int) (255 * mTransformation.getAlpha()));
+                canvas.drawBitmap(shape, figurePosX, figurePosY, mCharacterPaint);
+            } else if (mFadeIn != null && mFadeIn.hasEnded()) {
+                for (GameSprite spr : sprites) {
+                    spr = null;
+                }
+                sprites.clear();
+                //final move shape to center
+                if (moveToCenter) {
+                    if (count == GameLoopThread.FPS / 2) end = gameOver;
+                    double k = (1 - (double) count / GameLoopThread.FPS * 2);
+                    double kF = newCenteredFigureHeight / (double) shape.getHeight();
+                    if(kF > 1)
+                        kF = 1;
+
+                    int finalFugureWidth = (int) Math.round(shape.getWidth() * (kF + k * (1 - kF)));
+                    int finalFugureHeight = (int) Math.round(shape.getHeight() * (kF + k * (1 - kF)));
+                    double centerX = getScaledX(svgBackgroundWidth) / 2 - finalFugureWidth / 2;
+                    double centerY = getScaledY(svgBackgroundHeight) / 2 - finalFugureHeight / 2;
+                    int finalFigurePosX = (int) Math.round(centerX + (figurePosX - centerX) * k);
+                    int finalFigurePosY = (int) Math.round(centerY + (figurePosY - centerY) * k);
+                    movedShape = Bitmap.createScaledBitmap(shape, finalFugureWidth, finalFugureHeight, true);
+                    canvas.drawBitmap(movedShape, finalFigurePosX, finalFigurePosY, mCharacterPaint);
+                    count++;
+                } else canvas.drawBitmap(shape, figurePosX, figurePosY, mCharacterPaint);
+            }
         }
     }
 
@@ -229,26 +230,32 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                         sprite.setPieceLocked(true);
                         listener.onPartsLock();
                         //check end of game
-                            synchronized (this) {
-                                gameOver = true;
-                                switch (gameType) {
-                                    case FILL_GAME:
-                                        for (GameSprite spr : sprites) {
-                                            if (!spr.isPieceLocked()) {
-                                                gameOver = false;
-                                                break;
-                                            }
+                        synchronized (this) {
+                            gameOver = true;
+                            switch (gameType) {
+                                case FILL_GAME:
+                                    for (GameSprite spr : sprites) {
+                                        if (!spr.isPieceLocked()) {
+                                            gameOver = false;
+                                            break;
                                         }
-                                        break;
-                                    case REVEAL_GAME:
-                                        gameOver = true;
-                                        break;
-                                }
-                                if (gameOver) {
-                                    createFigure(puzzleFillGame.getResultImage());
-                                    fade();
-                                }
+                                    }
+                                    break;
+                                case REVEAL_GAME:
+                                    gameOver = true;
+                                    break;
                             }
+                            if (gameOver) {
+                                createFigure(puzzleFillGame.getResultImage());
+                                fade();
+                                ((Activity)listener).runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        listener.onGameFinish();
+                                    }
+                                });
+                            }
+                        }
                     }
                     break;
                 }
@@ -258,6 +265,11 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                 break;
         }
         return true;
+    }
+
+    public void moveFigureToCenter(int newHeight) {
+        moveToCenter = true;
+        newCenteredFigureHeight = newHeight;
     }
 
     public boolean isEnd() {
@@ -280,7 +292,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
         if (gameLoopThread.getState() == Thread.State.TERMINATED) {
-            gameLoopThread = new GameLoopThread(GameView.this, listener);
+            gameLoopThread = new GameLoopThread(GameView.this);
         }
         gameLoopThread.setRunning(true);
         gameLoopThread.start();

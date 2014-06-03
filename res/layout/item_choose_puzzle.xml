@@ -31,7 +31,8 @@
                     android:textSize="26sp"
                     android:gravity="center"
                     android:layout_gravity="center_vertical"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    android:singleLine="true"/>
 
             <View
                     android:layout_width="match_parent"
@@ -45,7 +46,8 @@
                     android:textSize="26sp"
                     android:gravity="center"
                     android:layout_gravity="center_vertical"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    android:singleLine="true"/>
         </LinearLayout>
 
         <LinearLayout
@@ -184,7 +186,8 @@
                     android:textSize="26sp"
                     android:gravity="center"
                     android:layout_gravity="center_vertical"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    android:singleLine="true"/>
 
             <View
                     android:layout_width="match_parent"
@@ -198,7 +201,8 @@
                     android:textSize="26sp"
                     android:gravity="center"
                     android:layout_gravity="center_vertical"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    android:singleLine="true"/>
         </LinearLayout>
     </LinearLayout>
 

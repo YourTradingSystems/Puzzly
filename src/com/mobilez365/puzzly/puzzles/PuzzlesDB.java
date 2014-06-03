@@ -171,13 +171,12 @@ public class PuzzlesDB {
 
             findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
 
-            cv = new ContentValues();
             cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
             cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Snake");
             cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Змея");
             cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "snake");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "87 15 158");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "16 154 156");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "80 8 151");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "8 147 148");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "70 70 210");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "110 290 70");
             cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "425");
@@ -238,6 +237,97 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "310 26 215");
             cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "490");
             cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "80");
+
+            findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
+
+            cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
+            cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Kettle");
+            cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Чайник");
+            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "kettle");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "132 8 85 142 268 124");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "8 73 67 93 70 218");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "270 28 40 150 260 270");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "367 100 300 95 100 367");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "420");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "120");
+
+            findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
+
+            cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
+            cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Сar");
+            cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Машина");
+            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "car");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "77 100 206 272 11 121 201 201 349 8 43 263 273");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "8 20 18 24 72 72 70 72 90 125 135 125 135");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "75 107 213 19 15 253 191 45 139 16 35 190 238");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "50 124 104 80 228 285 217 346 233 321 145 167 390");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "385");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "140");
+
+            findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
+
+            cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
+            cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Baseball Cap");
+            cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Бейсболка");
+            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "baseball_cap");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "92 132 209 77 130 242 8");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "17 8 16 68 88 88 136");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "145 90 295 30 250 225 80");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "205 313 195 200 360 252 85");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "455");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "135");
+
+            findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
+
+            cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
+            cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Beet");
+            cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Свекла");
+            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "beet");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "217 233 252 101 91 19");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "8 53 97 81 123 221");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "280 286 40 63 63 228");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "311 90 244 323 75 188");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "435");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "70");
+
+            findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
+
+            cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
+            cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Bread");
+            cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Хлеб");
+            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "bread");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "84 90 11 8 70");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "8 92 151 100 101");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "55 16 226 135 217");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "148 272 300 82 40");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "480");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "90");
+
+            findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
+
+            cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
+            cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Crab");
+            cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Краб");
+            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "crab");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "106 8 75 180 185 81 180");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "66 8 109 105 10 195 195");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "40 215 210 155 20 40 245");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "100 300 85 235 300 175 185");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "430");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "120");
+
+            findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
+
+            cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
+            cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Yacht");
+            cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Яхта");
+            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "yacht");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "73 170 182 213 253 8 73 134 320");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "8 18 8 18 10 59 62 97 75");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "30 275 210 140 270 30 30 30 30");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "100 215 100 215 325 325 265 420 190");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "395");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "175");
 
             findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
 
@@ -462,6 +552,90 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "290 45 50 240");
             cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "495");
             cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "110");
+
+            findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
+
+            cv = new ContentValues();
+            cv.put(PuzzlesDBHelper.GAME_TYPE, "1");
+            cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Eggplant");
+            cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Баклажан");
+            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "eggplant");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "211 10000 10000 10000");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "8 10000 10000 10000");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "77 280 75 280");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "96 120 308 300");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "470");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "120");
+
+            findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
+
+            cv = new ContentValues();
+            cv.put(PuzzlesDBHelper.GAME_TYPE, "1");
+            cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Key");
+            cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Ключ");
+            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "key");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "14 10000 10000 10000");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "14 10000 10000 10000");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "80 335 40 300");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "45 45 360 300");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "590");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "95");
+
+            findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
+
+            cv = new ContentValues();
+            cv.put(PuzzlesDBHelper.GAME_TYPE, "1");
+            cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Pepper");
+            cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Перец");
+            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "pepper");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "154 10000 10000 10000");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "8 10000 10000 10000");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "70 80 280 230");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "300 90 100 300");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "520");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "120");
+
+            findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
+
+            cv = new ContentValues();
+            cv.put(PuzzlesDBHelper.GAME_TYPE, "1");
+            cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Pot with honey");
+            cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Горшочек с медом");
+            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "pot");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "52 10000 10000 10000");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "8 10000 10000 10000");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "60 77 260 275");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "300 96 115 290");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "505");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "80");
+
+            findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
+
+            cv = new ContentValues();
+            cv.put(PuzzlesDBHelper.GAME_TYPE, "1");
+            cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Umbrella");
+            cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Зонтик");
+            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "umbrella");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "137 10000 10000 10000");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "61 10000 10000 10000");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "50 50 280 285");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "245 80 80 280");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "460");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "135");
+
+            findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
+
+            cv = new ContentValues();
+            cv.put(PuzzlesDBHelper.GAME_TYPE, "1");
+            cv.put(PuzzlesDBHelper.GAME_WORD_ENG, "Cock");
+            cv.put(PuzzlesDBHelper.GAME_WORD_RUS, "Петух");
+            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "cock");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "128 10000 10000 10000");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "25 10000 10000 10000");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "250 70 70 290");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "95 115 300 300");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "500");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "115");
 
             findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
 

@@ -55,6 +55,7 @@
             android:src="@drawable/selector_arrow_next"
             android:background="@null"
             android:padding="5dp"
-            android:visibility="gone"/>
+            android:visibility="gone"
+            android:layout_centerVertical="true"/>
 
 </RelativeLayout>

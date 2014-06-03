@@ -8,11 +8,9 @@ public class GameLoopThread extends Thread {
     public static final long FPS = 50;
     private GameView view;
     private volatile boolean running = false;
-    private GameView.GameCallBacks listener;
 
-    public GameLoopThread(GameView view, GameView.GameCallBacks listener) {
+    public GameLoopThread(GameView view) {
         this.view = view;
-        this.listener = listener;
     }
 
     public void setRunning(boolean run) {
@@ -38,12 +36,6 @@ public class GameLoopThread extends Thread {
                 }
                 if (view.isEnd()) {
                     setRunning(false);
-                    ((Activity)listener).runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            listener.onGameFinish();
-                        }
-                    });
                 }
             }
             sleepTime = ticksPS - (System.currentTimeMillis() - startTime);

@@ -35,6 +35,8 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
     private PuzzleFillGame mPuzzleFillGame;
     private MediaPlayer mPlayer;
     private BackgroundSound mBackgroundSound;
+    private GameView gameView;
+    private Point displaySize;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -48,7 +50,8 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
         AppHelper.setCurrentGame(this, mGameNumber, mGameType);
 
         mPuzzleFillGame = PuzzlesDB.getPuzzle(mGameNumber, mGameType, this);
-        ((FrameLayout) findViewById(R.id.rlForGame)).addView(new GameView(this, mPuzzleFillGame, this));
+        gameView = new GameView(this, mPuzzleFillGame, this);
+        ((FrameLayout) findViewById(R.id.rlForGame)).addView(gameView);
 
         mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         nextGame = (ImageButton) findViewById(R.id.btnNextAGF);
@@ -57,6 +60,10 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
 
         nextGame.setOnClickListener(this);
         previousGame.setOnClickListener(this);
+
+        Display display = getWindowManager().getDefaultDisplay();
+        displaySize = new Point();
+        display.getSize(displaySize);
     }
 
     @Override
@@ -141,11 +148,7 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
     }
 
     private void showArrowAnimation(){
-        Display display = getWindowManager().getDefaultDisplay();
-        Point size = new Point();
-        display.getSize(size);
-
-        ObjectAnimator moveXAnimator = ObjectAnimator.ofFloat(gameText, "translationX", gameText.getX(), size.x / 2 - gameText.getWidth() / 2 );
+        ObjectAnimator moveXAnimator = ObjectAnimator.ofFloat(gameText, "translationX", gameText.getX(), displaySize.x / 2 - gameText.getWidth() / 2 );
         moveXAnimator.setDuration(1000);
         moveXAnimator.start();
     }
@@ -217,6 +220,8 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
     @Override
     public void OnAnimEnd(View v) {
         showArrowAnimation();
+        int newFigureSize = (int) (displaySize.y - ((displaySize.y - gameText.getY()) * 2));
+        gameView.moveFigureToCenter(newFigureSize);
         if (AppHelper.getNextGame(this, mGameType) != -1)
             nextGame.setVisibility(View.VISIBLE);
 
