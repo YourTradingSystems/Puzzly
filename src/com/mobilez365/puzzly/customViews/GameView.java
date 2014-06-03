@@ -4,6 +4,7 @@ package com.mobilez365.puzzly.customViews;
 import android.content.Context;
 import android.graphics.*;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.*;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
@@ -46,6 +47,11 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
     private Paint mCharacterPaint = null;
     private Animation mFadeIn;
     private Transformation mTransformation;
+    private long count;
+    private int finalShapeWidth;
+    private int finalShapeHeight;
+    private Bitmap movedShape;
+    private boolean moveToCenter = true;
 
     public interface GameCallBacks {
         public void onGameFinish();
@@ -162,14 +168,30 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                     if (mFadeIn != null && mFadeIn.hasStarted() && !mFadeIn.hasEnded()) {
                         mFadeIn.getTransformation(System.currentTimeMillis(), mTransformation);
                         mCharacterPaint.setAlpha((int) (255 * mTransformation.getAlpha()));
+                        canvas.drawBitmap(shape, figurePosX, figurePosY, mCharacterPaint);
                     } else if (mFadeIn != null && mFadeIn.hasEnded()) {
                         for (GameSprite spr : sprites) {
                             spr = null;
                         }
                         sprites.clear();
-                        end = gameOver;
+                        //final move shape to center 
+                        if(moveToCenter){
+                        if (count == GameLoopThread.FPS) end = gameOver;
+                        double k = (1 - (double) count / GameLoopThread.FPS);
+                        double kF = 0.5;
+
+                        int finalFugureWidth = (int)Math.round(shape.getWidth() * (kF + k * (1-kF)));
+                        int finalFugureHeight = (int)Math.round(shape.getHeight() * (kF + k * (1-kF)));
+                        double centerX = svgBackgroundWidth / 2 - finalFugureWidth / 2;
+                        double centerY = svgBackgroundHeight / 2 - finalFugureHeight / 2;
+                        int finalFigurePosX = (int) Math.round(centerX + (figurePosX - centerX ) * k);
+                        Log.d("final", ""+(figurePosY - centerY ) * (k));
+                        int finalFigurePosY = (int) Math.round(centerY + (figurePosY - centerY ) * k);
+                        movedShape = Bitmap.createScaledBitmap(shape, finalFugureWidth, finalFugureHeight, true);
+                        canvas.drawBitmap(movedShape, finalFigurePosX, finalFigurePosY, mCharacterPaint);
+                        count++;
+                        }
                     }
-                    canvas.drawBitmap(shape, figurePosX, figurePosY, mCharacterPaint);
         }
     }
 

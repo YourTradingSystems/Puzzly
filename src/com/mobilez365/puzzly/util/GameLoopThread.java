@@ -5,7 +5,7 @@ import android.graphics.Canvas;
 import com.mobilez365.puzzly.customViews.GameView;
 
 public class GameLoopThread extends Thread {
-    static final long FPS = 50;
+    public static final long FPS = 50;
     private GameView view;
     private volatile boolean running = false;
     private GameView.GameCallBacks listener;
