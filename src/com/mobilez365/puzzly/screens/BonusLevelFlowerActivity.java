@@ -57,7 +57,7 @@ public class BonusLevelFlowerActivity extends InterstitialActivity implements Sh
     private VideoView mTutorial;
 
     public void onCreate(Bundle savedInstanceState) {
-        AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this).name());
+        AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this, Constans.APP_LANGUAGE).name());
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bonus_level_flower);

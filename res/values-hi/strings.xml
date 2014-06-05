@@ -15,13 +15,8 @@
     <string name="settings_play_sound">खेल में ध्वनि</string>
     <string name="settings_vibrate">खेल कंपन</string>
     <string name="settings_display_inner_borders">आंतरिक सीमाओं प्रदर्शित</string>
-    <string name="settings_localize_language">भाषा</string>
-
-    <string-array name="settings_languages">
-        <item>अंग्रेज़ी</item>
-        <item>रूसी</item>
-        <item>हिंदी</item>
-    </string-array>
+    <string name="settings_localize_app_language">भाषा</string>
+    <string name="settings_localize_study_language">Study language</string>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
 </resources>

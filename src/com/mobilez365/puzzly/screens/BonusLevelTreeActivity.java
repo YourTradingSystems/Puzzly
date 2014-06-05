@@ -55,7 +55,7 @@ public class BonusLevelTreeActivity extends InterstitialActivity implements Shak
     private RelativeLayout rlContainer_ABLT;
 
     public void onCreate(Bundle savedInstanceState) {
-        AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this).name());
+        AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this, Constans.APP_LANGUAGE).name());
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bonus_level_tree);

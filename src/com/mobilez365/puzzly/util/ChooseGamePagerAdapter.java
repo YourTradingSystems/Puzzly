@@ -16,6 +16,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
+import com.mobilez365.puzzly.global.Constans;
 import com.mobilez365.puzzly.puzzles.PuzzleFillGame;
 import com.mobilez365.puzzly.puzzles.PuzzlesDB;
 import com.mobilez365.puzzly.screens.GameFillActivity;
@@ -80,7 +81,7 @@ public class ChooseGamePagerAdapter extends PagerAdapter implements View.OnClick
             gameLayout.setOnClickListener(this);
 
             loadLevelPictures(game, gameFigure, gameLayout, levelPosition);
-            loadGameWord(game, gameWord);
+            loadGameWord(game, gameWord, levelPosition);
         }
 
         levelPosition = position * 4 + 1;
@@ -95,7 +96,7 @@ public class ChooseGamePagerAdapter extends PagerAdapter implements View.OnClick
             gameLayout.setOnClickListener(this);
 
             loadLevelPictures(game, gameFigure, gameLayout, levelPosition);
-            loadGameWord(game, gameWord);
+            loadGameWord(game, gameWord, levelPosition);
         }
 
         levelPosition = position * 4 + 2;
@@ -110,7 +111,7 @@ public class ChooseGamePagerAdapter extends PagerAdapter implements View.OnClick
             gameLayout.setOnClickListener(this);
 
             loadLevelPictures(game, gameFigure, gameLayout, levelPosition);
-            loadGameWord(game, gameWord);
+            loadGameWord(game, gameWord, levelPosition);
         }
 
         levelPosition = position * 4 + 3;
@@ -125,7 +126,7 @@ public class ChooseGamePagerAdapter extends PagerAdapter implements View.OnClick
             gameLayout.setOnClickListener(this);
 
             loadLevelPictures(game, gameFigure, gameLayout, levelPosition);
-            loadGameWord(game, gameWord);
+            loadGameWord(game, gameWord, levelPosition);
         }
 
         viewGroup.addView(view, 0);
@@ -135,16 +136,9 @@ public class ChooseGamePagerAdapter extends PagerAdapter implements View.OnClick
 
     private void loadLevelPictures(PuzzleFillGame game, final ImageView image, RelativeLayout rl, int position) {
         int passedGameCount = AppHelper.getMaxGame((Activity) mContext, mGameType);
-        if (position <= passedGameCount) {
-            String imageName;
-
-            if (position < passedGameCount) {
-                rl.setBackgroundResource(R.drawable.background_done_level);
-                imageName = game.getResultImage();
-            } else {
-                rl.setBackgroundResource(R.drawable.background_new_level);
-                imageName = game.getImage();
-            }
+        if (position < passedGameCount) {
+            String imageName = game.getResultImage();
+            rl.setBackgroundResource(R.drawable.background_done_level);
 
             ParseSvgAsyncTask.ParseListener listener = new ParseSvgAsyncTask.ParseListener() {
                 @Override
@@ -155,24 +149,35 @@ public class ChooseGamePagerAdapter extends PagerAdapter implements View.OnClick
 
             ParseSvgAsyncTask parseSvgAsyncTask = new ParseSvgAsyncTask(mContext, listener, maxFigureWidth, maxFigureHeight);
             parseSvgAsyncTask.execute(imageName);
-        } else {
+        } else if(position == passedGameCount){
             rl.setBackgroundResource(R.drawable.background_new_level);
-            image.setImageResource(R.drawable.settings_icon);
+            image.setImageResource(R.drawable.img_question_mark);
+        }
+        else {
+            rl.setBackgroundResource(R.drawable.background_new_level);
+            image.setImageResource(R.drawable.img_locked);
         }
     }
 
-    private void loadGameWord(PuzzleFillGame game, TextView tv) {
-        if (AppHelper.getLocaleLanguage((Activity) mContext).equals(AppHelper.Languages.eng))
-            tv.setText(game.getWordEng());
-        else if (AppHelper.getLocaleLanguage((Activity) mContext).equals(AppHelper.Languages.rus))
-            tv.setText(game.getWordRus());
+    private void loadGameWord(PuzzleFillGame game, TextView tv, int position) {
+        int passedGameCount = AppHelper.getMaxGame((Activity) mContext, mGameType);
+        if(position < passedGameCount) {
+            if (AppHelper.getLocaleLanguage((Activity) mContext, Constans.GAME_LANGUAGE).equals(AppHelper.Languages.eng))
+                tv.setText(game.getWordEng());
+            else if (AppHelper.getLocaleLanguage((Activity) mContext, Constans.GAME_LANGUAGE).equals(AppHelper.Languages.rus))
+                tv.setText(game.getWordRus());
+        }
+        else if(position == passedGameCount)
+            tv.setText(mContext.getString(R.string.choose_level_new_level));
+        else
+            tv.setText(mContext.getString(R.string.choose_level_locked_level));
     }
 
     @Override
     public void onClick(View v) {
-        if(clickEnable) {
+        if (clickEnable) {
             int levelPosition = (Integer) v.getTag();
-            if(levelPosition <= AppHelper.getMaxGame((Activity) mContext, mGameType)) {
+            if (levelPosition <= AppHelper.getMaxGame((Activity) mContext, mGameType)) {
                 Intent gameIntent = new Intent(mContext, GameFillActivity.class);
                 gameIntent.putExtra("type", mGameType);
                 gameIntent.putExtra("gameNumber", levelPosition);

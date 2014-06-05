@@ -15,13 +15,13 @@
     <string name="settings_play_sound">Воспроизведение игровых звуков</string>
     <string name="settings_vibrate">Вибрация в игре</string>
     <string name="settings_display_inner_borders">Показывать внутренние границы</string>
-    <string name="settings_localize_language">ЯЗЫК</string>
-
-    <string-array name="settings_languages">
-        <item>Английский</item>
-        <item>Русский</item>
-        <item>Хинди</item>
-    </string-array>
+    <string name="settings_localize_app_language">Язык приложения</string>
+    <string name="settings_localize_study_language">Язык обучения</string>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~ CHOOSE LEVEL ~~~~~~~~~~~~~~~~~~~~~~ !-->
+    <string name="choose_level_new_level">Новый уровень</string>
+    <string name="choose_level_locked_level">Уровень заблокирован</string>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
 </resources>

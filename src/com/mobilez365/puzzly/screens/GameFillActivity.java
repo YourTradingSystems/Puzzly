@@ -73,7 +73,7 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
     protected void onResume() {
         super.onResume();
 
-        AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this).name());
+        AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this, Constans.GAME_LANGUAGE).name());
 
         if (!AppHelper.isAppInBackground(this)) {
             if (mBackgroundSound != null && !mBackgroundSound.isPlay()) {
@@ -161,9 +161,9 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
     @Override
     public void onGameFinish() {
 
-        String excellent_words[] = new String[]{"perfect", "wonderfull", "well_done", "good_job"};
-        Random random = new Random();
-        String excellent_word = excellent_words[random.nextInt(excellent_words.length)];
+      //  String excellent_words[] = new String[]{"perfect", "wonderfull", "well_done", "good_job"};
+      //  Random random = new Random();
+      //  String excellent_word = excellent_words[random.nextInt(excellent_words.length)];
 
         gameText.setVisibility(View.VISIBLE);
 
@@ -174,12 +174,15 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
             showBasketAnimation();
             gameIsFinished = true;
 
-            if (AppHelper.getLocaleLanguage(this).equals(AppHelper.Languages.eng))
+            if (AppHelper.getLocaleLanguage(this, Constans.GAME_LANGUAGE).equals(AppHelper.Languages.eng))
                 gameText.setText(mPuzzleFillGame.getWordEng());
-            else if (AppHelper.getLocaleLanguage(this).equals(AppHelper.Languages.rus))
+            else if (AppHelper.getLocaleLanguage(this, Constans.GAME_LANGUAGE).equals(AppHelper.Languages.rus))
                 gameText.setText(mPuzzleFillGame.getWordRus());
 
             if (AppHelper.getPlaySound(this)) {
+                AppHelper.playSound(this, mPuzzleFillGame.getItemName());
+
+           /* if (AppHelper.getPlaySound(this)) {
                 mExcellentWord = AppHelper.playSound(this, excellent_word);
 
                 final Activity activity = this;
@@ -190,7 +193,7 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
                             AppHelper.playSound(activity, mPuzzleFillGame.getItemName());
                         }
                     }
-                });
+                });*/
             }
         }
     }

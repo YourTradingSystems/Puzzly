@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.Typeface;
@@ -17,6 +18,7 @@ import android.widget.VideoView;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.puzzles.PuzzlesDB;
 
+import com.mobilez365.puzzly.screens.SettingsActivity;
 import com.mobilez365.puzzly.util.BackgroundSound;
 
 import java.lang.reflect.Field;
@@ -71,15 +73,22 @@ public class AppHelper {
         }
     }
 
-    public static final void changeLanguageRefresh(Activity _activity, String _language) {
+    public static final void changeLanguageRefresh(Activity _activity, String _language, int scrollPos) {
         changeLanguage(_activity, _language);
-        _activity.startActivity(_activity.getIntent());
         _activity.finish();
+        Intent mIntent = new Intent(_activity, _activity.getClass());
+        mIntent.putExtra("scrollPos" , scrollPos);
+        _activity.startActivity(mIntent);
+        _activity.overridePendingTransition(0, 0);
     }
 
-    public static final Languages getLocaleLanguage(Activity _activity) {
+    public static final Languages getLocaleLanguage(Activity _activity, int type) {
         SharedPreferences prefs = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE);
-        int lang = prefs.getInt(Constans.LOCALIZE_LANGUAGE, 0);
+        int lang;
+        if(type == Constans.APP_LANGUAGE)
+            lang = prefs.getInt(Constans.LOCALIZE_APP_LANGUAGE, 0);
+        else
+            lang = prefs.getInt(Constans.LOCALIZE_STUDY_LANGUAGE, 0);
 
         switch (lang) {
             case 0:
@@ -317,15 +326,26 @@ public class AppHelper {
         return prefs.getBoolean(Constans.VIBRATE, true);
     }
 
-    public static final void setLocalizeLanguage(Activity _activity, int _language) {
+    public static final void setLocalizeAppLanguage(Activity _activity, int _language) {
         SharedPreferences.Editor editor = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE).edit();
-        editor.putInt(Constans.LOCALIZE_LANGUAGE, _language);
+        editor.putInt(Constans.LOCALIZE_APP_LANGUAGE, _language);
         editor.commit();
     }
 
-    public static final int getLocalizeLanguage(Activity _activity) {
+    public static final int getLocalizeAppLanguage(Activity _activity) {
         SharedPreferences prefs = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE);
-        return prefs.getInt(Constans.LOCALIZE_LANGUAGE, 0);
+        return prefs.getInt(Constans.LOCALIZE_APP_LANGUAGE, 0);
+    }
+
+    public static final void setLocalizeStudyLanguage(Activity _activity, int _language) {
+        SharedPreferences.Editor editor = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE).edit();
+        editor.putInt(Constans.LOCALIZE_STUDY_LANGUAGE, _language);
+        editor.commit();
+    }
+
+    public static final int getLocalizeStudyLanguage(Activity _activity) {
+        SharedPreferences prefs = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE);
+        return prefs.getInt(Constans.LOCALIZE_STUDY_LANGUAGE, 0);
     }
 
     public static final void setBonusFlower(Activity _activity, boolean _state) {

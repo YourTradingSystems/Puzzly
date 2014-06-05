@@ -15,12 +15,13 @@
     <string name="settings_play_sound">Sound in game</string>
     <string name="settings_vibrate">Game vibration</string>
     <string name="settings_display_inner_borders">Display inner borders</string>
-    <string name="settings_localize_language">LANGUAGE</string>
+    <string name="settings_localize_app_language">Application language</string>
+    <string name="settings_localize_study_language">Study language</string>
 
     <string-array name="settings_languages">
         <item>English</item>
-        <item>Russian</item>
-        <item>Hindi</item>
+        <item>Русский</item>
+        <item>हिंदी</item>
     </string-array>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
@@ -31,6 +32,11 @@
 
     <!-- ~~~~~~~~~~~~~~~~~~~ StartAD ~~~~~~~~~~~~~~~~~~~~~~ !-->
     <string name="startADId">53859233b7bb021500000000</string>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~ CHOOSE LEVEL ~~~~~~~~~~~~~~~~~~~~~~ !-->
+    <string name="choose_level_new_level">New level</string>
+    <string name="choose_level_locked_level">Level locked</string>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
 </resources>

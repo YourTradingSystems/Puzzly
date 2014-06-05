@@ -2,6 +2,7 @@ package com.mobilez365.puzzly.screens;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewTreeObserver;
 import android.widget.*;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -21,14 +22,16 @@ public class SettingsActivity extends RestartActivty implements View.OnClickList
     private CheckBox ccbPlaySound_SS;
     private CheckBox ccbVibrate_SS;
     private CheckBox ccbDisplayInnerBorders_SS;
-    private Spinner spinnerChooseCountry_SS;
+    private Spinner spinnerChooseAppCountry_SS;
+    private Spinner spinnerChooseStudyCountry_SS;
+    private ScrollView swMain;
 
-    private boolean displayInit = true;
+    private int displayInit = 0;
     private BackgroundSound mBackgroundSound;
 
     @Override
     public void onCreate(Bundle _savedInstanceState) {
-        AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this).name());
+        AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this, Constans.APP_LANGUAGE).name());
 
         super.onCreate(_savedInstanceState);
         setContentView(R.layout.settings_screen);
@@ -77,12 +80,16 @@ public class SettingsActivity extends RestartActivty implements View.OnClickList
 
     @Override
     public void onItemSelected(AdapterView<?> _parent, View _view, int _position, long _id) {
-        if (!displayInit) {
-            AppHelper.setLocalizeLanguage(this, _position);
-            AppHelper.changeLanguageRefresh(this, AppHelper.getLocaleLanguage(this).name());
+        if (displayInit > 1) {
+            if(_parent.getId() == R.id.spinnerChooseAppCountry_SS) {
+                AppHelper.setLocalizeAppLanguage(this, _position);
+                AppHelper.changeLanguageRefresh(this, AppHelper.getLocaleLanguage(this, Constans.APP_LANGUAGE).name(), swMain.getScrollY());
+            }
+            else
+                AppHelper.setLocalizeStudyLanguage(this, _position);
         }
         else
-            displayInit = false;
+            displayInit ++;
     }
 
     @Override
@@ -118,7 +125,9 @@ public class SettingsActivity extends RestartActivty implements View.OnClickList
         ccbPlaySound_SS = (CheckBox)findViewById(R.id.ccbPlaySound_SS);
         ccbVibrate_SS = (CheckBox)findViewById(R.id.ccbVibrate_SS);
         ccbDisplayInnerBorders_SS = (CheckBox)findViewById(R.id.ccbDisplayInnerBorders_SS);
-        spinnerChooseCountry_SS = (Spinner)findViewById(R.id.spinnerChooseCountry_SS);
+        spinnerChooseAppCountry_SS = (Spinner)findViewById(R.id.spinnerChooseAppCountry_SS);
+        spinnerChooseStudyCountry_SS = (Spinner)findViewById(R.id.spinnerChooseStudyCountry_SS);
+        swMain = (ScrollView) findViewById(R.id.swMain_SS);
     }
 
     private final void setListener() {
@@ -127,7 +136,8 @@ public class SettingsActivity extends RestartActivty implements View.OnClickList
         ccbPlaySound_SS.setOnClickListener(this);
         ccbVibrate_SS.setOnClickListener(this);
         ccbDisplayInnerBorders_SS.setOnClickListener(this);
-        spinnerChooseCountry_SS.setOnItemSelectedListener(this);
+        spinnerChooseAppCountry_SS.setOnItemSelectedListener(this);
+        spinnerChooseStudyCountry_SS.setOnItemSelectedListener(this);
     }
 
     private final void setValues() {
@@ -135,7 +145,15 @@ public class SettingsActivity extends RestartActivty implements View.OnClickList
         ccbPlaySound_SS.setChecked(AppHelper.getPlaySound(this));
         ccbVibrate_SS.setChecked(AppHelper.getVibrate(this));
         ccbDisplayInnerBorders_SS.setChecked(AppHelper.getShowImageBorder(this));
-        spinnerChooseCountry_SS.setSelection(AppHelper.getLocalizeLanguage(this));
+        spinnerChooseAppCountry_SS.setSelection(AppHelper.getLocalizeAppLanguage(this));
+        spinnerChooseStudyCountry_SS.setSelection(AppHelper.getLocalizeStudyLanguage(this));
+        swMain.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                swMain.scrollTo(0, getIntent().getIntExtra("scrollPos", 0));
+                swMain.getViewTreeObserver().removeGlobalOnLayoutListener(this);
+            }
+        });
     }
 
     private void showBanner() {
