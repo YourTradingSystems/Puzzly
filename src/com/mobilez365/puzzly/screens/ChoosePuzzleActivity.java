@@ -9,6 +9,7 @@ import android.widget.ImageButton;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
 import com.mobilez365.puzzly.global.Constans;
+import com.mobilez365.puzzly.util.BackgroundSound;
 import com.mobilez365.puzzly.util.ChooseGamePagerAdapter;
 
 /**
@@ -24,10 +25,13 @@ public class ChoosePuzzleActivity extends Activity implements View.OnClickListen
     private ImageButton btnPrevious;
     private ImageButton btnNext;
     private ChooseGamePagerAdapter levelsAdapter;
+    private BackgroundSound mBackgroundSound;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_puzzle);
+
+        mBackgroundSound = AppHelper.getBackgroundSound();
 
         levelsViewPager = (ViewPager) findViewById(R.id.vpMailACP);
         mGameType = getIntent().getIntExtra("type", 0);
@@ -64,6 +68,23 @@ public class ChoosePuzzleActivity extends Activity implements View.OnClickListen
             currentLevel = AppHelper.getCurrentGame(this, mGameType);
         }
         levelsAdapter.clickEnable = true;
+
+        if (!AppHelper.isAppInBackground(this)) {
+            if (mBackgroundSound != null && !mBackgroundSound.isPlay()) {
+                mBackgroundSound.pause(false);
+            }
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        if (AppHelper.isAppInBackground(this) || AppHelper.isScreenOff(this)) {
+            if (mBackgroundSound != null && mBackgroundSound.isPlay()) {
+                mBackgroundSound.pause(true);
+            }
+        }
     }
 
     @Override

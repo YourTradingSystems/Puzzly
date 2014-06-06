@@ -26,7 +26,7 @@ import com.mobilez365.puzzly.screens.GameFillActivity;
  */
 public class ChooseGamePagerAdapter extends PagerAdapter implements View.OnClickListener {
 
-    private Context mContext;
+    private Activity mActivity;
     private int mGameCount;
     private int mPagesCount;
     private int mGameType;
@@ -34,13 +34,13 @@ public class ChooseGamePagerAdapter extends PagerAdapter implements View.OnClick
     private int maxFigureWidth;
     public boolean clickEnable;
 
-    public ChooseGamePagerAdapter(Context _context, int _gameType) {
-        mContext = _context;
+    public ChooseGamePagerAdapter(Activity _activity, int _gameType) {
+        mActivity = _activity;
         mGameType = _gameType;
-        mGameCount = PuzzlesDB.getPuzzleGameCount(_context, _gameType);
+        mGameCount = PuzzlesDB.getPuzzleGameCount(_activity, _gameType);
         mPagesCount = (int) Math.ceil(mGameCount / 4f);
 
-        Display display = ((Activity) _context).getWindowManager().getDefaultDisplay();
+        Display display = ((Activity) _activity).getWindowManager().getDefaultDisplay();
         Point size = new Point();
         display.getSize(size);
         maxFigureWidth = (int) (size.x * 0.3f);
@@ -71,7 +71,7 @@ public class ChooseGamePagerAdapter extends PagerAdapter implements View.OnClick
 
         int levelPosition = position * 4;
         if (levelPosition < mGameCount) {
-            PuzzleFillGame game = PuzzlesDB.getPuzzle(levelPosition, mGameType, (Activity) mContext);
+            PuzzleFillGame game = PuzzlesDB.getPuzzle(levelPosition, mGameType, (Activity) mActivity);
 
             TextView gameWord = (TextView) view.findViewById(R.id.tvFirstWordICP);
             ImageView gameFigure = (ImageView) view.findViewById(R.id.ivFirstFigureICP);
@@ -86,7 +86,7 @@ public class ChooseGamePagerAdapter extends PagerAdapter implements View.OnClick
 
         levelPosition = position * 4 + 1;
         if (levelPosition < mGameCount) {
-            PuzzleFillGame game = PuzzlesDB.getPuzzle(levelPosition, mGameType, (Activity) mContext);
+            PuzzleFillGame game = PuzzlesDB.getPuzzle(levelPosition, mGameType, (Activity) mActivity);
 
             TextView gameWord = (TextView) view.findViewById(R.id.tvSecondWordICP);
             ImageView gameFigure = (ImageView) view.findViewById(R.id.ivSecondFigureICP);
@@ -101,7 +101,7 @@ public class ChooseGamePagerAdapter extends PagerAdapter implements View.OnClick
 
         levelPosition = position * 4 + 2;
         if (levelPosition < mGameCount) {
-            PuzzleFillGame game = PuzzlesDB.getPuzzle(levelPosition, mGameType, (Activity) mContext);
+            PuzzleFillGame game = PuzzlesDB.getPuzzle(levelPosition, mGameType, (Activity) mActivity);
 
             TextView gameWord = (TextView) view.findViewById(R.id.tvThirdWordICP);
             ImageView gameFigure = (ImageView) view.findViewById(R.id.ivThirdFigureICP);
@@ -116,7 +116,7 @@ public class ChooseGamePagerAdapter extends PagerAdapter implements View.OnClick
 
         levelPosition = position * 4 + 3;
         if (levelPosition < mGameCount) {
-            PuzzleFillGame game = PuzzlesDB.getPuzzle(levelPosition, mGameType, (Activity) mContext);
+            PuzzleFillGame game = PuzzlesDB.getPuzzle(levelPosition, mGameType, (Activity) mActivity);
 
             TextView gameWord = (TextView) view.findViewById(R.id.tvFourthWordICP);
             ImageView gameFigure = (ImageView) view.findViewById(R.id.ivFourthFigureICP);
@@ -147,7 +147,7 @@ public class ChooseGamePagerAdapter extends PagerAdapter implements View.OnClick
                 }
             };
 
-            ParseSvgAsyncTask parseSvgAsyncTask = new ParseSvgAsyncTask(mContext, listener, maxFigureWidth, maxFigureHeight);
+            ParseSvgAsyncTask parseSvgAsyncTask = new ParseSvgAsyncTask(mActivity, listener, maxFigureWidth, maxFigureHeight);
             parseSvgAsyncTask.execute(imageName);
         } else if(position == passedGameCount){
             rl.setBackgroundResource(R.drawable.background_new_level);
@@ -181,7 +181,7 @@ public class ChooseGamePagerAdapter extends PagerAdapter implements View.OnClick
                 Intent gameIntent = new Intent(mContext, GameFillActivity.class);
                 gameIntent.putExtra("type", mGameType);
                 gameIntent.putExtra("gameNumber", levelPosition);
-                mContext.startActivity(gameIntent);
+                mActivity.startActivity(gameIntent);
                 clickEnable = false;
             }
         }

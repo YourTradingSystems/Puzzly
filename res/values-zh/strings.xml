@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Puzzly</string>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~ MENU ~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <string name="menu_settings">设定</string>
+    <string name="menu_back">上页</string>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~ SETTINGS ~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <string name="settings_play_background_music">播放背景音乐</string>
+    <string name="settings_play_sound">游戏音效</string>
+    <string name="settings_vibrate">游戏震动模式</string>
+    <string name="settings_display_inner_borders">显示内框</string>
+    <string name="settings_language_game">游戏语言</string>
+    <string name="settings_language_locale">语言设定</string>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~ Game Items ~~~~~~~~~~~~~~~~~~~~ !-->
+    <string name="piggy">小猪</string>
+    <string name="pigeon">鸽子</string>
+    <string name="frogling">小蛙</string>
+    <string name="rabbit">兔子</string>
+    <string name="hen">母鸡</string>
+    <string name="octopus">章鱼</string>
+    <string name="pencil">铅笔</string>
+    <string name="ice_cream">冰淇淋</string>
+    <string name="fingerling">小鱼</string>
+    <string name="elephant">大象</string>
+    <string name="lamb">绵羊</string>
+    <string name="owl">猫头鹰</string>
+    <string name="snail">蜗牛</string>
+    <string name="squirrel">松鼠</string>
+    <string name="apple">苹果</string>
+    <string name="carrot">胡萝卜</string>
+    <string name="goat">山羊</string>
+    <string name="bee">蜜蜂</string>
+    <string name="turtle">乌龟</string>
+    <string name="dolphin">海豚</string>
+    <string name="hippo">河马</string>
+    <string name="teddy_bear">泰迪熊</string>
+    <string name="penguin">企鹅</string>
+    <string name="snake">蛇</string>
+    <string name="flamingo">火烈鸟</string>
+    <string name="toucan">犀鸟</string>
+    <string name="giraffe">长颈鹿</string>
+    <string name="monkey">猴子</string>
+    <string name="zebra">斑马</string>
+    <string name="lion">狮子</string>
+    <string name="kettle">水壶</string>
+    <string name="car">车</string>
+    <string name="eggplant">茄子</string>
+    <string name="bread">面包</string>
+    <string name="baseball_cap">棒球帽</string>
+    <string name="computer_chair">电脑椅</string>
+    <string name="train">火车</string>
+    <string name="wagon">货车</string>
+    <string name="peas">豆</string>
+    <string name="pot_with_honey">蜜糖罐</string>
+    <string name="mushrooms">蘑菇</string>
+    <string name="potato">土豆</string>
+    <string name="key">钥匙</string>
+    <string name="strawberries">草莓</string>
+    <string name="crab">螃蟹</string>
+    <string name="corn">玉米</string>
+    <string name="jug_with_milk">奶壶</string>
+    <string name="light_bulb">电灯泡</string>
+    <string name="stork">鹳</string>
+    <string name="pepper">胡椒</string>
+    <string name="cock">公鸡</string>
+    <string name="cancer">小龙虾</string>
+    <string name="backpack">背包</string>
+    <string name="wizard_hat">巫师帽</string>
+    <string name="soother">奶嘴</string>
+    <string name="stapler">订书机</string>
+    <string name="beet">甜菜</string>
+    <string name="pumpkin">南瓜</string>
+    <string name="shuttlecocks">羽毛球</string>
+    <string name="hamburger">汉堡包</string>
+    <string name="yacht">游艇</string>
+    <string name="scrambled_eggs">炒蛋</string>
+    <string name="umbrella">雨伞</string>
+    <string name="banana">香蕉</string>
+    <string name="pear">梨子</string>
+    <string name="lemon">柠檬</string>
+    <string name="lime">酸橙</string>
+    <string name="cherry">樱桃</string>
+    <string name="tea_cup">茶杯</string>
+    <string name="radish">萝卜</string>
+    <string name="rhino">犀牛</string>
+    <string name="sea_bear">海熊</string>
+    <string name="crocodile">鳄鱼</string>
+    <string name="crew_cut">平头</string>
+    <string name="gorilla">大猩猩</string>
+    <string name="fox">狐狸</string>
+    <string name="pitching">投球</string>
+    <string name="dog">狗</string>
+    <string name="koala">树熊</string>
+    <string name="butterfly">蝴蝶</string>
+
+    <string name="perfect">完美</string>
+    <string name="wonderful">太棒了</string>
+    <string name="well_done">干得好</string>
+    <string name="good_job">做得不错</string>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+</resources>

@@ -181,7 +181,6 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
         ObjectAnimator scaleImageXAnimator = ObjectAnimator.ofFloat(ivResultImage, "scaleX", 1f, koef);
         ObjectAnimator scaleImageYAnimator = ObjectAnimator.ofFloat(ivResultImage, "scaleY", 1f, koef);
 
-
         AnimatorSet set = new AnimatorSet();
         set.play(moveImageXAnimator).with(scaleImageXAnimator).with(scaleImageYAnimator);
         set.setDuration(1000);
@@ -201,7 +200,7 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
             parseSvgAsyncTask.execute(resultImage);
 
             gameIsFinished = true;
-            }
+        }
     }
 
     @Override

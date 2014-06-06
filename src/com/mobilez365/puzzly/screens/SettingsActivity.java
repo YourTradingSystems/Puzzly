@@ -11,6 +11,7 @@ import com.google.android.gms.ads.AdView;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
 import com.mobilez365.puzzly.global.Constans;
+import com.mobilez365.puzzly.puzzles.PuzzlesDB;
 import com.mobilez365.puzzly.util.BackgroundSound;
 import com.startad.lib.SADView;
 
@@ -86,6 +87,9 @@ public class SettingsActivity extends RestartActivty implements View.OnClickList
             if(_parent.getId() == R.id.spinnerChooseAppCountry_SS) {
                 AppHelper.setLocalizeAppLanguage(this, _position);
                 AppHelper.changeLanguageRefresh(this, AppHelper.getLocaleLanguage(this, Constans.APP_LANGUAGE).name(), swMain.getScrollY());
+                
+                //update word in table
+                PuzzlesDB.updateTableGameWord(this);
             }
             else
                 AppHelper.setLocalizeStudyLanguage(this, _position);

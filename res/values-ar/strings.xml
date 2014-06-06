@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Puzzly</string>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~ MENU ~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <string name="menu_settings">الإعدادات</string>
+    <string name="menu_back">الرجوع</string>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~ SETTINGS ~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <string name="settings_play_background_music">تشغيل الموسيقى الخلفية</string>
+    <string name="settings_play_sound">صوت اللعبة</string>
+    <string name="settings_vibrate"> ذبذبة وإهتزاز اللعبة</string>
+    <string name="settings_display_inner_borders">عرض الحدود الداخلية</string>
+    <string name="settings_language_game">لغة اللعبة</string>
+    <string name="settings_language_locale">إعدادات اللغة</string>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~ Game Items ~~~~~~~~~~~~~~~~~~~~ !-->
+    <string name="piggy">خنزير صغير</string>
+    <string name="pigeon">حمامة</string>
+    <string name="frogling">ضفدع صغير</string>
+    <string name="rabbit">أرنب</string>
+    <string name="hen">دجاجة</string>
+    <string name="octopus">أخطبوط</string>
+    <string name="pencil">قلم رصاص</string>
+    <string name="ice_cream">ايس كريم</string>
+    <string name="fingerling">سمكة الإصبع</string>
+    <string name="elephant">فيل</string>
+    <string name="lamb">خروف</string>
+    <string name="owl">بومة</string>
+    <string name="snail">حلزون</string>
+    <string name="squirrel">سنجاب</string>
+    <string name="apple">تفاحة</string>
+    <string name="carrot">جزر</string>
+    <string name="goat">عنزة</string>
+    <string name="bee">نحلة</string>
+    <string name="turtle">سلحفاة</string>
+    <string name="dolphin">درفيل</string>
+    <string name="hippo">فرس النهر</string>
+    <string name="teddy_bear">دبدوب</string>
+    <string name="penguin">بطريق</string>
+    <string name="snake">ثعبان</string>
+    <string name="flamingo">فلامنغو</string>
+    <string name="toucan">طائر الطوقان</string>
+    <string name="giraffe">زرافة</string>
+    <string name="monkey">قرد</string>
+    <string name="zebra">الحمار الوحشي</string>
+    <string name="lion">أسد</string>
+    <string name="kettle">غلاية</string>
+    <string name="car">سيارة</string>
+    <string name="eggplant">الباذنجان</string>
+    <string name="bread">خبز</string>
+    <string name="baseball_cap">كاب البيسبول</string>
+    <string name="computer_chair">كرسي الكمبيوتر</string>
+    <string name="train">قطار</string>
+    <string name="wagon">عربة</string>
+    <string name="peas">البازلاء</string>
+    <string name="pot_with_honey">وعاء من العسل</string>
+    <string name="mushrooms">ماشرووم</string>
+    <string name="potato">بطاطس</string>
+    <string name="key">مفتاح</string>
+    <string name="strawberries">فراولة</string>
+    <string name="crab">كابوري</string>
+    <string name="corn">ذرة</string>
+    <string name="jug_with_milk">أبريق من الحليب</string>
+    <string name="light_bulb">لمبة</string>
+    <string name="stork">طائر اللقلق</string>
+    <string name="pepper">فلفل</string>
+    <string name="cock">ديك</string>
+    <string name="cancer">السرطان</string>
+    <string name="backpack">حقيبة الظهر</string>
+    <string name="wizard_hat">قبعة الساحر</string>
+    <string name="soother">السكاتة</string>
+    <string name="stapler">دباسة</string>
+    <string name="beet">البنجر</string>
+    <string name="pumpkin">اليقطين</string>
+    <string name="shuttlecocks">الكرات</string>
+    <string name="hamburger">هامبورجر</string>
+    <string name="yacht">يخت</string>
+    <string name="scrambled_eggs">البيض المقلي</string>
+    <string name="umbrella">مظلة</string>
+    <string name="banana">موز</string>
+    <string name="pear">كمثرى</string>
+    <string name="lemon">ليمون</string>
+    <string name="lime">ليمون  أخضر</string>
+    <string name="cherry">الكرز</string>
+    <string name="tea_cup">كوب الشاي</string>
+    <string name="radish">الفجل</string>
+    <string name="rhino">وحيد القرن</string>
+    <string name="sea_bear">دب البحر</string>
+    <string name="crocodile">التمساح</string>
+    <string name="crew_cut">قصة شعر</string>
+    <string name="gorilla">الغوريلا</string>
+    <string name="fox">ثعلب</string>
+    <string name="pitching">الرمي والقذف</string>
+    <string name="dog">كلب</string>
+    <string name="koala">دب الكوالا</string>
+    <string name="butterfly">فراشة</string>
+
+    <string name="perfect">ممتاز!</string>
+    <string name="wonderful">رائع!</string>
+    <string name="well_done">أحسنت!</string>
+    <string name="good_job">أحسنت صنعاً!</string>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+</resources>

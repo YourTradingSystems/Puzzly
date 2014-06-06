@@ -15,13 +15,97 @@
     <string name="settings_play_sound">Воспроизведение игровых звуков</string>
     <string name="settings_vibrate">Вибрация в игре</string>
     <string name="settings_display_inner_borders">Показывать внутренние границы</string>
-    <string name="settings_localize_app_language">Язык приложения</string>
-    <string name="settings_localize_study_language">Язык обучения</string>
+    <string name="settings_language_game">Game language</string>
+    <string name="settings_language_locale">Settings language</string>
+
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
-    <!-- ~~~~~~~~~~~~~~~~~~~ CHOOSE LEVEL ~~~~~~~~~~~~~~~~~~~~~~ !-->
-    <string name="choose_level_new_level">Новый уровень</string>
-    <string name="choose_level_locked_level">Уровень заблокирован</string>
-    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+    <!-- ~~~~~~~~~~~~~~~~~~~ Game Items ~~~~~~~~~~~~~~~~~~~~ !-->
+    <string name="piggy">Поросенок</string>
+    <string name="pigeon">Голубь</string>
+    <string name="frogling">Лягушонок</string>
+    <string name="rabbit">Кролик</string>
+    <string name="hen">Курочка</string>
+    <string name="octopus">Осьминог</string>
+    <string name="pencil">Карандаш</string>
+    <string name="ice_cream">Мороженое</string>
+    <string name="fingerling">Рыбка</string>
+    <string name="elephant">Слоник</string>
+    <string name="lamb">Овечка</string>
+    <string name="owl">Сова</string>
+    <string name="snail">Улитка</string>
+    <string name="squirrel">Белочка</string>
+    <string name="apple">Яблочко</string>
+    <string name="carrot">Морковка</string>
+    <string name="goat">Козлик</string>
+    <string name="bee">Пчелка</string>
+    <string name="turtle">Черепашка</string>
+    <string name="dolphin">Дельфин</string>
+    <string name="hippo">Бегемотик</string>
+    <string name="teddy_bear">Медвежонок</string>
+    <string name="penguin">Пингвинчик</string>
+    <string name="snake">Змея</string>
+    <string name="flamingo">Фламинго</string>
+    <string name="toucan">Тукан</string>
+    <string name="giraffe">Жираф</string>
+    <string name="monkey">Обезьяна</string>
+    <string name="zebra">Зебра</string>
+    <string name="lion">Лев</string>
+    <string name="kettle">Чайник</string>
+    <string name="car">Машина</string>
+    <string name="eggplant">Баклажан</string>
+    <string name="bread">Хлеб</string>
+    <string name="baseball_cap">Бейсболка</string>
+    <string name="computer_chair">Компьютерное кресло</string>
+    <string name="train">Паровозик</string>
+    <string name="wagon">Вагончик</string>
+    <string name="peas">Горох</string>
+    <string name="pot_with_honey">Горшочек с медом</string>
+    <string name="mushrooms">Грибы</string>
+    <string name="potato">Картошка</string>
+    <string name="key">Ключ</string>
+    <string name="strawberries">Клубника</string>
+    <string name="crab">Краб</string>
+    <string name="corn">Кукуруза</string>
+    <string name="jug_with_milk">Кувшин с молоком</string>
+    <string name="light_bulb">Лампочка</string>
+    <string name="stork">Аист</string>
+    <string name="pepper">Перец</string>
+    <string name="cock">Петух</string>
+    <string name="cancer">Рак</string>
+    <string name="backpack">Рюкзак</string>
+    <string name="wizard_hat">Шапка волщебника</string>
+    <string name="soother">Соска</string>
+    <string name="stapler">Степлер</string>
+    <string name="beet">Свекла</string>
+    <string name="pumpkin">Тыква</string>
+    <string name="shuttlecocks">Воланчик</string>
+    <string name="hamburger">Гамбургер</string>
+    <string name="yacht">Яхта</string>
+    <string name="scrambled_eggs">Яичница</string>
+    <string name="umbrella">Зонтик</string>
+    <string name="banana">Банан</string>
+    <string name="pear">Груша</string>
+    <string name="lemon">Лимон</string>
+    <string name="lime">Лайм</string>
+    <string name="cherry">Вишня</string>
+    <string name="tea_cup">Чашка</string>
+    <string name="radish">Редиска</string>
+    <string name="rhino">Носорог</string>
+    <string name="sea_bear">Морской котик</string>
+    <string name="crocodile">Крокодил</string>
+    <string name="crew_cut">Ёжик</string>
+    <string name="gorilla">Горилла</string>
+    <string name="fox">Лиса</string>
+    <string name="pitching">Качка</string>
+    <string name="dog">Собака</string>
+    <string name="koala">Коала</string>
+    <string name="butterfly">Бабочка</string>
+
+    <string name="perfect">Perfect</string>
+    <string name="wonderful">Wonderful</string>
+    <string name="well_done">Well done</string>
+    <string name="good_job">Good job</string>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
 </resources>

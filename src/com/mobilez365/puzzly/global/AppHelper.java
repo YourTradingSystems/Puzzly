@@ -37,8 +37,16 @@ public class AppHelper {
     private static int passedGame = 0;
 
     public static enum Languages {
-        eng,
-        rus,
+        en,
+        uk,
+        ru,
+        hu,
+        de,
+        fr,
+        es,
+        zh,
+        ar,
+        he,
         hi
     }
 
@@ -65,7 +73,7 @@ public class AppHelper {
             config.locale = locale;
             _activity.getResources().updateConfiguration(config, null);
         } catch (Exception e) {
-            Locale locale = new Locale(Languages.eng.name());
+            Locale locale = new Locale(Languages.en.name());
             Locale.setDefault(locale);
             Configuration config = _activity.getResources().getConfiguration();
             config.locale = locale;
@@ -92,16 +100,40 @@ public class AppHelper {
 
         switch (lang) {
             case 0:
-                return Languages.eng;
+                return Languages.en;
 
             case 1:
-                return Languages.rus;
+                return Languages.uk;
 
             case 2:
+                return Languages.ru;
+
+            case 3:
+                return Languages.hu;
+
+            case 4:
+                return Languages.de;
+
+            case 5:
+                return Languages.fr;
+
+            case 6:
+                return Languages.es;
+
+            case 7:
+                return Languages.zh;
+
+            case 8:
+                return Languages.ar;
+
+            case 9:
+                return Languages.he;
+
+            case 10:
                 return Languages.hi;
         }
 
-        return Languages.eng;
+        return Languages.en;
     }
 
     public static boolean isAppInBackground(final Context _context) {
@@ -176,7 +208,7 @@ public class AppHelper {
 
         mBackgroundSound = new BackgroundSound(_activity, _name);
         if (!mBackgroundSound.isInit() && AppHelper.getPlayBackgroundMusic(_activity))
-            mBackgroundSound.execute(null);
+            mBackgroundSound.execute();
     }
 
     public static final void stopBackgroundSound() {

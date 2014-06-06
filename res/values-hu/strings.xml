@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Puzzly</string>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~ MENU ~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <string name="menu_settings">Beállítások</string>
+    <string name="menu_back">Vissza</string>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~ SETTINGS ~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <string name="settings_play_background_music">Zene lejátszása</string>
+    <string name="settings_play_sound">Hangok</string>
+    <string name="settings_vibrate">Rezgés</string>
+    <string name="settings_display_inner_borders">Körvonal megjelenítése</string>
+    <string name="settings_language_game">Játék nyelve</string>
+    <string name="settings_language_locale">Beállítás nyelve</string>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~ Game Items ~~~~~~~~~~~~~~~~~~~~ !-->
+    <string name="piggy">Kismalac</string>
+    <string name="pigeon">Galamb</string>
+    <string name="frogling">Béka</string>
+    <string name="rabbit">Nyuszi</string>
+    <string name="hen">Kiscsirke</string>
+    <string name="octopus">Polip</string>
+    <string name="pencil">Ceruza</string>
+    <string name="ice_cream">Fagylalt</string>
+    <string name="fingerling">Halacska</string>
+    <string name="elephant">Elefánt</string>
+    <string name="lamb">Bárány</string>
+    <string name="owl">Bagoly</string>
+    <string name="snail">Csiga-Biga</string>
+    <string name="squirrel">Mókus</string>
+    <string name="apple">Alma</string>
+    <string name="carrot">Sárgarépa</string>
+    <string name="goat">Kecske</string>
+    <string name="bee">Méhecske</string>
+    <string name="turtle">Teknősbéka</string>
+    <string name="dolphin">Delfin</string>
+    <string name="hippo">Viziló</string>
+    <string name="teddy_bear">Maci</string>
+    <string name="penguin">Pingvin</string>
+    <string name="snake">Kígyó</string>
+    <string name="flamingo">Flamingó</string>
+    <string name="toucan">Tukán</string>
+    <string name="giraffe">Zsiráf</string>
+    <string name="monkey">Majom</string>
+    <string name="zebra">Zebra</string>
+    <string name="lion">Oroszlán</string>
+    <string name="kettle">Vízforraló</string>
+    <string name="car">Autó</string>
+    <string name="eggplant">Padlizsán</string>
+    <string name="bread">Kenyér</string>
+    <string name="baseball_cap">Baseball sapka</string>
+    <string name="computer_chair">Számítógép szék</string>
+    <string name="train">Vonat</string>
+    <string name="wagon">Vagon</string>
+    <string name="peas">Borsó</string>
+    <string name="pot_with_honey">Mézescsupor</string>
+    <string name="mushrooms">Gomba</string>
+    <string name="potato">Burgonya</string>
+    <string name="key">Kulcs</string>
+    <string name="strawberries">Eper</string>
+    <string name="crab">Rák</string>
+    <string name="corn">Kukorica</string>
+    <string name="jug_with_milk">Tejeskancsó</string>
+    <string name="light_bulb">Villanykörte</string>
+    <string name="stork">Gólya</string>
+    <string name="pepper">Bors</string>
+    <string name="cock">Kakas</string>
+    <string name="cancer">Rák</string>
+    <string name="backpack">Hátizsák</string>
+    <string name="wizard_hat">Varázsló sapka</string>
+    <string name="soother">Cumi</string>
+    <string name="stapler">Fűzőgép</string>
+    <string name="beet">Cékla</string>
+    <string name="pumpkin">Sütőtök</string>
+    <string name="shuttlecocks">Tollaslabda</string>
+    <string name="hamburger">Hamburger</string>
+    <string name="yacht">Jacht</string>
+    <string name="scrambled_eggs">Rántotta</string>
+    <string name="umbrella">Esernyő</string>
+    <string name="banana">Banán</string>
+    <string name="pear">Körte</string>
+    <string name="lemon">Citrom</string>
+    <string name="lime">Lime</string>
+    <string name="cherry">Meggy</string>
+    <string name="tea_cup">Teáscsésze</string>
+    <string name="radish">Retek</string>
+    <string name="rhino">Orrszarvú</string>
+    <string name="sea_bear">Medvefóka</string>
+    <string name="crocodile">Krokodil</string>
+    <string name="crew_cut">Sündisznó</string>
+    <string name="gorilla">Gorilla</string>
+    <string name="fox">Róka</string>
+    <string name="pitching">Kacsa</string>
+    <string name="dog">Kutya</string>
+    <string name="koala">Koala</string>
+    <string name="butterfly">Pillangó</string>
+
+    <string name="perfect">Perfect</string>
+    <string name="wonderful">Wonderful</string>
+    <string name="well_done">Well done</string>
+    <string name="good_job">Good job</string>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+</resources>

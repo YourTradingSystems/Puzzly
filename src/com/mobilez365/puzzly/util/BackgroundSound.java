@@ -21,6 +21,7 @@ public class BackgroundSound extends AsyncTask<Void, Void, Void> {
     public BackgroundSound(Activity _activity, String _name) {
         mActivity = _activity;
         mName = _name;
+        mPlayer = new MediaPlayer();
     }
 
     @Override

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Puzzly</string>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~ MENU ~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <string name="menu_settings">SETTINGS</string>
+    <string name="menu_back">Back</string>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~ SETTINGS ~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <string name="settings_play_background_music">Play background music</string>
+    <string name="settings_play_sound">Sound in game</string>
+    <string name="settings_vibrate">Game vibration</string>
+    <string name="settings_display_inner_borders">Display inner borders</string>
+    <string name="settings_language_game">Game language</string>
+    <string name="settings_language_locale">Settings language</string>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~ Game Items ~~~~~~~~~~~~~~~~~~~~ !-->
+    <string name="piggy">Porc</string>
+    <string name="pigeon">Pigeon</string>
+    <string name="frogling">Grenouille</string>
+    <string name="rabbit">Lapin</string>
+    <string name="hen">Poussin</string>
+    <string name="octopus">Poulpe</string>
+    <string name="pencil">Crayon</string>
+    <string name="ice_cream">Glace</string>
+    <string name="fingerling">Alevin</string>
+    <string name="elephant">Elephant</string>
+    <string name="lamb">Mouton</string>
+    <string name="owl">Hibou</string>
+    <string name="snail">Escargot</string>
+    <string name="squirrel">Ecureuil</string>
+    <string name="apple">Pomme</string>
+    <string name="carrot">Carrote</string>
+    <string name="goat">Chevre</string>
+    <string name="bee">Abeille</string>
+    <string name="turtle">Tortue</string>
+    <string name="dolphin">Dauphin</string>
+    <string name="hippo">Hippopotame</string>
+    <string name="teddy_bear">Nounours</string>
+    <string name="penguin">Pinguin</string>
+    <string name="snake">Serpent</string>
+    <string name="flamingo">Flammand rose</string>
+    <string name="toucan">Toucan</string>
+    <string name="giraffe">Griraffe</string>
+    <string name="monkey">Singe</string>
+    <string name="zebra">Zebre</string>
+    <string name="lion">Lion</string>
+    <string name="kettle">Bouilloire</string>
+    <string name="car">Voiture</string>
+    <string name="eggplant">Aubergine</string>
+    <string name="bread">Pain</string>
+    <string name="baseball_cap">Casquette de base ball</string>
+    <string name="computer_chair">Chaise de bureau</string>
+    <string name="train">Train</string>
+    <string name="wagon">Wagon</string>
+    <string name="peas">Petit pois</string>
+    <string name="pot_with_honey">Pot de miel</string>
+    <string name="mushrooms">Champignon</string>
+    <string name="potato">Pomme de terre</string>
+    <string name="key">Cle</string>
+    <string name="strawberries">Fraise</string>
+    <string name="crab">Crabe</string>
+    <string name="corn">Mais</string>
+    <string name="jug_with_milk">Pot a lait</string>
+    <string name="light_bulb">Ampoule</string>
+    <string name="stork">Cigogne</string>
+    <string name="pepper">Poivre</string>
+    <string name="cock">Coq</string>
+    <string name="cancer">Ecrevisse</string>
+    <string name="backpack">Sac a dos</string>
+    <string name="wizard_hat">Chapeau de magicien</string>
+    <string name="soother">Sucette</string>
+    <string name="stapler">Agrafeuse</string>
+    <string name="beet">Betterave</string>
+    <string name="pumpkin">Potiron</string>
+    <string name="shuttlecocks">Volant</string>
+    <string name="hamburger">Hamburger</string>
+    <string name="yacht">Yacht</string>
+    <string name="scrambled_eggs">Oeufs brouilles</string>
+    <string name="umbrella">Parapluie</string>
+    <string name="banana">Banane</string>
+    <string name="pear">Poire</string>
+    <string name="lemon">Citron</string>
+    <string name="lime">Lime</string>
+    <string name="cherry">Cerise</string>
+    <string name="tea_cup">Tasse de the</string>
+    <string name="radish">Radis</string>
+    <string name="rhino">Rhinoceros</string>
+    <string name="sea_bear">Otarie</string>
+    <string name="crocodile">Crocodile</string>
+    <string name="crew_cut">Herisson</string>
+    <string name="gorilla">Gorille</string>
+    <string name="fox">Renard</string>
+    <string name="pitching">Canard</string>
+    <string name="dog">Chien</string>
+    <string name="koala">Koala</string>
+    <string name="butterfly">Papillon</string>
+
+    <string name="perfect">Perfect</string>
+    <string name="wonderful">Wonderful</string>
+    <string name="well_done">Well done</string>
+    <string name="good_job">Good job</string>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+</resources>
