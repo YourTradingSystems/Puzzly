@@ -1,6 +1,8 @@
 package com.mobilez365.puzzly.screens;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.*;
@@ -143,7 +145,13 @@ public class SettingsActivity extends RestartActivty implements View.OnClickList
     private final void setValues() {
         ccbPlayBackgroundMusic_SS.setChecked(AppHelper.getPlayBackgroundMusic(this));
         ccbPlaySound_SS.setChecked(AppHelper.getPlaySound(this));
-        ccbVibrate_SS.setChecked(AppHelper.getVibrate(this));
+
+        Vibrator mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        if(mVibrator.hasVibrator())
+            ccbVibrate_SS.setChecked(AppHelper.getVibrate(this));
+        else
+            ccbVibrate_SS.setVisibility(View.GONE);
+
         ccbDisplayInnerBorders_SS.setChecked(AppHelper.getShowImageBorder(this));
         spinnerChooseAppCountry_SS.setSelection(AppHelper.getLocalizeAppLanguage(this));
         spinnerChooseStudyCountry_SS.setSelection(AppHelper.getLocalizeStudyLanguage(this));

@@ -254,7 +254,8 @@ public class BonusLevelFlowerActivity extends InterstitialActivity implements Sh
         }
 
         if (mFlowersShownCount != mCandiesCount) {
-            mVibrator.vibrate(100);
+            if (AppHelper.getVibrate(this))
+                mVibrator.vibrate(100);
             showFlower();
         }
     }

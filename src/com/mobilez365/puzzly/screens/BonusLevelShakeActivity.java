@@ -220,7 +220,8 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements Sha
         }
 
         if (mCandiesDroppedCount != mCandiesCount) {
-            mVibrator.vibrate(100);
+            if (AppHelper.getVibrate(this))
+                mVibrator.vibrate(100);
             dropCandy();
         }
     }

@@ -32,7 +32,6 @@ public class ChoosePuzzleActivity extends Activity implements View.OnClickListen
         levelsViewPager = (ViewPager) findViewById(R.id.vpMailACP);
         mGameType = getIntent().getIntExtra("type", 0);
         levelsViewPager.setOnPageChangeListener(this);
-        levelsViewPager.setOffscreenPageLimit(3);
 
         maxLevelCount = AppHelper.getMaxGame(this, mGameType);
         currentLevel = AppHelper.getCurrentGame(this, mGameType);
@@ -52,13 +51,12 @@ public class ChoosePuzzleActivity extends Activity implements View.OnClickListen
         btnPrevious.setVisibility(View.INVISIBLE);
         levelsAdapter = new ChooseGamePagerAdapter(this, mGameType);
         levelsViewPager.setAdapter(levelsAdapter);
-        if (AppHelper.getNextGame(this, mGameType) != -1)
-            levelsViewPager.setCurrentItem(AppHelper.getCurrentGame(this, mGameType) / 4);
+        levelsViewPager.setCurrentItem(AppHelper.getCurrentGame(this, mGameType) / 4);
     }
     @Override
     protected void onResume() {
         super.onResume();
-        AppHelper.resetPassedGames();
+        //AppHelper.resetPassedGames();
         if(maxLevelCount != AppHelper.getMaxGame(this, mGameType) ||
                 currentLevel != AppHelper.getCurrentGame(this, mGameType)) {
             updateLevelsInfo();

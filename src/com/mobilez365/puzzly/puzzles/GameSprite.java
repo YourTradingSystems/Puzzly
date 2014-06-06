@@ -55,7 +55,7 @@ public class GameSprite {
         int x2 = (int) x1;
         int y2 = (int) y1;
         boolean temp = false;
-        if ((x2 > x && x2 < x + width && y2 > y && y2 < y + height) && !pieceLocked && bmp.getPixel(x2 - x, y2 - y) != Color.TRANSPARENT) {
+        if ((x2 > x && x2 < x + width && y2 > y && y2 < y + height) && !pieceLocked) {
             temp = true;
             dX = x2 - x;
             dY = y2 - y;
