@@ -22,7 +22,7 @@ public class ParseSvgAsyncTask extends AsyncTask<String, Void, Bitmap> {
     private int maxWidth;
     private int maxHeight;
 
-    interface ParseListener{
+    public interface ParseListener{
         public void onParseDone(Bitmap bitmap);
     }
 

@@ -81,179 +81,13 @@
   </component>
   <component name="AndroidLogFilters">
     <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.mobilez365.puzzly" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a79d8431-a31c-4800-9f13-431b5a1f9d4a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/aist0.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/aist1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/aist2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/aist3.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/aist4.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/aist5.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/aist6.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/aist_bordered.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/aist_gray.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/aist_result.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/butterfly0.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/butterfly1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/butterfly2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/butterfly3.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/butterfly4.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/butterfly5.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/butterfly6.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/butterfly7.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/butterfly8.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/butterfly9.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/butterfly_bordered.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/butterfly_gray.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/butterfly_result.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/computer_chair0.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/computer_chair1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/computer_chair2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/computer_chair3.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/computer_chair4.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/computer_chair5.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/computer_chair6.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/computer_chair7.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/computer_chair_bordered.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/computer_chair_gray.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/computer_chair_result.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/dog0.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/dog1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/dog2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/dog3.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/dog_gray.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/dog_result.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/fox0.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/fox1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/fox2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/fox3.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/fox_gray.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/fox_result.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/jug0.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/jug1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/jug2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/jug3.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/jug_gray.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/jug_result.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/koala0.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/koala1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/koala10.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/koala11.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/koala2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/koala3.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/koala4.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/koala5.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/koala6.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/koala7.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/koala8.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/koala9.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/koala_bordered.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/koala_gray.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/koala_result.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/lime0.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/lime1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/lime2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/lime3.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/lime4.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/lime_bordered.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/lime_gray.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/lime_result.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/mushrooms0.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/mushrooms1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/mushrooms2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/mushrooms3.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/mushrooms_gray.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/mushrooms_result.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/potato0.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/potato1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/potato2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/potato3.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/potato4.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/potato5.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/potato6.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/potato_bordered.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/potato_gray.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/potato_result.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/radish0.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/radish1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/radish2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/radish3.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/radish_gray.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/radish_result.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/scrambled_eggs0.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/scrambled_eggs1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/scrambled_eggs2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/scrambled_eggs3.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/scrambled_eggs_gray.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/scrambled_eggs_result.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/sea_bear0.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/sea_bear1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/sea_bear2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/sea_bear3.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/sea_bear4.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/sea_bear5.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/sea_bear6.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/sea_bear7.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/sea_bear_bordered.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/sea_bear_gray.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/sea_bear_result.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/strawberries0.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/strawberries1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/strawberries2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/strawberries3.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/strawberries_gray.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/strawberries_result.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/tea_cup0.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/tea_cup1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/tea_cup2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/tea_cup3.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/tea_cup4.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/tea_cup5.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/tea_cup_bordered.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/tea_cup_gray.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/tea_cup_result.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/tikva0.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/tikva1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/tikva2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/tikva3.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/tikva_gray.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/tikva_result.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/train0.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/train1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/train10.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/train11.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/train12.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/train2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/train3.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/train4.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/train5.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/train6.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/train7.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/train8.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/train9.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/train_bordered.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/train_gray.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/train_result.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/wagon0.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/wagon1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/wagon2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/wagon3.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/wagon4.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/wagon5.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/wagon6.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/wagon7.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/wagon_bordered.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/wagon_gray.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/wagon_result.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelFlowerActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelFlowerActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelShakeActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelShakeActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelTreeActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelTreeActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/ChoosePuzzleActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/ChoosePuzzleActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/GameSprite.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/GameSprite.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDB.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDB.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/customViews/GameView.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/customViews/GameView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/util/ParseSvgAsyncTask.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/util/ParseSvgAsyncTask.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_game_fill.xml" afterPath="$PROJECT_DIR$/res/layout/activity_game_fill.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Puzzly.iws" />
@@ -277,14 +111,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GameView.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/customViews/GameView.java">
+      <file leaf-file-name="PuzzlesDB.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.4110092" vertical-offset="438" max-vertical-offset="5304">
-              <caret line="71" column="43" selection-start-line="71" selection-start-column="43" selection-end-line="71" selection-end-column="43" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.41935483" vertical-offset="21" max-vertical-offset="16949">
+              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -327,10 +159,8 @@
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/RestartActivty.java" />
         <option value="$PROJECT_DIR$/res/layout/activity_choose_puzzle.xml" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/InterstitialActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/util/ParseSvgAsyncTask.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/util/GameLoopThread.java" />
-        <option value="$PROJECT_DIR$/res/layout/activity_game_fill.xml" />
         <option value="$PROJECT_DIR$/res/layout/activity_bonus_level_tree.xml" />
         <option value="$PROJECT_DIR$/res/layout/activity_bonus_level_shake.xml" />
         <option value="$PROJECT_DIR$/res/layout/activity_bonus_level_hedgehog.xml" />
@@ -344,7 +174,6 @@
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/util/ChooseGamePagerAdapter.java" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/global/AppHelper.java" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/GameSprite.java" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/ChoosePuzzleActivity.java" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDB.java" />
@@ -353,7 +182,10 @@
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelTreeActivity.java" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/settings_screen.xml" />
+        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/util/ParseSvgAsyncTask.java" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/customViews/GameView.java" />
+        <option value="$PROJECT_DIR$/res/layout/activity_game_fill.xml" />
+        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java" />
       </list>
     </option>
   </component>
@@ -389,6 +221,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -468,6 +302,28 @@
               <option name="myItemId" value="puzzly" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="puzzles" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Puzzly" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Puzzly" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="puzzly" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -491,24 +347,8 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Puzzly" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Puzzly" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -568,15 +408,15 @@
       <recent name="C:\Android\SkyDrive\workspace\Puzzly\libs" />
       <recent name="C:\Android\SkyDrive\workspace\Puzzly\res\raw" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.mobilez365.puzzly" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Android\SkyDrive\workspace\Puzzly\res\raw" />
       <recent name="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-xxhdpi" />
       <recent name="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-xhdpi" />
       <recent name="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-mdpi" />
       <recent name="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-hdpi" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.mobilez365.puzzly" />
     </key>
   </component>
   <component name="RunManager" selected="Android Application.Puzzly">
@@ -886,15 +726,19 @@
       <created>1401959420764</created>
       <updated>1401959420764</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="New levels added.">
+      <created>1402050038417</created>
+      <updated>1402050038417</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32197616" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3208191" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -912,7 +756,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18910742" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18910742" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="16" y="135" width="1182" height="544" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -937,7 +781,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Menu btn click fix" />
     <MESSAGE value="Picture start coord changes" />
     <MESSAGE value="Game 1 fix" />
     <MESSAGE value="Game 1 fixes" />
@@ -962,11 +805,12 @@
     <MESSAGE value="new bonus level" />
     <MESSAGE value="Snake level fixes. New levels." />
     <MESSAGE value="Locale changes. Game fixes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Locale changes. Game fixes." />
+    <MESSAGE value="New levels added." />
+    <option name="LAST_COMMIT_MESSAGE" value="New levels added." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="212" />
+      <option name="time" value="222" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -996,14 +840,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/activity_choose_puzzle.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="316" max-vertical-offset="1122">
           <caret line="33" column="46" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/background_bonus_level_flower.png">
@@ -1095,59 +939,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_game_fill.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1118" max-vertical-offset="1649">
-          <caret line="86" column="33" selection-start-line="86" selection-start-column="33" selection-end-line="86" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_bonus_level_tree.xml">
       <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_bonus_level_tree.xml">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/activity_bonus_level_shake.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="183" max-vertical-offset="714">
           <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-          <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/activity_bonus_level_hedgehog.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1105">
-          <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1105">
+          <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/activity_bonus_level_flower.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="799">
           <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/raw/snake_result.svg">
@@ -1179,14 +1009,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/item_choose_puzzle.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2937" max-vertical-offset="3723">
           <caret line="198" column="39" selection-start-line="198" selection-start-column="39" selection-end-line="198" selection-end-column="39" />
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values-hi/strings.xml">
@@ -1224,7 +1054,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.5687733" vertical-offset="343" max-vertical-offset="901">
           <caret line="45" column="41" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1235,33 +1064,83 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/util/GameLoopThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48679245" vertical-offset="337" max-vertical-offset="867">
-          <caret line="41" column="14" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/GameSprite.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33207548" vertical-offset="708" max-vertical-offset="1394">
           <caret line="57" column="83" selection-start-line="57" selection-start-column="83" selection-end-line="57" selection-end-column="83" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/util/ParseSvgAsyncTask.java">
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelHedgehogActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17741935" vertical-offset="411" max-vertical-offset="969">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.3326886" vertical-offset="304" max-vertical-offset="3791">
+          <caret line="49" column="20" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelTreeActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3655706" vertical-offset="3024" max-vertical-offset="4335">
+          <caret line="215" column="39" selection-start-line="215" selection-start-column="39" selection-end-line="215" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelShakeActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3655706" vertical-offset="3160" max-vertical-offset="3944">
+          <caret line="223" column="39" selection-start-line="223" selection-start-column="39" selection-end-line="223" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/global/AppHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39426523" vertical-offset="4659" max-vertical-offset="6341">
+          <caret line="325" column="54" selection-start-line="325" selection-start-column="50" selection-end-line="325" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/settings_screen.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39171374" vertical-offset="1271" max-vertical-offset="2720">
+          <caret line="87" column="59" selection-start-line="87" selection-start-column="59" selection-end-line="87" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7921147" vertical-offset="0" max-vertical-offset="2958">
+          <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/util/AnimationEndListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="18" max-vertical-offset="799">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/util/GameLoopThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.390681" vertical-offset="309" max-vertical-offset="867">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelFlowerActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39816514" vertical-offset="2299" max-vertical-offset="4335">
+          <caret line="178" column="0" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="90" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/ChoosePuzzleActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63978493" vertical-offset="51" max-vertical-offset="1836">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1278" max-vertical-offset="1836">
           <caret line="33" column="54" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="54" />
           <folding />
         </state>
@@ -1269,9 +1148,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/util/ChooseGamePagerAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1539" max-vertical-offset="2856">
-          <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.27419356" vertical-offset="1887" max-vertical-offset="2856">
+          <caret line="145" column="45" selection-start-line="145" selection-start-column="45" selection-end-line="145" selection-end-column="45" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_game_fill.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="44" max-vertical-offset="1768">
+          <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/util/ParseSvgAsyncTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4265233" vertical-offset="0" max-vertical-offset="969">
+          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/customViews/GameView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.2128441" vertical-offset="1937" max-vertical-offset="4114">
+          <caret line="59" column="31" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="7.0055046" vertical-offset="177" max-vertical-offset="4896">
+          <caret line="235" column="112" selection-start-line="235" selection-start-column="112" selection-end-line="235" selection-end-column="112" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1280,83 +1196,6 @@
         <state vertical-scroll-proportion="0.41935483" vertical-offset="21" max-vertical-offset="16949">
           <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39816514" vertical-offset="2877" max-vertical-offset="3859">
-          <caret line="203" column="35" selection-start-line="202" selection-start-column="7" selection-end-line="203" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelHedgehogActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3326886" vertical-offset="304" max-vertical-offset="3791">
-          <caret line="49" column="20" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelTreeActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3655706" vertical-offset="3024" max-vertical-offset="4335">
-          <caret line="215" column="39" selection-start-line="215" selection-start-column="39" selection-end-line="215" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelShakeActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3655706" vertical-offset="3160" max-vertical-offset="3944">
-          <caret line="223" column="39" selection-start-line="223" selection-start-column="39" selection-end-line="223" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/global/AppHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39426523" vertical-offset="4659" max-vertical-offset="6341">
-          <caret line="325" column="54" selection-start-line="325" selection-start-column="50" selection-end-line="325" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/settings_screen.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39171374" vertical-offset="1271" max-vertical-offset="2720">
-          <caret line="87" column="59" selection-start-line="87" selection-start-column="59" selection-end-line="87" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7921147" vertical-offset="0" max-vertical-offset="2958">
-          <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelFlowerActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3245283" vertical-offset="593" max-vertical-offset="4335">
-          <caret line="72" column="74" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/customViews/GameView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4110092" vertical-offset="438" max-vertical-offset="5304">
-          <caret line="71" column="43" selection-start-line="71" selection-start-column="43" selection-end-line="71" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

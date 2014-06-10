@@ -6,9 +6,6 @@ import android.content.Context;
 import android.graphics.*;
 import android.util.DisplayMetrics;
 import android.view.*;
-import android.view.animation.AlphaAnimation;
-import android.view.animation.Animation;
-import android.view.animation.Transformation;
 import com.larvalabs.svgandroid.SVG;
 import com.larvalabs.svgandroid.SVGParser;
 import com.mobilez365.puzzly.R;
@@ -44,16 +41,9 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
     private static final int REVEAL_GAME = 1;
     private int gameType;
     private List<PuzzlesPart> parts;
-    private Paint mCharacterPaint = null;
-    private Animation mFadeIn;
-    private Transformation mTransformation;
-    private long count;
-    private Bitmap movedShape;
-    private boolean moveToCenter = false;
-    private int newCenteredFigureHeight;
 
     public interface GameCallBacks {
-        public void onGameFinish();
+        public void onGameFinish(String resultImage, int x, int y, int width, int height);
 
         public void onPartMove();
 
@@ -148,52 +138,13 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         if (canvas == null) return;
         canvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
         canvas.drawColor(getResources().getColor(R.color.background_game));
-        if (!gameOver && gameType == FILL_GAME) canvas.drawBitmap(shape, figurePosX, figurePosY, null);
+        canvas.drawBitmap(shape, figurePosX, figurePosY, null);
 
-        if ((mFadeIn == null || !mFadeIn.hasEnded()) && (gameType == FILL_GAME || !gameOver)) {
             synchronized (this) {
                 for (GameSprite spt : sprites) {
                     spt.onDraw(canvas);
                 }
             }
-        }
-        if (gameOver) {
-            if (gameType == REVEAL_GAME) {
-                synchronized (this) {
-                    for (GameSprite spr : sprites) {
-                        if (spr.isPieceLocked()) canvas.drawBitmap(spr.bmp, spr.lockedX, spr.lockedY, mCharacterPaint);
-                    }
-                }
-            }
-            if (mFadeIn != null && mFadeIn.hasStarted() && !mFadeIn.hasEnded()) {
-                mFadeIn.getTransformation(System.currentTimeMillis(), mTransformation);
-                mCharacterPaint.setAlpha((int) (255 * mTransformation.getAlpha()));
-                canvas.drawBitmap(shape, figurePosX, figurePosY, mCharacterPaint);
-            } else if (mFadeIn != null && mFadeIn.hasEnded()) {
-                for (GameSprite spr : sprites) {
-                    spr = null;
-                }
-                sprites.clear();
-                //final move shape to center
-                if (moveToCenter) {
-                    if (count == GameLoopThread.FPS / 2) end = gameOver;
-                    double k = (1 - (double) count / GameLoopThread.FPS * 2);
-                    double kF = newCenteredFigureHeight / (double) shape.getHeight();
-                    if(kF > 1)
-                        kF = 1;
-
-                    int finalFugureWidth = (int) Math.round(shape.getWidth() * (kF + k * (1 - kF)));
-                    int finalFugureHeight = (int) Math.round(shape.getHeight() * (kF + k * (1 - kF)));
-                    double centerX = getScaledX(svgBackgroundWidth) / 2 - finalFugureWidth / 2;
-                    double centerY = getScaledY(svgBackgroundHeight) / 2 - finalFugureHeight / 2;
-                    int finalFigurePosX = (int) Math.round(centerX + (figurePosX - centerX) * k);
-                    int finalFigurePosY = (int) Math.round(centerY + (figurePosY - centerY) * k);
-                    movedShape = Bitmap.createScaledBitmap(shape, finalFugureWidth, finalFugureHeight, true);
-                    canvas.drawBitmap(movedShape, finalFigurePosX, finalFigurePosY, mCharacterPaint);
-                    count++;
-                } else canvas.drawBitmap(shape, figurePosX, figurePosY, mCharacterPaint);
-            }
-        }
     }
 
     public boolean onTouchEvent(MotionEvent event) {
@@ -243,17 +194,24 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                                     break;
                                 case REVEAL_GAME:
                                     gameOver = true;
+                                    LinkedHashSet<GameSprite> newSprites = new LinkedHashSet<GameSprite>();
+                                    boolean firstSprite = true;
+                                    for (GameSprite spt : sprites) {
+                                        if (spt.equals(sprite) || firstSprite)
+                                            newSprites.add(spt);
+                                        firstSprite = false;
+                                    }
+                                    sprites = newSprites;
                                     break;
                             }
                             if (gameOver) {
-                                createFigure(puzzleFillGame.getResultImage());
-                                fade();
                                 ((Activity)listener).runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
-                                        listener.onGameFinish();
+                                        listener.onGameFinish(puzzleFillGame.getResultImage(), figurePosX, figurePosY, shape.getWidth(), shape.getHeight());
                                     }
                                 });
+                                end = gameOver;
                             }
                         }
                     }
@@ -265,11 +223,6 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                 break;
         }
         return true;
-    }
-
-    public void moveFigureToCenter(int newHeight) {
-        moveToCenter = true;
-        newCenteredFigureHeight = newHeight;
     }
 
     public boolean isEnd() {
@@ -306,13 +259,6 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         getHolder().getSurface().release();
     }
 
-    private void fade() {
-        mCharacterPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-        mFadeIn = new AlphaAnimation((gameType == FILL_GAME) ? 0f : 0.35f, 1f);
-        mTransformation = new Transformation();
-        mFadeIn.setDuration(1000);
-        mFadeIn.start();
-        mFadeIn.getTransformation(System.currentTimeMillis(), mTransformation);
-    }
+
 }
  
