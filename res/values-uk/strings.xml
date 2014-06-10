@@ -15,10 +15,15 @@
     <string name="settings_play_sound">Відтворення ігрових звуків</string>
     <string name="settings_vibrate">Вібрація у грі</string>
     <string name="settings_display_inner_borders">Показувати внутрішні границі</string>
-    <string name="settings_language_game">Мова гри</string>
-    <string name="settings_language_locale">Мова налаштувань</string>
+    <string name="settings_localize_app_language">Мова налаштувань</string>
+    <string name="settings_localize_study_language">Мова гри</string>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~ CHOOSE LEVEL ~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+    <string name="choose_level_new_level">Новий рівень</string>
+    <string name="choose_level_locked_level">Рівень заблокований</string>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
     <!-- ~~~~~~~~~~~~~~~~~~~ Game Items ~~~~~~~~~~~~~~~~~~~~ !-->
     <string name="piggy">Свиня</string>

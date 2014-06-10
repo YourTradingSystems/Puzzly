@@ -87,12 +87,14 @@ public class SettingsActivity extends RestartActivty implements View.OnClickList
             if(_parent.getId() == R.id.spinnerChooseAppCountry_SS) {
                 AppHelper.setLocalizeAppLanguage(this, _position);
                 AppHelper.changeLanguageRefresh(this, AppHelper.getLocaleLanguage(this, Constans.APP_LANGUAGE).name(), swMain.getScrollY());
-                
+            }
+            else {
+                AppHelper.setLocalizeStudyLanguage(this, _position);
+                AppHelper.changeLanguageRefresh(this, AppHelper.getLocaleLanguage(this, Constans.GAME_LANGUAGE).name(), swMain.getScrollY());
+
                 //update word in table
                 PuzzlesDB.updateTableGameWord(this);
             }
-            else
-                AppHelper.setLocalizeStudyLanguage(this, _position);
         }
         else
             displayInit ++;

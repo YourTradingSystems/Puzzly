@@ -4,24 +4,29 @@
 
     <!-- ~~~~~~~~~~~~~~~~~~~ MENU ~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
-    <string name="menu_settings">SETTINGS</string>
-    <string name="menu_back">Back</string>
+    <string name="menu_settings">REGLAGES</string>
+    <string name="menu_back">Arrière</string>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
     <!-- ~~~~~~~~~~~~~~~~~~~ SETTINGS ~~~~~~~~~~~~~~~~~~~~~~ !-->
 
-    <string name="settings_play_background_music">Play background music</string>
-    <string name="settings_play_sound">Sound in game</string>
-    <string name="settings_vibrate">Game vibration</string>
-    <string name="settings_display_inner_borders">Display inner borders</string>
-    <string name="settings_language_game">Game language</string>
-    <string name="settings_language_locale">Settings language</string>
+    <string name="settings_play_background_music">Jouer de la musique de fond</string>
+    <string name="settings_play_sound">Son dans le jeu</string>
+    <string name="settings_vibrate">Vibration du jeu</string>
+    <string name="settings_display_inner_borders">Afficher frontières intérieures</string>
+    <string name="settings_localize_app_language">Langue de paramètres</string>
+    <string name="settings_localize_study_language">Langue de jeu</string>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
+    <!-- ~~~~~~~~~~~~~~~~~~~ CHOOSE LEVEL ~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+    <string name="choose_level_new_level">Nouveau niveau</string>
+    <string name="choose_level_locked_level">Niveau verrouillé</string>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
     <!-- ~~~~~~~~~~~~~~~~~~~ Game Items ~~~~~~~~~~~~~~~~~~~~ !-->
-    <string name="piggy">Porc</string>
+    <string name="piggy">Porcelet</string>
     <string name="pigeon">Pigeon</string>
     <string name="frogling">Grenouille</string>
     <string name="rabbit">Lapin</string>
@@ -102,10 +107,10 @@
     <string name="koala">Koala</string>
     <string name="butterfly">Papillon</string>
 
-    <string name="perfect">Perfect</string>
-    <string name="wonderful">Wonderful</string>
-    <string name="well_done">Well done</string>
-    <string name="good_job">Good job</string>
+    <string name="perfect">Parfait</string>
+    <string name="wonderful">Merveilleux</string>
+    <string name="well_done">Bravo</string>
+    <string name="good_job">Bon travail</string>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
 </resources>

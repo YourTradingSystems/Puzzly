@@ -51,963 +51,388 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.mobilez365.puzzly" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a79d8431-a31c-4800-9f13-431b5a1f9d4a" name="Default" comment="implement almou">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/apple.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/apple.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/apple.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/apple.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/apple.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/apple.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/apple.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/apple.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/apple.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/backpack.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/backpack.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/backpack.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/backpack.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/backpack.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/backpack.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/backpack.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/backpack.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/backpack.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/banana.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/banana.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/banana.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/banana.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/banana.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/banana.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/banana.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/banana.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/banana.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/banana.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/banana.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/baseball_cap.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/baseball_cap.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/baseball_cap.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/baseball_cap.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/baseball_cap.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/baseball_cap.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/baseball_cap.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/baseball_cap.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/baseball_cap.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/bee.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/bee.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/bee.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/bee.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/bee.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/bee.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/bee.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/bee.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/bee.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/beet.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/beet.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/beet.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/beet.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/beet.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/beet.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/beet.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/beet.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/beet.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/bread.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/bread.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/bread.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/bread.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/bread.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/bread.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/bread.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/bread.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/bread.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/butterfly.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/butterfly.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/butterfly.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/butterfly.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/butterfly.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/butterfly.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/butterfly.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/butterfly.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/butterfly.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/butterfly.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/butterfly.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/cancer.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/cancer.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/cancer.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/cancer.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/cancer.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/cancer.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/cancer.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/cancer.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/cancer.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/car.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/car.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/car.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/car.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/car.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/car.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/car.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/car.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/car.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/carrot.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/carrot.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/carrot.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/carrot.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/carrot.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/carrot.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/carrot.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/carrot.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/carrot.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/cherry.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/cherry.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/cherry.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/cherry.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/cherry.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/cherry.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/cherry.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/cherry.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/cherry.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/cherry.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/cherry.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/cock.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/cock.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/cock.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/cock.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/cock.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/cock.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/cock.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/cock.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/cock.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/computer_chair.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/computer_chair.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/computer_chair.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/computer_chair.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/computer_chair.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/computer_chair.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/computer_chair.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/computer_chair.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/computer_chair.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/corn.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/corn.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/corn.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/corn.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/corn.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/corn.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/corn.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/corn.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/corn.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/crab.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/crab.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/crab.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/crab.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/crab.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/crab.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/crab.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/crab.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/crab.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/crew_cut.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/crew_cut.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/crew_cut.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/crew_cut.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/crew_cut.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/crew_cut.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/crew_cut.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/crew_cut.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/crew_cut.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/crew_cut.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/crew_cut.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/crocodile.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/crocodile.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/crocodile.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/crocodile.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/crocodile.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/crocodile.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/crocodile.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/crocodile.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/crocodile.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/crocodile.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/crocodile.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/dog.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/dog.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/dog.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/dog.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/dog.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/dog.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/dog.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/dog.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/dog.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/dog.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/dog.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/dolphin.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/dolphin.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/dolphin.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/dolphin.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/dolphin.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/dolphin.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/dolphin.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/dolphin.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/dolphin.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/duck.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/eggplant.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/eggplant.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/eggplant.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/eggplant.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/eggplant.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/eggplant.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/eggplant.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/eggplant.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/eggplant.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/elephant.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/elephant.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/elephant.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/elephant.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/elephant.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/elephant.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/elephant.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/elephant.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/elephant.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/fingerling.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/fingerling.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/fingerling.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/fingerling.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/fingerling.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/fingerling.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/fingerling.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/fingerling.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/fingerling.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/fingerling.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/flamingo.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/flamingo.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/flamingo.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/flamingo.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/flamingo.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/flamingo.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/flamingo.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/flamingo.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/flamingo.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/fox.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/fox.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/fox.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/fox.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/fox.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/fox.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/fox.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/fox.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/fox.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/fox.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/fox.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/frogling.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/frogling.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/frogling.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/frogling.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/frogling.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/frogling.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/frogling.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/frogling.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/frogling.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/frogling.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/giraffe.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/giraffe.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/giraffe.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/giraffe.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/giraffe.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/giraffe.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/giraffe.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/giraffe.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/giraffe.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/goat.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/goat.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/goat.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/goat.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/goat.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/goat.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/goat.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/goat.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/goat.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/good_job.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/good_job.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/good_job.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/good_job.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/good_job.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/good_job.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/good_job.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/gorilla.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/gorilla.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/gorilla.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/gorilla.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/gorilla.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/gorilla.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/gorilla.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/gorilla.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/gorilla.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/gorilla.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/gorilla.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/hamburger.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/hamburger.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/hamburger.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/hamburger.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/hamburger.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/hamburger.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/hamburger.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/hamburger.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/hamburger.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/hen.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/hen.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/hen.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/hen.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/hen.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/hen.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/hen.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/hen.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/hen.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/hen.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/hippo.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/hippo.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/hippo.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/hippo.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/hippo.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/hippo.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/hippo.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/hippo.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/hippo.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/ice_cream.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/ice_cream.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/ice_cream.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/ice_cream.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/ice_cream.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/ice_cream.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/ice_cream.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/ice_cream.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/ice_cream.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/jug_with_milk.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/jug_with_milk.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/jug_with_milk.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/jug_with_milk.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/jug_with_milk.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/jug_with_milk.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/jug_with_milk.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/jug_with_milk.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/jug_with_milk.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/kettle.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/kettle.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/kettle.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/kettle.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/kettle.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/kettle.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/kettle.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/kettle.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/kettle.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/key.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/key.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/key.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/key.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/key.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/key.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/key.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/key.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/key.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/koala.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/koala.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/koala.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/koala.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/koala.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/koala.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/koala.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/koala.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/koala.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/koala.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/koala.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/lamb.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/lamb.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/lamb.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/lamb.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/lamb.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/lamb.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/lamb.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/lamb.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/lamb.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/lemon.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/lemon.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/lemon.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/lemon.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/lemon.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/lemon.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/lemon.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/lemon.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/lemon.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/lemon.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/light_bulb.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/lightbulb.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/lightbulb.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/lightbulb.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/lightbulb.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/lightbulb.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/lightbulb.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/lightbulb.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/lightbulb.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/lime.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/lime.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/lime.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/lime.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/lime.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/lime.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/lime.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/lime.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/lime.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/lime.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/lime.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/limon.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/lion.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/lion.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/lion.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/lion.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/lion.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/lion.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/lion.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/lion.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/lion.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/monkey.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/monkey.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/monkey.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/monkey.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/monkey.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/monkey.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/monkey.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/monkey.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/monkey.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/mushroom.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/mushrooms.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/mushrooms.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/mushrooms.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/mushrooms.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/mushrooms.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/mushrooms.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/mushrooms.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/mushrooms.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/octopus.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/octopus.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/octopus.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/octopus.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/octopus.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/octopus.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/octopus.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/octopus.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/octopus.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/owl.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/owl.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/owl.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/owl.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/owl.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/owl.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/owl.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/owl.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/owl.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/pear.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/pear.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/pear.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/pear.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/pear.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/pear.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/pear.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/pear.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/pear.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/pear.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/pear.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/peas.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/peas.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/peas.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/peas.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/peas.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/peas.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/peas.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/peas.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/peas.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/pencil.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/pencil.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/pencil.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/pencil.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/pencil.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/pencil.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/pencil.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/pencil.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/pencil.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/penguin.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/penguin.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/penguin.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/penguin.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/penguin.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/penguin.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/penguin.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/penguin.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/penguin.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/pepper.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/pepper.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/pepper.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/pepper.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/pepper.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/pepper.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/pepper.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/pepper.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/pepper.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/perfect.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/perfect.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/perfect.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/perfect.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/perfect.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/perfect.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/perfect.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/pigeon.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/pigeon.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/pigeon.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/pigeon.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/pigeon.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/pigeon.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/pigeon.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/pigeon.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/pigeon.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/pigeon.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/piggy.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/piggy.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/piggy.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/piggy.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/piggy.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/piggy.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/piggy.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/piggy.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/piggy.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/piggy.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/pitching.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/pitching.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/pitching.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/pitching.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/pitching.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/pitching.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/pitching.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/pitching.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/pitching.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/pitching.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/pot_with_honey.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/pot_with_honey.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/pot_with_honey.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/pot_with_honey.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/pot_with_honey.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/pot_with_honey.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/pot_with_honey.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/pot_with_honey.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/pot_with_honey.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/potato.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/potato.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/potato.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/potato.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/potato.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/potato.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/potato.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/potato.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/potato.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/pumpkin.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/pumpkin.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/pumpkin.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/pumpkin.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/pumpkin.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/pumpkin.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/pumpkin.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/pumpkin.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/pumpkin.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/pumpkin.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/rabbit.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/rabbit.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/rabbit.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/rabbit.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/rabbit.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/rabbit.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/rabbit.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/rabbit.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/rabbit.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/radish.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/radish.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/radish.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/radish.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/radish.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/radish.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/radish.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/radish.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/radish.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/radish.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/radish.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/rhino.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/rhino.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/rhino.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/rhino.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/rhino.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/rhino.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/rhino.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/rhino.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/rhino.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/rhino.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/rhino.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/scrambled_eggs.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/scrambled_eggs.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/scrambled_eggs.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/scrambled_eggs.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/scrambled_eggs.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/scrambled_eggs.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/scrambled_eggs.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/scrambled_eggs.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/scrambled_eggs.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/sea_bear.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/sea_bear.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/sea_bear.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/sea_bear.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/sea_bear.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/sea_bear.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/sea_bear.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/sea_bear.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/sea_bear.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/sea_bear.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/sea_bear.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/shuttercocks.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/shuttlecocks.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/shuttlecocks.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/shuttlecocks.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/shuttlecocks.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/shuttlecocks.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/shuttlecocks.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/shuttlecocks.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/shuttlecocks.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/snail.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/snail.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/snail.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/snail.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/snail.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/snail.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/snail.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/snail.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/snail.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/snake.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/snake.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/snake.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/snake.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/snake.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/snake.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/snake.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/snake.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/snake.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/soother.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/soother.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/soother.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/soother.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/soother.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/soother.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/soother.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/soother.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/soother.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/squirrel.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/squirrel.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/squirrel.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/squirrel.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/squirrel.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/squirrel.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/squirrel.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/squirrel.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/squirrel.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/stapler.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/stapler.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/stapler.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/stapler.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/stapler.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/stapler.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/stapler.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/stapler.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/stapler.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/stork.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/stork.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/stork.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/stork.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/stork.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/stork.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/stork.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/stork.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/stork.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/strawberries.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/strawberries.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/strawberries.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/strawberries.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/strawberries.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/strawberries.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/strawberries.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/strawberries.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/strawberry.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/tea_cup.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/tea_cup.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/tea_cup.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/tea_cup.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/tea_cup.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/tea_cup.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hi/tea_cup.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/tea_cup.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/tea_cup.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/tea_cup.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/tea_cup.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/teddy_bear.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/teddy_bear.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/teddy_bear.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/teddy_bear.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/teddy_bear.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/teddy_bear.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/teddy_bear.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/teddy_bear.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/teddy_bear.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/teddy_bear.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/toucan.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/toucan.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/toucan.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/toucan.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/toucan.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/toucan.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/toucan.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/toucan.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/toucan.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/train.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/train.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/train.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/train.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/train.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/train.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/train.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/train.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/train.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/turtle.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/turtle.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/turtle.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/turtle.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/turtle.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/turtle.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/turtle.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/turtle.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/turtle.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/umbrella.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/umbrella.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/umbrella.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/umbrella.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/umbrella.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/umbrella.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/umbrella.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/umbrella.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/umbrella.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/wagon.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/wagon.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/wagon.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/wagon.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/wagon.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/wagon.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/wagon.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/wagon.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/wagon.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/wagon.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/well_done.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/well_done.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/well_done.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/well_done.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/well_done.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/well_done.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/well_done.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/wizard_hat.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/wizard_hat.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/wizard_hat.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/wizard_hat.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/wizard_hat.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/wizard_hat.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/wizard_hat.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/wizard_hat.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/wizard_hat.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/wonderful.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/wonderful.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/wonderfull.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/wonderfull.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/wonderfull.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/wonderfull.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/wonderfull.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/yacht.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/yacht.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/yacht.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/yacht.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/yacht.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/yacht.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/yacht.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/yacht.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/yacht.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ar/zebra.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-de/zebra.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-es/zebra.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-fr/zebra.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-he/zebra.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-hu/zebra.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-iw/zebra.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-uk/zebra.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/zebra.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/banana0.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/banana1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/banana2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/banana3.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/banana_gray.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/banana_result.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values-ar/strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values-de/strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values-es/strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values-fr/strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values-he/strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values-hu/strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values-iw/strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values-uk/strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values-zh/strings.xml" />
-      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-hi\banan.mp3" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\banan.mp3" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\banan0.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\banan1.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\banan2.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\banan3.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\banan_gray.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\banan_result.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\dove.mp3" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\pig.mp3" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\toad.mp3" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/apple.mp3" afterPath="$PROJECT_DIR$/res/raw/apple.mp3" />
+    <list default="true" id="a79d8431-a31c-4800-9f13-431b5a1f9d4a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/banana.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/butterfly.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/cherry.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/crew_cut.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/crocodile.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/dog.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/fox.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/gorilla.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/koala.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/lemon.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/lime.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/pear.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/pitching.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/radish.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/rhino.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/sea_bear.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/tea_cup.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/wagon.mp3" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-ru\banan.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-ru\excellent.mp3" afterPath="" />
+      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\aist0.svg" afterPath="$PROJECT_DIR$/res/raw/stork0.svg" />
+      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\aist1.svg" afterPath="$PROJECT_DIR$/res/raw/stork1.svg" />
+      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\aist2.svg" afterPath="$PROJECT_DIR$/res/raw/stork2.svg" />
+      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\aist3.svg" afterPath="$PROJECT_DIR$/res/raw/stork3.svg" />
+      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\aist4.svg" afterPath="$PROJECT_DIR$/res/raw/stork4.svg" />
+      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\aist5.svg" afterPath="$PROJECT_DIR$/res/raw/stork5.svg" />
+      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\aist6.svg" afterPath="$PROJECT_DIR$/res/raw/stork6.svg" />
+      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\aist_bordered.svg" afterPath="$PROJECT_DIR$/res/raw/stork_bordered.svg" />
+      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\aist_gray.svg" afterPath="$PROJECT_DIR$/res/raw/stork_gray.svg" />
+      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\aist_result.svg" afterPath="$PROJECT_DIR$/res/raw/stork_result.svg" />
+      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\jug0.svg" afterPath="$PROJECT_DIR$/res/raw/jug_with_milk0.svg" />
+      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\jug1.svg" afterPath="$PROJECT_DIR$/res/raw/jug_with_milk1.svg" />
+      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\jug2.svg" afterPath="$PROJECT_DIR$/res/raw/jug_with_milk2.svg" />
+      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\jug3.svg" afterPath="$PROJECT_DIR$/res/raw/jug_with_milk3.svg" />
+      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\jug_gray.svg" afterPath="$PROJECT_DIR$/res/raw/jug_with_milk_gray.svg" />
+      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\jug_result.svg" afterPath="$PROJECT_DIR$/res/raw/jug_with_milk_result.svg" />
+      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\tikva0.svg" afterPath="$PROJECT_DIR$/res/raw/pumpkin0.svg" />
+      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\tikva1.svg" afterPath="$PROJECT_DIR$/res/raw/pumpkin1.svg" />
+      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\tikva2.svg" afterPath="$PROJECT_DIR$/res/raw/pumpkin2.svg" />
+      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\tikva3.svg" afterPath="$PROJECT_DIR$/res/raw/pumpkin3.svg" />
+      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\tikva_gray.svg" afterPath="$PROJECT_DIR$/res/raw/pumpkin_gray.svg" />
+      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\tikva_result.svg" afterPath="$PROJECT_DIR$/res/raw/pumpkin_result.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/apple.mp3" afterPath="$PROJECT_DIR$/res/raw-es/apple.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/apple.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/apple.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/backpack.mp3" afterPath="$PROJECT_DIR$/res/raw/backpack.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/apple.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/apple.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/apple.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/apple.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/backpack.mp3" afterPath="$PROJECT_DIR$/res/raw-es/backpack.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/backpack.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/backpack.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/baseball_cap.mp3" afterPath="$PROJECT_DIR$/res/raw/baseball_cap.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/backpack.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/backpack.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/backpack.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/backpack.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/banana.mp3" afterPath="$PROJECT_DIR$/res/raw-es/banana.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/banana.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/banana.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/banana.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/banana.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/baseball_cap.mp3" afterPath="$PROJECT_DIR$/res/raw-es/baseball_cap.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/baseball_cap.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/baseball_cap.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/bee.mp3" afterPath="$PROJECT_DIR$/res/raw/bee.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/baseball_cap.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/baseball_cap.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/baseball_cap.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/baseball_cap.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/bee.mp3" afterPath="$PROJECT_DIR$/res/raw-es/bee.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/bee.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/bee.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/beet.mp3" afterPath="$PROJECT_DIR$/res/raw/beet.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/bee.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/bee.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/bee.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/bee.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/beet.mp3" afterPath="$PROJECT_DIR$/res/raw-es/beet.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/beet.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/beet.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/bread.mp3" afterPath="$PROJECT_DIR$/res/raw/bread.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/beet.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/beet.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/beet.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/beet.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/bread.mp3" afterPath="$PROJECT_DIR$/res/raw-es/bread.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/bread.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/bread.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/cancer.mp3" afterPath="$PROJECT_DIR$/res/raw/cancer.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/bread.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/bread.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/bread.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/bread.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/butterfly.mp3" afterPath="$PROJECT_DIR$/res/raw-es/butterfly.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/butterfly.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/butterfly.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/butterfly.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/butterfly.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/cancer.mp3" afterPath="$PROJECT_DIR$/res/raw-es/cancer.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/cancer.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/cancer.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/car.mp3" afterPath="$PROJECT_DIR$/res/raw/car.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/cancer.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/cancer.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/cancer.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/cancer.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/car.mp3" afterPath="$PROJECT_DIR$/res/raw-es/car.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/car.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/car.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/carrot.mp3" afterPath="$PROJECT_DIR$/res/raw/carrot.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/car.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/car.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/car.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/car.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/carrot.mp3" afterPath="$PROJECT_DIR$/res/raw-es/carrot.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/carrot.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/carrot.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/cock.mp3" afterPath="$PROJECT_DIR$/res/raw/cock.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/carrot.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/carrot.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/carrot.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/carrot.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/cherry.mp3" afterPath="$PROJECT_DIR$/res/raw-es/cherry.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/cherry.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/cherry.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/cherry.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/cherry.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/cock.mp3" afterPath="$PROJECT_DIR$/res/raw-es/cock.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/cock.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/cock.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/computer_chair.mp3" afterPath="$PROJECT_DIR$/res/raw/computer_chair.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/cock.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/cock.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/cock.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/cock.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/computer_chair.mp3" afterPath="$PROJECT_DIR$/res/raw-es/computer_chair.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/computer_chair.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/computer_chair.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/corn.mp3" afterPath="$PROJECT_DIR$/res/raw/corn.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/computer_chair.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/computer_chair.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/computer_chair.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/computer_chair.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/corn.mp3" afterPath="$PROJECT_DIR$/res/raw-es/corn.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/corn.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/corn.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/crab.mp3" afterPath="$PROJECT_DIR$/res/raw/crab.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/corn.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/corn.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/corn.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/corn.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/crab.mp3" afterPath="$PROJECT_DIR$/res/raw-es/crab.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/crab.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/crab.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/dolphin.mp3" afterPath="$PROJECT_DIR$/res/raw/dolphin.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/crab.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/crab.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/crab.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/crab.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/crew_cut.mp3" afterPath="$PROJECT_DIR$/res/raw-es/crew_cut.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/crew_cut.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/crew_cut.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/crew_cut.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/crew_cut.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/crocodile.mp3" afterPath="$PROJECT_DIR$/res/raw-es/crocodile.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/crocodile.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/crocodile.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/crocodile.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/crocodile.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/dog.mp3" afterPath="$PROJECT_DIR$/res/raw-es/dog.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/dog.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/dog.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/dog.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/dog.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/dolphin.mp3" afterPath="$PROJECT_DIR$/res/raw-es/dolphin.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/dolphin.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/dolphin.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/eggplant.mp3" afterPath="$PROJECT_DIR$/res/raw/eggplant.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/dolphin.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/dolphin.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/dolphin.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/dolphin.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/eggplant.mp3" afterPath="$PROJECT_DIR$/res/raw-es/eggplant.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/eggplant.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/eggplant.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/elephant.mp3" afterPath="$PROJECT_DIR$/res/raw/elephant.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/eggplant.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/eggplant.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/eggplant.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/eggplant.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/elephant.mp3" afterPath="$PROJECT_DIR$/res/raw-es/elephant.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/elephant.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/elephant.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/elephant.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/elephant.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/elephant.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/elephant.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/fingerling.mp3" afterPath="$PROJECT_DIR$/res/raw-es/fingerling.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/fingerling.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/fingerling.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/flamingo.mp3" afterPath="$PROJECT_DIR$/res/raw/flamingo.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/fingerling.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/fingerling.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/fingerling.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/fingerling.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/flamingo.mp3" afterPath="$PROJECT_DIR$/res/raw-es/flamingo.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/flamingo.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/flamingo.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/flamingo.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/flamingo.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/flamingo.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/flamingo.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/fox.mp3" afterPath="$PROJECT_DIR$/res/raw-es/fox.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/fox.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/fox.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/fox.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/fox.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/frogling.mp3" afterPath="$PROJECT_DIR$/res/raw-es/frogling.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/frogling.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/frogling.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/giraffe.mp3" afterPath="$PROJECT_DIR$/res/raw/giraffe.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/frogling.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/frogling.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/frogling.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/frogling.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/giraffe.mp3" afterPath="$PROJECT_DIR$/res/raw-es/giraffe.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/giraffe.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/giraffe.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/goat.mp3" afterPath="$PROJECT_DIR$/res/raw/goat.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/giraffe.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/giraffe.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/giraffe.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/giraffe.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/goat.mp3" afterPath="$PROJECT_DIR$/res/raw-es/goat.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/goat.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/goat.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/good_job.mp3" afterPath="$PROJECT_DIR$/res/raw/good_job.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/goat.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/goat.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/goat.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/goat.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/good_job.mp3" afterPath="$PROJECT_DIR$/res/raw-es/good_job.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/good_job.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/good_job.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/hamburger.mp3" afterPath="$PROJECT_DIR$/res/raw/hamburger.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/good_job.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/good_job.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/good_job.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/good_job.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/gorilla.mp3" afterPath="$PROJECT_DIR$/res/raw-es/gorilla.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/gorilla.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/gorilla.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/gorilla.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/gorilla.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/hamburger.mp3" afterPath="$PROJECT_DIR$/res/raw-es/hamburger.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/hamburger.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/hamburger.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/hamburger.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/hamburger.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/hamburger.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/hamburger.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/hen.mp3" afterPath="$PROJECT_DIR$/res/raw-es/hen.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/hen.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/hen.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/hippo.mp3" afterPath="$PROJECT_DIR$/res/raw/hippo.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/hen.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/hen.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/hen.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/hen.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/hippo.mp3" afterPath="$PROJECT_DIR$/res/raw-es/hippo.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/hippo.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/hippo.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/ice_cream.mp3" afterPath="$PROJECT_DIR$/res/raw/ice_cream.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/hippo.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/hippo.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/hippo.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/hippo.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/ice_cream.mp3" afterPath="$PROJECT_DIR$/res/raw-es/ice_cream.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/ice_cream.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/ice_cream.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/jug_with_milk.mp3" afterPath="$PROJECT_DIR$/res/raw/jug_with_milk.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/ice_cream.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/ice_cream.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/ice_cream.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/ice_cream.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/jug_with_milk.mp3" afterPath="$PROJECT_DIR$/res/raw-es/jug_with_milk.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/jug_with_milk.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/jug_with_milk.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/kettle.mp3" afterPath="$PROJECT_DIR$/res/raw/kettle.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/jug_with_milk.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/jug_with_milk.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/jug_with_milk.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/jug_with_milk.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/kettle.mp3" afterPath="$PROJECT_DIR$/res/raw-es/kettle.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/kettle.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/kettle.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/key.mp3" afterPath="$PROJECT_DIR$/res/raw/key.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/kettle.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/kettle.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/kettle.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/kettle.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/key.mp3" afterPath="$PROJECT_DIR$/res/raw-es/key.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/key.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/key.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/lamb.mp3" afterPath="$PROJECT_DIR$/res/raw/lamb.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/key.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/key.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/key.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/key.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/koala.mp3" afterPath="$PROJECT_DIR$/res/raw-es/koala.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/koala.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/koala.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/koala.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/koala.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/lamb.mp3" afterPath="$PROJECT_DIR$/res/raw-es/lamb.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/lamb.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/lamb.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/lightbulb.mp3" afterPath="$PROJECT_DIR$/res/raw/lightbulb.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/lamb.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/lamb.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/lamb.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/lamb.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/lemon.mp3" afterPath="$PROJECT_DIR$/res/raw-es/lemon.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/lemon.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/lemon.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/lemon.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/lemon.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/lightbulb.mp3" afterPath="$PROJECT_DIR$/res/raw-es/lightbulb.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/lightbulb.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/lightbulb.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/lion.mp3" afterPath="$PROJECT_DIR$/res/raw/lion.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/lightbulb.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/lightbulb.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/lightbulb.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/lightbulb.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/lime.mp3" afterPath="$PROJECT_DIR$/res/raw-es/lime.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/lime.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/lime.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/lime.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/lime.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/lion.mp3" afterPath="$PROJECT_DIR$/res/raw-es/lion.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/lion.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/lion.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/monkey.mp3" afterPath="$PROJECT_DIR$/res/raw/monkey.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/lion.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/lion.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/lion.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/lion.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/monkey.mp3" afterPath="$PROJECT_DIR$/res/raw-es/monkey.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/monkey.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/monkey.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/mushrooms.mp3" afterPath="$PROJECT_DIR$/res/raw/mushrooms.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/monkey.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/monkey.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/monkey.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/monkey.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/mushrooms.mp3" afterPath="$PROJECT_DIR$/res/raw-es/mushrooms.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/mushrooms.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/mushrooms.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/octopus.mp3" afterPath="$PROJECT_DIR$/res/raw/octopus.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/mushrooms.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/mushrooms.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/mushrooms.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/mushrooms.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/octopus.mp3" afterPath="$PROJECT_DIR$/res/raw-es/octopus.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/octopus.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/octopus.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/owl.mp3" afterPath="$PROJECT_DIR$/res/raw/owl.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/octopus.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/octopus.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/octopus.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/octopus.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/owl.mp3" afterPath="$PROJECT_DIR$/res/raw-es/owl.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/owl.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/owl.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/peas.mp3" afterPath="$PROJECT_DIR$/res/raw/peas.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/owl.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/owl.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/owl.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/owl.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/pear.mp3" afterPath="$PROJECT_DIR$/res/raw-es/pear.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/pear.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/pear.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/pear.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/pear.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/peas.mp3" afterPath="$PROJECT_DIR$/res/raw-es/peas.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/peas.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/peas.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/pencil.mp3" afterPath="$PROJECT_DIR$/res/raw/pencil.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/peas.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/peas.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/peas.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/peas.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/pencil.mp3" afterPath="$PROJECT_DIR$/res/raw-es/pencil.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/pencil.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/pencil.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/penguin.mp3" afterPath="$PROJECT_DIR$/res/raw/penguin.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/pencil.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/pencil.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/pencil.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/pencil.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/penguin.mp3" afterPath="$PROJECT_DIR$/res/raw-es/penguin.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/penguin.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/penguin.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/pepper.mp3" afterPath="$PROJECT_DIR$/res/raw/pepper.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/penguin.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/penguin.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/penguin.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/penguin.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/pepper.mp3" afterPath="$PROJECT_DIR$/res/raw-es/pepper.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/pepper.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/pepper.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/perfect.mp3" afterPath="$PROJECT_DIR$/res/raw/perfect.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/pepper.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/pepper.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/pepper.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/pepper.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/perfect.mp3" afterPath="$PROJECT_DIR$/res/raw-es/perfect.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/perfect.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/perfect.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/perfect.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/perfect.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/perfect.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/perfect.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/pigeon.mp3" afterPath="$PROJECT_DIR$/res/raw-es/pigeon.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/pigeon.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/pigeon.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/pigeon.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/pigeon.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/pigeon.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/pigeon.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/piggy.mp3" afterPath="$PROJECT_DIR$/res/raw-es/piggy.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/piggy.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/piggy.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/pot_with_honey.mp3" afterPath="$PROJECT_DIR$/res/raw/pot_with_honey.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/piggy.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/piggy.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/piggy.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/piggy.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/pitching.mp3" afterPath="$PROJECT_DIR$/res/raw-es/pitching.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/pitching.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/pitching.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/pitching.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/pitching.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/pot_with_honey.mp3" afterPath="$PROJECT_DIR$/res/raw-es/pot_with_honey.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/pot_with_honey.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/pot_with_honey.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/potato.mp3" afterPath="$PROJECT_DIR$/res/raw/potato.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/pot_with_honey.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/pot_with_honey.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/pot_with_honey.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/pot_with_honey.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/potato.mp3" afterPath="$PROJECT_DIR$/res/raw-es/potato.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/potato.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/potato.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/pumpkin.mp3" afterPath="$PROJECT_DIR$/res/raw/pumpkin.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/rabbit.mp3" afterPath="$PROJECT_DIR$/res/raw/rabbit.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/potato.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/potato.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/potato.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/potato.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/pumpkin.mp3" afterPath="$PROJECT_DIR$/res/raw-es/pumpkin.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/pumpkin.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/pumpkin.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/pumpkin.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/pumpkin.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/pumpkin.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/pumpkin.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/rabbit.mp3" afterPath="$PROJECT_DIR$/res/raw-es/rabbit.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/rabbit.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/rabbit.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/scrambled_eggs.mp3" afterPath="$PROJECT_DIR$/res/raw/scrambled_eggs.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/rabbit.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/rabbit.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/rabbit.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/rabbit.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/radish.mp3" afterPath="$PROJECT_DIR$/res/raw-es/radish.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/radish.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/radish.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/radish.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/radish.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/rhino.mp3" afterPath="$PROJECT_DIR$/res/raw-es/rhino.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/rhino.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/rhino.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/rhino.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/rhino.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/scrambled_eggs.mp3" afterPath="$PROJECT_DIR$/res/raw-es/scrambled_eggs.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/scrambled_eggs.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/scrambled_eggs.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/shuttlecocks.mp3" afterPath="$PROJECT_DIR$/res/raw/shuttlecocks.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/scrambled_eggs.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/scrambled_eggs.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/scrambled_eggs.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/scrambled_eggs.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/sea_bear.mp3" afterPath="$PROJECT_DIR$/res/raw-es/sea_bear.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/sea_bear.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/sea_bear.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/sea_bear.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/sea_bear.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/shuttlecocks.mp3" afterPath="$PROJECT_DIR$/res/raw-es/shuttlecocks.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/shuttlecocks.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/shuttlecocks.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/snail.mp3" afterPath="$PROJECT_DIR$/res/raw/snail.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/shuttlecocks.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/shuttlecocks.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/shuttlecocks.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/shuttlecocks.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/snail.mp3" afterPath="$PROJECT_DIR$/res/raw-es/snail.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/snail.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/snail.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/snake.mp3" afterPath="$PROJECT_DIR$/res/raw/snake.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/snail.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/snail.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/snail.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/snail.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/snake.mp3" afterPath="$PROJECT_DIR$/res/raw-es/snake.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/snake.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/snake.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/soother.mp3" afterPath="$PROJECT_DIR$/res/raw/soother.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/snake.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/snake.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/snake.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/snake.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/soother.mp3" afterPath="$PROJECT_DIR$/res/raw-es/soother.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/soother.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/soother.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/squirrel.mp3" afterPath="$PROJECT_DIR$/res/raw/squirrel.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/soother.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/soother.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/soother.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/soother.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/squirrel.mp3" afterPath="$PROJECT_DIR$/res/raw-es/squirrel.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/squirrel.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/squirrel.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/stapler.mp3" afterPath="$PROJECT_DIR$/res/raw/stapler.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/squirrel.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/squirrel.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/squirrel.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/squirrel.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/stapler.mp3" afterPath="$PROJECT_DIR$/res/raw-es/stapler.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/stapler.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/stapler.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/stork.mp3" afterPath="$PROJECT_DIR$/res/raw/stork.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/stapler.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/stapler.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/stapler.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/stapler.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/stork.mp3" afterPath="$PROJECT_DIR$/res/raw-es/stork.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/stork.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/stork.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/strawberries.mp3" afterPath="$PROJECT_DIR$/res/raw/strawberries.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/stork.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/stork.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/stork.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/stork.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/strawberries.mp3" afterPath="$PROJECT_DIR$/res/raw-es/strawberries.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/strawberries.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/strawberries.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/strawberries.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/strawberries.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/strawberries.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/strawberries.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/tea_cup.mp3" afterPath="$PROJECT_DIR$/res/raw-es/tea_cup.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/tea_cup.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/tea_cup.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/tea_cup.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/tea_cup.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/teddy_bear.mp3" afterPath="$PROJECT_DIR$/res/raw-es/teddy_bear.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/teddy_bear.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/teddy_bear.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/toucan.mp3" afterPath="$PROJECT_DIR$/res/raw/toucan.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/teddy_bear.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/teddy_bear.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/teddy_bear.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/teddy_bear.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/toucan.mp3" afterPath="$PROJECT_DIR$/res/raw-es/toucan.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/toucan.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/toucan.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/train.mp3" afterPath="$PROJECT_DIR$/res/raw/train.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/toucan.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/toucan.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/toucan.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/toucan.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/train.mp3" afterPath="$PROJECT_DIR$/res/raw-es/train.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/train.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/train.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/turtle.mp3" afterPath="$PROJECT_DIR$/res/raw/turtle.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/train.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/train.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/train.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/train.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/turtle.mp3" afterPath="$PROJECT_DIR$/res/raw-es/turtle.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/turtle.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/turtle.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/umbrella.mp3" afterPath="$PROJECT_DIR$/res/raw/umbrella.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/turtle.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/turtle.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/turtle.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/turtle.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/umbrella.mp3" afterPath="$PROJECT_DIR$/res/raw-es/umbrella.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/umbrella.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/umbrella.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/umbrella.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/umbrella.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/umbrella.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/umbrella.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/wagon.mp3" afterPath="$PROJECT_DIR$/res/raw-es/wagon.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/wagon.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/wagon.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/well_done.mp3" afterPath="$PROJECT_DIR$/res/raw/well_done.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/wagon.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/wagon.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/well_done.mp3" afterPath="$PROJECT_DIR$/res/raw-es/well_done.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/well_done.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/well_done.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/wizard_hat.mp3" afterPath="$PROJECT_DIR$/res/raw/wizard_hat.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/well_done.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/well_done.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/well_done.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/well_done.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/wizard_hat.mp3" afterPath="$PROJECT_DIR$/res/raw-es/wizard_hat.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/wizard_hat.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/wizard_hat.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/wonderfull.mp3" afterPath="$PROJECT_DIR$/res/raw/wonderfull.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/wizard_hat.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/wizard_hat.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/wizard_hat.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/wizard_hat.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/wonderfull.mp3" afterPath="$PROJECT_DIR$/res/raw-es/wonderfull.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/wonderfull.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/wonderfull.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/yacht.mp3" afterPath="$PROJECT_DIR$/res/raw/yacht.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/wonderfull.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/wonderfull.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/wonderfull.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/wonderfull.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/yacht.mp3" afterPath="$PROJECT_DIR$/res/raw-es/yacht.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/yacht.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/yacht.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/zebra.mp3" afterPath="$PROJECT_DIR$/res/raw/zebra.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/yacht.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/yacht.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/yacht.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/yacht.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/zebra.mp3" afterPath="$PROJECT_DIR$/res/raw-es/zebra.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/zebra.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/zebra.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/zebra.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/zebra.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/zebra.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/zebra.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/global/AppHelper.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/global/AppHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/util/BackgroundSound.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/util/BackgroundSound.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/util/ChooseGamePagerAdapter.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/util/ChooseGamePagerAdapter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/ChoosePuzzleActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/ChoosePuzzleActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzleFillGame.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzleFillGame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDB.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDB.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDBHelper.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDBHelper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_choose_puzzle.xml" afterPath="$PROJECT_DIR$/res/layout/activity_choose_puzzle.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_game_fill.xml" afterPath="$PROJECT_DIR$/res/layout/activity_game_fill.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/settings_screen.xml" afterPath="$PROJECT_DIR$/res/layout/settings_screen.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-ar/strings.xml" afterPath="$PROJECT_DIR$/res/values-ar/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-de/strings.xml" afterPath="$PROJECT_DIR$/res/values-de/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-es/strings.xml" afterPath="$PROJECT_DIR$/res/values-es/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-fr/strings.xml" afterPath="$PROJECT_DIR$/res/values-fr/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-he/strings.xml" afterPath="$PROJECT_DIR$/res/values-he/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-hi/strings.xml" afterPath="$PROJECT_DIR$/res/values-hi/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-hu/strings.xml" afterPath="$PROJECT_DIR$/res/values-hu/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-iw/strings.xml" afterPath="$PROJECT_DIR$/res/values-iw/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-ru/strings.xml" afterPath="$PROJECT_DIR$/res/values-ru/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-uk/strings.xml" afterPath="$PROJECT_DIR$/res/values-uk/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-zh/strings.xml" afterPath="$PROJECT_DIR$/res/values-zh/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path=".idea/workspace.xml" />
@@ -1096,31 +521,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GameFillActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java">
+      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3740">
-              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChoosePuzzleActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/ChoosePuzzleActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="2210">
-              <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="2431">
+              <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="strings.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/res/values-uk/strings.xml">
+        <entry file="file://$PROJECT_DIR$/res/values-fr/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9315069" vertical-offset="255" max-vertical-offset="1989">
-              <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.11643836" vertical-offset="0" max-vertical-offset="2074">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -1129,28 +544,8 @@
       <file leaf-file-name="AppHelper.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/global/AppHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2929" max-vertical-offset="6579">
-              <caret line="210" column="40" selection-start-line="210" selection-start-column="40" selection-end-line="210" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BonusLevelFlowerActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelFlowerActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2729" max-vertical-offset="4318">
-              <caret line="201" column="45" selection-start-line="201" selection-start-column="45" selection-end-line="201" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RestartActivty.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/RestartActivty.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
-              <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="6885">
+              <caret line="117" column="22" selection-start-line="117" selection-start-column="22" selection-end-line="117" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -1197,31 +592,33 @@
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelFlowerActivity.java" />
         <option value="$PROJECT_DIR$/res/values/styles_settings.xml" />
         <option value="$PROJECT_DIR$/res/values/styles.xml" />
-        <option value="$PROJECT_DIR$/res/layout/settings_screen.xml" />
         <option value="$PROJECT_DIR$/res/value-es/strings.xml" />
-        <option value="$PROJECT_DIR$/res/values-ar/strings.xml" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzleFillGame.java" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDBHelper.java" />
         <option value="$APPLICATION_HOME_DIR$/sdk/platforms/android-19/android.jar!/android/database/sqlite/SQLiteDatabase.class" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDB.java" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java" />
-        <option value="$PROJECT_DIR$/res/values-de/strings.xml" />
-        <option value="$PROJECT_DIR$/res/values-es/strings.xml" />
-        <option value="$PROJECT_DIR$/res/values-fr/strings.xml" />
-        <option value="$PROJECT_DIR$/res/values-he/strings.xml" />
-        <option value="$PROJECT_DIR$/res/values-hi/strings.xml" />
-        <option value="$PROJECT_DIR$/res/values-iw/strings.xml" />
-        <option value="$PROJECT_DIR$/res/values-ru/strings.xml" />
-        <option value="$PROJECT_DIR$/res/values-zh/strings.xml" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/global/AppHelper.java" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/util/BackgroundSound.java" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/util/ChooseGamePagerAdapter.java" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/ChoosePuzzleActivity.java" />
+        <option value="$PROJECT_DIR$/res/values-he/strings.xml" />
+        <option value="$PROJECT_DIR$/res/values-iw/strings.xml" />
+        <option value="$PROJECT_DIR$/res/values-ar/strings.xml" />
         <option value="$PROJECT_DIR$/res/values-hu/strings.xml" />
         <option value="$PROJECT_DIR$/res/values-uk/strings.xml" />
+        <option value="$PROJECT_DIR$/res/values-zh/strings.xml" />
+        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDB.java" />
+        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/util/ChooseGamePagerAdapter.java" />
+        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java" />
+        <option value="$PROJECT_DIR$/res/layout/settings_screen.xml" />
+        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/ChoosePuzzleActivity.java" />
+        <option value="$PROJECT_DIR$/res/layout/activity_choose_puzzle.xml" />
+        <option value="$PROJECT_DIR$/res/layout/activity_game_fill.xml" />
+        <option value="$PROJECT_DIR$/res/values-ru/strings.xml" />
+        <option value="$PROJECT_DIR$/res/values-hi/strings.xml" />
+        <option value="$PROJECT_DIR$/res/values-de/strings.xml" />
+        <option value="$PROJECT_DIR$/res/values-es/strings.xml" />
+        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/global/AppHelper.java" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/res/values-fr/strings.xml" />
       </list>
     </option>
   </component>
@@ -1260,6 +657,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -1296,98 +694,6 @@
               <option name="myItemId" value="puzzly" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Puzzly" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Puzzly" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="puzzly" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="screens" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Puzzly" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Puzzly" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="puzzly" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="puzzles" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Puzzly" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Puzzly" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="puzzly" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="global" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Puzzly" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Puzzly" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="puzzly" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="customViews" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1400,42 +706,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Puzzly" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Puzzly" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values-uk" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Puzzly" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Puzzly" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values-de" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1455,7 +725,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1762,7 +1031,11 @@
       <created>1401807032174</created>
       <updated>1401807032174</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="implement translate almost all text in game and add new items sound">
+      <created>1402059356727</created>
+      <updated>1402059356727</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1790,11 +1063,10 @@
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.6731302" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25796178" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25796178" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.6731302" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32484075" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41082802" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26633987" sideWeight="0.5008026" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23863636" sideWeight="0.42391303" order="3" side_tool="true" content_ui="tabs" />
@@ -1802,7 +1074,7 @@
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31847134" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.50318474" sideWeight="0.49919742" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28821656" sideWeight="0.49919742" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32686982" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.6731302" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1815,8 +1087,9 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31969696" sideWeight="0.7097222" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3184569" sideWeight="0.7097222" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32484075" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -1888,7 +1161,8 @@
     <MESSAGE value="fix tutorial bug&#10;fix hand tutorial bug&#10;fix language bug&#10;" />
     <MESSAGE value="change game text font to default" />
     <MESSAGE value="add new sound to item in hindi language" />
-    <option name="LAST_COMMIT_MESSAGE" value="add new sound to item in hindi language" />
+    <MESSAGE value="implement translate almost all text in game and add new items sound" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement translate almost all text in game and add new items sound" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1907,40 +1181,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/anim/menu_balloon_rotate_right.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54599404" vertical-offset="3" max-vertical-offset="340">
-          <caret line="11" column="36" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_bonus_level_tree.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21573605" vertical-offset="34" max-vertical-offset="901">
-          <caret line="7" column="9" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_bonus_level_shake.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30203044" vertical-offset="0" max-vertical-offset="1088">
-          <caret line="7" column="58" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/anim/menu_hand_right.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36515513" vertical-offset="0" max-vertical-offset="419">
-          <caret line="9" column="30" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/anim/menu_hand_left.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.28400955" vertical-offset="0" max-vertical-offset="419">
@@ -1979,13 +1219,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/menu_screen.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4015748" vertical-offset="0" max-vertical-offset="1887">
           <caret line="9" column="22" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
@@ -2003,13 +1243,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/global/Constans.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="331" max-vertical-offset="833">
-          <caret line="31" column="96" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/util/GameLoopThread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.1775457" vertical-offset="544" max-vertical-offset="986">
@@ -2018,13 +1251,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/activity_bonus_level_flower.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1424581" vertical-offset="0" max-vertical-offset="1003">
           <caret line="3" column="23" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/InterstitialActivity.java">
@@ -2064,16 +1297,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/settings_screen.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5907591" vertical-offset="484" max-vertical-offset="2227">
-          <caret line="39" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/util/ParseSvgAsyncTask.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.28929386" vertical-offset="400" max-vertical-offset="1003">
@@ -2106,7 +1329,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="214" max-vertical-offset="816">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2114,7 +1336,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.79635257" vertical-offset="2152" max-vertical-offset="3213">
           <caret line="143" column="36" selection-start-line="143" selection-start-column="16" selection-end-line="143" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2122,60 +1343,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="522" max-vertical-offset="918">
           <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19736843" vertical-offset="11910" max-vertical-offset="12665">
-          <caret line="717" column="12" selection-start-line="717" selection-start-column="12" selection-end-line="717" selection-end-column="12" />
-          <folding>
-            <element signature="e#1065#1102#0" expanded="true" />
-            <element signature="e#1864#1898#0" expanded="true" />
-            <element signature="e#2655#2691#0" expanded="true" />
-            <element signature="e#3452#3486#0" expanded="true" />
-            <element signature="e#4260#4293#0" expanded="true" />
-            <element signature="e#5064#5098#0" expanded="true" />
-            <element signature="e#5867#5902#0" expanded="true" />
-            <element signature="e#6676#6707#0" expanded="true" />
-            <element signature="e#7478#7516#0" expanded="true" />
-            <element signature="e#8293#8328#0" expanded="true" />
-            <element signature="e#9101#9134#0" expanded="true" />
-            <element signature="e#9906#9941#0" expanded="true" />
-            <element signature="e#10719#10751#0" expanded="true" />
-            <element signature="e#11539#11575#0" expanded="true" />
-            <element signature="e#12368#12401#0" expanded="true" />
-            <element signature="e#13175#13209#0" expanded="true" />
-            <element signature="e#14027#14058#0" expanded="true" />
-            <element signature="e#14974#15014#0" expanded="true" />
-            <element signature="e#15851#15883#0" expanded="true" />
-            <element signature="e#16698#16731#0" expanded="true" />
-            <element signature="e#17530#17562#0" expanded="true" />
-            <element signature="e#18394#18427#0" expanded="true" />
-            <element signature="e#19284#19318#0" expanded="true" />
-            <element signature="e#20121#20159#0" expanded="true" />
-            <element signature="e#20968#21001#0" expanded="true" />
-            <element signature="e#21803#21837#0" expanded="true" />
-            <element signature="e#22644#22678#0" expanded="true" />
-            <element signature="e#23484#23518#0" expanded="true" />
-            <element signature="e#24320#24352#0" expanded="true" />
-            <element signature="e#25152#25188#0" expanded="true" />
-            <element signature="e#25994#26025#0" expanded="true" />
-            <element signature="e#26827#26859#0" expanded="true" />
-            <element signature="e#27660#27695#0" expanded="true" />
-            <element signature="e#28500#28533#0" expanded="true" />
-            <element signature="e#29334#29368#0" expanded="true" />
-            <element signature="e#30172#30203#0" expanded="true" />
-            <element signature="e#31004#31037#0" expanded="true" />
-            <element signature="e#31839#31875#0" expanded="true" />
-            <element signature="e#32679#32715#0" expanded="true" />
-            <element signature="e#33522#33553#0" expanded="true" />
-            <element signature="e#34353#34387#0" expanded="true" />
-            <element signature="e#35192#35234#0" expanded="true" />
-            <element signature="e#36045#36081#0" expanded="true" />
-            <element signature="e#36888#36920#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2183,106 +1350,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.5210526" vertical-offset="0" max-vertical-offset="1071">
           <caret line="36" column="53" selection-start-line="36" selection-start-column="53" selection-end-line="36" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values-ar/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70737916" vertical-offset="11" max-vertical-offset="1989">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="18" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values-es/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.562341" vertical-offset="68" max-vertical-offset="1989">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="18" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values-fr/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66412216" vertical-offset="45" max-vertical-offset="1989">
-          <caret line="18" column="70" selection-start-line="18" selection-start-column="70" selection-end-line="18" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values-he/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5979644" vertical-offset="71" max-vertical-offset="1989">
-          <caret line="18" column="70" selection-start-line="18" selection-start-column="70" selection-end-line="18" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values-hi/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.648855" vertical-offset="51" max-vertical-offset="1989">
-          <caret line="18" column="70" selection-start-line="18" selection-start-column="70" selection-end-line="18" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values-iw/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.653944" vertical-offset="49" max-vertical-offset="1989">
-          <caret line="18" column="70" selection-start-line="18" selection-start-column="70" selection-end-line="18" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values-zh/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.77862597" vertical-offset="0" max-vertical-offset="1989">
-          <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="2363">
-          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values-ru/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.77862597" vertical-offset="0" max-vertical-offset="1989">
-          <caret line="18" column="70" selection-start-line="18" selection-start-column="70" selection-end-line="18" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.3053435" vertical-offset="1361" max-vertical-offset="2669">
-          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values-de/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.69211197" vertical-offset="255" max-vertical-offset="1955">
-          <caret line="31" column="49" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5973684" vertical-offset="3360" max-vertical-offset="4556">
-          <caret line="230" column="77" selection-start-line="230" selection-start-column="8" selection-end-line="230" selection-end-column="77" />
-          <folding>
-            <element signature="e#8704#8705#0" expanded="true" />
-            <element signature="e#8761#8762#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2290,23 +1357,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
           <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelFlowerActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2729" max-vertical-offset="4318">
-          <caret line="201" column="45" selection-start-line="201" selection-start-column="45" selection-end-line="201" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/global/AppHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2929" max-vertical-offset="6579">
-          <caret line="210" column="40" selection-start-line="210" selection-start-column="40" selection-end-line="210" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2314,49 +1364,226 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.610687" vertical-offset="66" max-vertical-offset="986">
           <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-19/android.jar!/android/app/Activity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33256352" vertical-offset="4956" max-vertical-offset="7565">
+          <caret line="301" column="16" selection-start-line="301" selection-start-column="16" selection-end-line="301" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelFlowerActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33159268" vertical-offset="417" max-vertical-offset="4335">
+          <caret line="59" column="104" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="104" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/util/ChooseGamePagerAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.783715" vertical-offset="2327" max-vertical-offset="2754">
-          <caret line="181" column="5" selection-start-line="181" selection-start-column="5" selection-end-line="181" selection-end-column="5" />
+        <state vertical-scroll-proportion="5.8939395" vertical-offset="233" max-vertical-offset="2822">
+          <caret line="177" column="52" selection-start-line="177" selection-start-column="52" selection-end-line="177" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="13117" max-vertical-offset="16473">
+          <caret line="794" column="46" selection-start-line="794" selection-start-column="46" selection-end-line="794" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/global/Constans.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="455" max-vertical-offset="901">
+          <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1114" max-vertical-offset="3043">
+          <caret line="88" column="75" selection-start-line="88" selection-start-column="75" selection-end-line="88" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/settings_screen.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.5555553" vertical-offset="1938" max-vertical-offset="2686">
+          <caret line="126" column="50" selection-start-line="126" selection-start-column="50" selection-end-line="126" selection-end-column="50" />
           <folding>
-            <element signature="e#6391#6392#0" expanded="true" />
-            <element signature="e#6433#6434#0" expanded="true" />
+            <element signature="e#1252#1275#0" expanded="false" />
+            <element signature="e#1880#1898#0" expanded="false" />
+            <element signature="e#2582#2622#0" expanded="false" />
+            <element signature="e#2990#3019#0" expanded="false" />
+            <element signature="e#3375#3401#0" expanded="false" />
+            <element signature="e#3767#3807#0" expanded="false" />
+            <element signature="e#4554#4596#0" expanded="false" />
+            <element signature="e#5684#5724#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java">
+    <entry file="file://$PROJECT_DIR$/res/layout/item_choose_puzzle.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3740">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.040572792" vertical-offset="357" max-vertical-offset="3723">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/values-hu/strings.xml">
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_choose_puzzle.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5516224" vertical-offset="102" max-vertical-offset="1989">
-          <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.5582011" vertical-offset="316" max-vertical-offset="1105">
+          <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/ChoosePuzzleActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="2210">
-          <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.71358025" vertical-offset="255" max-vertical-offset="2227">
+          <caret line="42" column="55" selection-start-line="42" selection-start-column="55" selection-end-line="42" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="789" max-vertical-offset="4573">
+          <caret line="77" column="48" selection-start-line="77" selection-start-column="48" selection-end-line="77" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_game_fill.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10410959" vertical-offset="1152" max-vertical-offset="1632">
+          <caret line="70" column="18" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.51785713" vertical-offset="460" max-vertical-offset="3740">
+          <caret line="59" column="63" selection-start-line="59" selection-start-column="63" selection-end-line="59" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-ar/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.9761336" vertical-offset="1655" max-vertical-offset="2074">
+          <caret line="24" column="55" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-zh/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9188544" vertical-offset="23" max-vertical-offset="2074">
+          <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-iw/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8973747" vertical-offset="49" max-vertical-offset="2074">
+          <caret line="25" column="74" selection-start-line="25" selection-start-column="74" selection-end-line="25" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-hi/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.50119334" vertical-offset="1655" max-vertical-offset="2074">
+          <caret line="85" column="32" selection-start-line="85" selection-start-column="32" selection-end-line="85" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-hu/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.326969" vertical-offset="1655" max-vertical-offset="2074">
+          <caret line="40" column="23" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-ru/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5942721" vertical-offset="1655" max-vertical-offset="2074">
+          <caret line="112" column="29" selection-start-line="112" selection-start-column="29" selection-end-line="112" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values-uk/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9315069" vertical-offset="255" max-vertical-offset="1989">
-          <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
+        <state vertical-scroll-proportion="-2.9761336" vertical-offset="1655" max-vertical-offset="2074">
+          <caret line="24" column="46" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-es/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5942721" vertical-offset="1655" max-vertical-offset="2074">
+          <caret line="112" column="40" selection-start-line="112" selection-start-column="40" selection-end-line="112" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-de/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.67541766" vertical-offset="1621" max-vertical-offset="2040">
+          <caret line="112" column="39" selection-start-line="112" selection-start-column="39" selection-end-line="112" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-he/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.0763724" vertical-offset="1295" max-vertical-offset="2074">
+          <caret line="25" column="74" selection-start-line="25" selection-start-column="74" selection-end-line="25" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/global/AppHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1581" max-vertical-offset="6885">
+          <caret line="117" column="22" selection-start-line="117" selection-start-column="22" selection-end-line="117" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="2431">
+          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-fr/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11643836" vertical-offset="0" max-vertical-offset="2074">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -261,6 +261,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
 
 
     private final void settings() {
+        AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this, Constans.APP_LANGUAGE).name());
         startActivity(new Intent(this, SettingsActivity.class));
     }
 

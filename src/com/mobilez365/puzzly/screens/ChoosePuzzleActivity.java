@@ -60,6 +60,9 @@ public class ChoosePuzzleActivity extends Activity implements View.OnClickListen
     @Override
     protected void onResume() {
         super.onResume();
+
+        AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this, Constans.GAME_LANGUAGE).name());
+
         //AppHelper.resetPassedGames();
         if(maxLevelCount != AppHelper.getMaxGame(this, mGameType) ||
                 currentLevel != AppHelper.getCurrentGame(this, mGameType)) {

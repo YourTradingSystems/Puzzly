@@ -15,10 +15,15 @@
     <string name="settings_play_sound">Воспроизведение игровых звуков</string>
     <string name="settings_vibrate">Вибрация в игре</string>
     <string name="settings_display_inner_borders">Показывать внутренние границы</string>
-    <string name="settings_language_game">Game language</string>
-    <string name="settings_language_locale">Settings language</string>
+    <string name="settings_localize_app_language">Язык настроек</string>
+    <string name="settings_localize_study_language">Язык игры</string>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~ CHOOSE LEVEL ~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+    <string name="choose_level_new_level">Новый уровень</string>
+    <string name="choose_level_locked_level">Уровень заблокирован</string>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
     <!-- ~~~~~~~~~~~~~~~~~~~ Game Items ~~~~~~~~~~~~~~~~~~~~ !-->
     <string name="piggy">Поросенок</string>
@@ -102,10 +107,10 @@
     <string name="koala">Коала</string>
     <string name="butterfly">Бабочка</string>
 
-    <string name="perfect">Perfect</string>
-    <string name="wonderful">Wonderful</string>
-    <string name="well_done">Well done</string>
-    <string name="good_job">Good job</string>
+    <string name="perfect">Умничка</string>
+    <string name="wonderful">Превосходно</string>
+    <string name="well_done">Молодец</string>
+    <string name="good_job">Правильно</string>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
 </resources>

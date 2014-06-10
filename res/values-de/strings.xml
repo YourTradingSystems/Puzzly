@@ -1,110 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Puzzly</string>
-
+<!-- Bannana !-->
     <!-- ~~~~~~~~~~~~~~~~~~~ MENU ~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
-    <string name="menu_settings">SETTINGS</string>
-    <string name="menu_back">Back</string>
+    <string name="menu_settings">EINSTELLUNGEN</string>
+    <string name="menu_back">Zurück</string>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
     <!-- ~~~~~~~~~~~~~~~~~~~ SETTINGS ~~~~~~~~~~~~~~~~~~~~~~ !-->
 
-    <string name="settings_play_background_music">Play background music</string>
-    <string name="settings_play_sound">Sound in game</string>
-    <string name="settings_vibrate">Game vibration</string>
-    <string name="settings_display_inner_borders">Display inner borders</string>
-    <string name="settings_language_game">Game language</string>
-    <string name="settings_language_locale">Settings language</string>
+    <string name="settings_play_background_music">Hintergrundmusik abspielen</string>
+    <string name="settings_play_sound">Ton in Spiel</string>
+    <string name="settings_vibrate">Spiel Vibrations</string>
+    <string name="settings_display_inner_borders">Zeigen inneren Grenzen</string>
+    <string name="settings_localize_app_language">Sprache der Einstellungen</string>
+    <string name="settings_localize_study_language">Sprache des Spiels</string>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
+    <!-- ~~~~~~~~~~~~~~~~~~~ CHOOSE LEVEL ~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+    <string name="choose_level_new_level">Neue Ebene</string>
+    <string name="choose_level_locked_level">Ebene gesperrt</string>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
     <!-- ~~~~~~~~~~~~~~~~~~~ Game Items ~~~~~~~~~~~~~~~~~~~~ !-->
-    <string name="piggy">Piggy</string>
-    <string name="pigeon">Pigeon</string>
-    <string name="frogling">Frogling</string>
-    <string name="rabbit">Rabbit</string>
-    <string name="hen">Hen</string>
-    <string name="octopus">Octopus</string>
-    <string name="pencil">Pencil</string>
-    <string name="ice_cream">Ice cream</string>
-    <string name="fingerling">Fingerling</string>
-    <string name="elephant">Elephant</string>
-    <string name="lamb">Lamb</string>
-    <string name="owl">Owl</string>
-    <string name="snail">Snail</string>
-    <string name="squirrel">Squirrel</string>
-    <string name="apple">Apple</string>
-    <string name="carrot">Carrot</string>
-    <string name="goat">Goat</string>
-    <string name="bee">Bee</string>
-    <string name="turtle">Turtle</string>
-    <string name="dolphin">Dolphin</string>
-    <string name="hippo">Hippo</string>
-    <string name="teddy_bear">Teddy-bear</string>
-    <string name="penguin">Penguin</string>
-    <string name="snake">Snake</string>
+    <string name="piggy">Ferkel</string>
+    <string name="pigeon">Taube</string>
+    <string name="frogling">Fröschlein</string>
+    <string name="rabbit">Kaninchen</string>
+    <string name="hen">Hähnchen</string>
+    <string name="octopus">Krake</string>
+    <string name="pencil">Bleistift</string>
+    <string name="ice_cream">Eis</string>
+    <string name="fingerling">Fischlein</string>
+    <string name="elephant">Elefantlein</string>
+    <string name="lamb">Schäfchen</string>
+    <string name="owl">Eule</string>
+    <string name="snail">Schnecke</string>
+    <string name="squirrel">Eichhörnchen</string>
+    <string name="apple">Äpfelchen</string>
+    <string name="carrot">Mörchen</string>
+    <string name="goat">Zieglein</string>
+    <string name="bee">Bienchen</string>
+    <string name="turtle">Schildkrötchen</string>
+    <string name="dolphin">Delfin</string>
+    <string name="hippo">Nilpferdchen</string>
+    <string name="teddy_bear">Bärchen</string>
+    <string name="penguin">Pinguinchen</string>
+    <string name="snake">Schlange</string>
     <string name="flamingo">Flamingo</string>
-    <string name="toucan">Toucan</string>
+    <string name="toucan">Tucan</string>
     <string name="giraffe">Giraffe</string>
-    <string name="monkey">Monkey</string>
+    <string name="monkey">Affe</string>
     <string name="zebra">Zebra</string>
-    <string name="lion">Lion</string>
-    <string name="kettle">Kettle</string>
-    <string name="car">Car</string>
-    <string name="eggplant">Eggplant</string>
-    <string name="bread">Bread</string>
-    <string name="baseball_cap">Baseball cap</string>
-    <string name="computer_chair">Computer chair</string>
-    <string name="train">Train</string>
-    <string name="wagon">Wagon</string>
-    <string name="peas">Peas</string>
-    <string name="pot_with_honey">Pot with honey</string>
-    <string name="mushrooms">Mushrooms</string>
-    <string name="potato">Potato</string>
-    <string name="key">Key</string>
-    <string name="strawberries">Strawberries</string>
-    <string name="crab">Crab</string>
-    <string name="corn">Corn</string>
-    <string name="jug_with_milk">Jug with milk</string>
-    <string name="light_bulb">Light bulb</string>
-    <string name="stork">Stork</string>
-    <string name="pepper">Pepper</string>
-    <string name="cock">Cock</string>
-    <string name="cancer">Cancer</string>
-    <string name="backpack">Backpack</string>
-    <string name="wizard_hat">Wizard hat</string>
-    <string name="soother">Soother</string>
-    <string name="stapler">Stapler</string>
-    <string name="beet">Beet</string>
-    <string name="pumpkin">Pumpkin</string>
-    <string name="shuttlecocks">Shuttlecocks</string>
+    <string name="lion">Löwe</string>
+    <string name="kettle">Teekanne</string>
+    <string name="car">Auto</string>
+    <string name="eggplant">Aubergine</string>
+    <string name="bread">Brot</string>
+    <string name="baseball_cap">Baseballkappe</string>
+    <string name="computer_chair">Computersessel</string>
+    <string name="train">Dampflock</string>
+    <string name="wagon">Wagen</string>
+    <string name="peas">Erbsen</string>
+    <string name="pot_with_honey">Topf mit Honig</string>
+    <string name="mushrooms">Pilze</string>
+    <string name="potato">Kartoffeln</string>
+    <string name="key">Schlüssel</string>
+    <string name="strawberries">Gartenerdbeeren</string>
+    <string name="crab">Krabbe</string>
+    <string name="corn">Mais</string>
+    <string name="jug_with_milk">Krug mit Milch</string>
+    <string name="light_bulb">Glühbirne</string>
+    <string name="stork">Storch</string>
+    <string name="pepper">Pfeffer</string>
+    <string name="cock">Hahn</string>
+    <string name="cancer">Krebs</string>
+    <string name="backpack">Rücksack</string>
+    <string name="wizard_hat">Zauberer Hut</string>
+    <string name="soother">Schnuller</string>
+    <string name="stapler">Tacker</string>
+    <string name="beet">Rüben</string>
+    <string name="pumpkin">Kürbis</string>
+    <string name="shuttlecocks">Federball</string>
     <string name="hamburger">Hamburger</string>
     <string name="yacht">Yacht</string>
-    <string name="scrambled_eggs">Scrambled eggs</string>
-    <string name="umbrella">Umbrella</string>
-    <string name="banana">Banana</string>
-    <string name="pear">Pear</string>
-    <string name="lemon">Lemon</string>
-    <string name="lime">Lime</string>
-    <string name="cherry">Cherry</string>
-    <string name="tea_cup">Tea cup</string>
-    <string name="radish">Radish</string>
-    <string name="rhino">Rhino</string>
-    <string name="sea_bear">Sea bear</string>
-    <string name="crocodile">Crocodile</string>
-    <string name="crew_cut">Crew cut</string>
+    <string name="scrambled_eggs">Spiegelei</string>
+    <string name="umbrella">Schirm</string>
+    <string name="banana">Banane</string>
+    <string name="pear">Birne</string>
+    <string name="lemon">Zitrone</string>
+    <string name="lime">Limette</string>
+    <string name="cherry">Sauerkirsche</string>
+    <string name="tea_cup">Tasse</string>
+    <string name="radish">Radieschen</string>
+    <string name="rhino">Nashorn</string>
+    <string name="sea_bear">Seebärr</string>
+    <string name="crocodile">Krokodil</string>
+    <string name="crew_cut">Igel</string>
     <string name="gorilla">Gorilla</string>
-    <string name="fox">Fox</string>
-    <string name="pitching">Pitching</string>
-    <string name="dog">Dog</string>
+    <string name="fox">Fuchs</string>
+    <string name="pitching">Ente</string>
+    <string name="dog">Hund</string>
     <string name="koala">Koala</string>
-    <string name="butterfly">Butterfly</string>
+    <string name="butterfly">Schmetterling</string>
 
-    <string name="perfect">Perfect</string>
-    <string name="wonderful">Wonderful</string>
-    <string name="well_done">Well done</string>
-    <string name="good_job">Good job</string>
+    <string name="perfect">Perfekt</string>
+    <string name="wonderful">Wunderbar</string>
+    <string name="well_done">Gut gemacht</string>
+    <string name="good_job">Gute Arbeit</string>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 </resources>

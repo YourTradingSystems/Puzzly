@@ -46,7 +46,7 @@ public class AppHelper {
         es,
         zh,
         ar,
-        he,
+        //he,
         hi
     }
 
@@ -126,10 +126,10 @@ public class AppHelper {
             case 8:
                 return Languages.ar;
 
-            case 9:
-                return Languages.he;
+            //case 9:
+                //return Languages.he;
 
-            case 10:
+            case 9:
                 return Languages.hi;
         }
 

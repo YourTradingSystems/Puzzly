@@ -15,10 +15,15 @@
     <string name="settings_play_sound">Sound in game</string>
     <string name="settings_vibrate">Game vibration</string>
     <string name="settings_display_inner_borders">Display inner borders</string>
-    <string name="settings_language_game">Game language</string>
-    <string name="settings_language_locale">Settings language</string>
+    <string name="settings_localize_app_language">Language of settings</string>
+    <string name="settings_localize_study_language">Language of game</string>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~ CHOOSE LEVEL ~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+    <string name="choose_level_new_level">New level</string>
+    <string name="choose_level_locked_level">Level locked</string>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
     <!-- ~~~~~~~~~~~~~~~~~~~ Game Items ~~~~~~~~~~~~~~~~~~~~ !-->
     <string name="piggy">חזיר</string>

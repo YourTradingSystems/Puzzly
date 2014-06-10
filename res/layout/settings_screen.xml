@@ -36,6 +36,7 @@
             android:textStyle="bold"/>
 
     </RelativeLayout>
+
     <LinearLayout
         android:id="@+id/llBanner_SS"
         xmlns:ads="http://schemas.android.com/apk/res-auto"
@@ -51,65 +52,12 @@
             ads:adUnitId="@string/adUnitId"
             ads:adSize="BANNER"/>
     </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/llAppLanguagePanel_SS"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:background="@color/settings_header_bg"
-        android:layout_below="@+id/ccbDisplayInnerBorders_SS">
-
-        <TextView
-            android:id="@+id/tvAppLanguage_SS"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/SettingsLanguage"
-            android:text="@string/settings_localize_app_language"
-            android:layout_weight="30"/>
-
-        <Spinner
-            android:id="@+id/spinnerChooseAppCountry_SS"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="70"
-            android:entries="@array/settings_languages"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/llStudyLanguagePanel_SS"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:background="@color/settings_header_bg"
-        android:layout_below="@+id/llAppLanguagePanel_SS"
-        android:layout_marginTop="10dp">
-
-        <TextView
-            android:id="@+id/tvStudyLanguage_SS"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/SettingsLanguage"
-            android:text="@string/settings_localize_study_language"
-            android:layout_weight="30"/>
-
-        <Spinner
-            android:id="@+id/spinnerChooseStudyCountry_SS"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="70"
-            android:entries="@array/settings_languages"/>
-
-    </LinearLayout>
     
     <ScrollView
+        android:id="@+id/swMain_SS"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/llScreenHeader_SS"
-        android:layout_above="@id/llLanguagePanel_SS">
+        android:layout_below="@id/llScreenHeader_SS">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -146,6 +94,58 @@
                 android:layout_below="@id/ccbVibrate_SS"
                 android:text="@string/settings_display_inner_borders"/>
 
+            <LinearLayout
+                android:id="@+id/llStudyLanguagePanel_SS"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@color/settings_header_bg"
+                android:layout_below="@+id/ccbDisplayInnerBorders_SS"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tvStudyLanguage_SS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/SettingsLanguage"
+                    android:text="@string/settings_localize_study_language"
+                    android:layout_weight="30"/>
+
+                <Spinner
+                    android:id="@+id/spinnerChooseStudyCountry_SS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="70"
+                    android:entries="@array/settings_languages"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llAppLanguagePanel_SS"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llStudyLanguagePanel_SS"
+                android:gravity="center"
+                android:background="@color/settings_header_bg">
+
+                <TextView
+                    android:id="@+id/tvAppLanguage_SS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/SettingsLanguage"
+                    android:text="@string/settings_localize_app_language"
+                    android:layout_weight="30"/>
+
+                <Spinner
+                    android:id="@+id/spinnerChooseAppCountry_SS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="70"
+                    android:entries="@array/settings_languages"/>
+
+            </LinearLayout>
 
         </RelativeLayout>
     </ScrollView>

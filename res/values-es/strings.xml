@@ -4,21 +4,26 @@
 
     <!-- ~~~~~~~~~~~~~~~~~~~ MENU ~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
-    <string name="menu_settings">SETTINGS</string>
-    <string name="menu_back">Back</string>
+    <string name="menu_settings">AJUSTES</string>
+    <string name="menu_back">Espalda</string>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
     <!-- ~~~~~~~~~~~~~~~~~~~ SETTINGS ~~~~~~~~~~~~~~~~~~~~~~ !-->
 
-    <string name="settings_play_background_music">Play background music</string>
-    <string name="settings_play_sound">Sound in game</string>
-    <string name="settings_vibrate">Game vibration</string>
-    <string name="settings_display_inner_borders">Display inner borders</string>
-    <string name="settings_language_game">Game language</string>
-    <string name="settings_language_locale">Settings language</string>
+    <string name="settings_play_background_music">Reproducir música de fondo</string>
+    <string name="settings_play_sound">El sonido en el juego</string>
+    <string name="settings_vibrate">La vibración del juego</string>
+    <string name="settings_display_inner_borders">Visualizar las fronteras interiores</string>
+    <string name="settings_localize_app_language">Idioma de configuración</string>
+    <string name="settings_localize_study_language">Idioma del juego</string>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~ CHOOSE LEVEL ~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+    <string name="choose_level_new_level">Nuevo nivel</string>
+    <string name="choose_level_locked_level">Nivel de bloqueo</string>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
     <!-- ~~~~~~~~~~~~~~~~~~~ Game Items ~~~~~~~~~~~~~~~~~~~~ !-->
     <string name="piggy">Lechôn</string>
@@ -102,10 +107,10 @@
     <string name="koala">Koala</string>
     <string name="butterfly">Mariposa</string>
 
-    <string name="perfect">Perfect</string>
-    <string name="wonderful">Wonderful</string>
-    <string name="well_done">Well done</string>
-    <string name="good_job">Good job</string>
+    <string name="perfect">Perfecto</string>
+    <string name="wonderful">Maravilloso</string>
+    <string name="well_done">¡Bien hecho</string>
+    <string name="good_job">Buen trabajo</string>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
 </resources>

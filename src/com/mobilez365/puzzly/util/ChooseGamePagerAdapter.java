@@ -135,7 +135,7 @@ public class ChooseGamePagerAdapter extends PagerAdapter implements View.OnClick
     }
 
     private void loadLevelPictures(PuzzleFillGame game, final ImageView image, RelativeLayout rl, int position) {
-        int passedGameCount = AppHelper.getMaxGame((Activity) mContext, mGameType);
+        int passedGameCount = AppHelper.getMaxGame(mActivity, mGameType);
         if (position < passedGameCount) {
             String imageName = game.getResultImage();
             rl.setBackgroundResource(R.drawable.background_done_level);
@@ -160,29 +160,27 @@ public class ChooseGamePagerAdapter extends PagerAdapter implements View.OnClick
     }
 
     private void loadGameWord(PuzzleFillGame game, TextView tv, int position) {
-        int passedGameCount = AppHelper.getMaxGame((Activity) mContext, mGameType);
+        int passedGameCount = AppHelper.getMaxGame(mActivity, mGameType);
         if(position < passedGameCount) {
-            if (AppHelper.getLocaleLanguage((Activity) mContext, Constans.GAME_LANGUAGE).equals(AppHelper.Languages.eng))
-                tv.setText(game.getWordEng());
-            else if (AppHelper.getLocaleLanguage((Activity) mContext, Constans.GAME_LANGUAGE).equals(AppHelper.Languages.rus))
-                tv.setText(game.getWordRus());
+            tv.setText(game.getWord());
         }
         else if(position == passedGameCount)
-            tv.setText(mContext.getString(R.string.choose_level_new_level));
+            tv.setText(mActivity.getString(R.string.choose_level_new_level));
         else
-            tv.setText(mContext.getString(R.string.choose_level_locked_level));
+            tv.setText(mActivity.getString(R.string.choose_level_locked_level));
     }
 
     @Override
     public void onClick(View v) {
         if (clickEnable) {
             int levelPosition = (Integer) v.getTag();
-            if (levelPosition <= AppHelper.getMaxGame((Activity) mContext, mGameType)) {
-                Intent gameIntent = new Intent(mContext, GameFillActivity.class);
+            if (levelPosition <= AppHelper.getMaxGame(mActivity, mGameType)) {
+                Intent gameIntent = new Intent(mActivity, GameFillActivity.class);
                 gameIntent.putExtra("type", mGameType);
                 gameIntent.putExtra("gameNumber", levelPosition);
                 mActivity.startActivity(gameIntent);
                 clickEnable = false;
+                AppHelper.startBackgroundSound(mActivity, Constans.GAME_BACKGROUND_MUSIC);
             }
         }
     }

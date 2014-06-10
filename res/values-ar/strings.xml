@@ -15,10 +15,15 @@
     <string name="settings_play_sound">صوت اللعبة</string>
     <string name="settings_vibrate"> ذبذبة وإهتزاز اللعبة</string>
     <string name="settings_display_inner_borders">عرض الحدود الداخلية</string>
-    <string name="settings_language_game">لغة اللعبة</string>
-    <string name="settings_language_locale">إعدادات اللغة</string>
+    <string name="settings_localize_app_language">عدادات اللغة</string>
+    <string name="settings_localize_study_language">غة اللعبة</string>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~ CHOOSE LEVEL ~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+    <string name="choose_level_new_level">مستوى جديد</string>
+    <string name="choose_level_locked_level">مستوى مقفل</string>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
     <!-- ~~~~~~~~~~~~~~~~~~~ Game Items ~~~~~~~~~~~~~~~~~~~~ !-->
     <string name="piggy">خنزير صغير</string>

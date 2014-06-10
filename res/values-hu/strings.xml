@@ -15,10 +15,15 @@
     <string name="settings_play_sound">Hangok</string>
     <string name="settings_vibrate">Rezgés</string>
     <string name="settings_display_inner_borders">Körvonal megjelenítése</string>
-    <string name="settings_language_game">Játék nyelve</string>
-    <string name="settings_language_locale">Beállítás nyelve</string>
+    <string name="settings_localize_app_language">Beállítás nyelve</string>
+    <string name="settings_localize_study_language">Játék nyelve</string>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~ CHOOSE LEVEL ~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+    <string name="choose_level_new_level">Új szint</string>
+    <string name="choose_level_locked_level">Zárt szint</string>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
     <!-- ~~~~~~~~~~~~~~~~~~~ Game Items ~~~~~~~~~~~~~~~~~~~~ !-->
     <string name="piggy">Kismalac</string>

@@ -15,10 +15,15 @@
     <string name="settings_play_sound">游戏音效</string>
     <string name="settings_vibrate">游戏震动模式</string>
     <string name="settings_display_inner_borders">显示内框</string>
-    <string name="settings_language_game">游戏语言</string>
-    <string name="settings_language_locale">语言设定</string>
+    <string name="settings_localize_app_language">语言设定</string>
+    <string name="settings_localize_study_language">游戏语言</string>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~ CHOOSE LEVEL ~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+    <string name="choose_level_new_level">新等级</string>
+    <string name="choose_level_locked_level">未解锁等级</string>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
     <!-- ~~~~~~~~~~~~~~~~~~~ Game Items ~~~~~~~~~~~~~~~~~~~~ !-->
     <string name="piggy">小猪</string>
