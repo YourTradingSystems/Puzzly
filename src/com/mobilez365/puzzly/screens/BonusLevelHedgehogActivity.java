@@ -87,9 +87,9 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity implements 
             boolean bigCandy = r.nextBoolean();
             int candySize;
             if (bigCandy)
-                candySize = mScreenHeight / 5;
+                candySize = mScreenHeight / 4;
             else
-                candySize = mScreenHeight / 8;
+                candySize = mScreenHeight / 6;
 
             int candyNumber = r.nextInt(4) + 1;
             int candyYPos = r.nextInt(Math.abs(candiesLayoutHeight - candySize));
@@ -98,9 +98,9 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity implements 
             boolean offsetFind = false;
             while (!offsetFind) {
                 offsetFind = true;
-                startOffset = r.nextInt(17000);
+                startOffset = r.nextInt(20000);
                 for (Long offset : offsetList) {
-                    if (Math.abs(offset - startOffset) < 400)
+                    if (Math.abs(offset - startOffset) < 500)
                         offsetFind = false;
                 }
             }
@@ -108,6 +108,7 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity implements 
 
             candy.setImageResource(getResources().getIdentifier("img_candy" + candyNumber, "drawable", getPackageName()));
             candy.setLayoutParams(new RelativeLayout.LayoutParams(candySize, candySize));
+            candy.setPadding(10, 10, 10, 10);
             candy.setX(-candySize);
             candy.setY(candyYPos);
             candy.setTag(i);
@@ -120,7 +121,7 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity implements 
             candiesLayout.addView(candy);
 
             ObjectAnimator moveAnimator = ObjectAnimator.ofFloat(candy, "translationX", candy.getX(), mScreenWidth);
-            moveAnimator.setDuration(5000);
+            moveAnimator.setDuration(7000);
             moveAnimator.setStartDelay(startOffset);
             moveAnimator.addListener(new AnimationEndListener(candy, new AnimationEndListener.AnimEndListener() {
                 @Override
@@ -141,29 +142,33 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity implements 
 
         int finishCenterX;
         int finishCenterY;
+        float koef;
+
         if (bigCandiesList.contains(v)) {
             finishCenterX = (int) (bigHedgehog.getX() + bigHedgehog.getWidth() * 0.55);
             finishCenterY = (int) (bigHedgehog.getY() + bigHedgehog.getHeight() * 0.4);
+            koef = (float) ((bigHedgehog.getHeight() * 0.4) / v.getHeight());
         } else {
             ImageView smallHedgehog = (ImageView) findViewById(R.id.ivHedgehogSmallABH);
             finishCenterX = (int) (smallHedgehog.getX() + smallHedgehog.getWidth() * 0.15);
             finishCenterY = (int) (smallHedgehog.getY() + smallHedgehog.getHeight() * 0.5);
+            koef = (float) ((smallHedgehog.getHeight() * 0.4) / v.getHeight());
         }
 
         ObjectAnimator moveXAnimator = ObjectAnimator.ofFloat(v, "translationX", v.getX(), finishCenterX);
         ObjectAnimator moveYAnimator = ObjectAnimator.ofFloat(v, "translationY", v.getY(), finishCenterY);
 
-        ObjectAnimator scaleXAnimator = ObjectAnimator.ofFloat(v, "scaleX", 1f, 1.2f);
+        ObjectAnimator scaleXAnimator = ObjectAnimator.ofFloat(v, "scaleX", 1f, koef);
         scaleXAnimator.setDuration(100);
         scaleXAnimator.start();
 
-        ObjectAnimator scaleYAnimator = ObjectAnimator.ofFloat(v, "scaleY", 1f, 1.2f);
+        ObjectAnimator scaleYAnimator = ObjectAnimator.ofFloat(v, "scaleY", 1f, koef);
         scaleYAnimator.setDuration(100);
         scaleYAnimator.start();
 
         AnimatorSet set = new AnimatorSet();
         set.play(moveXAnimator).with(moveYAnimator);
-        set.setDuration(300);
+        set.setDuration(3000);
 
         set.addListener(new AnimationEndListener(v, this));
         set.start();

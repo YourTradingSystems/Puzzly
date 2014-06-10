@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1 Basic//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-basic.dtd">
 <svg version="1.1" baseProfile="basic" id="Слой_1"
@@ -66,7 +66,7 @@
 	<path fill="#86BB50" d="M175.592,29.432c0,0-23.09,65.995-64.338,93.62l4.391,4.284C115.646,127.337,166.665,79.344,175.592,29.432
 		z"/>
 	
-		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-59.7384" y1="12232.6406" x2="-13.6039" y2="12280.9873" gradientTransform="matrix(1.389315e-004 0 0 1.389315e-004 -568.2316 -356.362)">
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-59.7384" y1="12232.6406" x2="-13.6039" y2="12280.9873" gradientTransform="matrix(0 0 0 0 -568.2316 -356.362)">
 		<stop  offset="0" style="stop-color:#CF4A5C"/>
 		<stop  offset="0.451" style="stop-color:#B7252B"/>
 		<stop  offset="1" style="stop-color:#CF4A5C"/>
