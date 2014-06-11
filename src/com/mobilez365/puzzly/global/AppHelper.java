@@ -110,25 +110,25 @@ public class AppHelper {
             case 3:
                 return Languages.hu;
 
-            //case 4:
+            case 4:
                 //return Languages.de;
 
-            case 4:
+            case 5:
                 return Languages.fr;
 
-            case 5:
+            case 6:
                 return Languages.es;
 
-            case 6:
+            case 7:
                 return Languages.zh;
 
-            case 7:
+            case 8:
                 return Languages.ar;
 
             //case 9:
                 //return Languages.he;
 
-            case 8:
+            case 9:
                 return Languages.hi;
         }
 
