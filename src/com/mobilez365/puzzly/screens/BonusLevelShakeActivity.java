@@ -47,7 +47,6 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements Sha
     private int mScreenWidth;
 
     private RelativeLayout rlContainer_ABLS;
-    private BackgroundSound mBackgroundSound;
     private ImageButton nextGame;
 
     private VideoView mTutorial;
@@ -57,8 +56,6 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements Sha
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bonus_level_shake);
-
-        mBackgroundSound = AppHelper.getBackgroundSound();
 
         gameType = getIntent().getIntExtra("type", 0);
         mGameNumber = getIntent().getIntExtra("gameNumber", 0);
@@ -185,10 +182,8 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements Sha
         mShaker.resume();
         super.onResume();
 
-        if (!AppHelper.isAppInBackground(this)) {
-            if (mBackgroundSound != null && !mBackgroundSound.isPlay())
-                mBackgroundSound.pause(false);
-        }
+        if (!AppHelper.isAppInBackground(this))
+            AppHelper.getBackgroundSound().pause(false);
 
         if (mTutorial != null)
             mTutorial.start();
@@ -202,8 +197,7 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements Sha
 
         mShaker.pause();
         if (AppHelper.isAppInBackground(this) || AppHelper.isScreenOff(this)) {
-            if (mBackgroundSound != null && mBackgroundSound.isPlay())
-                mBackgroundSound.pause(true);
+            AppHelper.getBackgroundSound().pause(true);
 
             if (mTutorial != null)
                 mTutorial.stopPlayback();
@@ -234,14 +228,6 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements Sha
         }
         else
             pickCandy(v);
-    }
-
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK ) {
-            AppHelper.startBackgroundSound(this, Constans.MENU_BACKGROUND_MUSIC);
-        }
-        return super.onKeyDown(keyCode, event);
     }
 
     @Override

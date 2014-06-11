@@ -5,18 +5,18 @@
     <!-- ~~~~~~~~~~~~~~~~~~~ MENU ~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
     <string name="menu_settings">AJUSTES</string>
-    <string name="menu_back">Espalda</string>
+    <string name="menu_back">Atrás</string>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
     <!-- ~~~~~~~~~~~~~~~~~~~ SETTINGS ~~~~~~~~~~~~~~~~~~~~~~ !-->
 
-    <string name="settings_play_background_music">Reproducir música de fondo</string>
-    <string name="settings_play_sound">El sonido en el juego</string>
+    <string name="settings_play_background_music">Tocar música de fondo</string>
+    <string name="settings_play_sound">Sonido del juego</string>
     <string name="settings_vibrate">La vibración del juego</string>
-    <string name="settings_display_inner_borders">Visualizar las fronteras interiores</string>
-    <string name="settings_localize_app_language">Idioma de configuración</string>
-    <string name="settings_localize_study_language">Idioma del juego</string>
+    <string name="settings_display_inner_borders">Visualizar margenes interiores</string>
+    <string name="settings_localize_app_language">Lenguaje de la configuración </string>
+    <string name="settings_localize_study_language">Lenguaje del juego</string>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 

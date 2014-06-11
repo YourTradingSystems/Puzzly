@@ -18,7 +18,6 @@ import android.widget.VideoView;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.puzzles.PuzzlesDB;
 
-import com.mobilez365.puzzly.screens.SettingsActivity;
 import com.mobilez365.puzzly.util.BackgroundSound;
 
 import java.lang.reflect.Field;
@@ -31,7 +30,7 @@ import java.util.Locale;
 public class AppHelper {
 
     private static BackgroundSound mBackgroundSound;
-    private static MediaPlayer mPlayer;
+    private static MediaPlayer mItemSound;
     public static Integer appStatus;
     public static Integer adware = 2;
     private static int passedGame = 0;
@@ -111,25 +110,25 @@ public class AppHelper {
             case 3:
                 return Languages.hu;
 
-            case 4:
-                return Languages.de;
+            //case 4:
+                //return Languages.de;
 
-            case 5:
+            case 4:
                 return Languages.fr;
 
-            case 6:
+            case 5:
                 return Languages.es;
 
-            case 7:
+            case 6:
                 return Languages.zh;
 
-            case 8:
+            case 7:
                 return Languages.ar;
 
             //case 9:
                 //return Languages.he;
 
-            case 9:
+            case 8:
                 return Languages.hi;
         }
 
@@ -186,38 +185,33 @@ public class AppHelper {
         return tutorial_video;
     }
 
-    public static final MediaPlayer initSound(Activity _activity, String _fileName) {
-        int id = _activity.getResources().getIdentifier(_fileName.toLowerCase(), "raw", _activity.getPackageName());
-        mPlayer = MediaPlayer.create(_activity, id);
-        return mPlayer;
-    }
-
     public static final MediaPlayer playSound(Activity _activity, String _fileName) {
         int id = _activity.getResources().getIdentifier(_fileName, "raw", _activity.getPackageName());
-        mPlayer = MediaPlayer.create(_activity, id);
-        mPlayer.start();
-        return mPlayer;
+        mItemSound = MediaPlayer.create(_activity, id);
+        mItemSound.start();
+        return mItemSound;
     }
 
     public static final void startBackgroundSound(Activity _activity, String _name) {
-        if (mBackgroundSound != null && mBackgroundSound.isPlay())
+        if (mBackgroundSound != null && mBackgroundSound.isPlay()) {
             if (mBackgroundSound.getPlayer() != null) {
                 mBackgroundSound.getPlayer().stop();
                 mBackgroundSound.getPlayer().release();
             }
+        }
 
-        mBackgroundSound = new BackgroundSound(_activity, _name);
-        if (!mBackgroundSound.isInit() && AppHelper.getPlayBackgroundMusic(_activity))
+        if (mBackgroundSound != null)
+            mBackgroundSound.initSound(_activity, _name);
+        else {
+            mBackgroundSound = new BackgroundSound(_activity, _name);
             mBackgroundSound.execute();
-    }
-
-    public static final void stopBackgroundSound() {
-        if (mBackgroundSound != null && mBackgroundSound.isPlay())
-            if (mBackgroundSound.getPlayer() != null)
-                mBackgroundSound.getPlayer().stop();
+        }
     }
 
     public static final BackgroundSound getBackgroundSound() {
+        if (mBackgroundSound == null)
+            mBackgroundSound = new BackgroundSound(null, "");
+
         return mBackgroundSound;
     }
     

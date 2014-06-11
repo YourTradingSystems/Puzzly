@@ -20,7 +20,6 @@ import com.mobilez365.puzzly.global.Constans;
 import com.mobilez365.puzzly.puzzles.PuzzleFillGame;
 import com.mobilez365.puzzly.puzzles.PuzzlesDB;
 import com.mobilez365.puzzly.util.AnimationEndListener;
-import com.mobilez365.puzzly.util.BackgroundSound;
 import com.mobilez365.puzzly.util.ParseSvgAsyncTask;
 
 import java.util.Random;
@@ -37,7 +36,7 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
     private TextView gameText;
     private PuzzleFillGame mPuzzleFillGame;
     private MediaPlayer mPlayer;
-    private BackgroundSound mBackgroundSound;
+    private boolean mFirstPlayItemSound;
     private GameView gameView;
     private Point displaySize;
     private int resultImageXPos;
@@ -51,7 +50,8 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_fill);
 
-        mBackgroundSound = AppHelper.getBackgroundSound();
+        if (AppHelper.getPlayBackgroundMusic(this) && !AppHelper.getBackgroundSound().getName().equals(Constans.GAME_BACKGROUND_MUSIC))
+            AppHelper.startBackgroundSound(this, Constans.GAME_BACKGROUND_MUSIC);
 
         mGameType = getIntent().getIntExtra("type", 0);
         mGameNumber = getIntent().getIntExtra("gameNumber", 0);
@@ -73,6 +73,8 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
         Display display = getWindowManager().getDefaultDisplay();
         displaySize = new Point();
         display.getSize(displaySize);
+
+        mFirstPlayItemSound = false;
     }
 
     @Override
@@ -82,9 +84,10 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
         AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this, Constans.GAME_LANGUAGE).name());
 
         if (!AppHelper.isAppInBackground(this)) {
-            if (mBackgroundSound != null && !mBackgroundSound.isPlay()) {
-                mBackgroundSound.pause(false);
-            }
+            AppHelper.getBackgroundSound().pause(false);
+
+            if (!mFirstPlayItemSound && mPlayer != null)
+                mPlayer.start();
         }
     }
 
@@ -93,16 +96,11 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
         super.onPause();
 
         if (AppHelper.isAppInBackground(this) || AppHelper.isScreenOff(this)) {
-            if (mBackgroundSound != null && mBackgroundSound.isPlay()) {
-                mBackgroundSound.pause(true);
-            }
-        }
-    }
+            AppHelper.getBackgroundSound().pause(true);
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        AppHelper.startBackgroundSound(this, Constans.MENU_BACKGROUND_MUSIC);
+            if (!mFirstPlayItemSound && mPlayer != null)
+                mPlayer.pause();
+        }
     }
 
     private void switchGame(boolean nextGame) {
@@ -252,13 +250,16 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
         showBasketAnimation();
         showResultImageAnimation(bitmap, resultImageXPos, resultImageYPos);
 
-        if (AppHelper.getLocaleLanguage(this, Constans.GAME_LANGUAGE).equals(AppHelper.Languages.eng))
-            gameText.setText(mPuzzleFillGame.getWordEng());
-        else if (AppHelper.getLocaleLanguage(this, Constans.GAME_LANGUAGE).equals(AppHelper.Languages.rus))
-            gameText.setText(mPuzzleFillGame.getWordRus());
+        gameText.setText(mPuzzleFillGame.getWord());
 
         if (AppHelper.getPlaySound(this)) {
-            AppHelper.playSound(this, mPuzzleFillGame.getItemName());
+            mPlayer = AppHelper.playSound(this, mPuzzleFillGame.getItemName());
+            mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                @Override
+                public void onCompletion(MediaPlayer mediaPlayer) {
+                    mFirstPlayItemSound = true;
+                }
+            });
         }
 
         //  String excellent_words[] = new String[]{"perfect", "wonderfull", "well_done", "good_job"};

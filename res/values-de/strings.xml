@@ -12,11 +12,11 @@
     <!-- ~~~~~~~~~~~~~~~~~~~ SETTINGS ~~~~~~~~~~~~~~~~~~~~~~ !-->
 
     <string name="settings_play_background_music">Hintergrundmusik abspielen</string>
-    <string name="settings_play_sound">Ton in Spiel</string>
-    <string name="settings_vibrate">Spiel Vibrations</string>
-    <string name="settings_display_inner_borders">Zeigen inneren Grenzen</string>
-    <string name="settings_localize_app_language">Sprache der Einstellungen</string>
-    <string name="settings_localize_study_language">Sprache des Spiels</string>
+    <string name="settings_play_sound">Klingeltöne</string>
+    <string name="settings_vibrate">Vibrationssignal</string>
+    <string name="settings_display_inner_borders">Die innere Grenzen abspiegeln</string>
+    <string name="settings_localize_app_language">Einstellungssprache</string>
+    <string name="settings_localize_study_language">Sprache</string>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 

@@ -36,7 +36,6 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     private ImageView ivLeftHandTutorial_MS;
     private ImageView ivRightHandTutorial_MS;
 
-    private BackgroundSound mBackgroundSound;
     private List<ImageView> mClouds = new ArrayList<ImageView>();
 
     @Override
@@ -47,10 +46,8 @@ public class MenuActivity extends Activity implements View.OnClickListener {
         super.onCreate(_savedInstanceState);
        // AppHelper.setDefaultFont(this);
 
-        if (AppHelper.getBackgroundSound() == null) {
+        if (AppHelper.getPlayBackgroundMusic(this))
             AppHelper.startBackgroundSound(this, Constans.MENU_BACKGROUND_MUSIC);
-        }
-        mBackgroundSound = AppHelper.getBackgroundSound();
 
         setContentView(R.layout.menu_screen);
         showBanner();
@@ -95,12 +92,8 @@ public class MenuActivity extends Activity implements View.OnClickListener {
         super.onResume();
         setGameAchievement(AppHelper.getGameAchievement(this));
 
-        mBackgroundSound = AppHelper.getBackgroundSound();
-
-        if (!AppHelper.isAppInBackground(this)) {
-            if (mBackgroundSound != null && !mBackgroundSound.isPlay())
-                mBackgroundSound.pause(false);
-        }
+        if (!AppHelper.isAppInBackground(this))
+            AppHelper.getBackgroundSound().pause(false);
 
         if (AppHelper.getLeftHandTutorial(this)) {
             ivLeftHandTutorial_MS.clearAnimation();
@@ -122,16 +115,14 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     protected void onPause() {
         super.onPause();
 
-        if (AppHelper.isAppInBackground(this) || AppHelper.isScreenOff(this)) {
-            if (mBackgroundSound != null && mBackgroundSound.isPlay())
-                mBackgroundSound.pause(true);
-        }
+        if (AppHelper.isAppInBackground(this) || AppHelper.isScreenOff(this))
+            AppHelper.getBackgroundSound().pause(true);
     }
 
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        mBackgroundSound.pause(true);
+        AppHelper.getBackgroundSound().stop();
     }
 
     private final void findViews() {

@@ -41,15 +41,11 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity implements 
     private BackgroundSound mBackgroundSound;
     private ImageButton nextGame;
 
-   // private VideoView mTutorial;
-
     public void onCreate(Bundle savedInstanceState) {
         AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this,Constans.APP_LANGUAGE).name());
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bonus_level_hedgehog);
-
-        mBackgroundSound = AppHelper.getBackgroundSound();
 
         mGameType = getIntent().getIntExtra("type", 0);
         mGameNumber = getIntent().getIntExtra("gameNumber", 0);
@@ -63,9 +59,6 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity implements 
 
         bigHedgehog = (ImageView) findViewById(R.id.ivHedgehogBigABH);
         bigHedgehog.getViewTreeObserver().addOnGlobalLayoutListener(this);
-
-       // if (!AppHelper.getBonusFlower(this))
-        //    mTutorial = AppHelper.showVideoTutorial(this, rlContainer_ABLH);
     }
 
     private void initCandies() {
@@ -194,13 +187,8 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity implements 
     public void onResume() {
         super.onResume();
 
-        if (!AppHelper.isAppInBackground(this)) {
-            if (mBackgroundSound != null && !mBackgroundSound.isPlay())
-                mBackgroundSound.pause(false);
-        }
-
-     //   if (mTutorial != null)
-     //       mTutorial.start();
+        if (!AppHelper.isAppInBackground(this))
+            AppHelper.getBackgroundSound().pause(false);
 
         if (nextGame != null) nextGame.setClickable(true);
     }
@@ -209,21 +197,8 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity implements 
     protected void onPause() {
         super.onPause();
 
-        if (AppHelper.isAppInBackground(this) || AppHelper.isScreenOff(this)) {
-            if (mBackgroundSound != null && mBackgroundSound.isPlay())
-                mBackgroundSound.pause(true);
-
-          //  if (mTutorial != null)
-          //      mTutorial.stopPlayback();
-        }
-    }
-
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            AppHelper.startBackgroundSound(this, Constans.MENU_BACKGROUND_MUSIC);
-        }
-        return super.onKeyDown(keyCode, event);
+        if (AppHelper.isAppInBackground(this) || AppHelper.isScreenOff(this))
+            AppHelper.getBackgroundSound().pause(true);
     }
 
     @Override

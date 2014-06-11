@@ -30,7 +30,6 @@ public class SettingsActivity extends RestartActivty implements View.OnClickList
     private ScrollView swMain;
 
     private int displayInit = 0;
-    private BackgroundSound mBackgroundSound;
 
     @Override
     public void onCreate(Bundle _savedInstanceState) {
@@ -38,7 +37,6 @@ public class SettingsActivity extends RestartActivty implements View.OnClickList
 
         super.onCreate(_savedInstanceState);
         setContentView(R.layout.settings_screen);
-        mBackgroundSound = AppHelper.getBackgroundSound();
 
         findViews();
         showBanner();
@@ -57,13 +55,10 @@ public class SettingsActivity extends RestartActivty implements View.OnClickList
             case R.id.ccbPlayBackgroundMusic_SS:
                 AppHelper.setPlayBackgroundMusic(this, ccbPlayBackgroundMusic_SS.isChecked());
 
-                if (ccbPlayBackgroundMusic_SS.isChecked()) {
+                if (ccbPlayBackgroundMusic_SS.isChecked())
                     AppHelper.startBackgroundSound(this, Constans.MENU_BACKGROUND_MUSIC);
-                    mBackgroundSound = AppHelper.getBackgroundSound();
-                }
-                else {
-                    AppHelper.stopBackgroundSound();
-                }
+                else
+                    AppHelper.getBackgroundSound().stop();
 
                 break;
 
@@ -111,20 +106,16 @@ public class SettingsActivity extends RestartActivty implements View.OnClickList
     protected void onResume() {
         super.onResume();
 
-        if (!AppHelper.isAppInBackground(this)) {
-            if (mBackgroundSound != null && !mBackgroundSound.isPlay())
-                mBackgroundSound.pause(false);
-        }
+        if (!AppHelper.isAppInBackground(this))
+            AppHelper.getBackgroundSound().pause(false);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
 
-        if (AppHelper.isAppInBackground(this) || AppHelper.isScreenOff(this)) {
-            if (mBackgroundSound != null && mBackgroundSound.isPlay())
-                mBackgroundSound.pause(true);
-        }
+        if (AppHelper.isAppInBackground(this) || AppHelper.isScreenOff(this))
+            AppHelper.getBackgroundSound().pause(true);
     }
 
     private final void findViews() {

@@ -102,12 +102,12 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
             cv.put(PuzzlesDBHelper.GAME_WORD, context.getString(R.string.rabbit));
             cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "rabbit");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "4 46 197");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "167 94 4");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "200 0 20");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "0 50 230");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "370");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "80");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "8 99 115 216");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "91 106 163 8");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "185 105 110 35");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "220 380 105 165");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "410");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "125");
 
             findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
 
@@ -116,34 +116,34 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "octopus");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "2 89 199");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "133 18 138");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "10 15 160");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "10 225 70");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "250 120 15");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "60 228 60");
             cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "420");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "70");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "90");
 
             findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
 
             cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
             cv.put(PuzzlesDBHelper.GAME_WORD, context.getString(R.string.hen));
             cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "hen");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "6 142 227");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "46 122 15");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "190 15 40");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "170 20 260");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "380");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "70");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "8 110 207");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "35 96 8");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "270 125 40");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "270 90 270");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "460");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "100");
 
             findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
 
             cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
             cv.put(PuzzlesDBHelper.GAME_WORD, context.getString(R.string.teddy_bear));
             cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "teddy_bear");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "14 17 15");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "9 115 232");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "55 169 75");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "316 180 39");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "525");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "60");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "21 8 45 116 119 200");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "8 54 125 57 189 118");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "25 195 265 25 185 265");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "255 55 255 55 345 55");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "485");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "100");
 
             findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
 
@@ -176,12 +176,12 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
             cv.put(PuzzlesDBHelper.GAME_WORD, context.getString(R.string.giraffe));
             cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "giraffe");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "28 106 110");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "279 227 21");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "188 270 30");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "55 191 224");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "460");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "10");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "8 104 169");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "8 184 207");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "130 285 55");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "265 110 100");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "510");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "40");
 
             findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
 
@@ -215,12 +215,12 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
             cv.put(PuzzlesDBHelper.GAME_WORD, context.getString(R.string.zebra));
             cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "zebra");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "34 12 141");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "172 76 11");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "245 128 55");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "310 26 215");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "490");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "80");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "8 98 183 19 181");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "8 88 88 135 159");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "170 40 35 160 35");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "325 340 195 100 100");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "410");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "110");
 
             findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
 
@@ -229,8 +229,8 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "kettle");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "132 8 85 142 268 124");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "8 73 67 93 70 218");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "270 28 40 150 260 270");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "367 100 300 95 100 367");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "200 55 155 210 30 35");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "60 100 300 150 330 255");
             cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "420");
             cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "120");
 
@@ -292,7 +292,7 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "66 8 109 105 10 195 195");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "40 215 210 155 20 40 245");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "100 300 85 235 300 175 185");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "410");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "430");
             cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "120");
 
             findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
@@ -304,7 +304,7 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "8 18 8 18 10 59 62 97 75");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "30 275 210 140 270 30 30 30 30");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "100 215 100 215 325 325 265 420 190");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "390");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "395");
             cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "175");
 
             findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
@@ -316,7 +316,7 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "8 73 53 83 163 133 108");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "80 275 245 275 60 50 44");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "75 325 55 200 385 280 200");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "420");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "440");
             cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "135");
 
             findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
@@ -364,12 +364,24 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "8 113 156 190 230");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "26 10 330 175 286");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "337 185 146 100 307");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "475");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "490");
             cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "60");
 
             findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
 
             cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
+            cv.put(PuzzlesDBHelper.GAME_WORD, context.getString(R.string.lemon));
+            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "lemon");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "8 92 173 85 105");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "8 131 140 198 262");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "150 35 105 82 224");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "265 185 32 313 109");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "485");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "40");
+
+            findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
+
+            /*cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
             cv.put(PuzzlesDBHelper.GAME_WORD, context.getString(R.string.potato));
             cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "potato");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "35 124 8 78 143 45 111");
@@ -379,7 +391,7 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "525");
             cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "160");
 
-            findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
+            findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);*/
 
             cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
             cv.put(PuzzlesDBHelper.GAME_WORD, context.getString(R.string.sea_bear));
@@ -406,16 +418,28 @@ public class PuzzlesDB {
             findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
 
             cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
-            cv.put(PuzzlesDBHelper.GAME_WORD, context.getString(R.string.lemon));
-            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "lemon");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "8 92 173 85 105");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "8 131 140 198 262");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "150 35 105 82 224");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "265 185 32 313 109");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "485");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "40");
+            cv.put(PuzzlesDBHelper.GAME_WORD, context.getString(R.string.train));
+            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "train");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "180 24 55 168 200 244 8 102 236 37 76 160 249");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "8 36 62 86 64 75 101 101 108 163 196 175 184");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "200 22 197 125 305 195 165 30 305 51 50 260 41");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "275 185 190 95 222 95 360 260 311 382 150 85 83");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "460");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "130");
 
             findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
+
+            /*cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
+            cv.put(PuzzlesDBHelper.GAME_WORD, context.getString(R.string.wagon));
+            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "wagon");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "8 23 42 158 27 158 42 221");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "8 30 48 30 92 92 124 128");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "40 216 70 45 122 122 275 45");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "420 265 345 265 95 180 175 175");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "450");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "160");
+
+            findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);*/
 
             cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
             cv.put(PuzzlesDBHelper.GAME_WORD, context.getString(R.string.gorilla));
@@ -436,32 +460,20 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "9 37 32 33 38 45");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "45 40 240 140 230 115");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "240 360 240 260 360 140");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "400");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "420");
             cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "200");
 
             findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
 
             cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
-            cv.put(PuzzlesDBHelper.GAME_WORD, context.getString(R.string.train));
-            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "train");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "180 24 55 168 200 244 8 102 236 37 76 160 249");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "8 36 62 86 64 75 101 101 108 163 196 175 184");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "200 22 197 125 305 195 165 30 305 51 50 260 41");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "275 185 190 95 222 95 360 260 311 382 150 85 83");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "460");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "130");
-
-            findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
-
-            cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
-            cv.put(PuzzlesDBHelper.GAME_WORD, context.getString(R.string.wagon));
-            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "wagon");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "8 23 158 42 27 158 42 221");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "8 30 30 48 92 92 124 128");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "40 216 70 45 122 122 275 45");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "420 265 345 265 95 180 175 175");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "450");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "160");
+            cv.put(PuzzlesDBHelper.GAME_WORD, context.getString(R.string.backpack));
+            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "backpack");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "74 8 59 87 104");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "8 122 61 44 112");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "240 20 290 45 125");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "360 115 100 350 145");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "500");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "115");
 
             findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
 
@@ -473,7 +485,7 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "4 10000 10000 10000");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "60 260 30 320");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "45 58 240 240");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "515");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "535");
             cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "80");
 
             findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
@@ -486,7 +498,7 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "29 10000 10000 10000");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "220 60 220 30");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "250 25 30 280");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "415");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "425");
             cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "125");
 
             findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
@@ -512,7 +524,7 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "147 10000 10000 10000");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "90 255 70 250");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "135 115 295 345");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "480");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "490");
             cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "135");
 
             findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
@@ -538,7 +550,7 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "6 10000 10000 10000");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "285 45 50 290");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "40 45 308 324");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "540");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "555");
             cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "70");
 
             findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
@@ -551,7 +563,7 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "49 10000 10000 10000");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "280 60 210 35");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "320 25 30 285");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "410");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "414");
             cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "75");
 
             findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
@@ -586,12 +598,12 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_TYPE, "1");
             cv.put(PuzzlesDBHelper.GAME_WORD, context.getString(R.string.lion));
             cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "lion");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "13 10000 10000 10000");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "81 10000 10000 10000");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "300 80 65 300");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "55 55 250 275");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "450");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "85");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "8 10000 10000 10000");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "99 10000 10000 10000");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "55 85 195 240");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "330 110 140 315");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "425");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "125");
 
             findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
 
@@ -625,12 +637,12 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_TYPE, "1");
             cv.put(PuzzlesDBHelper.GAME_WORD, context.getString(R.string.toucan));
             cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "toucan");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "12 10000 10000 10000");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "26 10000 10000 10000");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "45 50 330 325");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "300 60 70 300");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "490");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "100");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "196 10000 10000 10000");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "47 10000 10000 10000");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "20 20 225 270");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "360 125 120 340");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "400");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "175");
 
             findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
 
@@ -803,7 +815,7 @@ public class PuzzlesDB {
 
             findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
 
-            cv = new ContentValues();
+            /*cv = new ContentValues();
             cv.put(PuzzlesDBHelper.GAME_TYPE, "1");
             cv.put(PuzzlesDBHelper.GAME_WORD, context.getString(R.string.radish));
             cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "radish");
@@ -814,7 +826,7 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "490");
             cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "130");
 
-            findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
+            findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);*/
 
             cv = new ContentValues();
             cv.put(PuzzlesDBHelper.GAME_TYPE, "1");
@@ -857,14 +869,14 @@ public class PuzzlesDB {
 
             cv = new ContentValues();
             cv.put(PuzzlesDBHelper.GAME_TYPE, "1");
-            cv.put(PuzzlesDBHelper.GAME_WORD, context.getString(R.string.pitching));
-            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "pitching");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "54 10000 10000 10000");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "111 10000 10000 10000");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "255 60 245 60");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "330 130 130 320");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "525");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "150");
+            cv.put(PuzzlesDBHelper.GAME_WORD, context.getString(R.string.rhino));
+            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "rhino");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "8 10000 10000 10000");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "60 10000 10000 10000");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "55 215 55 215");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "140 140 330 330");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "380");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "185");
 
             findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
 
@@ -883,14 +895,14 @@ public class PuzzlesDB {
 
             cv = new ContentValues();
             cv.put(PuzzlesDBHelper.GAME_TYPE, "1");
-            cv.put(PuzzlesDBHelper.GAME_WORD, context.getString(R.string.rhino));
-            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "rhino");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "8 10000 10000 10000");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "60 10000 10000 10000");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "55 215 55 215");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "140 140 330 330");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "360");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "185");
+            cv.put(PuzzlesDBHelper.GAME_WORD, context.getString(R.string.pitching));
+            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "pitching");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "54 10000 10000 10000");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "111 10000 10000 10000");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "255 60 245 60");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "330 130 130 320");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "525");
+            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "150");
 
             findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
 

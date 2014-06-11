@@ -180,7 +180,6 @@ public class ChooseGamePagerAdapter extends PagerAdapter implements View.OnClick
                 gameIntent.putExtra("gameNumber", levelPosition);
                 mActivity.startActivity(gameIntent);
                 clickEnable = false;
-                AppHelper.startBackgroundSound(mActivity, Constans.GAME_BACKGROUND_MUSIC);
             }
         }
     }

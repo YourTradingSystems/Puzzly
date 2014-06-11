@@ -57,7 +57,8 @@
         android:id="@+id/swMain_SS"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/llScreenHeader_SS">
+        android:layout_below="@id/llScreenHeader_SS"
+        android:layout_above="@id/llBanner_SS">
 
         <RelativeLayout
             android:layout_width="match_parent"

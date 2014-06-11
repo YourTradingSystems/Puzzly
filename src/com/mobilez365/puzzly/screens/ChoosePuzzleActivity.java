@@ -25,13 +25,13 @@ public class ChoosePuzzleActivity extends Activity implements View.OnClickListen
     private ImageButton btnPrevious;
     private ImageButton btnNext;
     private ChooseGamePagerAdapter levelsAdapter;
-    private BackgroundSound mBackgroundSound;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_puzzle);
 
-        mBackgroundSound = AppHelper.getBackgroundSound();
+        if (AppHelper.getPlayBackgroundMusic(this) && !AppHelper.getBackgroundSound().getName().equals(Constans.MENU_BACKGROUND_MUSIC))
+            AppHelper.startBackgroundSound(this, Constans.MENU_BACKGROUND_MUSIC);
 
         levelsViewPager = (ViewPager) findViewById(R.id.vpMailACP);
         mGameType = getIntent().getIntExtra("type", 0);
@@ -72,22 +72,19 @@ public class ChoosePuzzleActivity extends Activity implements View.OnClickListen
         }
         levelsAdapter.clickEnable = true;
 
-        if (!AppHelper.isAppInBackground(this)) {
-            if (mBackgroundSound != null && !mBackgroundSound.isPlay()) {
-                mBackgroundSound.pause(false);
-            }
-        }
+        if (AppHelper.getPlayBackgroundMusic(this) && !AppHelper.getBackgroundSound().getName().equals(Constans.MENU_BACKGROUND_MUSIC))
+            AppHelper.startBackgroundSound(this, Constans.MENU_BACKGROUND_MUSIC);
+
+        if (!AppHelper.isAppInBackground(this))
+            AppHelper.getBackgroundSound().pause(false);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
 
-        if (AppHelper.isAppInBackground(this) || AppHelper.isScreenOff(this)) {
-            if (mBackgroundSound != null && mBackgroundSound.isPlay()) {
-                mBackgroundSound.pause(true);
-            }
-        }
+        if (AppHelper.isAppInBackground(this) || AppHelper.isScreenOff(this))
+            AppHelper.getBackgroundSound().pause(true);
     }
 
     @Override

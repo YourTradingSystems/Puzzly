@@ -11,11 +11,11 @@
 
     <!-- ~~~~~~~~~~~~~~~~~~~ SETTINGS ~~~~~~~~~~~~~~~~~~~~~~ !-->
 
-    <string name="settings_play_background_music">Jouer de la musique de fond</string>
-    <string name="settings_play_sound">Son dans le jeu</string>
-    <string name="settings_vibrate">Vibration du jeu</string>
-    <string name="settings_display_inner_borders">Afficher frontières intérieures</string>
-    <string name="settings_localize_app_language">Langue de paramètres</string>
+    <string name="settings_play_background_music">Jouer en fond sonore</string>
+    <string name="settings_play_sound">Son de jeu</string>
+    <string name="settings_vibrate">Vibrations du jeu</string>
+    <string name="settings_display_inner_borders">Affichez des frontières intérieures</string>
+    <string name="settings_localize_app_language">Langue de paramétrés</string>
     <string name="settings_localize_study_language">Langue de jeu</string>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->

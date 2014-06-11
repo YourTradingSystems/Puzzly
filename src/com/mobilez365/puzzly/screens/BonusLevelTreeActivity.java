@@ -47,7 +47,6 @@ public class BonusLevelTreeActivity extends InterstitialActivity implements Shak
     private List<ObjectAnimator> candiesRotateAnimators;
     private int[] candiesStatus;
     private RelativeLayout candiesLayout;
-    private BackgroundSound mBackgroundSound;
     private ImageButton nextGame;
 
     private VideoView mTutorial;
@@ -59,8 +58,6 @@ public class BonusLevelTreeActivity extends InterstitialActivity implements Shak
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bonus_level_tree);
-
-        mBackgroundSound = AppHelper.getBackgroundSound();
 
         gameType = getIntent().getIntExtra("type", 0);
         mGameNumber = getIntent().getIntExtra("gameNumber", 0);
@@ -241,10 +238,8 @@ public class BonusLevelTreeActivity extends InterstitialActivity implements Shak
         mShaker.resume();
         super.onResume();
 
-        if (!AppHelper.isAppInBackground(this)) {
-            if (mBackgroundSound != null && !mBackgroundSound.isPlay())
-                mBackgroundSound.pause(false);
-        }
+        if (!AppHelper.isAppInBackground(this))
+            AppHelper.getBackgroundSound().pause(false);
 
         if (mTutorial != null)
             mTutorial.start();
@@ -258,19 +253,10 @@ public class BonusLevelTreeActivity extends InterstitialActivity implements Shak
 
         mShaker.pause();
         if (AppHelper.isAppInBackground(this) || AppHelper.isScreenOff(this)) {
-            if (mBackgroundSound != null && mBackgroundSound.isPlay())
-                mBackgroundSound.pause(true);
+            AppHelper.getBackgroundSound().pause(true);
 
             if (mTutorial != null)
                 mTutorial.stopPlayback();
         }
-    }
-
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK ) {
-            AppHelper.startBackgroundSound(this, Constans.MENU_BACKGROUND_MUSIC);
-        }
-        return super.onKeyDown(keyCode, event);
     }
 }

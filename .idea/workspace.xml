@@ -51,389 +51,140 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.mobilez365.puzzly" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a79d8431-a31c-4800-9f13-431b5a1f9d4a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/banana.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/butterfly.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/cherry.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/crew_cut.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/crocodile.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/dog.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/fox.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/gorilla.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/koala.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/lemon.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/lime.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/pear.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/pitching.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/radish.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/rhino.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/sea_bear.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/tea_cup.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-ru/wagon.mp3" />
-      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-ru\banan.mp3" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-ru\excellent.mp3" afterPath="" />
-      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\aist0.svg" afterPath="$PROJECT_DIR$/res/raw/stork0.svg" />
-      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\aist1.svg" afterPath="$PROJECT_DIR$/res/raw/stork1.svg" />
-      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\aist2.svg" afterPath="$PROJECT_DIR$/res/raw/stork2.svg" />
-      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\aist3.svg" afterPath="$PROJECT_DIR$/res/raw/stork3.svg" />
-      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\aist4.svg" afterPath="$PROJECT_DIR$/res/raw/stork4.svg" />
-      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\aist5.svg" afterPath="$PROJECT_DIR$/res/raw/stork5.svg" />
-      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\aist6.svg" afterPath="$PROJECT_DIR$/res/raw/stork6.svg" />
-      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\aist_bordered.svg" afterPath="$PROJECT_DIR$/res/raw/stork_bordered.svg" />
-      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\aist_gray.svg" afterPath="$PROJECT_DIR$/res/raw/stork_gray.svg" />
-      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\aist_result.svg" afterPath="$PROJECT_DIR$/res/raw/stork_result.svg" />
-      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\jug0.svg" afterPath="$PROJECT_DIR$/res/raw/jug_with_milk0.svg" />
-      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\jug1.svg" afterPath="$PROJECT_DIR$/res/raw/jug_with_milk1.svg" />
-      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\jug2.svg" afterPath="$PROJECT_DIR$/res/raw/jug_with_milk2.svg" />
-      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\jug3.svg" afterPath="$PROJECT_DIR$/res/raw/jug_with_milk3.svg" />
-      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\jug_gray.svg" afterPath="$PROJECT_DIR$/res/raw/jug_with_milk_gray.svg" />
-      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\jug_result.svg" afterPath="$PROJECT_DIR$/res/raw/jug_with_milk_result.svg" />
-      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\tikva0.svg" afterPath="$PROJECT_DIR$/res/raw/pumpkin0.svg" />
-      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\tikva1.svg" afterPath="$PROJECT_DIR$/res/raw/pumpkin1.svg" />
-      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\tikva2.svg" afterPath="$PROJECT_DIR$/res/raw/pumpkin2.svg" />
-      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\tikva3.svg" afterPath="$PROJECT_DIR$/res/raw/pumpkin3.svg" />
-      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\tikva_gray.svg" afterPath="$PROJECT_DIR$/res/raw/pumpkin_gray.svg" />
-      <change type="MOVED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw\tikva_result.svg" afterPath="$PROJECT_DIR$/res/raw/pumpkin_result.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/apple.mp3" afterPath="$PROJECT_DIR$/res/raw-es/apple.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/apple.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/apple.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/apple.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/apple.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/apple.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/apple.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/backpack.mp3" afterPath="$PROJECT_DIR$/res/raw-es/backpack.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/backpack.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/backpack.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/backpack.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/backpack.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/backpack.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/backpack.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/banana.mp3" afterPath="$PROJECT_DIR$/res/raw-es/banana.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/banana.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/banana.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/banana.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/banana.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/baseball_cap.mp3" afterPath="$PROJECT_DIR$/res/raw-es/baseball_cap.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/baseball_cap.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/baseball_cap.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/baseball_cap.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/baseball_cap.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/baseball_cap.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/baseball_cap.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/bee.mp3" afterPath="$PROJECT_DIR$/res/raw-es/bee.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/bee.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/bee.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/bee.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/bee.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/bee.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/bee.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/beet.mp3" afterPath="$PROJECT_DIR$/res/raw-es/beet.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/beet.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/beet.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/beet.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/beet.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/beet.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/beet.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/bread.mp3" afterPath="$PROJECT_DIR$/res/raw-es/bread.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/bread.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/bread.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/bread.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/bread.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/bread.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/bread.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/butterfly.mp3" afterPath="$PROJECT_DIR$/res/raw-es/butterfly.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/butterfly.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/butterfly.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/butterfly.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/butterfly.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/cancer.mp3" afterPath="$PROJECT_DIR$/res/raw-es/cancer.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/cancer.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/cancer.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/cancer.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/cancer.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/cancer.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/cancer.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/car.mp3" afterPath="$PROJECT_DIR$/res/raw-es/car.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/car.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/car.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/car.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/car.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/car.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/car.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/carrot.mp3" afterPath="$PROJECT_DIR$/res/raw-es/carrot.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/carrot.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/carrot.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/carrot.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/carrot.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/carrot.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/carrot.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/cherry.mp3" afterPath="$PROJECT_DIR$/res/raw-es/cherry.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/cherry.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/cherry.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/cherry.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/cherry.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/cock.mp3" afterPath="$PROJECT_DIR$/res/raw-es/cock.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/cock.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/cock.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/cock.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/cock.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/cock.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/cock.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/computer_chair.mp3" afterPath="$PROJECT_DIR$/res/raw-es/computer_chair.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/computer_chair.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/computer_chair.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/computer_chair.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/computer_chair.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/computer_chair.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/computer_chair.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/corn.mp3" afterPath="$PROJECT_DIR$/res/raw-es/corn.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/corn.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/corn.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/corn.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/corn.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/corn.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/corn.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/crab.mp3" afterPath="$PROJECT_DIR$/res/raw-es/crab.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/crab.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/crab.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/crab.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/crab.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/crab.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/crab.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/crew_cut.mp3" afterPath="$PROJECT_DIR$/res/raw-es/crew_cut.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/crew_cut.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/crew_cut.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/crew_cut.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/crew_cut.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/crocodile.mp3" afterPath="$PROJECT_DIR$/res/raw-es/crocodile.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/crocodile.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/crocodile.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/crocodile.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/crocodile.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/dog.mp3" afterPath="$PROJECT_DIR$/res/raw-es/dog.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/dog.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/dog.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/dog.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/dog.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/dolphin.mp3" afterPath="$PROJECT_DIR$/res/raw-es/dolphin.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/dolphin.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/dolphin.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/dolphin.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/dolphin.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/dolphin.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/dolphin.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/eggplant.mp3" afterPath="$PROJECT_DIR$/res/raw-es/eggplant.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/eggplant.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/eggplant.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/eggplant.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/eggplant.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/eggplant.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/eggplant.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/elephant.mp3" afterPath="$PROJECT_DIR$/res/raw-es/elephant.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/elephant.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/elephant.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/elephant.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/elephant.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/elephant.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/elephant.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/fingerling.mp3" afterPath="$PROJECT_DIR$/res/raw-es/fingerling.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/fingerling.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/fingerling.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/fingerling.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/fingerling.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/fingerling.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/fingerling.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/flamingo.mp3" afterPath="$PROJECT_DIR$/res/raw-es/flamingo.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/flamingo.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/flamingo.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/flamingo.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/flamingo.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/flamingo.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/flamingo.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/fox.mp3" afterPath="$PROJECT_DIR$/res/raw-es/fox.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/fox.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/fox.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/fox.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/fox.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/frogling.mp3" afterPath="$PROJECT_DIR$/res/raw-es/frogling.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/frogling.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/frogling.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/frogling.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/frogling.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/frogling.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/frogling.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/giraffe.mp3" afterPath="$PROJECT_DIR$/res/raw-es/giraffe.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/giraffe.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/giraffe.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/giraffe.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/giraffe.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/giraffe.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/giraffe.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/goat.mp3" afterPath="$PROJECT_DIR$/res/raw-es/goat.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/goat.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/goat.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/goat.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/goat.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/goat.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/goat.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/good_job.mp3" afterPath="$PROJECT_DIR$/res/raw-es/good_job.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/good_job.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/good_job.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/good_job.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/good_job.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/good_job.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/good_job.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/gorilla.mp3" afterPath="$PROJECT_DIR$/res/raw-es/gorilla.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/gorilla.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/gorilla.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/gorilla.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/gorilla.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/hamburger.mp3" afterPath="$PROJECT_DIR$/res/raw-es/hamburger.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/hamburger.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/hamburger.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/hamburger.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/hamburger.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/hamburger.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/hamburger.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/hen.mp3" afterPath="$PROJECT_DIR$/res/raw-es/hen.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/hen.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/hen.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/hen.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/hen.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/hen.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/hen.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/hippo.mp3" afterPath="$PROJECT_DIR$/res/raw-es/hippo.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/hippo.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/hippo.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/hippo.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/hippo.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/hippo.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/hippo.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/ice_cream.mp3" afterPath="$PROJECT_DIR$/res/raw-es/ice_cream.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/ice_cream.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/ice_cream.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/ice_cream.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/ice_cream.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/ice_cream.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/ice_cream.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/jug_with_milk.mp3" afterPath="$PROJECT_DIR$/res/raw-es/jug_with_milk.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/jug_with_milk.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/jug_with_milk.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/jug_with_milk.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/jug_with_milk.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/jug_with_milk.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/jug_with_milk.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/kettle.mp3" afterPath="$PROJECT_DIR$/res/raw-es/kettle.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/kettle.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/kettle.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/kettle.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/kettle.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/kettle.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/kettle.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/key.mp3" afterPath="$PROJECT_DIR$/res/raw-es/key.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/key.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/key.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/key.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/key.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/key.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/key.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/koala.mp3" afterPath="$PROJECT_DIR$/res/raw-es/koala.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/koala.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/koala.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/koala.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/koala.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/lamb.mp3" afterPath="$PROJECT_DIR$/res/raw-es/lamb.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/lamb.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/lamb.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/lamb.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/lamb.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/lamb.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/lamb.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/lemon.mp3" afterPath="$PROJECT_DIR$/res/raw-es/lemon.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/lemon.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/lemon.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/lemon.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/lemon.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/lightbulb.mp3" afterPath="$PROJECT_DIR$/res/raw-es/lightbulb.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/lightbulb.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/lightbulb.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/lightbulb.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/lightbulb.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/lightbulb.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/lightbulb.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/lime.mp3" afterPath="$PROJECT_DIR$/res/raw-es/lime.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/lime.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/lime.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/lime.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/lime.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/lion.mp3" afterPath="$PROJECT_DIR$/res/raw-es/lion.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/lion.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/lion.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/lion.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/lion.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/lion.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/lion.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/monkey.mp3" afterPath="$PROJECT_DIR$/res/raw-es/monkey.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/monkey.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/monkey.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/monkey.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/monkey.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/monkey.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/monkey.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/mushrooms.mp3" afterPath="$PROJECT_DIR$/res/raw-es/mushrooms.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/mushrooms.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/mushrooms.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/mushrooms.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/mushrooms.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/mushrooms.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/mushrooms.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/octopus.mp3" afterPath="$PROJECT_DIR$/res/raw-es/octopus.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/octopus.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/octopus.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/octopus.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/octopus.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/octopus.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/octopus.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/owl.mp3" afterPath="$PROJECT_DIR$/res/raw-es/owl.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/owl.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/owl.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/owl.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/owl.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/owl.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/owl.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/pear.mp3" afterPath="$PROJECT_DIR$/res/raw-es/pear.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/pear.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/pear.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/pear.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/pear.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/peas.mp3" afterPath="$PROJECT_DIR$/res/raw-es/peas.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/peas.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/peas.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/peas.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/peas.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/peas.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/peas.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/pencil.mp3" afterPath="$PROJECT_DIR$/res/raw-es/pencil.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/pencil.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/pencil.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/pencil.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/pencil.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/pencil.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/pencil.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/penguin.mp3" afterPath="$PROJECT_DIR$/res/raw-es/penguin.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/penguin.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/penguin.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/penguin.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/penguin.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/penguin.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/penguin.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/pepper.mp3" afterPath="$PROJECT_DIR$/res/raw-es/pepper.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/pepper.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/pepper.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/pepper.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/pepper.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/pepper.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/pepper.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/perfect.mp3" afterPath="$PROJECT_DIR$/res/raw-es/perfect.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/perfect.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/perfect.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/perfect.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/perfect.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/perfect.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/perfect.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/pigeon.mp3" afterPath="$PROJECT_DIR$/res/raw-es/pigeon.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/pigeon.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/pigeon.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/pigeon.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/pigeon.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/pigeon.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/pigeon.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/piggy.mp3" afterPath="$PROJECT_DIR$/res/raw-es/piggy.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/piggy.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/piggy.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/piggy.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/piggy.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/piggy.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/piggy.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/pitching.mp3" afterPath="$PROJECT_DIR$/res/raw-es/pitching.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/pitching.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/pitching.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/pitching.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/pitching.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/pot_with_honey.mp3" afterPath="$PROJECT_DIR$/res/raw-es/pot_with_honey.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/pot_with_honey.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/pot_with_honey.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/pot_with_honey.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/pot_with_honey.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/pot_with_honey.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/pot_with_honey.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/potato.mp3" afterPath="$PROJECT_DIR$/res/raw-es/potato.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/potato.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/potato.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/potato.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/potato.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/potato.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/potato.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/pumpkin.mp3" afterPath="$PROJECT_DIR$/res/raw-es/pumpkin.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/pumpkin.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/pumpkin.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/pumpkin.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/pumpkin.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/pumpkin.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/pumpkin.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/rabbit.mp3" afterPath="$PROJECT_DIR$/res/raw-es/rabbit.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/rabbit.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/rabbit.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/rabbit.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/rabbit.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/rabbit.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/rabbit.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/radish.mp3" afterPath="$PROJECT_DIR$/res/raw-es/radish.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/radish.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/radish.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/radish.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/radish.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/rhino.mp3" afterPath="$PROJECT_DIR$/res/raw-es/rhino.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/rhino.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/rhino.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/rhino.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/rhino.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/scrambled_eggs.mp3" afterPath="$PROJECT_DIR$/res/raw-es/scrambled_eggs.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/scrambled_eggs.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/scrambled_eggs.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/scrambled_eggs.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/scrambled_eggs.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/scrambled_eggs.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/scrambled_eggs.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/sea_bear.mp3" afterPath="$PROJECT_DIR$/res/raw-es/sea_bear.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/sea_bear.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/sea_bear.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/sea_bear.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/sea_bear.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/shuttlecocks.mp3" afterPath="$PROJECT_DIR$/res/raw-es/shuttlecocks.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/shuttlecocks.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/shuttlecocks.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/shuttlecocks.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/shuttlecocks.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/shuttlecocks.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/shuttlecocks.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/snail.mp3" afterPath="$PROJECT_DIR$/res/raw-es/snail.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/snail.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/snail.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/snail.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/snail.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/snail.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/snail.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/snake.mp3" afterPath="$PROJECT_DIR$/res/raw-es/snake.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/snake.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/snake.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/snake.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/snake.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/snake.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/snake.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/soother.mp3" afterPath="$PROJECT_DIR$/res/raw-es/soother.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/soother.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/soother.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/soother.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/soother.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/soother.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/soother.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/squirrel.mp3" afterPath="$PROJECT_DIR$/res/raw-es/squirrel.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/squirrel.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/squirrel.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/squirrel.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/squirrel.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/squirrel.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/squirrel.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/stapler.mp3" afterPath="$PROJECT_DIR$/res/raw-es/stapler.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/stapler.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/stapler.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/stapler.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/stapler.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/stapler.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/stapler.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/stork.mp3" afterPath="$PROJECT_DIR$/res/raw-es/stork.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/stork.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/stork.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/stork.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/stork.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/stork.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/stork.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/strawberries.mp3" afterPath="$PROJECT_DIR$/res/raw-es/strawberries.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/strawberries.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/strawberries.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/strawberries.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/strawberries.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/strawberries.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/strawberries.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/tea_cup.mp3" afterPath="$PROJECT_DIR$/res/raw-es/tea_cup.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/tea_cup.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/tea_cup.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/tea_cup.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/tea_cup.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/teddy_bear.mp3" afterPath="$PROJECT_DIR$/res/raw-es/teddy_bear.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/teddy_bear.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/teddy_bear.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/teddy_bear.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/teddy_bear.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/teddy_bear.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/teddy_bear.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/toucan.mp3" afterPath="$PROJECT_DIR$/res/raw-es/toucan.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/toucan.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/toucan.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/toucan.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/toucan.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/toucan.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/toucan.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/train.mp3" afterPath="$PROJECT_DIR$/res/raw-es/train.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/train.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/train.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/train.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/train.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/train.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/train.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/turtle.mp3" afterPath="$PROJECT_DIR$/res/raw-es/turtle.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/turtle.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/turtle.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/turtle.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/turtle.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/turtle.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/turtle.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/umbrella.mp3" afterPath="$PROJECT_DIR$/res/raw-es/umbrella.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/umbrella.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/umbrella.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/umbrella.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/umbrella.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/umbrella.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/umbrella.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/wagon.mp3" afterPath="$PROJECT_DIR$/res/raw-es/wagon.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/wagon.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/wagon.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/wagon.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/wagon.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/well_done.mp3" afterPath="$PROJECT_DIR$/res/raw-es/well_done.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/well_done.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/well_done.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/well_done.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/well_done.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/well_done.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/well_done.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/wizard_hat.mp3" afterPath="$PROJECT_DIR$/res/raw-es/wizard_hat.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/wizard_hat.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/wizard_hat.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/wizard_hat.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/wizard_hat.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/wizard_hat.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/wizard_hat.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/wonderfull.mp3" afterPath="$PROJECT_DIR$/res/raw-es/wonderfull.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/wonderfull.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/wonderfull.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/wonderfull.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/wonderfull.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/wonderfull.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/wonderfull.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/yacht.mp3" afterPath="$PROJECT_DIR$/res/raw-es/yacht.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/yacht.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/yacht.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/yacht.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/yacht.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/yacht.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/yacht.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-es/zebra.mp3" afterPath="$PROJECT_DIR$/res/raw-es/zebra.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-hi/zebra.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/zebra.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-ru/zebra.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/zebra.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw-uk/zebra.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/zebra.mp3" />
+    <list default="true" id="a79d8431-a31c-4800-9f13-431b5a1f9d4a" name="Default" comment="implement translate all text in game and items sound">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/mushrooms.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw-zh/strawberries.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/backpack0.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/backpack1.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/backpack2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/backpack3.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/backpack4.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/backpack_bordered.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/backpack_gray.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/backpack_result.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/crew_cut0.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/crew_cut1.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/crew_cut2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/crew_cut3.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/crew_cut_gray.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/crew_cut_result.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/crocodile0.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/crocodile1.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/crocodile2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/crocodile3.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/crocodile4.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/crocodile5.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/crocodile_bordered.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/crocodile_gray.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/crocodile_result.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/gorilla0.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/gorilla1.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/gorilla2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/gorilla3.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/gorilla4.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/gorilla5.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/gorilla6.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/gorilla_bordered.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/gorilla_gray.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/gorilla_result.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/lemon0.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/lemon1.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/lemon2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/lemon3.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/lemon4.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/lemon_bordered.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/lemon_gray.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/lemon_result.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/pitching0.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/pitching1.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/pitching2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/pitching3.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/pitching_gray.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/pitching_result.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/rabbit3.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/rhino0.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/rhino1.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/rhino2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/rhino3.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/rhino_gray.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/rhino_result.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/teddy_bear3.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/teddy_bear4.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/teddy_bear5.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/zebra3.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/zebra4.svg" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-zh\mushroom.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-zh\strawberry.mp3" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/global/AppHelper.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/global/AppHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/util/BackgroundSound.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/util/BackgroundSound.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelFlowerActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelFlowerActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelHedgehogActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelHedgehogActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelShakeActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelShakeActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelTreeActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelTreeActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/util/ChooseGamePagerAdapter.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/util/ChooseGamePagerAdapter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/ChoosePuzzleActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/ChoosePuzzleActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDB.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDB.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_choose_puzzle.xml" afterPath="$PROJECT_DIR$/res/layout/activity_choose_puzzle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_game_fill.xml" afterPath="$PROJECT_DIR$/res/layout/activity_game_fill.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_bonus_level_flower.xml" afterPath="$PROJECT_DIR$/res/layout/activity_bonus_level_flower.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_bonus_level_hedgehog.xml" afterPath="$PROJECT_DIR$/res/layout/activity_bonus_level_hedgehog.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_bonus_level_shake.xml" afterPath="$PROJECT_DIR$/res/layout/activity_bonus_level_shake.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_bonus_level_tree.xml" afterPath="$PROJECT_DIR$/res/layout/activity_bonus_level_tree.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/giraffe0.svg" afterPath="$PROJECT_DIR$/res/raw/giraffe0.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/giraffe1.svg" afterPath="$PROJECT_DIR$/res/raw/giraffe1.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/giraffe2.svg" afterPath="$PROJECT_DIR$/res/raw/giraffe2.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/giraffe_bordered.svg" afterPath="$PROJECT_DIR$/res/raw/giraffe_bordered.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/giraffe_gray.svg" afterPath="$PROJECT_DIR$/res/raw/giraffe_gray.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/giraffe_result.svg" afterPath="$PROJECT_DIR$/res/raw/giraffe_result.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/hen0.svg" afterPath="$PROJECT_DIR$/res/raw/hen0.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/hen1.svg" afterPath="$PROJECT_DIR$/res/raw/hen1.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/hen2.svg" afterPath="$PROJECT_DIR$/res/raw/hen2.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/hen_bordered.svg" afterPath="$PROJECT_DIR$/res/raw/hen_bordered.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/hen_gray.svg" afterPath="$PROJECT_DIR$/res/raw/hen_gray.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/hen_result.svg" afterPath="$PROJECT_DIR$/res/raw/hen_result.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/lime_result.svg" afterPath="$PROJECT_DIR$/res/raw/lime_result.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/lion0.svg" afterPath="$PROJECT_DIR$/res/raw/lion0.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/lion1.svg" afterPath="$PROJECT_DIR$/res/raw/lion1.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/lion2.svg" afterPath="$PROJECT_DIR$/res/raw/lion2.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/lion3.svg" afterPath="$PROJECT_DIR$/res/raw/lion3.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/lion_gray.svg" afterPath="$PROJECT_DIR$/res/raw/lion_gray.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/lion_result.svg" afterPath="$PROJECT_DIR$/res/raw/lion_result.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/owl_gray.svg" afterPath="$PROJECT_DIR$/res/raw/owl_gray.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/rabbit0.svg" afterPath="$PROJECT_DIR$/res/raw/rabbit0.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/rabbit1.svg" afterPath="$PROJECT_DIR$/res/raw/rabbit1.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/rabbit2.svg" afterPath="$PROJECT_DIR$/res/raw/rabbit2.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/rabbit_bordered.svg" afterPath="$PROJECT_DIR$/res/raw/rabbit_bordered.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/rabbit_gray.svg" afterPath="$PROJECT_DIR$/res/raw/rabbit_gray.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/rabbit_result.svg" afterPath="$PROJECT_DIR$/res/raw/rabbit_result.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/radish_result.svg" afterPath="$PROJECT_DIR$/res/raw/radish_result.svg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/settings_screen.xml" afterPath="$PROJECT_DIR$/res/layout/settings_screen.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/strawberries0.svg" afterPath="$PROJECT_DIR$/res/raw/strawberries0.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/strawberries_gray.svg" afterPath="$PROJECT_DIR$/res/raw/strawberries_gray.svg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-ar/strings.xml" afterPath="$PROJECT_DIR$/res/values-ar/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-de/strings.xml" afterPath="$PROJECT_DIR$/res/values-de/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-es/strings.xml" afterPath="$PROJECT_DIR$/res/values-es/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-fr/strings.xml" afterPath="$PROJECT_DIR$/res/values-fr/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-he/strings.xml" afterPath="$PROJECT_DIR$/res/values-he/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-hi/strings.xml" afterPath="$PROJECT_DIR$/res/values-hi/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-hu/strings.xml" afterPath="$PROJECT_DIR$/res/values-hu/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-iw/strings.xml" afterPath="$PROJECT_DIR$/res/values-iw/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-ru/strings.xml" afterPath="$PROJECT_DIR$/res/values-ru/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-uk/strings.xml" afterPath="$PROJECT_DIR$/res/values-uk/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-zh/strings.xml" afterPath="$PROJECT_DIR$/res/values-zh/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/teddy_bear0.svg" afterPath="$PROJECT_DIR$/res/raw/teddy_bear0.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/teddy_bear1.svg" afterPath="$PROJECT_DIR$/res/raw/teddy_bear1.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/teddy_bear2.svg" afterPath="$PROJECT_DIR$/res/raw/teddy_bear2.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/teddy_bear_bordered.svg" afterPath="$PROJECT_DIR$/res/raw/teddy_bear_bordered.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/teddy_bear_gray.svg" afterPath="$PROJECT_DIR$/res/raw/teddy_bear_gray.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/teddy_bear_result.svg" afterPath="$PROJECT_DIR$/res/raw/teddy_bear_result.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/toucan0.svg" afterPath="$PROJECT_DIR$/res/raw/toucan0.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/toucan1.svg" afterPath="$PROJECT_DIR$/res/raw/toucan1.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/toucan2.svg" afterPath="$PROJECT_DIR$/res/raw/toucan2.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/toucan3.svg" afterPath="$PROJECT_DIR$/res/raw/toucan3.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/toucan_gray.svg" afterPath="$PROJECT_DIR$/res/raw/toucan_gray.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/toucan_result.svg" afterPath="$PROJECT_DIR$/res/raw/toucan_result.svg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/zebra0.svg" afterPath="$PROJECT_DIR$/res/raw/zebra0.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/zebra1.svg" afterPath="$PROJECT_DIR$/res/raw/zebra1.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/zebra2.svg" afterPath="$PROJECT_DIR$/res/raw/zebra2.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/zebra_bordered.svg" afterPath="$PROJECT_DIR$/res/raw/zebra_bordered.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/zebra_gray.svg" afterPath="$PROJECT_DIR$/res/raw/zebra_gray.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/zebra_result.svg" afterPath="$PROJECT_DIR$/res/raw/zebra_result.svg" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="gen/" />
@@ -521,21 +272,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <file leaf-file-name="GameFillActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="2431">
-              <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="416" max-vertical-offset="4522">
+              <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+              <folding>
+                <element signature="e#9614#9828#0" expanded="true" />
+                <element signature="e#9813#9814#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChoosePuzzleActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/ChoosePuzzleActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="2176">
+              <caret line="74" column="35" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strings.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/res/values-fr/strings.xml">
+      <file leaf-file-name="SettingsActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.11643836" vertical-offset="0" max-vertical-offset="2074">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1640" max-vertical-offset="2890">
+              <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MenuActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1555" max-vertical-offset="4420">
+              <caret line="118" column="45" selection-start-line="118" selection-start-column="45" selection-end-line="118" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -544,8 +318,18 @@
       <file leaf-file-name="AppHelper.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/global/AppHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="6885">
-              <caret line="117" column="22" selection-start-line="117" selection-start-column="22" selection-end-line="117" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2877" max-vertical-offset="6834">
+              <caret line="208" column="0" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BackgroundSound.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/util/BackgroundSound.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.28310502" vertical-offset="590" max-vertical-offset="1190">
+              <caret line="47" column="26" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -575,9 +359,6 @@
         <option value="$PROJECT_DIR$/res/values/styles_menu.xml" />
         <option value="$PROJECT_DIR$/res/anim/menu_balloon_rotate_right.xml" />
         <option value="$PROJECT_DIR$/res/anim/menu_balloon_rotate_left.xml" />
-        <option value="$PROJECT_DIR$/res/layout/activity_bonus_level_flower.xml" />
-        <option value="$PROJECT_DIR$/res/layout/activity_bonus_level_shake.xml" />
-        <option value="$PROJECT_DIR$/res/layout/activity_bonus_level_tree.xml" />
         <option value="$PROJECT_DIR$/res/anim/menu_hand_left.xml" />
         <option value="$PROJECT_DIR$/res/anim/menu_hand_right.xml" />
         <option value="$PROJECT_DIR$/res/layout/menu_screen.xml" />
@@ -587,38 +368,43 @@
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/customViews/GameView.java" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/global/Constans.java" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelTreeActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelShakeActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelFlowerActivity.java" />
         <option value="$PROJECT_DIR$/res/values/styles_settings.xml" />
         <option value="$PROJECT_DIR$/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/res/value-es/strings.xml" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzleFillGame.java" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDBHelper.java" />
         <option value="$APPLICATION_HOME_DIR$/sdk/platforms/android-19/android.jar!/android/database/sqlite/SQLiteDatabase.class" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/util/BackgroundSound.java" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java" />
         <option value="$PROJECT_DIR$/res/values-he/strings.xml" />
         <option value="$PROJECT_DIR$/res/values-iw/strings.xml" />
         <option value="$PROJECT_DIR$/res/values-ar/strings.xml" />
-        <option value="$PROJECT_DIR$/res/values-hu/strings.xml" />
         <option value="$PROJECT_DIR$/res/values-uk/strings.xml" />
         <option value="$PROJECT_DIR$/res/values-zh/strings.xml" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDB.java" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/util/ChooseGamePagerAdapter.java" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java" />
-        <option value="$PROJECT_DIR$/res/layout/settings_screen.xml" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/ChoosePuzzleActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/activity_choose_puzzle.xml" />
         <option value="$PROJECT_DIR$/res/layout/activity_game_fill.xml" />
         <option value="$PROJECT_DIR$/res/values-ru/strings.xml" />
         <option value="$PROJECT_DIR$/res/values-hi/strings.xml" />
-        <option value="$PROJECT_DIR$/res/values-de/strings.xml" />
-        <option value="$PROJECT_DIR$/res/values-es/strings.xml" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/global/AppHelper.java" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/res/values-fr/strings.xml" />
+        <option value="$PROJECT_DIR$/res/values-es/strings.xml" />
+        <option value="$PROJECT_DIR$/res/values-de/strings.xml" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/res/values-hu/strings.xml" />
+        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDB.java" />
+        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/util/ChooseGamePagerAdapter.java" />
+        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelHedgehogActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelFlowerActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelShakeActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelTreeActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/global/AppHelper.java" />
+        <option value="$PROJECT_DIR$/res/layout/settings_screen.xml" />
+        <option value="$PROJECT_DIR$/res/layout/activity_bonus_level_flower.xml" />
+        <option value="$PROJECT_DIR$/res/layout/activity_bonus_level_hedgehog.xml" />
+        <option value="$PROJECT_DIR$/res/layout/activity_bonus_level_shake.xml" />
+        <option value="$PROJECT_DIR$/res/layout/activity_bonus_level_tree.xml" />
+        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/ChoosePuzzleActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/util/BackgroundSound.java" />
       </list>
     </option>
   </component>
@@ -657,8 +443,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -674,6 +458,94 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Puzzly" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Puzzly" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Puzzly" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="puzzly" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Puzzly" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Puzzly" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="puzzly" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="screens" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Puzzly" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Puzzly" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="puzzly" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="puzzles" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Puzzly" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Puzzly" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="puzzly" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="global" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -725,6 +597,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -739,7 +613,7 @@
     <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/google-play-services_lib" />
     <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="false" />
-    <property name="DEBUGGABLE_DEVICE" value="20080411" />
+    <property name="DEBUGGABLE_DEVICE" value="BX903HZNC7" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="puzzly" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="DEBUGGABLE_PROCESS" value="com.mobilez365.puzzly" />
@@ -760,7 +634,7 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
     <property name="options.searchVisible" value="true" />
-    <property name="AndroidTargetDevices" value="BX903HZNC7" />
+    <property name="AndroidTargetDevices" value="YT910DA9L4" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -770,15 +644,15 @@
       <recent name="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\values-iw" />
       <recent name="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\values-he" />
     </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.mobilez365.puzzly" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Denis\workspace\Puzzly\res\raw" />
       <recent name="C:\Users\Denis\workspace\Puzzly\res" />
       <recent name="C:\Users\Denis\workspace\Puzzly\res\drawable-hdpi" />
       <recent name="C:\Users\Denis\workspace\Puzzly\src\com\mobilez365\puzzly" />
       <recent name="C:\Users\Denis\workspace\Puzzly\res\layout" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.mobilez365.puzzly" />
     </key>
   </component>
   <component name="RunManager" selected="Android Application.Puzzly">
@@ -1035,7 +909,11 @@
       <created>1402059356727</created>
       <updated>1402059356727</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="implement translate all text in game and items sound">
+      <created>1402394966517</created>
+      <updated>1402394966517</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1065,17 +943,19 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.6731302" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25796178" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.6731302" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21785174" sideWeight="0.7097222" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41082802" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26633987" sideWeight="0.5008026" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3280255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32484075" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32324842" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.66082805" sideWeight="0.50075644" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23863636" sideWeight="0.42391303" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290938" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31847134" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28821656" sideWeight="0.49919742" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32686982" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40605095" sideWeight="0.49848714" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32643312" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.6731302" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1087,9 +967,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3184569" sideWeight="0.7097222" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32484075" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -1162,18 +1040,62 @@
     <MESSAGE value="change game text font to default" />
     <MESSAGE value="add new sound to item in hindi language" />
     <MESSAGE value="implement translate almost all text in game and add new items sound" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement translate almost all text in game and add new items sound" />
+    <MESSAGE value="implement translate all text in game and items sound" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement translate all text in game and items sound" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelFlowerActivity.java</url>
-          <line>218</line>
+          <url>file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/ChoosePuzzleActivity.java</url>
+          <line>78</line>
           <properties />
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/ChoosePuzzleActivity.java</url>
+          <line>75</line>
+          <properties />
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java</url>
+          <line>58</line>
+          <properties />
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mobilez365/puzzly/global/AppHelper.java</url>
+          <line>203</line>
+          <properties />
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mobilez365/puzzly/global/AppHelper.java</url>
+          <line>205</line>
+          <properties />
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java</url>
+          <line>92</line>
+          <properties />
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java</url>
+          <line>117</line>
+          <properties />
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java</url>
+          <line>117</line>
+          <properties />
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="20" />
+      <option name="time" value="40" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1181,53 +1103,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/anim/menu_hand_left.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28400955" vertical-offset="0" max-vertical-offset="419">
-          <caret line="7" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
-          <caret line="5" column="45" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/raw/snake0.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/raw/snake_gray.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1156">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/dimens.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10739857" vertical-offset="244" max-vertical-offset="816">
-          <caret line="17" column="17" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/menu_screen.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4015748" vertical-offset="0" max-vertical-offset="1887">
-          <caret line="9" column="22" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="194" max-vertical-offset="1088">
@@ -1250,34 +1125,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_bonus_level_flower.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1424581" vertical-offset="0" max-vertical-offset="1003">
-          <caret line="3" column="23" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/InterstitialActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34986946" vertical-offset="19" max-vertical-offset="714">
           <caret line="10" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelTreeActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="292" max-vertical-offset="4284">
-          <caret line="58" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelShakeActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="371" max-vertical-offset="3910">
-          <caret line="56" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1297,13 +1148,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/util/ParseSvgAsyncTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28929386" vertical-offset="400" max-vertical-offset="1003">
-          <caret line="41" column="18" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/customViews/GameView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.5744126" vertical-offset="0" max-vertical-offset="5049">
@@ -1315,13 +1159,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18434343" vertical-offset="46" max-vertical-offset="442">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-19/android.jar!/android/os/AsyncTask.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33159268" vertical-offset="434" max-vertical-offset="952">
-          <caret line="34" column="62" selection-start-line="34" selection-start-column="62" selection-end-line="34" selection-end-column="62" />
         </state>
       </provider>
     </entry>
@@ -1360,13 +1197,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/util/BackgroundSound.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.610687" vertical-offset="66" max-vertical-offset="986">
-          <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-19/android.jar!/android/app/Activity.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33256352" vertical-offset="4956" max-vertical-offset="7565">
@@ -1374,114 +1204,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelFlowerActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33159268" vertical-offset="417" max-vertical-offset="4335">
-          <caret line="59" column="104" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="104" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/util/ChooseGamePagerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="5.8939395" vertical-offset="233" max-vertical-offset="2822">
-          <caret line="177" column="52" selection-start-line="177" selection-start-column="52" selection-end-line="177" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="13117" max-vertical-offset="16473">
-          <caret line="794" column="46" selection-start-line="794" selection-start-column="46" selection-end-line="794" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/global/Constans.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="455" max-vertical-offset="901">
-          <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1114" max-vertical-offset="3043">
-          <caret line="88" column="75" selection-start-line="88" selection-start-column="75" selection-end-line="88" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/settings_screen.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5555553" vertical-offset="1938" max-vertical-offset="2686">
-          <caret line="126" column="50" selection-start-line="126" selection-start-column="50" selection-end-line="126" selection-end-column="50" />
-          <folding>
-            <element signature="e#1252#1275#0" expanded="false" />
-            <element signature="e#1880#1898#0" expanded="false" />
-            <element signature="e#2582#2622#0" expanded="false" />
-            <element signature="e#2990#3019#0" expanded="false" />
-            <element signature="e#3375#3401#0" expanded="false" />
-            <element signature="e#3767#3807#0" expanded="false" />
-            <element signature="e#4554#4596#0" expanded="false" />
-            <element signature="e#5684#5724#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/item_choose_puzzle.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.040572792" vertical-offset="357" max-vertical-offset="3723">
           <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_choose_puzzle.xml">
       <provider editor-type-id="android-designer">
         <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5582011" vertical-offset="316" max-vertical-offset="1105">
-          <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/ChoosePuzzleActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.71358025" vertical-offset="255" max-vertical-offset="2227">
-          <caret line="42" column="55" selection-start-line="42" selection-start-column="55" selection-end-line="42" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="789" max-vertical-offset="4573">
-          <caret line="77" column="48" selection-start-line="77" selection-start-column="48" selection-end-line="77" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_game_fill.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10410959" vertical-offset="1152" max-vertical-offset="1632">
-          <caret line="70" column="18" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51785713" vertical-offset="460" max-vertical-offset="3740">
-          <caret line="59" column="63" selection-start-line="59" selection-start-column="63" selection-end-line="59" selection-end-column="63" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values-ar/strings.xml">
@@ -1516,14 +1246,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/values-hu/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.326969" vertical-offset="1655" max-vertical-offset="2074">
-          <caret line="40" column="23" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/values-ru/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5942721" vertical-offset="1655" max-vertical-offset="2074">
@@ -1540,22 +1262,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/values-es/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5942721" vertical-offset="1655" max-vertical-offset="2074">
-          <caret line="112" column="40" selection-start-line="112" selection-start-column="40" selection-end-line="112" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values-de/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67541766" vertical-offset="1621" max-vertical-offset="2040">
-          <caret line="112" column="39" selection-start-line="112" selection-start-column="39" selection-end-line="112" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/values-he/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.0763724" vertical-offset="1295" max-vertical-offset="2074">
@@ -1564,26 +1270,258 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/global/AppHelper.java">
+    <entry file="jar://$PROJECT_DIR$/libs/svg-android.jar!/com/larvalabs/svgandroid/SVGParser.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1581" max-vertical-offset="6885">
-          <caret line="117" column="22" selection-start-line="117" selection-start-column="22" selection-end-line="117" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.35654595" vertical-offset="127" max-vertical-offset="4947">
+          <caret line="16" column="47" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-19/android.jar!/android/os/AsyncTask.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="952">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-fr/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5771605" vertical-offset="102" max-vertical-offset="2074">
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-de/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="2040">
+          <caret line="17" column="69" selection-start-line="17" selection-start-column="69" selection-end-line="17" selection-end-column="69" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="2431">
-          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="2431">
+          <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/values-fr/strings.xml">
+    <entry file="file://$PROJECT_DIR$/res/values-hu/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11643836" vertical-offset="0" max-vertical-offset="2074">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.27251184" vertical-offset="684" max-vertical-offset="2074">
+          <caret line="47" column="39" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.3214285" vertical-offset="1624" max-vertical-offset="17952">
+          <caret line="113" column="37" selection-start-line="113" selection-start-column="37" selection-end-line="113" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/util/ParseSvgAsyncTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="369" max-vertical-offset="969">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-es/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2074">
+          <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/global/Constans.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="463" max-vertical-offset="901">
+          <caret line="35" column="31" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/util/ChooseGamePagerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2409" max-vertical-offset="2805">
+          <caret line="182" column="13" selection-start-line="182" selection-start-column="13" selection-end-line="182" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelTreeActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="6.776831" vertical-offset="0" max-vertical-offset="4097">
+          <caret line="260" column="5" selection-start-line="260" selection-start-column="5" selection-end-line="260" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelShakeActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.026833631" vertical-offset="3147" max-vertical-offset="3706">
+          <caret line="212" column="29" selection-start-line="212" selection-start-column="29" selection-end-line="212" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelFlowerActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4633731" vertical-offset="408" max-vertical-offset="4097">
+          <caret line="67" column="41" selection-start-line="67" selection-start-column="41" selection-end-line="67" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelHedgehogActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36456558" vertical-offset="3016" max-vertical-offset="3723">
+          <caret line="193" column="0" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/settings_screen.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38679245" vertical-offset="829" max-vertical-offset="2703">
+          <caret line="56" column="21" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_bonus_level_flower.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.9629629" vertical-offset="447" max-vertical-offset="782">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="32" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_choose_puzzle.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5188679" vertical-offset="328" max-vertical-offset="1105">
+          <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_bonus_level_tree.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5188679" vertical-offset="362" max-vertical-offset="680">
+          <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_bonus_level_shake.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6792453" vertical-offset="311" max-vertical-offset="697">
+          <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_bonus_level_hedgehog.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6257862" vertical-offset="753" max-vertical-offset="1088">
+          <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_game_fill.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32389936" vertical-offset="1104" max-vertical-offset="1751">
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="72" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="416" max-vertical-offset="4522">
+          <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+          <folding>
+            <element signature="e#9614#9828#0" expanded="true" />
+            <element signature="e#9813#9814#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/ChoosePuzzleActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="2176">
+          <caret line="74" column="35" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/global/AppHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2877" max-vertical-offset="6834">
+          <caret line="208" column="0" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-19/android.jar!/android/view/View.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="18045" max-vertical-offset="20196">
+          <caret line="1070" column="19" selection-start-line="1070" selection-start-column="19" selection-end-line="1070" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1555" max-vertical-offset="4420">
+          <caret line="118" column="45" selection-start-line="118" selection-start-column="45" selection-end-line="118" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1640" max-vertical-offset="2890">
+          <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/util/BackgroundSound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28310502" vertical-offset="590" max-vertical-offset="1190">
+          <caret line="47" column="26" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
           <folding />
         </state>
       </provider>

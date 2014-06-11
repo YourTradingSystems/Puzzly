@@ -16,7 +16,7 @@ public class BackgroundSound extends AsyncTask<Void, Void, Void> {
     private Activity mActivity;
     private String mName;
     private boolean isPlay;
-    private boolean isCreate;
+    private boolean isStop;
 
     public BackgroundSound(Activity _activity, String _name) {
         mActivity = _activity;
@@ -26,27 +26,39 @@ public class BackgroundSound extends AsyncTask<Void, Void, Void> {
 
     @Override
     protected Void doInBackground(Void... params) {
-        mPlayer = AppHelper.initSound(mActivity, mName);
-        mPlayer.setLooping(true);
-        mPlayer.setVolume(25, 25);
-        mPlayer.start();
-
-        isCreate = true;
+        initSound(mActivity, mName);
         isPlay = true;
         return null;
     }
 
+    public final void initSound(Activity _activity, String _fileName) {
+        mName = _fileName;
+        isPlay = true;
+        isStop = false;
+        int id = _activity.getResources().getIdentifier(_fileName.toLowerCase(), "raw", _activity.getPackageName());
+        mPlayer = MediaPlayer.create(_activity, id);
+        mPlayer.setLooping(true);
+        mPlayer.start();
+    }
+
     public final void pause(boolean _state) {
         if (mPlayer != null) {
-            if (_state) {
+            if (_state && isPlay) {
                 mPlayer.pause();
                 isPlay = false;
             }
-            else {
+            else if (!_state && !isStop) {
                 mPlayer.start();
                 isPlay = true;
             }
         }
+    }
+
+    public final void stop() {
+        mPlayer.stop();
+        mPlayer.release();
+        isPlay = false;
+        isStop = true;
     }
 
     public final MediaPlayer getPlayer() {
@@ -57,7 +69,7 @@ public class BackgroundSound extends AsyncTask<Void, Void, Void> {
         return isPlay;
     }
 
-    public final boolean isInit() {
-        return isCreate;
+    public final String getName() {
+        return mName;
     }
 }
