@@ -111,7 +111,7 @@ public class AppHelper {
                 return Languages.hu;
 
             case 4:
-                //return Languages.de;
+                return Languages.de;
 
             case 5:
                 return Languages.fr;
