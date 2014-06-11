@@ -103,6 +103,12 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
         }
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        gameView.release();
+    }
+
     private void switchGame(boolean nextGame) {
         int passedGame = AppHelper.getPassedGames();
         if (passedGame != 3) {

@@ -257,6 +257,10 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
 
     public void release() {
         getHolder().getSurface().release();
+        shape.recycle();
+        for (GameSprite gameSprite : sprites) {
+            gameSprite.bmp.recycle();
+        }
     }
 
 

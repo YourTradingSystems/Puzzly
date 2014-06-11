@@ -161,7 +161,7 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity implements 
 
         AnimatorSet set = new AnimatorSet();
         set.play(moveXAnimator).with(moveYAnimator);
-        set.setDuration(3000);
+        set.setDuration(300);
 
         set.addListener(new AnimationEndListener(v, this));
         set.start();
