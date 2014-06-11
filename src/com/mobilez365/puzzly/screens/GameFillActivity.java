@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.graphics.Point;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -66,6 +67,7 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
         previousGame = (ImageButton) findViewById(R.id.btnPreviousAGF);
         gameText = (TextView) findViewById(R.id.tvWordAFG);
         ivResultImage = (ImageView) findViewById(R.id.ivResultImageAGF);
+        findViewById(R.id.rlBackgroundAFG).setBackgroundColor(Color.TRANSPARENT);
 
         nextGame.setOnClickListener(this);
         previousGame.setOnClickListener(this);

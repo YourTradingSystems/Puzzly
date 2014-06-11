@@ -85,96 +85,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a79d8431-a31c-4800-9f13-431b5a1f9d4a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/cancer0.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/cancer1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/cancer2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/cancer3.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/cancer_gray.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/cancer_result.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/cherry0.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/cherry1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/cherry2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/cherry3.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/cherry_gray.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/cherry_result.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/corn0.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/corn1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/corn2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/corn3.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/corn4.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/corn5.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/corn_bordered.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/corn_gray.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/corn_result.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/hamburger0.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/hamburger1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/hamburger2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/hamburger3.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/hamburger4.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/hamburger_bordered.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/hamburger_gray.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/hamburger_result.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/lightbulb0.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/lightbulb1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/lightbulb2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/lightbulb3.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/lightbulb_gray.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/lightbulb_result.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/pear0.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/pear1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/pear2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/pear3.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/pear_gray.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/pear_result.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/peas0.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/peas1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/peas2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/peas3.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/peas_gray.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/peas_result.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/shuttlecocks0.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/shuttlecocks1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/shuttlecocks2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/shuttlecocks3.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/shuttlecocks4.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/shuttlecocks_bordered.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/shuttlecocks_gray.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/shuttlecocks_result.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/soother0.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/soother1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/soother2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/soother3.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/soother_gray.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/soother_result.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/stapler0.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/stapler1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/stapler2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/stapler3.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/stapler4.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/stapler_bordered.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/stapler_gray.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/stapler_result.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/wizard_hat0.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/wizard_hat1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/wizard_hat2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/wizard_hat3.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/wizard_hat_gray.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/wizard_hat_result.svg" />
-      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\raw-de\lightbulb.mp3" afterPath="$PROJECT_DIR$/res/raw-de/light_bulb.mp3" />
-      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\raw-es\lightbulb.mp3" afterPath="$PROJECT_DIR$/res/raw-es/light_bulb.mp3" />
-      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\raw-fr\lightbulb.mp3" afterPath="$PROJECT_DIR$/res/raw-fr/light_bulb.mp3" />
-      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\raw-he\lightbulb.mp3" afterPath="$PROJECT_DIR$/res/raw-he/light_bulb.mp3" />
-      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\raw-hi\lightbulb.mp3" afterPath="$PROJECT_DIR$/res/raw-hi/light_bulb.mp3" />
-      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\raw-hu\lightbulb.mp3" afterPath="$PROJECT_DIR$/res/raw-hu/light_bulb.mp3" />
-      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\raw-iw\lightbulb.mp3" afterPath="$PROJECT_DIR$/res/raw-iw/light_bulb.mp3" />
-      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\raw-ru\lightbulb.mp3" afterPath="$PROJECT_DIR$/res/raw-ru/light_bulb.mp3" />
-      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\raw-uk\lightbulb.mp3" afterPath="$PROJECT_DIR$/res/raw-uk/light_bulb.mp3" />
-      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\raw-zh\lightbulb.mp3" afterPath="$PROJECT_DIR$/res/raw-zh/light_bulb.mp3" />
-      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\raw\lightbulb.mp3" afterPath="$PROJECT_DIR$/res/raw/light_bulb.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelHedgehogActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelHedgehogActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/customViews/GameView.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/customViews/GameView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDB.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDB.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Puzzly.iws" />
@@ -198,14 +109,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GameFillActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="GameFillActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.2440367" vertical-offset="4062" max-vertical-offset="4913">
-              <caret line="167" column="30" selection-start-line="167" selection-start-column="30" selection-end-line="167" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="773" max-vertical-offset="5032">
+              <caret line="69" column="79" selection-start-line="69" selection-start-column="79" selection-end-line="69" selection-end-column="79" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#9836#10050#0" expanded="true" />
+                <element signature="e#10035#10036#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameView.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/customViews/GameView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.1559633" vertical-offset="3399" max-vertical-offset="4216">
+              <caret line="262" column="9" selection-start-line="262" selection-start-column="9" selection-end-line="262" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -272,9 +195,9 @@
         <option value="$PROJECT_DIR$/res/layout/activity_bonus_level_hedgehog.xml" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelHedgehogActivity.java" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDB.java" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/customViews/GameView.java" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/util/ChooseGamePagerAdapter.java" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/customViews/GameView.java" />
       </list>
     </option>
   </component>
@@ -392,6 +315,28 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Puzzly" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Puzzly" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="puzzly" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="customViews" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -411,7 +356,7 @@
     <property name="options.searchVisible" value="true" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="0123456789ABCDEF" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="20080411" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="android_4.2" />
     <property name="DEBUGGABLE_DEVICE" value="0123456789ABCDEF" />
     <property name="DEBUGGABLE_PROCESS" value="com.mobilez365.puzzly" />
@@ -783,7 +728,11 @@
       <created>1402395578442</created>
       <updated>1402395578442</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="All levels added. New level position. Memory fixes.">
+      <created>1402495623284</created>
+      <updated>1402495623284</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -791,7 +740,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32027256" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31911263" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -834,7 +783,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Game 1 fixes" />
     <MESSAGE value="Basket Fixes" />
     <MESSAGE value="1game puzzles" />
     <MESSAGE value="1game puzzles finished" />
@@ -859,7 +807,8 @@
     <MESSAGE value="New levels added." />
     <MESSAGE value="Game refactoring" />
     <MESSAGE value="Puzzles fixes. New puzzles added. Bonus level fixes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Puzzles fixes. New puzzles added. Bonus level fixes." />
+    <MESSAGE value="All levels added. New level position. Memory fixes." />
+    <option name="LAST_COMMIT_MESSAGE" value="All levels added. New level position. Memory fixes." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1290,14 +1239,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/customViews/GameView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.71926606" vertical-offset="3620" max-vertical-offset="4216">
-          <caret line="261" column="37" selection-start-line="261" selection-start-column="37" selection-end-line="261" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/util/ChooseGamePagerAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3655914" vertical-offset="2159" max-vertical-offset="3128">
@@ -1342,11 +1283,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.2440367" vertical-offset="4062" max-vertical-offset="4913">
-          <caret line="167" column="30" selection-start-line="167" selection-start-column="30" selection-end-line="167" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="773" max-vertical-offset="5032">
+          <caret line="69" column="79" selection-start-line="69" selection-start-column="79" selection-end-line="69" selection-end-column="79" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#9836#10050#0" expanded="true" />
+            <element signature="e#10035#10036#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/customViews/GameView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1559633" vertical-offset="3399" max-vertical-offset="4216">
+          <caret line="262" column="9" selection-start-line="262" selection-start-column="9" selection-end-line="262" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
