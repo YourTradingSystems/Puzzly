@@ -38,7 +38,7 @@
     <string name="elephant">Elefánt</string>
     <string name="lamb">Bárány</string>
     <string name="owl">Bagoly</string>
-    <string name="snail">Csiga-Biga</string>
+    <string name="snail">Csiga</string>
     <string name="squirrel">Mókus</string>
     <string name="apple">Alma</string>
     <string name="carrot">Sárgarépa</string>
@@ -51,7 +51,7 @@
     <string name="penguin">Pingvin</string>
     <string name="snake">Kígyó</string>
     <string name="flamingo">Flamingó</string>
-    <string name="toucan">Tukán</string>
+    <string name="toucan">Tukán madár</string>
     <string name="giraffe">Zsiráf</string>
     <string name="monkey">Majom</string>
     <string name="zebra">Zebra</string>
