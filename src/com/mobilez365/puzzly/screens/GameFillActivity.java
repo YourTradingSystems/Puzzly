@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.Point;
+import android.graphics.drawable.BitmapDrawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Vibrator;
@@ -25,7 +26,7 @@ import com.mobilez365.puzzly.util.ParseSvgAsyncTask;
 
 import java.util.Random;
 
-public class GameFillActivity extends RestartActivty implements GameView.GameCallBacks, View.OnClickListener, AnimationEndListener.AnimEndListener, ParseSvgAsyncTask.ParseListener {
+public class GameFillActivity extends RestartActivty implements View.OnClickListener, AnimationEndListener.AnimEndListener, ParseSvgAsyncTask.ParseListener {
 
     private boolean gameIsFinished = false;
     private int mGameType;
@@ -60,7 +61,37 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
         AppHelper.setCurrentGame(this, mGameNumber, mGameType);
 
         mPuzzleFillGame = PuzzlesDB.getPuzzle(mGameNumber, mGameType, this);
-        gameView = new GameView(this, mPuzzleFillGame, this);
+
+        gameView = new GameView(this, mPuzzleFillGame, new GameView.GameCallBacks() {
+            @Override
+            public void onGameFinish(String resultImage, int x, int y, int width, int height) {
+                if (!gameIsFinished) {
+                    AppHelper.increasePassedGames();
+                    AppHelper.setMaxGame(GameFillActivity.this, mGameNumber + 1, mGameType);
+                    AppHelper.setGameAchievement(GameFillActivity.this, AppHelper.getGameAchievement(GameFillActivity.this) + 1);
+                    resultImageXPos = x;
+                    resultImageYPos = y;
+
+                    ParseSvgAsyncTask parseSvgAsyncTask = new ParseSvgAsyncTask(GameFillActivity.this, GameFillActivity.this, width, height);
+                    parseSvgAsyncTask.execute(resultImage);
+
+                    gameIsFinished = true;
+                }
+            }
+
+            @Override
+            public void onPartMove() {
+                if (AppHelper.getVibrate(GameFillActivity.this))
+                    mVibrator.vibrate(100);
+            }
+
+            @Override
+            public void onPartsLock() {
+                if (AppHelper.getVibrate(GameFillActivity.this))
+                    mVibrator.vibrate(100);
+            }
+        });
+
         ((FrameLayout) findViewById(R.id.rlForGame)).addView(gameView);
 
         mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
@@ -109,7 +140,17 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        gameView.release();
+        if (mPlayer != null)
+            mPlayer.release();
+
+        if (gameView != null)
+            gameView.release();
+
+        if (ivResultImage != null && ivResultImage.getDrawable() != null && ((BitmapDrawable) ivResultImage.getDrawable()).getBitmap() != null) {
+            ((BitmapDrawable) ivResultImage.getDrawable()).getBitmap().recycle();
+            ivResultImage.setImageDrawable(null);
+        }
+
         if(resImage != null)
             resImage.recycle();
     }
@@ -127,22 +168,22 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
             Random r = new Random();
             int bonusLevelIndex = r.nextInt(4);
 
-            Activity bonusLevelActivity = null;
+            Class bonusLevelActivity = null;
             switch (bonusLevelIndex) {
                 case 0:
-                    bonusLevelActivity = new BonusLevelTreeActivity();
+                    bonusLevelActivity = BonusLevelTreeActivity.class;
                     break;
                 case 1:
-                    bonusLevelActivity = new BonusLevelShakeActivity();
+                    bonusLevelActivity = BonusLevelShakeActivity.class;
                     break;
                 case 2:
-                    bonusLevelActivity = new BonusLevelFlowerActivity();
+                    bonusLevelActivity = BonusLevelFlowerActivity.class;
                     break;
                 case 3:
-                    bonusLevelActivity = new BonusLevelHedgehogActivity();
-                    break;
+                    bonusLevelActivity = BonusLevelHedgehogActivity.class;
+                break;
             }
-            Intent gameIntent = new Intent(this, bonusLevelActivity.getClass());
+            Intent gameIntent = new Intent(this, bonusLevelActivity);
             gameIntent.putExtra("type", mGameType);
             if(nextGame)
                 gameIntent.putExtra("gameNumber", AppHelper.getNextGame(this, mGameType));
@@ -195,34 +236,6 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
         set.play(moveImageXAnimator).with(scaleImageXAnimator).with(scaleImageYAnimator);
         set.setDuration(1000);
         set.start();
-    }
-
-    @Override
-    public void onGameFinish(String resultImage, int x, int y, int width, int height) {
-        if (!gameIsFinished) {
-            AppHelper.increasePassedGames();
-            AppHelper.setMaxGame(this, mGameNumber + 1, mGameType);
-            AppHelper.setGameAchievement(this, AppHelper.getGameAchievement(this) + 1);
-            resultImageXPos = x;
-            resultImageYPos = y;
-
-            ParseSvgAsyncTask parseSvgAsyncTask = new ParseSvgAsyncTask(this, this, width, height);
-            parseSvgAsyncTask.execute(resultImage);
-
-            gameIsFinished = true;
-        }
-    }
-
-    @Override
-    public void onPartMove() {
-        if (AppHelper.getVibrate(this))
-            mVibrator.vibrate(100);
-    }
-
-    @Override
-    public void onPartsLock() {
-        if (AppHelper.getVibrate(this))
-            mVibrator.vibrate(100);
     }
 
     @Override

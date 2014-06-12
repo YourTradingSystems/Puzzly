@@ -31,7 +31,7 @@ import java.util.Random;
 /**
  * Created by andrewtivodar on 14.05.2014.
  */
-public class BonusLevelTreeActivity extends InterstitialActivity implements ShakeSensor.OnShakeListener, View.OnClickListener, AnimationEndListener.AnimEndListener{
+public class BonusLevelTreeActivity extends InterstitialActivity implements View.OnClickListener, AnimationEndListener.AnimEndListener{
 
     private int gameType;
     private int screenHeight;
@@ -63,7 +63,23 @@ public class BonusLevelTreeActivity extends InterstitialActivity implements Shak
         mGameNumber = getIntent().getIntExtra("gameNumber", 0);
 
         mShaker = new ShakeSensor(this);
-        mShaker.setOnShakeListener(this);
+        mShaker.setOnShakeListener(new ShakeSensor.OnShakeListener() {
+            @Override
+            public void onShake() {
+                if (mTutorial != null) {
+                    mTutorial.stopPlayback();
+                    rlContainer_ABLT.removeView(mTutorial);
+                    AppHelper.setBonusTree(BonusLevelTreeActivity.this, true);
+                    mTutorial = null;
+                }
+
+                if (mCandiesDroppedCount != mCandiesCount) {
+                    if (AppHelper.getVibrate(BonusLevelTreeActivity.this))
+                        mVibrator.vibrate(100);
+                    dropCandy();
+                }
+            }
+        });
         mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         rlContainer_ABLT = (RelativeLayout) findViewById(R.id.rlContainer_ABLT);
 
@@ -197,22 +213,6 @@ public class BonusLevelTreeActivity extends InterstitialActivity implements Shak
         gameIntent.putExtra("gameNumber", mGameNumber);
         startActivity(gameIntent);
         finish();
-    }
-
-    @Override
-    public void onShake() {
-        if (mTutorial != null) {
-            mTutorial.stopPlayback();
-            rlContainer_ABLT.removeView(mTutorial);
-            AppHelper.setBonusTree(this, true);
-            mTutorial = null;
-        }
-
-        if (mCandiesDroppedCount != mCandiesCount) {
-            if (AppHelper.getVibrate(this))
-                mVibrator.vibrate(100);
-            dropCandy();
-        }
     }
 
     @Override

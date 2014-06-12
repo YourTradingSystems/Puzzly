@@ -32,7 +32,7 @@ import java.util.Random;
 /**
  * Created by andrewtivodar on 15.05.2014.
  */
-public class BonusLevelFlowerActivity extends InterstitialActivity implements ShakeSensor.OnShakeListener, View.OnClickListener, AnimationEndListener.AnimEndListener {
+public class BonusLevelFlowerActivity extends InterstitialActivity implements View.OnClickListener, AnimationEndListener.AnimEndListener {
 
     private int gameType;
     private final int mCandiesCount = 5;
@@ -65,7 +65,23 @@ public class BonusLevelFlowerActivity extends InterstitialActivity implements Sh
         mGameNumber = getIntent().getIntExtra("gameNumber", 0);
 
         mShaker = new ShakeSensor(this);
-        mShaker.setOnShakeListener(this);
+        mShaker.setOnShakeListener(new ShakeSensor.OnShakeListener() {
+            @Override
+            public void onShake() {
+                if (mTutorial != null) {
+                    mTutorial.stopPlayback();
+                    rlContainer_ABLF.removeView(mTutorial);
+                    AppHelper.setBonusFlower(BonusLevelFlowerActivity.this, true);
+                    mTutorial = null;
+                }
+
+                if (mFlowersShownCount != mCandiesCount) {
+                    if (AppHelper.getVibrate(BonusLevelFlowerActivity.this))
+                        mVibrator.vibrate(100);
+                    showFlower();
+                }
+            }
+        });
 
         mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         candiesLayout = (RelativeLayout) findViewById(R.id.rlCandiesABF);
@@ -227,22 +243,6 @@ public class BonusLevelFlowerActivity extends InterstitialActivity implements Sh
 
             if (mTutorial != null)
                 mTutorial.stopPlayback();
-        }
-    }
-
-    @Override
-    public void onShake() {
-        if (mTutorial != null) {
-            mTutorial.stopPlayback();
-            rlContainer_ABLF.removeView(mTutorial);
-            AppHelper.setBonusFlower(this, true);
-            mTutorial = null;
-        }
-
-        if (mFlowersShownCount != mCandiesCount) {
-            if (AppHelper.getVibrate(this))
-                mVibrator.vibrate(100);
-            showFlower();
         }
     }
 

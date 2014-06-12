@@ -31,7 +31,7 @@ import java.util.Random;
 /**
  * Created by andrewtivodar on 12.05.2014.
  */
-public class BonusLevelShakeActivity extends InterstitialActivity implements ShakeSensor.OnShakeListener, View.OnClickListener, AnimationEndListener.AnimEndListener {
+public class BonusLevelShakeActivity extends InterstitialActivity implements  View.OnClickListener, AnimationEndListener.AnimEndListener {
 
     private int gameType;
     private final int mCandiesCount = 9;
@@ -61,7 +61,23 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements Sha
         mGameNumber = getIntent().getIntExtra("gameNumber", 0);
 
         mShaker = new ShakeSensor(this);
-        mShaker.setOnShakeListener(this);
+        mShaker.setOnShakeListener(new ShakeSensor.OnShakeListener() {
+            @Override
+            public void onShake() {
+                if (mTutorial != null) {
+                    mTutorial.stopPlayback();
+                    rlContainer_ABLS.removeView(mTutorial);
+                    AppHelper.setBonusShake(BonusLevelShakeActivity.this, true);
+                    mTutorial = null;
+                }
+
+                if (mCandiesDroppedCount != mCandiesCount) {
+                    if (AppHelper.getVibrate(BonusLevelShakeActivity.this))
+                        mVibrator.vibrate(100);
+                    dropCandy();
+                }
+            }
+        });
 
         mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         rlContainer_ABLS = (RelativeLayout) findViewById(R.id.rlContainer_ABLS);
@@ -174,6 +190,7 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements Sha
         gameIntent.putExtra("type", gameType);
         gameIntent.putExtra("gameNumber", mGameNumber);
         startActivity(gameIntent);
+        candiesList.clear();
         finish();
     }
 
@@ -201,22 +218,6 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements Sha
 
             if (mTutorial != null)
                 mTutorial.stopPlayback();
-        }
-    }
-
-    @Override
-    public void onShake() {
-        if (mTutorial != null) {
-            mTutorial.stopPlayback();
-            rlContainer_ABLS.removeView(mTutorial);
-            AppHelper.setBonusShake(this, true);
-            mTutorial = null;
-        }
-
-        if (mCandiesDroppedCount != mCandiesCount) {
-            if (AppHelper.getVibrate(this))
-                mVibrator.vibrate(100);
-            dropCandy();
         }
     }
 

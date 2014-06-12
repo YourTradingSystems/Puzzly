@@ -180,6 +180,8 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity implements 
         gameIntent.putExtra("type", mGameType);
         gameIntent.putExtra("gameNumber", mGameNumber);
         startActivity(gameIntent);
+        smallCandiesList.clear();
+        bigCandiesList.clear();
         finish();
     }
 
@@ -218,7 +220,8 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity implements 
 
     @Override
     public void onGlobalLayout() {
-        initCandies();
         bigHedgehog.getViewTreeObserver().removeGlobalOnLayoutListener(this);
+        initCandies();
+
     }
 }

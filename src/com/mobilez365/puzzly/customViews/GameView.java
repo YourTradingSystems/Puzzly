@@ -138,7 +138,8 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         if (canvas == null) return;
         canvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
         canvas.drawColor(getResources().getColor(R.color.background_game));
-        canvas.drawBitmap(shape, figurePosX, figurePosY, null);
+        if (!shape.isRecycled())
+            canvas.drawBitmap(shape, figurePosX, figurePosY, null);
 
             synchronized (this) {
                 for (GameSprite spt : sprites) {
@@ -205,12 +206,12 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                                     break;
                             }
                             if (gameOver) {
-                                ((Activity)listener).runOnUiThread(new Runnable() {
-                                    @Override
-                                    public void run() {
+                                //((Activity)listener).runOnUiThread(new Runnable() {
+                                    //@Override
+                                    //public void run() {
                                         listener.onGameFinish(puzzleFillGame.getResultImage(), figurePosX, figurePosY, shape.getWidth(), shape.getHeight());
-                                    }
-                                });
+                                    //}
+                                //});
                                 end = gameOver;
                             }
                         }
