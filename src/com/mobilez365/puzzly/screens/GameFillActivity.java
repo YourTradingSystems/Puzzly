@@ -37,7 +37,7 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
     private TextView gameText;
     private PuzzleFillGame mPuzzleFillGame;
     private MediaPlayer mPlayer;
-    private boolean mFirstPlayItemSound;
+    private boolean mIsPlaySound;
     private GameView gameView;
     private Point displaySize;
     private int resultImageXPos;
@@ -72,12 +72,14 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
 
         nextGame.setOnClickListener(this);
         previousGame.setOnClickListener(this);
+        ivResultImage.setOnClickListener(this);
+        ivResultImage.setClickable(false);
 
         Display display = getWindowManager().getDefaultDisplay();
         displaySize = new Point();
         display.getSize(displaySize);
 
-        mFirstPlayItemSound = false;
+        mIsPlaySound = false;
     }
 
     @Override
@@ -87,7 +89,7 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
         if (!AppHelper.isAppInBackground(this)) {
             AppHelper.getBackgroundSound().pause(false);
 
-            if (!mFirstPlayItemSound && mPlayer != null)
+            if (mIsPlaySound && mPlayer != null)
                 mPlayer.start();
         }
     }
@@ -99,7 +101,7 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
         if (AppHelper.isAppInBackground(this) || AppHelper.isScreenOff(this)) {
             AppHelper.getBackgroundSound().pause(true);
 
-            if (!mFirstPlayItemSound && mPlayer != null)
+            if (mIsPlaySound && mPlayer != null)
                 mPlayer.pause();
         }
     }
@@ -226,13 +228,31 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
     @Override
     public void onClick(View v) {
         if (v.isClickable()) {
-            nextGame.setClickable(false);
+            //nextGame.setClickable(false);
             switch (v.getId()) {
                 case R.id.btnNextAGF:
+                    mPlayer.stop();
+                    mPlayer.release();
                     switchGame(true);
                     break;
                 case R.id.btnPreviousAGF:
+                    mPlayer.stop();
+                    mPlayer.release();
                     switchGame(false);
+                    break;
+                case R.id.ivResultImageAGF:
+                    ivResultImage.setClickable(false);
+                    mIsPlaySound = true;
+
+                    AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this, Constans.GAME_LANGUAGE).name());
+                    mPlayer = AppHelper.playSound(this, mPuzzleFillGame.getItemName());
+                    mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        @Override
+                        public void onCompletion(MediaPlayer mediaPlayer) {
+                            ivResultImage.setClickable(true);
+                            mIsPlaySound = false;
+                        }
+                    });
                     break;
             }
         }
@@ -264,10 +284,12 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
 
         if (AppHelper.getPlaySound(this)) {
             mPlayer = AppHelper.playSound(this, mPuzzleFillGame.getItemName());
+            mIsPlaySound = true;
             mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                 @Override
                 public void onCompletion(MediaPlayer mediaPlayer) {
-                    mFirstPlayItemSound = true;
+                    mIsPlaySound = false;
+                    ivResultImage.setClickable(true);
                 }
             });
         }
