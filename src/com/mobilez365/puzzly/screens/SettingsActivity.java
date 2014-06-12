@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.*;
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
@@ -14,6 +15,8 @@ import com.mobilez365.puzzly.global.Constans;
 import com.mobilez365.puzzly.puzzles.PuzzlesDB;
 import com.mobilez365.puzzly.util.BackgroundSound;
 import com.startad.lib.SADView;
+
+import java.util.Locale;
 
 /**
  * Created by Denis on 12.05.14.
@@ -85,7 +88,7 @@ public class SettingsActivity extends RestartActivty implements View.OnClickList
             }
             else {
                 AppHelper.setLocalizeStudyLanguage(this, _position);
-                AppHelper.changeLanguageRefresh(this, AppHelper.getLocaleLanguage(this, Constans.GAME_LANGUAGE).name(), swMain.getScrollY());
+               // AppHelper.changeLanguageRefresh(this, AppHelper.getLocaleLanguage(this, Constans.GAME_LANGUAGE).name(), swMain.getScrollY());
 
                 //update word in table
                 //PuzzlesDB.updateTableGameWord(this);
@@ -162,17 +165,25 @@ public class SettingsActivity extends RestartActivty implements View.OnClickList
     }
 
     private void showBanner() {
+        RelativeLayout layout = (RelativeLayout)findViewById(R.id.llBanner_SS);
+        layout.removeAllViews();
         switch (AppHelper.adware % 2){
             case 0:
-                AdView adView = (AdView) findViewById(R.id.adView);
+                AdView adView = new AdView(this);
+                adView.setAdUnitId(getString(R.string.adUnitId));
+                adView.setAdSize(AdSize.BANNER);
                 AdRequest adRequest = new AdRequest.Builder().build();
                 adView.loadAd(adRequest);
+                layout.addView(adView);
                 break;
             case 1:
                 SADView sadView = new SADView(this, getResources().getString(R.string.startADId));
-                LinearLayout layout = (LinearLayout)findViewById(R.id.llBanner_SS);
+                if(Locale.getDefault().getLanguage().equals("ru") || Locale.getDefault().getLanguage().equals("uk")){
+                    sadView.loadAd(SADView.LANGUAGE_RU);
+                }else {
+                    sadView.loadAd(SADView.LANGUAGE_EN);
+                }
                 layout.addView(sadView);
-                sadView.loadAd(SADView.LANGUAGE_EN);
                 break;
         }
         AppHelper.adware +=1;

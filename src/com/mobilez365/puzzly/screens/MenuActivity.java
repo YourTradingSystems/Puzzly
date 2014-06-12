@@ -9,6 +9,7 @@ import android.view.animation.AnimationUtils;
 import android.view.animation.TranslateAnimation;
 import android.widget.*;
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
@@ -19,6 +20,7 @@ import com.startad.lib.SADView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Random;
 
 public class MenuActivity extends Activity implements View.OnClickListener {
@@ -50,7 +52,6 @@ public class MenuActivity extends Activity implements View.OnClickListener {
             AppHelper.startBackgroundSound(this, Constans.MENU_BACKGROUND_MUSIC);
 
         setContentView(R.layout.menu_screen);
-        showBanner();
         findViews();
         setListeners();
         startAnimation();
@@ -91,6 +92,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     protected void onResume() {
         super.onResume();
         setGameAchievement(AppHelper.getGameAchievement(this));
+        showBanner();
 
         if (!AppHelper.isAppInBackground(this))
             AppHelper.getBackgroundSound().pause(false);
@@ -104,7 +106,6 @@ public class MenuActivity extends Activity implements View.OnClickListener {
             ivRightHandTutorial_MS.clearAnimation();
             ivRightHandTutorial_MS.setVisibility(View.GONE);
         }
-
 
         if (btnGameSettings_MS != null) btnGameSettings_MS.setClickable(true);
         if (ivGameSimpleReveal_MS != null) ivGameSimpleReveal_MS.setClickable(true);
@@ -257,17 +258,25 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     }
 
     private void showBanner() {
+        LinearLayout layout = (LinearLayout)findViewById(R.id.llBanner_SS);
+        layout.removeAllViews();
         switch (AppHelper.adware % 2){
             case 0:
-                AdView adView = (AdView) findViewById(R.id.adView);
+                AdView adView = new AdView(this);
+                adView.setAdUnitId(getString(R.string.adUnitId));
+                adView.setAdSize(AdSize.BANNER);
                 AdRequest adRequest = new AdRequest.Builder().build();
                 adView.loadAd(adRequest);
+                layout.addView(adView);
                 break;
             case 1:
                 SADView sadView = new SADView(this, getResources().getString(R.string.startADId));
-                LinearLayout layout = (LinearLayout)findViewById(R.id.llBanner_SS);
+                if(Locale.getDefault().getLanguage().equals("ru") || Locale.getDefault().getLanguage().equals("uk")){
+                    sadView.loadAd(SADView.LANGUAGE_RU);
+                }else {
+                    sadView.loadAd(SADView.LANGUAGE_EN);
+                }
                 layout.addView(sadView);
-                sadView.loadAd(SADView.LANGUAGE_EN);
                 break;
         }
         AppHelper.adware +=1;

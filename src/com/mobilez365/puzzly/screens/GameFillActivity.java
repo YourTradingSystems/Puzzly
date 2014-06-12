@@ -45,6 +45,7 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
 
     private MediaPlayer mExcellentWord;
     private MediaPlayer mItemWord;
+    private Bitmap resImage;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -109,6 +110,8 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
     protected void onDestroy() {
         super.onDestroy();
         gameView.release();
+        if(resImage != null)
+            resImage.recycle();
     }
 
     private void switchGame(boolean nextGame) {
@@ -165,6 +168,7 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
     }
 
     private void showResultImageAnimation(Bitmap resultImage, int x, int y) {
+        resImage = resultImage;
         ivResultImage.setImageBitmap(resultImage);
         ivResultImage.setX(x);
         ivResultImage.setY(y);

@@ -37,21 +37,13 @@
 
     </RelativeLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/llBanner_SS"
-        xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true">
-
-        <com.google.android.gms.ads.AdView
-            android:id="@+id/adView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            ads:adUnitId="@string/adUnitId"
-            ads:adSize="BANNER"/>
-    </LinearLayout>
+    </RelativeLayout>
     
     <ScrollView
         android:id="@+id/swMain_SS"
