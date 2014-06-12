@@ -52,14 +52,176 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a79d8431-a31c-4800-9f13-431b5a1f9d4a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/potato0.svg" afterPath="$PROJECT_DIR$/res/raw/potato0.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/potato1.svg" afterPath="$PROJECT_DIR$/res/raw/potato1.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/potato2.svg" afterPath="$PROJECT_DIR$/res/raw/potato2.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/potato3.svg" afterPath="$PROJECT_DIR$/res/raw/potato3.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/potato4.svg" afterPath="$PROJECT_DIR$/res/raw/potato4.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/potato5.svg" afterPath="$PROJECT_DIR$/res/raw/potato5.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/potato6.svg" afterPath="$PROJECT_DIR$/res/raw/potato6.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\apple.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\backpack.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\banana.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\baseball_cap.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\bee.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\beet.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\bread.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\butterfly.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\cancer.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\car.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\carrot.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\cherry.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\cock.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\computer_chair.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\corn.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\crab.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\crew_cut.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\crocodile.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\dog.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\dolphin.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\eggplant.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\elephant.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\fingerling.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\flamingo.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\fox.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\frogling.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\giraffe.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\goat.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\good_job.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\gorilla.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\hamburger.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\hen.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\hippo.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\ice_cream.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\jug_with_milk.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\kettle.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\key.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\koala.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\lamb.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\lemon.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\light_bulb.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\lime.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\lion.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\monkey.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\mushrooms.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\octopus.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\owl.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\pear.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\peas.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\pencil.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\penguin.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\pepper.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\perfect.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\pigeon.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\piggy.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\pitching.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\pot_with_honey.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\potato.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\pumpkin.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\rabbit.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\radish.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\rhino.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\scrambled_eggs.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\sea_bear.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\shuttlecocks.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\snail.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\snake.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\soother.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\squirrel.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\stapler.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\stork.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\strawberries.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\tea_cup.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\teddy_bear.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\toucan.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\train.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\turtle.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\umbrella.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\wagon.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\well_done.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\wizard_hat.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\wonderfull.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\yacht.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-he\zebra.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\apple.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\backpack.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\banana.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\baseball_cap.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\bee.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\beet.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\bread.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\butterfly.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\cancer.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\car.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\carrot.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\cherry.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\cock.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\computer_chair.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\corn.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\crab.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\crew_cut.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\crocodile.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\dog.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\dolphin.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\eggplant.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\elephant.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\fingerling.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\flamingo.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\fox.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\frogling.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\giraffe.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\goat.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\good_job.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\gorilla.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\hamburger.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\hen.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\hippo.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\ice_cream.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\jug_with_milk.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\kettle.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\key.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\koala.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\lamb.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\lemon.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\light_bulb.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\lime.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\lion.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\monkey.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\mushrooms.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\octopus.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\owl.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\pear.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\peas.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\pencil.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\penguin.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\pepper.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\perfect.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\pigeon.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\piggy.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\pitching.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\pot_with_honey.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\potato.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\pumpkin.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\rabbit.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\radish.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\rhino.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\scrambled_eggs.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\sea_bear.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\shuttlecocks.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\snail.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\snake.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\soother.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\squirrel.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\stapler.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\stork.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\strawberries.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\tea_cup.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\teddy_bear.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\toucan.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\train.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\turtle.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\umbrella.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\wagon.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\well_done.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\wizard_hat.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\wonderfull.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\yacht.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\raw-iw\zebra.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\values-he\strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Denis\AndroidStudioProjects\Puzzly\res\values-iw\strings.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path=".idea/workspace.xml" />
@@ -148,7 +310,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GameFillActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="GameFillActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="2363" max-vertical-offset="4590">
@@ -158,11 +320,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PuzzlesDB.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="PuzzlesDB.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28938907" vertical-offset="6812" max-vertical-offset="20179">
-              <caret line="418" column="47" selection-start-line="418" selection-start-column="47" selection-end-line="418" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="18197" max-vertical-offset="20179">
+              <caret line="1101" column="22" selection-start-line="1101" selection-start-column="22" selection-end-line="1101" selection-end-column="22" />
               <folding>
                 <element signature="e#26065#26099#0" expanded="true" />
               </folding>
@@ -425,6 +587,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Puzzly" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Puzzly" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -774,7 +954,11 @@
       <created>1402498529924</created>
       <updated>1402498529924</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="fix bug with &quot;potato&quot;">
+      <created>1402560191140</created>
+      <updated>1402560191140</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -878,7 +1062,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Implement new main menu design&#10;add new function in AppHelper:" />
     <MESSAGE value="Implement new main menu design&#10;add new function in AppHelper:&#10;setGameAchievement&#10;getGameAchievement" />
     <MESSAGE value="Support next settings:&#10;- Display inner borders;&#10;- Display words;&#10;- Vibrate when drag puzzles;&#10;- Vibrate when a piece in place;&#10;- Choose the language" />
     <MESSAGE value="Add new sound to all (future) puzzle items&#10;Support all setting options&#10;Translate all app text" />
@@ -903,7 +1086,8 @@
     <MESSAGE value="implement translate all text in game and items sound" />
     <MESSAGE value="fix bug with sound" />
     <MESSAGE value="add new language &quot;German&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="add new language &quot;German&quot;" />
+    <MESSAGE value="fix bug with &quot;potato&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bug with &quot;potato&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -974,14 +1158,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.42713568" vertical-offset="0" max-vertical-offset="425">
           <caret line="10" column="58" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25438598" vertical-offset="54" max-vertical-offset="510">
-          <caret line="10" column="12" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1061,14 +1237,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/values-iw/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8973747" vertical-offset="49" max-vertical-offset="2074">
-          <caret line="25" column="74" selection-start-line="25" selection-start-column="74" selection-end-line="25" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/values-hi/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.50119334" vertical-offset="1655" max-vertical-offset="2074">
@@ -1089,14 +1257,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.9761336" vertical-offset="1655" max-vertical-offset="2074">
           <caret line="24" column="46" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values-he/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0763724" vertical-offset="1295" max-vertical-offset="2074">
-          <caret line="25" column="74" selection-start-line="25" selection-start-column="74" selection-end-line="25" selection-end-column="74" />
           <folding />
         </state>
       </provider>
@@ -1327,9 +1487,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.320442" vertical-offset="54" max-vertical-offset="510">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="18197" max-vertical-offset="20179">
+          <caret line="1101" column="22" selection-start-line="1101" selection-start-column="22" selection-end-line="1101" selection-end-column="22" />
+          <folding>
+            <element signature="e#26065#26099#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5635359" vertical-offset="170" max-vertical-offset="2431">
+        <state vertical-scroll-proportion="0.28176796" vertical-offset="272" max-vertical-offset="2431">
           <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
           <folding />
         </state>
@@ -1340,16 +1518,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="2625" max-vertical-offset="4981">
           <caret line="162" column="38" selection-start-line="162" selection-start-column="38" selection-end-line="162" selection-end-column="38" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28938907" vertical-offset="6812" max-vertical-offset="20179">
-          <caret line="418" column="47" selection-start-line="418" selection-start-column="47" selection-end-line="418" selection-end-column="47" />
-          <folding>
-            <element signature="e#26065#26099#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
