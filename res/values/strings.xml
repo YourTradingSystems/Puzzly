@@ -20,12 +20,12 @@
 
     <string-array name="settings_languages">
         <item>English</item>
-        <item>Український</item>
+        <item>Українська</item>
         <item>Русский</item>
         <item>Magyar</item>
         <item>Deutsch</item>
-        <item>Français</item>
-        <item>Español</item>
+        <item>la France</item>
+        <item>España</item>
         <item>中文</item>
         <item>العربية</item> <!-- Arabic !-->
         <!-- <item>עִברִית</item> Hebrew !-->
