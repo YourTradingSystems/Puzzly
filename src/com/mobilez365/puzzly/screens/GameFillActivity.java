@@ -258,7 +258,7 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
         showBasketAnimation();
         showResultImageAnimation(bitmap, resultImageXPos, resultImageYPos);
 
-        gameText.setText(mPuzzleFillGame.getWord());
+        gameText.setText(mPuzzleFillGame.getWord(this));
 
         if (AppHelper.getPlaySound(this)) {
             mPlayer = AppHelper.playSound(this, mPuzzleFillGame.getItemName());

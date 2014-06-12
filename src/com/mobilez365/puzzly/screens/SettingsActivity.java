@@ -88,7 +88,7 @@ public class SettingsActivity extends RestartActivty implements View.OnClickList
                 AppHelper.changeLanguageRefresh(this, AppHelper.getLocaleLanguage(this, Constans.GAME_LANGUAGE).name(), swMain.getScrollY());
 
                 //update word in table
-                PuzzlesDB.updateTableGameWord(this);
+                //PuzzlesDB.updateTableGameWord(this);
             }
         }
         else

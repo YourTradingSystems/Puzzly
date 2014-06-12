@@ -162,7 +162,7 @@ public class ChooseGamePagerAdapter extends PagerAdapter implements View.OnClick
     private void loadGameWord(PuzzleFillGame game, TextView tv, int position) {
         int passedGameCount = AppHelper.getMaxGame(mActivity, mGameType);
         if(position < passedGameCount) {
-            tv.setText(game.getWord());
+            tv.setText(game.getWord(mActivity));
         }
         else if(position == passedGameCount)
             tv.setText(mActivity.getString(R.string.choose_level_new_level));

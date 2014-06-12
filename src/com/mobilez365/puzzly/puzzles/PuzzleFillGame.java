@@ -1,5 +1,6 @@
 package com.mobilez365.puzzly.puzzles;
 
+import android.content.Context;
 import android.graphics.Point;
 
 import java.util.List;
@@ -10,16 +11,14 @@ import java.util.List;
 public class PuzzleFillGame {
 
 	private int gameType;
-	private String word;
     private String itemName;
     private List<PuzzlesPart> parts;
     private String image;
     private String resultImage;
     private Point figurePos;
 
-    public PuzzleFillGame(int gameType, String word, String itemName, List<PuzzlesPart> parts, String image, String resultImage, Point figurePos)  {
+    public PuzzleFillGame(int gameType, String itemName, List<PuzzlesPart> parts, String image, String resultImage, Point figurePos)  {
         this.gameType = gameType;
-    	this.word = word;
         this.itemName = itemName;
         this.parts = parts;
         this.image = image;
@@ -27,9 +26,8 @@ public class PuzzleFillGame {
         this.figurePos = figurePos;
     }
 
-
-    public String getWord() {
-        return word;
+    public String getWord(Context _context) {
+        return _context.getResources().getString(_context.getResources().getIdentifier(itemName, "string", _context.getPackageName()));
     }
 
     public String getItemName() {
