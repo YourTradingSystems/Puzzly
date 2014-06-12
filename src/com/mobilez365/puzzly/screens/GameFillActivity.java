@@ -84,8 +84,6 @@ public class GameFillActivity extends RestartActivty implements GameView.GameCal
     protected void onResume() {
         super.onResume();
 
-        AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this, Constans.GAME_LANGUAGE).name());
-
         if (!AppHelper.isAppInBackground(this)) {
             AppHelper.getBackgroundSound().pause(false);
 

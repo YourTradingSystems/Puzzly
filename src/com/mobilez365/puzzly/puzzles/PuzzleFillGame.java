@@ -1,7 +1,11 @@
 package com.mobilez365.puzzly.puzzles;
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Point;
+
+import com.mobilez365.puzzly.global.AppHelper;
+import com.mobilez365.puzzly.global.Constans;
 
 import java.util.List;
 
@@ -26,8 +30,9 @@ public class PuzzleFillGame {
         this.figurePos = figurePos;
     }
 
-    public String getWord(Context _context) {
-        return _context.getResources().getString(_context.getResources().getIdentifier(itemName, "string", _context.getPackageName()));
+    public String getWord(Activity _activity) {
+        AppHelper.changeLanguage(_activity, AppHelper.getLocaleLanguage(_activity, Constans.GAME_LANGUAGE).name());
+        return _activity.getResources().getString(_activity.getResources().getIdentifier(itemName, "string", _activity.getPackageName()));
     }
 
     public String getItemName() {

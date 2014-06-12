@@ -160,6 +160,7 @@ public class ChooseGamePagerAdapter extends PagerAdapter implements View.OnClick
     }
 
     private void loadGameWord(PuzzleFillGame game, TextView tv, int position) {
+        AppHelper.changeLanguage(mActivity, AppHelper.getLocaleLanguage(mActivity, Constans.GAME_LANGUAGE).name());
         int passedGameCount = AppHelper.getMaxGame(mActivity, mGameType);
         if(position < passedGameCount) {
             tv.setText(game.getWord(mActivity));
