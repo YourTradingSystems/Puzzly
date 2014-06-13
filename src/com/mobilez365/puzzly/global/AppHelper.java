@@ -68,15 +68,19 @@ public class AppHelper {
         try {
             Locale locale = new Locale(_language);
             Locale.setDefault(locale);
-            Configuration config = _activity.getResources().getConfiguration();
+            Configuration config = _activity.getBaseContext().getResources().getConfiguration();
             config.locale = locale;
-            _activity.getResources().updateConfiguration(config, null);
+            _activity.getBaseContext().getResources().updateConfiguration(config, _activity.getBaseContext().getResources().getDisplayMetrics());
+            locale = null;
+            config = null;
         } catch (Exception e) {
             Locale locale = new Locale(Languages.en.name());
             Locale.setDefault(locale);
-            Configuration config = _activity.getResources().getConfiguration();
+            Configuration config = _activity.getBaseContext().getResources().getConfiguration();
             config.locale = locale;
-            _activity.getResources().updateConfiguration(config, null);
+            _activity.getBaseContext().getResources().updateConfiguration(config, _activity.getBaseContext().getResources().getDisplayMetrics());
+            locale = null;
+            config = null;
         }
     }
 

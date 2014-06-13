@@ -42,7 +42,7 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity implements 
     private ImageButton nextGame;
 
     public void onCreate(Bundle savedInstanceState) {
-        AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this,Constans.APP_LANGUAGE).name());
+        AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this,Constans.GAME_LANGUAGE).name());
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bonus_level_hedgehog);

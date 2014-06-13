@@ -15,7 +15,7 @@ import com.mobilez365.puzzly.util.ChooseGamePagerAdapter;
 /**
  * Created by andrewtivodar on 28.05.2014.
  */
-public class ChoosePuzzleActivity extends Activity implements View.OnClickListener, ViewPager.OnPageChangeListener {
+public class ChoosePuzzleActivity extends RestartActivty implements View.OnClickListener, ViewPager.OnPageChangeListener {
 
     private ViewPager levelsViewPager;
     private int maxLevelCount;

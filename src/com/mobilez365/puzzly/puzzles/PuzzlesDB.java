@@ -444,8 +444,8 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "butterfly");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "9 78 114 150 200 37 208 60 108 193");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "29 40 25 26 8 83 70 132 127 120");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "200 175 110 20 45 145 225 260 100 20");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "80 175 240 145 385 330 315 170 80 140");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "200 175 110 20 45 145 30 225 260 100");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "80 175 240 145 385 330 290 315 170 80");
             cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "470");
             cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "135");
 
