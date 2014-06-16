@@ -64,28 +64,24 @@ public class AppHelper {
         }
     }
 
-    public static final void changeLanguage(Activity _activity, String _language) {
+    public static final void changeLanguage(Context _context, String _language) {
         try {
             Locale locale = new Locale(_language);
             Locale.setDefault(locale);
-            Configuration config = _activity.getBaseContext().getResources().getConfiguration();
+            Configuration config = _context.getResources().getConfiguration();
             config.locale = locale;
-            _activity.getBaseContext().getResources().updateConfiguration(config, _activity.getBaseContext().getResources().getDisplayMetrics());
-            locale = null;
-            config = null;
+            _context.getResources().updateConfiguration(config, _context.getResources().getDisplayMetrics());
         } catch (Exception e) {
             Locale locale = new Locale(Languages.en.name());
             Locale.setDefault(locale);
-            Configuration config = _activity.getBaseContext().getResources().getConfiguration();
+            Configuration config = _context.getResources().getConfiguration();
             config.locale = locale;
-            _activity.getBaseContext().getResources().updateConfiguration(config, _activity.getBaseContext().getResources().getDisplayMetrics());
-            locale = null;
-            config = null;
+            _context.getResources().updateConfiguration(config, _context.getResources().getDisplayMetrics());
         }
     }
 
     public static final void changeLanguageRefresh(Activity _activity, String _language, int scrollPos) {
-        changeLanguage(_activity, _language);
+        changeLanguage(_activity.getApplicationContext(), _language);
         _activity.finish();
         Intent mIntent = new Intent(_activity, _activity.getClass());
         mIntent.putExtra("scrollPos" , scrollPos);
@@ -93,8 +89,8 @@ public class AppHelper {
         _activity.overridePendingTransition(0, 0);
     }
 
-    public static final Languages getLocaleLanguage(Activity _activity, int type) {
-        SharedPreferences prefs = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE);
+    public static final Languages getLocaleLanguage(Context _contex, int type) {
+        SharedPreferences prefs = _contex.getSharedPreferences(Constans.PREFERENCES_NAME, _contex.MODE_PRIVATE);
         int lang;
         if(type == Constans.APP_LANGUAGE)
             lang = prefs.getInt(Constans.LOCALIZE_APP_LANGUAGE, 0);
@@ -151,14 +147,14 @@ public class AppHelper {
         return false;
     }
 
-    public static boolean isScreenOff(final Activity _activity) {
-        PowerManager powerManager = (PowerManager) _activity.getSystemService(_activity.POWER_SERVICE);
+    public static boolean isScreenOff(final Context _context) {
+        PowerManager powerManager = (PowerManager) _context.getSystemService(_context.POWER_SERVICE);
         return !powerManager.isScreenOn();
     }
 
-    public static final VideoView showVideoTutorial(Activity _activity, ViewGroup _parentView) {
-        String uriPath = "android.resource://" + _activity.getPackageName() + "/raw/" + R.raw.tutorial_1;
-        final VideoView tutorial_video = new VideoView(_activity);
+    public static final VideoView showVideoTutorial(Context _context, ViewGroup _parentView) {
+        String uriPath = "android.resource://" + _context.getPackageName() + "/raw/" + R.raw.tutorial_1;
+        final VideoView tutorial_video = new VideoView(_context);
 
         RelativeLayout.LayoutParams relativeParams = new RelativeLayout.LayoutParams(400, 300);
         relativeParams.addRule(RelativeLayout.CENTER_IN_PARENT);
@@ -219,14 +215,14 @@ public class AppHelper {
         return mBackgroundSound;
     }
     
-    public static final void setGameAchievement(Activity _activity, int _count) {
-        SharedPreferences.Editor edit = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE).edit();
+    public static final void setGameAchievement(Context _context, int _count) {
+        SharedPreferences.Editor edit = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE).edit();
         edit.putInt(Constans.GAME_ACHIEVEMENT, _count);
         edit.commit();
     }
 
-    public static final int getGameAchievement(Activity _activity) {
-        SharedPreferences prefs = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE);
+    public static final int getGameAchievement(Context _context) {
+        SharedPreferences prefs = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
         return prefs.getInt(Constans.GAME_ACHIEVEMENT, 0);
     }
 
@@ -351,8 +347,8 @@ public class AppHelper {
         editor.commit();
     }
 
-    public static final boolean getVibrate(Activity _activity) {
-        SharedPreferences prefs = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE);
+    public static final boolean getVibrate(Context _context) {
+        SharedPreferences prefs = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
         return prefs.getBoolean(Constans.VIBRATE, true);
     }
 
@@ -378,36 +374,36 @@ public class AppHelper {
         return prefs.getInt(Constans.LOCALIZE_STUDY_LANGUAGE, 0);
     }
 
-    public static final void setBonusFlower(Activity _activity, boolean _state) {
-        SharedPreferences.Editor editor = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE).edit();
+    public static final void setBonusFlower(Context _context, boolean _state) {
+        SharedPreferences.Editor editor = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE).edit();
         editor.putBoolean(Constans.BONUS_FLOWER, _state);
         editor.commit();
     }
 
-    public static final boolean getBonusFlower(Activity _activity) {
-        SharedPreferences prefs = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE);
+    public static final boolean getBonusFlower(Context _context) {
+        SharedPreferences prefs = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
         return prefs.getBoolean(Constans.BONUS_FLOWER, false);
     }
 
-    public static final void setBonusShake(Activity _activity, boolean _state) {
-        SharedPreferences.Editor editor = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE).edit();
+    public static final void setBonusShake(Context _context, boolean _state) {
+        SharedPreferences.Editor editor = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE).edit();
         editor.putBoolean(Constans.BONUS_SHAKE, _state);
         editor.commit();
     }
 
-    public static final boolean getBonusShake(Activity _activity) {
-        SharedPreferences prefs = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE);
+    public static final boolean getBonusShake(Context _context) {
+        SharedPreferences prefs = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
         return prefs.getBoolean(Constans.BONUS_SHAKE, false);
     }
 
-    public static final void setBonusTree(Activity _activity, boolean _state) {
-        SharedPreferences.Editor editor = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE).edit();
+    public static final void setBonusTree(Context _context, boolean _state) {
+        SharedPreferences.Editor editor = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE).edit();
         editor.putBoolean(Constans.BONUS_TREE, _state);
         editor.commit();
     }
 
-    public static final boolean getBonusTree(Activity _activity) {
-        SharedPreferences prefs = _activity.getSharedPreferences(Constans.PREFERENCES_NAME, _activity.MODE_PRIVATE);
+    public static final boolean getBonusTree(Context _context) {
+        SharedPreferences prefs = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
         return prefs.getBoolean(Constans.BONUS_TREE, false);
     }
 

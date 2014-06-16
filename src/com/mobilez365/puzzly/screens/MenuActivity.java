@@ -43,10 +43,8 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     @Override
     public void onCreate(Bundle _savedInstanceState) {
         AppHelper.appStatus = 1;
-        AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this, Constans.GAME_LANGUAGE).name());
 
         super.onCreate(_savedInstanceState);
-       // AppHelper.setDefaultFont(this);
 
         if (AppHelper.getPlayBackgroundMusic(this))
             AppHelper.startBackgroundSound(this, Constans.MENU_BACKGROUND_MUSIC);
@@ -253,7 +251,6 @@ public class MenuActivity extends Activity implements View.OnClickListener {
 
 
     private final void settings() {
-        AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this, Constans.APP_LANGUAGE).name());
         startActivity(new Intent(this, SettingsActivity.class));
     }
 

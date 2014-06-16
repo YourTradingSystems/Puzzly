@@ -10,7 +10,6 @@ import com.mobilez365.puzzly.global.Constans;
  */
 public class ShakeSensor implements SensorListener {
 
-    private Context mContext;
     private OnShakeListener mShakeListener;
     private SensorManager mSensorMgr;
 
@@ -23,13 +22,8 @@ public class ShakeSensor implements SensorListener {
         public void onShake();
     }
 
-    public ShakeSensor(Context context) {
-        mContext = context;
-        resume();
-    }
-
-    public void resume() {
-        mSensorMgr = (SensorManager) mContext.getSystemService(Context.SENSOR_SERVICE);
+    public void resume(Context context, OnShakeListener listener) {
+        mSensorMgr = (SensorManager) context.getSystemService(Context.SENSOR_SERVICE);
 
         if (mSensorMgr == null) {
             return;
@@ -40,6 +34,8 @@ public class ShakeSensor implements SensorListener {
             mSensorMgr.unregisterListener(this, SensorManager.SENSOR_ACCELEROMETER);
             return;
         }
+
+        mShakeListener = listener;
     }
 
     public void pause() {
@@ -47,10 +43,7 @@ public class ShakeSensor implements SensorListener {
             mSensorMgr.unregisterListener(this, SensorManager.SENSOR_ACCELEROMETER);
             mSensorMgr = null;
         }
-    }
-
-    public void setOnShakeListener(OnShakeListener listener) {
-        mShakeListener = listener;
+        mShakeListener = null;
     }
 
     @Override

@@ -26,7 +26,7 @@ import java.util.Random;
 /**
  * Created by andrewtivodar on 15.05.2014.
  */
-public class BonusLevelHedgehogActivity extends InterstitialActivity implements View.OnClickListener, AnimationEndListener.AnimEndListener, ViewTreeObserver.OnGlobalLayoutListener {
+public class BonusLevelHedgehogActivity extends InterstitialActivity {
 
     private int mGameType;
     private final int mCandiesCount = 20;
@@ -35,30 +35,63 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity implements 
     private ImageView bigHedgehog;
     private List<ImageView> smallCandiesList;
     private List<ImageView> bigCandiesList;
+    private List<ObjectAnimator> candiesFlyAnimators;
     private int mScreenHeight;
 
-  //  private RelativeLayout rlContainer_ABLH;
     private BackgroundSound mBackgroundSound;
     private ImageButton nextGame;
 
-    public void onCreate(Bundle savedInstanceState) {
-        AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this,Constans.GAME_LANGUAGE).name());
+    private final ViewTreeObserver.OnGlobalLayoutListener onGlobalLayoutListener = new ViewTreeObserver.OnGlobalLayoutListener() {
+        @Override
+        public void onGlobalLayout() {
+            bigHedgehog.getViewTreeObserver().removeGlobalOnLayoutListener(onGlobalLayoutListener);
+            initCandies();
+        }
+    };
 
+    private final View.OnClickListener mClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            v.setClickable(false);
+            if (v.getId() == R.id.btnNextABH) {
+                v.setClickable(false);
+                nextGame();
+            } else
+                pickCandy(v);
+        }
+    };
+
+    private final AnimationEndListener.AnimEndListener mPickCandyAnimEndListener = new AnimationEndListener.AnimEndListener() {
+        @Override
+        public void OnAnimEnd(View v) {
+            v.setVisibility(View.GONE);
+        }
+    };
+
+    private final AnimationEndListener.AnimEndListener mFlyCandyAnimEndListener = new AnimationEndListener.AnimEndListener() {
+        @Override
+        public void OnAnimEnd(View v) {
+            mCandiesUnpickedCount++;
+            checkAllPicked();
+        }
+    };
+
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bonus_level_hedgehog);
 
         mGameType = getIntent().getIntExtra("type", 0);
         mGameNumber = getIntent().getIntExtra("gameNumber", 0);
 
-       // rlContainer_ABLH = (RelativeLayout) findViewById(R.id.rlContainer_ABLH);
-
         smallCandiesList = new ArrayList<ImageView>();
         bigCandiesList = new ArrayList<ImageView>();
 
         AppHelper.increasePassedGames();
 
+        candiesFlyAnimators = new ArrayList<ObjectAnimator>();
+
         bigHedgehog = (ImageView) findViewById(R.id.ivHedgehogBigABH);
-        bigHedgehog.getViewTreeObserver().addOnGlobalLayoutListener(this);
+        bigHedgehog.getViewTreeObserver().addOnGlobalLayoutListener(onGlobalLayoutListener);
     }
 
     private void initCandies() {
@@ -105,7 +138,7 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity implements 
             candy.setX(-candySize);
             candy.setY(candyYPos);
             candy.setTag(i);
-            candy.setOnClickListener(this);
+            candy.setOnClickListener(mClickListener);
 
             if (bigCandy)
                 bigCandiesList.add(candy);
@@ -116,21 +149,17 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity implements 
             ObjectAnimator moveAnimator = ObjectAnimator.ofFloat(candy, "translationX", candy.getX(), mScreenWidth);
             moveAnimator.setDuration(7000);
             moveAnimator.setStartDelay(startOffset);
-            moveAnimator.addListener(new AnimationEndListener(candy, new AnimationEndListener.AnimEndListener() {
-                @Override
-                public void OnAnimEnd(View v) {
-                    mCandiesUnpickedCount++;
-                    checkAllPicked();
-                }
-            }));
+            moveAnimator.addListener(new AnimationEndListener(candy, mFlyCandyAnimEndListener));
             moveAnimator.start();
+
+            candiesFlyAnimators.add(moveAnimator);
         }
 
     }
 
     private void pickCandy(View v) {
         v.setClickable(false);
-        AppHelper.setGameAchievement(this, AppHelper.getGameAchievement(this) + 1);
+        AppHelper.setGameAchievement(getApplicationContext(), AppHelper.getGameAchievement(getApplicationContext()) + 1);
         v.bringToFront();
 
         int finishCenterX;
@@ -163,15 +192,17 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity implements 
         set.play(moveXAnimator).with(moveYAnimator);
         set.setDuration(300);
 
-        set.addListener(new AnimationEndListener(v, this));
+        set.addListener(new AnimationEndListener(v, mPickCandyAnimEndListener));
         set.start();
+
+        candiesFlyAnimators.get((Integer)v.getTag()).end();
     }
 
     private void checkAllPicked() {
         if (mCandiesUnpickedCount == mCandiesCount) {
             nextGame = (ImageButton) findViewById(R.id.btnNextABH);
             nextGame.setVisibility(View.VISIBLE);
-            nextGame.setOnClickListener(this);
+            nextGame.setOnClickListener(mClickListener);
         }
     }
 
@@ -189,7 +220,7 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity implements 
     public void onResume() {
         super.onResume();
 
-        if (!AppHelper.isAppInBackground(this))
+        if (!AppHelper.isAppInBackground(getApplicationContext()))
             AppHelper.getBackgroundSound().pause(false);
 
         if (nextGame != null) nextGame.setClickable(true);
@@ -199,29 +230,18 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity implements 
     protected void onPause() {
         super.onPause();
 
-        if (AppHelper.isAppInBackground(this) || AppHelper.isScreenOff(this))
+        if (AppHelper.isAppInBackground(getApplicationContext()) || AppHelper.isScreenOff(getApplicationContext()))
             AppHelper.getBackgroundSound().pause(true);
     }
 
     @Override
-    public void onClick(View v) {
-        v.setClickable(false);
-        if (v.getId() == R.id.btnNextABH) {
-            v.setClickable(false);
-            nextGame();
-        } else
-            pickCandy(v);
-    }
+    protected void onDestroy() {
+        super.onDestroy();
 
-    @Override
-    public void OnAnimEnd(View v) {
-        v.setVisibility(View.GONE);
-    }
-
-    @Override
-    public void onGlobalLayout() {
-        bigHedgehog.getViewTreeObserver().removeGlobalOnLayoutListener(this);
-        initCandies();
+        for (ObjectAnimator candiesFlyAnimator : candiesFlyAnimators) {
+            candiesFlyAnimator.cancel();
+        }
 
     }
+
 }

@@ -36,7 +36,7 @@ public class SettingsActivity extends RestartActivty implements View.OnClickList
 
     @Override
     public void onCreate(Bundle _savedInstanceState) {
-        AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this, Constans.APP_LANGUAGE).name());
+        AppHelper.changeLanguage(getApplicationContext(), AppHelper.getLocaleLanguage(getApplicationContext(), Constans.APP_LANGUAGE).name());
 
         super.onCreate(_savedInstanceState);
         setContentView(R.layout.settings_screen);
@@ -84,15 +84,10 @@ public class SettingsActivity extends RestartActivty implements View.OnClickList
         if (displayInit > 1) {
             if(_parent.getId() == R.id.spinnerChooseAppCountry_SS) {
                 AppHelper.setLocalizeAppLanguage(this, _position);
-                AppHelper.changeLanguageRefresh(this, AppHelper.getLocaleLanguage(this, Constans.APP_LANGUAGE).name(), swMain.getScrollY());
+                AppHelper.changeLanguageRefresh(this, AppHelper.getLocaleLanguage(getApplicationContext(), Constans.APP_LANGUAGE).name(), swMain.getScrollY());
             }
-            else {
+            else
                 AppHelper.setLocalizeStudyLanguage(this, _position);
-               // AppHelper.changeLanguageRefresh(this, AppHelper.getLocaleLanguage(this, Constans.GAME_LANGUAGE).name(), swMain.getScrollY());
-
-                //update word in table
-                //PuzzlesDB.updateTableGameWord(this);
-            }
         }
         else
             displayInit ++;

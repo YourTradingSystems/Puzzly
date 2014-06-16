@@ -61,7 +61,7 @@ public class ChoosePuzzleActivity extends RestartActivty implements View.OnClick
     protected void onResume() {
         super.onResume();
 
-        AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this, Constans.GAME_LANGUAGE).name());
+        AppHelper.changeLanguage(getApplicationContext(), AppHelper.getLocaleLanguage(getApplicationContext(), Constans.GAME_LANGUAGE).name());
 
         //AppHelper.resetPassedGames();
         if(maxLevelCount != AppHelper.getMaxGame(this, mGameType) ||

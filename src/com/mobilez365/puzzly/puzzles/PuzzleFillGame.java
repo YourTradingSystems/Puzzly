@@ -30,9 +30,9 @@ public class PuzzleFillGame {
         this.figurePos = figurePos;
     }
 
-    public String getWord(Activity _activity) {
-        AppHelper.changeLanguage(_activity, AppHelper.getLocaleLanguage(_activity, Constans.GAME_LANGUAGE).name());
-        return _activity.getResources().getString(_activity.getResources().getIdentifier(itemName, "string", _activity.getPackageName()));
+    public String getWord(Context _context) {
+        AppHelper.changeLanguage(_context, AppHelper.getLocaleLanguage(_context, Constans.GAME_LANGUAGE).name());
+        return _context.getResources().getString(_context.getResources().getIdentifier(itemName, "string", _context.getPackageName()));
     }
 
     public String getItemName() {

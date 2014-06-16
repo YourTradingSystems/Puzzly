@@ -31,7 +31,7 @@ import java.util.Random;
 /**
  * Created by andrewtivodar on 12.05.2014.
  */
-public class BonusLevelShakeActivity extends InterstitialActivity implements  View.OnClickListener, AnimationEndListener.AnimEndListener {
+public class BonusLevelShakeActivity extends InterstitialActivity {
 
     private int gameType;
     private final int mCandiesCount = 9;
@@ -51,33 +51,53 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements  Vi
 
     private VideoView mTutorial;
 
-    public void onCreate(Bundle savedInstanceState) {
-        AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this, Constans.GAME_LANGUAGE).name());
+    private final View.OnClickListener mClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            if(v.getId() == R.id.btnNextABS){
+                v.setClickable(false);
+                nextGame();
+            }
+            else
+                pickCandy(v);
+        }
+    };
 
+    private final ShakeSensor.OnShakeListener mShakeListener = new ShakeSensor.OnShakeListener() {
+        @Override
+        public void onShake() {
+            if (mTutorial != null) {
+                mTutorial.stopPlayback();
+                rlContainer_ABLS.removeView(mTutorial);
+                AppHelper.setBonusShake(getApplicationContext(), true);
+                mTutorial = null;
+            }
+
+            if (mCandiesDroppedCount != mCandiesCount) {
+                if (AppHelper.getVibrate(getApplicationContext()))
+                    mVibrator.vibrate(100);
+                dropCandy();
+            }
+        }
+    };
+
+    private final AnimationEndListener.AnimEndListener mAnimEndListener = new AnimationEndListener.AnimEndListener() {
+        @Override
+        public void OnAnimEnd(View v) {
+            v.setVisibility(View.GONE);
+            mCandiesPickedCount ++;
+            checkAllPicked();
+        }
+    };
+
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bonus_level_shake);
 
         gameType = getIntent().getIntExtra("type", 0);
         mGameNumber = getIntent().getIntExtra("gameNumber", 0);
 
-        mShaker = new ShakeSensor(this);
-        mShaker.setOnShakeListener(new ShakeSensor.OnShakeListener() {
-            @Override
-            public void onShake() {
-                if (mTutorial != null) {
-                    mTutorial.stopPlayback();
-                    rlContainer_ABLS.removeView(mTutorial);
-                    AppHelper.setBonusShake(BonusLevelShakeActivity.this, true);
-                    mTutorial = null;
-                }
-
-                if (mCandiesDroppedCount != mCandiesCount) {
-                    if (AppHelper.getVibrate(BonusLevelShakeActivity.this))
-                        mVibrator.vibrate(100);
-                    dropCandy();
-                }
-            }
-        });
+        mShaker = new ShakeSensor();
 
         mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         rlContainer_ABLS = (RelativeLayout) findViewById(R.id.rlContainer_ABLS);
@@ -86,7 +106,7 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements  Vi
 
         initCandies();
 
-        if (!AppHelper.getBonusShake(this))
+        if (!AppHelper.getBonusShake(getApplicationContext()))
             mTutorial = AppHelper.showVideoTutorial(this, rlContainer_ABLS);
     }
 
@@ -113,7 +133,7 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements  Vi
             candy.setImageResource(getResources().getIdentifier("img_candy" + candyNumber, "drawable", getPackageName()));
             candy.setX(i * step);
             candy.setTag(i);
-            candy.setOnClickListener(this);
+            candy.setOnClickListener(mClickListener);
             candiesList.add(candy);
             candiesLayout.addView(candy);
             candiesStatus[i] = Constans.CANDY_ON_TOP;
@@ -149,7 +169,7 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements  Vi
         if (candiesStatus[(Integer) v.getTag()] == Constans.CANDY_FALLEN) {
             candiesStatus[(Integer) v.getTag()] = Constans.CANDY_PICKED;
 
-            AppHelper.setGameAchievement(this, AppHelper.getGameAchievement(this) + 1);
+            AppHelper.setGameAchievement(getApplicationContext(), AppHelper.getGameAchievement(getApplicationContext()) + 1);
             v.bringToFront();
 
             int finishCenterX = mScreenWidth / 2 - (v.getWidth() / 2);
@@ -170,7 +190,7 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements  Vi
             set.play(moveXAnimator).with(moveYAnimator);
             set.setDuration(300);
 
-            set.addListener(new AnimationEndListener(v, this));
+            set.addListener(new AnimationEndListener(v, mAnimEndListener));
 
             set.start();
 
@@ -181,7 +201,7 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements  Vi
         if(mCandiesPickedCount == mCandiesCount) {
             nextGame = (ImageButton) findViewById(R.id.btnNextABS);
             nextGame.setVisibility(View.VISIBLE);
-            nextGame.setOnClickListener(this);
+            nextGame.setOnClickListener(mClickListener);
         }
     }
 
@@ -196,10 +216,10 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements  Vi
 
     @Override
     public void onResume() {
-        mShaker.resume();
+        mShaker.resume(getApplicationContext(), mShakeListener);
         super.onResume();
 
-        if (!AppHelper.isAppInBackground(this))
+        if (!AppHelper.isAppInBackground(getApplicationContext()))
             AppHelper.getBackgroundSound().pause(false);
 
         if (mTutorial != null)
@@ -213,7 +233,7 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements  Vi
         super.onPause();
 
         mShaker.pause();
-        if (AppHelper.isAppInBackground(this) || AppHelper.isScreenOff(this)) {
+        if (AppHelper.isAppInBackground(getApplicationContext()) || AppHelper.isScreenOff(getApplicationContext())) {
             AppHelper.getBackgroundSound().pause(true);
 
             if (mTutorial != null)
@@ -222,19 +242,14 @@ public class BonusLevelShakeActivity extends InterstitialActivity implements  Vi
     }
 
     @Override
-    public void onClick(View v) {
-        if(v.getId() == R.id.btnNextABS){
-            v.setClickable(false);
-            nextGame();
+    protected void onDestroy() {
+        super.onDestroy();
+
+        for (ObjectAnimator candiesRotateAnimator : candiesRotateAnimators) {
+            candiesRotateAnimator.cancel();
         }
-        else
-            pickCandy(v);
+
     }
 
-    @Override
-    public void OnAnimEnd(View v) {
-        v.setVisibility(View.GONE);
-        mCandiesPickedCount ++;
-        checkAllPicked();
-    }
+
 }

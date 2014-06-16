@@ -244,20 +244,24 @@ public class GameFillActivity extends RestartActivty implements View.OnClickList
             //nextGame.setClickable(false);
             switch (v.getId()) {
                 case R.id.btnNextAGF:
-                    mPlayer.stop();
-                    mPlayer.release();
+                    if(mPlayer != null) {
+                        mPlayer.stop();
+                        mPlayer.release();
+                    }
                     switchGame(true);
                     break;
                 case R.id.btnPreviousAGF:
-                    mPlayer.stop();
-                    mPlayer.release();
+                    if(mPlayer != null) {
+                        mPlayer.stop();
+                        mPlayer.release();
+                    }
                     switchGame(false);
                     break;
                 case R.id.ivResultImageAGF:
                     ivResultImage.setClickable(false);
                     mIsPlaySound = true;
 
-                    AppHelper.changeLanguage(this, AppHelper.getLocaleLanguage(this, Constans.GAME_LANGUAGE).name());
+                    AppHelper.changeLanguage(getApplicationContext(), AppHelper.getLocaleLanguage(getApplicationContext(), Constans.GAME_LANGUAGE).name());
                     mPlayer = AppHelper.playSound(this, mPuzzleFillGame.getItemName());
                     mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                         @Override
