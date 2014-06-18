@@ -4,7 +4,7 @@
 
     <!-- ~~~~~~~~~~~~~~~~~~~ MENU ~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
-    <string name="menu_settings">AJUSTES</string>
+    <string name="menu_settings">LANGUAJE DE LA AJUSTES</string>
     <string name="menu_back">Atrás</string>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
@@ -30,13 +30,13 @@
     <string name="pigeon">Paloma</string>
     <string name="frogling">Rana</string>
     <string name="rabbit">Conejo</string>
-    <string name="hen">Pollito</string>
+    <string name="hen">Pollo</string>
     <string name="octopus">Pulpo</string>
     <string name="pencil">Lapiz</string>
     <string name="ice_cream">Helado</string>
-    <string name="fingerling">Alevîn</string>
+    <string name="fingerling">Pez</string>
     <string name="elephant">Elephant</string>
-    <string name="lamb">Carnero</string>
+    <string name="lamb">Oveja</string>
     <string name="owl">Bûho</string>
     <string name="snail">Caracol</string>
     <string name="squirrel">Ardilla</string>
@@ -47,10 +47,10 @@
     <string name="turtle">Tortuga</string>
     <string name="dolphin">Delfîn</string>
     <string name="hippo">Hipopôtamo</string>
-    <string name="teddy_bear">Osito de peluche</string>
+    <string name="teddy_bear">Osito, osito de peluche</string>
     <string name="penguin">Pinguîno</string>
     <string name="snake">Serpiente</string>
-    <string name="flamingo">Flamenco</string>
+    <string name="flamingo">Flamencos</string>
     <string name="toucan">Tucân</string>
     <string name="giraffe">Jirafa</string>
     <string name="monkey">Mono</string>
@@ -60,7 +60,7 @@
     <string name="car">Coche</string>
     <string name="eggplant">Berenjena</string>
     <string name="bread">Pan</string>
-    <string name="baseball_cap">Gorra de bêibol</string>
+    <string name="baseball_cap">Gorra de beisbol</string>
     <string name="computer_chair">Sillâ</string>
     <string name="train">Tren</string>
     <string name="wagon">Vâgon</string>
