@@ -4,7 +4,7 @@
 
     <!-- ~~~~~~~~~~~~~~~~~~~ MENU ~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
-    <string name="menu_settings">REGLAGES</string>
+    <string name="menu_settings">LANGUE DE REGLAGES</string>
     <string name="menu_back">Arrière</string>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
@@ -41,7 +41,7 @@
     <string name="snail">Escargot</string>
     <string name="squirrel">Ecureuil</string>
     <string name="apple">Pomme</string>
-    <string name="carrot">Carrote</string>
+    <string name="carrot">Carote</string>
     <string name="goat">Chevre</string>
     <string name="bee">Abeille</string>
     <string name="turtle">Tortue</string>
@@ -50,9 +50,9 @@
     <string name="teddy_bear">Nounours</string>
     <string name="penguin">Pinguin</string>
     <string name="snake">Serpent</string>
-    <string name="flamingo">Flammand rose</string>
+    <string name="flamingo">Flamand rose</string>
     <string name="toucan">Toucan</string>
-    <string name="giraffe">Griraffe</string>
+    <string name="giraffe">Girafe</string>
     <string name="monkey">Singe</string>
     <string name="zebra">Zebre</string>
     <string name="lion">Lion</string>
@@ -102,7 +102,7 @@
     <string name="crew_cut">Herisson</string>
     <string name="gorilla">Gorille</string>
     <string name="fox">Renard</string>
-    <string name="pitching">Canard</string>
+    <string name="pitching">Pitching</string>
     <string name="dog">Chien</string>
     <string name="koala">Koala</string>
     <string name="butterfly">Papillon</string>
