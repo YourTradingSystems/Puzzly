@@ -4,7 +4,7 @@
 
     <!-- ~~~~~~~~~~~~~~~~~~~ MENU ~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
-    <string name="menu_settings">LANGUAJE DE LA AJUSTES</string>
+    <string name="menu_settings">CONFIGURACION</string>
     <string name="menu_back">Atrás</string>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
@@ -47,7 +47,7 @@
     <string name="turtle">Tortuga</string>
     <string name="dolphin">Delfîn</string>
     <string name="hippo">Hipopôtamo</string>
-    <string name="teddy_bear">Osito, osito de peluche</string>
+    <string name="teddy_bear">Osito de peluche</string>
     <string name="penguin">Pinguîno</string>
     <string name="snake">Serpiente</string>
     <string name="flamingo">Flamencos</string>

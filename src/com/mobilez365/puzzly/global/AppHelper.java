@@ -113,13 +113,13 @@ public class AppHelper {
             case 7:
                 return Languages.zh;
 
-            case 8:
-                return Languages.ar;
+           // case 8:
+            //    return Languages.ar;
 
             //case 9:
                 //return Languages.he;
 
-            case 9:
+            case 8:
                 return Languages.hi;
         }
 

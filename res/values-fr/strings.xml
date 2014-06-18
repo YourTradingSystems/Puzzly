@@ -4,7 +4,7 @@
 
     <!-- ~~~~~~~~~~~~~~~~~~~ MENU ~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
-    <string name="menu_settings">LANGUE DE REGLAGES</string>
+    <string name="menu_settings">PARAMÉTRÉS</string>
     <string name="menu_back">Arrière</string>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
@@ -30,7 +30,7 @@
     <string name="pigeon">Pigeon</string>
     <string name="frogling">Grenouille</string>
     <string name="rabbit">Lapin</string>
-    <string name="hen">Poussin</string>
+    <string name="hen">Pollo</string>
     <string name="octopus">Poulpe</string>
     <string name="pencil">Crayon</string>
     <string name="ice_cream">Glace</string>
