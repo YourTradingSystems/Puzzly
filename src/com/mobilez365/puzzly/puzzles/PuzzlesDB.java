@@ -727,18 +727,6 @@ public class PuzzlesDB {
 
             cv = new ContentValues();
             cv.put(PuzzlesDBHelper.GAME_TYPE, "1");
-            cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "pitching");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "54 10000 10000 10000");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "111 10000 10000 10000");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "255 60 245 60");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "330 130 130 320");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "525");
-            cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "150");
-
-            findAllBD.insertWithOnConflict(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
-
-            cv = new ContentValues();
-            cv.put(PuzzlesDBHelper.GAME_TYPE, "1");
             cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "wizard_hat");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "74 10000 10000 10000");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "8 10000 10000 10000");
