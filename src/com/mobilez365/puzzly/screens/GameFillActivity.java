@@ -26,7 +26,7 @@ import com.mobilez365.puzzly.util.ParseSvgAsyncTask;
 
 import java.util.Random;
 
-public class GameFillActivity extends RestartActivty implements View.OnClickListener, AnimationEndListener.AnimEndListener, ParseSvgAsyncTask.ParseListener {
+public class GameFillActivity extends RestartActivty {
 
     private boolean gameIsFinished = false;
     private int mGameType;
@@ -48,31 +48,128 @@ public class GameFillActivity extends RestartActivty implements View.OnClickList
     private MediaPlayer mItemWord;
     private Bitmap resImage;
 
+    private final ParseSvgAsyncTask.ParseListener mParseDoneListener = new ParseSvgAsyncTask.ParseListener() {
+        @Override
+        public void onParseDone(Bitmap bitmap) {
+            gameText.setVisibility(View.VISIBLE);
+
+            showBasketAnimation();
+            showResultImageAnimation(bitmap, resultImageXPos, resultImageYPos);
+
+            gameText.setText(mPuzzleFillGame.getWord(getApplicationContext()));
+
+            if (AppHelper.getPlaySound(getApplicationContext())) {
+                mPlayer = AppHelper.playSound(getApplicationContext(), mPuzzleFillGame.getItemName());
+                mIsPlaySound = true;
+                mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mediaPlayer) {
+                        mIsPlaySound = false;
+                        ivResultImage.setClickable(true);
+                    }
+                });
+            }
+
+            //  String excellent_words[] = new String[]{"perfect", "wonderfull", "well_done", "good_job"};
+            //  Random random = new Random();
+            //  String excellent_word = excellent_words[random.nextInt(excellent_words.length)];
+
+                   /* if (AppHelper.getPlaySound(this)) {
+                mExcellentWord = AppHelper.playSound(this, excellent_word);
+
+                final Activity activity = this;
+                mExcellentWord.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+                        if (AppHelper.getPlaySound(activity)) {
+                            AppHelper.playSound(activity, mPuzzleFillGame.getItemName());
+                        }
+                    }
+                });*/
+        }
+    };
+
+    private final AnimationEndListener.AnimEndListener mAnimEndListener = new AnimationEndListener.AnimEndListener() {
+        @Override
+        public void OnAnimEnd(View v) {
+            findViewById(R.id.rlBackgroundAFG).setBackgroundColor(getResources().getColor(R.color.background_game));
+            showMoveToCenterAnimation();
+
+            if (AppHelper.getNextGame(getApplicationContext(), mGameType) != -1)
+                nextGame.setVisibility(View.VISIBLE);
+
+            if (mGameNumber != 0)
+                previousGame.setVisibility(View.VISIBLE);
+
+            v.setVisibility(View.GONE);
+            findViewById(R.id.ivBasketAGF).setVisibility(View.GONE);
+        }
+    };
+
+    private final View.OnClickListener mOnClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            if (v.isClickable()) {
+                //nextGame.setClickable(false);
+                switch (v.getId()) {
+                    case R.id.btnNextAGF:
+                        if(mPlayer != null) {
+                            mPlayer.stop();
+                            mPlayer.release();
+                        }
+                        switchGame(true);
+                        break;
+                    case R.id.btnPreviousAGF:
+                        if(mPlayer != null) {
+                            mPlayer.stop();
+                            mPlayer.release();
+                        }
+                        switchGame(false);
+                        break;
+                    case R.id.ivResultImageAGF:
+                        ivResultImage.setClickable(false);
+                        mIsPlaySound = true;
+
+                        AppHelper.changeLanguage(getApplicationContext(), AppHelper.getLocaleLanguage(getApplicationContext(), Constans.GAME_LANGUAGE).name());
+                        mPlayer = AppHelper.playSound(getApplicationContext(), mPuzzleFillGame.getItemName());
+                        mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                            @Override
+                            public void onCompletion(MediaPlayer mediaPlayer) {
+                                ivResultImage.setClickable(true);
+                                mIsPlaySound = false;
+                            }
+                        });
+                        break;
+                }
+            }
+        }
+    };
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_fill);
 
-        if (AppHelper.getPlayBackgroundMusic(this) && !AppHelper.getBackgroundSound().getName().equals(Constans.GAME_BACKGROUND_MUSIC))
-            AppHelper.startBackgroundSound(this, Constans.GAME_BACKGROUND_MUSIC);
+        if (AppHelper.getPlayBackgroundMusic(getApplicationContext()) && !AppHelper.getBackgroundSound().getName().equals(Constans.GAME_BACKGROUND_MUSIC))
+            AppHelper.startBackgroundSound(getApplicationContext(), Constans.GAME_BACKGROUND_MUSIC);
 
         mGameType = getIntent().getIntExtra("type", 0);
         mGameNumber = getIntent().getIntExtra("gameNumber", 0);
-        AppHelper.setCurrentGame(this, mGameNumber, mGameType);
+        AppHelper.setCurrentGame(getApplicationContext(), mGameNumber, mGameType);
 
-        mPuzzleFillGame = PuzzlesDB.getPuzzle(mGameNumber, mGameType, this);
+        mPuzzleFillGame = PuzzlesDB.getPuzzle(mGameNumber, mGameType, getApplicationContext());
 
-        gameView = new GameView(this, mPuzzleFillGame, new GameView.GameCallBacks() {
+        gameView = new GameView(getApplicationContext(), mPuzzleFillGame, new GameView.GameCallBacks() {
             @Override
             public void onGameFinish(String resultImage, int x, int y, int width, int height) {
                 if (!gameIsFinished) {
                     AppHelper.increasePassedGames();
-                    AppHelper.setMaxGame(GameFillActivity.this, mGameNumber + 1, mGameType);
-                    AppHelper.setGameAchievement(GameFillActivity.this, AppHelper.getGameAchievement(GameFillActivity.this) + 1);
+                    AppHelper.setMaxGame(getApplicationContext(), mGameNumber + 1, mGameType);
+                    AppHelper.setGameAchievement(getApplicationContext(), AppHelper.getGameAchievement(getApplicationContext()) + 1);
                     resultImageXPos = x;
                     resultImageYPos = y;
 
-                    ParseSvgAsyncTask parseSvgAsyncTask = new ParseSvgAsyncTask(GameFillActivity.this, GameFillActivity.this, width, height);
+                    ParseSvgAsyncTask parseSvgAsyncTask = new ParseSvgAsyncTask(getApplicationContext(), mParseDoneListener, width, height);
                     parseSvgAsyncTask.execute(resultImage);
 
                     gameIsFinished = true;
@@ -81,13 +178,13 @@ public class GameFillActivity extends RestartActivty implements View.OnClickList
 
             @Override
             public void onPartMove() {
-                if (AppHelper.getVibrate(GameFillActivity.this))
+                if (AppHelper.getVibrate(getApplicationContext()))
                     mVibrator.vibrate(100);
             }
 
             @Override
             public void onPartsLock() {
-                if (AppHelper.getVibrate(GameFillActivity.this))
+                if (AppHelper.getVibrate(getApplicationContext()))
                     mVibrator.vibrate(100);
             }
         });
@@ -101,9 +198,9 @@ public class GameFillActivity extends RestartActivty implements View.OnClickList
         ivResultImage = (ImageView) findViewById(R.id.ivResultImageAGF);
         findViewById(R.id.rlBackgroundAFG).setBackgroundColor(Color.TRANSPARENT);
 
-        nextGame.setOnClickListener(this);
-        previousGame.setOnClickListener(this);
-        ivResultImage.setOnClickListener(this);
+        nextGame.setOnClickListener(mOnClickListener);
+        previousGame.setOnClickListener(mOnClickListener);
+        ivResultImage.setOnClickListener(mOnClickListener);
         ivResultImage.setClickable(false);
 
         Display display = getWindowManager().getDefaultDisplay();
@@ -117,7 +214,7 @@ public class GameFillActivity extends RestartActivty implements View.OnClickList
     protected void onResume() {
         super.onResume();
 
-        if (!AppHelper.isAppInBackground(this)) {
+        if (!AppHelper.isAppInBackground(getApplicationContext())) {
             AppHelper.getBackgroundSound().pause(false);
 
             if (mIsPlaySound && mPlayer != null)
@@ -129,7 +226,7 @@ public class GameFillActivity extends RestartActivty implements View.OnClickList
     protected void onPause() {
         super.onPause();
 
-        if (AppHelper.isAppInBackground(this) || AppHelper.isScreenOff(this)) {
+        if (AppHelper.isAppInBackground(getApplicationContext()) || AppHelper.isScreenOff(getApplicationContext())) {
             AppHelper.getBackgroundSound().pause(true);
 
             if (mIsPlaySound && mPlayer != null)
@@ -160,9 +257,9 @@ public class GameFillActivity extends RestartActivty implements View.OnClickList
         if (passedGame != 3) {
             Intent gameIntent = new Intent(this, GameFillActivity.class);
             gameIntent.putExtra("type", mGameType); if(nextGame)
-                gameIntent.putExtra("gameNumber", AppHelper.getNextGame(this, mGameType));
+                gameIntent.putExtra("gameNumber", AppHelper.getNextGame(getApplicationContext(), mGameType));
             else
-                gameIntent.putExtra("gameNumber", AppHelper.getPreviousGame(this, mGameType));
+                gameIntent.putExtra("gameNumber", AppHelper.getPreviousGame(getApplicationContext(), mGameType));
             startActivity(gameIntent);
         } else {
             Random r = new Random();
@@ -186,9 +283,9 @@ public class GameFillActivity extends RestartActivty implements View.OnClickList
             Intent gameIntent = new Intent(this, bonusLevelActivity);
             gameIntent.putExtra("type", mGameType);
             if(nextGame)
-                gameIntent.putExtra("gameNumber", AppHelper.getNextGame(this, mGameType));
+                gameIntent.putExtra("gameNumber", AppHelper.getNextGame(getApplicationContext(), mGameType));
             else
-                gameIntent.putExtra("gameNumber", AppHelper.getPreviousGame(this, mGameType));
+                gameIntent.putExtra("gameNumber", AppHelper.getPreviousGame(getApplicationContext(), mGameType));
             startActivity(gameIntent);
         }
 
@@ -204,7 +301,7 @@ public class GameFillActivity extends RestartActivty implements View.OnClickList
 
         ObjectAnimator moveYAnimator = ObjectAnimator.ofFloat(candy, "translationY", candy.getY(), basket.getY() + basket.getHeight() / 2);
         moveYAnimator.setDuration(1000);
-        moveYAnimator.addListener(new AnimationEndListener(candy, this));
+        moveYAnimator.addListener(new AnimationEndListener(candy, mAnimEndListener));
         moveYAnimator.start();
     }
 
@@ -238,94 +335,4 @@ public class GameFillActivity extends RestartActivty implements View.OnClickList
         set.start();
     }
 
-    @Override
-    public void onClick(View v) {
-        if (v.isClickable()) {
-            //nextGame.setClickable(false);
-            switch (v.getId()) {
-                case R.id.btnNextAGF:
-                    if(mPlayer != null) {
-                        mPlayer.stop();
-                        mPlayer.release();
-                    }
-                    switchGame(true);
-                    break;
-                case R.id.btnPreviousAGF:
-                    if(mPlayer != null) {
-                        mPlayer.stop();
-                        mPlayer.release();
-                    }
-                    switchGame(false);
-                    break;
-                case R.id.ivResultImageAGF:
-                    ivResultImage.setClickable(false);
-                    mIsPlaySound = true;
-
-                    AppHelper.changeLanguage(getApplicationContext(), AppHelper.getLocaleLanguage(getApplicationContext(), Constans.GAME_LANGUAGE).name());
-                    mPlayer = AppHelper.playSound(this, mPuzzleFillGame.getItemName());
-                    mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                        @Override
-                        public void onCompletion(MediaPlayer mediaPlayer) {
-                            ivResultImage.setClickable(true);
-                            mIsPlaySound = false;
-                        }
-                    });
-                    break;
-            }
-        }
-    }
-
-    @Override
-    public void OnAnimEnd(View v) {
-        findViewById(R.id.rlBackgroundAFG).setBackgroundColor(getResources().getColor(R.color.background_game));
-        showMoveToCenterAnimation();
-
-        if (AppHelper.getNextGame(this, mGameType) != -1)
-            nextGame.setVisibility(View.VISIBLE);
-
-        if (mGameNumber != 0)
-            previousGame.setVisibility(View.VISIBLE);
-
-        v.setVisibility(View.GONE);
-        findViewById(R.id.ivBasketAGF).setVisibility(View.GONE);
-    }
-
-    @Override
-    public void onParseDone(Bitmap bitmap) {
-        gameText.setVisibility(View.VISIBLE);
-
-        showBasketAnimation();
-        showResultImageAnimation(bitmap, resultImageXPos, resultImageYPos);
-
-        gameText.setText(mPuzzleFillGame.getWord(this));
-
-        if (AppHelper.getPlaySound(this)) {
-            mPlayer = AppHelper.playSound(this, mPuzzleFillGame.getItemName());
-            mIsPlaySound = true;
-            mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                @Override
-                public void onCompletion(MediaPlayer mediaPlayer) {
-                    mIsPlaySound = false;
-                    ivResultImage.setClickable(true);
-                }
-            });
-        }
-
-        //  String excellent_words[] = new String[]{"perfect", "wonderfull", "well_done", "good_job"};
-        //  Random random = new Random();
-        //  String excellent_word = excellent_words[random.nextInt(excellent_words.length)];
-
-                   /* if (AppHelper.getPlaySound(this)) {
-                mExcellentWord = AppHelper.playSound(this, excellent_word);
-
-                final Activity activity = this;
-                mExcellentWord.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                    @Override
-                    public void onCompletion(MediaPlayer mp) {
-                        if (AppHelper.getPlaySound(activity)) {
-                            AppHelper.playSound(activity, mPuzzleFillGame.getItemName());
-                        }
-                    }
-                });*/
-    }
 }

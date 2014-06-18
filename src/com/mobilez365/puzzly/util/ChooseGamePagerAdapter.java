@@ -24,9 +24,8 @@ import com.mobilez365.puzzly.screens.GameFillActivity;
 /**
  * Created by andrewtivodar on 28.05.2014.
  */
-public class ChooseGamePagerAdapter extends PagerAdapter implements View.OnClickListener {
+public class ChooseGamePagerAdapter extends PagerAdapter {
 
-    private Activity mActivity;
     private int mGameCount;
     private int mPagesCount;
     private int mGameType;
@@ -34,15 +33,29 @@ public class ChooseGamePagerAdapter extends PagerAdapter implements View.OnClick
     private int maxFigureWidth;
     public boolean clickEnable;
 
-    public ChooseGamePagerAdapter(Activity _activity, int _gameType) {
-        mActivity = _activity;
+    private final View.OnClickListener mOnClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            if (clickEnable) {
+                Context appContext = v.getContext().getApplicationContext();
+                int levelPosition = (Integer) v.getTag();
+                if (levelPosition <= AppHelper.getMaxGame(appContext, mGameType)) {
+                    Intent gameIntent = new Intent(appContext, GameFillActivity.class);
+                    gameIntent.putExtra("type", mGameType);
+                    gameIntent.putExtra("gameNumber", levelPosition);
+                    gameIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    appContext.startActivity(gameIntent);
+                    clickEnable = false;
+                }
+            }
+        }
+    };
+
+    public ChooseGamePagerAdapter(Context _context, int _gameType, Point size) {
         mGameType = _gameType;
-        mGameCount = PuzzlesDB.getPuzzleGameCount(_activity, _gameType);
+        mGameCount = PuzzlesDB.getPuzzleGameCount(_context, _gameType);
         mPagesCount = (int) Math.ceil(mGameCount / 4f);
 
-        Display display = ((Activity) _activity).getWindowManager().getDefaultDisplay();
-        Point size = new Point();
-        display.getSize(size);
         maxFigureWidth = (int) (size.x * 0.3f);
         maxFigureHeight = (int) (size.y * 0.3f);
     }
@@ -53,80 +66,81 @@ public class ChooseGamePagerAdapter extends PagerAdapter implements View.OnClick
     }
 
     @Override
-    public void destroyItem(ViewGroup collection, int position, Object view) {
-        ((ViewPager) collection).removeView((View) view);
+    public boolean isViewFromObject(View view, Object obj) {
+        return view == obj;
     }
 
     @Override
-    public boolean isViewFromObject(View view, Object obj) {
-        return view == obj;
+    public void destroyItem(ViewGroup collection, int position, Object view) {
+        ((ViewPager) collection).removeView((View) view);
     }
 
     @Override
     public Object instantiateItem(ViewGroup viewGroup, int position) {
         LayoutInflater inflater = (LayoutInflater) viewGroup.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
+        Context appContext = viewGroup.getContext().getApplicationContext();
         View view;
         view = inflater.inflate(R.layout.item_choose_puzzle, null);
 
         int levelPosition = position * 4;
         if (levelPosition < mGameCount) {
-            PuzzleFillGame game = PuzzlesDB.getPuzzle(levelPosition, mGameType, (Activity) mActivity);
+            PuzzleFillGame game = PuzzlesDB.getPuzzle(levelPosition, mGameType, appContext);
 
             TextView gameWord = (TextView) view.findViewById(R.id.tvFirstWordICP);
             ImageView gameFigure = (ImageView) view.findViewById(R.id.ivFirstFigureICP);
             RelativeLayout gameLayout = (RelativeLayout) view.findViewById(R.id.rlFirstFigureICP);
 
             gameLayout.setTag(levelPosition);
-            gameLayout.setOnClickListener(this);
+            gameLayout.setOnClickListener(mOnClickListener);
 
-            loadLevelPictures(game, gameFigure, gameLayout, levelPosition);
-            loadGameWord(game, gameWord, levelPosition);
+            loadLevelPictures(appContext, game, gameFigure, gameLayout, levelPosition);
+            loadGameWord(appContext, game, gameWord, levelPosition);
         }
 
         levelPosition = position * 4 + 1;
         if (levelPosition < mGameCount) {
-            PuzzleFillGame game = PuzzlesDB.getPuzzle(levelPosition, mGameType, (Activity) mActivity);
+            PuzzleFillGame game = PuzzlesDB.getPuzzle(levelPosition, mGameType, appContext);
 
             TextView gameWord = (TextView) view.findViewById(R.id.tvSecondWordICP);
             ImageView gameFigure = (ImageView) view.findViewById(R.id.ivSecondFigureICP);
             RelativeLayout gameLayout = (RelativeLayout) view.findViewById(R.id.rlSecondFigureICP);
 
             gameLayout.setTag(levelPosition);
-            gameLayout.setOnClickListener(this);
+            gameLayout.setOnClickListener(mOnClickListener);
 
-            loadLevelPictures(game, gameFigure, gameLayout, levelPosition);
-            loadGameWord(game, gameWord, levelPosition);
+            loadLevelPictures(appContext, game, gameFigure, gameLayout, levelPosition);
+            loadGameWord(appContext, game, gameWord, levelPosition);
         }
 
         levelPosition = position * 4 + 2;
         if (levelPosition < mGameCount) {
-            PuzzleFillGame game = PuzzlesDB.getPuzzle(levelPosition, mGameType, (Activity) mActivity);
+            PuzzleFillGame game = PuzzlesDB.getPuzzle(levelPosition, mGameType, appContext);
 
             TextView gameWord = (TextView) view.findViewById(R.id.tvThirdWordICP);
             ImageView gameFigure = (ImageView) view.findViewById(R.id.ivThirdFigureICP);
             RelativeLayout gameLayout = (RelativeLayout) view.findViewById(R.id.rlThirdFigureICP);
 
             gameLayout.setTag(levelPosition);
-            gameLayout.setOnClickListener(this);
+            gameLayout.setOnClickListener(mOnClickListener);
 
-            loadLevelPictures(game, gameFigure, gameLayout, levelPosition);
-            loadGameWord(game, gameWord, levelPosition);
+            loadLevelPictures(appContext, game, gameFigure, gameLayout, levelPosition);
+            loadGameWord(appContext, game, gameWord, levelPosition);
         }
 
         levelPosition = position * 4 + 3;
         if (levelPosition < mGameCount) {
-            PuzzleFillGame game = PuzzlesDB.getPuzzle(levelPosition, mGameType, (Activity) mActivity);
+            PuzzleFillGame game = PuzzlesDB.getPuzzle(levelPosition, mGameType, appContext);
 
             TextView gameWord = (TextView) view.findViewById(R.id.tvFourthWordICP);
             ImageView gameFigure = (ImageView) view.findViewById(R.id.ivFourthFigureICP);
             RelativeLayout gameLayout = (RelativeLayout) view.findViewById(R.id.rlFourthFigureICP);
 
             gameLayout.setTag(levelPosition);
-            gameLayout.setOnClickListener(this);
+            gameLayout.setOnClickListener(mOnClickListener);
 
-            loadLevelPictures(game, gameFigure, gameLayout, levelPosition);
-            loadGameWord(game, gameWord, levelPosition);
+            loadLevelPictures(appContext, game, gameFigure, gameLayout, levelPosition);
+            loadGameWord(appContext, game, gameWord, levelPosition);
         }
 
         viewGroup.addView(view, 0);
@@ -134,8 +148,8 @@ public class ChooseGamePagerAdapter extends PagerAdapter implements View.OnClick
         return view;
     }
 
-    private void loadLevelPictures(PuzzleFillGame game, final ImageView image, RelativeLayout rl, int position) {
-        int passedGameCount = AppHelper.getMaxGame(mActivity, mGameType);
+    private void loadLevelPictures(Context context, PuzzleFillGame game, final ImageView image, RelativeLayout rl, int position) {
+        int passedGameCount = AppHelper.getMaxGame(context, mGameType);
         if (position < passedGameCount) {
             String imageName = game.getResultImage();
             rl.setBackgroundResource(R.drawable.background_done_level);
@@ -147,7 +161,7 @@ public class ChooseGamePagerAdapter extends PagerAdapter implements View.OnClick
                 }
             };
 
-            ParseSvgAsyncTask parseSvgAsyncTask = new ParseSvgAsyncTask(mActivity, listener, maxFigureWidth, maxFigureHeight);
+            ParseSvgAsyncTask parseSvgAsyncTask = new ParseSvgAsyncTask(context, listener, maxFigureWidth, maxFigureHeight);
             parseSvgAsyncTask.execute(imageName);
         } else if(position == passedGameCount){
             rl.setBackgroundResource(R.drawable.background_new_level);
@@ -159,29 +173,15 @@ public class ChooseGamePagerAdapter extends PagerAdapter implements View.OnClick
         }
     }
 
-    private void loadGameWord(PuzzleFillGame game, TextView tv, int position) {
-        AppHelper.changeLanguage(mActivity.getApplicationContext(), AppHelper.getLocaleLanguage(mActivity.getApplicationContext(), Constans.GAME_LANGUAGE).name());
-        int passedGameCount = AppHelper.getMaxGame(mActivity, mGameType);
+    private void loadGameWord(Context context, PuzzleFillGame game, TextView tv, int position) {
+        int passedGameCount = AppHelper.getMaxGame(context, mGameType);
         if(position < passedGameCount) {
-            tv.setText(game.getWord(mActivity));
+            tv.setText(game.getWord(context));
         }
         else if(position == passedGameCount)
-            tv.setText(mActivity.getString(R.string.choose_level_new_level));
+            tv.setText(context.getString(R.string.choose_level_new_level));
         else
-            tv.setText(mActivity.getString(R.string.choose_level_locked_level));
+            tv.setText(context.getString(R.string.choose_level_locked_level));
     }
 
-    @Override
-    public void onClick(View v) {
-        if (clickEnable) {
-            int levelPosition = (Integer) v.getTag();
-            if (levelPosition <= AppHelper.getMaxGame(mActivity, mGameType)) {
-                Intent gameIntent = new Intent(mActivity, GameFillActivity.class);
-                gameIntent.putExtra("type", mGameType);
-                gameIntent.putExtra("gameNumber", levelPosition);
-                mActivity.startActivity(gameIntent);
-                clickEnable = false;
-            }
-        }
-    }
 }

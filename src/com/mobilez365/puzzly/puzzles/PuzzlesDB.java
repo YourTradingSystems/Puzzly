@@ -28,7 +28,7 @@ public class PuzzlesDB {
     }
 
     public static void addBasePuzzlesToDB(Context context) {
-        if (!AppHelper.getPuzzlesInit((Activity) context)) {
+        if (!AppHelper.getPuzzlesInit(context)) {
             initDBHelper(context);
 
             SQLiteDatabase findAllBD = dbHelper.getWritableDatabase();
@@ -409,8 +409,8 @@ public class PuzzlesDB {
 
             cv.put(PuzzlesDBHelper.GAME_TYPE, "0");
             cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "computer_chair");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "70 63 9 8 70 150 23 99");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "8 68 100 146 148 108 207 208");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "70 63 9 8 70 149 23 99");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "8 68 100 146 147 108 207 208");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "35 200 135 70 200 285 180 40");
             cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "360 360 110 280 280 155 170 180");
             cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "515");
@@ -467,8 +467,8 @@ public class PuzzlesDB {
             cv.put(PuzzlesDBHelper.GAME_ITEM_NAME, "koala");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_X, "8 27 78 164 183 64 120 156 25 95 46 152");
             cv.put(PuzzlesDBHelper.GAME_PARTS_FINAL_POSITION_Y, "31 50 16 8 28 78 91 122 151 158 182 182");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "40 205 125 275 30 275 180 275 40 130 115 20 225");
-            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "75 400 150 355 395 355 60 170 190 255 345 275 240");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_X, "40 205 125 275 30 180 275 40 130 115 20 225");
+            cv.put(PuzzlesDBHelper.GAME_PARTS_START_POSITION_Y, "75 400 150 355 395 60 170 190 255 345 275 240");
             cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_X, "490");
             cv.put(PuzzlesDBHelper.GAME_FIGURE_POSITION_Y, "115");
 
@@ -968,7 +968,7 @@ public class PuzzlesDB {
 
             findAllBD.close();
 
-            AppHelper.setPuzzlesInit((Activity) context, true);
+            AppHelper.setPuzzlesInit(context, true);
         }
     }
 
@@ -996,7 +996,7 @@ public class PuzzlesDB {
         return gameCount;
     }
 
-    public static PuzzleFillGame getPuzzle(int gameNumber, int type, Activity context) {
+    public static PuzzleFillGame getPuzzle(int gameNumber, int type, Context context) {
         String gameItemName = "";
         String gameImage = "";
         String gameResultImage = "";

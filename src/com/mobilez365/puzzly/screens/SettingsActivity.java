@@ -1,6 +1,7 @@
 package com.mobilez365.puzzly.screens;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.view.View;
@@ -21,7 +22,7 @@ import java.util.Locale;
 /**
  * Created by Denis on 12.05.14.
  */
-public class SettingsActivity extends RestartActivty implements View.OnClickListener, AdapterView.OnItemSelectedListener {
+public class SettingsActivity extends RestartActivty{
 
     private ImageButton btnBack_SS;
     private CheckBox ccbPlayBackgroundMusic_SS;
@@ -31,8 +32,71 @@ public class SettingsActivity extends RestartActivty implements View.OnClickList
     private Spinner spinnerChooseAppCountry_SS;
     private Spinner spinnerChooseStudyCountry_SS;
     private ScrollView swMain;
+    private AdView adView;
+    private SADView sadView;
 
     private int displayInit = 0;
+
+    private final AdapterView.OnItemSelectedListener mItemSelectListener = new AdapterView.OnItemSelectedListener() {
+        @Override
+        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            if (displayInit > 1) {
+                if(parent.getId() == R.id.spinnerChooseAppCountry_SS) {
+                    AppHelper.setLocalizeAppLanguage(getApplicationContext(), position);
+                    AppHelper.changeLanguage(getApplicationContext(), AppHelper.getLocaleLanguage(getApplicationContext(), Constans.APP_LANGUAGE).name());
+
+                    Intent mIntent = new Intent(SettingsActivity.
+                            this, SettingsActivity.class);
+                    mIntent.putExtra("scrollPos" , swMain.getScrollY());
+                    startActivity(mIntent);
+                    overridePendingTransition(0, 0);
+                    finish();
+                }
+                else
+                    AppHelper.setLocalizeStudyLanguage(getApplicationContext(), position);
+            }
+            else
+                displayInit ++;
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> parent) {
+
+        }
+    };
+
+    private final View.OnClickListener mOnClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            switch (v.getId()) {
+                case R.id.btnBack_SS:
+                    finish();
+                    break;
+
+                case R.id.ccbPlayBackgroundMusic_SS:
+                    AppHelper.setPlayBackgroundMusic(getApplicationContext(), ccbPlayBackgroundMusic_SS.isChecked());
+
+                    if (ccbPlayBackgroundMusic_SS.isChecked())
+                        AppHelper.startBackgroundSound(getApplicationContext(), Constans.MENU_BACKGROUND_MUSIC);
+                    else
+                        AppHelper.getBackgroundSound().stop();
+
+                    break;
+
+                case R.id.ccbPlaySound_SS:
+                    AppHelper.setPlaySound(getApplicationContext(), ccbPlaySound_SS.isChecked());
+                    break;
+
+                case R.id.ccbVibrate_SS:
+                    AppHelper.setVibrate(getApplicationContext(), ccbVibrate_SS.isChecked());
+                    break;
+
+                case R.id.ccbDisplayInnerBorders_SS:
+                    AppHelper.setShowImageBorder(getApplicationContext(), ccbDisplayInnerBorders_SS.isChecked());
+                    break;
+            }
+        }
+    };
 
     @Override
     public void onCreate(Bundle _savedInstanceState) {
@@ -48,64 +112,15 @@ public class SettingsActivity extends RestartActivty implements View.OnClickList
     }
 
     @Override
-    public void onClick(View _v) {
-        //_v.setClickable(false);
-        switch (_v.getId()) {
-            case R.id.btnBack_SS:
-                finish();
-                break;
-
-            case R.id.ccbPlayBackgroundMusic_SS:
-                AppHelper.setPlayBackgroundMusic(this, ccbPlayBackgroundMusic_SS.isChecked());
-
-                if (ccbPlayBackgroundMusic_SS.isChecked())
-                    AppHelper.startBackgroundSound(this, Constans.MENU_BACKGROUND_MUSIC);
-                else
-                    AppHelper.getBackgroundSound().stop();
-
-                break;
-
-            case R.id.ccbPlaySound_SS:
-                AppHelper.setPlaySound(this, ccbPlaySound_SS.isChecked());
-                break;
-
-            case R.id.ccbVibrate_SS:
-                AppHelper.setVibrate(this, ccbVibrate_SS.isChecked());
-                break;
-
-            case R.id.ccbDisplayInnerBorders_SS:
-                AppHelper.setShowImageBorder(this, ccbDisplayInnerBorders_SS.isChecked());
-                break;
-        }
-    }
-
-    @Override
-    public void onItemSelected(AdapterView<?> _parent, View _view, int _position, long _id) {
-        if (displayInit > 1) {
-            if(_parent.getId() == R.id.spinnerChooseAppCountry_SS) {
-                AppHelper.setLocalizeAppLanguage(this, _position);
-                AppHelper.changeLanguageRefresh(this, AppHelper.getLocaleLanguage(getApplicationContext(), Constans.APP_LANGUAGE).name(), swMain.getScrollY());
-            }
-            else
-                AppHelper.setLocalizeStudyLanguage(this, _position);
-        }
-        else
-            displayInit ++;
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> _parent) {
-        /**
-         * Nothing
-         */
-    }
-
-    @Override
     protected void onResume() {
         super.onResume();
 
         if (!AppHelper.isAppInBackground(this))
             AppHelper.getBackgroundSound().pause(false);
+
+        if(adView != null)
+            adView.resume();
+
     }
 
     @Override
@@ -114,6 +129,19 @@ public class SettingsActivity extends RestartActivty implements View.OnClickList
 
         if (AppHelper.isAppInBackground(this) || AppHelper.isScreenOff(this))
             AppHelper.getBackgroundSound().pause(true);
+
+        if(adView != null)
+            adView.pause();
+
+    }
+
+    @Override
+    public void onDestroy() {
+        if(adView != null)
+            adView.destroy();
+        if(sadView != null)
+            sadView.destroy();
+        super.onDestroy();
     }
 
     private final void findViews() {
@@ -128,28 +156,28 @@ public class SettingsActivity extends RestartActivty implements View.OnClickList
     }
 
     private final void setListener() {
-        btnBack_SS.setOnClickListener(this);
-        ccbPlayBackgroundMusic_SS.setOnClickListener(this);
-        ccbPlaySound_SS.setOnClickListener(this);
-        ccbVibrate_SS.setOnClickListener(this);
-        ccbDisplayInnerBorders_SS.setOnClickListener(this);
-        spinnerChooseAppCountry_SS.setOnItemSelectedListener(this);
-        spinnerChooseStudyCountry_SS.setOnItemSelectedListener(this);
+        btnBack_SS.setOnClickListener(mOnClickListener);
+        ccbPlayBackgroundMusic_SS.setOnClickListener(mOnClickListener);
+        ccbPlaySound_SS.setOnClickListener(mOnClickListener);
+        ccbVibrate_SS.setOnClickListener(mOnClickListener);
+        ccbDisplayInnerBorders_SS.setOnClickListener(mOnClickListener);
+        spinnerChooseAppCountry_SS.setOnItemSelectedListener(mItemSelectListener);
+        spinnerChooseStudyCountry_SS.setOnItemSelectedListener(mItemSelectListener);
     }
 
     private final void setValues() {
-        ccbPlayBackgroundMusic_SS.setChecked(AppHelper.getPlayBackgroundMusic(this));
-        ccbPlaySound_SS.setChecked(AppHelper.getPlaySound(this));
+        ccbPlayBackgroundMusic_SS.setChecked(AppHelper.getPlayBackgroundMusic(getApplicationContext()));
+        ccbPlaySound_SS.setChecked(AppHelper.getPlaySound(getApplicationContext()));
 
         Vibrator mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         if(mVibrator.hasVibrator())
-            ccbVibrate_SS.setChecked(AppHelper.getVibrate(this));
+            ccbVibrate_SS.setChecked(AppHelper.getVibrate(getApplicationContext()));
         else
             ccbVibrate_SS.setVisibility(View.GONE);
 
-        ccbDisplayInnerBorders_SS.setChecked(AppHelper.getShowImageBorder(this));
-        spinnerChooseAppCountry_SS.setSelection(AppHelper.getLocalizeAppLanguage(this));
-        spinnerChooseStudyCountry_SS.setSelection(AppHelper.getLocalizeStudyLanguage(this));
+        ccbDisplayInnerBorders_SS.setChecked(AppHelper.getShowImageBorder(getApplicationContext()));
+        spinnerChooseAppCountry_SS.setSelection(AppHelper.getLocalizeAppLanguage(getApplicationContext()));
+        spinnerChooseStudyCountry_SS.setSelection(AppHelper.getLocalizeStudyLanguage(getApplicationContext()));
         swMain.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
             public void onGlobalLayout() {
@@ -164,7 +192,7 @@ public class SettingsActivity extends RestartActivty implements View.OnClickList
         layout.removeAllViews();
         switch (AppHelper.adware % 2){
             case 0:
-                AdView adView = new AdView(this);
+                adView = new AdView(this);
                 adView.setAdUnitId(getString(R.string.adUnitId));
                 adView.setAdSize(AdSize.BANNER);
                 AdRequest adRequest = new AdRequest.Builder().build();
@@ -172,7 +200,7 @@ public class SettingsActivity extends RestartActivty implements View.OnClickList
                 layout.addView(adView);
                 break;
             case 1:
-                SADView sadView = new SADView(this, getResources().getString(R.string.startADId));
+                sadView = new SADView(this, getResources().getString(R.string.startADId));
                 if(Locale.getDefault().getLanguage().equals("ru") || Locale.getDefault().getLanguage().equals("uk")){
                     sadView.loadAd(SADView.LANGUAGE_RU);
                 }else {

@@ -1,5 +1,7 @@
 package com.mobilez365.puzzly.screens;
 
+import android.animation.Animator;
+import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,7 +25,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Random;
 
-public class MenuActivity extends Activity implements View.OnClickListener {
+public class MenuActivity extends Activity {
 
     private RelativeLayout rlMenuMainLayout_MS;
     private ImageView ivGameSimpleFill_MS;
@@ -37,8 +39,69 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     private RelativeLayout rlRightBalloon_MS;
     private ImageView ivLeftHandTutorial_MS;
     private ImageView ivRightHandTutorial_MS;
+    private AdView adView;
+    private SADView sadView;
 
     private List<ImageView> mClouds = new ArrayList<ImageView>();
+    private List<Animation> mCloudsAnimations = new ArrayList<Animation>();
+    private Animation leftBalonAnim;
+    private Animation rightBalonAnim;
+    private Animation leftHandAnim;
+    private Animation rightHandAnim;
+
+    private final Animation.AnimationListener logoAnimationListener = new Animation.AnimationListener() {
+        @Override
+        public void onAnimationStart(Animation animation) {
+            // nothing
+        }
+
+        @Override
+        public void onAnimationEnd(Animation animation) {
+            ivMenuLogo_MS.setVisibility(View.INVISIBLE);
+            llSubMenu_MS.setVisibility(View.VISIBLE);
+            llMainMenu_MS.setVisibility(View.VISIBLE);
+
+            for (ImageView img : mClouds)
+                img.setVisibility(View.VISIBLE);
+        }
+
+        @Override
+        public void onAnimationRepeat(Animation animation) {
+            // nothing
+        }
+    };
+
+    private final View.OnClickListener mOnClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            if (v.isClickable()) {
+                btnGameSettings_MS.setClickable(false);
+                ivGameSimpleReveal_MS.setClickable(false);
+                ivGameSimpleFill_MS.setClickable(false);
+                switch (v.getId()) {
+
+                    case R.id.ivGameSimpleFill_MS:
+                        Intent gameFillIntent = new Intent(MenuActivity.this, ChoosePuzzleActivity.class);
+                        gameFillIntent.putExtra("type", 0);
+                        startActivity(gameFillIntent);
+                        AppHelper.setLeftHandTutorial(getApplicationContext(), true);
+                        break;
+
+                    case R.id.ivGameSimpleReveal_MS:
+                        Intent gameIntent = new Intent(MenuActivity.this, ChoosePuzzleActivity.class);
+                        gameIntent.putExtra("type", 1);
+                        startActivity(gameIntent);
+                        AppHelper.setRightHandTutorial(getApplicationContext(), true);
+                        break;
+
+                    case R.id.btnGameSettings_MS:
+                        startActivity(new Intent(MenuActivity.this, SettingsActivity.class));
+                        break;
+
+                }
+            }
+        }
+    };
 
     @Override
     public void onCreate(Bundle _savedInstanceState) {
@@ -46,61 +109,36 @@ public class MenuActivity extends Activity implements View.OnClickListener {
 
         super.onCreate(_savedInstanceState);
 
-        if (AppHelper.getPlayBackgroundMusic(this))
-            AppHelper.startBackgroundSound(this, Constans.MENU_BACKGROUND_MUSIC);
+        AppHelper.changeLanguage(getApplicationContext(), AppHelper.getLocaleLanguage(getApplicationContext(), Constans.APP_LANGUAGE).name());
+
+        if (AppHelper.getPlayBackgroundMusic(getApplicationContext()))
+            AppHelper.startBackgroundSound(getApplicationContext(), Constans.MENU_BACKGROUND_MUSIC);
 
         setContentView(R.layout.menu_screen);
         findViews();
         setListeners();
         startAnimation();
-        PuzzlesDB.addBasePuzzlesToDB(this);
-    }
-
-    @Override
-    public void onClick(View _v) {
-        if (_v.isClickable()) {
-            btnGameSettings_MS.setClickable(false);
-            ivGameSimpleReveal_MS.setClickable(false);
-            ivGameSimpleFill_MS.setClickable(false);
-            switch (_v.getId()) {
-
-                case R.id.ivGameSimpleFill_MS:
-                    Intent gameFillIntent = new Intent(this, ChoosePuzzleActivity.class);
-                    gameFillIntent.putExtra("type", 0);
-                    startActivity(gameFillIntent);
-                    AppHelper.setLeftHandTutorial(this, true);
-                    break;
-
-                case R.id.ivGameSimpleReveal_MS:
-                    Intent gameIntent = new Intent(this, ChoosePuzzleActivity.class);
-                    gameIntent.putExtra("type", 1);
-                    startActivity(gameIntent);
-                    AppHelper.setRightHandTutorial(this, true);
-                    break;
-
-                case R.id.btnGameSettings_MS:
-                    settings();
-                    break;
-
-            }
-        }
+        PuzzlesDB.addBasePuzzlesToDB(getApplicationContext());
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        setGameAchievement(AppHelper.getGameAchievement(this));
-        showBanner();
+        setGameAchievement(AppHelper.getGameAchievement(getApplicationContext()));
 
-        if (!AppHelper.isAppInBackground(this))
+       // showBanner();
+
+        AppHelper.changeLanguage(getApplicationContext(), AppHelper.getLocaleLanguage(getApplicationContext(), Constans.GAME_LANGUAGE).name());
+
+        if (!AppHelper.isAppInBackground(getApplicationContext()))
             AppHelper.getBackgroundSound().pause(false);
 
-        if (AppHelper.getLeftHandTutorial(this)) {
+        if (AppHelper.getLeftHandTutorial(getApplicationContext())) {
             ivLeftHandTutorial_MS.clearAnimation();
             ivLeftHandTutorial_MS.setVisibility(View.GONE);
         }
 
-        if (AppHelper.getRightHandTutorial(this)) {
+        if (AppHelper.getRightHandTutorial(getApplicationContext())) {
             ivRightHandTutorial_MS.clearAnimation();
             ivRightHandTutorial_MS.setVisibility(View.GONE);
         }
@@ -114,8 +152,37 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     protected void onPause() {
         super.onPause();
 
-        if (AppHelper.isAppInBackground(this) || AppHelper.isScreenOff(this))
+        if (AppHelper.isAppInBackground(getApplicationContext()) || AppHelper.isScreenOff(getApplicationContext()))
             AppHelper.getBackgroundSound().pause(true);
+
+        if(adView != null)
+            adView.pause();
+    }
+
+    @Override
+    public void onDestroy() {
+        if(adView != null)
+            adView.destroy();
+        if(sadView != null)
+            sadView.destroy();
+
+        for (Animation mCloudsAnimation : mCloudsAnimations) {
+            mCloudsAnimation.cancel();
+        }
+
+        if(leftBalonAnim != null)
+            leftBalonAnim.cancel();
+
+        if(rightBalonAnim != null)
+            rightBalonAnim.cancel();
+
+        if(leftHandAnim != null)
+            leftHandAnim.cancel();
+
+        if(rightHandAnim != null)
+            rightHandAnim.cancel();
+
+        super.onDestroy();
     }
 
     @Override
@@ -140,50 +207,40 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     }
 
     private final void setListeners() {
-        ivGameSimpleFill_MS.setOnClickListener(this);
-        ivGameSimpleReveal_MS.setOnClickListener(this);
-        btnGameSettings_MS.setOnClickListener(this);
+        ivGameSimpleFill_MS.setOnClickListener(mOnClickListener);
+        ivGameSimpleReveal_MS.setOnClickListener(mOnClickListener);
+        btnGameSettings_MS.setOnClickListener(mOnClickListener);
     }
 
     private final void startAnimation() {
-        Animation logoScaleAnimation = AnimationUtils.loadAnimation(this, R.anim.menu_logo);
+        Animation logoScaleAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.menu_logo);
         startCloudAnimation(0);
         startCloudAnimation(15000);
 
-        if (!AppHelper.getLeftHandTutorial(this))
-            ivLeftHandTutorial_MS.startAnimation(AnimationUtils.loadAnimation(this, R.anim.menu_hand_left));
+        if (!AppHelper.getLeftHandTutorial(getApplicationContext())) {
+            leftHandAnim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.menu_hand_left);
+            ivLeftHandTutorial_MS.startAnimation(leftHandAnim);
+        }
+
         else
             ivLeftHandTutorial_MS.setVisibility(View.GONE);
 
-        if (!AppHelper.getRightHandTutorial(this))
-            ivRightHandTutorial_MS.startAnimation(AnimationUtils.loadAnimation(this, R.anim.menu_hand_right));
+        if (!AppHelper.getRightHandTutorial(getApplicationContext())) {
+            rightHandAnim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.menu_hand_right);
+            ivRightHandTutorial_MS.startAnimation(rightHandAnim);
+        }
+
         else
             ivRightHandTutorial_MS.setVisibility(View.GONE);
 
-        logoScaleAnimation.setAnimationListener(new Animation.AnimationListener() {
-            @Override
-            public void onAnimationStart(Animation animation) {
-                // nothing
-            }
-
-            @Override
-            public void onAnimationEnd(Animation animation) {
-                ivMenuLogo_MS.setVisibility(View.INVISIBLE);
-                llSubMenu_MS.setVisibility(View.VISIBLE);
-                llMainMenu_MS.setVisibility(View.VISIBLE);
-
-                for (ImageView img : mClouds)
-                    img.setVisibility(View.VISIBLE);
-            }
-
-            @Override
-            public void onAnimationRepeat(Animation animation) {
-                // nothing
-            }
-        });
+        logoScaleAnimation.setAnimationListener(logoAnimationListener);
         ivMenuLogo_MS.startAnimation(logoScaleAnimation);
-        rlLeftBalloon_MS.startAnimation(AnimationUtils.loadAnimation(this, R.anim.menu_balloon_rotate_left));
-        rlRightBalloon_MS.startAnimation(AnimationUtils.loadAnimation(this, R.anim.menu_balloon_rotate_right));
+
+        leftBalonAnim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.menu_balloon_rotate_left);
+        rlLeftBalloon_MS.startAnimation(leftBalonAnim);
+
+        rightBalonAnim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.menu_balloon_rotate_right);
+        rlRightBalloon_MS.startAnimation(rightBalonAnim);
 
     }
 
@@ -197,10 +254,12 @@ public class MenuActivity extends Activity implements View.OnClickListener {
             y += rand.nextInt(50);
             Animation animation = new TranslateAnimation(-250, getResources().getDisplayMetrics().widthPixels, y, y);
             animation.setDuration(rand.nextInt(20000) + 30000);
-            animation.setInterpolator(this, android.R.anim.linear_interpolator);
+            animation.setInterpolator(getApplicationContext(), android.R.anim.linear_interpolator);
             animation.setRepeatCount(Animation.INFINITE);
             animation.setRepeatMode(Animation.RESTART);
             animation.setStartOffset(_startOffset);
+
+            mCloudsAnimations.add(animation);
 
             ImageView animCloud = new ImageView(this);
             animCloud.setImageResource(cloud[rand.nextInt(cloud.length)]);
@@ -216,50 +275,12 @@ public class MenuActivity extends Activity implements View.OnClickListener {
         tvGameAchievement_MS.setText("" + _count);
     }
 
-    /*private final void startGame(int type) {
-
-        AppHelper.startBackgroundSound(this, Constans.GAME_BACKGROUND_MUSIC);
-
-        int passedGame = AppHelper.getPassedGames();
-        if (passedGame != 3) {
-            Intent gameIntent = new Intent(this, GameFillActivity.class);
-            gameIntent.putExtra("type", type);
-            startActivity(gameIntent);
-        } else {
-            Random r = new Random();
-            int bonusLevelIndex = r.nextInt(3);
-
-            Activity bonusLevelActivity = null;
-            switch (bonusLevelIndex) {
-                case 0:
-                    bonusLevelActivity = new BonusLevelTreeActivity();
-                    break;
-                case 1:
-                    bonusLevelActivity = new BonusLevelShakeActivity();
-                    break;
-                case 2:
-                    bonusLevelActivity = new BonusLevelFlowerActivity();
-                    break;
-            }
-
-            Intent gameIntent = new Intent(this, bonusLevelActivity.getClass());
-            gameIntent.putExtra("type", type);
-            startActivity(gameIntent);
-        }
-
-    }*/
-
-
-    private final void settings() {
-        startActivity(new Intent(this, SettingsActivity.class));
-    }
-
     private void showBanner() {
         LinearLayout layout = (LinearLayout)findViewById(R.id.llBanner_SS);
         layout.removeAllViews();
         switch (AppHelper.adware % 2){
             case 0:
-                AdView adView = new AdView(this);
+                adView = new AdView(this);
                 adView.setAdUnitId(getString(R.string.adUnitId));
                 adView.setAdSize(AdSize.BANNER);
                 AdRequest adRequest = new AdRequest.Builder().build();
@@ -267,7 +288,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
                 layout.addView(adView);
                 break;
             case 1:
-                SADView sadView = new SADView(this, getResources().getString(R.string.startADId));
+                sadView = new SADView(this, getResources().getString(R.string.startADId));
                 if(Locale.getDefault().getLanguage().equals("ru") || Locale.getDefault().getLanguage().equals("uk")){
                     sadView.loadAd(SADView.LANGUAGE_RU);
                 }else {

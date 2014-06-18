@@ -14,7 +14,7 @@
     <string name="settings_play_background_music">Відтворення фонової музики</string>
     <string name="settings_play_sound">Відтворення ігрових звуків</string>
     <string name="settings_vibrate">Вібрація у грі</string>
-    <string name="settings_display_inner_borders">Показувати внутрішні границі</string>
+    <string name="settings_display_inner_borders">Відображати внутрішні границі</string>
     <string name="settings_localize_app_language">Мова налаштувань</string>
     <string name="settings_localize_study_language">Мова гри</string>
 
@@ -47,7 +47,7 @@
     <string name="turtle">Черепашка</string>
     <string name="dolphin">Дельфін</string>
     <string name="hippo">Бегемотик</string>
-    <string name="teddy_bear">Медведик</string>
+    <string name="teddy_bear">Ведмедик</string>
     <string name="penguin">Пінгвінчик</string>
     <string name="snake">Змія</string>
     <string name="flamingo">Фламінго</string>
@@ -57,7 +57,7 @@
     <string name="zebra">Зебра</string>
     <string name="lion">Лев</string>
     <string name="kettle">Чайник</string>
-    <string name="car">Машина</string>
+    <string name="car">Автомобіль</string>
     <string name="eggplant">Баклажан</string>
     <string name="bread">Хліб</string>
     <string name="baseball_cap">Бейсболка</string>
@@ -65,22 +65,22 @@
     <string name="train">Паровозик</string>
     <string name="wagon">Вагончик</string>
     <string name="peas">Горох</string>
-    <string name="pot_with_honey">Горшок з медом</string>
+    <string name="pot_with_honey">Горщик з медом</string>
     <string name="mushrooms">Гриби</string>
     <string name="potato">Картопля</string>
     <string name="key">Ключ</string>
     <string name="strawberries">Полуниця</string>
     <string name="crab">Краб</string>
     <string name="corn">Кукурудза</string>
-    <string name="jug_with_milk">Кувшин с молоком</string>
+    <string name="jug_with_milk">Глечик з молоком</string>
     <string name="light_bulb">Лампочка</string>
     <string name="stork">Лелека</string>
     <string name="pepper">Перець</string>
-    <string name="cock">Когут</string>
+    <string name="cock">Півень</string>
     <string name="cancer">Рак</string>
-    <string name="backpack">Портфель</string>
+    <string name="backpack">Рюкзак</string>
     <string name="wizard_hat">Шапка чаклуна</string>
-    <string name="soother">Соска</string>
+    <string name="soother">Пустушка</string>
     <string name="stapler">Степлер</string>
     <string name="beet">Буряк</string>
     <string name="pumpkin">Гарбуз</string>
