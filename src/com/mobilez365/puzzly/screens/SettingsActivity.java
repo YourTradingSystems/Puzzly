@@ -186,16 +186,14 @@ public class SettingsActivity extends RestartActivty{
             }
         });
     }
-
     private void showBanner() {
-        RelativeLayout layout = (RelativeLayout)findViewById(R.id.llBanner_SS);
+        LinearLayout layout = (LinearLayout)findViewById(R.id.llBanner_SS);
         layout.removeAllViews();
-                sadView = new SADView(this, getResources().getString(R.string.startADId));
-                if(Locale.getDefault().getLanguage().equals("ru") || Locale.getDefault().getLanguage().equals("uk")){
-                    sadView.loadAd(SADView.LANGUAGE_RU);
-                }else {
-                    sadView.loadAd(SADView.LANGUAGE_EN);
-                }
-                layout.addView(sadView);
+        adView = new AdView(this);
+        adView.setAdUnitId(getString(R.string.adUnitId));
+        adView.setAdSize(AdSize.BANNER);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
+        layout.addView(adView);
     }
 }
