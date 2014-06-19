@@ -30,7 +30,7 @@
     <string name="pigeon">Pigeon</string>
     <string name="frogling">Grenouille</string>
     <string name="rabbit">Lapin</string>
-    <string name="hen">Pollo</string>
+    <string name="hen">Poule</string>
     <string name="octopus">Poulpe</string>
     <string name="pencil">Crayon</string>
     <string name="ice_cream">Glace</string>
@@ -41,7 +41,7 @@
     <string name="snail">Escargot</string>
     <string name="squirrel">Ecureuil</string>
     <string name="apple">Pomme</string>
-    <string name="carrot">Carote</string>
+    <string name="carrot">Carotte</string>
     <string name="goat">Chevre</string>
     <string name="bee">Abeille</string>
     <string name="turtle">Tortue</string>
