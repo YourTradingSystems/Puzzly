@@ -126,8 +126,7 @@ public class MenuActivity extends Activity {
         super.onResume();
         setGameAchievement(AppHelper.getGameAchievement(getApplicationContext()));
 
-       showBanner();
-
+        showBanner();
         AppHelper.changeLanguage(getApplicationContext(), AppHelper.getLocaleLanguage(getApplicationContext(), Constans.GAME_LANGUAGE).name());
 
         if (!AppHelper.isAppInBackground(getApplicationContext()))
@@ -276,7 +275,7 @@ public class MenuActivity extends Activity {
     }
 
     private void showBanner() {
-        RelativeLayout layout = (RelativeLayout)findViewById(R.id.llBanner_SS);
+        LinearLayout layout = (LinearLayout)findViewById(R.id.llBanner_SS);
         layout.removeAllViews();
         sadView = new SADView(this, getResources().getString(R.string.startADId));
         if(Locale.getDefault().getLanguage().equals("ru") || Locale.getDefault().getLanguage().equals("uk")){
