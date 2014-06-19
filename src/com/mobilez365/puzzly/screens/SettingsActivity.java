@@ -190,16 +190,6 @@ public class SettingsActivity extends RestartActivty{
     private void showBanner() {
         RelativeLayout layout = (RelativeLayout)findViewById(R.id.llBanner_SS);
         layout.removeAllViews();
-        switch (AppHelper.adware % 2){
-            case 0:
-                adView = new AdView(this);
-                adView.setAdUnitId(getString(R.string.adUnitId));
-                adView.setAdSize(AdSize.BANNER);
-                AdRequest adRequest = new AdRequest.Builder().build();
-                adView.loadAd(adRequest);
-                layout.addView(adView);
-                break;
-            case 1:
                 sadView = new SADView(this, getResources().getString(R.string.startADId));
                 if(Locale.getDefault().getLanguage().equals("ru") || Locale.getDefault().getLanguage().equals("uk")){
                     sadView.loadAd(SADView.LANGUAGE_RU);
@@ -207,8 +197,5 @@ public class SettingsActivity extends RestartActivty{
                     sadView.loadAd(SADView.LANGUAGE_EN);
                 }
                 layout.addView(sadView);
-                break;
-        }
-        AppHelper.adware +=1;
     }
 }

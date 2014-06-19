@@ -32,7 +32,6 @@ public class AppHelper {
     private static BackgroundSound mBackgroundSound;
     private static MediaPlayer mItemSound;
     public static Integer appStatus;
-    public static Integer adware = 2;
     private static int passedGame = 0;
 
     public static enum Languages {
