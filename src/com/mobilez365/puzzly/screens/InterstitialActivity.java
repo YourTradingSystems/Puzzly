@@ -2,6 +2,8 @@ package com.mobilez365.puzzly.screens;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.mobilez365.puzzly.R;
 
 /**
@@ -33,7 +35,11 @@ public class InterstitialActivity extends RestartActivty {
     }
 
     protected void showInterstitial() {
-        if (interstitialAd.isLoaded()) interstitialAd.show();
+        int status = GooglePlayServicesUtil.isGooglePlayServicesAvailable(getApplicationContext());
+        if(status == ConnectionResult.SUCCESS) {
+            if (interstitialAd.isLoaded()) interstitialAd.show();
+        }
+
     }
 
 }
