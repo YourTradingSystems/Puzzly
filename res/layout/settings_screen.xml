@@ -37,13 +37,13 @@
 
     </RelativeLayout>
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/llBanner_SS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true">
-    </RelativeLayout>
+    </LinearLayout>
     
     <ScrollView
         android:id="@+id/swMain_SS"
