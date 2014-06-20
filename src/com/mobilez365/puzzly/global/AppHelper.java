@@ -273,14 +273,7 @@ public class AppHelper {
     }
 
     public static final void increasePassedGames() {
-        if(passedGame == 3)
-            passedGame = 0;
-        else
             passedGame++;
-    }
-
-    public static final void resetPassedGames() {
-        passedGame = 0;
     }
 
     public static final int getPassedGames() {

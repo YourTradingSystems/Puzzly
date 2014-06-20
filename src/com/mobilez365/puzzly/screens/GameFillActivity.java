@@ -12,6 +12,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Vibrator;
+import android.util.Log;
 import android.view.Display;
 import android.view.View;
 import android.widget.*;
@@ -254,7 +255,7 @@ public class GameFillActivity extends RestartActivty {
 
     private void switchGame(boolean nextGame) {
         int passedGame = AppHelper.getPassedGames();
-        if (passedGame != 3) {
+        if (passedGame % 3 != 0) {
             Intent gameIntent = new Intent(this, GameFillActivity.class);
             gameIntent.putExtra("type", mGameType); if(nextGame)
                 gameIntent.putExtra("gameNumber", AppHelper.getNextGame(getApplicationContext(), mGameType));
