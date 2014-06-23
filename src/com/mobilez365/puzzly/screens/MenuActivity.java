@@ -3,8 +3,14 @@ package com.mobilez365.puzzly.screens;
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -117,6 +123,7 @@ public class MenuActivity extends Activity {
         setContentView(R.layout.menu_screen);
         findViews();
         setListeners();
+        getYesNoWithExecutionStop();
         startAnimation();
         PuzzlesDB.addBasePuzzlesToDB(getApplicationContext());
     }
@@ -285,5 +292,53 @@ public class MenuActivity extends Activity {
         }
         layout.addView(sadView);
     }
+    private void getYesNoWithExecutionStop() {
+        if (AppHelper.getStartCount(getApplicationContext()) <= 2 ) AppHelper.increaseStartCount(getApplicationContext());
+        if (AppHelper.getStartCount(getApplicationContext()) != 2 ) return;
+        final int[] mResult = new int[1];
+        // make a handler that throws a runtime exception when a message is received
+        final Handler handler = new Handler() {
+            @Override
+            public void handleMessage(Message mesg) {
+                throw new RuntimeException();
+            }
+        };
 
+        // make a text input dialog and show it
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setTitle(R.string.menu_dialog_title);
+        alert.setMessage(R.string.menu_dialog_message);
+        alert.setPositiveButton(R.string.menu_dialog_yes, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                mResult[0] = 2;
+                handler.sendMessage(handler.obtainMessage());
+            }
+        });
+        alert.setNeutralButton(R.string.menu_dialog_later, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                mResult[0] = 1;
+                handler.sendMessage(handler.obtainMessage());
+            }
+        });
+        alert.setNegativeButton(R.string.menu_dialog_no, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                mResult[0] = 0;
+                handler.sendMessage(handler.obtainMessage());
+            }
+        });
+        alert.show();
+
+        // loop till a runtime exception is triggered.
+        try { Looper.loop(); }
+        catch(RuntimeException e) {}
+
+        if(mResult[0] == 2){
+            String url = Constans.REVIEW_URL;
+            Intent i = new Intent(Intent.ACTION_VIEW);
+            i.setData(Uri.parse(url));
+            startActivity(i);
+            return;
+        } else if(mResult[0] == 1) AppHelper.decreaseStartCount(getApplicationContext());
+
+    }
 }

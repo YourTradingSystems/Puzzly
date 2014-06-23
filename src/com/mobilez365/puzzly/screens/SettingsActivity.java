@@ -1,9 +1,11 @@
 package com.mobilez365.puzzly.screens;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Bundle;
-import android.os.Vibrator;
+import android.net.Uri;
+import android.os.*;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.*;
@@ -104,7 +106,6 @@ public class SettingsActivity extends RestartActivty{
 
         super.onCreate(_savedInstanceState);
         setContentView(R.layout.settings_screen);
-
         findViews();
         showBanner();
         setListener();

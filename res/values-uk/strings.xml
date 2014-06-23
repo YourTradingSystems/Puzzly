@@ -9,6 +9,14 @@
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
+    <!-- ~~~~~~~~~~~~~~~~~~~ MENU DIALOG~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+    <string name="menu_dialog_title">Нагадування</string>
+    <string name="menu_dialog_message">Якщо вам подобається додаток, залиште свій відгук</string>
+    <string name="menu_dialog_yes">Так</string>
+    <string name="menu_dialog_no">Ні</string>
+    <string name="menu_dialog_later">Нагадати пізніше</string>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
     <!-- ~~~~~~~~~~~~~~~~~~~ SETTINGS ~~~~~~~~~~~~~~~~~~~~~~ !-->
 
     <string name="settings_play_background_music">Відтворення фонової музики</string>

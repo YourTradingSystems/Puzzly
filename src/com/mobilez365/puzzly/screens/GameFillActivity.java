@@ -3,15 +3,17 @@ package com.mobilez365.puzzly.screens;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.drawable.BitmapDrawable;
 import android.media.MediaPlayer;
-import android.os.Bundle;
-import android.os.Vibrator;
+import android.net.Uri;
+import android.os.*;
 import android.util.Log;
 import android.view.Display;
 import android.view.View;
@@ -226,7 +228,6 @@ public class GameFillActivity extends RestartActivty {
     @Override
     protected void onPause() {
         super.onPause();
-
         if (AppHelper.isAppInBackground(getApplicationContext()) || AppHelper.isScreenOff(getApplicationContext())) {
             AppHelper.getBackgroundSound().pause(true);
 

@@ -8,7 +8,7 @@ public class Constans {
 
     public static final int SHAKE_THRESHOLD = 600;
     public static final String GAME_NUMBER_EXTRA = "game_number";
-
+    public static final String REVIEW_URL = "https://play.google.com/store/apps/details?id=com.mobilez365.puzzly";
     /**
      * Settings name
      */
@@ -34,6 +34,9 @@ public class Constans {
 
     public static final String GAME_BACKGROUND_MUSIC = "game_background_music";
     public static final String MENU_BACKGROUND_MUSIC = "menu_background_music";
+
+
+    public static final String START_COUNT = "start_count";
     /**
      * Bonus Level
      */

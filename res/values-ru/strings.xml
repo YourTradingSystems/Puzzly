@@ -8,6 +8,13 @@
     <string name="menu_back">Назад</string>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+    <!-- ~~~~~~~~~~~~~~~~~~~ MENU DIALOG~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+    <string name="menu_dialog_title">Напоминание</string>
+    <string name="menu_dialog_message">Если вам нравится приложение, оставьте свой ​​отзыв</string>
+    <string name="menu_dialog_yes">Да</string>
+    <string name="menu_dialog_no">Нет</string>
+    <string name="menu_dialog_later">Напомнить позднее</string>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
     <!-- ~~~~~~~~~~~~~~~~~~~ SETTINGS ~~~~~~~~~~~~~~~~~~~~~~ !-->
 

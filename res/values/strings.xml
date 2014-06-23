@@ -6,7 +6,14 @@
 
     <string name="menu_settings">SETTINGS</string>
     <string name="menu_back">Back</string>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
+    <!-- ~~~~~~~~~~~~~~~~~~~ MENU DIALOG~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+    <string name="menu_dialog_title">Reminder</string>
+    <string name="menu_dialog_message">If you like the app, please leave your review</string>
+    <string name="menu_dialog_yes">Yes</string>
+    <string name="menu_dialog_no">No</string>
+    <string name="menu_dialog_later">Later</string>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
     <!-- ~~~~~~~~~~~~~~~~~~~ SETTINGS ~~~~~~~~~~~~~~~~~~~~~~ !-->

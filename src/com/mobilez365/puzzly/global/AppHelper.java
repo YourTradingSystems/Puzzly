@@ -246,6 +246,22 @@ public class AppHelper {
         edit.commit();
     }
 
+    public static int getStartCount(Context _context) {
+        SharedPreferences prefs = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
+            return prefs.getInt(Constans.START_COUNT, 0);
+    }
+    public static final void increaseStartCount(Context _context) {
+        int startCount = getStartCount(_context) + 1;
+        SharedPreferences.Editor edit = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE).edit();
+        edit.putInt(Constans.START_COUNT, startCount);
+        edit.commit();
+    }
+    public static final void decreaseStartCount(Context _context) {
+        int startCount = getStartCount(_context) - 1;
+        SharedPreferences.Editor edit = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE).edit();
+        edit.putInt(Constans.START_COUNT, startCount);
+        edit.commit();
+    }
     public static final int getMaxGame(Context _context, int type) {
         SharedPreferences prefs = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
         if(type == 0)
