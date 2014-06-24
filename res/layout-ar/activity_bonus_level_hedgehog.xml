@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:id="@+id/rlContainer_ABLH"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+        >
+
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/ivBackgroundABH"
+            android:src="@drawable/background_bonus_level_flower"
+            android:scaleType="centerCrop"/>
+
+    <RelativeLayout
+            android:id="@+id/rlHedgehogsABH"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal|bottom"
+            android:layout_alignParentBottom="false"
+            android:layout_marginBottom="20dp">
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ivHedgehogSmallABH"
+                android:src="@drawable/img_crew_cut_small"
+                android:layout_alignParentBottom="false"
+                android:layout_alignBottom="@+id/ivHedgehogBigABH"/>
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ivHedgehogBigABH"
+                android:src="@drawable/img_crew_cut_big"
+                android:layout_toRightOf="@+id/ivHedgehogSmallABH"
+                android:layout_marginLeft="30dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/rlCandiesABH"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+    </RelativeLayout>
+
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/btnNextABH"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/selector_arrow_next"
+            android:background="@null"
+            android:paddingRight="35dp"
+            android:visibility="gone"/>
+
+</RelativeLayout>

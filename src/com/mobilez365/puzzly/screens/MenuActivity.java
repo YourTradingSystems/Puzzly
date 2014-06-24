@@ -1,29 +1,23 @@
 package com.mobilez365.puzzly.screens;
 
-import android.animation.Animator;
-import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
-import android.os.Message;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.TranslateAnimation;
 import android.widget.*;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
 import com.mobilez365.puzzly.global.Constans;
 import com.mobilez365.puzzly.puzzles.PuzzlesDB;
-import com.mobilez365.puzzly.util.BackgroundSound;
 import com.startad.lib.SADView;
 
 import java.util.ArrayList;
@@ -123,7 +117,7 @@ public class MenuActivity extends Activity {
         setContentView(R.layout.menu_screen);
         findViews();
         setListeners();
-        getYesNoWithExecutionStop();
+        showReminderDialog();
         startAnimation();
         PuzzlesDB.addBasePuzzlesToDB(getApplicationContext());
     }
@@ -292,53 +286,51 @@ public class MenuActivity extends Activity {
         }
         layout.addView(sadView);
     }
-    private void getYesNoWithExecutionStop() {
-        if (AppHelper.getStartCount(getApplicationContext()) <= 2 ) AppHelper.increaseStartCount(getApplicationContext());
-        if (AppHelper.getStartCount(getApplicationContext()) != 2 ) return;
-        final int[] mResult = new int[1];
-        // make a handler that throws a runtime exception when a message is received
-        final Handler handler = new Handler() {
+    private void showReminderDialog() {
+/*        if (AppHelper.getStartCount(getApplicationContext()) <= 2 ) AppHelper.increaseStartCount(getApplicationContext());
+        if (AppHelper.getStartCount(getApplicationContext()) != 2 ) return;*/
+        LayoutInflater factory = LayoutInflater.from(getApplicationContext());
+        final View reminderDialogView = factory.inflate(R.layout.reminder_dialog, null);
+        final AlertDialog reminderDialog = new AlertDialog.Builder(this).create();
+        reminderDialog.setView(reminderDialogView);
+        reminderDialogView.findViewById(R.id.menu_dialog_yes).setOnClickListener(new View.OnClickListener() {
+
             @Override
-            public void handleMessage(Message mesg) {
-                throw new RuntimeException();
-            }
-        };
-
-        // make a text input dialog and show it
-        AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        alert.setTitle(R.string.menu_dialog_title);
-        alert.setMessage(R.string.menu_dialog_message);
-        alert.setPositiveButton(R.string.menu_dialog_yes, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int whichButton) {
-                mResult[0] = 2;
-                handler.sendMessage(handler.obtainMessage());
+            public void onClick(View view) {
+                String url = Constans.REVIEW_URL;
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
+                reminderDialog.dismiss();
             }
         });
-        alert.setNeutralButton(R.string.menu_dialog_later, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int whichButton) {
-                mResult[0] = 1;
-                handler.sendMessage(handler.obtainMessage());
+        reminderDialogView.findViewById(R.id.menu_dialog_later).setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                AppHelper.decreaseStartCount(getApplicationContext());
+                reminderDialog.dismiss();
             }
         });
-        alert.setNegativeButton(R.string.menu_dialog_no, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int whichButton) {
-                mResult[0] = 0;
-                handler.sendMessage(handler.obtainMessage());
+        reminderDialogView.findViewById(R.id.menu_dialog_no).setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                reminderDialog.dismiss();
             }
         });
-        alert.show();
-
-        // loop till a runtime exception is triggered.
-        try { Looper.loop(); }
-        catch(RuntimeException e) {}
-
-        if(mResult[0] == 2){
-            String url = Constans.REVIEW_URL;
-            Intent i = new Intent(Intent.ACTION_VIEW);
-            i.setData(Uri.parse(url));
-            startActivity(i);
-            return;
-        } else if(mResult[0] == 1) AppHelper.decreaseStartCount(getApplicationContext());
-
+        reminderDialog.show();
+        Typeface robotoTypeface = Typeface.createFromAsset(this.getAssets(), "Roboto-Regular.ttf");
+        final int alertTitle = getApplicationContext().getResources().getIdentifier( "alertTitle", "id", "android" );
+        TextView tvAlertTitle = ((TextView) reminderDialog.findViewById(alertTitle));
+        tvAlertTitle.setTypeface(robotoTypeface);
+        TextView tvAlertMessage = ((TextView) reminderDialog.findViewById(R.id.message));
+        tvAlertMessage.setTypeface(robotoTypeface);
+        Button btnYes = (Button) reminderDialogView.findViewById(R.id.menu_dialog_yes);
+        btnYes.setTypeface(robotoTypeface);
+        Button btnLater = (Button) reminderDialogView.findViewById(R.id.menu_dialog_later);
+        btnLater.setTypeface(robotoTypeface);
+        Button btnNo = (Button) reminderDialogView.findViewById(R.id.menu_dialog_no);
+        btnNo.setTypeface(robotoTypeface);
     }
 }

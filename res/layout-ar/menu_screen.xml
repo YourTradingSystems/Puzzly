@@ -24,24 +24,6 @@
         android:visibility="invisible">
 
         <RelativeLayout
-            android:id="@+id/rlGameSettings_MS"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="10dp"
-            android:layout_weight="50">
-
-            <ImageButton
-                android:id="@+id/btnGameSettings_MS"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_alignParentTop="true"
-                android:background="@null"
-                android:src="@drawable/settings_icon"/>
-
-        </RelativeLayout>
-
-        <RelativeLayout
             android:id="@+id/rlGameAchievement_MS"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -67,6 +49,23 @@
 
         </RelativeLayout>
 
+        <RelativeLayout
+                android:id="@+id/rlGameSettings_MS"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:layout_weight="50">
+
+            <ImageButton
+                    android:id="@+id/btnGameSettings_MS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@null"
+                    android:src="@drawable/settings_icon"/>
+
+        </RelativeLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -79,6 +78,51 @@
         android:visibility="invisible">
 
         <RelativeLayout
+            android:id="@+id/rlLeftMenu_MS"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="50">
+
+            <RelativeLayout
+                android:id="@+id/rlLeftBalloon_MS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp">
+
+                <ImageView
+                    android:id="@+id/ivGameSimpleFill_MS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    style="@style/MenuGameImage"
+                    android:src="@drawable/left_balloon_btn"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ivGameSimpleFill_MS"
+                    android:src="@drawable/basket_img"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="-25dp"/>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/ivLeftHandTutorial_MS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/rlLeftBalloon_MS"
+                android:layout_alignBottom="@id/rlLeftBalloon_MS"
+                android:layout_alignParentLeft="true"
+                android:padding="10dp"
+                android:layout_marginBottom="25dp"
+                android:src="@drawable/hand_left"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
             android:id="@+id/rlRightMenu_MS"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -88,9 +132,9 @@
                 android:id="@+id/rlRightBalloon_MS"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
-                android:layout_marginRight="10dp">
+                android:layout_marginLeft="10dp">
 
                 <ImageView
                     android:id="@+id/ivGameSimpleReveal_MS"
@@ -113,57 +157,12 @@
                 android:id="@+id/ivRightHandTutorial_MS"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toLeftOf="@id/rlRightBalloon_MS"
+                android:layout_toRightOf="@id/rlRightBalloon_MS"
                 android:layout_alignBottom="@id/rlRightBalloon_MS"
-                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
                 android:padding="10dp"
                 android:layout_marginBottom="25dp"
-                android:src="@drawable/hand_left"/>
-
-        </RelativeLayout>
-
-        <RelativeLayout
-                android:id="@+id/rlLeftMenu_MS"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="50">
-
-            <RelativeLayout
-                    android:id="@+id/rlLeftBalloon_MS"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="10dp">
-
-                <ImageView
-                        android:id="@+id/ivGameSimpleFill_MS"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        style="@style/MenuGameImage"
-                        android:src="@drawable/left_balloon_btn"/>
-
-                <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/ivGameSimpleFill_MS"
-                        android:src="@drawable/basket_img"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="-25dp"/>
-
-            </RelativeLayout>
-
-            <ImageView
-                    android:id="@+id/ivLeftHandTutorial_MS"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/rlLeftBalloon_MS"
-                    android:layout_alignBottom="@id/rlLeftBalloon_MS"
-                    android:layout_alignParentRight="true"
-                    android:padding="10dp"
-                    android:layout_marginBottom="25dp"
-                    android:src="@drawable/hand_right"/>
+                android:src="@drawable/hand_right"/>
 
         </RelativeLayout>
 

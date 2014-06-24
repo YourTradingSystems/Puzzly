@@ -4,4 +4,6 @@
     <color name="text_color">#2C5770</color>
     <color name="settings_header_bg">#1594A3</color>
     <color name="tc_settings">#2B5770</color>
+    <color name="reminder_title">#2c5770</color>
+    <color name="reminder_text">#34495e</color>
 </resources>

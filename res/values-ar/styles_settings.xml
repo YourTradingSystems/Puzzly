@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <style name="SettingsChooseBox">
+        <item name="android:paddingTop">@dimen/ptb_settings_choose_box</item>
+        <item name="android:paddingBottom">@dimen/ptb_settings_choose_box</item>
+        <item name="android:layout_marginTop">@dimen/mt_settings_choose_box</item>
+        <item name="android:textSize">@dimen/ts_big</item>
+        <item name="android:textColor">@color/tc_settings</item>
+        <item name="android:paddingRight">30dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+    </style>
+
+    <style name="SettingsLanguage">
+        <item name="android:padding">@dimen/p_normal</item>
+        <item name="android:textSize">@dimen/ts_normal</item>
+    </style>
+
+
+</resources>

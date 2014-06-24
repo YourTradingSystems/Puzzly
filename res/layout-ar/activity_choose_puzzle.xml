@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_game">
+
+    <view
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            class="android.support.v4.view.ViewPager"
+            android:id="@+id/vpMailACP"
+            android:background="@color/background_game"
+            android:layout_weight="1"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3">
+
+            <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/btnPreviousACP"
+                    android:src="@drawable/selector_arrow_previous"
+                android:scaleType="center"
+                    android:background="@null"
+                    android:visibility="gone"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3">
+
+            <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/btnNextACP"
+                    android:src="@drawable/selector_arrow_next"
+                android:scaleType="center"
+                    android:background="@null"
+                    android:visibility="gone"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
