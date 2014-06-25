@@ -75,7 +75,9 @@ public class SettingsActivity extends RestartActivty{
                     finish();
                     break;
 
-                case R.id.ccbPlayBackgroundMusic_SS:
+                case R.id.rlPlayBackgroundMusic_SS:
+                    ccbPlayBackgroundMusic_SS.setChecked(!ccbPlayBackgroundMusic_SS.isChecked());
+
                     AppHelper.setPlayBackgroundMusic(getApplicationContext(), ccbPlayBackgroundMusic_SS.isChecked());
 
                     if (ccbPlayBackgroundMusic_SS.isChecked())
@@ -85,15 +87,18 @@ public class SettingsActivity extends RestartActivty{
 
                     break;
 
-                case R.id.ccbPlaySound_SS:
+                case R.id.rlPlaySound_SS:
+                    ccbPlaySound_SS.setChecked(!ccbPlaySound_SS.isChecked());
                     AppHelper.setPlaySound(getApplicationContext(), ccbPlaySound_SS.isChecked());
                     break;
 
-                case R.id.ccbVibrate_SS:
+                case R.id.rlVibrate_SS:
+                    ccbVibrate_SS.setChecked(!ccbVibrate_SS.isChecked());
                     AppHelper.setVibrate(getApplicationContext(), ccbVibrate_SS.isChecked());
                     break;
 
-                case R.id.ccbDisplayInnerBorders_SS:
+                case R.id.rlDisplayInnerBorders_SS:
+                    ccbDisplayInnerBorders_SS.setChecked(!ccbDisplayInnerBorders_SS.isChecked());
                     AppHelper.setShowImageBorder(getApplicationContext(), ccbDisplayInnerBorders_SS.isChecked());
                     break;
             }
@@ -158,10 +163,10 @@ public class SettingsActivity extends RestartActivty{
 
     private final void setListener() {
         btnBack_SS.setOnClickListener(mOnClickListener);
-        ccbPlayBackgroundMusic_SS.setOnClickListener(mOnClickListener);
-        ccbPlaySound_SS.setOnClickListener(mOnClickListener);
-        ccbVibrate_SS.setOnClickListener(mOnClickListener);
-        ccbDisplayInnerBorders_SS.setOnClickListener(mOnClickListener);
+        findViewById(R.id.rlPlayBackgroundMusic_SS).setOnClickListener(mOnClickListener);
+        findViewById(R.id.rlPlaySound_SS).setOnClickListener(mOnClickListener);
+        findViewById(R.id.rlVibrate_SS).setOnClickListener(mOnClickListener);
+        findViewById(R.id.rlDisplayInnerBorders_SS).setOnClickListener(mOnClickListener);
         spinnerChooseAppCountry_SS.setOnItemSelectedListener(mItemSelectListener);
         spinnerChooseStudyCountry_SS.setOnItemSelectedListener(mItemSelectListener);
     }

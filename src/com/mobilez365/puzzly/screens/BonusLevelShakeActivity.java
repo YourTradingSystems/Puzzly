@@ -102,8 +102,6 @@ public class BonusLevelShakeActivity extends InterstitialActivity {
         mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         rlContainer_ABLS = (RelativeLayout) findViewById(R.id.rlContainer_ABLS);
 
-        AppHelper.increasePassedGames();
-
         initCandies();
 
         if (!AppHelper.getBonusShake(getApplicationContext()))

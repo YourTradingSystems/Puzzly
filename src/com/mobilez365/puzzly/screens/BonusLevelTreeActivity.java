@@ -106,8 +106,6 @@ public class BonusLevelTreeActivity extends InterstitialActivity{
         mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         rlContainer_ABLT = (RelativeLayout) findViewById(R.id.rlContainer_ABLT);
 
-        AppHelper.increasePassedGames();
-
         initData();
 
         if (!AppHelper.getBonusTree(getApplicationContext()))

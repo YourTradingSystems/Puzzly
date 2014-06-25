@@ -113,8 +113,6 @@ public class BonusLevelFlowerActivity extends InterstitialActivity{
         candiesRotateAnimators = new ArrayList<ObjectAnimator>();
         candiesStatus = new int[mCandiesCount];
 
-        AppHelper.increasePassedGames();
-
         initFlowers();
         initSun();
 

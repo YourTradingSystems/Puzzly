@@ -81,10 +81,7 @@ public class MenuActivity extends Activity {
                 switch (v.getId()) {
 
                     case R.id.ivGameSimpleFill_MS:
-                        Intent gameFillIntent = new Intent(MenuActivity.this, ChoosePuzzleActivity.class);
-                        gameFillIntent.putExtra("type", 0);
-                        startActivity(gameFillIntent);
-                        AppHelper.setLeftHandTutorial(getApplicationContext(), true);
+                       startActivity(new Intent(MenuActivity.this, BonusLevelHedgehogActivity.class));
                         break;
 
                     case R.id.ivGameSimpleReveal_MS:

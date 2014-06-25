@@ -39,6 +39,7 @@
 
     <LinearLayout
         android:id="@+id/llBanner_SS"
+        android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -56,36 +57,104 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <com.mobilez365.puzzly.customViews.ColorsCheckBox
-                android:id="@+id/ccbPlayBackgroundMusic_SS"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/SettingsChooseBox"
-                android:text="@string/settings_play_background_music"/>
+            <RelativeLayout
+                    android:id="@+id/rlPlayBackgroundMusic_SS"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-            <com.mobilez365.puzzly.customViews.ColorsCheckBox
-                android:id="@+id/ccbPlaySound_SS"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/SettingsChooseBox"
-                android:layout_below="@id/ccbPlayBackgroundMusic_SS"
-                android:text="@string/settings_play_sound"/>
+                <com.mobilez365.puzzly.customViews.ColorsCheckBox
+                    android:id="@+id/ccbPlayBackgroundMusic_SS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/SettingsChooseBox"
+                        />
 
-            <com.mobilez365.puzzly.customViews.ColorsCheckBox
-                android:id="@+id/ccbVibrate_SS"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/SettingsChooseBox"
-                android:layout_below="@id/ccbPlaySound_SS"
-                android:text="@string/settings_vibrate"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_play_background_music"
+                        android:id="@+id/tvPlayBackgroundMusic_SS"
+                        android:layout_toRightOf="@+id/ccbPlayBackgroundMusic_SS"
+                        android:layout_marginLeft="10dp"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/tc_settings"
+                        android:textSize="25dp"/>
+            </RelativeLayout>
 
-            <com.mobilez365.puzzly.customViews.ColorsCheckBox
-                android:id="@+id/ccbDisplayInnerBorders_SS"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/SettingsChooseBox"
-                android:layout_below="@id/ccbVibrate_SS"
-                android:text="@string/settings_display_inner_borders"/>
+            <RelativeLayout
+                    android:id="@+id/rlPlaySound_SS"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/rlPlayBackgroundMusic_SS">
+
+                <com.mobilez365.puzzly.customViews.ColorsCheckBox
+                    android:id="@+id/ccbPlaySound_SS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/SettingsChooseBox"
+                    />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_play_sound"
+                        android:id="@+id/tvPlaySound_SS"
+                        android:layout_toRightOf="@+id/ccbPlaySound_SS"
+                        android:layout_marginLeft="10dp"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/tc_settings"
+                        android:textSize="25dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:id="@+id/rlVibrate_SS"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/rlPlaySound_SS">
+
+                <com.mobilez365.puzzly.customViews.ColorsCheckBox
+                    android:id="@+id/ccbVibrate_SS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/SettingsChooseBox"
+                    />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_vibrate"
+                        android:id="@+id/tvVibrate_SS"
+                        android:layout_toRightOf="@+id/ccbVibrate_SS"
+                        android:layout_marginLeft="10dp"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/tc_settings"
+                        android:textSize="25dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:id="@+id/rlDisplayInnerBorders_SS"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/rlVibrate_SS">
+
+                <com.mobilez365.puzzly.customViews.ColorsCheckBox
+                    android:id="@+id/ccbDisplayInnerBorders_SS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/SettingsChooseBox"
+                    />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_display_inner_borders"
+                        android:id="@+id/tvDisplayInnerBorders_SS"
+                        android:layout_toRightOf="@+id/ccbDisplayInnerBorders_SS"
+                        android:layout_marginLeft="10dp"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/tc_settings"
+                        android:textSize="25dp"/>
+            </RelativeLayout>
 
             <LinearLayout
                 android:id="@+id/llStudyLanguagePanel_SS"
@@ -94,7 +163,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:background="@color/settings_header_bg"
-                android:layout_below="@+id/ccbDisplayInnerBorders_SS"
+                android:layout_below="@+id/rlDisplayInnerBorders_SS"
                 android:layout_marginTop="10dp">
 
                 <TextView

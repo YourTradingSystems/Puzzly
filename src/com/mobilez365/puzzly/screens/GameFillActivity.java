@@ -92,6 +92,36 @@ public class GameFillActivity extends RestartActivty {
         }
     };
 
+    private final GameView.GameCallBacks gameCallBacks = new GameView.GameCallBacks() {
+        @Override
+        public void onGameFinish(String resultImage, int x, int y, int width, int height) {
+            if (!gameIsFinished) {
+                AppHelper.increasePassedGames();
+                AppHelper.setMaxGame(getApplicationContext(), mGameNumber + 1, mGameType);
+                AppHelper.setGameAchievement(getApplicationContext(), AppHelper.getGameAchievement(getApplicationContext()) + 1);
+                resultImageXPos = x;
+                resultImageYPos = y;
+
+                ParseSvgAsyncTask parseSvgAsyncTask = new ParseSvgAsyncTask(getApplicationContext(), mParseDoneListener, width, height);
+                parseSvgAsyncTask.execute(resultImage);
+
+                gameIsFinished = true;
+            }
+        }
+
+        @Override
+        public void onPartMove() {
+            if (AppHelper.getVibrate(getApplicationContext()))
+                mVibrator.vibrate(100);
+        }
+
+        @Override
+        public void onPartsLock() {
+            if (AppHelper.getVibrate(getApplicationContext()))
+                mVibrator.vibrate(100);
+        }
+    };
+
     private final AnimationEndListener.AnimEndListener mAnimEndListener = new AnimationEndListener.AnimEndListener() {
         @Override
         public void OnAnimEnd(View v) {
@@ -113,7 +143,8 @@ public class GameFillActivity extends RestartActivty {
         @Override
         public void onClick(View v) {
             if (v.isClickable()) {
-                //nextGame.setClickable(false);
+                nextGame.setClickable(false);
+                previousGame.setClickable(false);
                 switch (v.getId()) {
                     case R.id.btnNextAGF:
                         if(mPlayer != null) {
@@ -162,35 +193,7 @@ public class GameFillActivity extends RestartActivty {
 
         mPuzzleFillGame = PuzzlesDB.getPuzzle(mGameNumber, mGameType, getApplicationContext());
 
-        gameView = new GameView(getApplicationContext(), mPuzzleFillGame, new GameView.GameCallBacks() {
-            @Override
-            public void onGameFinish(String resultImage, int x, int y, int width, int height) {
-                if (!gameIsFinished) {
-                    AppHelper.increasePassedGames();
-                    AppHelper.setMaxGame(getApplicationContext(), mGameNumber + 1, mGameType);
-                    AppHelper.setGameAchievement(getApplicationContext(), AppHelper.getGameAchievement(getApplicationContext()) + 1);
-                    resultImageXPos = x;
-                    resultImageYPos = y;
-
-                    ParseSvgAsyncTask parseSvgAsyncTask = new ParseSvgAsyncTask(getApplicationContext(), mParseDoneListener, width, height);
-                    parseSvgAsyncTask.execute(resultImage);
-
-                    gameIsFinished = true;
-                }
-            }
-
-            @Override
-            public void onPartMove() {
-                if (AppHelper.getVibrate(getApplicationContext()))
-                    mVibrator.vibrate(100);
-            }
-
-            @Override
-            public void onPartsLock() {
-                if (AppHelper.getVibrate(getApplicationContext()))
-                    mVibrator.vibrate(100);
-            }
-        });
+        gameView = new GameView(getApplicationContext(), mPuzzleFillGame, gameCallBacks);
 
         ((FrameLayout) findViewById(R.id.rlForGame)).addView(gameView);
 
@@ -205,6 +208,9 @@ public class GameFillActivity extends RestartActivty {
         previousGame.setOnClickListener(mOnClickListener);
         ivResultImage.setOnClickListener(mOnClickListener);
         ivResultImage.setClickable(false);
+
+        nextGame.setClickable(true);
+        previousGame.setClickable(true);
 
         Display display = getWindowManager().getDefaultDisplay();
         displaySize = new Point();

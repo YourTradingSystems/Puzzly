@@ -6,22 +6,17 @@ import android.content.Intent;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.view.Display;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.widget.VideoView;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
-import com.mobilez365.puzzly.global.Constans;
 import com.mobilez365.puzzly.util.AnimationEndListener;
 import com.mobilez365.puzzly.util.BackgroundSound;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 /**
  * Created by andrewtivodar on 15.05.2014.
@@ -36,10 +31,20 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity {
     private List<ImageView> smallCandiesList;
     private List<ImageView> bigCandiesList;
     private List<ObjectAnimator> candiesFlyAnimators;
+    private List<Long> candiesFlyAnimatorsTime;
     private int mScreenHeight;
+    private long passedTime;
+    private boolean candiesInPause = false;
 
     private BackgroundSound mBackgroundSound;
     private ImageButton nextGame;
+
+    public class AnimatorComparator implements Comparator<ObjectAnimator> {
+        @Override
+        public int compare(ObjectAnimator o1, ObjectAnimator o2) {
+            return Long.compare(o1.getStartDelay(), (o2.getStartDelay()));
+        }
+    };
 
     private final ViewTreeObserver.OnGlobalLayoutListener onGlobalLayoutListener = new ViewTreeObserver.OnGlobalLayoutListener() {
         @Override
@@ -71,8 +76,10 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity {
     private final AnimationEndListener.AnimEndListener mFlyCandyAnimEndListener = new AnimationEndListener.AnimEndListener() {
         @Override
         public void OnAnimEnd(View v) {
-            mCandiesUnpickedCount++;
-            checkAllPicked();
+            if(!candiesInPause) {
+                mCandiesUnpickedCount++;
+                checkAllPicked();
+            }
         }
     };
 
@@ -85,8 +92,6 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity {
 
         smallCandiesList = new ArrayList<ImageView>();
         bigCandiesList = new ArrayList<ImageView>();
-
-        AppHelper.increasePassedGames();
 
         candiesFlyAnimators = new ArrayList<ObjectAnimator>();
 
@@ -137,7 +142,6 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity {
             candy.setPadding(10, 10, 10, 10);
             candy.setX(-candySize);
             candy.setY(candyYPos);
-            candy.setTag(i);
             candy.setOnClickListener(mClickListener);
 
             if (bigCandy)
@@ -152,9 +156,10 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity {
             moveAnimator.addListener(new AnimationEndListener(candy, mFlyCandyAnimEndListener));
             moveAnimator.start();
 
+            candy.setTag(moveAnimator);
             candiesFlyAnimators.add(moveAnimator);
         }
-
+        Collections.sort(candiesFlyAnimators, new AnimatorComparator());
     }
 
     private void pickCandy(View v) {
@@ -195,7 +200,7 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity {
         set.addListener(new AnimationEndListener(v, mPickCandyAnimEndListener));
         set.start();
 
-        candiesFlyAnimators.get((Integer)v.getTag()).end();
+        ((ObjectAnimator) v.getTag()).end();
     }
 
     private void checkAllPicked() {
@@ -220,15 +225,45 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity {
     public void onResume() {
         super.onResume();
 
+        candiesInPause = false;
+
+        for (int i = 0; i < candiesFlyAnimators.size(); i++) {
+            if (candiesFlyAnimatorsTime != null)
+                if(candiesFlyAnimatorsTime.get(i) != -1) {
+                    candiesFlyAnimators.get(i).start();
+                    if(candiesFlyAnimatorsTime.get(i) != 0)
+                        candiesFlyAnimators.get(i).setCurrentPlayTime(candiesFlyAnimatorsTime.get(i));
+                }
+        }
+
+        candiesFlyAnimatorsTime = null;
+
         if (!AppHelper.isAppInBackground(getApplicationContext()))
             AppHelper.getBackgroundSound().pause(false);
 
         if (nextGame != null) nextGame.setClickable(true);
+
+        passedTime = new Date().getTime();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
+
+        candiesInPause = true;
+        passedTime = new Date().getTime() - passedTime;
+        candiesFlyAnimatorsTime = new ArrayList<Long>();
+        for (ObjectAnimator candiesFlyAnimator : candiesFlyAnimators) {
+            if(candiesFlyAnimator.getStartDelay() - passedTime < 0)
+                candiesFlyAnimator.setStartDelay(0);
+            else
+                candiesFlyAnimator.setStartDelay(candiesFlyAnimator.getStartDelay() - passedTime);
+            if(candiesFlyAnimator.isStarted())
+                candiesFlyAnimatorsTime.add(candiesFlyAnimator.getCurrentPlayTime());
+            else
+                candiesFlyAnimatorsTime.add(-1l);
+            candiesFlyAnimator.end();
+        }
 
         if (AppHelper.isAppInBackground(getApplicationContext()) || AppHelper.isScreenOff(getApplicationContext()))
             AppHelper.getBackgroundSound().pause(true);
