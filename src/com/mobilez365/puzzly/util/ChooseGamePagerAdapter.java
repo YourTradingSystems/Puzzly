@@ -86,7 +86,8 @@ public class ChooseGamePagerAdapter extends PagerAdapter {
         View view;
         view = inflater.inflate(R.layout.item_choose_puzzle, null);
 
-        int levelPosition = rldr ? mGameCount - position * 4 : position * 4;
+        int levelPosition = rldr ? mGameCount - 2 - position * 4 : position * 4;
+        //Log.d("ViewPager", "" + position);
         if (levelPosition < mGameCount) {
             PuzzleFillGame game = PuzzlesDB.getPuzzle(levelPosition, mGameType, appContext);
 
@@ -101,7 +102,7 @@ public class ChooseGamePagerAdapter extends PagerAdapter {
             loadGameWord(appContext, game, gameWord, levelPosition);
         }
 
-        levelPosition = rldr ? mGameCount - 1 -  position * 4 : position * 4 + 1;
+        levelPosition = rldr ? mGameCount - 3 -  position * 4 : position * 4 + 1;
         if (levelPosition < mGameCount) {
             PuzzleFillGame game = PuzzlesDB.getPuzzle(levelPosition, mGameType, appContext);
 
@@ -116,7 +117,7 @@ public class ChooseGamePagerAdapter extends PagerAdapter {
             loadGameWord(appContext, game, gameWord, levelPosition);
         }
 
-        levelPosition = rldr ? mGameCount -  position * 4 + 2 : position * 4 + 2;
+        levelPosition = rldr ? mGameCount -  position * 4 : position * 4 + 2;
         if (levelPosition < mGameCount) {
             PuzzleFillGame game = PuzzlesDB.getPuzzle(levelPosition, mGameType, appContext);
 
@@ -131,7 +132,7 @@ public class ChooseGamePagerAdapter extends PagerAdapter {
             loadGameWord(appContext, game, gameWord, levelPosition);
         }
 
-        levelPosition = rldr ? mGameCount -  position * 4 + 1 : position * 4 + 3;
+        levelPosition = rldr ? mGameCount - 1 - position * 4 : position * 4 + 3;
         if (levelPosition < mGameCount) {
             PuzzleFillGame game = PuzzlesDB.getPuzzle(levelPosition, mGameType, appContext);
 
