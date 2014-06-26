@@ -4,12 +4,14 @@ import android.app.Activity;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.Display;
 import android.view.View;
 import android.widget.ImageButton;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
 import com.mobilez365.puzzly.global.Constans;
+import com.mobilez365.puzzly.puzzles.PuzzlesDB;
 import com.mobilez365.puzzly.util.ChooseGamePagerAdapter;
 
 /**
@@ -60,7 +62,6 @@ public class ChoosePuzzleActivity extends RestartActivty {
 
         @Override
         public void onPageSelected(int i) {
-
         }
 
         @Override
@@ -78,7 +79,6 @@ public class ChoosePuzzleActivity extends RestartActivty {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_puzzle);
-
         if (AppHelper.getPlayBackgroundMusic(getApplicationContext()) && !AppHelper.getBackgroundSound().getName().equals(Constans.MENU_BACKGROUND_MUSIC))
             AppHelper.startBackgroundSound(getApplicationContext(), Constans.MENU_BACKGROUND_MUSIC);
 
@@ -108,7 +108,9 @@ public class ChoosePuzzleActivity extends RestartActivty {
 
         levelsAdapter = new ChooseGamePagerAdapter(getApplicationContext(), mGameType, size);
         levelsViewPager.setAdapter(levelsAdapter);
-        levelsViewPager.setCurrentItem(AppHelper.getCurrentGame(getApplicationContext(), mGameType) / 4);
+        //Reverse for arabic
+        int currentGame =  AppHelper.getLocalizeStudyLanguage(getApplicationContext())== 8 ? PuzzlesDB.getPuzzleGameCount(getApplicationContext(), mGameType) - AppHelper.getCurrentGame(getApplicationContext(), mGameType): AppHelper.getCurrentGame(getApplicationContext(), mGameType);
+        levelsViewPager.setCurrentItem( currentGame / 4 );
     }
 
     @Override

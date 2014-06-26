@@ -7,6 +7,7 @@ import android.graphics.Bitmap;
 import android.graphics.Point;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,13 +26,13 @@ import com.mobilez365.puzzly.screens.GameFillActivity;
  * Created by andrewtivodar on 28.05.2014.
  */
 public class ChooseGamePagerAdapter extends PagerAdapter {
-
     private int mGameCount;
     private int mPagesCount;
     private int mGameType;
     private int maxFigureHeight;
     private int maxFigureWidth;
     public boolean clickEnable;
+    private  boolean rldr;
 
     private final View.OnClickListener mOnClickListener = new View.OnClickListener() {
         @Override
@@ -58,6 +59,8 @@ public class ChooseGamePagerAdapter extends PagerAdapter {
 
         maxFigureWidth = (int) (size.x * 0.3f);
         maxFigureHeight = (int) (size.y * 0.3f);
+        //Reverse for Arabic
+        rldr = AppHelper.getLocalizeStudyLanguage(_context)== 8 ? true : false;
     }
 
     @Override
@@ -83,7 +86,7 @@ public class ChooseGamePagerAdapter extends PagerAdapter {
         View view;
         view = inflater.inflate(R.layout.item_choose_puzzle, null);
 
-        int levelPosition = position * 4;
+        int levelPosition = rldr ? mGameCount - position * 4 : position * 4;
         if (levelPosition < mGameCount) {
             PuzzleFillGame game = PuzzlesDB.getPuzzle(levelPosition, mGameType, appContext);
 
@@ -98,7 +101,7 @@ public class ChooseGamePagerAdapter extends PagerAdapter {
             loadGameWord(appContext, game, gameWord, levelPosition);
         }
 
-        levelPosition = position * 4 + 1;
+        levelPosition = rldr ? mGameCount - 1 -  position * 4 : position * 4 + 1;
         if (levelPosition < mGameCount) {
             PuzzleFillGame game = PuzzlesDB.getPuzzle(levelPosition, mGameType, appContext);
 
@@ -113,7 +116,7 @@ public class ChooseGamePagerAdapter extends PagerAdapter {
             loadGameWord(appContext, game, gameWord, levelPosition);
         }
 
-        levelPosition = position * 4 + 2;
+        levelPosition = rldr ? mGameCount -  position * 4 + 2 : position * 4 + 2;
         if (levelPosition < mGameCount) {
             PuzzleFillGame game = PuzzlesDB.getPuzzle(levelPosition, mGameType, appContext);
 
@@ -128,7 +131,7 @@ public class ChooseGamePagerAdapter extends PagerAdapter {
             loadGameWord(appContext, game, gameWord, levelPosition);
         }
 
-        levelPosition = position * 4 + 3;
+        levelPosition = rldr ? mGameCount -  position * 4 + 1 : position * 4 + 3;
         if (levelPosition < mGameCount) {
             PuzzleFillGame game = PuzzlesDB.getPuzzle(levelPosition, mGameType, appContext);
 
