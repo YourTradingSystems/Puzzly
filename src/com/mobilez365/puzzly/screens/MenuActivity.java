@@ -287,8 +287,8 @@ public class MenuActivity extends Activity {
         layout.addView(sadView);
     }
     private void showReminderDialog() {
-/*        if (AppHelper.getStartCount(getApplicationContext()) <= 2 ) AppHelper.increaseStartCount(getApplicationContext());
-        if (AppHelper.getStartCount(getApplicationContext()) != 2 ) return;*/
+        if (AppHelper.getStartCount(getApplicationContext()) <= 2 ) AppHelper.increaseStartCount(getApplicationContext());
+        if (AppHelper.getStartCount(getApplicationContext()) != 2 ) return;
         LayoutInflater factory = LayoutInflater.from(getApplicationContext());
         final View reminderDialogView = factory.inflate(R.layout.reminder_dialog, null);
         final AlertDialog reminderDialog = new AlertDialog.Builder(this).create();
