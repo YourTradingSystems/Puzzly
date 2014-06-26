@@ -87,7 +87,6 @@ public class ChooseGamePagerAdapter extends PagerAdapter {
         view = inflater.inflate(R.layout.item_choose_puzzle, null);
 
         int levelPosition = rldr ? mGameCount - 2 - position * 4 : position * 4;
-        //Log.d("ViewPager", "" + position);
         if (levelPosition < mGameCount) {
             PuzzleFillGame game = PuzzlesDB.getPuzzle(levelPosition, mGameType, appContext);
 
