@@ -1,8 +1,7 @@
 package com.mobilez365.puzzly.screens;
 
-import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.*;
@@ -12,14 +11,13 @@ import android.widget.*;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.plus.PlusShare;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
 import com.mobilez365.puzzly.global.Constans;
-import com.mobilez365.puzzly.puzzles.PuzzlesDB;
-import com.mobilez365.puzzly.util.BackgroundSound;
+import com.mobilez365.puzzly.util.SocialShare;
 import com.startad.lib.SADView;
-
-import java.util.Locale;
+import org.brickred.socialauth.android.SocialAuthAdapter;
 
 /**
  * Created by Denis on 12.05.14.
@@ -36,6 +34,36 @@ public class SettingsActivity extends RestartActivty{
     private ScrollView swMain;
     private AdView adView;
     private SADView sadView;
+    private ProgressDialog loadingDialog;
+
+    private final SocialShare.ShareListener mShareListener = new SocialShare.ShareListener() {
+        @Override
+        public void onShareResult(final int result) {
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    switch (result) {
+                        case Constans.SHARE_LOGIN_ERROR:
+                            Toast.makeText(SettingsActivity.this, getString(R.string.share_login_error), Toast.LENGTH_SHORT).show();
+                            break;
+                        case Constans.SHARE_POST_ERROR:
+                            Toast.makeText(SettingsActivity.this, getString(R.string.share_post_error), Toast.LENGTH_SHORT).show();
+                            break;
+                        case Constans.SHARE_POST_DONE:
+                            Toast.makeText(SettingsActivity.this, getString(R.string.share_post_done), Toast.LENGTH_SHORT).show();
+                            break;
+                        case Constans.SHARE_INTERNET_ERROR:
+                            Toast.makeText(SettingsActivity.this, getString(R.string.share_internet_error), Toast.LENGTH_SHORT).show();
+                            break;
+                        case Constans.SHARE_POST_DUPLICATE:
+                            Toast.makeText(SettingsActivity.this, getString(R.string.share_post_duplicate), Toast.LENGTH_SHORT).show();
+                            break;
+                    }
+                    loadingDialog.dismiss();
+                }
+            });
+        }
+    };
 
     private final AdapterView.OnItemSelectedListener mItemSelectListener = new AdapterView.OnItemSelectedListener() {
         @Override
@@ -94,6 +122,30 @@ public class SettingsActivity extends RestartActivty{
                 case R.id.rlDisplayInnerBorders_SS:
                     ccbDisplayInnerBorders_SS.setChecked(!ccbDisplayInnerBorders_SS.isChecked());
                     AppHelper.setShowImageBorder(getApplicationContext(), ccbDisplayInnerBorders_SS.isChecked());
+                    break;
+                case R.id.btnTwitter_SS:
+                    loadingDialog.show();
+                    SocialShare shareTwitter = new SocialShare();
+                    shareTwitter.shareToSocial(SettingsActivity.this,
+                            SocialAuthAdapter.Provider.TWITTER, mShareListener, getString(R.string.share_message));
+                    break;
+
+                case R.id.btnGoogle_SS:
+                    Intent shareIntent = new PlusShare.Builder(SettingsActivity.this)
+                            .setType("text/plain")
+                            .setText(getString(R.string.share_message))
+                            .setContentUrl(Uri.parse("https://developers.google.com/+/"))
+                            .getIntent();
+
+                    startActivityForResult(shareIntent, 0);
+
+                    break;
+
+                case R.id.btnFacebook_SS:
+                    loadingDialog.show();
+                    SocialShare shareFacebook = new SocialShare();
+                    shareFacebook.shareToSocial(SettingsActivity.this,
+                            SocialAuthAdapter.Provider.FACEBOOK, mShareListener, getString(R.string.share_message));
                     break;
             }
         }
@@ -160,7 +212,9 @@ public class SettingsActivity extends RestartActivty{
         findViewById(R.id.rlPlayBackgroundMusic_SS).setOnClickListener(mOnClickListener);
         findViewById(R.id.rlPlaySound_SS).setOnClickListener(mOnClickListener);
         findViewById(R.id.rlVibrate_SS).setOnClickListener(mOnClickListener);
-        findViewById(R.id.rlDisplayInnerBorders_SS).setOnClickListener(mOnClickListener);
+        findViewById(R.id.btnTwitter_SS).setOnClickListener(mOnClickListener);
+        findViewById(R.id.btnGoogle_SS).setOnClickListener(mOnClickListener);
+        findViewById(R.id.btnFacebook_SS).setOnClickListener(mOnClickListener);
         spinnerChooseAppCountry_SS.setOnItemSelectedListener(mItemSelectListener);
         spinnerChooseStudyCountry_SS.setOnItemSelectedListener(mItemSelectListener);
     }
@@ -192,6 +246,10 @@ public class SettingsActivity extends RestartActivty{
                 swMain.getViewTreeObserver().removeGlobalOnLayoutListener(this);
             }
         });
+
+        loadingDialog = new ProgressDialog(this);
+        loadingDialog.setMessage("Loading...");
+        loadingDialog.setCancelable(false);
     }
     private void showBanner() {
         LinearLayout layout = (LinearLayout)findViewById(R.id.llBanner_SS);

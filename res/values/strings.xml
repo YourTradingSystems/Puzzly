@@ -43,6 +43,15 @@
     </string-array>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
+    <!-- ~~~~~~~~~~~~~~~~~~~ SHARE ~~~~~~~~~~~~~~~~~~~~~~ !-->
+    <string name="share_message">Test</string>
+    <string name="share_login_error">Can\'t login. Please try again later.</string>
+    <string name="share_post_error">Can\'t share. Please try again later.</string>
+    <string name="share_internet_error">There is no internet connection.</string>
+    <string name="share_post_done">Share done</string>
+    <string name="share_post_duplicate">Already shared</string>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
     <!-- ~~~~~~~~~~~~~~~~~~~ CHOOSE LEVEL ~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
     <string name="choose_level_new_level">New level</string>
     <string name="choose_level_locked_level">Level locked</string>

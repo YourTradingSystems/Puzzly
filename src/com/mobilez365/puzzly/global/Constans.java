@@ -37,14 +37,24 @@ public class Constans {
 
 
     public static final String START_COUNT = "start_count";
+
     /**
      * Bonus Level
      */
-
     public static final int CANDY_ON_TOP = 1;
     public static final int CANDY_FALLEN = 2;
     public static final int CANDY_PICKED = 3;
 
     public static final int APP_LANGUAGE = 1;
     public static final int GAME_LANGUAGE = 2;
+
+    /**
+     * Share result
+     */
+
+    public static final int SHARE_LOGIN_ERROR = 0;
+    public static final int SHARE_POST_ERROR = 1;
+    public static final int SHARE_POST_DONE = 2;
+    public static final int SHARE_INTERNET_ERROR = 3;
+    public static final int SHARE_POST_DUPLICATE = 4;
 }

@@ -34,6 +34,7 @@
             android:id="@+id/btnNextABF"
             android:src="@drawable/selector_arrow_previous"
             android:background="@null"
-            android:paddingLeft="35dp"/>
+            android:paddingLeft="35dp"
+            android:visibility="gone"/>
 
 </RelativeLayout>
