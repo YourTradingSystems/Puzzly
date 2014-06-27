@@ -105,39 +105,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a79d8431-a31c-4800-9f13-431b5a1f9d4a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-ar/background_settings_purchase.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/check1_icon.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/check1_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/check1_icon.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/check1_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/check1_icon.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/check1_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xxhdpi/check1_icon.png" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/check1_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/check2_icon.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/check2_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/check2_icon.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/check2_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/check2_icon.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/check2_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xxhdpi/check2_icon.png" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/check2_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/check3_icon.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/check3_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/check3_icon.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/check3_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/check3_icon.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/check3_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xxhdpi/check3_icon.png" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/check3_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/check4_icon.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/check4_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/check4_icon.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/check4_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/check4_icon.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/check4_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xxhdpi/check4_icon.png" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/check4_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/check5_icon.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/check5_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/check5_icon.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/check5_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/check5_icon.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/check5_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xxhdpi/check5_icon.png" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/check5_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/check_null_icon.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/check_null_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/check_null_icon.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/check_null_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/check_null_icon.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/check_null_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xxhdpi/check_null_icon.png" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/check_null_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable/background_settings_purchase.xml" afterPath="$PROJECT_DIR$/res/drawable/background_settings_purchase.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/menu_screen.xml" afterPath="$PROJECT_DIR$/res/layout/menu_screen.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/settings_screen.xml" afterPath="$PROJECT_DIR$/res/layout/settings_screen.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-ar/settings_screen.xml" afterPath="$PROJECT_DIR$/res/layout-ar/settings_screen.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-ar/strings.xml" afterPath="$PROJECT_DIR$/res/values-ar/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/styles_settings.xml" afterPath="$PROJECT_DIR$/res/values/styles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-ar/activity_game_fill.xml" afterPath="$PROJECT_DIR$/res/layout-ar/activity_game_fill.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Puzzly.iws" />
@@ -184,7 +152,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings_screen.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="settings_screen.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/settings_screen.xml">
           <provider editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="2474" max-vertical-offset="3910">
@@ -195,6 +163,19 @@
             </state>
           </provider>
           <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_game_fill.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/res/layout-ar/activity_game_fill.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.653484" vertical-offset="1047" max-vertical-offset="1785">
+              <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
             <state />
           </provider>
         </entry>
@@ -244,7 +225,6 @@
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelHedgehogActivity.java" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/ChoosePuzzleActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/activity_game_fill.xml" />
-        <option value="$PROJECT_DIR$/res/layout-ar/activity_game_fill.xml" />
         <option value="$PROJECT_DIR$/res/values-hi/strings.xml" />
         <option value="$PROJECT_DIR$/res/layout/item_settings_spiner.xml" />
         <option value="$PROJECT_DIR$/res/layout/item_settings_spiner_dropdown.xml" />
@@ -269,6 +249,7 @@
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/menu_screen.xml" />
         <option value="$PROJECT_DIR$/res/layout/settings_screen.xml" />
+        <option value="$PROJECT_DIR$/res/layout-ar/activity_game_fill.xml" />
       </list>
     </option>
   </component>
@@ -335,6 +316,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Puzzly" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Puzzly" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout-ar" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -822,7 +821,11 @@
       <created>1403857861668</created>
       <updated>1403857861668</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Settings share panel. Menu fixes.">
+      <created>1403863058244</created>
+      <updated>1403863058244</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -922,7 +925,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="CHoose Puzzle Menu" />
     <MESSAGE value="Choose Puzzle Menu fixes" />
     <MESSAGE value="Text font fixes. Game and menu fixes." />
     <MESSAGE value="new bonus level" />
@@ -947,7 +949,8 @@
     <MESSAGE value="Arabix fixes" />
     <MESSAGE value="Settings Screen design update" />
     <MESSAGE value="Images rename. Pressed state for menu btns." />
-    <option name="LAST_COMMIT_MESSAGE" value="Images rename. Pressed state for menu btns." />
+    <MESSAGE value="Settings share panel. Menu fixes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Settings share panel. Menu fixes." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -980,17 +983,6 @@
           <caret line="77" column="40" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout-ar/activity_game_fill.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="257" max-vertical-offset="1768">
-          <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout-ar/item_choose_puzzle.xml">
@@ -1348,6 +1340,17 @@
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout-ar/activity_game_fill.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.653484" vertical-offset="1047" max-vertical-offset="1785">
+          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
         <state />
       </provider>
     </entry>
