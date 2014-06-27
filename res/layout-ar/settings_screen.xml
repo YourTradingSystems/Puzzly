@@ -76,9 +76,9 @@
                         android:id="@+id/tvPlayBackgroundMusic_SS"
                         android:layout_centerVertical="true"
                         android:textColor="@color/tc_settings"
-                        android:textSize="25dp"
+                        android:textSize="20dp"
                         android:layout_toLeftOf="@+id/ccbPlayBackgroundMusic_SS"
-                        android:layout_marginRight="10dp"/>
+                        android:layout_marginRight="15dp"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -102,9 +102,9 @@
                         android:id="@+id/tvPlaySound_SS"
                         android:layout_centerVertical="true"
                         android:textColor="@color/tc_settings"
-                        android:textSize="25dp"
+                        android:textSize="20dp"
                         android:layout_toLeftOf="@+id/ccbPlaySound_SS"
-                        android:layout_marginRight="10dp"/>
+                        android:layout_marginRight="15dp"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -128,9 +128,9 @@
                         android:id="@+id/tvVibrate_SS"
                         android:layout_centerVertical="true"
                         android:textColor="@color/tc_settings"
-                        android:textSize="25dp"
+                        android:textSize="20dp"
                         android:layout_toLeftOf="@+id/ccbVibrate_SS"
-                        android:layout_marginRight="10dp"/>
+                        android:layout_marginRight="15dp"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -154,9 +154,83 @@
                         android:id="@+id/tvDisplayInnerBorders_SS"
                         android:layout_centerVertical="true"
                         android:textColor="@color/tc_settings"
-                        android:textSize="25dp"
+                        android:textSize="20dp"
                         android:layout_toLeftOf="@+id/ccbDisplayInnerBorders_SS"
-                        android:layout_marginRight="10dp"/>
+                        android:layout_marginRight="15dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:id="@+id/rlPurchaseShare_SS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rlDisplayInnerBorders_SS"
+                    android:background="@drawable/background_settings_purchase"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="20dp">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_purchase"
+                        android:id="@+id/tvPurchase_SS"
+                        android:textColor="#ffffff"
+                        android:textSize="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/tvShare_SS"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_share"
+                        android:id="@+id/tvShare_SS"
+                        android:textSize="20dp"
+                        android:textColor="#ffffff"
+                        android:layout_alignRight="@+id/btnTwitter_SS"/>
+
+                <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnPurchase_SS"
+                        android:src="@drawable/btn_purchase"
+                        android:background="@null"
+                        android:layout_below="@+id/tvPurchase_SS"
+                        android:layout_marginTop="10dp"
+                        android:layout_alignParentRight="true"
+                        />
+
+                <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnTwitter_SS"
+                        android:background="@null"
+                        android:src="@drawable/btn_twitter"
+                        android:layout_alignTop="@+id/btnPurchase_SS"
+                        android:layout_toRightOf="@+id/btnFacebook_SS"
+                        android:layout_marginLeft="20dp"
+                        />
+
+                <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnFacebook_SS"
+                        android:background="@null"
+                        android:src="@drawable/btn_facebook"
+                        android:layout_alignTop="@+id/btnPurchase_SS"
+                        android:layout_toRightOf="@+id/btnGoogle_SS"
+                        android:layout_marginLeft="20dp"
+                        />
+
+                <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnGoogle_SS"
+                        android:background="@null"
+                        android:src="@drawable/btn_google"
+                        android:layout_alignTop="@+id/btnPurchase_SS"
+                        />
             </RelativeLayout>
 
             <LinearLayout
@@ -166,12 +240,12 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:background="@color/settings_header_bg"
-                android:layout_below="@+id/rlDisplayInnerBorders_SS"
+                android:layout_below="@+id/rlPurchaseShare_SS"
                 android:layout_marginTop="10dp"
-                android:paddingLeft="10dp"
-                android:paddingTop="5dp"
-                android:paddingRight="10dp"
-                android:paddingBottom="5dp">
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="10dp">
 
                 <Spinner
                     android:id="@+id/spinnerChooseStudyCountry_SS"
@@ -187,7 +261,7 @@
                     android:text="@string/settings_localize_study_language"
                     android:layout_weight="30"
                     android:textColor="#ffffff"
-                    android:textSize="25dp"/>
+                    android:textSize="20dp"/>
 
             </LinearLayout>
 
@@ -199,10 +273,10 @@
                 android:layout_below="@+id/llStudyLanguagePanel_SS"
                 android:gravity="center"
                 android:background="@color/settings_header_bg"
-                android:paddingLeft="10dp"
-                android:paddingTop="5dp"
-                android:paddingRight="10dp"
-                android:paddingBottom="5dp">
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="10dp">
 
                 <Spinner
                     android:id="@+id/spinnerChooseAppCountry_SS"
@@ -218,7 +292,7 @@
                     android:text="@string/settings_localize_app_language"
                     android:layout_weight="30"
                     android:textColor="#ffffff"
-                    android:textSize="25dp"/>
+                    android:textSize="20dp"/>
 
             </LinearLayout>
 

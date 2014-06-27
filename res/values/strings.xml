@@ -25,6 +25,9 @@
     <string name="settings_localize_app_language">Language of settings</string>
     <string name="settings_localize_study_language">Language of game</string>
 
+    <string name="settings_purchase">Version without ads</string>
+    <string name="settings_share">Share on</string>
+
     <string-array name="settings_languages">
         <item>English</item>
         <item>Українська</item>

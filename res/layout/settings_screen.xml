@@ -74,7 +74,7 @@
                         android:layout_marginLeft="10dp"
                         android:layout_centerVertical="true"
                         android:textColor="@color/tc_settings"
-                        android:textSize="25dp"/>
+                        android:textSize="20dp"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -99,7 +99,7 @@
                         android:layout_marginLeft="10dp"
                         android:layout_centerVertical="true"
                         android:textColor="@color/tc_settings"
-                        android:textSize="25dp"/>
+                        android:textSize="20dp"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -124,8 +124,10 @@
                         android:layout_marginLeft="10dp"
                         android:layout_centerVertical="true"
                         android:textColor="@color/tc_settings"
-                        android:textSize="25dp"/>
+                        android:textSize="20dp"/>
             </RelativeLayout>
+
+
 
             <RelativeLayout
                     android:id="@+id/rlDisplayInnerBorders_SS"
@@ -149,7 +151,77 @@
                         android:layout_marginLeft="10dp"
                         android:layout_centerVertical="true"
                         android:textColor="@color/tc_settings"
-                        android:textSize="25dp"/>
+                        android:textSize="20dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:id="@+id/rlPurchaseShare_SS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rlDisplayInnerBorders_SS"
+                    android:background="@drawable/background_settings_purchase"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="20dp">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_purchase"
+                        android:id="@+id/tvPurchase_SS"
+                        android:textColor="#ffffff"
+                        android:textSize="20dp"
+                        android:layout_toLeftOf="@+id/tvShare_SS"
+                        android:layout_marginRight="20dp"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_share"
+                        android:id="@+id/tvShare_SS"
+                        android:textSize="20dp"
+                        android:textColor="#ffffff"
+                        android:layout_alignLeft="@+id/btnTwitter_SS"/>
+
+                <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnPurchase_SS"
+                        android:src="@drawable/btn_purchase"
+                        android:background="@null"
+                        android:layout_below="@+id/tvPurchase_SS"
+                        android:layout_marginTop="10dp"
+                        />
+
+                <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnTwitter_SS"
+                        android:background="@null"
+                        android:src="@drawable/btn_twitter"
+                        android:layout_marginRight="20dp"
+                        android:layout_toLeftOf="@+id/btnFacebook_SS"
+                        android:layout_alignTop="@+id/btnPurchase_SS"/>
+
+                <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnFacebook_SS"
+                        android:background="@null"
+                        android:src="@drawable/btn_facebook"
+                        android:layout_marginRight="20dp"
+                        android:layout_toLeftOf="@+id/btnGoogle_SS"
+                        android:layout_alignTop="@+id/btnPurchase_SS"/>
+
+                <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnGoogle_SS"
+                        android:background="@null"
+                        android:src="@drawable/btn_google"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/btnPurchase_SS"/>
             </RelativeLayout>
 
             <LinearLayout
@@ -159,13 +231,11 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:background="@color/settings_header_bg"
-                android:layout_below="@+id/rlDisplayInnerBorders_SS"
-                android:layout_marginTop="10dp"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp"
-                android:padding="15dp">
+                android:layout_below="@+id/rlPurchaseShare_SS"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
 
                 <TextView
                     android:id="@+id/tvStudyLanguage_SS"
@@ -174,7 +244,7 @@
                     android:text="@string/settings_localize_study_language"
                     android:layout_weight="30"
                     android:textColor="#ffffff"
-                    android:textSize="25dp"/>
+                    android:textSize="20dp"/>
 
                 <Spinner
                     android:id="@+id/spinnerChooseStudyCountry_SS"
@@ -193,11 +263,10 @@
                 android:layout_below="@+id/llStudyLanguagePanel_SS"
                 android:gravity="center"
                 android:background="@color/settings_header_bg"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp"
-                android:padding="15dp">
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
 
                 <TextView
                     android:id="@+id/tvAppLanguage_SS"
@@ -206,7 +275,7 @@
                     android:text="@string/settings_localize_app_language"
                     android:layout_weight="30"
                     android:textColor="#ffffff"
-                    android:textSize="25dp"/>
+                    android:textSize="20dp"/>
 
                 <Spinner
                     android:id="@+id/spinnerChooseAppCountry_SS"

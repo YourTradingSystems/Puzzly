@@ -18,6 +18,9 @@
     <string name="settings_localize_app_language">عدادات اللغة</string>
     <string name="settings_localize_study_language">غة اللعبة</string>
 
+    <string name="settings_purchase">نسخة دون إعلانات</string>
+    <string name="settings_share">مشاركة على</string>
+
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
     <!-- ~~~~~~~~~~~~~~~~~~~ CHOOSE LEVEL ~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->

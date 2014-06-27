@@ -84,7 +84,7 @@ public class MenuActivity extends Activity {
                         Intent gameFillIntent = new Intent(MenuActivity.this, ChoosePuzzleActivity.class);
                         gameFillIntent.putExtra("type", 0);
                         startActivity(gameFillIntent);
-                        AppHelper.setRightHandTutorial(getApplicationContext(), true);
+                        AppHelper.setLeftHandTutorial(getApplicationContext(), true);
                         break;
 
                     case R.id.ivGameSimpleReveal_MS:
