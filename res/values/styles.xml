@@ -10,16 +10,4 @@
         <item name="android:typeface">monospace</item>
     </style>
 
-    <style name="HeaderName">
-        <item name="android:textSize">@dimen/ts_big</item>
-    </style>
-
-    <style name="HeaderBTN">
-        <item name="android:paddingLeft">@dimen/plr_header_button</item>
-        <item name="android:paddingRight">@dimen/plr_header_button</item>
-        <item name="android:layout_margin">@dimen/m_header_button</item>
-        <item name="android:src">@drawable/selector_arrow_previous</item>
-        <item name="android:background">@null</item>
-    </style>
-
 </resources>

@@ -2,8 +2,10 @@
 <resources>
     <color name="background_game">#D2E9F9</color>
     <color name="text_color">#2C5770</color>
-    <color name="settings_header_bg">#1594A3</color>
-    <color name="tc_settings">#2B5770</color>
+    <color name="settings_header_bg">#34495e</color>
+    <color name="tc_settings">#2c5770</color>
+    <color name="settings_purchase_bg_start">#1e8bc3</color>
+    <color name="settings_purchase_bg_end">#71bcf1</color>
     <color name="reminder_title">#2c5770</color>
     <color name="reminder_text">#34495e</color>
 </resources>

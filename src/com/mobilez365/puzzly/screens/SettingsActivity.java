@@ -37,28 +37,22 @@ public class SettingsActivity extends RestartActivty{
     private AdView adView;
     private SADView sadView;
 
-    private int displayInit = 0;
-
     private final AdapterView.OnItemSelectedListener mItemSelectListener = new AdapterView.OnItemSelectedListener() {
         @Override
         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-            if (displayInit > 1) {
-                if(parent.getId() == R.id.spinnerChooseAppCountry_SS) {
-                    AppHelper.setLocalizeAppLanguage(getApplicationContext(), position);
-                    AppHelper.changeLanguage(getApplicationContext(), AppHelper.getLocaleLanguage(getApplicationContext(), Constans.APP_LANGUAGE).name());
+            if(parent.getId() == R.id.spinnerChooseAppCountry_SS) {
+                AppHelper.setLocalizeAppLanguage(getApplicationContext(), position);
+                AppHelper.changeLanguage(getApplicationContext(), AppHelper.getLocaleLanguage(getApplicationContext(), Constans.APP_LANGUAGE).name());
 
-                    Intent mIntent = new Intent(SettingsActivity.
-                            this, SettingsActivity.class);
-                    mIntent.putExtra("scrollPos" , swMain.getScrollY());
-                    startActivity(mIntent);
-                    overridePendingTransition(0, 0);
-                    finish();
-                }
-                else
-                    AppHelper.setLocalizeStudyLanguage(getApplicationContext(), position);
+                Intent mIntent = new Intent(SettingsActivity.
+                        this, SettingsActivity.class);
+                mIntent.putExtra("scrollPos" , swMain.getScrollY());
+                startActivity(mIntent);
+                overridePendingTransition(0, 0);
+                finish();
             }
             else
-                displayInit ++;
+                AppHelper.setLocalizeStudyLanguage(getApplicationContext(), position);
         }
 
         @Override
@@ -113,8 +107,8 @@ public class SettingsActivity extends RestartActivty{
         setContentView(R.layout.settings_screen);
         findViews();
         showBanner();
-        setListener();
         setValues();
+        setListener();
     }
 
     @Override
@@ -182,8 +176,15 @@ public class SettingsActivity extends RestartActivty{
             ccbVibrate_SS.setVisibility(View.GONE);
 
         ccbDisplayInnerBorders_SS.setChecked(AppHelper.getShowImageBorder(getApplicationContext()));
-        spinnerChooseAppCountry_SS.setSelection(AppHelper.getLocalizeAppLanguage(getApplicationContext()));
-        spinnerChooseStudyCountry_SS.setSelection(AppHelper.getLocalizeStudyLanguage(getApplicationContext()));
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.settings_languages, R.layout.item_settings_spiner);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerChooseAppCountry_SS.setAdapter(adapter);
+        spinnerChooseStudyCountry_SS.setAdapter(adapter);
+        spinnerChooseAppCountry_SS.setSelection(AppHelper.getLocalizeAppLanguage(getApplicationContext()), false);
+        spinnerChooseStudyCountry_SS.setSelection(AppHelper.getLocalizeStudyLanguage(getApplicationContext()), false);
+
         swMain.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
             public void onGlobalLayout() {

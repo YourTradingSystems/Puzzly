@@ -15,7 +15,7 @@ d - divider height
     <dimen name="ts_small">15dp</dimen>
     <dimen name="ts_normal">20dp</dimen>
     <dimen name="ts_big">25dp</dimen>
-    <dimen name="p_normal">20dp</dimen>
+    <dimen name="p_normal">5dp</dimen>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
