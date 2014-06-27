@@ -22,6 +22,13 @@
       </config>
     </shared>
     <layouts>
+      <layout url="file://$PROJECT_DIR$/res/layout-ar/activity_bonus_level_flower.xml">
+        <config>
+          <device>Nexus 4</device>
+          <state>Landscape</state>
+          <theme>@style/MainAppTheme</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/res/layout-ar/activity_game_fill.xml">
         <config>
           <device>Nexus 4</device>
@@ -105,7 +112,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a79d8431-a31c-4800-9f13-431b5a1f9d4a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-ar/activity_game_fill.xml" afterPath="$PROJECT_DIR$/res/layout-ar/activity_game_fill.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-ar/activity_bonus_level_flower.xml" afterPath="$PROJECT_DIR$/res/layout-ar/activity_bonus_level_flower.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-ar/activity_bonus_level_hedgehog.xml" afterPath="$PROJECT_DIR$/res/layout-ar/activity_bonus_level_hedgehog.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-ar/activity_bonus_level_shake.xml" afterPath="$PROJECT_DIR$/res/layout-ar/activity_bonus_level_shake.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-ar/activity_bonus_level_tree.xml" afterPath="$PROJECT_DIR$/res/layout-ar/activity_bonus_level_tree.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Puzzly.iws" />
@@ -129,21 +139,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MenuActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="713" max-vertical-offset="5134">
-              <caret line="83" column="34" selection-start-line="83" selection-start-column="34" selection-end-line="83" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="menu_screen.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/menu_screen.xml">
+      <file leaf-file-name="activity_bonus_level_flower.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout-ar/activity_bonus_level_flower.xml">
           <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2237" max-vertical-offset="3298">
-              <caret line="149" column="71" selection-start-line="149" selection-start-column="71" selection-end-line="149" selection-end-column="71" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="166" max-vertical-offset="748">
+              <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -152,26 +152,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings_screen.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/settings_screen.xml">
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2474" max-vertical-offset="3910">
-              <caret line="224" column="29" selection-start-line="156" selection-start-column="10" selection-end-line="224" selection-end-column="29" />
-              <folding>
-                <element signature="tag#RelativeLayout#4;tag#RelativeLayout#0;tag#ScrollView#0;tag#RelativeLayout#0" expanded="false" />
-              </folding>
+      <file leaf-file-name="activity_bonus_level_hedgehog.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout-ar/activity_bonus_level_hedgehog.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.0" vertical-offset="540" max-vertical-offset="1071">
+              <caret line="54" column="31" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
-          <provider selected="true" editor-type-id="android-designer">
+          <provider editor-type-id="android-designer">
             <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_game_fill.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/res/layout-ar/activity_game_fill.xml">
+      <file leaf-file-name="activity_bonus_level_shake.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout-ar/activity_bonus_level_shake.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.653484" vertical-offset="1047" max-vertical-offset="1785">
-              <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+            <state vertical-scroll-proportion="-10.851851" vertical-offset="149" max-vertical-offset="680">
+              <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_bonus_level_tree.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/res/layout-ar/activity_bonus_level_tree.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6478343" vertical-offset="132" max-vertical-offset="663">
+              <caret line="28" column="58" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -199,10 +210,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/res/layout/testtest.xml" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/util/ShakeSensor.java" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/testActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzleFillGame.java" />
         <option value="$PROJECT_DIR$/res/layout/activity_choose_puzzle.xml" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/util/ChooseGamePagerAdapter.java" />
         <option value="$PROJECT_DIR$/res/values-ru/strings.xml" />
@@ -250,6 +257,10 @@
         <option value="$PROJECT_DIR$/res/layout/menu_screen.xml" />
         <option value="$PROJECT_DIR$/res/layout/settings_screen.xml" />
         <option value="$PROJECT_DIR$/res/layout-ar/activity_game_fill.xml" />
+        <option value="$PROJECT_DIR$/res/layout-ar/activity_bonus_level_flower.xml" />
+        <option value="$PROJECT_DIR$/res/layout-ar/activity_bonus_level_hedgehog.xml" />
+        <option value="$PROJECT_DIR$/res/layout-ar/activity_bonus_level_shake.xml" />
+        <option value="$PROJECT_DIR$/res/layout-ar/activity_bonus_level_tree.xml" />
       </list>
     </option>
   </component>
@@ -825,7 +836,11 @@
       <created>1403863058244</created>
       <updated>1403863058244</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Settings share panel. Menu fixes.">
+      <created>1403863233379</created>
+      <updated>1403863233379</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -970,48 +985,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/ChoosePuzzleActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7798165" vertical-offset="1632" max-vertical-offset="2278">
-          <caret line="136" column="13" selection-start-line="136" selection-start-column="13" selection-end-line="136" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values-hi/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33207548" vertical-offset="1133" max-vertical-offset="2074">
-          <caret line="77" column="40" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout-ar/item_choose_puzzle.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3723">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8238636" vertical-offset="4725" max-vertical-offset="5270">
-          <caret line="337" column="0" selection-start-line="337" selection-start-column="0" selection-end-line="337" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values-de/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2040">
-          <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.45822102" vertical-offset="136" max-vertical-offset="1377">
@@ -1345,8 +1318,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout-ar/activity_game_fill.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.653484" vertical-offset="1047" max-vertical-offset="1785">
+        <state vertical-scroll-proportion="-12.851851" vertical-offset="1047" max-vertical-offset="1785">
           <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout-ar/item_choose_puzzle.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3051181" vertical-offset="663" max-vertical-offset="3723">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout-ar/activity_bonus_level_flower.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="166" max-vertical-offset="748">
+          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout-ar/activity_bonus_level_hedgehog.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.0" vertical-offset="540" max-vertical-offset="1071">
+          <caret line="54" column="31" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout-ar/activity_bonus_level_shake.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.851851" vertical-offset="149" max-vertical-offset="680">
+          <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout-ar/activity_bonus_level_tree.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6478343" vertical-offset="132" max-vertical-offset="663">
+          <caret line="28" column="58" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
           <folding />
         </state>
       </provider>

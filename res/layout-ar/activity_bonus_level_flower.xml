@@ -32,10 +32,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/btnNextABF"
-            android:layout_alignParentRight="true"
-            android:src="@drawable/selector_arrow_next"
+            android:src="@drawable/selector_arrow_previous"
             android:background="@null"
-            android:paddingRight="35dp"
-            android:visibility="gone"/>
+            android:paddingLeft="35dp"/>
 
 </RelativeLayout>
