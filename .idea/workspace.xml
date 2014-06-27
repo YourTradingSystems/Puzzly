@@ -105,69 +105,93 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.mobilez365.puzzly" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a79d8431-a31c-4800-9f13-431b5a1f9d4a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_arrow_settings_next.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_arrow_settings_next.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_arrow_settings_next.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/btn_arrow_settings_next.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_arrow_settings_next_pressed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_arrow_settings_next_pressed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_arrow_settings_next_pressed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/btn_arrow_settings_next_pressed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_arrow_settings_previous.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_arrow_settings_previous.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_arrow_settings_previous.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/btn_arrow_settings_previous.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_arrow_settings_previous_pressed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_arrow_settings_previous_pressed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_arrow_settings_previous_pressed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/btn_arrow_settings_previous_pressed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/img_facebook.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/img_facebook.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/img_facebook.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/img_facebook.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/img_google.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/img_google.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/img_google.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/img_google.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/img_purchase.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/img_purchase.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/img_purchase.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/img_purchase.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/img_twitter.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/img_twitter.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/img_twitter.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/img_twitter.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/background_settings_purchase.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/item_settings_spiner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/selector_arrow_settings_next.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/selector_arrow_settings_previous.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/btn_arrow_next.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_arrow_next.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/btn_arrow_next.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_arrow_next.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/btn_arrow_next.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_arrow_next.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xxhdpi/btn_arrow_next.png" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/btn_arrow_next.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/btn_arrow_next_pressed.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_arrow_next_pressed.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/btn_arrow_next_pressed.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_arrow_next_pressed.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/btn_arrow_next_pressed.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_arrow_next_pressed.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xxhdpi/btn_arrow_next_pressed.png" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/btn_arrow_next_pressed.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/btn_arrow_previous.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_arrow_previous.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/btn_arrow_previous.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_arrow_previous.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/btn_arrow_previous.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_arrow_previous.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xxhdpi/btn_arrow_previous.png" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/btn_arrow_previous.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/btn_arrow_previous_pressed.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_arrow_previous_pressed.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/btn_arrow_previous_pressed.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_arrow_previous_pressed.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/btn_arrow_previous_pressed.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_arrow_previous_pressed.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xxhdpi/btn_arrow_previous_pressed.png" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/btn_arrow_previous_pressed.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java" />
+    <list default="true" id="a79d8431-a31c-4800-9f13-431b5a1f9d4a" name="Default" comment="Settings Screen design update">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_balloon_left.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_balloon_left.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_balloon_left.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/btn_balloon_left.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_balloon_left_pressed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_balloon_left_pressed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_balloon_left_pressed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/btn_balloon_left_pressed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_balloon_right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_balloon_right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_balloon_right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/btn_balloon_right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_balloon_right_pressed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_balloon_right_pressed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_balloon_right_pressed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/btn_balloon_right_pressed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_settings_pressed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_settings_pressed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_settings_pressed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/btn_settings_pressed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/selector_ballon_left.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/selector_ballon_right.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/selector_settings.xml" />
+      <change type="DELETED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-hdpi\img_basket_empty.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-hdpi\left_balloon_btn.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-hdpi\left_balloon_btn_press.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-hdpi\right_balloon_btn.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-hdpi\right_balloon_btn_press.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-mdpi\img_basket_empty.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-mdpi\left_balloon_btn.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-mdpi\left_balloon_btn_press.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-mdpi\right_balloon_btn.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-mdpi\right_balloon_btn_press.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-xhdpi\img_basket_empty.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-xhdpi\left_balloon_btn.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-xhdpi\left_balloon_btn_press.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-xhdpi\right_balloon_btn.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-xhdpi\right_balloon_btn_press.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-xxhdpi\img_basket_empty.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-xxhdpi\left_balloon_btn.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-xxhdpi\left_balloon_btn_press.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-xxhdpi\right_balloon_btn.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-xxhdpi\right_balloon_btn_press.png" afterPath="" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-hdpi\basket_img.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/img_basket.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-hdpi\candy_icon.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/img_candy_big.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-hdpi\hand_left.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/img_tutorial_hand_left.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-hdpi\hand_right.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/img_tutorial_hand_right.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-hdpi\img_facebook.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_facebook.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-hdpi\img_google.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_google.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-hdpi\img_purchase.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_purchase.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-hdpi\img_twitter.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_twitter.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-hdpi\logo_img.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/img_logo.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-hdpi\settings_icon.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_settings.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-mdpi\basket_img.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/img_basket.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-mdpi\candy_icon.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/img_candy_big.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-mdpi\hand_left.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/img_tutorial_hand_left.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-mdpi\hand_right.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/img_tutorial_hand_right.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-mdpi\img_facebook.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_facebook.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-mdpi\img_google.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_google.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-mdpi\img_purchase.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_purchase.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-mdpi\img_twitter.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_twitter.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-mdpi\logo_img.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/img_logo.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-mdpi\settings_icon.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_settings.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-xhdpi\basket_img.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/img_basket.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-xhdpi\candy_icon.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/img_candy_big.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-xhdpi\hand_left.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/img_tutorial_hand_left.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-xhdpi\hand_right.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/img_tutorial_hand_right.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-xhdpi\img_facebook.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_facebook.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-xhdpi\img_google.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_google.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-xhdpi\img_purchase.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_purchase.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-xhdpi\img_twitter.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_twitter.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-xhdpi\logo_img.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/img_logo.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-xhdpi\settings_icon.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_settings.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-xxhdpi\basket_img.png" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/img_basket.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-xxhdpi\candy_icon.png" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/img_candy_big.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-xxhdpi\hand_left.png" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/img_tutorial_hand_left.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-xxhdpi\hand_right.png" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/img_tutorial_hand_right.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-xxhdpi\img_facebook.png" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/btn_facebook.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-xxhdpi\img_google.png" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/btn_google.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-xxhdpi\img_purchase.png" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/btn_purchase.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-xxhdpi\img_twitter.png" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/btn_twitter.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-xxhdpi\logo_img.png" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/img_logo.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-xxhdpi\settings_icon.png" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/btn_settings.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_game_fill.xml" afterPath="$PROJECT_DIR$/res/layout/activity_game_fill.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-ar/activity_game_fill.xml" afterPath="$PROJECT_DIR$/res/layout-ar/activity_game_fill.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/colors.xml" afterPath="$PROJECT_DIR$/res/values/colors.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/dimens.xml" afterPath="$PROJECT_DIR$/res/values/dimens.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/settings_screen.xml" afterPath="$PROJECT_DIR$/res/layout/settings_screen.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-ar/settings_screen.xml" afterPath="$PROJECT_DIR$/res/layout-ar/settings_screen.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-hi/strings.xml" afterPath="$PROJECT_DIR$/res/values-hi/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/styles.xml" afterPath="$PROJECT_DIR$/res/values/styles.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/styles_settings.xml" afterPath="$PROJECT_DIR$/res/values/styles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-ar/styles_settings.xml" afterPath="$PROJECT_DIR$/res/values-ar/styles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/menu_screen.xml" afterPath="$PROJECT_DIR$/res/layout/menu_screen.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Puzzly.iws" />
@@ -191,13 +215,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SettingsActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SettingsActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37741047" vertical-offset="2481" max-vertical-offset="3179">
-              <caret line="176" column="0" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2481" max-vertical-offset="3179">
+              <caret line="178" column="0" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menu_screen.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/res/layout/menu_screen.xml">
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2404" max-vertical-offset="3298">
+              <caret line="157" column="32" selection-start-line="157" selection-start-column="32" selection-end-line="157" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
           </provider>
         </entry>
       </file>
@@ -220,9 +257,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/res/raw/radish_result.svg" />
-        <option value="$PROJECT_DIR$/res/layout/activity_bonus_level_shake.xml" />
-        <option value="$PROJECT_DIR$/res/values-ar/strings.xml" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/ApplicationClass.java" />
         <option value="$PROJECT_DIR$/res/layout/asfasf.xml" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/dfgdfgdfg.java" />
@@ -270,6 +304,9 @@
         <option value="$PROJECT_DIR$/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/res/values/dimens.xml" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java" />
+        <option value="$PROJECT_DIR$/res/drawable/selector_ballon_left.xml" />
+        <option value="$PROJECT_DIR$/res/drawable/selector_ballon_right.xml" />
+        <option value="$PROJECT_DIR$/res/drawable/selector_settings.xml" />
         <option value="$PROJECT_DIR$/res/layout/menu_screen.xml" />
       </list>
     </option>
@@ -339,10 +376,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="puzzly" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -354,37 +387,7 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="puzzly" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="screens" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Puzzly" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Puzzly" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="puzzly" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="puzzles" />
+              <option name="myItemId" value="res" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -399,6 +402,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Puzzly" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Puzzly" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable-hdpi" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Puzzly" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Puzzly" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -442,13 +485,13 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="833" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="156" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="157" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="152" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="154" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="156" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="158" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="815" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="823" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="LayoutCode.rearrangeEntriesXML" value="false" />
     <property name="ExportedModule" value="Puzzly" />
@@ -860,7 +903,11 @@
       <created>1403855649295</created>
       <updated>1403855649295</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Settings Screen design update">
+      <created>1403855670148</created>
+      <updated>1403855670148</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -885,14 +932,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3105802" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3105802" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32764506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43515357" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3208191" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -912,7 +960,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32764506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -1005,114 +1052,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/anim/menu_balloon_rotate_left.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="558">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../android-sdk/sources/android-19/android/content/ContextWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="681" max-vertical-offset="8381">
-          <caret line="107" column="19" selection-start-line="107" selection-start-column="19" selection-end-line="107" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/util/ParseSvgAsyncTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="120" max-vertical-offset="969">
-          <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/customViews/GameView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5396518" vertical-offset="401" max-vertical-offset="4284">
-          <caret line="56" column="30" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/RestartActivty.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/util/BackgroundSound.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1190">
-          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values-uk/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42114696" vertical-offset="1516" max-vertical-offset="2074">
-          <caret line="103" column="30" selection-start-line="103" selection-start-column="30" selection-end-line="103" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values-es/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3207547" vertical-offset="0" max-vertical-offset="2074">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="10459" max-vertical-offset="18581">
-          <caret line="891" column="57" selection-start-line="891" selection-start-column="57" selection-end-line="891" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/google-play-services_lib/libs/google-play-services.jar!/com/google/android/gms/ads/InterstitialAd.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15947467" vertical-offset="0" max-vertical-offset="533">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/InterstitialActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57347673" vertical-offset="241" max-vertical-offset="799">
-          <caret line="37" column="98" selection-start-line="37" selection-start-column="98" selection-end-line="37" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values-fr/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3655914" vertical-offset="340" max-vertical-offset="2074">
-          <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../android-sdk/sources/android-19/android/widget/CompoundButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="2517" max-vertical-offset="5882">
-          <caret line="195" column="16" selection-start-line="195" selection-start-column="16" selection-end-line="195" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/customViews/ColorsCheckBox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="918">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelShakeActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1034" max-vertical-offset="3791">
-          <caret line="102" column="80" selection-start-line="102" selection-start-column="80" selection-end-line="102" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelTreeActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1097" max-vertical-offset="4199">
@@ -1156,17 +1095,6 @@
         <state vertical-scroll-proportion="0.7798165" vertical-offset="1632" max-vertical-offset="2278">
           <caret line="136" column="13" selection-start-line="136" selection-start-column="13" selection-end-line="136" selection-end-column="13" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_game_fill.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1751">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values-hi/strings.xml">
@@ -1366,6 +1294,112 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10831721" vertical-offset="2970" max-vertical-offset="5134">
+          <caret line="204" column="67" selection-start-line="204" selection-start-column="67" selection-end-line="204" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/btn_settings.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/img_bonus_basket.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/background_done_level.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/background_menu.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/background_new_level.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/btn_purchase.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/img_logo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/img_candy_big.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/img_basket.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable/selector_ballon_left.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
+          <caret line="4" column="54" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable/selector_ballon_right.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1218638" vertical-offset="0" max-vertical-offset="558">
+          <caret line="4" column="55" selection-start-line="4" selection-start-column="55" selection-end-line="4" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2481" max-vertical-offset="3179">
+          <caret line="178" column="0" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_game_fill.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="754" max-vertical-offset="1768">
+          <caret line="51" column="33" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable/selector_settings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
+          <caret line="4" column="50" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/btn_balloon_left_pressed.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/btn_balloon_left.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/menu_screen.xml">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2404" max-vertical-offset="3298">
@@ -1375,22 +1409,6 @@
       </provider>
       <provider selected="true" editor-type-id="android-designer">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10831721" vertical-offset="2970" max-vertical-offset="5134">
-          <caret line="204" column="67" selection-start-line="204" selection-start-column="67" selection-end-line="204" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37741047" vertical-offset="2481" max-vertical-offset="3179">
-          <caret line="176" column="0" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
-          <folding />
-        </state>
       </provider>
     </entry>
   </component>

@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:src="@drawable/logo_img"
+        android:src="@drawable/img_logo"
         android:paddingBottom="30dp"/>
 
     <LinearLayout
@@ -37,7 +37,7 @@
                 android:layout_centerInParent="true"
                 android:layout_alignParentTop="true"
                 android:background="@null"
-                android:src="@drawable/settings_icon"/>
+                android:src="@drawable/selector_settings"/>
 
         </RelativeLayout>
 
@@ -53,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_alignParentTop="true"
-                android:src="@drawable/candy_icon"/>
+                android:src="@drawable/img_candy_big"/>
 
             <TextView
                 android:id="@+id/tvGameAchievement_MS"
@@ -98,15 +98,15 @@
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     style="@style/MenuGameImage"
-                    android:src="@drawable/right_balloon_btn"/>
+                    android:src="@drawable/selector_ballon_right"/>
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/ivGameSimpleReveal_MS"
-                    android:src="@drawable/basket_img"
+                    android:src="@drawable/img_basket"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="-25dp"/>
+                    android:layout_marginTop="-50dp"/>
             </RelativeLayout>
 
             <ImageView
@@ -118,7 +118,7 @@
                 android:layout_alignParentLeft="true"
                 android:padding="10dp"
                 android:layout_marginBottom="25dp"
-                android:src="@drawable/hand_left"/>
+                android:src="@drawable/img_tutorial_hand_left"/>
 
         </RelativeLayout>
 
@@ -142,15 +142,15 @@
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
                         style="@style/MenuGameImage"
-                        android:src="@drawable/left_balloon_btn"/>
+                        android:src="@drawable/selector_ballon_left"/>
 
                 <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/ivGameSimpleFill_MS"
-                        android:src="@drawable/basket_img"
+                        android:src="@drawable/img_basket"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginTop="-25dp"/>
+                        android:layout_marginTop="-50dp"/>
 
             </RelativeLayout>
 
@@ -163,7 +163,7 @@
                     android:layout_alignParentRight="true"
                     android:padding="10dp"
                     android:layout_marginBottom="25dp"
-                    android:src="@drawable/hand_right"/>
+                    android:src="@drawable/img_tutorial_hand_right"/>
 
         </RelativeLayout>
 
