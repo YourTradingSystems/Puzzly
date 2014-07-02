@@ -109,7 +109,7 @@ public class ChoosePuzzleActivity extends RestartActivty {
         levelsAdapter = new ChooseGamePagerAdapter(getApplicationContext(), mGameType, size);
         levelsViewPager.setAdapter(levelsAdapter);
         //Reverse for arabic
-        int currentItem =  AppHelper.getLocalizeStudyLanguage(getApplicationContext())== 8 ? (PuzzlesDB.getPuzzleGameCount(getApplicationContext(), mGameType) - AppHelper.getCurrentGame(getApplicationContext(), mGameType)) / 4: AppHelper.getCurrentGame(getApplicationContext(), mGameType) / 4;
+        int currentItem =  AppHelper.getLocalizeStudyLanguage(getApplicationContext()).equals("ar") ? (PuzzlesDB.getPuzzleGameCount(getApplicationContext(), mGameType) - AppHelper.getCurrentGame(getApplicationContext(), mGameType)) / 4: AppHelper.getCurrentGame(getApplicationContext(), mGameType) / 4;
         levelsViewPager.setCurrentItem( currentItem );
     }
 

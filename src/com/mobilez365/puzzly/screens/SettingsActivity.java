@@ -19,6 +19,11 @@ import com.mobilez365.puzzly.util.SocialShare;
 import com.startad.lib.SADView;
 import org.brickred.socialauth.android.SocialAuthAdapter;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Locale;
+
 /**
  * Created by Denis on 12.05.14.
  */
@@ -69,7 +74,7 @@ public class SettingsActivity extends RestartActivty{
         @Override
         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
             if(parent.getId() == R.id.spinnerChooseAppCountry_SS) {
-                AppHelper.setLocalizeAppLanguage(getApplicationContext(), position);
+                AppHelper.setLocalizeAppLanguage(getApplicationContext(), getLanguageLocale(((TextView)view).getText().toString()));
                 AppHelper.changeLanguage(getApplicationContext(), AppHelper.getLocaleLanguage(getApplicationContext(), Constans.APP_LANGUAGE).name());
 
                 Intent mIntent = new Intent(SettingsActivity.
@@ -80,7 +85,7 @@ public class SettingsActivity extends RestartActivty{
                 finish();
             }
             else
-                AppHelper.setLocalizeStudyLanguage(getApplicationContext(), position);
+                AppHelper.setLocalizeStudyLanguage(getApplicationContext(), getLanguageLocale(((TextView)view).getText().toString()));
         }
 
         @Override
@@ -212,6 +217,7 @@ public class SettingsActivity extends RestartActivty{
         findViewById(R.id.rlPlayBackgroundMusic_SS).setOnClickListener(mOnClickListener);
         findViewById(R.id.rlPlaySound_SS).setOnClickListener(mOnClickListener);
         findViewById(R.id.rlVibrate_SS).setOnClickListener(mOnClickListener);
+        findViewById(R.id.rlDisplayInnerBorders_SS).setOnClickListener(mOnClickListener);
         findViewById(R.id.btnTwitter_SS).setOnClickListener(mOnClickListener);
         findViewById(R.id.btnGoogle_SS).setOnClickListener(mOnClickListener);
         findViewById(R.id.btnFacebook_SS).setOnClickListener(mOnClickListener);
@@ -231,13 +237,15 @@ public class SettingsActivity extends RestartActivty{
 
         ccbDisplayInnerBorders_SS.setChecked(AppHelper.getShowImageBorder(getApplicationContext()));
 
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.settings_languages, R.layout.item_settings_spiner);
+        CharSequence[] languageArray = getResources().getTextArray(R.array.settings_languages);
+        ArrayAdapter<CharSequence> adapter = new ArrayAdapter<CharSequence>(this,
+                R.layout.item_settings_spiner, languageArray);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
         spinnerChooseAppCountry_SS.setAdapter(adapter);
         spinnerChooseStudyCountry_SS.setAdapter(adapter);
-        spinnerChooseAppCountry_SS.setSelection(AppHelper.getLocalizeAppLanguage(getApplicationContext()), false);
-        spinnerChooseStudyCountry_SS.setSelection(AppHelper.getLocalizeStudyLanguage(getApplicationContext()), false);
+        spinnerChooseAppCountry_SS.setSelection(getLanguagePosition(adapter, AppHelper.getLocalizeAppLanguage(getApplicationContext())), false);
+        spinnerChooseStudyCountry_SS.setSelection(getLanguagePosition(adapter, AppHelper.getLocalizeStudyLanguage(getApplicationContext())), false);
 
         swMain.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
@@ -251,6 +259,57 @@ public class SettingsActivity extends RestartActivty{
         loadingDialog.setMessage("Loading...");
         loadingDialog.setCancelable(false);
     }
+
+    private int getLanguagePosition(ArrayAdapter adapter, String language){
+        if(language.equals("en"))
+            return adapter.getPosition("English");
+        else if(language.equals("uk"))
+            return adapter.getPosition("Українська");
+        else if(language.equals("ru"))
+            return adapter.getPosition("Русский");
+        else if(language.equals("hu"))
+            return adapter.getPosition("Magyar");
+        else if(language.equals("de"))
+            return adapter.getPosition("Deutsch");
+        else if(language.equals("fr"))
+            return adapter.getPosition("la France");
+        else if(language.equals("es"))
+            return adapter.getPosition("España");
+        else if(language.equals("zh"))
+            return adapter.getPosition("中文");
+        else if(language.equals("ar"))
+            return adapter.getPosition("العربية");
+        else if(language.equals("hi"))
+            return adapter.getPosition("हिंदी");
+
+        return adapter.getPosition("English");
+    }
+
+    private String getLanguageLocale(String language){
+        if(language.equals("English"))
+            return "en";
+        else if(language.equals("Українська"))
+            return "uk";
+        else if(language.equals("Русский"))
+            return "ru";
+        else if(language.equals("Magyar"))
+            return "hu";
+        else if(language.equals("Deutsch"))
+            return "de";
+        else if(language.equals("la France"))
+            return "fr";
+        else if(language.equals("España"))
+            return "es";
+        else if(language.equals("中文"))
+            return "zh";
+        else if(language.equals("العربية"))
+            return "ar";
+        else if(language.equals("हिंदी"))
+            return "hi";
+
+        return "en";
+    }
+
     private void showBanner() {
         LinearLayout layout = (LinearLayout)findViewById(R.id.llBanner_SS);
         layout.removeAllViews();

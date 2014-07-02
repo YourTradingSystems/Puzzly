@@ -1,17 +1,18 @@
 package com.mobilez365.puzzly.screens;
 
+import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.view.animation.TranslateAnimation;
 import android.widget.*;
 import com.google.android.gms.ads.AdView;
 import com.mobilez365.puzzly.R;
@@ -43,7 +44,7 @@ public class MenuActivity extends Activity {
     private SADView sadView;
 
     private List<ImageView> mClouds = new ArrayList<ImageView>();
-    private List<Animation> mCloudsAnimations = new ArrayList<Animation>();
+    private List<ObjectAnimator> mCloudsAnimations = new ArrayList<ObjectAnimator>();
     private Animation leftBalonAnim;
     private Animation rightBalonAnim;
     private Animation leftHandAnim;
@@ -71,16 +72,23 @@ public class MenuActivity extends Activity {
         }
     };
 
+    private final View.OnLongClickListener settingsLongClickListener =  new View.OnLongClickListener() {
+        @Override
+        public boolean onLongClick(View v) {
+            startActivity(new Intent(MenuActivity.this, SettingsActivity.class));
+            return false;
+        }
+    };
+
     private final View.OnClickListener mOnClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             if (v.isClickable()) {
-                btnGameSettings_MS.setClickable(false);
-                ivGameSimpleReveal_MS.setClickable(false);
-                ivGameSimpleFill_MS.setClickable(false);
                 switch (v.getId()) {
-
                     case R.id.ivGameSimpleFill_MS:
+                        ivGameSimpleReveal_MS.setClickable(false);
+                        ivGameSimpleFill_MS.setClickable(false);
+                        btnGameSettings_MS.setClickable(false);
                         Intent gameFillIntent = new Intent(MenuActivity.this, ChoosePuzzleActivity.class);
                         gameFillIntent.putExtra("type", 0);
                         startActivity(gameFillIntent);
@@ -88,6 +96,9 @@ public class MenuActivity extends Activity {
                         break;
 
                     case R.id.ivGameSimpleReveal_MS:
+                        ivGameSimpleReveal_MS.setClickable(false);
+                        ivGameSimpleFill_MS.setClickable(false);
+                        btnGameSettings_MS.setClickable(false);
                         Intent gameIntent = new Intent(MenuActivity.this, ChoosePuzzleActivity.class);
                         gameIntent.putExtra("type", 1);
                         startActivity(gameIntent);
@@ -95,7 +106,7 @@ public class MenuActivity extends Activity {
                         break;
 
                     case R.id.btnGameSettings_MS:
-                        startActivity(new Intent(MenuActivity.this, SettingsActivity.class));
+                        Toast.makeText(MenuActivity.this, getString(R.string.menu_settings_long_click), Toast.LENGTH_SHORT).show();
                         break;
 
                 }
@@ -120,6 +131,10 @@ public class MenuActivity extends Activity {
         showReminderDialog();
         startAnimation();
         PuzzlesDB.addBasePuzzlesToDB(getApplicationContext());
+
+        SharedPreferences.Editor editor = getSharedPreferences(Constans.PREFERENCES_NAME,MODE_PRIVATE).edit();
+        editor.putInt(Constans.LOCALIZE_STUDY_LANGUAGE, 3);
+        editor.commit();
     }
 
     @Override
@@ -166,7 +181,7 @@ public class MenuActivity extends Activity {
         if(sadView != null)
             sadView.destroy();
 
-        for (Animation mCloudsAnimation : mCloudsAnimations) {
+        for (ObjectAnimator mCloudsAnimation : mCloudsAnimations) {
             mCloudsAnimation.cancel();
         }
 
@@ -210,12 +225,13 @@ public class MenuActivity extends Activity {
         ivGameSimpleFill_MS.setOnClickListener(mOnClickListener);
         ivGameSimpleReveal_MS.setOnClickListener(mOnClickListener);
         btnGameSettings_MS.setOnClickListener(mOnClickListener);
+        btnGameSettings_MS.setOnLongClickListener(settingsLongClickListener);
     }
 
     private final void startAnimation() {
         Animation logoScaleAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.menu_logo);
         startCloudAnimation(0);
-        startCloudAnimation(15000);
+        startCloudAnimation(10000);
 
         if (!AppHelper.getLeftHandTutorial(getApplicationContext())) {
             leftHandAnim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.menu_hand_left);
@@ -252,22 +268,27 @@ public class MenuActivity extends Activity {
 
         for (int i = 0; i < cloudCount; i++) {
             y += rand.nextInt(50);
-            Animation animation = new TranslateAnimation(-250, getResources().getDisplayMetrics().widthPixels, y, y);
-            animation.setDuration(rand.nextInt(20000) + 30000);
-            animation.setInterpolator(getApplicationContext(), android.R.anim.linear_interpolator);
-            animation.setRepeatCount(Animation.INFINITE);
-            animation.setRepeatMode(Animation.RESTART);
-            animation.setStartOffset(_startOffset);
-
-            mCloudsAnimations.add(animation);
 
             ImageView animCloud = new ImageView(this);
             animCloud.setImageResource(cloud[rand.nextInt(cloud.length)]);
-            animCloud.startAnimation(animation);
+            animCloud.setY(y);
+            animCloud.setX(-250);
             animCloud.setVisibility(View.GONE);
             rlMenuMainLayout_MS.addView(animCloud, 0);
             y += 50;
             mClouds.add(animCloud);
+
+            ObjectAnimator animation = ObjectAnimator.ofFloat(animCloud, "translationX", -250,  getResources().getDisplayMetrics().widthPixels);
+            animation.setDuration(rand.nextInt(20000) + 30000);
+           // animation.setInterpolator(getApplicationContext(), android.R.anim.linear_interpolator);
+            animation.setRepeatCount(Animation.INFINITE);
+            animation.setRepeatMode(Animation.RESTART);
+            animation.start();
+            if(_startOffset == 0)
+                animation.setCurrentPlayTime(rand.nextInt((int) animation.getDuration()));
+            else
+                animation.setStartDelay(_startOffset + rand.nextInt((10000)));
+            mCloudsAnimations.add(animation);
         }
     }
 

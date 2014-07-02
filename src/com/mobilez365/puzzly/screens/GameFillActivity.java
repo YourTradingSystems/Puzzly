@@ -143,10 +143,10 @@ public class GameFillActivity extends RestartActivty {
         @Override
         public void onClick(View v) {
             if (v.isClickable()) {
-                nextGame.setClickable(false);
-                previousGame.setClickable(false);
                 switch (v.getId()) {
                     case R.id.btnNextAGF:
+                        nextGame.setClickable(false);
+                        previousGame.setClickable(false);
                         if(mPlayer != null) {
                             mPlayer.stop();
                             mPlayer.release();
@@ -154,6 +154,8 @@ public class GameFillActivity extends RestartActivty {
                         switchGame(true);
                         break;
                     case R.id.btnPreviousAGF:
+                        nextGame.setClickable(false);
+                        previousGame.setClickable(false);
                         if(mPlayer != null) {
                             mPlayer.stop();
                             mPlayer.release();

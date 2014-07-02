@@ -6,6 +6,7 @@
 
     <string name="menu_settings">SETTINGS</string>
     <string name="menu_back">Back</string>
+    <string name="menu_settings_long_click">Please hold button to show settings</string>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
     <!-- ~~~~~~~~~~~~~~~~~~~ MENU DIALOG~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->

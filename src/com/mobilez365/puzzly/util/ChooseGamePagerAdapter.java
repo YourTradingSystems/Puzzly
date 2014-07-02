@@ -60,7 +60,7 @@ public class ChooseGamePagerAdapter extends PagerAdapter {
         maxFigureWidth = (int) (size.x * 0.3f);
         maxFigureHeight = (int) (size.y * 0.3f);
         //Reverse for Arabic
-        rldr = AppHelper.getLocalizeStudyLanguage(_context)== 8 ? true : false;
+        rldr = AppHelper.getLocalizeStudyLanguage(_context).equals("ar") ? true : false;
     }
 
     @Override
