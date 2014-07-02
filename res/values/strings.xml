@@ -58,6 +58,15 @@
     <string name="choose_level_locked_level">Level locked</string>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
+    <!-- ~~~~~~~~~~~~~~~~~~~ InAppPurchase ~~~~~~~~~~~~~~~~~~~~~~ !-->
+    <string name="purchaseKey">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgvaUVCzE0PcWh9a4IynfouPxMvRXulwyCHC0WVcz4gwHf9X2y
+        8E0z1VUDQg9XaCdnveVsvO6gzeejwRz9EuBH4xqDfXqVRpFsR0LyfDqkHPF6L/FRn1j0Iu7XC9wp3KABV/3uh5vzCi9Qtw4/OVH03jSU9tdXuD1zDng
+        KXQy2dagtSEM6J971cagW+fhWi8jSVPMaijB6y8QH+2XnXm4ANQ/CY9OqZ9Y6WYRqjH7yiSPEv17mQHV/v39NsFO70oXScbxRv8okTaiZKezZ64Txe6
+        TqB3F4FVsidSxy4fad/n0N9qjV5n5qIRQYwX8VxI65zwtRD9yAJUw4l5aP9OPewIDAQAB/FRn1j0Iu7XC9wp3KABV/3uh5vzCi9Qtw4/OVH03jSU9td
+        XuD1zDngKXQy2dagtSEM6J971cagW+fhWi8jSVPMaijB6y8QH+2XnXm4ANQ/CY9OqZ9Y6WYRqjH7yiSPEv17mQHV/v39NsFO70oXScbxRv8okTaiZKe
+        zZ64Txe6TqB3F4FVsidSxy4fad/n0N9qjV5n5qIRQYwX8VxI65zwtRD9yAJUw4l5aP9OPewIDAQAB</string>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
     <!-- ~~~~~~~~~~~~~~~~~~~ GOOGLE MOBILE ADS ~~~~~~~~~~~~~~~~~~~~~~ !-->
     <string name="adUnitId">ca-app-pub-8370463222730338/1478726002</string>
     <string name="interstitialAdUnitId">ca-app-pub-8370463222730338/1339125208</string>

@@ -15,6 +15,8 @@ import com.google.android.gms.plus.PlusShare;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
 import com.mobilez365.puzzly.global.Constans;
+import com.mobilez365.puzzly.util.Purchase;
+import com.mobilez365.puzzly.util.PurchaseHelper;
 import com.mobilez365.puzzly.util.SocialShare;
 import com.startad.lib.SADView;
 import org.brickred.socialauth.android.SocialAuthAdapter;
@@ -152,6 +154,10 @@ public class SettingsActivity extends RestartActivty{
                     shareFacebook.shareToSocial(SettingsActivity.this,
                             SocialAuthAdapter.Provider.FACEBOOK, mShareListener, getString(R.string.share_message));
                     break;
+
+                case R.id.btnPurchase_SS:
+                    PurchaseHelper.purchaseAdSubscription(SettingsActivity.this);
+                    break;
             }
         }
     };
@@ -162,6 +168,9 @@ public class SettingsActivity extends RestartActivty{
 
         super.onCreate(_savedInstanceState);
         setContentView(R.layout.settings_screen);
+
+        PurchaseHelper.initPurchaseWorker(this);
+
         findViews();
         showBanner();
         setValues();
@@ -198,7 +207,18 @@ public class SettingsActivity extends RestartActivty{
             adView.destroy();
         if(sadView != null)
             sadView.destroy();
+
+        PurchaseHelper.DestroyHelper();
+
         super.onDestroy();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (!PurchaseHelper.isHelperInit()) return;
+
+        if (!PurchaseHelper.handleResult(requestCode, resultCode, data))
+            super.onActivityResult(requestCode, resultCode, data);
     }
 
     private final void findViews() {
@@ -221,6 +241,7 @@ public class SettingsActivity extends RestartActivty{
         findViewById(R.id.btnTwitter_SS).setOnClickListener(mOnClickListener);
         findViewById(R.id.btnGoogle_SS).setOnClickListener(mOnClickListener);
         findViewById(R.id.btnFacebook_SS).setOnClickListener(mOnClickListener);
+        findViewById(R.id.btnPurchase_SS).setOnClickListener(mOnClickListener);
         spinnerChooseAppCountry_SS.setOnItemSelectedListener(mItemSelectListener);
         spinnerChooseStudyCountry_SS.setOnItemSelectedListener(mItemSelectListener);
     }
