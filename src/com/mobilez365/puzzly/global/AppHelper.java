@@ -359,7 +359,7 @@ public class AppHelper {
         } finally {
             if (lang == null){
                 String value = Locale.getDefault().getLanguage();
-                if(Languages.contains(value)) return value;
+                if(Languages.contains(value)) lang = value;
                 else   lang = "en";
             }
         }
@@ -381,7 +381,7 @@ public class AppHelper {
         } finally {
             if (lang == null){
                 String value = Locale.getDefault().getLanguage();
-                if(Languages.contains(value)) return value;
+                if(Languages.contains(value)) lang = value;
              else   lang = "en";
             }
         }

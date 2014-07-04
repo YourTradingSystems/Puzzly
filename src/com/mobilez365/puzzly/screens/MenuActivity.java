@@ -129,9 +129,9 @@ public class MenuActivity extends Activity {
         startAnimation();
         PuzzlesDB.addBasePuzzlesToDB(getApplicationContext());
 
-        SharedPreferences.Editor editor = getSharedPreferences(Constans.PREFERENCES_NAME,MODE_PRIVATE).edit();
+/*        SharedPreferences.Editor editor = getSharedPreferences(Constans.PREFERENCES_NAME,MODE_PRIVATE).edit();
         editor.putInt(Constans.LOCALIZE_STUDY_LANGUAGE, 3);
-        editor.commit();
+        editor.commit();*/
     }
 
     @Override

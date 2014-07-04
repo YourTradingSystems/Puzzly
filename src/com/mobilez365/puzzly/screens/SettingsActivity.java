@@ -86,8 +86,7 @@ public class SettingsActivity extends RestartActivty{
                 overridePendingTransition(0, 0);
                 finish();
             }
-            else
-                AppHelper.setLocalizeStudyLanguage(getApplicationContext(), getLanguageLocale(((TextView)view).getText().toString()));
+            else if(parent.getId() == R.id.spinnerChooseStudyCountry_SS) AppHelper.setLocalizeStudyLanguage(getApplicationContext(), getLanguageLocale(((TextView)view).getText().toString()));
         }
 
         @Override
