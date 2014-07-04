@@ -21,10 +21,7 @@ import com.mobilez365.puzzly.global.Constans;
 import com.mobilez365.puzzly.puzzles.PuzzlesDB;
 import com.startad.lib.SADView;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-import java.util.Random;
+import java.util.*;
 
 public class MenuActivity extends Activity {
 

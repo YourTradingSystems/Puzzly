@@ -17,6 +17,7 @@ import com.mobilez365.puzzly.puzzles.PuzzlesDB;
 import com.mobilez365.puzzly.util.BackgroundSound;
 
 import java.lang.reflect.Field;
+import java.util.EnumSet;
 import java.util.List;
 import java.util.Locale;
 
@@ -41,8 +42,15 @@ public class AppHelper {
         zh,
         ar,
         //he,
-        hi
-    }
+        hi;
+        public static boolean contains(String s)
+        {
+            for(Languages choice:values())
+                if (choice.name().equals(s))
+                    return true;
+            return false;
+        }
+        }
 
     public static void setDefaultFont(Context context) {
         final Typeface regular = Typeface.createFromAsset(context.getAssets(),
@@ -83,27 +91,26 @@ public class AppHelper {
         else
             lang = getLocalizeStudyLanguage(_contex);
 
-
-        if (lang.equals("en"))
-            return Languages.en;
-        else if (lang.equals("uk"))
-            return Languages.uk;
-        else if (lang.equals("ru"))
-            return Languages.ru;
-        else if (lang.equals("hu"))
-            return Languages.hu;
-        else if (lang.equals("de"))
-            return Languages.de;
-        else if (lang.equals("fr"))
-            return Languages.fr;
-        else if (lang.equals("es"))
-            return Languages.es;
-        else if (lang.equals("zh"))
-            return Languages.zh;
-        else if (lang.equals("ar"))
-            return Languages.ar;
-        else if (lang.equals("hi"))
-            return Languages.hi;
+            if (lang.equals("en"))
+                return Languages.en;
+            else if (lang.equals("uk"))
+                return Languages.uk;
+            else if (lang.equals("ru"))
+                return Languages.ru;
+            else if (lang.equals("hu"))
+                return Languages.hu;
+            else if (lang.equals("de"))
+                return Languages.de;
+            else if (lang.equals("fr"))
+                return Languages.fr;
+            else if (lang.equals("es"))
+                return Languages.es;
+            else if (lang.equals("zh"))
+                return Languages.zh;
+            else if (lang.equals("ar"))
+                return Languages.ar;
+            else if (lang.equals("hi"))
+                return Languages.hi;
 
         return Languages.en;
     }
@@ -345,11 +352,16 @@ public class AppHelper {
 
     public static final String getLocalizeAppLanguage(Context _context) {
         SharedPreferences prefs = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
-        String lang;
+        String lang = null;
         try {
-            lang = prefs.getString(Constans.LOCALIZE_APP_LANGUAGE, "en");
+            lang = prefs.getString(Constans.LOCALIZE_APP_LANGUAGE, null);
         } catch (Exception exception) {
-            lang = "en";
+        } finally {
+            if (lang == null){
+                String value = Locale.getDefault().getLanguage();
+                if(Languages.contains(value)) return value;
+                else   lang = "en";
+            }
         }
         return lang;
     }
@@ -362,11 +374,16 @@ public class AppHelper {
 
     public static final String getLocalizeStudyLanguage(Context _context) {
         SharedPreferences prefs = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
-        String lang;
+        String lang = null;
         try {
-            lang = prefs.getString(Constans.LOCALIZE_STUDY_LANGUAGE, "en");
+            lang = prefs.getString(Constans.LOCALIZE_STUDY_LANGUAGE, null);
         } catch (Exception exception) {
-            lang = "en";
+        } finally {
+            if (lang == null){
+                String value = Locale.getDefault().getLanguage();
+                if(Languages.contains(value)) return value;
+             else   lang = "en";
+            }
         }
         return lang;
     }
