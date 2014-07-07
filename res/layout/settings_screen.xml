@@ -1,57 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/background_game">
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_game">
 
     <RelativeLayout
-        android:id="@+id/llScreenHeader_SS"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/settings_header_bg">
+            android:id="@+id/llScreenHeader_SS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/settings_header_bg">
 
         <ImageButton
-            android:id="@+id/btnBack_SS"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:src="@drawable/selector_arrow_settings_previous"
-            android:background="@null"
-            android:padding="15dp"/>
+                android:id="@+id/btnBack_SS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/selector_arrow_settings_previous"
+                android:background="@null"
+                android:padding="15dp"/>
 
         <TextView
-            android:id="@+id/tvHeaderName_SS"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/menu_settings"
-            android:textStyle="bold"
-            android:textColor="#ffffff"
-            android:textSize="25dp"
-            android:layout_centerInParent="true"/>
+                android:id="@+id/tvHeaderName_SS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/menu_settings"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:textSize="25dp"
+                android:layout_centerInParent="true"/>
 
     </RelativeLayout>
 
     <LinearLayout
-        android:id="@+id/llBanner_SS"
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true">
+            android:id="@+id/llBanner_SS"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true">
     </LinearLayout>
-    
+
     <ScrollView
-        android:id="@+id/swMain_SS"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/llScreenHeader_SS"
-        android:layout_above="@id/llBanner_SS">
+            android:id="@+id/swMain_SS"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/llScreenHeader_SS"
+            android:layout_above="@id/llBanner_SS">
 
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
             <RelativeLayout
                     android:id="@+id/rlPlayBackgroundMusic_SS"
@@ -59,11 +59,11 @@
                     android:layout_height="match_parent">
 
                 <com.mobilez365.puzzly.customViews.ColorsCheckBox
-                    android:id="@+id/ccbPlayBackgroundMusic_SS"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/SettingsChooseBox"
-                    android:layout_centerVertical="true"/>
+                        android:id="@+id/ccbPlayBackgroundMusic_SS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/SettingsChooseBox"
+                        android:layout_centerVertical="true"/>
 
                 <TextView
                         android:layout_width="wrap_content"
@@ -84,11 +84,11 @@
                     android:layout_below="@+id/rlPlayBackgroundMusic_SS">
 
                 <com.mobilez365.puzzly.customViews.ColorsCheckBox
-                    android:id="@+id/ccbPlaySound_SS"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/SettingsChooseBox"
-                    android:layout_centerVertical="true"/>
+                        android:id="@+id/ccbPlaySound_SS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/SettingsChooseBox"
+                        android:layout_centerVertical="true"/>
 
                 <TextView
                         android:layout_width="wrap_content"
@@ -109,11 +109,11 @@
                     android:layout_below="@+id/rlPlaySound_SS">
 
                 <com.mobilez365.puzzly.customViews.ColorsCheckBox
-                    android:id="@+id/ccbVibrate_SS"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/SettingsChooseBox"
-                    android:layout_centerVertical="true"/>
+                        android:id="@+id/ccbVibrate_SS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/SettingsChooseBox"
+                        android:layout_centerVertical="true"/>
 
                 <TextView
                         android:layout_width="wrap_content"
@@ -128,7 +128,6 @@
             </RelativeLayout>
 
 
-
             <RelativeLayout
                     android:id="@+id/rlDisplayInnerBorders_SS"
                     android:layout_width="match_parent"
@@ -136,11 +135,11 @@
                     android:layout_below="@+id/rlVibrate_SS">
 
                 <com.mobilez365.puzzly.customViews.ColorsCheckBox
-                    android:id="@+id/ccbDisplayInnerBorders_SS"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/SettingsChooseBox"
-                    android:layout_centerVertical="true"/>
+                        android:id="@+id/ccbDisplayInnerBorders_SS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/SettingsChooseBox"
+                        android:layout_centerVertical="true"/>
 
                 <TextView
                         android:layout_width="wrap_content"
@@ -225,65 +224,95 @@
             </RelativeLayout>
 
             <LinearLayout
-                android:id="@+id/llStudyLanguagePanel_SS"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:background="@color/settings_header_bg"
-                android:layout_below="@+id/rlPurchaseShare_SS"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp">
+                    android:id="@+id/llStudyLanguagePanel_SS"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="@color/settings_header_bg"
+                    android:layout_below="@+id/rlPurchaseShare_SS"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
 
                 <TextView
-                    android:id="@+id/tvStudyLanguage_SS"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/settings_localize_study_language"
-                    android:layout_weight="30"
-                    android:textColor="#ffffff"
-                    android:textSize="20dp"/>
+                        android:id="@+id/tvStudyLanguage_SS"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_localize_study_language"
+                        android:layout_weight="30"
+                        android:textColor="#ffffff"
+                        android:textSize="20dp"/>
 
-                <Spinner
-                    android:id="@+id/spinnerChooseStudyCountry_SS"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="70"
-                        />
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="70">
+
+                    <Spinner
+                            android:id="@+id/spinnerChooseStudyCountry_SS"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/settings_header_bg"
+                            />
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#ffffff"
+                            android:layout_below="@id/spinnerChooseStudyCountry_SS"
+                            android:layout_marginTop="2dp"
+                            />
+
+                </RelativeLayout>
 
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/llAppLanguagePanel_SS"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/llStudyLanguagePanel_SS"
-                android:gravity="center"
-                android:background="@color/settings_header_bg"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp">
+                    android:id="@+id/llAppLanguagePanel_SS"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llStudyLanguagePanel_SS"
+                    android:gravity="center"
+                    android:background="@color/settings_header_bg"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
 
                 <TextView
-                    android:id="@+id/tvAppLanguage_SS"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/settings_localize_app_language"
-                    android:layout_weight="30"
-                    android:textColor="#ffffff"
-                    android:textSize="20dp"/>
+                        android:id="@+id/tvAppLanguage_SS"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_localize_app_language"
+                        android:layout_weight="30"
+                        android:textColor="#ffffff"
+                        android:textSize="20dp"/>
 
-                <Spinner
-                    android:id="@+id/spinnerChooseAppCountry_SS"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="70"
-                    android:entries="@array/settings_languages"
-                        />
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="70">
+
+                    <Spinner
+                            android:id="@+id/spinnerChooseAppCountry_SS"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/settings_languages"
+                            android:background="@color/settings_header_bg"
+                            />
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#ffffff"
+                            android:layout_below="@id/spinnerChooseAppCountry_SS"
+                            android:layout_marginTop="2dp"
+                            />
+                </RelativeLayout>
+
 
             </LinearLayout>
 

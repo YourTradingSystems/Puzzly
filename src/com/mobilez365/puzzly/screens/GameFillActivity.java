@@ -24,6 +24,7 @@ import com.mobilez365.puzzly.global.AppHelper;
 import com.mobilez365.puzzly.global.Constans;
 import com.mobilez365.puzzly.puzzles.PuzzleFillGame;
 import com.mobilez365.puzzly.puzzles.PuzzlesDB;
+import com.mobilez365.puzzly.util.AnalyticsGoogle;
 import com.mobilez365.puzzly.util.AnimationEndListener;
 import com.mobilez365.puzzly.util.ParseSvgAsyncTask;
 
@@ -194,6 +195,13 @@ public class GameFillActivity extends RestartActivty {
         AppHelper.setCurrentGame(getApplicationContext(), mGameNumber, mGameType);
 
         mPuzzleFillGame = PuzzlesDB.getPuzzle(mGameNumber, mGameType, getApplicationContext());
+
+        if(mGameType == 0)
+            AnalyticsGoogle.fireScreenEvent(this, getString(R.string.activity_fill_game));
+        else
+            AnalyticsGoogle.fireScreenEvent(this, getString(R.string.activity_reveal_game));
+
+        AnalyticsGoogle.fireLevelStartedEvent(this, mPuzzleFillGame.getItemName());
 
         gameView = new GameView(getApplicationContext(), mPuzzleFillGame, gameCallBacks);
 

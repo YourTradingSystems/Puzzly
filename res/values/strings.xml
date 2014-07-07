@@ -72,6 +72,24 @@
     <string name="interstitialAdUnitId">ca-app-pub-8370463222730338/1339125208</string>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
+    <!-- ~~~~~~~~~~~~~~~~~~~ GOOGLE ANALYTICS ~~~~~~~~~~~~~~~~~~~~~~ !-->
+    <string name="activity_main_menu">Main menu screen</string>
+    <string name="activity_settings">Settings screen</string>
+    <string name="btn_music_enabled">Music enabled</string>
+    <string name="btn_sound_enabled">Sound enabled</string>
+    <string name="btn_display_border">Display border enabled</string>
+    <string name="btn_app_language">Language of application</string>
+    <string name="btn_study_language">Language of study</string>
+    <string name="activity_choose_fill_game">Choose FILL game screen</string>
+    <string name="activity_choose_reveal_game">Choose REVEAL game screen</string>
+    <string name="activity_fill_game">FILL game screen</string>
+    <string name="activity_reveal_game">REVEAL game screen</string>
+    <string name="bonus_level_flower">Flower bonus level</string>
+    <string name="bonus_level_tree">Tree bonus level</string>
+    <string name="bonus_level_shake">Shake bonus level</string>
+    <string name="bonus_level_hedgehog">Hedgehog bonus level</string>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
     <!-- ~~~~~~~~~~~~~~~~~~~ StartAD ~~~~~~~~~~~~~~~~~~~~~~ !-->
     <string name="startADId">539956448cc1631e00000000</string>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->

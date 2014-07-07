@@ -19,6 +19,7 @@ import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
 import com.mobilez365.puzzly.global.Constans;
 import com.mobilez365.puzzly.puzzles.PuzzlesDB;
+import com.mobilez365.puzzly.util.AnalyticsGoogle;
 import com.startad.lib.SADView;
 
 import java.util.*;
@@ -128,6 +129,7 @@ public class MenuActivity extends Activity {
         showReminderDialog();
         startAnimation();
         PuzzlesDB.addBasePuzzlesToDB(getApplicationContext());
+        AnalyticsGoogle.fireScreenEvent(this, getString(R.string.activity_main_menu));
 
 /*        SharedPreferences.Editor editor = getSharedPreferences(Constans.PREFERENCES_NAME,MODE_PRIVATE).edit();
         editor.putInt(Constans.LOCALIZE_STUDY_LANGUAGE, 3);

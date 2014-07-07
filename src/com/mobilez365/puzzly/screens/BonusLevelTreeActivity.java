@@ -22,6 +22,7 @@ import android.widget.VideoView;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
 import com.mobilez365.puzzly.global.Constans;
+import com.mobilez365.puzzly.util.AnalyticsGoogle;
 import com.mobilez365.puzzly.util.AnimationEndListener;
 import com.mobilez365.puzzly.util.BackgroundSound;
 import com.mobilez365.puzzly.util.ShakeSensor;
@@ -105,6 +106,8 @@ public class BonusLevelTreeActivity extends InterstitialActivity{
         mShaker = new ShakeSensor();
         mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         rlContainer_ABLT = (RelativeLayout) findViewById(R.id.rlContainer_ABLT);
+
+        AnalyticsGoogle.fireScreenEvent(this, getString(R.string.bonus_level_tree));
 
         initData();
 
@@ -228,6 +231,8 @@ public class BonusLevelTreeActivity extends InterstitialActivity{
     }
 
     private void nextGame() {
+        AnalyticsGoogle.fireBonusLevelEndEvent(this, getString(R.string.bonus_level_tree));
+
         Intent gameIntent = new Intent(this, GameFillActivity.class);
         gameIntent.putExtra("type", gameType);
         gameIntent.putExtra("gameNumber", mGameNumber);

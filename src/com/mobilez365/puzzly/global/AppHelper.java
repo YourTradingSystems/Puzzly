@@ -17,7 +17,6 @@ import com.mobilez365.puzzly.puzzles.PuzzlesDB;
 import com.mobilez365.puzzly.util.BackgroundSound;
 
 import java.lang.reflect.Field;
-import java.util.EnumSet;
 import java.util.List;
 import java.util.Locale;
 
@@ -43,14 +42,14 @@ public class AppHelper {
         ar,
         //he,
         hi;
-        public static boolean contains(String s)
-        {
-            for(Languages choice:values())
+
+        public static boolean contains(String s) {
+            for (Languages choice : values())
                 if (choice.name().equals(s))
                     return true;
             return false;
         }
-        }
+    }
 
     public static void setDefaultFont(Context context) {
         final Typeface regular = Typeface.createFromAsset(context.getAssets(),
@@ -91,26 +90,26 @@ public class AppHelper {
         else
             lang = getLocalizeStudyLanguage(_contex);
 
-            if (lang.equals("en"))
-                return Languages.en;
-            else if (lang.equals("uk"))
-                return Languages.uk;
-            else if (lang.equals("ru"))
-                return Languages.ru;
-            else if (lang.equals("hu"))
-                return Languages.hu;
-            else if (lang.equals("de"))
-                return Languages.de;
-            else if (lang.equals("fr"))
-                return Languages.fr;
-            else if (lang.equals("es"))
-                return Languages.es;
-            else if (lang.equals("zh"))
-                return Languages.zh;
-            else if (lang.equals("ar"))
-                return Languages.ar;
-            else if (lang.equals("hi"))
-                return Languages.hi;
+        if (lang.equals("en"))
+            return Languages.en;
+        else if (lang.equals("uk"))
+            return Languages.uk;
+        else if (lang.equals("ru"))
+            return Languages.ru;
+        else if (lang.equals("hu"))
+            return Languages.hu;
+        else if (lang.equals("de"))
+            return Languages.de;
+        else if (lang.equals("fr"))
+            return Languages.fr;
+        else if (lang.equals("es"))
+            return Languages.es;
+        else if (lang.equals("zh"))
+            return Languages.zh;
+        else if (lang.equals("ar"))
+            return Languages.ar;
+        else if (lang.equals("hi"))
+            return Languages.hi;
 
         return Languages.en;
     }
@@ -357,10 +356,11 @@ public class AppHelper {
             lang = prefs.getString(Constans.LOCALIZE_APP_LANGUAGE, null);
         } catch (Exception exception) {
         } finally {
-            if (lang == null){
+            if (lang == null) {
                 String value = Locale.getDefault().getLanguage();
-                if(Languages.contains(value)) lang = value;
-                else   lang = "en";
+                if (Languages.contains(value)) lang = value;
+                else lang = "en";
+                setLocalizeAppLanguage(_context, lang);
             }
         }
         return lang;
@@ -379,10 +379,11 @@ public class AppHelper {
             lang = prefs.getString(Constans.LOCALIZE_STUDY_LANGUAGE, null);
         } catch (Exception exception) {
         } finally {
-            if (lang == null){
+            if (lang == null) {
                 String value = Locale.getDefault().getLanguage();
-                if(Languages.contains(value)) lang = value;
-             else   lang = "en";
+                if (Languages.contains(value)) lang = value;
+                else lang = "en";
+                setLocalizeStudyLanguage(_context, lang);
             }
         }
         return lang;

@@ -21,6 +21,7 @@ import android.widget.VideoView;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
 import com.mobilez365.puzzly.global.Constans;
+import com.mobilez365.puzzly.util.AnalyticsGoogle;
 import com.mobilez365.puzzly.util.AnimationEndListener;
 import com.mobilez365.puzzly.util.BackgroundSound;
 import com.mobilez365.puzzly.util.ShakeSensor;
@@ -112,6 +113,8 @@ public class BonusLevelFlowerActivity extends InterstitialActivity{
         candiesList =  new ImageView[mCandiesCount];
         candiesRotateAnimators = new ArrayList<ObjectAnimator>();
         candiesStatus = new int[mCandiesCount];
+
+        AnalyticsGoogle.fireScreenEvent(this, getString(R.string.bonus_level_flower));
 
         initFlowers();
         initSun();
@@ -231,6 +234,8 @@ public class BonusLevelFlowerActivity extends InterstitialActivity{
     }
 
     private void nextGame() {
+        AnalyticsGoogle.fireBonusLevelEndEvent(this, getString(R.string.bonus_level_flower));
+
         Intent gameIntent = new Intent(this, GameFillActivity.class);
         gameIntent.putExtra("type", gameType);
         gameIntent.putExtra("gameNumber", mGameNumber);

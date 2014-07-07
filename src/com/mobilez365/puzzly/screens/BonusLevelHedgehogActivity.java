@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
+import com.mobilez365.puzzly.util.AnalyticsGoogle;
 import com.mobilez365.puzzly.util.AnimationEndListener;
 import com.mobilez365.puzzly.util.BackgroundSound;
 
@@ -94,6 +95,8 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity {
         bigCandiesList = new ArrayList<ImageView>();
 
         candiesFlyAnimators = new ArrayList<ObjectAnimator>();
+
+        AnalyticsGoogle.fireScreenEvent(this, getString(R.string.bonus_level_hedgehog));
 
         bigHedgehog = (ImageView) findViewById(R.id.ivHedgehogBigABH);
         bigHedgehog.getViewTreeObserver().addOnGlobalLayoutListener(onGlobalLayoutListener);
@@ -212,6 +215,8 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity {
     }
 
     private void nextGame() {
+        AnalyticsGoogle.fireBonusLevelEndEvent(this, getString(R.string.bonus_level_hedgehog));
+
         Intent gameIntent = new Intent(this, GameFillActivity.class);
         gameIntent.putExtra("type", mGameType);
         gameIntent.putExtra("gameNumber", mGameNumber);

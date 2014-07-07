@@ -241,18 +241,32 @@
                 android:gravity="center"
                 android:background="@color/settings_header_bg"
                 android:layout_below="@+id/rlPurchaseShare_SS"
-                android:layout_marginTop="10dp"
                 android:paddingLeft="15dp"
                 android:paddingTop="10dp"
                 android:paddingRight="15dp"
                 android:paddingBottom="10dp">
 
-                <Spinner
-                    android:id="@+id/spinnerChooseStudyCountry_SS"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="70"
-                    android:entries="@array/settings_languages"/>
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="70">
+
+                    <Spinner
+                            android:id="@+id/spinnerChooseStudyCountry_SS"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/settings_header_bg"
+                            />
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#ffffff"
+                            android:layout_below="@id/spinnerChooseStudyCountry_SS"
+                            android:layout_marginTop="2dp"
+                            />
+
+                </RelativeLayout>
 
                 <TextView
                     android:id="@+id/tvStudyLanguage_SS"
@@ -278,12 +292,27 @@
                 android:paddingRight="15dp"
                 android:paddingBottom="10dp">
 
-                <Spinner
-                    android:id="@+id/spinnerChooseAppCountry_SS"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="70"
-                    android:entries="@array/settings_languages"/>
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="70">
+
+                    <Spinner
+                            android:id="@+id/spinnerChooseAppCountry_SS"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/settings_languages"
+                            android:background="@color/settings_header_bg"
+                            />
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#ffffff"
+                            android:layout_below="@id/spinnerChooseAppCountry_SS"
+                            android:layout_marginTop="2dp"
+                            />
+                </RelativeLayout>
 
                 <TextView
                     android:id="@+id/tvAppLanguage_SS"

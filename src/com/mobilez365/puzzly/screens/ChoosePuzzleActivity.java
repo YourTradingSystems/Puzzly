@@ -12,6 +12,7 @@ import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
 import com.mobilez365.puzzly.global.Constans;
 import com.mobilez365.puzzly.puzzles.PuzzlesDB;
+import com.mobilez365.puzzly.util.AnalyticsGoogle;
 import com.mobilez365.puzzly.util.ChooseGamePagerAdapter;
 
 /**
@@ -93,6 +94,11 @@ public class ChoosePuzzleActivity extends RestartActivty {
         btnNext = (ImageButton) findViewById(R.id.btnNextACP);
         btnNext.setOnClickListener(mClickListener);
         btnPrevious.setOnClickListener(mClickListener);
+
+        if(mGameType == 0)
+            AnalyticsGoogle.fireScreenEvent(this, getString(R.string.activity_choose_fill_game));
+        else
+            AnalyticsGoogle.fireScreenEvent(this, getString(R.string.activity_choose_reveal_game));
 
         updateLevelsInfo();
     }

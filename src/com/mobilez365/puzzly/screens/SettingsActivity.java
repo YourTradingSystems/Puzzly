@@ -15,6 +15,7 @@ import com.google.android.gms.plus.PlusShare;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
 import com.mobilez365.puzzly.global.Constans;
+import com.mobilez365.puzzly.util.AnalyticsGoogle;
 import com.mobilez365.puzzly.util.Purchase;
 import com.mobilez365.puzzly.util.PurchaseHelper;
 import com.mobilez365.puzzly.util.SocialShare;
@@ -78,6 +79,7 @@ public class SettingsActivity extends RestartActivty{
             if(parent.getId() == R.id.spinnerChooseAppCountry_SS) {
                 AppHelper.setLocalizeAppLanguage(getApplicationContext(), getLanguageLocale(((TextView)view).getText().toString()));
                 AppHelper.changeLanguage(getApplicationContext(), AppHelper.getLocaleLanguage(getApplicationContext(), Constans.APP_LANGUAGE).name());
+                AnalyticsGoogle.fireSettingsEvent(SettingsActivity.this, getString(R.string.btn_app_language), ((TextView)view).getText().toString());
 
                 Intent mIntent = new Intent(SettingsActivity.
                         this, SettingsActivity.class);
@@ -86,7 +88,10 @@ public class SettingsActivity extends RestartActivty{
                 overridePendingTransition(0, 0);
                 finish();
             }
-            else if(parent.getId() == R.id.spinnerChooseStudyCountry_SS) AppHelper.setLocalizeStudyLanguage(getApplicationContext(), getLanguageLocale(((TextView)view).getText().toString()));
+            else if(parent.getId() == R.id.spinnerChooseStudyCountry_SS) {
+                AppHelper.setLocalizeStudyLanguage(getApplicationContext(), getLanguageLocale(((TextView)view).getText().toString()));
+                AnalyticsGoogle.fireSettingsEvent(SettingsActivity.this, getString(R.string.btn_study_language), ((TextView)view).getText().toString());
+            }
         }
 
         @Override
@@ -107,6 +112,7 @@ public class SettingsActivity extends RestartActivty{
                     ccbPlayBackgroundMusic_SS.setChecked(!ccbPlayBackgroundMusic_SS.isChecked());
 
                     AppHelper.setPlayBackgroundMusic(getApplicationContext(), ccbPlayBackgroundMusic_SS.isChecked());
+                    AnalyticsGoogle.fireSettingsEvent(SettingsActivity.this, getString(R.string.btn_music_enabled), Boolean.toString(ccbPlayBackgroundMusic_SS.isChecked()));
 
                     if (ccbPlayBackgroundMusic_SS.isChecked())
                         AppHelper.startBackgroundSound(getApplicationContext(), Constans.MENU_BACKGROUND_MUSIC);
@@ -118,6 +124,7 @@ public class SettingsActivity extends RestartActivty{
                 case R.id.rlPlaySound_SS:
                     ccbPlaySound_SS.setChecked(!ccbPlaySound_SS.isChecked());
                     AppHelper.setPlaySound(getApplicationContext(), ccbPlaySound_SS.isChecked());
+                    AnalyticsGoogle.fireSettingsEvent(SettingsActivity.this, getString(R.string.btn_sound_enabled), Boolean.toString(ccbPlaySound_SS.isChecked()));
                     break;
 
                 case R.id.rlVibrate_SS:
@@ -128,6 +135,7 @@ public class SettingsActivity extends RestartActivty{
                 case R.id.rlDisplayInnerBorders_SS:
                     ccbDisplayInnerBorders_SS.setChecked(!ccbDisplayInnerBorders_SS.isChecked());
                     AppHelper.setShowImageBorder(getApplicationContext(), ccbDisplayInnerBorders_SS.isChecked());
+                    AnalyticsGoogle.fireSettingsEvent(SettingsActivity.this, getString(R.string.btn_display_border), Boolean.toString(ccbDisplayInnerBorders_SS.isChecked()));
                     break;
                 case R.id.btnTwitter_SS:
                     loadingDialog.show();
@@ -169,6 +177,7 @@ public class SettingsActivity extends RestartActivty{
         setContentView(R.layout.settings_screen);
 
         PurchaseHelper.initPurchaseWorker(this);
+        AnalyticsGoogle.fireScreenEvent(this, getString(R.string.activity_settings));
 
         findViews();
         showBanner();
