@@ -141,7 +141,7 @@ public class MenuActivity extends Activity {
         super.onResume();
         setGameAchievement(AppHelper.getGameAchievement(getApplicationContext()));
 
-        showBanner();
+        if (!AppHelper.isAdsDisabled(getApplicationContext())) showBanner();
         AppHelper.changeLanguage(getApplicationContext(), AppHelper.getLocaleLanguage(getApplicationContext(), Constans.GAME_LANGUAGE).name());
 
         if (!AppHelper.isAppInBackground(getApplicationContext()))

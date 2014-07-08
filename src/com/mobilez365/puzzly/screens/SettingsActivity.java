@@ -16,16 +16,10 @@ import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
 import com.mobilez365.puzzly.global.Constans;
 import com.mobilez365.puzzly.util.AnalyticsGoogle;
-import com.mobilez365.puzzly.util.Purchase;
-import com.mobilez365.puzzly.util.PurchaseHelper1;
+import com.mobilez365.puzzly.util.PurchaseHelper;
 import com.mobilez365.puzzly.util.SocialShare;
 import com.startad.lib.SADView;
 import org.brickred.socialauth.android.SocialAuthAdapter;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Locale;
 
 /**
  * Created by Denis on 12.05.14.
@@ -163,7 +157,7 @@ public class SettingsActivity extends RestartActivty{
                     break;
 
                 case R.id.btnPurchase_SS:
-                    PurchaseHelper1.purchaseAdSubscription(SettingsActivity.this);
+                    PurchaseHelper.purchaseAdSubscription(SettingsActivity.this);
                     break;
             }
         }
@@ -176,11 +170,11 @@ public class SettingsActivity extends RestartActivty{
         super.onCreate(_savedInstanceState);
         setContentView(R.layout.settings_screen);
 
-        PurchaseHelper1.initPurchaseWorker(getApplicationContext());
+        PurchaseHelper.initPurchaseWorker(getApplicationContext());
         AnalyticsGoogle.fireScreenEvent(this, getString(R.string.activity_settings));
 
         findViews();
-        showBanner();
+        if (!AppHelper.isAdsDisabled(getApplicationContext())) showBanner();
         setValues();
         setListener();
     }
@@ -216,16 +210,16 @@ public class SettingsActivity extends RestartActivty{
         if(sadView != null)
             sadView.destroy();
 
-        PurchaseHelper1.DestroyHelper();
+        PurchaseHelper.DestroyHelper();
 
         super.onDestroy();
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (!PurchaseHelper1.isHelperInit()) return;
+        if (!PurchaseHelper.isHelperInit()) return;
 
-        if (!PurchaseHelper1.handleResult(requestCode, resultCode, data))
+        if (!PurchaseHelper.handleResult(requestCode, resultCode, data))
             super.onActivityResult(requestCode, resultCode, data);
     }
 

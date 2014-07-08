@@ -5,6 +5,7 @@ import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.mobilez365.puzzly.R;
+import com.mobilez365.puzzly.global.AppHelper;
 
 /**
  * An {@link android.app.Activity} that requests and can display an InterstitialAd.
@@ -17,17 +18,19 @@ public class InterstitialActivity extends RestartActivty {
     @Override
     public void onResume() {
         super.onResume();
-        AD_UNIT_ID = getApplicationContext().getResources().getString(R.string.interstitialAdUnitId);
-        setupAD();
+        if (!AppHelper.isAdsDisabled(getApplicationContext())) {
+            AD_UNIT_ID = getApplicationContext().getResources().getString(R.string.interstitialAdUnitId);
+            setupAD();
+        }
     }
 
     @Override
     protected void onStop() {
-        showInterstitial();
+        if (!AppHelper.isAdsDisabled(getApplicationContext())) showInterstitial();
         super.onStop();
     }
 
-    protected void setupAD(){
+    protected void setupAD() {
         interstitialAd = new InterstitialAd(getApplicationContext());
         interstitialAd.setAdUnitId(AD_UNIT_ID);
         AdRequest adRequest = new AdRequest.Builder().build();
@@ -36,7 +39,7 @@ public class InterstitialActivity extends RestartActivty {
 
     protected void showInterstitial() {
         int status = GooglePlayServicesUtil.isGooglePlayServicesAvailable(getApplicationContext());
-        if(status == ConnectionResult.SUCCESS) {
+        if (status == ConnectionResult.SUCCESS) {
             if (interstitialAd.isLoaded()) interstitialAd.show();
         }
 
