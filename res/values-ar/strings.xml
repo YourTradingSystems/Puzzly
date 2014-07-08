@@ -19,8 +19,17 @@
     <string name="settings_localize_study_language">غة اللعبة</string>
 
     <string name="settings_purchase">نسخة دون إعلانات</string>
-    <string name="settings_share">مشاركة على</string>
+    <string name="settings_share">على حصة</string>
 
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~ SHARE ~~~~~~~~~~~~~~~~~~~~~~ !-->
+    <string name="share_message">Puzzly هي لعبة ممتعة وتعليمية للأطفال الذين تتراوح أعمارهم بين 2-6 سنوات</string>
+    <string name="share_login_error">لا أستطيع الدخول. يرجى المحاولة مرة أخرى في وقت لاحق.</string>
+    <string name="share_post_error">لا يمكن مشاركة. يرجى المحاولة مرة أخرى في وقت لاحق.</string>
+    <string name="share_internet_error">لا يوجد أي اتصال بالإنترنت.</string>
+    <string name="share_post_done">حصة عمله</string>
+    <string name="share_post_duplicate">مشترك بالفعل</string>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
     <!-- ~~~~~~~~~~~~~~~~~~~ CHOOSE LEVEL ~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->

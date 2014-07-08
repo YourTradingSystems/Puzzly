@@ -8,6 +8,8 @@ import org.brickred.socialauth.android.SocialAuthAdapter;
 import org.brickred.socialauth.android.SocialAuthError;
 import org.brickred.socialauth.android.SocialAuthListener;
 
+import java.io.UnsupportedEncodingException;
+
 /**
  * Created by andrewtivodar on 27.06.2014.
  */
@@ -37,7 +39,16 @@ public class SocialShare {
     private final class AuthResponseListener implements DialogListener {
         @Override
         public void onComplete(Bundle bundle) {
-            adapter.updateStatus(message, new MessageListener(), false);
+            try {
+                if(provider == SocialAuthAdapter.Provider.TWITTER)
+                    adapter.updateStatus(message, new MessageListener(), false);
+                else
+                    adapter.updateStory(message,  "Funny Puzzle for Kids", "",
+                        "",  "https://play.google.com/store/apps/details?id=com.mobilez365.puzzly",
+                    "https://lh5.ggpht.com/SdmoYsckY3EmOOwKKmBnZzYzA247FqNJZKK79sDvlttcJiPqbyR_1zf2hc4MUVNSKeg=w300", new MessageListener());
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
         }
 
         @Override

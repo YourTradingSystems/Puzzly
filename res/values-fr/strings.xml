@@ -18,6 +18,18 @@
     <string name="settings_localize_app_language">Langue de paramétrés</string>
     <string name="settings_localize_study_language">Langue de jeu</string>
 
+    <string name="settings_purchase">Version sans annonces</string>
+    <string name="settings_share">Partagez sur</string>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~ SHARE ~~~~~~~~~~~~~~~~~~~~~~ !-->
+    <string name="share_message">Puzzly est un jeu intéressant et passionnant pour des enfants 2 à 6 ans</string>
+    <string name="share_login_error">La connexion ne peut pas être réalisé. Essayez s\'il vous plaît de nouveau plus tard</string>
+    <string name="share_post_error">Le partage ne peut pas être réalisé. Essayez s\'il vous plaît de nouveau plus tard</string>
+    <string name="share_internet_error">Pas de connexion internet</string>
+    <string name="share_post_done">Compartiment complété</string>
+    <string name="share_post_duplicate">Déjà partagé</string>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
     <!-- ~~~~~~~~~~~~~~~~~~~ CHOOSE LEVEL ~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->

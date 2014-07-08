@@ -13,7 +13,7 @@ import com.google.android.gms.common.GooglePlayServicesUtil;
 public class AnalyticsGoogle {
 
     private static Tracker tracker;
-    public final static String GOOGLE_TRACKING_ID = "UA-51636438-2";
+    public final static String GOOGLE_TRACKING_ID = "UA-51080238-3";
 
     private static synchronized Tracker getTracker(Context context) {
         if (tracker == null) {

@@ -18,6 +18,18 @@
     <string name="settings_localize_app_language">सेटिंग्स की भाषा</string>
     <string name="settings_localize_study_language">खेल की भाषा</string>
 
+    <string name="settings_purchase">विज्ञापन के बिना संस्करण</string>
+    <string name="settings_share">पर साझा करें</string>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~ SHARE ~~~~~~~~~~~~~~~~~~~~~~ !-->
+    <string name="share_message">पहेली 2 से 6 वर्ष आयु वर्ग के बच्चों के लिए एक, दिलचस्प मज़ा और शैक्षिक खेल है. पहेली बच्चों के लिए एक दिलचस्प और रोमांचक खेल है. बच्चों बहुत कुछ सीखना होगा और माता पिता को अपने घर में शांति की बहुप्रतीक्षित पल मिल जाएगा. पहेली खेल अपने बच्चे को बेहतर उसके ध्यान केंद्रित करने और एक विदेशी भाषा में कई उपयोगी शब्दों को जानने के लिए मदद मिलेगी.</string>
+    <string name="share_login_error">प्रवेश नहीं कर सकते. बाद में पुन: प्रयास करें.</string>
+    <string name="share_post_error">साझा नहीं कर सकते. बाद में पुन: प्रयास करें.</string>
+    <string name="share_internet_error">कोई इंटरनेट कनेक्शन नहीं है.</string>
+    <string name="share_post_done">शेयर किया</string>
+    <string name="share_post_duplicate">पहले से ही साझा</string>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
     <!-- ~~~~~~~~~~~~~~~~~~~ CHOOSE LEVEL ~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->

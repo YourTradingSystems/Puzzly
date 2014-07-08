@@ -18,6 +18,16 @@
     <string name="settings_localize_app_language">Einstellungssprache</string>
     <string name="settings_localize_study_language">Sprache</string>
 
+    <string name="settings_purchase">Version ohne Werbung</string>
+    <string name="settings_share">An zu veröffentlichen</string>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~ SHARE ~~~~~~~~~~~~~~~~~~~~~~ !-->
+    <string name="share_message">Puzzly ist eine interessante Spiel für Kinder im Alter von 2 bis 6 Jahren</string>
+    <string name="share_post_error">Es ist nicht möglich, um den Eintrag zu veröffentlichen. Bitte versuchen Sie es später</string>
+    <string name="share_internet_error">Es gibt keine Internet-Verbindung</string>
+    <string name="share_post_done">Daten veröffentlicht</string>
+    <string name="share_post_duplicate">Es wurde veröffentlicht</string>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
     <!-- ~~~~~~~~~~~~~~~~~~~ CHOOSE LEVEL ~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->

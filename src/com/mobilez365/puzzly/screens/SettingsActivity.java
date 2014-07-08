@@ -135,14 +135,14 @@ public class SettingsActivity extends RestartActivty{
                     loadingDialog.show();
                     SocialShare shareTwitter = new SocialShare();
                     shareTwitter.shareToSocial(SettingsActivity.this,
-                            SocialAuthAdapter.Provider.TWITTER, mShareListener, getString(R.string.share_message));
+                            SocialAuthAdapter.Provider.TWITTER, mShareListener, getString(R.string.share_twitter_message));
                     break;
 
                 case R.id.btnGoogle_SS:
                     Intent shareIntent = new PlusShare.Builder(SettingsActivity.this)
                             .setType("text/plain")
                             .setText(getString(R.string.share_message))
-                            .setContentUrl(Uri.parse("https://developers.google.com/+/"))
+                            .setContentUrl(Uri.parse("https://play.google.com/store/apps/details?id=com.mobilez365.puzzly"))
                             .getIntent();
 
                     startActivityForResult(shareIntent, 0);
@@ -280,7 +280,6 @@ public class SettingsActivity extends RestartActivty{
 
         loadingDialog = new ProgressDialog(this);
         loadingDialog.setMessage("Loading...");
-        loadingDialog.setCancelable(false);
     }
 
     private int getLanguagePosition(ArrayAdapter adapter, String language){

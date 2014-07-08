@@ -18,6 +18,18 @@
     <string name="settings_localize_app_language">Beállítás nyelve</string>
     <string name="settings_localize_study_language">Játék nyelve</string>
 
+    <string name="settings_purchase">Reklámmentes verzió</string>
+    <string name="settings_share">Megosztani</string>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~ SHARE ~~~~~~~~~~~~~~~~~~~~~~ !-->
+    <string name="share_message">Puzzly egy érdekes és fejlesztő játék 2-től 6 éves korú gyerekek számára</string>
+    <string name="share_login_error">A bejelentkezés sikertelen. Kérem próbálja újra később</string>
+    <string name="share_post_error">A bejegyzés megosztása sikertelen. Kérem próbálja újra később.</string>
+    <string name="share_internet_error">Nincs internet kapcsolat</string>
+    <string name="share_post_done">A megosztás sikeres</string>
+    <string name="share_post_duplicate">Az adott bejegyzés már meg van osztva</string>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
     <!-- ~~~~~~~~~~~~~~~~~~~ CHOOSE LEVEL ~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->

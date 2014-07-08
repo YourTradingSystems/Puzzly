@@ -18,6 +18,18 @@
     <string name="settings_localize_app_language">语言设定</string>
     <string name="settings_localize_study_language">游戏语言</string>
 
+    <string name="settings_purchase">版无广告</string>
+    <string name="settings_share">分享</string>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~ SHARE ~~~~~~~~~~~~~~~~~~~~~~ !-->
+    <string name="share_message">Puzzly 是个有趣，好玩，以及十分益智的游戏，它适合任何2至6岁的孩子使用。</string>
+    <string name="share_login_error">无法登陆。请稍后再试。</string>
+    <string name="share_post_error">不能共享。请稍后再试。</string>
+    <string name="share_internet_error">没有互联网连接。</string>
+    <string name="share_post_done">分享做</string>
+    <string name="share_post_duplicate">已共享</string>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
     <!-- ~~~~~~~~~~~~~~~~~~~ CHOOSE LEVEL ~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->

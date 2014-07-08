@@ -26,6 +26,18 @@
     <string name="settings_localize_app_language">Мова налаштувань</string>
     <string name="settings_localize_study_language">Мова гри</string>
 
+    <string name="settings_purchase">Версія без реклами</string>
+    <string name="settings_share">Опублікувати на</string>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~ SHARE ~~~~~~~~~~~~~~~~~~~~~~ !-->
+    <string name="share_message">Кумедні Пазли для Дітей – цікава та весела гра для навчання та розвитку дітей з 2 до 6 років</string>
+    <string name="share_login_error">Не можливо ввійти в систему. Будь ласка, спробуйте пізніше</string>
+    <string name="share_post_error">Неможливо опублікувати ваш запис. Спробуйте, будь ласка, пізніше</string>
+    <string name="share_internet_error">Не має Інтернет з\'єднання</string>
+    <string name="share_post_done">Запис опубліковано</string>
+    <string name="share_post_duplicate">Вже опубліковано</string>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
     <!-- ~~~~~~~~~~~~~~~~~~~ CHOOSE LEVEL ~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->

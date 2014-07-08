@@ -25,6 +25,19 @@
     <string name="settings_localize_app_language">Язык настроек</string>
     <string name="settings_localize_study_language">Язык игры</string>
 
+    <string name="settings_purchase">Версия без рекламы</string>
+    <string name="settings_share">Публиковать на</string>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
+
+    <!-- ~~~~~~~~~~~~~~~~~~~ SHARE ~~~~~~~~~~~~~~~~~~~~~~ !-->
+    <string name="share_message">Забавные Пазлы для Детей - интересная и веселая игра для обучения и развития детей с 2 ​​до 6 лет</string>
+    <string name="share_login_error">Невозможно войти в систему. Пожалуйста, повторите попытку позже</string>
+    <string name="share_post_error">Невозможно опубликовать вашу запись. Пожалуйста попробуйте позже</string>
+    <string name="share_internet_error">Нет подключение к интернету</string>
+    <string name="share_post_done">Запись опубликована</string>
+    <string name="share_post_duplicate">Уже опубликовано</string>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
     <!-- ~~~~~~~~~~~~~~~~~~~ CHOOSE LEVEL ~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
