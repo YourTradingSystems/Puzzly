@@ -15,6 +15,7 @@ import android.widget.VideoView;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.puzzles.PuzzlesDB;
 import com.mobilez365.puzzly.util.BackgroundSound;
+import com.mobilez365.puzzly.util.Purchase;
 
 import java.lang.reflect.Field;
 import java.util.List;
@@ -29,6 +30,7 @@ public class AppHelper {
     private static MediaPlayer mItemSound;
     public static Integer appStatus;
     private static int passedGame = 0;
+    private static boolean disabledADS;
 
     public static enum Languages {
         en,
@@ -51,6 +53,9 @@ public class AppHelper {
         }
     }
 
+    public static enum Purchase {
+        DISABLE_ADS
+    }
     public static void setDefaultFont(Context context) {
         final Typeface regular = Typeface.createFromAsset(context.getAssets(),
                 "Roboto-Regular.ttf");
@@ -442,5 +447,21 @@ public class AppHelper {
     public static final boolean getRightHandTutorial(Context _context) {
         SharedPreferences prefs = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
         return prefs.getBoolean(Constans.MENU_RIGHT_HAND_TUTORIAL, false);
+    }
+    public static boolean isAdsDisabled(Context _context) {
+        SharedPreferences settings = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
+        disabledADS = settings.getBoolean(Constans.TAG_DISABLED_ADS, false);
+        return disabledADS;
+    }
+    public static void savePurchase(Context _context, Purchase p, boolean v) {
+        SharedPreferences settings = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = settings.edit();
+        switch (p) {
+            case DISABLE_ADS:
+                editor.putBoolean(Constans.TAG_DISABLED_ADS, v);
+                disabledADS = v;
+                break;
+        }
+        editor.commit();
     }
 }

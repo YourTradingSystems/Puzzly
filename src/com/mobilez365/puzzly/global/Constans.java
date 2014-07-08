@@ -35,6 +35,7 @@ public class Constans {
     public static final String GAME_BACKGROUND_MUSIC = "game_background_music";
     public static final String MENU_BACKGROUND_MUSIC = "menu_background_music";
 
+    public static final String TAG_DISABLED_ADS = "disabledADS";
 
     public static final String START_COUNT = "start_count";
 
