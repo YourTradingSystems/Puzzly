@@ -210,8 +210,6 @@ public class SettingsActivity extends RestartActivty{
         if(sadView != null)
             sadView.destroy();
 
-        //PurchaseHelper.DestroyHelper();
-
         super.onDestroy();
     }
 
