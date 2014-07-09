@@ -15,7 +15,7 @@ public class PurchaseHelper {
 
     public static String base64PublicKey;
     static final int RC_REQUEST = 10001;
-    static IabHelper mHelper;
+    private static volatile IabHelper mHelper;
     private static Context context;
 
     private static  IabHelper.QueryInventoryFinishedListener mGotInventoryListener = new IabHelper.QueryInventoryFinishedListener() {
@@ -91,7 +91,7 @@ public class PurchaseHelper {
         context = _context;
         base64PublicKey = _context.getResources().getString(R.string.purchaseKey);
 
-        mHelper = new IabHelper(_context, base64PublicKey);
+        mHelper = getIabHelper();
 
         mHelper.enableDebugLogging(false);
 
@@ -103,5 +103,17 @@ public class PurchaseHelper {
                 mHelper.queryInventoryAsync(mGotInventoryListener);
             }
         });
+    }
+    public static IabHelper getIabHelper() {
+        IabHelper localInstance = mHelper;
+        if (localInstance == null) {
+            synchronized (PurchaseHelper.class) {
+                localInstance = mHelper;
+                if (localInstance == null) {
+                    mHelper = localInstance = new IabHelper(context, base64PublicKey);
+                }
+            }
+        }
+        return localInstance;
     }
 }
