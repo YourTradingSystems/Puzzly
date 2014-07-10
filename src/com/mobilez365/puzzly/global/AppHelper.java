@@ -88,7 +88,6 @@ public class AppHelper {
     }
 
     public static final Languages getLocaleLanguage(Context _contex, int type) {
-        SharedPreferences prefs = _contex.getSharedPreferences(Constans.PREFERENCES_NAME, _contex.MODE_PRIVATE);
         String lang;
         if (type == Constans.APP_LANGUAGE)
             lang = getLocalizeAppLanguage(_contex);
@@ -231,15 +230,6 @@ public class AppHelper {
         return previousGame;
     }
 
-    public static final void setCurrentGame(Context _context, int _gameNumber, int type) {
-        SharedPreferences.Editor edit = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE).edit();
-        if (type == 0)
-            edit.putInt(Constans.CURRENT_GAME_FILL, _gameNumber);
-        else
-            edit.putInt(Constans.CURRENT_GAME_REVEAL, _gameNumber);
-        edit.commit();
-    }
-
     public static int getStartCount(Context _context) {
         SharedPreferences prefs = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
         return prefs.getInt(Constans.START_COUNT, 0);
@@ -261,28 +251,80 @@ public class AppHelper {
 
     public static final int getMaxGame(Context _context, int type) {
         SharedPreferences prefs = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
+
         if (type == 0)
-            return prefs.getInt(Constans.MAX_GAME_FILL, 0);
+            return prefs.getInt(Constans.MAX_GAME_FILL_IN_LANG.getMaxGameField(getLocaleLanguage(_context, Constans.GAME_LANGUAGE)), 0);
         else
-            return prefs.getInt(Constans.MAX_GAME_REVEAL, 0);
+            return prefs.getInt(Constans.MAX_GAME_REVEAL_IN_LANG.getMaxGameField(getLocaleLanguage(_context, Constans.GAME_LANGUAGE)), 0);
     }
 
     public static final void setMaxGame(Context _context, int _gameNumber, int type) {
         SharedPreferences.Editor edit = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE).edit();
 
         if (type == 0 && getMaxGame(_context, type) <= _gameNumber)
-            edit.putInt(Constans.MAX_GAME_FILL, _gameNumber);
+            edit.putInt(Constans.MAX_GAME_FILL_IN_LANG.getMaxGameField(getLocaleLanguage(_context, Constans.GAME_LANGUAGE)), _gameNumber);
         else if (type == 1 && getMaxGame(_context, type) <= _gameNumber)
-            edit.putInt(Constans.MAX_GAME_REVEAL, _gameNumber);
+            edit.putInt(Constans.MAX_GAME_REVEAL_IN_LANG.getMaxGameField(getLocaleLanguage(_context, Constans.GAME_LANGUAGE)), _gameNumber);
         edit.commit();
+    }
+
+    public static void checkMaxCountFromPreviousVersion(Context _context, int type){
+        SharedPreferences prefs = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
+
+        int previousMaxCount;
+        if (type == 0)
+            previousMaxCount = prefs.getInt(Constans.MAX_GAME_FILL, 0);
+        else
+            previousMaxCount = prefs.getInt(Constans.MAX_GAME_REVEAL, 0);
+
+        if(previousMaxCount != 0) {
+            setMaxGame(_context, previousMaxCount, type);
+            SharedPreferences.Editor edit = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE).edit();
+            if (type == 0)
+                edit.putInt(Constans.MAX_GAME_FILL, 0);
+            else
+                edit.putInt(Constans.MAX_GAME_REVEAL, 0);
+            edit.commit();
+        }
+
     }
 
     public static final int getCurrentGame(Context _context, int type) {
         SharedPreferences prefs = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
         if (type == 0)
-            return prefs.getInt(Constans.CURRENT_GAME_FILL, 0);
+            return prefs.getInt(Constans.CURRENT_GAME_FILL_IN_LANG.getCurrentGameField(getLocaleLanguage(_context, Constans.GAME_LANGUAGE)), 0);
         else
-            return prefs.getInt(Constans.CURRENT_GAME_REVEAL, 0);
+            return prefs.getInt(Constans.CURRENT_GAME_REVEAL_IN_LANG.getCurrentGameField(getLocaleLanguage(_context, Constans.GAME_LANGUAGE)), 0);
+    }
+
+    public static final void setCurrentGame(Context _context, int _gameNumber, int type) {
+        SharedPreferences.Editor edit = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE).edit();
+        if (type == 0)
+            edit.putInt(Constans.CURRENT_GAME_FILL_IN_LANG.getCurrentGameField(getLocaleLanguage(_context, Constans.GAME_LANGUAGE)), _gameNumber);
+        else
+            edit.putInt(Constans.CURRENT_GAME_REVEAL_IN_LANG.getCurrentGameField(getLocaleLanguage(_context, Constans.GAME_LANGUAGE)), _gameNumber);
+        edit.commit();
+    }
+
+    public static void checkCurrentCountFromPreviousVersion(Context _context, int type){
+        SharedPreferences prefs = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
+
+        int previousNumber;
+        if (type == 0)
+            previousNumber = prefs.getInt(Constans.CURRENT_GAME_FILL, 0);
+        else
+            previousNumber = prefs.getInt(Constans.CURRENT_GAME_REVEAL, 0);
+
+        if(previousNumber != 0) {
+            setCurrentGame(_context, previousNumber, type);
+            SharedPreferences.Editor edit = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE).edit();
+            if (type == 0)
+                edit.putInt(Constans.CURRENT_GAME_FILL, 0);
+            else
+                edit.putInt(Constans.CURRENT_GAME_REVEAL, 0);
+            edit.commit();
+        }
+
     }
 
     public static final void increasePassedGames() {
@@ -354,12 +396,40 @@ public class AppHelper {
         editor.commit();
     }
 
+    public static final String getLanguageFromInt(int lang_code){
+        switch (lang_code) {
+            case 0:
+                return "en";
+            case 1:
+                return "uk";
+            case 2:
+                return "ru";
+            case 3:
+                return "hu";
+            case 4:
+                return "de";
+            case 5:
+                return "fr";
+            case 6:
+                return "es";
+            case 7:
+                return "zh";
+            case 8:
+                return "ar";
+            case 9:
+                return "hi";
+        }
+        return "en";
+    }
+
     public static final String getLocalizeAppLanguage(Context _context) {
         SharedPreferences prefs = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
         String lang = null;
         try {
             lang = prefs.getString(Constans.LOCALIZE_APP_LANGUAGE, null);
         } catch (Exception exception) {
+           int lang_code = prefs.getInt(Constans.LOCALIZE_STUDY_LANGUAGE, -1);
+            lang = getLanguageFromInt(lang_code);
         } finally {
             if (lang == null) {
                 String value = Locale.getDefault().getLanguage();
@@ -383,6 +453,8 @@ public class AppHelper {
         try {
             lang = prefs.getString(Constans.LOCALIZE_STUDY_LANGUAGE, null);
         } catch (Exception exception) {
+           int lang_code = prefs.getInt(Constans.LOCALIZE_STUDY_LANGUAGE, -1);
+            lang = getLanguageFromInt(lang_code);
         } finally {
             if (lang == null) {
                 String value = Locale.getDefault().getLanguage();

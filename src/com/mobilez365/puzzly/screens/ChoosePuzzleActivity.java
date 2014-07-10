@@ -79,12 +79,18 @@ public class ChoosePuzzleActivity extends RestartActivty {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        mGameType = getIntent().getIntExtra("type", 0);
+        AppHelper.changeLanguage(getApplicationContext(), AppHelper.getLocaleLanguage(getApplicationContext(), Constans.GAME_LANGUAGE).name());
+        AppHelper.checkCurrentCountFromPreviousVersion(getApplicationContext(), mGameType);
+        AppHelper.checkMaxCountFromPreviousVersion(getApplicationContext(), mGameType);
+
         setContentView(R.layout.activity_choose_puzzle);
         if (AppHelper.getPlayBackgroundMusic(getApplicationContext()) && !AppHelper.getBackgroundSound().getName().equals(Constans.MENU_BACKGROUND_MUSIC))
             AppHelper.startBackgroundSound(getApplicationContext(), Constans.MENU_BACKGROUND_MUSIC);
 
         levelsViewPager = (ViewPager) findViewById(R.id.vpMailACP);
-        mGameType = getIntent().getIntExtra("type", 0);
+
         levelsViewPager.setOnPageChangeListener(mPageChangeListener);
 
         maxLevelCount = AppHelper.getMaxGame(getApplicationContext(), mGameType);
@@ -124,6 +130,8 @@ public class ChoosePuzzleActivity extends RestartActivty {
         super.onResume();
 
         AppHelper.changeLanguage(getApplicationContext(), AppHelper.getLocaleLanguage(getApplicationContext(), Constans.GAME_LANGUAGE).name());
+        AppHelper.checkCurrentCountFromPreviousVersion(getApplicationContext(), mGameType);
+        AppHelper.checkMaxCountFromPreviousVersion(getApplicationContext(), mGameType);
 
         if(maxLevelCount != AppHelper.getMaxGame(getApplicationContext(), mGameType) ||
                 currentLevel != AppHelper.getCurrentGame(getApplicationContext(), mGameType)) {

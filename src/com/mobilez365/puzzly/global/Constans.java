@@ -22,6 +22,156 @@ public class Constans {
     public static final String GAME_ACHIEVEMENT = "game_achievement";                           //int
     public static final String CURRENT_GAME_FILL = "current_game_fill";                         //int
     public static final String CURRENT_GAME_REVEAL = "current_game_reveal";                      //int
+    public static enum MAX_GAME_FILL_IN_LANG {
+        max_game_fill_en,
+        max_game_fill_uk,
+        max_game_fill_ru,
+        max_game_fill_hu,
+        max_game_fill_de,
+        max_game_fill_fr,
+        max_game_fill_es,
+        max_game_fill_zh,
+        max_game_fill_ar,
+        max_game_fill_hi;
+
+        public static String getMaxGameField(AppHelper.Languages s) {
+            String language = s.toString();
+            if(language.equals("en"))
+                return max_game_fill_en.toString();
+            else if(language.equals("uk"))
+                return  max_game_fill_uk.toString();
+            else if(language.equals("ru"))
+                return max_game_fill_ru.toString();
+            else if(language.equals("hu"))
+                return max_game_fill_hu.toString();
+            else if(language.equals("de"))
+                return max_game_fill_de.toString();
+            else if(language.equals("fr"))
+                return max_game_fill_fr.toString();
+            else if(language.equals("es"))
+                return max_game_fill_es.toString();
+            else if(language.equals("zh"))
+                return max_game_fill_zh.toString();
+            else if(language.equals("ar"))
+                return max_game_fill_ar.toString();
+            else if(language.equals("hi"))
+                return max_game_fill_hi.toString();
+
+            return max_game_fill_en.toString();
+        }
+    }
+    public static enum MAX_GAME_REVEAL_IN_LANG {
+        max_game_reveal_en,
+        max_game_reveal_uk,
+        max_game_reveal_ru,
+        max_game_reveal_hu,
+        max_game_reveal_de,
+        max_game_reveal_fr,
+        max_game_reveal_es,
+        max_game_reveal_zh,
+        max_game_reveal_ar,
+        max_game_reveal_hi;
+        public static String getMaxGameField(AppHelper.Languages s) {
+            String language = s.toString();
+            if(language.equals("en"))
+                return max_game_reveal_en.toString();
+            else if(language.equals("uk"))
+                return  max_game_reveal_uk.toString();
+            else if(language.equals("ru"))
+                return max_game_reveal_ru.toString();
+            else if(language.equals("hu"))
+                return max_game_reveal_hu.toString();
+            else if(language.equals("de"))
+                return max_game_reveal_de.toString();
+            else if(language.equals("fr"))
+                return max_game_reveal_fr.toString();
+            else if(language.equals("es"))
+                return max_game_reveal_es.toString();
+            else if(language.equals("zh"))
+                return max_game_reveal_zh.toString();
+            else if(language.equals("ar"))
+                return max_game_reveal_ar.toString();
+            else if(language.equals("hi"))
+                return max_game_reveal_hi.toString();
+
+            return max_game_reveal_en.toString();
+        }
+    }
+    public static enum CURRENT_GAME_FILL_IN_LANG {
+        current_game_fill_en,
+        current_game_fill_uk,
+        current_game_fill_ru,
+        current_game_fill_hu,
+        current_game_fill_de,
+        current_game_fill_fr,
+        current_game_fill_es,
+        current_game_fill_zh,
+        current_game_fill_ar,
+        current_game_fill_hi;
+
+        public static String getCurrentGameField(AppHelper.Languages s) {
+            String language = s.toString();
+            if(language.equals("en"))
+                return current_game_fill_en.toString();
+            else if(language.equals("uk"))
+                return  current_game_fill_uk.toString();
+            else if(language.equals("ru"))
+                return current_game_fill_ru.toString();
+            else if(language.equals("hu"))
+                return current_game_fill_hu.toString();
+            else if(language.equals("de"))
+                return current_game_fill_de.toString();
+            else if(language.equals("fr"))
+                return current_game_fill_fr.toString();
+            else if(language.equals("es"))
+                return current_game_fill_es.toString();
+            else if(language.equals("zh"))
+                return current_game_fill_zh.toString();
+            else if(language.equals("ar"))
+                return current_game_fill_ar.toString();
+            else if(language.equals("hi"))
+                return current_game_fill_hi.toString();
+
+            return current_game_fill_en.toString();
+        }
+    }
+    public static enum CURRENT_GAME_REVEAL_IN_LANG {
+        current_game_reveal_en,
+        current_game_reveal_uk,
+        current_game_reveal_ru,
+        current_game_reveal_hu,
+        current_game_reveal_de,
+        current_game_reveal_fr,
+        current_game_reveal_es,
+        current_game_reveal_zh,
+        current_game_reveal_ar,
+        current_game_reveal_hi;
+        public static String getCurrentGameField(AppHelper.Languages s) {
+            String language = s.toString();
+            if(language.equals("en"))
+                return current_game_reveal_en.toString();
+            else if(language.equals("uk"))
+                return  current_game_reveal_uk.toString();
+            else if(language.equals("ru"))
+                return current_game_reveal_ru.toString();
+            else if(language.equals("hu"))
+                return current_game_reveal_hu.toString();
+            else if(language.equals("de"))
+                return current_game_reveal_de.toString();
+            else if(language.equals("fr"))
+                return current_game_reveal_fr.toString();
+            else if(language.equals("es"))
+                return current_game_reveal_es.toString();
+            else if(language.equals("zh"))
+                return current_game_reveal_zh.toString();
+            else if(language.equals("ar"))
+                return current_game_reveal_ar.toString();
+            else if(language.equals("hi"))
+                return current_game_reveal_hi.toString();
+
+            return current_game_reveal_en.toString();
+        }
+    }
     public static final String MAX_GAME_FILL = "max_game_fill";                                 //int
     public static final String MAX_GAME_REVEAL = "max_game_reveal";                             //int
     public static final String PASSED_GAME = "passed_game";                                     //int
