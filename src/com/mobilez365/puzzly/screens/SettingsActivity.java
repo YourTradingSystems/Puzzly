@@ -174,10 +174,10 @@ public class SettingsActivity extends RestartActivty{
         AnalyticsGoogle.fireScreenEvent(this, getString(R.string.activity_settings));
 
         findViews();
-        if (!AppHelper.isAdsDisabled(getApplicationContext())) {
+        if (!AppHelper.isAdsDisabled(getApplicationContext()))
             showBanner();
+        else
             ((ImageButton)findViewById(R.id.btnPurchase_SS)).setImageResource(R.drawable.btn_purchase_done);
-        }
         setValues();
         setListener();
     }

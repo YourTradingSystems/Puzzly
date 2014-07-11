@@ -428,7 +428,7 @@ public class AppHelper {
         try {
             lang = prefs.getString(Constans.LOCALIZE_APP_LANGUAGE, null);
         } catch (Exception exception) {
-           int lang_code = prefs.getInt(Constans.LOCALIZE_STUDY_LANGUAGE, -1);
+           int lang_code = prefs.getInt(Constans.LOCALIZE_APP_LANGUAGE, -1);
             lang = getLanguageFromInt(lang_code);
         } finally {
             if (lang == null) {
