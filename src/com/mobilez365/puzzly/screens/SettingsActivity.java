@@ -31,6 +31,7 @@ public class SettingsActivity extends RestartActivty{
     private CheckBox ccbPlaySound_SS;
     private CheckBox ccbVibrate_SS;
     private CheckBox ccbDisplayInnerBorders_SS;
+    private CheckBox ccbGoogleAnalytics_SS;
     private Spinner spinnerChooseAppCountry_SS;
     private Spinner spinnerChooseStudyCountry_SS;
     private ScrollView swMain;
@@ -131,6 +132,12 @@ public class SettingsActivity extends RestartActivty{
                     AppHelper.setShowImageBorder(getApplicationContext(), ccbDisplayInnerBorders_SS.isChecked());
                     AnalyticsGoogle.fireSettingsEvent(SettingsActivity.this, getString(R.string.btn_display_border), Boolean.toString(ccbDisplayInnerBorders_SS.isChecked()));
                     break;
+
+                case R.id.rlGoogleAnalytics_SS:
+                    ccbGoogleAnalytics_SS.setChecked(!ccbGoogleAnalytics_SS.isChecked());
+                    AppHelper.setAnalytics(getApplicationContext(), ccbGoogleAnalytics_SS.isChecked());
+                    break;
+
                 case R.id.btnTwitter_SS:
                     loadingDialog.show();
                     SocialShare shareTwitter = new SocialShare();
@@ -230,6 +237,7 @@ public class SettingsActivity extends RestartActivty{
         ccbPlaySound_SS = (CheckBox)findViewById(R.id.ccbPlaySound_SS);
         ccbVibrate_SS = (CheckBox)findViewById(R.id.ccbVibrate_SS);
         ccbDisplayInnerBorders_SS = (CheckBox)findViewById(R.id.ccbDisplayInnerBorders_SS);
+        ccbGoogleAnalytics_SS = (CheckBox)findViewById(R.id.ccbGoogleAnalytics_SS);
         spinnerChooseAppCountry_SS = (Spinner)findViewById(R.id.spinnerChooseAppCountry_SS);
         spinnerChooseStudyCountry_SS = (Spinner)findViewById(R.id.spinnerChooseStudyCountry_SS);
         swMain = (ScrollView) findViewById(R.id.swMain_SS);
@@ -241,6 +249,7 @@ public class SettingsActivity extends RestartActivty{
         findViewById(R.id.rlPlaySound_SS).setOnClickListener(mOnClickListener);
         findViewById(R.id.rlVibrate_SS).setOnClickListener(mOnClickListener);
         findViewById(R.id.rlDisplayInnerBorders_SS).setOnClickListener(mOnClickListener);
+        findViewById(R.id.rlGoogleAnalytics_SS).setOnClickListener(mOnClickListener);
         findViewById(R.id.btnTwitter_SS).setOnClickListener(mOnClickListener);
         findViewById(R.id.btnGoogle_SS).setOnClickListener(mOnClickListener);
         findViewById(R.id.btnFacebook_SS).setOnClickListener(mOnClickListener);
@@ -260,6 +269,7 @@ public class SettingsActivity extends RestartActivty{
             ccbVibrate_SS.setVisibility(View.GONE);
 
         ccbDisplayInnerBorders_SS.setChecked(AppHelper.getShowImageBorder(getApplicationContext()));
+        ccbGoogleAnalytics_SS.setChecked(AppHelper.getAnalytics(getApplicationContext()));
 
         CharSequence[] languageArray = getResources().getTextArray(R.array.settings_languages);
         ArrayAdapter<CharSequence> adapter = new ArrayAdapter<CharSequence>(this,

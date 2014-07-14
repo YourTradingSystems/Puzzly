@@ -164,10 +164,37 @@
             </RelativeLayout>
 
             <RelativeLayout
+                    android:id="@+id/rlGoogleAnalytics_SS"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/rlDisplayInnerBorders_SS">
+
+                <com.mobilez365.puzzly.customViews.ColorsCheckBox
+                        android:id="@+id/ccbGoogleAnalytics_SS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/SettingsChooseBox"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:clickable="false"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_analytics"
+                        android:id="@+id/tvGoogleAnalytics_SS"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/tc_settings"
+                        android:textSize="20dp"
+                        android:layout_toLeftOf="@+id/ccbGoogleAnalytics_SS"
+                        android:layout_marginRight="15dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
                     android:id="@+id/rlPurchaseShare_SS"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/rlDisplayInnerBorders_SS"
+                    android:layout_below="@+id/rlGoogleAnalytics_SS"
                     android:background="@drawable/background_settings_purchase"
                     android:paddingLeft="15dp"
                     android:paddingTop="15dp"

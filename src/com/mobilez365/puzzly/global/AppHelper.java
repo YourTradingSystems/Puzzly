@@ -390,6 +390,17 @@ public class AppHelper {
         return prefs.getBoolean(Constans.VIBRATE, true);
     }
 
+    public static final void setAnalytics(Context _context, boolean _state) {
+        SharedPreferences.Editor editor = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE).edit();
+        editor.putBoolean(Constans.GOOGLE_ANALYTICS, _state);
+        editor.commit();
+    }
+
+    public static final boolean getAnalytics(Context _context) {
+        SharedPreferences prefs = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
+        return prefs.getBoolean(Constans.GOOGLE_ANALYTICS, true);
+    }
+
     public static final void setLocalizeAppLanguage(Context _context, String _language) {
         SharedPreferences.Editor editor = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE).edit();
         editor.putString(Constans.LOCALIZE_APP_LANGUAGE, _language);

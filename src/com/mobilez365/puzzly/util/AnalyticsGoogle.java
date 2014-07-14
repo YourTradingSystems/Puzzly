@@ -6,6 +6,7 @@ import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.mobilez365.puzzly.global.AppHelper;
 
 /**
  * Created by andrewtivodar on 07.07.2014.
@@ -27,7 +28,8 @@ public class AnalyticsGoogle {
 
     public static void fireScreenEvent(Context context, String activity) {
         int isTrackingAvailable = GooglePlayServicesUtil.isGooglePlayServicesAvailable(context);
-        if (isTrackingAvailable == ConnectionResult.SUCCESS) {
+        boolean needToTrack = AppHelper.getAnalytics(context);
+        if (isTrackingAvailable == ConnectionResult.SUCCESS && needToTrack) {
             Tracker t = getTracker(context);
 
             t.setScreenName(activity);
@@ -39,7 +41,8 @@ public class AnalyticsGoogle {
 
     public static void fireSettingsEvent(Context context, String btn, String value) {
         int isTrackingAvailable = GooglePlayServicesUtil.isGooglePlayServicesAvailable(context);
-        if (isTrackingAvailable == ConnectionResult.SUCCESS) {
+        boolean needToTrack = AppHelper.getAnalytics(context);
+        if (isTrackingAvailable == ConnectionResult.SUCCESS && needToTrack) {
             Tracker t = getTracker(context);
 
             t.send(new HitBuilders.EventBuilder()
@@ -53,7 +56,8 @@ public class AnalyticsGoogle {
 
     public static void fireLevelStartedEvent(Context context, String level) {
         int isTrackingAvailable = GooglePlayServicesUtil.isGooglePlayServicesAvailable(context);
-        if (isTrackingAvailable == ConnectionResult.SUCCESS) {
+        boolean needToTrack = AppHelper.getAnalytics(context);
+        if (isTrackingAvailable == ConnectionResult.SUCCESS && needToTrack) {
             Tracker t = getTracker(context);
 
             t.send(new HitBuilders.EventBuilder()
@@ -66,7 +70,8 @@ public class AnalyticsGoogle {
 
     public static void fireBonusLevelEndEvent(Context context, String level) {
         int isTrackingAvailable = GooglePlayServicesUtil.isGooglePlayServicesAvailable(context);
-        if (isTrackingAvailable == ConnectionResult.SUCCESS) {
+        boolean needToTrack = AppHelper.getAnalytics(context);
+        if (isTrackingAvailable == ConnectionResult.SUCCESS && needToTrack) {
             Tracker t = getTracker(context);
 
             t.send(new HitBuilders.EventBuilder()

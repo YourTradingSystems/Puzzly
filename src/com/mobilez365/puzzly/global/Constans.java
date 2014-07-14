@@ -17,6 +17,7 @@ public class Constans {
     public static final String PLAY_SOUND = "play_sound";                                       //bool
     public static final String DISPLAY_INNER_BORDERS = "display_inner_borders";                 //bool
     public static final String VIBRATE = "vibrate";                                             //bool
+    public static final String GOOGLE_ANALYTICS = "google_analytics";                           //bool
     public static final String LOCALIZE_APP_LANGUAGE = "localize_app_language";                 //int
     public static final String LOCALIZE_STUDY_LANGUAGE = "localize_study_language";             //int
     public static final String GAME_ACHIEVEMENT = "game_achievement";                           //int
