@@ -243,7 +243,7 @@ public class AppHelper {
     }
 
     public static final void decreaseStartCount(Context _context) {
-        int startCount = getStartCount(_context) - 1;
+        int startCount = getStartCount(_context) - 3;
         SharedPreferences.Editor edit = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE).edit();
         edit.putInt(Constans.START_COUNT, startCount);
         edit.commit();

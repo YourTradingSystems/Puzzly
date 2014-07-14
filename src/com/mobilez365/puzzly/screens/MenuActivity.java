@@ -307,8 +307,8 @@ public class MenuActivity extends Activity {
         layout.addView(sadView);
     }
     private void showReminderDialog() {
-        if (AppHelper.getStartCount(getApplicationContext()) <= 2 ) AppHelper.increaseStartCount(getApplicationContext());
-        if (AppHelper.getStartCount(getApplicationContext()) != 2 ) return;
+        if (AppHelper.getStartCount(getApplicationContext()) <= 3 ) AppHelper.increaseStartCount(getApplicationContext());
+        if (AppHelper.getStartCount(getApplicationContext()) != 3 ) return;
         LayoutInflater factory = LayoutInflater.from(getApplicationContext());
         final View reminderDialogView = factory.inflate(R.layout.reminder_dialog, null);
         final AlertDialog reminderDialog = new AlertDialog.Builder(this).create();
@@ -328,7 +328,6 @@ public class MenuActivity extends Activity {
 
             @Override
             public void onClick(View view) {
-                AppHelper.decreaseStartCount(getApplicationContext());
                 reminderDialog.dismiss();
             }
         });
@@ -340,6 +339,7 @@ public class MenuActivity extends Activity {
             }
         });
         reminderDialog.show();
+        AppHelper.decreaseStartCount(getApplicationContext());
         Typeface robotoTypeface = Typeface.createFromAsset(this.getAssets(), "Roboto-Regular.ttf");
         final int alertTitle = getApplicationContext().getResources().getIdentifier( "alertTitle", "id", "android" );
         TextView tvAlertTitle = ((TextView) reminderDialog.findViewById(alertTitle));
