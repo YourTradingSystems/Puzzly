@@ -218,7 +218,7 @@ public class BonusLevelShakeActivity extends InterstitialActivity {
 
     @Override
     public void onResume() {
-        mShaker.resume(getApplicationContext(), mShakeListener);
+        mShaker.resume(getApplicationContext(), mShakeListener, null);
         super.onResume();
 
         if (!AppHelper.isAppInBackground(getApplicationContext()))

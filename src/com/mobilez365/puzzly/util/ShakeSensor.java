@@ -3,6 +3,7 @@ package com.mobilez365.puzzly.util;
 import android.content.Context;
 import android.hardware.SensorListener;
 import android.hardware.SensorManager;
+import android.util.Log;
 import com.mobilez365.puzzly.global.Constans;
 
 /**
@@ -11,7 +12,11 @@ import com.mobilez365.puzzly.global.Constans;
 public class ShakeSensor implements SensorListener {
 
     private OnShakeListener mShakeListener;
+    private OnMoveListener mMoveListener;
     private SensorManager mSensorMgr;
+
+    private int index = 0;
+    private float valuesX[] = new float[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
     private long mLastUpdate = 0;
     private float mLastX = -1.0f;
@@ -22,7 +27,11 @@ public class ShakeSensor implements SensorListener {
         public void onShake();
     }
 
-    public void resume(Context context, OnShakeListener listener) {
+    public interface OnMoveListener {
+        public void onMove(float moveDiff);
+    }
+
+    public void resume(Context context, OnShakeListener _shakelistener, OnMoveListener _moveListener) {
         mSensorMgr = (SensorManager) context.getSystemService(Context.SENSOR_SERVICE);
 
         if (mSensorMgr == null) {
@@ -35,7 +44,8 @@ public class ShakeSensor implements SensorListener {
             return;
         }
 
-        mShakeListener = listener;
+        mShakeListener = _shakelistener;
+        mMoveListener = _moveListener;
     }
 
     public void pause() {
@@ -44,6 +54,7 @@ public class ShakeSensor implements SensorListener {
             mSensorMgr = null;
         }
         mShakeListener = null;
+        mMoveListener = null;
     }
 
     @Override
@@ -65,9 +76,23 @@ public class ShakeSensor implements SensorListener {
                         mShakeListener.onShake();
                     }
                 }
+
                 mLastX = x;
                 mLastY = y;
                 mLastZ = z;
+            }
+            else{
+                valuesX[index] = values[SensorManager.DATA_X];
+                index++;
+                if (index >= 10)
+                    index = 0;
+                if (mMoveListener != null) {
+                    float forceX = 0.0f;
+                    for (int i = 0; i < 10; i++)
+                        forceX += valuesX[i];
+                    forceX = forceX / 10;
+                    mMoveListener.onMove(forceX);
+                }
             }
         }
     }

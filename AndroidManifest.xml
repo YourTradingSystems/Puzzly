@@ -73,5 +73,9 @@
                 android:screenOrientation="landscape"
                 android:configChanges="orientation|keyboardHidden|screenSize"/>
 
+        <activity android:name=".screens.BonusLevelMoveActivity"
+                  android:screenOrientation="landscape"
+                  android:configChanges="orientation|keyboardHidden|screenSize"/>
+
     </application>
 </manifest>

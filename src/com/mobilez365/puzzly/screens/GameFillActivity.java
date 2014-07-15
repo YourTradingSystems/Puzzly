@@ -281,7 +281,7 @@ public class GameFillActivity extends RestartActivty {
             startActivity(gameIntent);
         } else {
             Random r = new Random();
-            int bonusLevelIndex = r.nextInt(4);
+            int bonusLevelIndex = r.nextInt(5);
 
             Class bonusLevelActivity = null;
             switch (bonusLevelIndex) {
@@ -296,7 +296,10 @@ public class GameFillActivity extends RestartActivty {
                     break;
                 case 3:
                     bonusLevelActivity = BonusLevelHedgehogActivity.class;
-                break;
+                    break;
+                case 4:
+                    bonusLevelActivity = BonusLevelMoveActivity.class;
+                    break;
             }
             Intent gameIntent = new Intent(this, bonusLevelActivity);
             gameIntent.putExtra("type", mGameType);

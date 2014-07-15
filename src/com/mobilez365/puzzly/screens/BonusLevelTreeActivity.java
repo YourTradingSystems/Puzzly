@@ -244,7 +244,7 @@ public class BonusLevelTreeActivity extends InterstitialActivity{
     public void onResume() {
         super.onResume();
 
-      mShaker.resume(getApplicationContext(), mShakeListener);
+      mShaker.resume(getApplicationContext(), mShakeListener, null);
 
         if (!AppHelper.isAppInBackground(getApplicationContext()))
             AppHelper.getBackgroundSound().pause(false);
