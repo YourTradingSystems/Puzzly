@@ -1,4 +1,4 @@
-package com.mobilez365.puzzly.util;
+package com.mobilez365.puzzly.global;
 
 import android.content.Context;
 import com.google.android.gms.analytics.GoogleAnalytics;

@@ -7,7 +7,6 @@ public class Constans {
 
 
     public static final int SHAKE_THRESHOLD = 600;
-    public static final String GAME_NUMBER_EXTRA = "game_number";
     public static final String REVIEW_URL = "https://play.google.com/store/apps/details?id=com.mobilez365.puzzly";
     /**
      * Settings name
@@ -23,6 +22,32 @@ public class Constans {
     public static final String GAME_ACHIEVEMENT = "game_achievement";                           //int
     public static final String CURRENT_GAME_FILL = "current_game_fill";                         //int
     public static final String CURRENT_GAME_REVEAL = "current_game_reveal";                      //int
+
+    public static enum Languages {
+        en,
+        uk,
+        ru,
+        hu,
+        de,
+        fr,
+        es,
+        zh,
+        ar,
+        //he,
+        hi;
+
+        public static boolean contains(String s) {
+            for (Languages choice : values())
+                if (choice.name().equals(s))
+                    return true;
+            return false;
+        }
+    }
+
+    public static enum Purchases {
+        DISABLE_ADS
+    }
+
     public static enum MAX_GAME_FILL_IN_LANG {
         max_game_fill_en,
         max_game_fill_uk,
@@ -35,7 +60,7 @@ public class Constans {
         max_game_fill_ar,
         max_game_fill_hi;
 
-        public static String getMaxGameField(AppHelper.Languages s) {
+        public static String getMaxGameField(Languages s) {
             String language = s.toString();
             if(language.equals("en"))
                 return max_game_fill_en.toString();
@@ -72,7 +97,7 @@ public class Constans {
         max_game_reveal_zh,
         max_game_reveal_ar,
         max_game_reveal_hi;
-        public static String getMaxGameField(AppHelper.Languages s) {
+        public static String getMaxGameField(Languages s) {
             String language = s.toString();
             if(language.equals("en"))
                 return max_game_reveal_en.toString();
@@ -110,7 +135,7 @@ public class Constans {
         current_game_fill_ar,
         current_game_fill_hi;
 
-        public static String getCurrentGameField(AppHelper.Languages s) {
+        public static String getCurrentGameField(Languages s) {
             String language = s.toString();
             if(language.equals("en"))
                 return current_game_fill_en.toString();
@@ -147,7 +172,7 @@ public class Constans {
         current_game_reveal_zh,
         current_game_reveal_ar,
         current_game_reveal_hi;
-        public static String getCurrentGameField(AppHelper.Languages s) {
+        public static String getCurrentGameField(Languages s) {
             String language = s.toString();
             if(language.equals("en"))
                 return current_game_reveal_en.toString();

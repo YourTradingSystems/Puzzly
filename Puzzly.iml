@@ -16,13 +16,13 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="svg-android" level="project" />
     <orderEntry type="module" module-name="google-play-services_lib" />
     <orderEntry type="library" name="google-play-services" level="project" />
     <orderEntry type="library" exported="" name="android-support-v4" level="project" />
     <orderEntry type="library" exported="" name="StartADLib-1.0.1" level="project" />
     <orderEntry type="library" exported="" name="socialauth-4.4" level="project" />
     <orderEntry type="library" exported="" name="socialauth-android-3.2" level="project" />
+    <orderEntry type="library" exported="" name="androidsvg-1.2.1" level="project" />
   </component>
 </module>
 

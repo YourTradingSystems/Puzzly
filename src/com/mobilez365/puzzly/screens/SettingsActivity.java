@@ -1,5 +1,6 @@
 package com.mobilez365.puzzly.screens;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -13,18 +14,19 @@ import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.plus.PlusShare;
 import com.mobilez365.puzzly.R;
+import com.mobilez365.puzzly.global.SoundManager;
 import com.mobilez365.puzzly.global.AppHelper;
 import com.mobilez365.puzzly.global.Constans;
-import com.mobilez365.puzzly.util.AnalyticsGoogle;
-import com.mobilez365.puzzly.util.PurchaseHelper;
-import com.mobilez365.puzzly.util.SocialShare;
+import com.mobilez365.puzzly.global.AnalyticsGoogle;
+import com.mobilez365.puzzly.PurchaseHelper;
+import com.mobilez365.puzzly.SocialShare;
 import com.startad.lib.SADView;
 import org.brickred.socialauth.android.SocialAuthAdapter;
 
 /**
  * Created by Denis on 12.05.14.
  */
-public class SettingsActivity extends RestartActivty{
+public class SettingsActivity extends Activity{
 
     private ImageButton btnBack_SS;
     private CheckBox ccbPlayBackgroundMusic_SS;
@@ -36,7 +38,6 @@ public class SettingsActivity extends RestartActivty{
     private Spinner spinnerChooseStudyCountry_SS;
     private ScrollView swMain;
     private AdView adView;
-    private SADView sadView;
     private ProgressDialog loadingDialog;
 
     private final SocialShare.ShareListener mShareListener = new SocialShare.ShareListener() {
@@ -110,9 +111,9 @@ public class SettingsActivity extends RestartActivty{
                     AnalyticsGoogle.fireSettingsEvent(SettingsActivity.this, getString(R.string.btn_music_enabled), Boolean.toString(ccbPlayBackgroundMusic_SS.isChecked()));
 
                     if (ccbPlayBackgroundMusic_SS.isChecked())
-                        AppHelper.startBackgroundSound(getApplicationContext(), Constans.MENU_BACKGROUND_MUSIC);
+                        SoundManager.playBackgroundMusic(getApplicationContext(), true);
                     else
-                        AppHelper.getBackgroundSound().stop();
+                        SoundManager.stopBackgroundMusic();
 
                     break;
 
@@ -193,32 +194,22 @@ public class SettingsActivity extends RestartActivty{
     protected void onResume() {
         super.onResume();
 
-        if (!AppHelper.isAppInBackground(this))
-            AppHelper.getBackgroundSound().pause(false);
-
         if(adView != null)
             adView.resume();
-
     }
 
     @Override
     protected void onPause() {
         super.onPause();
 
-        if (AppHelper.isAppInBackground(this) || AppHelper.isScreenOff(this))
-            AppHelper.getBackgroundSound().pause(true);
-
         if(adView != null)
             adView.pause();
-
     }
 
     @Override
     public void onDestroy() {
         if(adView != null)
             adView.destroy();
-        if(sadView != null)
-            sadView.destroy();
 
         super.onDestroy();
     }

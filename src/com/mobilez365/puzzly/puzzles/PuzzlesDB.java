@@ -1,6 +1,5 @@
 package com.mobilez365.puzzly.puzzles;
 
-import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -8,7 +7,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Point;
 import android.util.DisplayMetrics;
 
-import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
 
 import java.util.ArrayList;
@@ -984,7 +982,7 @@ public class PuzzlesDB {
         return gameCount;
     }
 
-    public static PuzzleFillGame getPuzzle(int gameNumber, int type, Context context) {
+    public static PuzzleGame getPuzzle(int gameNumber, int type, Context context) {
         String gameItemName = "";
         String gameImage = "";
         String gameResultImage = "";
@@ -1045,35 +1043,8 @@ public class PuzzlesDB {
         }
         findAllBD.close();
 
-        return new PuzzleFillGame(type, gameItemName, gameParts, gameImage, gameResultImage, figurePoint);
+        return new PuzzleGame(type, gameItemName, gameParts, gameImage, gameResultImage, figurePoint);
     }
-
-    /*public static void updateTableGameWord(Context _context)
-    {
-        initDBHelper(_context);
-        SQLiteDatabase findAllBD = dbHelper.getWritableDatabase();
-
-        Cursor cursor = findAllBD.query(PuzzlesDBHelper.TABLE_NAME_FILL_GAME,
-                PuzzlesDBHelper.FIND_ALL_COLUMN,
-                null,
-                null,
-                null,
-                null,
-                null
-        );
-
-        cursor.moveToFirst();
-        do {
-            String gameItem = cursor.getString(cursor.getColumnIndex(PuzzlesDBHelper.GAME_ITEM_NAME));
-            String updateWord = _context.getResources().getString(_context.getResources().getIdentifier(gameItem, "string", _context.getPackageName()));
-
-            ContentValues cv = new ContentValues();
-            cv.put(PuzzlesDBHelper.GAME_WORD, updateWord);
-
-            findAllBD.update(PuzzlesDBHelper.TABLE_NAME_FILL_GAME, cv, PuzzlesDBHelper.GAME_ITEM_NAME + "='" + gameItem + "'", null);
-        } while (cursor.moveToNext());
-        findAllBD.close();
-    }*/
 
     private static List<Point> parsePositionList(String posX, String posY, Context context) {
         List<Point> retList = new ArrayList<Point>();

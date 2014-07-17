@@ -9,22 +9,19 @@ import android.graphics.Point;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.view.Display;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 import android.widget.VideoView;
 
+import com.mobilez365.puzzly.global.AccelerometerSensor;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
 import com.mobilez365.puzzly.global.Constans;
-import com.mobilez365.puzzly.util.AnalyticsGoogle;
-import com.mobilez365.puzzly.util.AnimationEndListener;
-import com.mobilez365.puzzly.util.BackgroundSound;
-import com.mobilez365.puzzly.util.ShakeSensor;
+import com.mobilez365.puzzly.global.AnalyticsGoogle;
+import com.mobilez365.puzzly.AnimationEndListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,7 +37,7 @@ public class BonusLevelFlowerActivity extends InterstitialActivity{
     private int mFlowersShownCount = 0;
     private int mCandiesPickedCount = 0;
     private int mGameNumber;
-    private ShakeSensor mShaker;
+    private AccelerometerSensor mShaker;
     private Vibrator mVibrator;
     private List<ImageView> flowersList;
     private ImageView[] candiesList;
@@ -70,7 +67,7 @@ public class BonusLevelFlowerActivity extends InterstitialActivity{
         }
     };
 
-    private final ShakeSensor.OnShakeListener mShakeListener = new ShakeSensor.OnShakeListener() {
+    private final AccelerometerSensor.OnShakeListener mShakeListener = new AccelerometerSensor.OnShakeListener() {
         @Override
         public void onShake() {
             if (mTutorial != null) {
@@ -104,7 +101,7 @@ public class BonusLevelFlowerActivity extends InterstitialActivity{
         gameType = getIntent().getIntExtra("type", 0);
         mGameNumber = getIntent().getIntExtra("gameNumber", 0);
 
-        mShaker = new ShakeSensor();
+        mShaker = new AccelerometerSensor();
 
         mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         candiesLayout = (RelativeLayout) findViewById(R.id.rlCandiesABF);
@@ -236,7 +233,7 @@ public class BonusLevelFlowerActivity extends InterstitialActivity{
     private void nextGame() {
         AnalyticsGoogle.fireBonusLevelEndEvent(this, getString(R.string.bonus_level_flower));
 
-        Intent gameIntent = new Intent(this, GameFillActivity.class);
+        Intent gameIntent = new Intent(this, PuzzleGameActivity.class);
         gameIntent.putExtra("type", gameType);
         gameIntent.putExtra("gameNumber", mGameNumber);
         startActivity(gameIntent);
@@ -247,9 +244,6 @@ public class BonusLevelFlowerActivity extends InterstitialActivity{
     public void onResume() {
         mShaker.resume(getApplicationContext(), mShakeListener, null);
         super.onResume();
-
-        if (!AppHelper.isAppInBackground(getApplicationContext()))
-            AppHelper.getBackgroundSound().pause(false);
 
         if (mTutorial != null)
             mTutorial.start();
@@ -262,12 +256,6 @@ public class BonusLevelFlowerActivity extends InterstitialActivity{
         super.onPause();
 
         mShaker.pause();
-        if (AppHelper.isAppInBackground(getApplicationContext()) || AppHelper.isScreenOff(getApplicationContext())) {
-            AppHelper.getBackgroundSound().pause(true);
-
-            if (mTutorial != null)
-                mTutorial.stopPlayback();
-        }
     }
 
     @Override

@@ -1,11 +1,16 @@
-package com.mobilez365.puzzly.util;
+package com.mobilez365.puzzly;
 
 import android.content.Context;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
 import android.app.Activity;
 import android.content.Intent;
+import com.mobilez365.puzzly.global.Constans;
 import com.mobilez365.puzzly.screens.SettingsActivity;
+import com.mobilez365.puzzly.util.IabHelper;
+import com.mobilez365.puzzly.util.IabResult;
+import com.mobilez365.puzzly.util.Inventory;
+import com.mobilez365.puzzly.util.Purchase;
 //import android.util.Log;
 
 
@@ -29,7 +34,7 @@ public class PurchaseHelper {
 
 
             Purchase purchase = inventory.getPurchase(SKU_ADS_DISABLE);
-            AppHelper.savePurchase(context, AppHelper.Purchase.DISABLE_ADS, purchase != null && verifyDeveloperPayload(purchase));
+            AppHelper.savePurchase(context, Constans.Purchases.DISABLE_ADS, purchase != null && verifyDeveloperPayload(purchase));
 
         }
     };
@@ -53,7 +58,7 @@ public class PurchaseHelper {
             }
 
             if (purchase.getSku().equals(SKU_ADS_DISABLE)) {
-                AppHelper.savePurchase(context, AppHelper.Purchase.DISABLE_ADS, true);
+                AppHelper.savePurchase(context, Constans.Purchases.DISABLE_ADS, true);
             }
 
         }

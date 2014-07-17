@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.Display;
 import android.view.View;
 import android.widget.ImageButton;
@@ -12,13 +11,13 @@ import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
 import com.mobilez365.puzzly.global.Constans;
 import com.mobilez365.puzzly.puzzles.PuzzlesDB;
-import com.mobilez365.puzzly.util.AnalyticsGoogle;
-import com.mobilez365.puzzly.util.ChooseGamePagerAdapter;
+import com.mobilez365.puzzly.global.AnalyticsGoogle;
+import com.mobilez365.puzzly.ChooseGamePagerAdapter;
 
 /**
  * Created by andrewtivodar on 28.05.2014.
  */
-public class ChoosePuzzleActivity extends RestartActivty {
+public class ChoosePuzzleActivity extends Activity {
 
     private ViewPager levelsViewPager;
     private int maxLevelCount;
@@ -86,8 +85,6 @@ public class ChoosePuzzleActivity extends RestartActivty {
         AppHelper.checkMaxCountFromPreviousVersion(getApplicationContext(), mGameType);
 
         setContentView(R.layout.activity_choose_puzzle);
-        if (AppHelper.getPlayBackgroundMusic(getApplicationContext()) && !AppHelper.getBackgroundSound().getName().equals(Constans.MENU_BACKGROUND_MUSIC))
-            AppHelper.startBackgroundSound(getApplicationContext(), Constans.MENU_BACKGROUND_MUSIC);
 
         levelsViewPager = (ViewPager) findViewById(R.id.vpMailACP);
 
@@ -140,19 +137,5 @@ public class ChoosePuzzleActivity extends RestartActivty {
             currentLevel = AppHelper.getCurrentGame(getApplicationContext(), mGameType);
         }
         levelsAdapter.clickEnable = true;
-
-        if (AppHelper.getPlayBackgroundMusic(getApplicationContext()) && !AppHelper.getBackgroundSound().getName().equals(Constans.MENU_BACKGROUND_MUSIC))
-            AppHelper.startBackgroundSound(getApplicationContext(), Constans.MENU_BACKGROUND_MUSIC);
-
-        if (!AppHelper.isAppInBackground(getApplicationContext()))
-            AppHelper.getBackgroundSound().pause(false);
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-
-        if (AppHelper.isAppInBackground(getApplicationContext()) || AppHelper.isScreenOff(getApplicationContext()))
-            AppHelper.getBackgroundSound().pause(true);
     }
 }

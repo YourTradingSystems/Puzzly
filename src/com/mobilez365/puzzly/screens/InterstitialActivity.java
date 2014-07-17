@@ -1,5 +1,6 @@
 package com.mobilez365.puzzly.screens;
 
+import android.app.Activity;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.common.ConnectionResult;
@@ -10,7 +11,7 @@ import com.mobilez365.puzzly.global.AppHelper;
 /**
  * An {@link android.app.Activity} that requests and can display an InterstitialAd.
  */
-public class InterstitialActivity extends RestartActivty {
+public class InterstitialActivity extends Activity {
 
     protected String AD_UNIT_ID;
     protected InterstitialAd interstitialAd;

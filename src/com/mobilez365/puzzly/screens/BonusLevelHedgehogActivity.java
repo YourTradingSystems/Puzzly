@@ -13,9 +13,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
-import com.mobilez365.puzzly.util.AnalyticsGoogle;
-import com.mobilez365.puzzly.util.AnimationEndListener;
-import com.mobilez365.puzzly.util.BackgroundSound;
+import com.mobilez365.puzzly.global.AnalyticsGoogle;
+import com.mobilez365.puzzly.AnimationEndListener;
 
 import java.util.*;
 
@@ -37,7 +36,6 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity {
     private long passedTime;
     private boolean candiesInPause = false;
 
-    private BackgroundSound mBackgroundSound;
     private ImageButton nextGame;
 
     public class AnimatorComparator implements Comparator<ObjectAnimator> {
@@ -217,7 +215,7 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity {
     private void nextGame() {
         AnalyticsGoogle.fireBonusLevelEndEvent(this, getString(R.string.bonus_level_hedgehog));
 
-        Intent gameIntent = new Intent(this, GameFillActivity.class);
+        Intent gameIntent = new Intent(this, PuzzleGameActivity.class);
         gameIntent.putExtra("type", mGameType);
         gameIntent.putExtra("gameNumber", mGameNumber);
         startActivity(gameIntent);
@@ -243,9 +241,6 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity {
 
         candiesFlyAnimatorsTime = null;
 
-        if (!AppHelper.isAppInBackground(getApplicationContext()))
-            AppHelper.getBackgroundSound().pause(false);
-
         if (nextGame != null) nextGame.setClickable(true);
 
         passedTime = new Date().getTime();
@@ -269,9 +264,6 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity {
                 candiesFlyAnimatorsTime.add(-1l);
             candiesFlyAnimator.end();
         }
-
-        if (AppHelper.isAppInBackground(getApplicationContext()) || AppHelper.isScreenOff(getApplicationContext()))
-            AppHelper.getBackgroundSound().pause(true);
     }
 
     @Override

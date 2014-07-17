@@ -3,29 +3,23 @@ package com.mobilez365.puzzly.screens;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.view.Display;
-import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 import android.widget.VideoView;
-
+import com.mobilez365.puzzly.global.AccelerometerSensor;
+import com.mobilez365.puzzly.AnimationEndListener;
 import com.mobilez365.puzzly.R;
+import com.mobilez365.puzzly.global.AnalyticsGoogle;
 import com.mobilez365.puzzly.global.AppHelper;
 import com.mobilez365.puzzly.global.Constans;
-import com.mobilez365.puzzly.util.AnalyticsGoogle;
-import com.mobilez365.puzzly.util.AnimationEndListener;
-import com.mobilez365.puzzly.util.BackgroundSound;
-import com.mobilez365.puzzly.util.ShakeSensor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +28,7 @@ import java.util.Random;
 /**
  * Created by andrewtivodar on 14.05.2014.
  */
-public class BonusLevelTreeActivity extends InterstitialActivity{
+public class BonusLevelTreeActivity extends InterstitialActivity {
 
     private int gameType;
     private int screenHeight;
@@ -44,7 +38,7 @@ public class BonusLevelTreeActivity extends InterstitialActivity{
     private int mCandiesDroppedCount = 0;
     private int mCandiesPickedCount = 0;
     private int mGameNumber;
-    private ShakeSensor mShaker;
+    private AccelerometerSensor mShaker;
     private Vibrator mVibrator;
     private List<ImageView> candiesList;
     private List<ObjectAnimator> candiesRotateAnimators;
@@ -59,17 +53,15 @@ public class BonusLevelTreeActivity extends InterstitialActivity{
     private final View.OnClickListener mClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            if(v.getId() == R.id.btnNextABL) {
+            if (v.getId() == R.id.btnNextABL) {
                 v.setClickable(false);
                 nextGame();
-            }
-
-            else
+            } else
                 pickCandy(v);
         }
     };
 
-    private final ShakeSensor.OnShakeListener mShakeListener = new ShakeSensor.OnShakeListener() {
+    private final AccelerometerSensor.OnShakeListener mShakeListener = new AccelerometerSensor.OnShakeListener() {
         @Override
         public void onShake() {
             if (mTutorial != null) {
@@ -91,7 +83,7 @@ public class BonusLevelTreeActivity extends InterstitialActivity{
         @Override
         public void OnAnimEnd(View v) {
             v.setVisibility(View.GONE);
-            mCandiesPickedCount ++;
+            mCandiesPickedCount++;
             checkAllPicked();
         }
     };
@@ -103,7 +95,7 @@ public class BonusLevelTreeActivity extends InterstitialActivity{
         gameType = getIntent().getIntExtra("type", 0);
         mGameNumber = getIntent().getIntExtra("gameNumber", 0);
 
-        mShaker = new ShakeSensor();
+        mShaker = new AccelerometerSensor();
         mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         rlContainer_ABLT = (RelativeLayout) findViewById(R.id.rlContainer_ABLT);
 
@@ -126,7 +118,7 @@ public class BonusLevelTreeActivity extends InterstitialActivity{
         previousFallenCandyPosY = fallenCandyStep / 4;
 
         int startCandiesHeight = screenHeight / 11;
-        int startCandiesWidth =  size.x / 3;
+        int startCandiesWidth = size.x / 3;
 
         candiesLayout = (RelativeLayout) findViewById(R.id.rlTreeABL);
 
@@ -181,7 +173,7 @@ public class BonusLevelTreeActivity extends InterstitialActivity{
             candiesRotateAnimators.get(candyNumber).cancel();
 
             ObjectAnimator moveXAnimator = ObjectAnimator.ofFloat(candy, "translationX", candy.getX(), previousFallenCandyPosY);
-            ObjectAnimator moveYAnimator = ObjectAnimator.ofFloat(candy, "translationY", candy.getY(), screenHeight - candy.getHeight() * 1.5f );
+            ObjectAnimator moveYAnimator = ObjectAnimator.ofFloat(candy, "translationY", candy.getY(), screenHeight - candy.getHeight() * 1.5f);
 
             ObjectAnimator scaleXAnimator = ObjectAnimator.ofFloat(candy, "scaleX", 1f, 1.2f);
             scaleXAnimator.setDuration(100);
@@ -222,8 +214,8 @@ public class BonusLevelTreeActivity extends InterstitialActivity{
         }
     }
 
-    private void checkAllPicked(){
-        if(mCandiesPickedCount == mCandiesCount) {
+    private void checkAllPicked() {
+        if (mCandiesPickedCount == mCandiesCount) {
             nextGame = (ImageButton) findViewById(R.id.btnNextABL);
             nextGame.setVisibility(View.VISIBLE);
             nextGame.setOnClickListener(mClickListener);
@@ -233,7 +225,7 @@ public class BonusLevelTreeActivity extends InterstitialActivity{
     private void nextGame() {
         AnalyticsGoogle.fireBonusLevelEndEvent(this, getString(R.string.bonus_level_tree));
 
-        Intent gameIntent = new Intent(this, GameFillActivity.class);
+        Intent gameIntent = new Intent(this, PuzzleGameActivity.class);
         gameIntent.putExtra("type", gameType);
         gameIntent.putExtra("gameNumber", mGameNumber);
         startActivity(gameIntent);
@@ -244,15 +236,12 @@ public class BonusLevelTreeActivity extends InterstitialActivity{
     public void onResume() {
         super.onResume();
 
-      mShaker.resume(getApplicationContext(), mShakeListener, null);
-
-        if (!AppHelper.isAppInBackground(getApplicationContext()))
-            AppHelper.getBackgroundSound().pause(false);
+        mShaker.resume(getApplicationContext(), mShakeListener, null);
 
         if (mTutorial != null)
             mTutorial.start();
 
-        if(nextGame != null) nextGame.setClickable(true);
+        if (nextGame != null) nextGame.setClickable(true);
 
     }
 
@@ -261,14 +250,6 @@ public class BonusLevelTreeActivity extends InterstitialActivity{
         super.onPause();
 
         mShaker.pause();
-
-        if (AppHelper.isAppInBackground(getApplicationContext()) || AppHelper.isScreenOff(getApplicationContext())) {
-            AppHelper.getBackgroundSound().pause(true);
-
-            if (mTutorial != null)
-                mTutorial.stopPlayback();
-        }
-
 
     }
 

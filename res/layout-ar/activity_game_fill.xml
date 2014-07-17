@@ -3,19 +3,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/background_game">
+                android:background="@color/background_game"
+                android:splitMotionEvents="false">
 
-    <FrameLayout
+    <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/rlForGame">
-    </FrameLayout>
-
-    <RelativeLayout
-            android:id="@+id/rlBackgroundAFG"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#00000000">
     </RelativeLayout>
 
     <TextView
@@ -91,10 +85,5 @@
         android:scaleType="center"
             android:layout_centerVertical="true"
             android:visibility="gone"/>
-
-    <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ivResultImageAGF"/>
 
 </RelativeLayout>

@@ -1,26 +1,21 @@
-package com.mobilez365.puzzly.util;
+package com.mobilez365.puzzly;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.graphics.Point;
+import android.graphics.drawable.Drawable;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
-import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
-import com.mobilez365.puzzly.global.Constans;
-import com.mobilez365.puzzly.puzzles.PuzzleFillGame;
+import com.mobilez365.puzzly.puzzles.PuzzleGame;
 import com.mobilez365.puzzly.puzzles.PuzzlesDB;
-import com.mobilez365.puzzly.screens.GameFillActivity;
+import com.mobilez365.puzzly.screens.PuzzleGameActivity;
 
 /**
  * Created by andrewtivodar on 28.05.2014.
@@ -29,8 +24,6 @@ public class ChooseGamePagerAdapter extends PagerAdapter {
     private int mGameCount;
     private int mPagesCount;
     private int mGameType;
-    private int maxFigureHeight;
-    private int maxFigureWidth;
     public boolean clickEnable;
     private  boolean rldr;
 
@@ -41,7 +34,7 @@ public class ChooseGamePagerAdapter extends PagerAdapter {
                 Context appContext = v.getContext().getApplicationContext();
                 int levelPosition = (Integer) v.getTag();
                 if (levelPosition <= AppHelper.getMaxGame(appContext, mGameType)) {
-                    Intent gameIntent = new Intent(appContext, GameFillActivity.class);
+                    Intent gameIntent = new Intent(appContext, PuzzleGameActivity.class);
                     gameIntent.putExtra("type", mGameType);
                     gameIntent.putExtra("gameNumber", levelPosition);
                     gameIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -56,9 +49,6 @@ public class ChooseGamePagerAdapter extends PagerAdapter {
         mGameType = _gameType;
         mGameCount = PuzzlesDB.getPuzzleGameCount(_context, _gameType);
         mPagesCount = (int) Math.ceil(mGameCount / 4f);
-
-        maxFigureWidth = (int) (size.x * 0.3f);
-        maxFigureHeight = (int) (size.y * 0.3f);
         //Reverse for Arabic
         rldr = AppHelper.getLocalizeStudyLanguage(_context).equals("ar") ? true : false;
     }
@@ -88,7 +78,7 @@ public class ChooseGamePagerAdapter extends PagerAdapter {
 
         int levelPosition = rldr ?  mPagesCount * 4 - 3 - position * 4 : position * 4;
         if (levelPosition < mGameCount) {
-            PuzzleFillGame game = PuzzlesDB.getPuzzle(levelPosition, mGameType, appContext);
+            PuzzleGame game = PuzzlesDB.getPuzzle(levelPosition, mGameType, appContext);
 
             TextView gameWord = (TextView) view.findViewById(R.id.tvFirstWordICP);
             ImageView gameFigure = (ImageView) view.findViewById(R.id.ivFirstFigureICP);
@@ -103,7 +93,7 @@ public class ChooseGamePagerAdapter extends PagerAdapter {
 
         levelPosition = rldr ? mPagesCount * 4 - 4 - position * 4 : position * 4 + 1;
         if (levelPosition < mGameCount) {
-            PuzzleFillGame game = PuzzlesDB.getPuzzle(levelPosition, mGameType, appContext);
+            PuzzleGame game = PuzzlesDB.getPuzzle(levelPosition, mGameType, appContext);
 
             TextView gameWord = (TextView) view.findViewById(R.id.tvSecondWordICP);
             ImageView gameFigure = (ImageView) view.findViewById(R.id.ivSecondFigureICP);
@@ -118,7 +108,7 @@ public class ChooseGamePagerAdapter extends PagerAdapter {
 
         levelPosition = rldr ?  mPagesCount * 4 - 1 -  position * 4 : position * 4 + 2;
         if (levelPosition < mGameCount) {
-            PuzzleFillGame game = PuzzlesDB.getPuzzle(levelPosition, mGameType, appContext);
+            PuzzleGame game = PuzzlesDB.getPuzzle(levelPosition, mGameType, appContext);
 
             TextView gameWord = (TextView) view.findViewById(R.id.tvThirdWordICP);
             ImageView gameFigure = (ImageView) view.findViewById(R.id.ivThirdFigureICP);
@@ -133,7 +123,7 @@ public class ChooseGamePagerAdapter extends PagerAdapter {
 
         levelPosition = rldr ?  mPagesCount * 4 - 2 - position * 4 : position * 4 + 3;
         if (levelPosition < mGameCount) {
-            PuzzleFillGame game = PuzzlesDB.getPuzzle(levelPosition, mGameType, appContext);
+            PuzzleGame game = PuzzlesDB.getPuzzle(levelPosition, mGameType, appContext);
 
             TextView gameWord = (TextView) view.findViewById(R.id.tvFourthWordICP);
             ImageView gameFigure = (ImageView) view.findViewById(R.id.ivFourthFigureICP);
@@ -151,7 +141,7 @@ public class ChooseGamePagerAdapter extends PagerAdapter {
         return view;
     }
 
-    private void loadLevelPictures(Context context, PuzzleFillGame game, final ImageView image, RelativeLayout rl, int position) {
+    private void loadLevelPictures(Context context, PuzzleGame game, final ImageView image, RelativeLayout rl, int position) {
         int passedGameCount = AppHelper.getMaxGame(context, mGameType);
         if (position < passedGameCount) {
             String imageName = game.getResultImage();
@@ -159,12 +149,13 @@ public class ChooseGamePagerAdapter extends PagerAdapter {
 
             ParseSvgAsyncTask.ParseListener listener = new ParseSvgAsyncTask.ParseListener() {
                 @Override
-                public void onParseDone(Bitmap bitmap) {
-                    image.setImageBitmap(bitmap);
+                public void onParseDone(Drawable drawable) {
+                    image.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+                    image.setImageDrawable(drawable);
                 }
             };
 
-            ParseSvgAsyncTask parseSvgAsyncTask = new ParseSvgAsyncTask(context, listener, maxFigureWidth, maxFigureHeight);
+            ParseSvgAsyncTask parseSvgAsyncTask = new ParseSvgAsyncTask(context, listener);
             parseSvgAsyncTask.execute(imageName);
         } else if(position == passedGameCount){
             rl.setBackgroundResource(R.drawable.background_new_level);
@@ -176,7 +167,7 @@ public class ChooseGamePagerAdapter extends PagerAdapter {
         }
     }
 
-    private void loadGameWord(Context context, PuzzleFillGame game, TextView tv, int position) {
+    private void loadGameWord(Context context, PuzzleGame game, TextView tv, int position) {
         int passedGameCount = AppHelper.getMaxGame(context, mGameType);
         if(position < passedGameCount) {
             tv.setText(game.getWord(context));

@@ -1,4 +1,4 @@
-package com.mobilez365.puzzly.util;
+package com.mobilez365.puzzly;
 
 import android.content.Context;
 import android.os.Bundle;

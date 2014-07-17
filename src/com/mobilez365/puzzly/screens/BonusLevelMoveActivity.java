@@ -8,16 +8,15 @@ import android.os.Bundle;
 import android.os.Vibrator;
 import android.view.Display;
 import android.view.View;
-import android.view.animation.Interpolator;
 import android.view.animation.LinearInterpolator;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import com.mobilez365.puzzly.global.AccelerometerSensor;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
-import com.mobilez365.puzzly.util.AnalyticsGoogle;
-import com.mobilez365.puzzly.util.AnimationEndListener;
-import com.mobilez365.puzzly.util.ShakeSensor;
+import com.mobilez365.puzzly.global.AnalyticsGoogle;
+import com.mobilez365.puzzly.AnimationEndListener;
 
 import java.util.Random;
 
@@ -29,7 +28,7 @@ public class BonusLevelMoveActivity extends InterstitialActivity {
     private int mGameType;
     private int mGameNumber;
     private boolean shakerEnabled = true;
-    private ShakeSensor mShaker;
+    private AccelerometerSensor mShaker;
     private Vibrator mVibrator;
     private ImageButton nextGame;
     private final int mCandiesCount = 20;
@@ -48,7 +47,7 @@ public class BonusLevelMoveActivity extends InterstitialActivity {
     private long currentFallTime = 0;
     private long currentMissTime = 0;
 
-    private final ShakeSensor.OnMoveListener mShakeListener = new ShakeSensor.OnMoveListener() {
+    private final AccelerometerSensor.OnMoveListener mShakeListener = new AccelerometerSensor.OnMoveListener() {
         @Override
         public void onMove(float diff) {
             int step = mScreenWidth / 150;
@@ -100,7 +99,7 @@ public class BonusLevelMoveActivity extends InterstitialActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bonus_level_move);
 
-        mShaker = new ShakeSensor();
+        mShaker = new AccelerometerSensor();
         mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         hedgehog = (ImageView) findViewById(R.id.ivHedgehogABM);
 
@@ -156,9 +155,6 @@ public class BonusLevelMoveActivity extends InterstitialActivity {
             mShaker.resume(getApplicationContext(), null, mShakeListener);
         super.onResume();
 
-        if (!AppHelper.isAppInBackground(getApplicationContext()))
-            AppHelper.getBackgroundSound().pause(false);
-
         candiesInPause = false;
 
         if(fallAnimator != null) {
@@ -179,9 +175,6 @@ public class BonusLevelMoveActivity extends InterstitialActivity {
         super.onPause();
 
         mShaker.pause();
-        if (AppHelper.isAppInBackground(getApplicationContext()) || AppHelper.isScreenOff(getApplicationContext())) {
-            AppHelper.getBackgroundSound().pause(true);
-        }
 
         candiesInPause = true;
 
@@ -251,7 +244,7 @@ public class BonusLevelMoveActivity extends InterstitialActivity {
     private void nextGame() {
         AnalyticsGoogle.fireBonusLevelEndEvent(this, getString(R.string.bonus_level_hedgehog));
 
-        Intent gameIntent = new Intent(this, GameFillActivity.class);
+        Intent gameIntent = new Intent(this, PuzzleGameActivity.class);
         gameIntent.putExtra("type", mGameType);
         gameIntent.putExtra("gameNumber", mGameNumber);
         startActivity(gameIntent);

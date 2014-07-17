@@ -1,4 +1,4 @@
-package com.mobilez365.puzzly.util;
+package com.mobilez365.puzzly;
 
 import android.animation.Animator;
 import android.view.View;
@@ -25,7 +25,6 @@ public class AnimationEndListener implements Animator.AnimatorListener {
 
     @Override
     public void onAnimationStart(Animator animation) {
-
     }
 
     @Override
@@ -35,12 +34,10 @@ public class AnimationEndListener implements Animator.AnimatorListener {
 
     @Override
     public void onAnimationCancel(Animator animation) {
-
     }
 
     @Override
     public void onAnimationRepeat(Animator animation) {
-
     }
 
 }

@@ -1,4 +1,4 @@
-package com.mobilez365.puzzly.util;
+package com.mobilez365.puzzly.global;
 
 import android.content.Context;
 import android.hardware.SensorListener;
@@ -9,7 +9,7 @@ import com.mobilez365.puzzly.global.Constans;
 /**
  * Created by andrewtivodar on 12.05.2014.
  */
-public class ShakeSensor implements SensorListener {
+public class AccelerometerSensor implements SensorListener {
 
     private OnShakeListener mShakeListener;
     private OnMoveListener mMoveListener;

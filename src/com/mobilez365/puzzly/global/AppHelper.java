@@ -1,61 +1,28 @@
 package com.mobilez365.puzzly.global;
 
-import android.app.ActivityManager;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.net.Uri;
-import android.os.PowerManager;
+import android.os.Vibrator;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.VideoView;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.puzzles.PuzzlesDB;
-import com.mobilez365.puzzly.util.BackgroundSound;
-import com.mobilez365.puzzly.util.Purchase;
+import com.mobilez365.puzzly.screens.*;
 
 import java.lang.reflect.Field;
-import java.util.List;
 import java.util.Locale;
+import java.util.Random;
 
 /**
  * Created by Denis on 14.05.14.
  */
 public class AppHelper {
 
-    private static BackgroundSound mBackgroundSound;
-    private static MediaPlayer mItemSound;
-    public static Integer appStatus;
-    private static int passedGame = 0;
-    private static boolean disabledADS;
-
-    public static enum Languages {
-        en,
-        uk,
-        ru,
-        hu,
-        de,
-        fr,
-        es,
-        zh,
-        ar,
-        //he,
-        hi;
-
-        public static boolean contains(String s) {
-            for (Languages choice : values())
-                if (choice.name().equals(s))
-                    return true;
-            return false;
-        }
-    }
-
-    public static enum Purchase {
-        DISABLE_ADS
-    }
     public static void setDefaultFont(Context context) {
         final Typeface regular = Typeface.createFromAsset(context.getAssets(),
                 "Roboto-Regular.ttf");
@@ -71,7 +38,7 @@ public class AppHelper {
         }
     }
 
-    public static final void changeLanguage(Context _context, String _language) {
+    public static void changeLanguage(Context _context, String _language) {
         try {
             Locale locale = new Locale(_language);
             Locale.setDefault(locale);
@@ -79,7 +46,7 @@ public class AppHelper {
             config.locale = locale;
             _context.getResources().updateConfiguration(config, _context.getResources().getDisplayMetrics());
         } catch (Exception e) {
-            Locale locale = new Locale(Languages.en.name());
+            Locale locale = new Locale(Constans.Languages.en.name());
             Locale.setDefault(locale);
             Configuration config = _context.getResources().getConfiguration();
             config.locale = locale;
@@ -87,7 +54,7 @@ public class AppHelper {
         }
     }
 
-    public static final Languages getLocaleLanguage(Context _contex, int type) {
+    public static Constans.Languages getLocaleLanguage(Context _contex, int type) {
         String lang;
         if (type == Constans.APP_LANGUAGE)
             lang = getLocalizeAppLanguage(_contex);
@@ -95,47 +62,30 @@ public class AppHelper {
             lang = getLocalizeStudyLanguage(_contex);
 
         if (lang.equals("en"))
-            return Languages.en;
+            return Constans.Languages.en;
         else if (lang.equals("uk"))
-            return Languages.uk;
+            return Constans.Languages.uk;
         else if (lang.equals("ru"))
-            return Languages.ru;
+            return Constans.Languages.ru;
         else if (lang.equals("hu"))
-            return Languages.hu;
+            return Constans.Languages.hu;
         else if (lang.equals("de"))
-            return Languages.de;
+            return Constans.Languages.de;
         else if (lang.equals("fr"))
-            return Languages.fr;
+            return Constans.Languages.fr;
         else if (lang.equals("es"))
-            return Languages.es;
+            return Constans.Languages.es;
         else if (lang.equals("zh"))
-            return Languages.zh;
+            return Constans.Languages.zh;
         else if (lang.equals("ar"))
-            return Languages.ar;
+            return Constans.Languages.ar;
         else if (lang.equals("hi"))
-            return Languages.hi;
+            return Constans.Languages.hi;
 
-        return Languages.en;
+        return Constans.Languages.en;
     }
 
-    public static boolean isAppInBackground(final Context _context) {
-        ActivityManager am = (ActivityManager) _context.getSystemService(Context.ACTIVITY_SERVICE);
-        List<ActivityManager.RunningTaskInfo> tasks = am.getRunningTasks(1);
-        if (!tasks.isEmpty()) {
-            ComponentName topActivity = tasks.get(0).topActivity;
-            if (!topActivity.getPackageName().equals(_context.getPackageName())) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public static boolean isScreenOff(final Context _context) {
-        PowerManager powerManager = (PowerManager) _context.getSystemService(_context.POWER_SERVICE);
-        return !powerManager.isScreenOn();
-    }
-
-    public static final VideoView showVideoTutorial(Context _context, ViewGroup _parentView) {
+    public static VideoView showVideoTutorial(Context _context, ViewGroup _parentView) {
         String uriPath = "android.resource://" + _context.getPackageName() + "/raw/" + R.raw.tutorial_1;
         final VideoView tutorial_video = new VideoView(_context);
 
@@ -168,48 +118,18 @@ public class AppHelper {
         return tutorial_video;
     }
 
-    public static final MediaPlayer playSound(Context _context, String _fileName) {
-        int id = _context.getResources().getIdentifier(_fileName, "raw", _context.getPackageName());
-        mItemSound = MediaPlayer.create(_context, id);
-        mItemSound.start();
-        return mItemSound;
-    }
-
-    public static final void startBackgroundSound(Context _context, String _name) {
-        if (mBackgroundSound != null && mBackgroundSound.isPlay()) {
-            if (mBackgroundSound.getPlayer() != null) {
-                mBackgroundSound.getPlayer().stop();
-                mBackgroundSound.getPlayer().release();
-            }
-        }
-
-        if (mBackgroundSound != null)
-            mBackgroundSound.initSound(_context, _name);
-        else {
-            mBackgroundSound = new BackgroundSound(_name);
-            mBackgroundSound.execute(_context.getApplicationContext());
-        }
-    }
-
-    public static final BackgroundSound getBackgroundSound() {
-        if (mBackgroundSound == null)
-            mBackgroundSound = new BackgroundSound("");
-
-        return mBackgroundSound;
-    }
-
-    public static final void setGameAchievement(Context _context, int _count) {
+    public static void setGameAchievement(Context _context, int _count) {
         SharedPreferences.Editor edit = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE).edit();
         edit.putInt(Constans.GAME_ACHIEVEMENT, _count);
         edit.commit();
     }
 
-    public static final int getGameAchievement(Context _context) {
+    public static int getGameAchievement(Context _context) {
         SharedPreferences prefs = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
         return prefs.getInt(Constans.GAME_ACHIEVEMENT, 0);
     }
 
-    public static final int getNextGame(Context _context, int type) {
+    public static int getNextGame(Context _context, int type) {
         int currentGame = getCurrentGame(_context, type);
         int gameCount = PuzzlesDB.getPuzzleGameCount(_context, type);
         int nextGame;
@@ -220,7 +140,7 @@ public class AppHelper {
         return nextGame;
     }
 
-    public static final int getPreviousGame(Context _context, int type) {
+    public static int getPreviousGame(Context _context, int type) {
         int currentGame = getCurrentGame(_context, type);
         int previousGame;
         if (currentGame > 0)
@@ -230,26 +150,56 @@ public class AppHelper {
         return previousGame;
     }
 
+    public static Class getNextGameClass(Context context) {
+        PuzzlesApplication app = (PuzzlesApplication) context.getApplicationContext();
+        boolean isNextGameBonus =  app.getStartedGamesCount() % 3 == 0;
+        Class nextLevelActivity = null;
+        if(isNextGameBonus) {
+            Random r = new Random();
+            int bonusLevelIndex = r.nextInt(5);
+
+            switch (bonusLevelIndex) {
+                case 0:
+                    nextLevelActivity = BonusLevelTreeActivity.class;
+                    break;
+                case 1:
+                    nextLevelActivity = BonusLevelShakeActivity.class;
+                    break;
+                case 2:
+                    nextLevelActivity = BonusLevelFlowerActivity.class;
+                    break;
+                case 3:
+                    nextLevelActivity = BonusLevelHedgehogActivity.class;
+                    break;
+                case 4:
+                    nextLevelActivity = BonusLevelMoveActivity.class;
+                    break;
+            }
+        }
+        else nextLevelActivity = PuzzleGameActivity.class;
+        return nextLevelActivity;
+    }
+
     public static int getStartCount(Context _context) {
         SharedPreferences prefs = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
         return prefs.getInt(Constans.START_COUNT, 0);
     }
 
-    public static final void increaseStartCount(Context _context) {
+    public static void increaseStartCount(Context _context) {
         int startCount = getStartCount(_context) + 1;
         SharedPreferences.Editor edit = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE).edit();
         edit.putInt(Constans.START_COUNT, startCount);
         edit.commit();
     }
 
-    public static final void decreaseStartCount(Context _context) {
+    public static void decreaseStartCount(Context _context) {
         int startCount = getStartCount(_context) - 3;
         SharedPreferences.Editor edit = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE).edit();
         edit.putInt(Constans.START_COUNT, startCount);
         edit.commit();
     }
 
-    public static final int getMaxGame(Context _context, int type) {
+    public static int getMaxGame(Context _context, int type) {
         SharedPreferences prefs = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
 
         if (type == 0)
@@ -258,7 +208,7 @@ public class AppHelper {
             return prefs.getInt(Constans.MAX_GAME_REVEAL_IN_LANG.getMaxGameField(getLocaleLanguage(_context, Constans.GAME_LANGUAGE)), 0);
     }
 
-    public static final void setMaxGame(Context _context, int _gameNumber, int type) {
+    public static void setMaxGame(Context _context, int _gameNumber, int type) {
         SharedPreferences.Editor edit = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE).edit();
 
         if (type == 0 && getMaxGame(_context, type) <= _gameNumber)
@@ -289,7 +239,7 @@ public class AppHelper {
 
     }
 
-    public static final int getCurrentGame(Context _context, int type) {
+    public static int getCurrentGame(Context _context, int type) {
         SharedPreferences prefs = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
         if (type == 0)
             return prefs.getInt(Constans.CURRENT_GAME_FILL_IN_LANG.getCurrentGameField(getLocaleLanguage(_context, Constans.GAME_LANGUAGE)), 0);
@@ -297,7 +247,7 @@ public class AppHelper {
             return prefs.getInt(Constans.CURRENT_GAME_REVEAL_IN_LANG.getCurrentGameField(getLocaleLanguage(_context, Constans.GAME_LANGUAGE)), 0);
     }
 
-    public static final void setCurrentGame(Context _context, int _gameNumber, int type) {
+    public static void setCurrentGame(Context _context, int _gameNumber, int type) {
         SharedPreferences.Editor edit = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE).edit();
         if (type == 0)
             edit.putInt(Constans.CURRENT_GAME_FILL_IN_LANG.getCurrentGameField(getLocaleLanguage(_context, Constans.GAME_LANGUAGE)), _gameNumber);
@@ -327,87 +277,79 @@ public class AppHelper {
 
     }
 
-    public static final void increasePassedGames() {
-        passedGame++;
-    }
-
-    public static final int getPassedGames() {
-        return passedGame;
-    }
-
-    public static final void setPuzzlesInit(Context _context, boolean _initialized) {
+    public static void setPuzzlesInit(Context _context, boolean _initialized) {
         SharedPreferences.Editor edit = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE).edit();
         edit.putBoolean(Constans.PUZZLES_INITIALIZED, _initialized);
         edit.commit();
     }
 
-    public static final boolean getPuzzlesInit(Context _context) {
+    public static boolean getPuzzlesInit(Context _context) {
         SharedPreferences prefs = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
         return prefs.getBoolean(Constans.PUZZLES_INITIALIZED, false);
     }
 
-    public static final void setPlayBackgroundMusic(Context _context, boolean _state) {
+    public static void setPlayBackgroundMusic(Context _context, boolean _state) {
         SharedPreferences.Editor editor = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE).edit();
         editor.putBoolean(Constans.PLAY_BACKGROUND_MUSIC, _state);
         editor.commit();
     }
 
-    public static final boolean getPlayBackgroundMusic(Context _context) {
+    public static boolean getPlayBackgroundMusic(Context _context) {
         SharedPreferences prefs = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
         return prefs.getBoolean(Constans.PLAY_BACKGROUND_MUSIC, true);
     }
 
-    public static final void setShowImageBorder(Context _context, boolean _state) {
+    public static void setShowImageBorder(Context _context, boolean _state) {
         SharedPreferences.Editor editor = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE).edit();
         editor.putBoolean(Constans.DISPLAY_INNER_BORDERS, _state);
         editor.commit();
     }
 
-    public static final boolean getShowImageBorder(Context _context) {
+    public static boolean getShowImageBorder(Context _context) {
         SharedPreferences prefs = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
         return prefs.getBoolean(Constans.DISPLAY_INNER_BORDERS, true);
     }
 
-    public static final void setPlaySound(Context _context, boolean _state) {
+    public static void setPlaySound(Context _context, boolean _state) {
         SharedPreferences.Editor editor = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE).edit();
         editor.putBoolean(Constans.PLAY_SOUND, _state);
         editor.commit();
     }
 
-    public static final boolean getPlaySound(Context _context) {
+    public static boolean getPlaySound(Context _context) {
         SharedPreferences prefs = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
         return prefs.getBoolean(Constans.PLAY_SOUND, true);
     }
 
-    public static final void setVibrate(Context _context, boolean _state) {
+    public static void setVibrate(Context _context, boolean _state) {
         SharedPreferences.Editor editor = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE).edit();
         editor.putBoolean(Constans.VIBRATE, _state);
         editor.commit();
     }
 
-    public static final boolean getVibrate(Context _context) {
+    public static boolean getVibrate(Context _context) {
         SharedPreferences prefs = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
         return prefs.getBoolean(Constans.VIBRATE, true);
     }
 
-    public static final void setAnalytics(Context _context, boolean _state) {
+    public static void setAnalytics(Context _context, boolean _state) {
         SharedPreferences.Editor editor = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE).edit();
         editor.putBoolean(Constans.GOOGLE_ANALYTICS, _state);
         editor.commit();
     }
 
-    public static final boolean getAnalytics(Context _context) {
+    public static boolean getAnalytics(Context _context) {
         SharedPreferences prefs = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
         return prefs.getBoolean(Constans.GOOGLE_ANALYTICS, true);
     }
 
-    public static final void setLocalizeAppLanguage(Context _context, String _language) {
+    public static void setLocalizeAppLanguage(Context _context, String _language) {
         SharedPreferences.Editor editor = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE).edit();
         editor.putString(Constans.LOCALIZE_APP_LANGUAGE, _language);
         editor.commit();
     }
 
-    public static final String getLanguageFromInt(int lang_code){
+    public static String getLanguageFromInt(int lang_code){
         switch (lang_code) {
             case 0:
                 return "en";
@@ -433,7 +375,7 @@ public class AppHelper {
         return "en";
     }
 
-    public static final String getLocalizeAppLanguage(Context _context) {
+    public static String getLocalizeAppLanguage(Context _context) {
         SharedPreferences prefs = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
         String lang = null;
         try {
@@ -444,7 +386,7 @@ public class AppHelper {
         } finally {
             if (lang == null) {
                 String value = Locale.getDefault().getLanguage();
-                if (Languages.contains(value)) lang = value;
+                if (Constans.Languages.contains(value)) lang = value;
                 else lang = "en";
                 setLocalizeAppLanguage(_context, lang);
             }
@@ -452,13 +394,13 @@ public class AppHelper {
         return lang;
     }
 
-    public static final void setLocalizeStudyLanguage(Context _context, String _language) {
+    public static void setLocalizeStudyLanguage(Context _context, String _language) {
         SharedPreferences.Editor editor = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE).edit();
         editor.putString(Constans.LOCALIZE_STUDY_LANGUAGE, _language);
         editor.commit();
     }
 
-    public static final String getLocalizeStudyLanguage(Context _context) {
+    public static String getLocalizeStudyLanguage(Context _context) {
         SharedPreferences prefs = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
         String lang = null;
         try {
@@ -469,7 +411,7 @@ public class AppHelper {
         } finally {
             if (lang == null) {
                 String value = Locale.getDefault().getLanguage();
-                if (Languages.contains(value)) lang = value;
+                if (Constans.Languages.contains(value)) lang = value;
                 else lang = "en";
                 setLocalizeStudyLanguage(_context, lang);
             }
@@ -477,72 +419,72 @@ public class AppHelper {
         return lang;
     }
 
-    public static final void setBonusFlower(Context _context, boolean _state) {
+    public static void setBonusFlower(Context _context, boolean _state) {
         SharedPreferences.Editor editor = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE).edit();
         editor.putBoolean(Constans.BONUS_FLOWER, _state);
         editor.commit();
     }
 
-    public static final boolean getBonusFlower(Context _context) {
+    public static boolean getBonusFlower(Context _context) {
         SharedPreferences prefs = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
         return prefs.getBoolean(Constans.BONUS_FLOWER, false);
     }
 
-    public static final void setBonusShake(Context _context, boolean _state) {
+    public static void setBonusShake(Context _context, boolean _state) {
         SharedPreferences.Editor editor = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE).edit();
         editor.putBoolean(Constans.BONUS_SHAKE, _state);
         editor.commit();
     }
 
-    public static final boolean getBonusShake(Context _context) {
+    public static boolean getBonusShake(Context _context) {
         SharedPreferences prefs = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
         return prefs.getBoolean(Constans.BONUS_SHAKE, false);
     }
 
-    public static final void setBonusTree(Context _context, boolean _state) {
+    public static void setBonusTree(Context _context, boolean _state) {
         SharedPreferences.Editor editor = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE).edit();
         editor.putBoolean(Constans.BONUS_TREE, _state);
         editor.commit();
     }
 
-    public static final boolean getBonusTree(Context _context) {
+    public static boolean getBonusTree(Context _context) {
         SharedPreferences prefs = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
         return prefs.getBoolean(Constans.BONUS_TREE, false);
     }
 
-    public static final void setLeftHandTutorial(Context _context, boolean _state) {
+    public static void setLeftHandTutorial(Context _context, boolean _state) {
         SharedPreferences.Editor editor = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE).edit();
         editor.putBoolean(Constans.MENU_LEFT_HAND_TUTORIAL, _state);
         editor.commit();
     }
 
-    public static final boolean getLeftHandTutorial(Context _context) {
+    public static boolean getLeftHandTutorial(Context _context) {
         SharedPreferences prefs = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
         return prefs.getBoolean(Constans.MENU_LEFT_HAND_TUTORIAL, false);
     }
 
-    public static final void setRightHandTutorial(Context _context, boolean _state) {
+    public static void setRightHandTutorial(Context _context, boolean _state) {
         SharedPreferences.Editor editor = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE).edit();
         editor.putBoolean(Constans.MENU_RIGHT_HAND_TUTORIAL, _state);
         editor.commit();
     }
 
-    public static final boolean getRightHandTutorial(Context _context) {
+    public static boolean getRightHandTutorial(Context _context) {
         SharedPreferences prefs = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
         return prefs.getBoolean(Constans.MENU_RIGHT_HAND_TUTORIAL, false);
     }
+
     public static boolean isAdsDisabled(Context _context) {
         SharedPreferences settings = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
-        disabledADS = settings.getBoolean(Constans.TAG_DISABLED_ADS, false);
-        return disabledADS;
+        return settings.getBoolean(Constans.TAG_DISABLED_ADS, false);
     }
-    public static void savePurchase(Context _context, Purchase p, boolean v) {
+
+    public static void savePurchase(Context _context, Constans.Purchases p, boolean v) {
         SharedPreferences settings = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
         SharedPreferences.Editor editor = settings.edit();
         switch (p) {
             case DISABLE_ADS:
                 editor.putBoolean(Constans.TAG_DISABLED_ADS, v);
-                disabledADS = v;
                 break;
         }
         editor.commit();

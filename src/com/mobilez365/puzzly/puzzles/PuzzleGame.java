@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Created by andrewtivodar on 12.05.2014.
  */
-public class PuzzleFillGame {
+public class PuzzleGame {
 
 	private int gameType;
     private String itemName;
@@ -21,7 +21,7 @@ public class PuzzleFillGame {
     private String resultImage;
     private Point figurePos;
 
-    public PuzzleFillGame(int gameType, String itemName, List<PuzzlesPart> parts, String image, String resultImage, Point figurePos)  {
+    public PuzzleGame(int gameType, String itemName, List<PuzzlesPart> parts, String image, String resultImage, Point figurePos)  {
         this.gameType = gameType;
         this.itemName = itemName;
         this.parts = parts;

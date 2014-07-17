@@ -4,22 +4,21 @@ import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.*;
 import com.google.android.gms.ads.AdView;
 import com.mobilez365.puzzly.R;
+import com.mobilez365.puzzly.global.SoundManager;
 import com.mobilez365.puzzly.global.AppHelper;
 import com.mobilez365.puzzly.global.Constans;
 import com.mobilez365.puzzly.puzzles.PuzzlesDB;
-import com.mobilez365.puzzly.util.AnalyticsGoogle;
+import com.mobilez365.puzzly.global.AnalyticsGoogle;
 import com.startad.lib.SADView;
 
 import java.util.*;
@@ -114,14 +113,9 @@ public class MenuActivity extends Activity {
 
     @Override
     public void onCreate(Bundle _savedInstanceState) {
-        AppHelper.appStatus = 1;
-
         super.onCreate(_savedInstanceState);
 
         AppHelper.changeLanguage(getApplicationContext(), AppHelper.getLocaleLanguage(getApplicationContext(), Constans.APP_LANGUAGE).name());
-
-        if (AppHelper.getPlayBackgroundMusic(getApplicationContext()))
-            AppHelper.startBackgroundSound(getApplicationContext(), Constans.MENU_BACKGROUND_MUSIC);
 
         setContentView(R.layout.menu_screen);
         findViews();
@@ -130,10 +124,6 @@ public class MenuActivity extends Activity {
         startAnimation();
         PuzzlesDB.addBasePuzzlesToDB(getApplicationContext());
         AnalyticsGoogle.fireScreenEvent(this, getString(R.string.activity_main_menu));
-
-/*        SharedPreferences.Editor editor = getSharedPreferences(Constans.PREFERENCES_NAME,MODE_PRIVATE).edit();
-        editor.putInt(Constans.LOCALIZE_STUDY_LANGUAGE, 3);
-        editor.commit();*/
     }
 
     @Override
@@ -143,9 +133,6 @@ public class MenuActivity extends Activity {
 
         if (!AppHelper.isAdsDisabled(getApplicationContext())) showBanner();
         AppHelper.changeLanguage(getApplicationContext(), AppHelper.getLocaleLanguage(getApplicationContext(), Constans.GAME_LANGUAGE).name());
-
-        if (!AppHelper.isAppInBackground(getApplicationContext()))
-            AppHelper.getBackgroundSound().pause(false);
 
         if (AppHelper.getLeftHandTutorial(getApplicationContext())) {
             ivLeftHandTutorial_MS.clearAnimation();
@@ -165,9 +152,6 @@ public class MenuActivity extends Activity {
     @Override
     protected void onPause() {
         super.onPause();
-
-        if (AppHelper.isAppInBackground(getApplicationContext()) || AppHelper.isScreenOff(getApplicationContext()))
-            AppHelper.getBackgroundSound().pause(true);
 
         if(adView != null)
             adView.pause();
@@ -202,7 +186,7 @@ public class MenuActivity extends Activity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        AppHelper.getBackgroundSound().stop();
+        SoundManager.stopBackgroundMusic();
     }
 
     private final void findViews() {
