@@ -6,7 +6,6 @@ import android.content.res.Configuration;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.net.Uri;
-import android.os.Vibrator;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.VideoView;
@@ -54,12 +53,12 @@ public class AppHelper {
         }
     }
 
-    public static Constans.Languages getLocaleLanguage(Context _contex, int type) {
+    public static Constans.Languages getLocaleLanguage(Context _context, int type) {
         String lang;
         if (type == Constans.APP_LANGUAGE)
-            lang = getLocalizeAppLanguage(_contex);
+            lang = getLocalizeAppLanguage(_context);
         else
-            lang = getLocalizeStudyLanguage(_contex);
+            lang = getLocalizeStudyLanguage(_context);
 
         if (lang.equals("en"))
             return Constans.Languages.en;
@@ -99,17 +98,6 @@ public class AppHelper {
             @Override
             public void onPrepared(MediaPlayer mp) {
                 mp.setLooping(true);
-            }
-        });
-
-        tutorial_video.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-
-            @Override
-            public void onCompletion(MediaPlayer mp) {
-
-                tutorial_video.resume();
-                tutorial_video.start();
-
             }
         });
 

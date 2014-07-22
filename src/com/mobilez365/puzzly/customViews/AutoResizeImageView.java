@@ -20,6 +20,7 @@ public class AutoResizeImageView extends ImageView {
     public static final float baseWidth = 800;
     public static final float baseHeight = 480;
     private static Point screenSize;
+    private Point position;
     private int resizeWidth = 0;
     private int resizeHeight = 0;
 
@@ -29,12 +30,19 @@ public class AutoResizeImageView extends ImageView {
             setImageDrawable(drawable);
             resizeHeight = Math.round(drawable.getIntrinsicHeight() / baseHeight * screenSize.y);
             resizeWidth = Math.round(resizeHeight / (float)drawable.getIntrinsicHeight()  * drawable.getIntrinsicWidth());
-
+            resizeFigurePosition(position, drawable.getIntrinsicWidth(), resizeWidth);
         }
     };
 
     public AutoResizeImageView(Context context) {
         super(context);
+        initializeScreenSize();
+        setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+    }
+
+    public AutoResizeImageView(Context context, Point _position) {
+        super(context);
+        position = _position;
         initializeScreenSize();
         setLayerType(View.LAYER_TYPE_SOFTWARE, null);
     }
@@ -61,24 +69,16 @@ public class AutoResizeImageView extends ImageView {
         }
     }
 
-    @Override
-    public void setImageResource(int resId) {
-        super.setImageResource(resId);
-        SVG svg = null;
-        try {
-            svg = SVG.getFromResource(getContext(), resId);
-        } catch (SVGParseException e) {
-        }
-        Drawable drawable = new PictureDrawable(svg.renderToPicture());
-        setImageDrawable(drawable);
-
-        resizeWidth = (int) (drawable.getIntrinsicWidth() / baseWidth * screenSize.x);
-        resizeHeight = (int) (drawable.getIntrinsicHeight() / baseHeight * screenSize.y);
-    }
-
     public void setImageFromNameInThread(String name) {
         ParseSvgAsyncTask parseSvgAsyncTask = new ParseSvgAsyncTask(getContext(), parseListener);
         parseSvgAsyncTask.execute(name);
+    }
+
+    public void resizeFigurePosition(Point oldPos, int oldFigureWidth, int newFigureWidth){
+        int newPosY = Math.round(oldPos.y / AutoResizeImageView.baseHeight * screenSize.y);
+        int newPosX = Math.round((oldPos.x + oldFigureWidth / 2)  / AutoResizeImageView.baseWidth * screenSize.x - newFigureWidth / 2);
+        setX(newPosX);
+        setY(newPosY);
     }
 
     @Override

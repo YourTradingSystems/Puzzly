@@ -27,12 +27,7 @@
         <activity
                 android:name=".screens.MenuActivity"
                 android:label="@string/app_name"
-                android:screenOrientation="landscape">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
+                android:screenOrientation="landscape"/>
 
         <activity
                 android:name=".screens.SettingsActivity"
@@ -77,6 +72,15 @@
         <activity android:name=".screens.BonusLevelMoveActivity"
                   android:screenOrientation="landscape"
                   android:configChanges="orientation|keyboardHidden|screenSize"/>
+
+        <activity android:name=".screens.SplashActivity"
+                  android:screenOrientation="landscape"
+                  android:configChanges="orientation|keyboardHidden|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
 
     </application>
 </manifest>

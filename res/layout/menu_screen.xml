@@ -6,14 +6,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_menu">
 
-    <ImageView
-        android:id="@+id/ivMenuLogo_MS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:src="@drawable/img_logo"
-        android:paddingBottom="30dp"/>
-
     <LinearLayout
         android:id="@+id/llSubMenu_MS"
         android:orientation="horizontal"
@@ -21,14 +13,15 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:gravity="center"
-        android:visibility="invisible">
+            >
 
         <RelativeLayout
             android:id="@+id/rlGameSettings_MS"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="10dp"
-            android:layout_weight="50">
+            android:layout_weight="50"
+            android:splitMotionEvents="false">
 
             <ImageButton
                 android:id="@+id/btnGameSettings_MS"
@@ -46,7 +39,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="10dp"
-            android:layout_weight="50">
+            android:layout_weight="50"
+            android:splitMotionEvents="false">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -76,7 +70,7 @@
         android:layout_height="match_parent"
         android:layout_above="@+id/llSubMenu_MS"
         android:gravity="center"
-        android:visibility="invisible">
+            >
 
         <RelativeLayout
             android:id="@+id/rlLeftMenu_MS"
@@ -90,7 +84,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:layout_marginRight="10dp">
+                android:layout_marginRight="10dp"
+                android:splitMotionEvents="false">
 
                 <ImageView
                     android:id="@+id/ivGameSimpleFill_MS"
@@ -134,7 +129,8 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="10dp">
+                    android:layout_marginLeft="10dp"
+                    android:splitMotionEvents="false">
 
                 <ImageView
                         android:id="@+id/ivGameSimpleReveal_MS"
@@ -171,17 +167,10 @@
 
     <LinearLayout
             android:id="@+id/llBanner_SS"
-            xmlns:ads="http://schemas.android.com/apk/res-auto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true">
-    <com.google.android.gms.ads.AdView
-        android:id="@+id/adView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        ads:adUnitId="@string/adUnitId"
-        ads:adSize="BANNER"
-        android:layout_centerHorizontal="true"/>
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
     </LinearLayout>
 
 </RelativeLayout>

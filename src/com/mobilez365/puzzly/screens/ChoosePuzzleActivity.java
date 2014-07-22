@@ -10,6 +10,7 @@ import android.widget.ImageButton;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
 import com.mobilez365.puzzly.global.Constans;
+import com.mobilez365.puzzly.global.PuzzlesApplication;
 import com.mobilez365.puzzly.puzzles.PuzzlesDB;
 import com.mobilez365.puzzly.global.AnalyticsGoogle;
 import com.mobilez365.puzzly.ChooseGamePagerAdapter;
@@ -111,14 +112,14 @@ public class ChoosePuzzleActivity extends Activity {
         btnNext.setVisibility(View.INVISIBLE);
         btnPrevious.setVisibility(View.INVISIBLE);
 
-        Display display = getWindowManager().getDefaultDisplay();
-        Point size = new Point();
-        display.getSize(size);
+        Point screenSize = ((PuzzlesApplication) getApplication()).getScreenSize();
 
-        levelsAdapter = new ChooseGamePagerAdapter(getApplicationContext(), mGameType, size);
+        levelsAdapter = new ChooseGamePagerAdapter(getApplicationContext(), mGameType, screenSize);
         levelsViewPager.setAdapter(levelsAdapter);
         //Reverse for arabic
-        int currentItem =  AppHelper.getLocalizeStudyLanguage(getApplicationContext()).equals("ar") ? (PuzzlesDB.getPuzzleGameCount(getApplicationContext(), mGameType) - AppHelper.getCurrentGame(getApplicationContext(), mGameType)) / 4: AppHelper.getCurrentGame(getApplicationContext(), mGameType) / 4;
+        int currentItem =  AppHelper.getLocalizeStudyLanguage(getApplicationContext()).equals("ar") ?
+                (PuzzlesDB.getPuzzleGameCount(getApplicationContext(), mGameType) - AppHelper.getCurrentGame(getApplicationContext(), mGameType)) / 4:
+                AppHelper.getCurrentGame(getApplicationContext(), mGameType) / 4;
         levelsViewPager.setCurrentItem( currentItem );
     }
 
@@ -127,8 +128,6 @@ public class ChoosePuzzleActivity extends Activity {
         super.onResume();
 
         AppHelper.changeLanguage(getApplicationContext(), AppHelper.getLocaleLanguage(getApplicationContext(), Constans.GAME_LANGUAGE).name());
-        AppHelper.checkCurrentCountFromPreviousVersion(getApplicationContext(), mGameType);
-        AppHelper.checkMaxCountFromPreviousVersion(getApplicationContext(), mGameType);
 
         if(maxLevelCount != AppHelper.getMaxGame(getApplicationContext(), mGameType) ||
                 currentLevel != AppHelper.getCurrentGame(getApplicationContext(), mGameType)) {

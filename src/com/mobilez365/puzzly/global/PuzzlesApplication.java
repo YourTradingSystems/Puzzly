@@ -9,7 +9,6 @@ import android.media.AudioManager;
 import android.os.Bundle;
 import android.view.Display;
 import android.view.WindowManager;
-import com.mobilez365.puzzly.global.SoundManager;
 import com.mobilez365.puzzly.screens.*;
 
 /**
@@ -73,6 +72,7 @@ public class PuzzlesApplication extends Application {
     private Integer appStatusChecking;
     private boolean isApplicationInBackground = false;
     private boolean isActivityVisible;
+    private boolean needToShowAd = false;
 
     public Point getScreenSize() {
         if(screenSize == null) {
@@ -91,6 +91,8 @@ public class PuzzlesApplication extends Application {
         super.onCreate();
         appStatusChecking = 1;
         registerActivityLifecycleCallbacks(activityLifecycleCallbacks);
+        InterstitialAD.initFullPageAd(getApplicationContext());
+        InterstitialAD.loadAd(getApplicationContext());
     }
 
     public final void increaseStartedGamesCount() {
@@ -99,6 +101,14 @@ public class PuzzlesApplication extends Application {
 
     public final int getStartedGamesCount() {
         return startedGamesCount;
+    }
+
+    public boolean isNeedToShowAd() {
+        return needToShowAd;
+    }
+
+    public void setNeedToShowAd(boolean needToShowAd) {
+        this.needToShowAd = needToShowAd;
     }
 
 }

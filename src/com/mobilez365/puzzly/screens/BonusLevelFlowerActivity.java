@@ -3,6 +3,7 @@ package com.mobilez365.puzzly.screens;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
@@ -16,11 +17,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.VideoView;
 
-import com.mobilez365.puzzly.global.AccelerometerSensor;
+import com.mobilez365.puzzly.global.*;
 import com.mobilez365.puzzly.R;
-import com.mobilez365.puzzly.global.AppHelper;
-import com.mobilez365.puzzly.global.Constans;
-import com.mobilez365.puzzly.global.AnalyticsGoogle;
 import com.mobilez365.puzzly.AnimationEndListener;
 
 import java.util.ArrayList;
@@ -30,7 +28,7 @@ import java.util.Random;
 /**
  * Created by andrewtivodar on 15.05.2014.
  */
-public class BonusLevelFlowerActivity extends InterstitialActivity{
+public class BonusLevelFlowerActivity extends Activity {
 
     private int gameType;
     private final int mCandiesCount = 5;
@@ -118,6 +116,8 @@ public class BonusLevelFlowerActivity extends InterstitialActivity{
 
         if (!AppHelper.getBonusFlower(getApplicationContext()))
             mTutorial = AppHelper.showVideoTutorial(this, rlContainer_ABLF);
+
+        ((PuzzlesApplication) getApplicationContext()).setNeedToShowAd(true);
     }
 
     private void initSun(){
@@ -224,7 +224,7 @@ public class BonusLevelFlowerActivity extends InterstitialActivity{
 
     private void checkAllPicked() {
         if (mCandiesPickedCount == mCandiesCount) {
-             nextGame = (ImageButton) findViewById(R.id.btnNextABF);
+            nextGame = (ImageButton) findViewById(R.id.btnNextABF);
             nextGame.setVisibility(View.VISIBLE);
             nextGame.setOnClickListener(mClickListener);
         }
@@ -244,17 +244,11 @@ public class BonusLevelFlowerActivity extends InterstitialActivity{
     public void onResume() {
         mShaker.resume(getApplicationContext(), mShakeListener, null);
         super.onResume();
-
-        if (mTutorial != null)
-            mTutorial.start();
-
-        if(nextGame != null) nextGame.setClickable(true);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-
         mShaker.pause();
     }
 

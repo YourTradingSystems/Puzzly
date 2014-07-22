@@ -14,10 +14,11 @@
     <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/ivHedgehogABM"
-            android:src="@drawable/img_crew_cut_big"
+            android:id="@+id/ivBasketABM"
             android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"/>
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/img_basket_for_move"
+            android:paddingBottom="10dp"/>
 
     <RelativeLayout
             android:id="@+id/rlCandiesABM"

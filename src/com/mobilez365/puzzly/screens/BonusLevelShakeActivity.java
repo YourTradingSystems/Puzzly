@@ -3,6 +3,7 @@ package com.mobilez365.puzzly.screens;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
@@ -15,11 +16,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.VideoView;
 
-import com.mobilez365.puzzly.global.AccelerometerSensor;
+import com.mobilez365.puzzly.global.*;
 import com.mobilez365.puzzly.R;
-import com.mobilez365.puzzly.global.AppHelper;
-import com.mobilez365.puzzly.global.Constans;
-import com.mobilez365.puzzly.global.AnalyticsGoogle;
 import com.mobilez365.puzzly.AnimationEndListener;
 
 import java.util.ArrayList;
@@ -29,7 +27,7 @@ import java.util.Random;
 /**
  * Created by andrewtivodar on 12.05.2014.
  */
-public class BonusLevelShakeActivity extends InterstitialActivity {
+public class BonusLevelShakeActivity extends Activity {
 
     private int gameType;
     private final int mCandiesCount = 9;
@@ -105,6 +103,8 @@ public class BonusLevelShakeActivity extends InterstitialActivity {
 
         if (!AppHelper.getBonusShake(getApplicationContext()))
             mTutorial = AppHelper.showVideoTutorial(this, rlContainer_ABLS);
+
+        ((PuzzlesApplication) getApplicationContext()).setNeedToShowAd(true);
     }
 
     private void initCandies() {
@@ -217,11 +217,6 @@ public class BonusLevelShakeActivity extends InterstitialActivity {
     public void onResume() {
         mShaker.resume(getApplicationContext(), mShakeListener, null);
         super.onResume();
-
-        if (mTutorial != null)
-            mTutorial.start();
-
-        if(nextGame != null) nextGame.setClickable(true);
     }
 
     @Override
@@ -233,12 +228,8 @@ public class BonusLevelShakeActivity extends InterstitialActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-
-        for (ObjectAnimator candiesRotateAnimator : candiesRotateAnimators) {
+        for (ObjectAnimator candiesRotateAnimator : candiesRotateAnimators)
             candiesRotateAnimator.cancel();
-        }
-
     }
-
 
 }

@@ -2,10 +2,12 @@ package com.mobilez365.puzzly.screens;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.view.Display;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.ImageButton;
@@ -15,13 +17,14 @@ import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.global.AppHelper;
 import com.mobilez365.puzzly.global.AnalyticsGoogle;
 import com.mobilez365.puzzly.AnimationEndListener;
+import com.mobilez365.puzzly.global.PuzzlesApplication;
 
 import java.util.*;
 
 /**
  * Created by andrewtivodar on 15.05.2014.
  */
-public class BonusLevelHedgehogActivity extends InterstitialActivity {
+public class BonusLevelHedgehogActivity extends Activity {
 
     private int mGameType;
     private final int mCandiesCount = 20;
@@ -41,9 +44,9 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity {
     public class AnimatorComparator implements Comparator<ObjectAnimator> {
         @Override
         public int compare(ObjectAnimator o1, ObjectAnimator o2) {
-            return Long.compare(o1.getStartDelay(), (o2.getStartDelay()));
+            return (int) (o1.getStartDelay() - o2.getStartDelay());
         }
-    };
+    }
 
     private final ViewTreeObserver.OnGlobalLayoutListener onGlobalLayoutListener = new ViewTreeObserver.OnGlobalLayoutListener() {
         @Override
@@ -53,15 +56,22 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity {
         }
     };
 
+    private final View.OnTouchListener mCandyTouchListener = new View.OnTouchListener() {
+        @Override
+        public boolean onTouch(View v, MotionEvent event) {
+            if (event.getAction() == MotionEvent.ACTION_DOWN)
+                pickCandy(v);
+            return true;
+        }
+    };
+
     private final View.OnClickListener mClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            v.setClickable(false);
             if (v.getId() == R.id.btnNextABH) {
                 v.setClickable(false);
                 nextGame();
-            } else
-                pickCandy(v);
+            }
         }
     };
 
@@ -98,6 +108,8 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity {
 
         bigHedgehog = (ImageView) findViewById(R.id.ivHedgehogBigABH);
         bigHedgehog.getViewTreeObserver().addOnGlobalLayoutListener(onGlobalLayoutListener);
+
+        ((PuzzlesApplication) getApplicationContext()).setNeedToShowAd(true);
     }
 
     private void initCandies() {
@@ -143,7 +155,7 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity {
             candy.setPadding(10, 10, 10, 10);
             candy.setX(-candySize);
             candy.setY(candyYPos);
-            candy.setOnClickListener(mClickListener);
+            candy.setOnTouchListener(mCandyTouchListener);
 
             if (bigCandy)
                 bigCandiesList.add(candy);
@@ -164,7 +176,7 @@ public class BonusLevelHedgehogActivity extends InterstitialActivity {
     }
 
     private void pickCandy(View v) {
-        v.setClickable(false);
+        v.setOnTouchListener(null);
         AppHelper.setGameAchievement(getApplicationContext(), AppHelper.getGameAchievement(getApplicationContext()) + 1);
         v.bringToFront();
 

@@ -58,9 +58,13 @@ public class GameWorker {
                     gameParts.get(partNum).deltaX = (int) event.getX();
                     gameParts.get(partNum).deltaY = (int) event.getY();
                     v.bringToFront();
+                    v.getParent().requestLayout();
                     vibrate();
                     break;
                 case MotionEvent.ACTION_MOVE:
+                    v.bringToFront();
+                    v.getParent().requestLayout();
+
                     int deltaX = gameParts.get(partNum).deltaX;
                     int deltaY = gameParts.get(partNum).deltaY;
 
@@ -114,12 +118,6 @@ public class GameWorker {
         parseSvgAsyncTask.execute(puzzleGame.getResultImage());
     }
 
-    public Point resizeFigurePosition(Point oldPos){
-        int newPosY = Math.round(oldPos.y / AutoResizeImageView.baseHeight * screenSize.y);
-        int newPosX = Math.round(oldPos.x / AutoResizeImageView.baseWidth * screenSize.x);
-        return new Point(newPosX, newPosY);
-    }
-
     public Point resizePartFinalPosition(Point oldPos){
         int newPosY = Math.round(oldPos.y / AutoResizeImageView.baseHeight * screenSize.y);
         int newPosX = Math.round(screenSize.y / AutoResizeImageView.baseHeight * oldPos.x);
@@ -135,27 +133,21 @@ public class GameWorker {
     }
 
     public void startGame(RelativeLayout gameLayout) {
-        wholePuzzleImage = new AutoResizeImageView(context);
+        wholePuzzleImage = new AutoResizeImageView(context, puzzleGame.getFigurePos());
         wholePuzzleImage.setImageFromNameInThread(puzzleGame.getImage());
-        Point figurePos = resizeFigurePosition(puzzleGame.getFigurePos());
-        wholePuzzleImage.setX(figurePos.x);
-        wholePuzzleImage.setY(figurePos.y);
         gameLayout.addView(wholePuzzleImage);
 
         int i = 0;
         for (PuzzlesPart puzzlesPart : puzzleGame.getParts()) {
-            AutoResizeImageView ivPart = new AutoResizeImageView(context);
+            AutoResizeImageView ivPart = new AutoResizeImageView(context, puzzlesPart.currentPartLocation);
             ivPart.setImageFromNameInThread(puzzlesPart.partImage);
             ivPart.setOnTouchListener(puzzlePartsMoveListener);
-            Point currentPartPos = resizeFigurePosition(puzzlesPart.currentPartLocation);
-            ivPart.setX(currentPartPos.x);
-            ivPart.setY(currentPartPos.y);
             ivPart.setTag(i);
             gameLayout.addView(ivPart);
 
             Point finalPartPos = resizePartFinalPosition(puzzlesPart.finalPartLocation);
-            GameSprite puzzlePartSprite = new GameSprite(ivPart, finalPartPos.x + figurePos.x,
-                    finalPartPos.y + figurePos.y);
+            GameSprite puzzlePartSprite = new GameSprite(ivPart, finalPartPos.x,
+                    finalPartPos.y);
             if (puzzleGame.getGameType() == 1 && i > 0)
                 puzzlePartSprite.setPieceLocked(true);
             gameParts.add(puzzlePartSprite);
@@ -163,10 +155,8 @@ public class GameWorker {
         }
 
         if (puzzleGame.getGameType() == 1) {
-            AutoResizeImageView ivRevealGamePart = new AutoResizeImageView(context);
+            AutoResizeImageView ivRevealGamePart = new AutoResizeImageView(context, puzzleGame.getFigurePos());
             ivRevealGamePart.setImageFromNameInThread(puzzleGame.getImage());
-            ivRevealGamePart.setX(figurePos.x);
-            ivRevealGamePart.setY(figurePos.y);
             gameLayout.addView(ivRevealGamePart);
             GameSprite puzzlePartSprite = new GameSprite(ivRevealGamePart, 0, 0);
             puzzlePartSprite.setPieceLocked(true);
@@ -181,11 +171,11 @@ public class GameWorker {
 
     private boolean checkPuzzlePartPosition(int partNum, int puzzlePosX, int puzzlePosY) {
         GameSprite currentSprite = gameParts.get(partNum);
-        int puzzleFinalPosX = currentSprite.lockedX;
-        int puzzleFinalPosY = currentSprite.lockedY;
+        int puzzleFinalPosX = currentSprite.lockedX + (int)wholePuzzleImage.getX();
+        int puzzleFinalPosY = currentSprite.lockedY + (int)wholePuzzleImage.getY();
         if ((puzzleFinalPosX > puzzlePosX - CATCH_DISTANCE && puzzleFinalPosX < puzzlePosX + CATCH_DISTANCE
                 && puzzleFinalPosY > puzzlePosY - CATCH_DISTANCE && puzzleFinalPosY < puzzlePosY + CATCH_DISTANCE)) {
-            onPartLock(currentSprite);
+            onPartLock(currentSprite, puzzleFinalPosX, puzzleFinalPosY);
             return true;
         }
         return false;
@@ -202,10 +192,10 @@ public class GameWorker {
             onGameFinish();
     }
 
-    private void onPartLock(GameSprite currentSprite) {
+    private void onPartLock(GameSprite currentSprite, int finalPartPosX, int finalPartPosY) {
         AutoResizeImageView lockedPart = currentSprite.getPuzzlePart();
-        lockedPart.setX(currentSprite.lockedX);
-        lockedPart.setY(currentSprite.lockedY);
+        lockedPart.setX(finalPartPosX);
+        lockedPart.setY(finalPartPosY);
         currentSprite.setPieceLocked(true);
         lockedPart.setOnTouchListener(null);
     }

@@ -12,10 +12,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.customViews.AutoResizeImageView;
-import com.mobilez365.puzzly.global.AnalyticsGoogle;
-import com.mobilez365.puzzly.global.AppHelper;
-import com.mobilez365.puzzly.global.PuzzlesApplication;
-import com.mobilez365.puzzly.global.SoundManager;
+import com.mobilez365.puzzly.global.*;
 import com.mobilez365.puzzly.puzzles.GameWorker;
 import com.mobilez365.puzzly.puzzles.PuzzleGame;
 import com.mobilez365.puzzly.puzzles.PuzzlesDB;
@@ -81,7 +78,10 @@ public class PuzzleGameActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game_fill);
+
+        InterstitialAD.showFullAD(getApplicationContext());
+
+        setContentView(R.layout.activity_puzzle_game);
 
         mGameType = getIntent().getIntExtra("type", 0);
         mGameNumber = getIntent().getIntExtra("gameNumber", 0);

@@ -16,7 +16,7 @@ public class AccelerometerSensor implements SensorListener {
     private SensorManager mSensorMgr;
 
     private int index = 0;
-    private float valuesX[] = new float[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+    private float valuesX[] = new float[] { 0, 0, 0, 0, 0 };
 
     private long mLastUpdate = 0;
     private float mLastX = -1.0f;
@@ -84,13 +84,13 @@ public class AccelerometerSensor implements SensorListener {
             else{
                 valuesX[index] = values[SensorManager.DATA_X];
                 index++;
-                if (index >= 10)
+                if (index >= 5)
                     index = 0;
                 if (mMoveListener != null) {
                     float forceX = 0.0f;
-                    for (int i = 0; i < 10; i++)
+                    for (int i = 0; i < 5; i++)
                         forceX += valuesX[i];
-                    forceX = forceX / 10;
+                    forceX = forceX / 5;
                     mMoveListener.onMove(forceX);
                 }
             }
