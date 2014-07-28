@@ -1,5 +1,7 @@
 package com.mobilez365.puzzly.screens;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
@@ -13,6 +15,7 @@ import android.widget.TextView;
 import com.mobilez365.puzzly.R;
 import com.mobilez365.puzzly.customViews.AutoResizeImageView;
 import com.mobilez365.puzzly.global.*;
+import com.mobilez365.puzzly.puzzles.GameSprite;
 import com.mobilez365.puzzly.puzzles.GameWorker;
 import com.mobilez365.puzzly.puzzles.PuzzleGame;
 import com.mobilez365.puzzly.puzzles.PuzzlesDB;
@@ -33,10 +36,7 @@ public class PuzzleGameActivity extends Activity {
             AppHelper.setMaxGame(getApplicationContext(), mGameNumber + 1, mGameType);
             AppHelper.setGameAchievement(getApplicationContext(), AppHelper.getGameAchievement(getApplicationContext()) + 1);
 
-            gameText.setVisibility(View.VISIBLE);
-            gameText.setText(mPuzzleWord);
-            showCandyToBasketAnimation();
-
+            showWord();
             SoundManager.playWordSound(getApplicationContext());
         }
 
@@ -45,16 +45,22 @@ public class PuzzleGameActivity extends Activity {
             ivResultImage = resultImage;
             ivResultImage.setId(resultImageId);
             ivResultImage.setOnClickListener(mOnClickListener);
+            showCandyToBasketAnimation();
+        }
+    };
+
+    private final AnimatorListenerAdapter candyFallAnimationListener = new AnimatorListenerAdapter() {
+        @Override
+        public void onAnimationEnd(Animator animation) {
+            super.onAnimationEnd(animation);
             showMoveToCenterAnimation();
+            hideBasket();
 
             if (AppHelper.getNextGame(getApplicationContext(), mGameType) != -1)
                 findViewById(R.id.btnNextAGF).setVisibility(View.VISIBLE);
 
             if (mGameNumber != 0)
                 findViewById(R.id.btnPreviousAGF).setVisibility(View.VISIBLE);
-
-            findViewById(R.id.ivBasketAGF).setVisibility(View.GONE);
-            findViewById(R.id.ivCandyAFG).setVisibility(View.GONE);
         }
     };
 
@@ -140,7 +146,26 @@ public class PuzzleGameActivity extends Activity {
         float basketMiddleYPos = basket.getY() + basket.getHeight() / 2;
         ObjectAnimator moveCandyYAnimator = ObjectAnimator.ofFloat(candy, "translationY", candy.getY(), basketMiddleYPos);
         moveCandyYAnimator.setDuration(1000);
+        moveCandyYAnimator.addListener(candyFallAnimationListener);
         moveCandyYAnimator.start();
+    }
+
+    private void showWord() {
+        gameText.setVisibility(View.VISIBLE);
+        gameText.setText(mPuzzleWord);
+
+        ObjectAnimator wordAlphaAnim = ObjectAnimator.ofFloat(gameText, "alpha", 0, 1);
+        wordAlphaAnim.setDuration(1000);
+        wordAlphaAnim.start();
+    }
+
+    private void hideBasket() {
+        ImageView basket = (ImageView) findViewById(R.id.ivBasketAGF);
+        findViewById(R.id.ivCandyAFG).setVisibility(View.GONE);
+
+        ObjectAnimator wordAlphaAnim = ObjectAnimator.ofFloat(basket, "translationX", 0, - basket.getWidth() - basket.getX());
+        wordAlphaAnim.setDuration(250);
+        wordAlphaAnim.start();
     }
 
     private void showMoveToCenterAnimation() {

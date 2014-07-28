@@ -152,67 +152,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a79d8431-a31c-4800-9f13-431b5a1f9d4a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/img_volume_loud.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/img_volume_loud.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/img_volume_silence.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/img_volume_silence.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/img_volume_thumb_green.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/img_volume_thumb_green.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/img_volume_thumb_green.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/img_volume_thumb_green.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/img_volume_thumb_red.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/img_volume_thumb_red.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/img_volume_thumb_red.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/img_volume_thumb_red.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/volume_seek_bar_background_fill.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/volume_seek_bar_progress.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/volume_seek_bar_progress_fill.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable-mdpi/img_candy1.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/img_volume_silence.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable-mdpi/img_candy2.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/img_volume_loud.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable-mdpi/img_candy3.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/img_volume_loud.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable-mdpi/img_candy4.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/img_volume_silence.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/btn_balloon_left.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_balloon_left.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/btn_balloon_left.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_balloon_left.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/btn_balloon_left.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_balloon_left.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xxhdpi/btn_balloon_left.png" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/btn_balloon_left.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/btn_balloon_left_pressed.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_balloon_left_pressed.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/btn_balloon_left_pressed.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_balloon_left_pressed.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/btn_balloon_left_pressed.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_balloon_left_pressed.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xxhdpi/btn_balloon_left_pressed.png" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/btn_balloon_left_pressed.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/btn_balloon_right.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_balloon_right.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/btn_balloon_right.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_balloon_right.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/btn_balloon_right.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_balloon_right.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xxhdpi/btn_balloon_right.png" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/btn_balloon_right.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/btn_balloon_right_pressed.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/btn_balloon_right_pressed.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/btn_balloon_right_pressed.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/btn_balloon_right_pressed.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/btn_balloon_right_pressed.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/btn_balloon_right_pressed.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xxhdpi/btn_balloon_right_pressed.png" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/btn_balloon_right_pressed.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/img_candy1.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/img_candy1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/img_candy1.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/img_candy1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/img_candy1.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/img_candy1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xxhdpi/img_candy1.png" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/img_candy1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/img_candy2.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/img_candy2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/img_candy2.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/img_candy2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/img_candy2.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/img_candy2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xxhdpi/img_candy2.png" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/img_candy2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/img_candy3.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/img_candy3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/img_candy3.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/img_candy3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/img_candy3.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/img_candy3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xxhdpi/img_candy3.png" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/img_candy3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/img_candy4.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/img_candy4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/img_candy4.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/img_candy4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/img_candy4.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/img_candy4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xxhdpi/img_candy4.png" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/img_candy4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/global/AppHelper.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/global/AppHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/img_basket_bonus_move.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/img_basket_bonus_move.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/img_basket_bonus_move.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/img_basket_bonus_move.png" />
+      <change type="DELETED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-hdpi\img_basket_for_move.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-mdpi\img_basket_for_move.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-xhdpi\img_basket_for_move.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-xxhdpi\img_basket_for_move.png" afterPath="" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-hdpi\img_bonus_basket.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/img_basket_bonus_shake.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-mdpi\img_bonus_basket.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/img_basket_bonus_shake.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-xhdpi\img_bonus_basket.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/img_basket_bonus_shake.png" />
+      <change type="MOVED" beforePath="C:\Android\SkyDrive\workspace\Puzzly\res\drawable-xxhdpi\img_bonus_basket.png" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/img_basket_bonus_shake.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelHedgehogActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelHedgehogActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelMoveActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelMoveActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelShakeActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelShakeActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/GameSprite.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/GameSprite.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/GameWorker.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/GameWorker.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/PuzzleGameActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/PuzzleGameActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/global/PuzzlesApplication.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/global/PuzzlesApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/global/SoundManager.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/global/SoundManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SplashActivity.java" afterPath="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SplashActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/menu_screen.xml" afterPath="$PROJECT_DIR$/res/layout/menu_screen.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/settings_screen.xml" afterPath="$PROJECT_DIR$/res/layout/settings_screen.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-ar/settings_screen.xml" afterPath="$PROJECT_DIR$/res/layout-ar/settings_screen.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_bonus_level_move.xml" afterPath="$PROJECT_DIR$/res/layout/activity_bonus_level_move.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-ar/activity_bonus_level_move.xml" afterPath="$PROJECT_DIR$/res/layout-ar/activity_bonus_level_move.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_bonus_level_shake.xml" afterPath="$PROJECT_DIR$/res/layout/activity_bonus_level_shake.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-ar/activity_bonus_level_shake.xml" afterPath="$PROJECT_DIR$/res/layout-ar/activity_bonus_level_shake.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-ar/strings.xml" afterPath="$PROJECT_DIR$/res/values-ar/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-de/strings.xml" afterPath="$PROJECT_DIR$/res/values-de/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-es/strings.xml" afterPath="$PROJECT_DIR$/res/values-es/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-fr/strings.xml" afterPath="$PROJECT_DIR$/res/values-fr/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-hi/strings.xml" afterPath="$PROJECT_DIR$/res/values-hi/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-hu/strings.xml" afterPath="$PROJECT_DIR$/res/values-hu/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-ru/strings.xml" afterPath="$PROJECT_DIR$/res/values-ru/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-uk/strings.xml" afterPath="$PROJECT_DIR$/res/values-uk/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-zh/strings.xml" afterPath="$PROJECT_DIR$/res/values-zh/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Puzzly.iws" />
@@ -236,22 +208,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MenuActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MenuActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="730" max-vertical-offset="3978">
-              <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SplashActivity.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SplashActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39605734" vertical-offset="357" max-vertical-offset="986">
-              <caret line="42" column="62" selection-start-line="42" selection-start-column="62" selection-end-line="42" selection-end-column="62" />
-              <folding />
+            <state vertical-scroll-proportion="0.3119266" vertical-offset="510" max-vertical-offset="4437">
+              <caret line="40" column="37" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -275,23 +239,11 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/res/layout/item_choose_puzzle.xml" />
-        <option value="$PROJECT_DIR$/res/layout-ar/item_choose_puzzle.xml" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/util/GameWorker.java" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/RestartActivty.java" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/PuzzlyApplication.java" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/ShakeSensor.java" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/AccelerometerSensor.java" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/PurchaseHelper.java" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/global/Constans.java" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/GameFillActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/PuzzlesApplication.java" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/SoundManager.java" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/PuzzlesDB.java" />
         <option value="$PROJECT_DIR$/res/layout/activity_game_fill.xml" />
         <option value="$PROJECT_DIR$/res/layout-ar/activity_game_fill.xml" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/AnimationEndListener.java" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/ChoosePuzzleActivity.java" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/global/AccelerometerSensor.java" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/ParseSvgAsyncTask.java" />
@@ -299,13 +251,9 @@
         <option value="$PROJECT_DIR$/res/layout-ar/activity_bonus_level_move.xml" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/InterstitialActivity.java" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelFlowerActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelMoveActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelShakeActivity.java" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelTreeActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelHedgehogActivity.java" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/InterstitialAD.java" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/customViews/AutoResizeImageView.java" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/GameWorker.java" />
         <option value="$PROJECT_DIR$/res/layout/activity_splash.xml" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/res/anim/menu_logo.xml" />
@@ -317,15 +265,31 @@
         <option value="$PROJECT_DIR$/res/drawable/volume_seek_bar_progress_fill.xml" />
         <option value="$PROJECT_DIR$/res/drawable/volume_seek_bar_background.xml" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/customViews/ColorsCheckBox.java" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/PuzzleGameActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/settings_screen.xml" />
         <option value="$PROJECT_DIR$/res/layout-ar/settings_screen.xml" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/global/AppHelper.java" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/global/PuzzlesApplication.java" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/global/SoundManager.java" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/GameSprite.java" />
+        <option value="$PROJECT_DIR$/res/layout/activity_puzzle_game.xml" />
+        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/GameWorker.java" />
+        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/PuzzleGameActivity.java" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelShakeActivity.java" />
+        <option value="$PROJECT_DIR$/res/values-ru/strings.xml" />
+        <option value="$PROJECT_DIR$/res/values-hu/strings.xml" />
+        <option value="$PROJECT_DIR$/res/values-hi/strings.xml" />
+        <option value="$PROJECT_DIR$/res/values-zh/strings.xml" />
+        <option value="$PROJECT_DIR$/res/values-es/strings.xml" />
+        <option value="$PROJECT_DIR$/res/values-de/strings.xml" />
+        <option value="$PROJECT_DIR$/res/values-fr/strings.xml" />
+        <option value="$PROJECT_DIR$/res/values-uk/strings.xml" />
+        <option value="$PROJECT_DIR$/res/values-ar/strings.xml" />
         <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SplashActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/global/PuzzlesApplication.java" />
+        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelHedgehogActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelMoveActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java" />
       </list>
     </option>
   </component>
@@ -444,6 +408,32 @@
               <option name="myItemId" value="com" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="puzzly" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="global" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Puzzly" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Puzzly" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -468,7 +458,7 @@
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="0123456789ABCDEF" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="android_4.2" />
-    <property name="DEBUGGABLE_DEVICE" value="0123456789ABCDEF" />
+    <property name="DEBUGGABLE_DEVICE" value="03c3b1d9470badfc" />
     <property name="DEBUGGABLE_PROCESS" value="com.mobilez365.puzzly" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager2.WIDTH" value="231" />
@@ -999,7 +989,11 @@
       <created>1406014341556</created>
       <updated>1406014341556</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="Game Refactoring. Settings sound seekBar. Candy image changes.">
+      <created>1406547828807</created>
+      <updated>1406547828807</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1070,7 +1064,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Trnslate fixe." />
     <MESSAGE value="AD fixes (check if google play services is available)" />
     <MESSAGE value="Bonus level fixes, Arabic fixes" />
     <MESSAGE value="Game fix" />
@@ -1095,11 +1088,12 @@
     <MESSAGE value="New bonus level." />
     <MESSAGE value="Game Refactoring. Sounds refactoring." />
     <MESSAGE value="Game Refactoring. Ad refactoring. Bonus level refactoring." />
-    <option name="LAST_COMMIT_MESSAGE" value="Game Refactoring. Ad refactoring. Bonus level refactoring." />
+    <MESSAGE value="Game Refactoring. Settings sound seekBar. Candy image changes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Game Refactoring. Settings sound seekBar. Candy image changes." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="418" />
+      <option name="time" value="429" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1107,195 +1101,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/GameWorker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2908" max-vertical-offset="3621">
-          <caret line="204" column="28" selection-start-line="204" selection-start-column="28" selection-end-line="204" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../android-sdk/platforms/android-19/data/res/anim/bounce_interpolator.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="558">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_splash.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
-          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_choose_puzzle.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1105">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/item_choose_puzzle.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3757">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_puzzle_game.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19209039" vertical-offset="0" max-vertical-offset="531">
-          <caret line="6" column="49" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5430108" vertical-offset="190" max-vertical-offset="1564">
-          <caret line="29" column="54" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
-          <folding>
-            <element signature="e#761#779#0" expanded="true" />
-            <element signature="e#990#1029#0" expanded="true" />
-            <element signature="e#1134#1152#0" expanded="true" />
-            <element signature="e#1315#1333#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/StartADLib-1.0.1.jar!/com/startad/lib/SADView.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.60600376" vertical-offset="408" max-vertical-offset="1445">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="1446" max-vertical-offset="3281">
-          <caret line="96" column="18" selection-start-line="96" selection-start-column="18" selection-end-line="96" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/anim/menu_logo.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7616488" vertical-offset="0" max-vertical-offset="578">
-          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout-ar/activity_puzzle_game.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1683">
-          <caret line="6" column="49" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelHedgehogActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.1075268" vertical-offset="1836" max-vertical-offset="4454">
-          <caret line="244" column="38" selection-start-line="244" selection-start-column="38" selection-end-line="244" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelFlowerActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1432" max-vertical-offset="3995">
-          <caret line="129" column="35" selection-start-line="129" selection-start-column="35" selection-end-line="129" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../android-sdk/sources/android-19/android/animation/ValueAnimator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="12496" max-vertical-offset="22049">
-          <caret line="791" column="16" selection-start-line="791" selection-start-column="16" selection-end-line="791" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/SocialShare.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.85509837" vertical-offset="1039" max-vertical-offset="1598">
-          <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/ParseSvgAsyncTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.3685152" vertical-offset="325" max-vertical-offset="884">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/img_candy1.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/img_candy3.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/img_candy2.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/img_candy4.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable/selector_ballon_left.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09123435" vertical-offset="0" max-vertical-offset="559">
-          <caret line="3" column="75" selection-start-line="3" selection-start-column="75" selection-end-line="3" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="559">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/styles_menu.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
-          <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable-xxhdpi/btn_balloon_left.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/btn_balloon_left.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/menu_screen.xml">
       <provider selected="true" editor-type-id="android-designer">
         <state />
@@ -1404,25 +1209,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/PuzzleGameActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21834862" vertical-offset="799" max-vertical-offset="2635">
-          <caret line="71" column="70" selection-start-line="71" selection-start-column="70" selection-end-line="71" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/settings_screen.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2594" max-vertical-offset="7157">
-          <caret line="166" column="61" selection-start-line="166" selection-start-column="61" selection-end-line="166" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout-ar/settings_screen.xml">
       <provider editor-type-id="android-designer">
         <state />
@@ -1430,14 +1216,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3653484" vertical-offset="3954" max-vertical-offset="7174">
           <caret line="244" column="62" selection-start-line="244" selection-start-column="62" selection-end-line="244" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/global/AppHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3984526" vertical-offset="4877" max-vertical-offset="8194">
-          <caret line="319" column="58" selection-start-line="319" selection-start-column="58" selection-end-line="319" selection-end-column="58" />
           <folding />
         </state>
       </provider>
@@ -1458,45 +1236,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/global/PuzzlesApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24910395" vertical-offset="252" max-vertical-offset="1717">
-          <caret line="32" column="107" selection-start-line="32" selection-start-column="107" selection-end-line="32" selection-end-column="107" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.005682" vertical-offset="3525" max-vertical-offset="5814">
-          <caret line="113" column="13" selection-start-line="113" selection-start-column="13" selection-end-line="113" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1852#1889#0" expanded="true" />
-            <element signature="e#2076#2112#0" expanded="true" />
-            <element signature="e#2298#2333#0" expanded="true" />
-            <element signature="e#2524#2564#0" expanded="true" />
-            <element signature="e#2755#2795#0" expanded="true" />
-            <element signature="class#3058:4506" expanded="false" />
-            <element signature="e#3636#3672#0" expanded="true" />
-            <element signature="e#4303#4341#0" expanded="true" />
-            <element signature="e#5010#5047#0" expanded="true" />
-            <element signature="e#5523#5560#0" expanded="true" />
-            <element signature="e#5864#8475#0" expanded="true" />
-            <element signature="e#6655#6693#0" expanded="true" />
-            <element signature="e#7350#7391#0" expanded="true" />
-            <element signature="e#7636#7669#0" expanded="true" />
-            <element signature="e#8231#8264#0" expanded="true" />
-            <element signature="e#8468#8469#0" expanded="true" />
-            <element signature="e#8901#8938#0" expanded="true" />
-            <element signature="e#12910#12924#0" expanded="true" />
-            <element signature="e#13555#13849#0" expanded="true" />
-            <element signature="e#13838#13839#0" expanded="true" />
-            <element signature="e#15971#15999#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/global/SoundManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5561644" vertical-offset="290" max-vertical-offset="1581">
@@ -1505,19 +1244,272 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java">
+    <entry file="file://$PROJECT_DIR$/res/anim/menu_logo.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="730" max-vertical-offset="3978">
-          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.7616488" vertical-offset="0" max-vertical-offset="578">
+          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/GameSprite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="479" max-vertical-offset="1071">
+          <caret line="45" column="92" selection-start-line="45" selection-start-column="92" selection-end-line="45" selection-end-column="92" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_puzzle_game.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="707" max-vertical-offset="1581">
+          <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../android-sdk/sources/android-19/android/animation/AnimatorListenerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27419356" vertical-offset="0" max-vertical-offset="1020">
+          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/PuzzleGameActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.65688074" vertical-offset="2413" max-vertical-offset="2958">
+          <caret line="187" column="30" selection-start-line="187" selection-start-column="30" selection-end-line="187" selection-end-column="30" />
+          <folding>
+            <element signature="e#4446#4484#0" expanded="true" />
+            <element signature="e#4569#4609#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/puzzles/GameWorker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3297491" vertical-offset="428" max-vertical-offset="3434">
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="64" selection-end-column="6" />
+          <folding>
+            <element signature="e#1198#1758#0" expanded="true" />
+            <element signature="e#1751#1752#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-ar/styles_settings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.09139785" vertical-offset="0" max-vertical-offset="558">
+          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelFlowerActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.41651377" vertical-offset="1944" max-vertical-offset="3995">
+          <caret line="133" column="17" selection-start-line="133" selection-start-column="17" selection-end-line="133" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelShakeActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33512545" vertical-offset="1326" max-vertical-offset="3587">
+          <caret line="120" column="41" selection-start-line="120" selection-start-column="41" selection-end-line="120" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3046595" vertical-offset="0" max-vertical-offset="3281">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="17" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-ru/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21326165" vertical-offset="51" max-vertical-offset="2414">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="16" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-hu/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45698926" vertical-offset="0" max-vertical-offset="2414">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-hi/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2414">
+          <caret line="17" column="65" selection-start-line="17" selection-start-column="65" selection-end-line="17" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-zh/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21326165" vertical-offset="68" max-vertical-offset="2414">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="17" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-es/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33512545" vertical-offset="0" max-vertical-offset="2414">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="17" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-fr/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2204301" vertical-offset="98" max-vertical-offset="2414">
+          <caret line="13" column="63" selection-start-line="13" selection-start-column="63" selection-end-line="13" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/ChoosePuzzleActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3796034" vertical-offset="1022" max-vertical-offset="2193">
+          <caret line="84" column="8" selection-start-line="83" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/global/AppHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5127479" vertical-offset="227" max-vertical-offset="8194">
+          <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-uk/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39605734" vertical-offset="0" max-vertical-offset="2414">
+          <caret line="13" column="100" selection-start-line="13" selection-start-column="100" selection-end-line="13" selection-end-column="100" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-de/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33512545" vertical-offset="0" max-vertical-offset="2346">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="17" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-ar/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.70071685" vertical-offset="0" max-vertical-offset="2414">
+          <caret line="23" column="66" selection-start-line="23" selection-start-column="66" selection-end-line="23" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/img_basket_bonus_shake.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/img_basket_full.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../android-sdk/sources/android-19/android/view/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4247312" vertical-offset="37588" max-vertical-offset="322813">
+          <caret line="2320" column="28" selection-start-line="2320" selection-start-column="28" selection-end-line="2320" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/global/PuzzlesApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2437276" vertical-offset="51" max-vertical-offset="1717">
+          <caret line="20" column="85" selection-start-line="20" selection-start-column="85" selection-end-line="20" selection-end-column="85" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SplashActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39605734" vertical-offset="357" max-vertical-offset="986">
-          <caret line="42" column="62" selection-start-line="42" selection-start-column="62" selection-end-line="42" selection-end-column="62" />
+        <state vertical-scroll-proportion="0.63978493" vertical-offset="187" max-vertical-offset="986">
+          <caret line="40" column="49" selection-start-line="40" selection-start-column="49" selection-end-line="40" selection-end-column="49" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/settings_screen.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="6419" max-vertical-offset="7157">
+          <caret line="388" column="40" selection-start-line="388" selection-start-column="40" selection-end-line="388" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../android-sdk/sources/android-19/android/view/WindowManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="9861" max-vertical-offset="32028">
+          <caret line="617" column="32" selection-start-line="617" selection-start-column="32" selection-end-line="617" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/SettingsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.549323" vertical-offset="3959" max-vertical-offset="6120">
+          <caret line="289" column="57" selection-start-line="289" selection-start-column="57" selection-end-line="289" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#12910#12924#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelHedgehogActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.9247313" vertical-offset="2754" max-vertical-offset="4522">
+          <caret line="97" column="47" selection-start-line="97" selection-start-column="47" selection-end-line="97" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/BonusLevelMoveActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42114696" vertical-offset="3233" max-vertical-offset="3842">
+          <caret line="242" column="39" selection-start-line="242" selection-start-column="39" selection-end-line="242" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilez365/puzzly/screens/MenuActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3119266" vertical-offset="510" max-vertical-offset="4437">
+          <caret line="40" column="37" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -9,9 +9,17 @@
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
+    <!-- ~~~~~~~~~~~~~~~~~~~ MENU DIALOG~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+    <string name="menu_dialog_title">Recordatorio</string>
+    <string name="menu_dialog_message">Si le gusta el app, por favor dé su revisión.</string>
+    <string name="menu_dialog_yes">Sí</string>
+    <string name="menu_dialog_no">No</string>
+    <string name="menu_dialog_later">Más tarde</string>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
     <!-- ~~~~~~~~~~~~~~~~~~~ SETTINGS ~~~~~~~~~~~~~~~~~~~~~~ !-->
 
-    <string name="settings_play_background_music">Tocar música de fondo</string>
+    <string name="settings_play_background_music">Música de fondo</string>
     <string name="settings_play_sound">Sonido del juego</string>
     <string name="settings_vibrate">La vibración del juego</string>
     <string name="settings_display_inner_borders">Visualizar margenes interiores</string>

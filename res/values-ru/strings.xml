@@ -10,16 +10,16 @@
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
     <!-- ~~~~~~~~~~~~~~~~~~~ MENU DIALOG~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
     <string name="menu_dialog_title">Напоминание</string>
-    <string name="menu_dialog_message">Если вам нравится приложение, оставьте свой ​​отзыв</string>
+    <string name="menu_dialog_message">Если Вам нравится приложение, пожалуйста, оставьте свой отзыв.</string>
     <string name="menu_dialog_yes">Да</string>
     <string name="menu_dialog_no">Нет</string>
-    <string name="menu_dialog_later">Напомнить позже</string>
+    <string name="menu_dialog_later">Позже</string>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
     <!-- ~~~~~~~~~~~~~~~~~~~ SETTINGS ~~~~~~~~~~~~~~~~~~~~~~ !-->
 
-    <string name="settings_play_background_music">Воспроизведение фоновой музыки</string>
-    <string name="settings_play_sound">Воспроизведение игровых звуков</string>
+    <string name="settings_play_background_music">Фоновая музыка</string>
+    <string name="settings_play_sound">Игровые звуки</string>
     <string name="settings_vibrate">Вибрация в игре</string>
     <string name="settings_display_inner_borders">Показывать внутренние границы</string>
     <string name="settings_localize_app_language">Язык настроек</string>

@@ -9,6 +9,14 @@
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
+    <!-- ~~~~~~~~~~~~~~~~~~~ MENU DIALOG~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+    <string name="menu_dialog_title">提醒</string>
+    <string name="menu_dialog_message">如果你喜欢，请留下评论</string>
+    <string name="menu_dialog_yes">所以</string>
+    <string name="menu_dialog_no">无</string>
+    <string name="menu_dialog_later">后来</string>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
     <!-- ~~~~~~~~~~~~~~~~~~~ SETTINGS ~~~~~~~~~~~~~~~~~~~~~~ !-->
 
     <string name="settings_play_background_music">播放背景音乐</string>

@@ -10,6 +10,7 @@ import android.graphics.drawable.PictureDrawable;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.animation.LinearInterpolator;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -99,9 +100,12 @@ public class BonusLevelMoveActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bonus_level_move);
 
+        WindowManager.LayoutParams layoutParam = getWindow().getAttributes();
+        layoutParam.flags |= WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON;
+        getWindow().setAttributes(layoutParam);
+
         mShaker = new AccelerometerSensor();
         mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-
 
         mGameType = getIntent().getIntExtra("type", 0);
         mGameNumber = getIntent().getIntExtra("gameNumber", 0);
@@ -123,7 +127,7 @@ public class BonusLevelMoveActivity extends Activity {
         int height = basket.getMeasuredHeight();
 
         RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) basket.getLayoutParams();
-        params.height = (int) (screenSize.y * 0.25f);
+        params.height = (int) (screenSize.y * 0.65f);
         params.width = (int) (params.height / (float) height * width);
         basket.setLayoutParams(params);
 
@@ -147,7 +151,7 @@ public class BonusLevelMoveActivity extends Activity {
         candy.setY(-candySize);
         candiesLayout.addView(candy);
 
-        fallAnimator = ObjectAnimator.ofFloat(candy, "translationY", candy.getY(), screenSize.y - basketSize.y);
+        fallAnimator = ObjectAnimator.ofFloat(candy, "translationY", candy.getY(), screenSize.y - (basketSize.y * 0.6f));
         fallAnimator.setDuration(3000);
         fallAnimator.setInterpolator(new LinearInterpolator());
         fallAnimator.addListener(new AnimationEndListener(candy, mFallCandyAnimEndListener));
@@ -217,10 +221,10 @@ public class BonusLevelMoveActivity extends Activity {
     }
 
     private void checkGathered() {
-        int hedgehogPosX = (int) basket.getX();
+        int basketPosX = (int) basket.getX();
         int candyPosX = (int) candy.getX();
         fallAnimator = null;
-        if (candyPosX >= hedgehogPosX && candyPosX <= hedgehogPosX + basketSize.x - candySize) {
+        if (candyPosX >= basketPosX && candyPosX <= basketPosX + basketSize.x - candySize) {
             AppHelper.setGameAchievement(getApplicationContext(), AppHelper.getGameAchievement(getApplicationContext()) + 1);
 
             if (AppHelper.getVibrate(getApplicationContext()))
@@ -236,7 +240,7 @@ public class BonusLevelMoveActivity extends Activity {
             scaleYAnimator.start();
         } else {
             missAnimator = ObjectAnimator.ofFloat(candy, "translationY", candy.getY(), screenSize.y);
-            missAnimator.setDuration(750);
+            missAnimator.setDuration(1350);
             missAnimator.addListener(new AnimationEndListener(candy, mGatherCandyAnimEndListener));
             missAnimator.setInterpolator(new LinearInterpolator());
             missAnimator.start();

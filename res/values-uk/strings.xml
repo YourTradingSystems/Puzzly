@@ -11,16 +11,16 @@
 
     <!-- ~~~~~~~~~~~~~~~~~~~ MENU DIALOG~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
     <string name="menu_dialog_title">Нагадування</string>
-    <string name="menu_dialog_message">Якщо вам подобається додаток, залиште свій відгук</string>
+    <string name="menu_dialog_message">Якщо Вам подобається додаток, будь ласка, залиште свій відгук.</string>
     <string name="menu_dialog_yes">Так</string>
     <string name="menu_dialog_no">Ні</string>
-    <string name="menu_dialog_later">Нагадати пізніше</string>
+    <string name="menu_dialog_later">Пізніше</string>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
     <!-- ~~~~~~~~~~~~~~~~~~~ SETTINGS ~~~~~~~~~~~~~~~~~~~~~~ !-->
 
-    <string name="settings_play_background_music">Відтворення фонової музики</string>
-    <string name="settings_play_sound">Відтворення ігрових звуків</string>
+    <string name="settings_play_background_music">Фонова музика</string>
+    <string name="settings_play_sound">Ігрові звуки</string>
     <string name="settings_vibrate">Вібрація у грі</string>
     <string name="settings_display_inner_borders">Відображати внутрішні границі</string>
     <string name="settings_localize_app_language">Мова налаштувань</string>

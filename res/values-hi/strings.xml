@@ -9,6 +9,14 @@
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
+    <!-- ~~~~~~~~~~~~~~~~~~~ MENU DIALOG~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+    <string name="menu_dialog_title">स्मरणपत्र</string>
+    <string name="menu_dialog_message">आप Puzzle आनंद, हमें एक समीक्षा छोड़ कृपया! </string>
+    <string name="menu_dialog_yes">इतना</string>
+    <string name="menu_dialog_no">नहीं</string>
+    <string name="menu_dialog_later">बाद में</string>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
     <!-- ~~~~~~~~~~~~~~~~~~~ SETTINGS ~~~~~~~~~~~~~~~~~~~~~~ !-->
 
     <string name="settings_play_background_music">पृष्ठभूमि संगीत खेलो</string>

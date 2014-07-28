@@ -9,6 +9,14 @@
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
+    <!-- ~~~~~~~~~~~~~~~~~~~ MENU DIALOG~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+    <string name="menu_dialog_title">Figyelmeztetés</string>
+    <string name="menu_dialog_message">Ha tetszett önnek az alkalmazás, kérem írja le véleményét</string>
+    <string name="menu_dialog_yes">így</string>
+    <string name="menu_dialog_no">nincs</string>
+    <string name="menu_dialog_later">később</string>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
     <!-- ~~~~~~~~~~~~~~~~~~~ SETTINGS ~~~~~~~~~~~~~~~~~~~~~~ !-->
 
     <string name="settings_play_background_music">Zene lejátszása</string>

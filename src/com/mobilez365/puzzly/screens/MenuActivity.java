@@ -224,6 +224,8 @@ public class MenuActivity extends Activity {
             AppHelper.increaseStartCount(getApplicationContext());
         if (AppHelper.getStartCount(getApplicationContext()) != 3)
             return;
+
+        AppHelper.changeLanguage(getApplicationContext(), AppHelper.getLocaleLanguage(getApplicationContext(), Constans.APP_LANGUAGE).name());
         LayoutInflater factory = LayoutInflater.from(getApplicationContext());
         final View reminderDialogView = factory.inflate(R.layout.reminder_dialog, null);
         final AlertDialog reminderDialog = new AlertDialog.Builder(this).create();

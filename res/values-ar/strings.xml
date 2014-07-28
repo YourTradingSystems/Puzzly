@@ -9,9 +9,17 @@
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
+    <!-- ~~~~~~~~~~~~~~~~~~~ MENU DIALOG~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+    <string name="menu_dialog_title">تذكير</string>
+    <string name="menu_dialog_message">إذا كنت ترغب في التطبيق, يرجى ترك الاستعراض الخاص بك</string>
+    <string name="menu_dialog_yes">هكذا</string>
+    <string name="menu_dialog_no">لا</string>
+    <string name="menu_dialog_later">فيما بعد</string>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
     <!-- ~~~~~~~~~~~~~~~~~~~ SETTINGS ~~~~~~~~~~~~~~~~~~~~~~ !-->
 
-    <string name="settings_play_background_music">تشغيل الموسيقى الخلفية</string>
+    <string name="settings_play_background_music"> الموسيقى الخلفية</string>
     <string name="settings_play_sound">صوت اللعبة</string>
     <string name="settings_vibrate"> ذبذبة وإهتزاز اللعبة</string>
     <string name="settings_display_inner_borders">عرض الحدود الداخلية</string>

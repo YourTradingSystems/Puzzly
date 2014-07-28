@@ -9,6 +9,14 @@
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
+    <!-- ~~~~~~~~~~~~~~~~~~~ MENU DIALOG~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+    <string name="menu_dialog_title">Rappel</string>
+    <string name="menu_dialog_message">Si vous aimez l\'app, s\'il vous plaît, donnez votre revue.</string>
+    <string name="menu_dialog_yes">Si</string>
+    <string name="menu_dialog_no">Non</string>
+    <string name="menu_dialog_later">Plus tard</string>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
     <!-- ~~~~~~~~~~~~~~~~~~~ SETTINGS ~~~~~~~~~~~~~~~~~~~~~~ !-->
 
     <string name="settings_play_background_music">Jouer en fond sonore</string>

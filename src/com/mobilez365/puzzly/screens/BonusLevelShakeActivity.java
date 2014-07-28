@@ -118,6 +118,7 @@ public class BonusLevelShakeActivity extends Activity {
         mScreenHeight = size.y;
         mScreenWidth = width;
         int step = width / mCandiesCount;
+        int candySize = (int) (step * 0.9);
 
         candiesList = new ArrayList<ImageView>();
         candiesRotateAnimators = new ArrayList<ObjectAnimator>();
@@ -127,6 +128,7 @@ public class BonusLevelShakeActivity extends Activity {
             ImageView candy = new ImageView(this);
 
             int candyNumber = r.nextInt(4) + 1;
+            candy.setLayoutParams(new RelativeLayout.LayoutParams(candySize, candySize));
             candy.setImageResource(getResources().getIdentifier("img_candy" + candyNumber, "drawable", getPackageName()));
             candy.setX(i * step);
             candy.setTag(i);

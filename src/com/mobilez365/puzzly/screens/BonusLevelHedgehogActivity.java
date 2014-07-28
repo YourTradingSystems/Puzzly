@@ -6,10 +6,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Point;
 import android.os.Bundle;
-import android.view.Display;
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.ViewTreeObserver;
+import android.view.*;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -95,6 +92,10 @@ public class BonusLevelHedgehogActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bonus_level_hedgehog);
+
+        WindowManager.LayoutParams layoutParam = getWindow().getAttributes();
+        layoutParam.flags |= WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON;
+        getWindow().setAttributes(layoutParam);
 
         mGameType = getIntent().getIntExtra("type", 0);
         mGameNumber = getIntent().getIntExtra("gameNumber", 0);

@@ -19,7 +19,7 @@
             android:id="@+id/ivBasketABM"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/img_basket_for_move"
+            android:src="@drawable/img_basket_bonus_move"
             android:paddingBottom="10dp"/>
 
     <RelativeLayout

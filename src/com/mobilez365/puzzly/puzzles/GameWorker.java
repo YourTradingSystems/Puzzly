@@ -36,6 +36,24 @@ public class GameWorker {
         }
     };
 
+    private final AnimatorListenerAdapter partsLockedListener = new AnimatorListenerAdapter() {
+        @Override
+        public void onAnimationStart(Animator animation) {
+            super.onAnimationStart(animation);
+            if (animation.isRunning()) {
+                if (puzzleGame.getGameType() == 1)
+                    hideFakeParts();
+
+                wholePuzzleImage.setImageDrawable(resultPuzzleDrawable);
+                wholePuzzleImage.bringToFront();
+                wholePuzzleImage.getParent().requestLayout();
+
+
+                gameCallBacksListener.onAllPuzzleLocked();
+            }
+        }
+    };
+
     private final AnimatorListenerAdapter resultImageAnimationListener = new AnimatorListenerAdapter() {
         @Override
         public void onAnimationEnd(Animator animation) {
@@ -175,7 +193,7 @@ public class GameWorker {
         int puzzleFinalPosY = currentSprite.lockedY + (int)wholePuzzleImage.getY();
         if ((puzzleFinalPosX > puzzlePosX - CATCH_DISTANCE && puzzleFinalPosX < puzzlePosX + CATCH_DISTANCE
                 && puzzleFinalPosY > puzzlePosY - CATCH_DISTANCE && puzzleFinalPosY < puzzlePosY + CATCH_DISTANCE)) {
-            onPartLock(currentSprite, puzzleFinalPosX, puzzleFinalPosY);
+            currentSprite.onPartLock(puzzleFinalPosX, puzzleFinalPosY);
             return true;
         }
         return false;
@@ -189,28 +207,15 @@ public class GameWorker {
                 break;
             }
         if (allPuzzleLocked)
-            onGameFinish();
+            showFigureAlphaAnim();
     }
 
-    private void onPartLock(GameSprite currentSprite, int finalPartPosX, int finalPartPosY) {
-        AutoResizeImageView lockedPart = currentSprite.getPuzzlePart();
-        lockedPart.setX(finalPartPosX);
-        lockedPart.setY(finalPartPosY);
-        currentSprite.setPieceLocked(true);
-        lockedPart.setOnTouchListener(null);
-    }
-
-    private void onGameFinish() {
-        if(puzzleGame.getGameType() == 1)
-            hideFakeParts();
-
-        wholePuzzleImage.setImageDrawable(resultPuzzleDrawable);
-        wholePuzzleImage.bringToFront();
-
+    private void showFigureAlphaAnim(){
         ObjectAnimator alphaAnim = ObjectAnimator.ofFloat(wholePuzzleImage, "alpha", 0, 1, 1);
         alphaAnim.setDuration(1000);
+        alphaAnim.setStartDelay(250);
         alphaAnim.addListener(resultImageAnimationListener);
+        alphaAnim.addListener(partsLockedListener);
         alphaAnim.start();
-        gameCallBacksListener.onAllPuzzleLocked();
     }
 }

@@ -19,7 +19,7 @@
 
     <!-- ~~~~~~~~~~~~~~~~~~~ SETTINGS ~~~~~~~~~~~~~~~~~~~~~~ !-->
 
-    <string name="settings_play_background_music">Play background music</string>
+    <string name="settings_play_background_music">Background music</string>
     <string name="settings_play_sound">Sound in game</string>
     <string name="settings_vibrate">Game vibration</string>
     <string name="settings_analytics">Google Analytics</string>

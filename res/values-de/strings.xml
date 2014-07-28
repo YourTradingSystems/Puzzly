@@ -9,9 +9,17 @@
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
+    <!-- ~~~~~~~~~~~~~~~~~~~ MENU DIALOG~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+    <string name="menu_dialog_title">Erinnerung</string>
+    <string name="menu_dialog_message">Wenn Sie die App gefällt, lassen Sie bitte Ihre Bewertung.</string>
+    <string name="menu_dialog_yes">so</string>
+    <string name="menu_dialog_no">nicht</string>
+    <string name="menu_dialog_later">später</string>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
+
     <!-- ~~~~~~~~~~~~~~~~~~~ SETTINGS ~~~~~~~~~~~~~~~~~~~~~~ !-->
 
-    <string name="settings_play_background_music">Hintergrundmusik abspielen</string>
+    <string name="settings_play_background_music">Hintergrundmusik</string>
     <string name="settings_play_sound">Klingeltöne</string>
     <string name="settings_vibrate">Vibrationssignal</string>
     <string name="settings_display_inner_borders">Die innere Grenzen abspiegeln</string>
