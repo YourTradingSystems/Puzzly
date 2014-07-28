@@ -86,7 +86,6 @@ public class MenuActivity extends Activity {
         startAnimation();
         showBanner();
 
-        PuzzlesDB.addBasePuzzlesToDB(getApplicationContext());
         AnalyticsGoogle.fireScreenEvent(this, getString(R.string.activity_main_menu));
     }
 

@@ -21,7 +21,7 @@ public class SoundManager {
     }
 
     public static void initWordSound(Context context, String soundName) {
-        boolean soundEffectsEnabled = AppHelper.getPlaySound(context);
+        boolean soundEffectsEnabled = AppHelper.getSoundVolume(context) > 0;
         if (soundEffectsEnabled) {
             prepareSoundPool();
             int wordId = context.getResources().getIdentifier(soundName, "raw", context.getPackageName());
@@ -29,9 +29,10 @@ public class SoundManager {
         }
     }
 
-    public static void playWordSound() {
+    public static void playWordSound(Context context) {
         if (wordSoundPool != null && wordSoundId != -1) {
-            int streamId = wordSoundPool.play(wordSoundId, 1, 1, 0, 0, 1);
+            float soundVolume =  AppHelper.getSoundVolume(context);
+            int streamId = wordSoundPool.play(wordSoundId, soundVolume, soundVolume, 0, 0, 1);
             if (streamId != 0)
                 wordSoundPool.setPriority(streamId, 1);
         }
@@ -46,9 +47,9 @@ public class SoundManager {
     }
 
     public static void playBackgroundMusic(Context context, boolean _isMenuMusic) {
-        boolean backgroundMusicEnabled = AppHelper.getPlayBackgroundMusic(context);
+        float backgroundMusicVolume = AppHelper.getBackgroundMusicVolume(context);
 
-        if (backgroundMusicEnabled) {
+        if (backgroundMusicVolume > 0) {
             if (isMenuMusic != _isMenuMusic)
                 stopBackgroundMusic();
 
@@ -57,9 +58,13 @@ public class SoundManager {
                 backgroundMusicPlayer = MediaPlayer.create(context, backgroundMusicResource);
                 backgroundMusicPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
                 backgroundMusicPlayer.setLooping(true);
+                backgroundMusicPlayer.setVolume(backgroundMusicVolume, backgroundMusicVolume);
                 backgroundMusicPlayer.start();
-            } else
+            }
+            else {
                 resumeBackgroundMusic();
+                backgroundMusicPlayer.setVolume(backgroundMusicVolume, backgroundMusicVolume);
+            }
 
             isMenuMusic = _isMenuMusic;
         }

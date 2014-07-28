@@ -5,7 +5,8 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.os.*;
+import android.os.Bundle;
+import android.os.Vibrator;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.*;
@@ -13,24 +14,23 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.plus.PlusShare;
+import com.mobilez365.puzzly.PurchaseHelper;
 import com.mobilez365.puzzly.R;
-import com.mobilez365.puzzly.global.SoundManager;
+import com.mobilez365.puzzly.SocialShare;
+import com.mobilez365.puzzly.global.AnalyticsGoogle;
 import com.mobilez365.puzzly.global.AppHelper;
 import com.mobilez365.puzzly.global.Constans;
-import com.mobilez365.puzzly.global.AnalyticsGoogle;
-import com.mobilez365.puzzly.PurchaseHelper;
-import com.mobilez365.puzzly.SocialShare;
-import com.startad.lib.SADView;
+import com.mobilez365.puzzly.global.SoundManager;
 import org.brickred.socialauth.android.SocialAuthAdapter;
 
 /**
  * Created by Denis on 12.05.14.
  */
-public class SettingsActivity extends Activity{
+public class SettingsActivity extends Activity {
 
     private ImageButton btnBack_SS;
-    private CheckBox ccbPlayBackgroundMusic_SS;
-    private CheckBox ccbPlaySound_SS;
+    private SeekBar sbPlayBackgroundMusic_SS;
+    private SeekBar sbPlaySound_SS;
     private CheckBox ccbVibrate_SS;
     private CheckBox ccbDisplayInnerBorders_SS;
     private CheckBox ccbGoogleAnalytics_SS;
@@ -72,26 +72,55 @@ public class SettingsActivity extends Activity{
     private final AdapterView.OnItemSelectedListener mItemSelectListener = new AdapterView.OnItemSelectedListener() {
         @Override
         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-            if(parent.getId() == R.id.spinnerChooseAppCountry_SS) {
-                AppHelper.setLocalizeAppLanguage(getApplicationContext(), getLanguageLocale(((TextView)view).getText().toString()));
+            if (parent.getId() == R.id.spinnerChooseAppCountry_SS) {
+                AppHelper.setLocalizeAppLanguage(getApplicationContext(), getLanguageLocale(((TextView) view).getText().toString()));
                 AppHelper.changeLanguage(getApplicationContext(), AppHelper.getLocaleLanguage(getApplicationContext(), Constans.APP_LANGUAGE).name());
-                AnalyticsGoogle.fireSettingsEvent(SettingsActivity.this, getString(R.string.btn_app_language), ((TextView)view).getText().toString());
+                AnalyticsGoogle.fireSettingsEvent(SettingsActivity.this, getString(R.string.btn_app_language), ((TextView) view).getText().toString());
 
                 Intent mIntent = new Intent(SettingsActivity.
                         this, SettingsActivity.class);
-                mIntent.putExtra("scrollPos" , swMain.getScrollY());
+                mIntent.putExtra("scrollPos", swMain.getScrollY());
                 startActivity(mIntent);
                 overridePendingTransition(0, 0);
                 finish();
-            }
-            else if(parent.getId() == R.id.spinnerChooseStudyCountry_SS) {
-                AppHelper.setLocalizeStudyLanguage(getApplicationContext(), getLanguageLocale(((TextView)view).getText().toString()));
-                AnalyticsGoogle.fireSettingsEvent(SettingsActivity.this, getString(R.string.btn_study_language), ((TextView)view).getText().toString());
+            } else if (parent.getId() == R.id.spinnerChooseStudyCountry_SS) {
+                AppHelper.setLocalizeStudyLanguage(getApplicationContext(), getLanguageLocale(((TextView) view).getText().toString()));
+                AnalyticsGoogle.fireSettingsEvent(SettingsActivity.this, getString(R.string.btn_study_language), ((TextView) view).getText().toString());
             }
         }
 
         @Override
         public void onNothingSelected(AdapterView<?> parent) {
+
+        }
+    };
+
+    private final SeekBar.OnSeekBarChangeListener onVolumeChangeListener = new SeekBar.OnSeekBarChangeListener() {
+        @Override
+        public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+            if (seekBar.getId() == R.id.sbMusicVolume_SS) {
+                boolean musicEnabled = progress > 0;
+                AppHelper.setBackgroundMusicVolume(getApplicationContext(), progress / 10f);
+                AnalyticsGoogle.fireSettingsEvent(SettingsActivity.this, getString(R.string.btn_music_enabled), Boolean.toString(musicEnabled));
+
+                if (musicEnabled)
+                    SoundManager.playBackgroundMusic(getApplicationContext(), true);
+                else
+                    SoundManager.stopBackgroundMusic();
+            } else {
+                boolean soundEnabled = seekBar.getProgress() > 0;
+                AppHelper.setSoundVolume(getApplicationContext(), progress / 100f);
+                AnalyticsGoogle.fireSettingsEvent(SettingsActivity.this, getString(R.string.btn_sound_enabled), Boolean.toString(soundEnabled));
+            }
+        }
+
+        @Override
+        public void onStartTrackingTouch(SeekBar seekBar) {
+
+        }
+
+        @Override
+        public void onStopTrackingTouch(SeekBar seekBar) {
 
         }
     };
@@ -102,25 +131,6 @@ public class SettingsActivity extends Activity{
             switch (v.getId()) {
                 case R.id.btnBack_SS:
                     finish();
-                    break;
-
-                case R.id.rlPlayBackgroundMusic_SS:
-                    ccbPlayBackgroundMusic_SS.setChecked(!ccbPlayBackgroundMusic_SS.isChecked());
-
-                    AppHelper.setPlayBackgroundMusic(getApplicationContext(), ccbPlayBackgroundMusic_SS.isChecked());
-                    AnalyticsGoogle.fireSettingsEvent(SettingsActivity.this, getString(R.string.btn_music_enabled), Boolean.toString(ccbPlayBackgroundMusic_SS.isChecked()));
-
-                    if (ccbPlayBackgroundMusic_SS.isChecked())
-                        SoundManager.playBackgroundMusic(getApplicationContext(), true);
-                    else
-                        SoundManager.stopBackgroundMusic();
-
-                    break;
-
-                case R.id.rlPlaySound_SS:
-                    ccbPlaySound_SS.setChecked(!ccbPlaySound_SS.isChecked());
-                    AppHelper.setPlaySound(getApplicationContext(), ccbPlaySound_SS.isChecked());
-                    AnalyticsGoogle.fireSettingsEvent(SettingsActivity.this, getString(R.string.btn_sound_enabled), Boolean.toString(ccbPlaySound_SS.isChecked()));
                     break;
 
                 case R.id.rlVibrate_SS:
@@ -185,7 +195,7 @@ public class SettingsActivity extends Activity{
         if (!AppHelper.isAdsDisabled(getApplicationContext()))
             showBanner();
         else
-            ((ImageButton)findViewById(R.id.btnPurchase_SS)).setImageResource(R.drawable.btn_purchase_done);
+            ((ImageButton) findViewById(R.id.btnPurchase_SS)).setImageResource(R.drawable.btn_purchase_done);
         setValues();
         setListener();
     }
@@ -194,7 +204,7 @@ public class SettingsActivity extends Activity{
     protected void onResume() {
         super.onResume();
 
-        if(adView != null)
+        if (adView != null)
             adView.resume();
     }
 
@@ -202,13 +212,13 @@ public class SettingsActivity extends Activity{
     protected void onPause() {
         super.onPause();
 
-        if(adView != null)
+        if (adView != null)
             adView.pause();
     }
 
     @Override
     public void onDestroy() {
-        if(adView != null)
+        if (adView != null)
             adView.destroy();
 
         super.onDestroy();
@@ -223,21 +233,21 @@ public class SettingsActivity extends Activity{
     }
 
     private final void findViews() {
-        btnBack_SS = (ImageButton)findViewById(R.id.btnBack_SS);
-        ccbPlayBackgroundMusic_SS = (CheckBox)findViewById(R.id.ccbPlayBackgroundMusic_SS);
-        ccbPlaySound_SS = (CheckBox)findViewById(R.id.ccbPlaySound_SS);
-        ccbVibrate_SS = (CheckBox)findViewById(R.id.ccbVibrate_SS);
-        ccbDisplayInnerBorders_SS = (CheckBox)findViewById(R.id.ccbDisplayInnerBorders_SS);
-        ccbGoogleAnalytics_SS = (CheckBox)findViewById(R.id.ccbGoogleAnalytics_SS);
-        spinnerChooseAppCountry_SS = (Spinner)findViewById(R.id.spinnerChooseAppCountry_SS);
-        spinnerChooseStudyCountry_SS = (Spinner)findViewById(R.id.spinnerChooseStudyCountry_SS);
+        btnBack_SS = (ImageButton) findViewById(R.id.btnBack_SS);
+        sbPlayBackgroundMusic_SS = (SeekBar) findViewById(R.id.sbMusicVolume_SS);
+        sbPlaySound_SS = (SeekBar) findViewById(R.id.sbSoundVolume_SS);
+        ccbVibrate_SS = (CheckBox) findViewById(R.id.ccbVibrate_SS);
+        ccbDisplayInnerBorders_SS = (CheckBox) findViewById(R.id.ccbDisplayInnerBorders_SS);
+        ccbGoogleAnalytics_SS = (CheckBox) findViewById(R.id.ccbGoogleAnalytics_SS);
+        spinnerChooseAppCountry_SS = (Spinner) findViewById(R.id.spinnerChooseAppCountry_SS);
+        spinnerChooseStudyCountry_SS = (Spinner) findViewById(R.id.spinnerChooseStudyCountry_SS);
         swMain = (ScrollView) findViewById(R.id.swMain_SS);
     }
 
     private final void setListener() {
         btnBack_SS.setOnClickListener(mOnClickListener);
-        findViewById(R.id.rlPlayBackgroundMusic_SS).setOnClickListener(mOnClickListener);
-        findViewById(R.id.rlPlaySound_SS).setOnClickListener(mOnClickListener);
+        sbPlayBackgroundMusic_SS.setOnSeekBarChangeListener(onVolumeChangeListener);
+        sbPlaySound_SS.setOnSeekBarChangeListener(onVolumeChangeListener);
         findViewById(R.id.rlVibrate_SS).setOnClickListener(mOnClickListener);
         findViewById(R.id.rlDisplayInnerBorders_SS).setOnClickListener(mOnClickListener);
         findViewById(R.id.rlGoogleAnalytics_SS).setOnClickListener(mOnClickListener);
@@ -250,11 +260,20 @@ public class SettingsActivity extends Activity{
     }
 
     private final void setValues() {
-        ccbPlayBackgroundMusic_SS.setChecked(AppHelper.getPlayBackgroundMusic(getApplicationContext()));
-        ccbPlaySound_SS.setChecked(AppHelper.getPlaySound(getApplicationContext()));
+        boolean arabic = AppHelper.getLocalizeAppLanguage(getApplicationContext()).equals("ar") ? true : false;
+
+        float musicVolume = AppHelper.getBackgroundMusicVolume(getApplicationContext());
+        sbPlayBackgroundMusic_SS.setProgress((int)(musicVolume * 10));
+        if(arabic)
+            sbPlayBackgroundMusic_SS.setRotation(180);
+
+        float soundVolume = AppHelper.getSoundVolume(getApplicationContext());
+        sbPlaySound_SS.setProgress((int)(soundVolume * 100));
+        if(arabic)
+            sbPlaySound_SS.setRotation(180);
 
         Vibrator mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-        if(mVibrator.hasVibrator())
+        if (mVibrator.hasVibrator())
             ccbVibrate_SS.setChecked(AppHelper.getVibrate(getApplicationContext()));
         else
             ccbVibrate_SS.setVisibility(View.GONE);
@@ -284,58 +303,58 @@ public class SettingsActivity extends Activity{
         loadingDialog.setMessage("Loading...");
     }
 
-    private int getLanguagePosition(ArrayAdapter adapter, String language){
-        if(language.equals("en"))
+    private int getLanguagePosition(ArrayAdapter adapter, String language) {
+        if (language.equals("en"))
             return adapter.getPosition("English");
-        else if(language.equals("uk"))
+        else if (language.equals("uk"))
             return adapter.getPosition("Українська");
-        else if(language.equals("ru"))
+        else if (language.equals("ru"))
             return adapter.getPosition("Русский");
-        else if(language.equals("hu"))
+        else if (language.equals("hu"))
             return adapter.getPosition("Magyar");
-        else if(language.equals("de"))
+        else if (language.equals("de"))
             return adapter.getPosition("Deutsch");
-        else if(language.equals("fr"))
+        else if (language.equals("fr"))
             return adapter.getPosition("la France");
-        else if(language.equals("es"))
+        else if (language.equals("es"))
             return adapter.getPosition("España");
-        else if(language.equals("zh"))
+        else if (language.equals("zh"))
             return adapter.getPosition("中文");
-        else if(language.equals("ar"))
+        else if (language.equals("ar"))
             return adapter.getPosition("العربية");
-        else if(language.equals("hi"))
+        else if (language.equals("hi"))
             return adapter.getPosition("हिंदी");
 
         return adapter.getPosition("English");
     }
 
-    private String getLanguageLocale(String language){
-        if(language.equals("English"))
+    private String getLanguageLocale(String language) {
+        if (language.equals("English"))
             return "en";
-        else if(language.equals("Українська"))
+        else if (language.equals("Українська"))
             return "uk";
-        else if(language.equals("Русский"))
+        else if (language.equals("Русский"))
             return "ru";
-        else if(language.equals("Magyar"))
+        else if (language.equals("Magyar"))
             return "hu";
-        else if(language.equals("Deutsch"))
+        else if (language.equals("Deutsch"))
             return "de";
-        else if(language.equals("la France"))
+        else if (language.equals("la France"))
             return "fr";
-        else if(language.equals("España"))
+        else if (language.equals("España"))
             return "es";
-        else if(language.equals("中文"))
+        else if (language.equals("中文"))
             return "zh";
-        else if(language.equals("العربية"))
+        else if (language.equals("العربية"))
             return "ar";
-        else if(language.equals("हिंदी"))
+        else if (language.equals("हिंदी"))
             return "hi";
 
         return "en";
     }
 
     private void showBanner() {
-        LinearLayout layout = (LinearLayout)findViewById(R.id.llBanner_SS);
+        LinearLayout layout = (LinearLayout) findViewById(R.id.llBanner_SS);
         layout.removeAllViews();
         adView = new AdView(this);
         adView.setAdUnitId(getString(R.string.adUnitId));

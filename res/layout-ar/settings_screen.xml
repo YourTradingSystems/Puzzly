@@ -57,99 +57,21 @@
                 android:layout_height="wrap_content">
 
             <RelativeLayout
-                    android:id="@+id/rlPlayBackgroundMusic_SS"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                <com.mobilez365.puzzly.customViews.ColorsCheckBox
-                        android:id="@+id/ccbPlayBackgroundMusic_SS"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        style="@style/SettingsChooseBox"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerInParent="true"
-                        android:clickable="false"/>
-
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/settings_play_background_music"
-                        android:id="@+id/tvPlayBackgroundMusic_SS"
-                        android:layout_centerVertical="true"
-                        android:textColor="@color/tc_settings"
-                        android:textSize="20dp"
-                        android:layout_toLeftOf="@+id/ccbPlayBackgroundMusic_SS"
-                        android:layout_marginRight="15dp"/>
-            </RelativeLayout>
-
-            <RelativeLayout
-                    android:id="@+id/rlPlaySound_SS"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_below="@+id/rlPlayBackgroundMusic_SS">
-
-                <com.mobilez365.puzzly.customViews.ColorsCheckBox
-                        android:id="@+id/ccbPlaySound_SS"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        style="@style/SettingsChooseBox"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerInParent="true"
-                        android:clickable="false"/>
-
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/settings_play_sound"
-                        android:id="@+id/tvPlaySound_SS"
-                        android:layout_centerVertical="true"
-                        android:textColor="@color/tc_settings"
-                        android:textSize="20dp"
-                        android:layout_toLeftOf="@+id/ccbPlaySound_SS"
-                        android:layout_marginRight="15dp"/>
-            </RelativeLayout>
-
-            <RelativeLayout
-                    android:id="@+id/rlVibrate_SS"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_below="@+id/rlPlaySound_SS">
-
-                <com.mobilez365.puzzly.customViews.ColorsCheckBox
-                        android:id="@+id/ccbVibrate_SS"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        style="@style/SettingsChooseBox"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerInParent="true"
-                        android:clickable="false"/>
-
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/settings_vibrate"
-                        android:id="@+id/tvVibrate_SS"
-                        android:layout_centerVertical="true"
-                        android:textColor="@color/tc_settings"
-                        android:textSize="20dp"
-                        android:layout_toLeftOf="@+id/ccbVibrate_SS"
-                        android:layout_marginRight="15dp"/>
-            </RelativeLayout>
-
-            <RelativeLayout
                     android:id="@+id/rlDisplayInnerBorders_SS"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_below="@+id/rlVibrate_SS">
+                    android:paddingLeft="15dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="5dp">
 
                 <com.mobilez365.puzzly.customViews.ColorsCheckBox
                         android:id="@+id/ccbDisplayInnerBorders_SS"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        style="@style/SettingsChooseBox"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerInParent="true"
-                        android:clickable="false"/>
+                        android:clickable="false"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"/>
 
                 <TextView
                         android:layout_width="wrap_content"
@@ -159,24 +81,55 @@
                         android:layout_centerVertical="true"
                         android:textColor="@color/tc_settings"
                         android:textSize="20dp"
-                        android:layout_toLeftOf="@+id/ccbDisplayInnerBorders_SS"
-                        android:layout_marginRight="15dp"/>
+                        android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:id="@+id/rlVibrate_SS"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/rlDisplayInnerBorders_SS"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="5dp">
+
+                <com.mobilez365.puzzly.customViews.ColorsCheckBox
+                        android:id="@+id/ccbVibrate_SS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_vibrate"
+                        android:id="@+id/tvVibrate_SS"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/tc_settings"
+                        android:textSize="20dp"
+                        android:layout_alignParentRight="true"/>
             </RelativeLayout>
 
             <RelativeLayout
                     android:id="@+id/rlGoogleAnalytics_SS"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_below="@+id/rlDisplayInnerBorders_SS">
+                    android:layout_below="@+id/rlVibrate_SS"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="5dp">
 
                 <com.mobilez365.puzzly.customViews.ColorsCheckBox
                         android:id="@+id/ccbGoogleAnalytics_SS"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        style="@style/SettingsChooseBox"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerInParent="true"
-                        android:clickable="false"/>
+                        android:clickable="false"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"/>
 
                 <TextView
                         android:layout_width="wrap_content"
@@ -186,15 +139,117 @@
                         android:layout_centerVertical="true"
                         android:textColor="@color/tc_settings"
                         android:textSize="20dp"
-                        android:layout_toLeftOf="@+id/ccbGoogleAnalytics_SS"
-                        android:layout_marginRight="15dp"/>
+                        android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:id="@+id/rlPlayBackgroundMusic_SS"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/rlGoogleAnalytics_SS"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="5dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_play_background_music"
+                        android:id="@+id/tvPlayBackgroundMusic_SS"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/tc_settings"
+                        android:textSize="20dp"
+                        android:layout_alignParentRight="true"
+                        />
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ivMusicLoud_SS"
+                        android:layout_alignParentLeft="true"
+                        android:src="@drawable/img_volume_loud"
+                        android:background="@null"
+                        android:layout_centerVertical="true"/>
+
+                <SeekBar
+                        android:layout_width="175dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sbMusicVolume_SS"
+                        android:max="10"
+                        android:thumb="@drawable/img_volume_thumb_green"
+                        android:progressDrawable="@drawable/volume_seek_bar_progress"
+                        android:progress="5"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/ivMusicLoud_SS"/>
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ivMusicSilence_SS"
+                        android:src="@drawable/img_volume_silence"
+                        android:background="@null"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/sbMusicVolume_SS"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:id="@+id/rlPlaySound_SS"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/rlPlayBackgroundMusic_SS"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="5dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_play_sound"
+                        android:id="@+id/tvPlaySound_SS"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/tc_settings"
+                        android:textSize="20dp"
+                        android:layout_alignParentRight="true"
+                        />
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ivSoundLoud_SS"
+                        android:layout_alignParentLeft="true"
+                        android:src="@drawable/img_volume_loud"
+                        android:background="@null"
+                        android:layout_centerVertical="true"/>
+
+                <SeekBar
+                        android:layout_width="175dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sbSoundVolume_SS"
+                        android:max="10"
+                        android:thumb="@drawable/img_volume_thumb_red"
+                        android:progressDrawable="@drawable/volume_seek_bar_progress"
+                        android:progress="5"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/ivSoundLoud_SS"
+                        android:mirrorForRtl="true"/>
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ivSoundSilence_SS"
+                        android:src="@drawable/img_volume_silence"
+                        android:background="@null"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/sbSoundVolume_SS"/>
             </RelativeLayout>
 
             <RelativeLayout
                     android:id="@+id/rlPurchaseShare_SS"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/rlGoogleAnalytics_SS"
+                    android:layout_below="@+id/rlPlaySound_SS"
                     android:background="@drawable/background_settings_purchase"
                     android:paddingLeft="15dp"
                     android:paddingTop="15dp"

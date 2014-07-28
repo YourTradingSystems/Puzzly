@@ -276,15 +276,23 @@ public class AppHelper {
         return prefs.getBoolean(Constans.PUZZLES_INITIALIZED, false);
     }
 
-    public static void setPlayBackgroundMusic(Context _context, boolean _state) {
+    public static void setBackgroundMusicVolume(Context _context, float _volume) {
         SharedPreferences.Editor editor = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE).edit();
-        editor.putBoolean(Constans.PLAY_BACKGROUND_MUSIC, _state);
+        editor.putFloat(Constans.PLAY_BACKGROUND_MUSIC, _volume);
         editor.commit();
     }
 
-    public static boolean getPlayBackgroundMusic(Context _context) {
+    public static float getBackgroundMusicVolume(Context _context) {
         SharedPreferences prefs = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
-        return prefs.getBoolean(Constans.PLAY_BACKGROUND_MUSIC, true);
+
+        float volume;
+        try {
+            volume = prefs.getFloat(Constans.PLAY_BACKGROUND_MUSIC, 1);
+        } catch (Exception exception) {
+            boolean playMusic = prefs.getBoolean(Constans.PLAY_BACKGROUND_MUSIC, false);
+            volume = playMusic ? 1 : 0;
+        }
+        return volume;
     }
 
     public static void setShowImageBorder(Context _context, boolean _state) {
@@ -298,15 +306,23 @@ public class AppHelper {
         return prefs.getBoolean(Constans.DISPLAY_INNER_BORDERS, true);
     }
 
-    public static void setPlaySound(Context _context, boolean _state) {
+    public static void setSoundVolume(Context _context, float _volume) {
         SharedPreferences.Editor editor = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE).edit();
-        editor.putBoolean(Constans.PLAY_SOUND, _state);
+        editor.putFloat(Constans.PLAY_SOUND, _volume);
         editor.commit();
     }
 
-    public static boolean getPlaySound(Context _context) {
+    public static float getSoundVolume(Context _context) {
         SharedPreferences prefs = _context.getSharedPreferences(Constans.PREFERENCES_NAME, _context.MODE_PRIVATE);
-        return prefs.getBoolean(Constans.PLAY_SOUND, true);
+
+        float volume;
+        try {
+            volume = prefs.getFloat(Constans.PLAY_SOUND, 1);
+        } catch (Exception exception) {
+            boolean playMusic = prefs.getBoolean(Constans.PLAY_SOUND, false);
+            volume = playMusic ? 1 : 0;
+        }
+        return volume;
     }
 
     public static void setVibrate(Context _context, boolean _state) {

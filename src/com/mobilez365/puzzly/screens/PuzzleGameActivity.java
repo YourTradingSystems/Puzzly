@@ -37,7 +37,7 @@ public class PuzzleGameActivity extends Activity {
             gameText.setText(mPuzzleWord);
             showCandyToBasketAnimation();
 
-            SoundManager.playWordSound();
+            SoundManager.playWordSound(getApplicationContext());
         }
 
         @Override
@@ -69,7 +69,7 @@ public class PuzzleGameActivity extends Activity {
                     switchGame(false);
                     break;
                 case resultImageId:
-                    SoundManager.playWordSound();
+                    SoundManager.playWordSound(getApplicationContext());
                     break;
             }
         }

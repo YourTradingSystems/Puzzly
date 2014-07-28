@@ -8,6 +8,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import com.mobilez365.puzzly.R;
+import com.mobilez365.puzzly.puzzles.PuzzlesDB;
 
 /**
  * Created by andrewtivodar on 22.07.2014.
@@ -38,6 +39,8 @@ public class SplashActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+
+        PuzzlesDB.addBasePuzzlesToDB(getApplicationContext());
 
         ImageView ivMenuLogo_MS = (ImageView) findViewById(R.id.ivMenuLogo_AS);
         logoScaleAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.menu_logo);

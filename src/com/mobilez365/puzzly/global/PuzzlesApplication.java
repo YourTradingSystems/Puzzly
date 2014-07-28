@@ -30,7 +30,7 @@ public class PuzzlesApplication extends Application {
         @Override
         public void onActivityStarted(Activity activity) {
             activity.setVolumeControlStream(AudioManager.STREAM_MUSIC);
-            boolean isMenuActivity = activity instanceof MenuActivity ||
+            boolean isMenuActivity = activity instanceof MenuActivity || activity instanceof SplashActivity ||
                     activity instanceof SettingsActivity || activity instanceof ChoosePuzzleActivity;
             SoundManager.playBackgroundMusic(getApplicationContext(), isMenuActivity);
         }
