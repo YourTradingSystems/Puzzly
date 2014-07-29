@@ -70,23 +70,29 @@ public class SettingsActivity extends Activity {
     };
 
     private final AdapterView.OnItemSelectedListener mItemSelectListener = new AdapterView.OnItemSelectedListener() {
+
+        int spinnersFakeCall = 0;
+
         @Override
         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-            if (parent.getId() == R.id.spinnerChooseAppCountry_SS) {
-                AppHelper.setLocalizeAppLanguage(getApplicationContext(), getLanguageLocale(((TextView) view).getText().toString()));
-                AppHelper.changeLanguage(getApplicationContext(), AppHelper.getLocaleLanguage(getApplicationContext(), Constans.APP_LANGUAGE).name());
-                AnalyticsGoogle.fireSettingsEvent(SettingsActivity.this, getString(R.string.btn_app_language), ((TextView) view).getText().toString());
+            if(spinnersFakeCall == 2) {
+                if (parent.getId() == R.id.spinnerChooseAppCountry_SS) {
+                    AppHelper.setLocalizeAppLanguage(getApplicationContext(), getLanguageLocale(((TextView) view).getText().toString()));
+                    AppHelper.changeLanguage(getApplicationContext(), AppHelper.getLocaleLanguage(getApplicationContext(), Constans.APP_LANGUAGE).name());
+                    AnalyticsGoogle.fireSettingsEvent(SettingsActivity.this, getString(R.string.btn_app_language), ((TextView) view).getText().toString());
 
-                Intent mIntent = new Intent(SettingsActivity.
-                        this, SettingsActivity.class);
-                mIntent.putExtra("scrollPos", swMain.getScrollY());
-                startActivity(mIntent);
-                overridePendingTransition(0, 0);
-                finish();
-            } else if (parent.getId() == R.id.spinnerChooseStudyCountry_SS) {
-                AppHelper.setLocalizeStudyLanguage(getApplicationContext(), getLanguageLocale(((TextView) view).getText().toString()));
-                AnalyticsGoogle.fireSettingsEvent(SettingsActivity.this, getString(R.string.btn_study_language), ((TextView) view).getText().toString());
+                    Intent mIntent = new Intent(SettingsActivity.
+                            this, SettingsActivity.class);
+                    mIntent.putExtra("scrollPos", swMain.getScrollY());
+                    startActivity(mIntent);
+                    overridePendingTransition(0, 0);
+                    finish();
+                } else if (parent.getId() == R.id.spinnerChooseStudyCountry_SS) {
+                    AppHelper.setLocalizeStudyLanguage(getApplicationContext(), getLanguageLocale(((TextView) view).getText().toString()));
+                    AnalyticsGoogle.fireSettingsEvent(SettingsActivity.this, getString(R.string.btn_study_language), ((TextView) view).getText().toString());
+                }
             }
+            else spinnersFakeCall ++;
         }
 
         @Override
@@ -109,7 +115,7 @@ public class SettingsActivity extends Activity {
                     SoundManager.stopBackgroundMusic();
             } else {
                 boolean soundEnabled = seekBar.getProgress() > 0;
-                AppHelper.setSoundVolume(getApplicationContext(), progress / 100f);
+                AppHelper.setSoundVolume(getApplicationContext(), (progress / 10f)*(progress / 10f));
                 AnalyticsGoogle.fireSettingsEvent(SettingsActivity.this, getString(R.string.btn_sound_enabled), Boolean.toString(soundEnabled));
             }
         }
@@ -268,7 +274,7 @@ public class SettingsActivity extends Activity {
             sbPlayBackgroundMusic_SS.setRotation(180);
 
         float soundVolume = AppHelper.getSoundVolume(getApplicationContext());
-        sbPlaySound_SS.setProgress((int)(soundVolume * 100));
+        sbPlaySound_SS.setProgress((int) Math.round(Math.sqrt(soundVolume)*10));
         if(arabic)
             sbPlaySound_SS.setRotation(180);
 
@@ -288,8 +294,8 @@ public class SettingsActivity extends Activity {
 
         spinnerChooseAppCountry_SS.setAdapter(adapter);
         spinnerChooseStudyCountry_SS.setAdapter(adapter);
-        spinnerChooseAppCountry_SS.setSelection(getLanguagePosition(adapter, AppHelper.getLocalizeAppLanguage(getApplicationContext())), false);
-        spinnerChooseStudyCountry_SS.setSelection(getLanguagePosition(adapter, AppHelper.getLocalizeStudyLanguage(getApplicationContext())), false);
+        spinnerChooseAppCountry_SS.setSelection(getLanguagePosition(adapter, AppHelper.getLocalizeAppLanguage(getApplicationContext())));
+        spinnerChooseStudyCountry_SS.setSelection(getLanguagePosition(adapter, AppHelper.getLocalizeStudyLanguage(getApplicationContext())));
 
         swMain.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
