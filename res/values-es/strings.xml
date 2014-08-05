@@ -6,6 +6,7 @@
 
     <string name="menu_settings">CONFIGURACION</string>
     <string name="menu_back">Atrás</string>
+    <string name="menu_settings_long_click">Para abrir preferencias en el juego, dé un toque y sostenga su dedo sobre el botón de preferencias</string>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 

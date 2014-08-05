@@ -6,6 +6,7 @@
 
     <string name="menu_settings">PARAMÉTRÉS</string>
     <string name="menu_back">Arrière</string>
+    <string name="menu_settings_long_click">Pour ouvrir des préférences dans le jeu, touchez et tenez votre doigt sur le bouton de préférences</string>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ !-->
 
